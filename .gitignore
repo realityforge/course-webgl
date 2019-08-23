@@ -1,0 +1,6 @@
+Gemfile.lock
+*.iml
+/*.ipr
+/*.iws
+/*/tmp
+/tmp
