@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ahmed Fathy webgl course</title>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/glMatrix-0.9.5.max.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas" width="1400" height="800"></canvas>
+    <script src="js/light.js"></script>
+
+    <script id="objectCubeVertexShader" type="vertexShader">
+        #version 300 es
+        in vec3 position;
+        in vec4 color;
+        in vec2 textureCoordinate;
+        in vec3 normal;
+
+        out vec4 fcolor;
+        out vec2 ftextureCoordinate;
+        out vec4 vertexWorldPosition;
+        out vec3 vertexNormal;
+
+        uniform mat4 modelMatrix;
+        uniform mat4 viewMatrix;
+        uniform mat4 projectionMatrix;
+
+        void main()
+        {
+        gl_Position =  projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1) ;
+        vertexWorldPosition = modelMatrix * vec4(position,1);
+        fcolor = color;
+        ftextureCoordinate = textureCoordinate;
+        vertexNormal = mat3(inverse(transpose(modelMatrix)))*normal;
+        }
+    </script>
+
+    <script id="objectCubeFragmentShader" type="fragmentShader">
+        #version 300 es
+        precision mediump float;
+        in vec4 fcolor;
+        in vec2 ftextureCoordinate;
+        uniform sampler2D sampler0;
+        uniform sampler2D sampler1;
+        uniform vec3 lightColor;
+        uniform vec3 lightPosition;
+        uniform vec3 cameraPosition;
+
+        out vec4 finalColor;
+        in vec4 vertexWorldPosition;
+        in vec3 vertexNormal;
+        void main()
+        {
+         vec3 lightDirection = normalize(lightPosition - vec3(vertexWorldPosition));
+         vec3 viewDirection = normalize(cameraPosition - vec3(vertexWorldPosition));
+
+         vec4 objectColor = vec4(1,0,1,1);
+         vec4  semiFinalColor = mix(texture(sampler0, ftextureCoordinate), texture(sampler1, ftextureCoordinate), 0.5) * fcolor;
+         vec3 normalizedNormal = normalize(vertexNormal); 
+
+        float ambientIntensity = 0.01;
+        vec4 ambientComponent = vec4((ambientIntensity * lightColor), 1);
+        
+        float diffuseFactor= .1;
+        float diffuseIntensity = max (dot(normalizedNormal,lightDirection)  ,0.0);
+        vec4 diffuseComponent = vec4(diffuseIntensity*lightColor,1);
+       
+        vec3 reflectedLightDirection = reflect(-lightDirection, normalizedNormal);
+        float specularIntensity =  pow(max(dot(reflectedLightDirection, viewDirection),0.0),128.0);
+        vec4 specularComponent = vec4(specularIntensity * vec3(1,0,0),1);
+
+         finalColor = (ambientComponent + .1*diffuseComponent + specularComponent) * semiFinalColor;
+        }
+    </script>
+
+    <script id="lightCubeVertexShader" type="vertexShader">
+        #version 300 es
+        in vec3 position;
+
+
+        uniform mat4 modelMatrix;
+        uniform mat4 viewMatrix;
+        uniform mat4 projectionMatrix;
+
+        void main()
+        {
+        gl_Position =  projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1) ;
+        }
+    </script>
+
+    <script id="lightCubeFragmentShader" type="fragmentShader">
+        #version 300 es
+        precision mediump float;
+
+        uniform vec3 color;
+
+        out vec4 finalColor;
+        void main()
+        {
+             
+            finalColor = 10.0*vec4(color,1);
+        }
+    </script>
+</body>
+</html>
