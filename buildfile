@@ -16,10 +16,10 @@ define 'course-webgl' do
   compile.with :javax_annotation,
                :jsinterop_base,
                :jsinterop_annotations,
+               :elemental2_promise,
                :elemental2_core,
                :elemental2_dom,
                :elemental2_webgl,
-               :elemental2_promise,
                :braincheck,
                :gwt_user
 
