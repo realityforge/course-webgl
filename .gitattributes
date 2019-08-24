@@ -4,3 +4,11 @@
 *.html text
 *.java text
 *.md text
+*.xml text
+*.yaml text
+.gitattributes text
+.gitignore text
+.ruby-version text
+Gemfile text
+LICENSE text
+buildfile text
