@@ -18,6 +18,7 @@ define 'course-webgl' do
                :jsinterop_annotations,
                :elemental2_core,
                :elemental2_dom,
+               :elemental2_webgl,
                :elemental2_promise,
                :braincheck,
                :gwt_user
