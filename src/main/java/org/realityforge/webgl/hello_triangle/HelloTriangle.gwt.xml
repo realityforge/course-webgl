@@ -1,0 +1,7 @@
+<module>
+  <inherits name='org.realityforge.webgl.Webgl'/>
+
+  <entry-point class='org.realityforge.webgl.hello_triangle.HelloTriangle'/>
+
+  <source path=''/>
+</module>

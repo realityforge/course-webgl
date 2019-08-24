@@ -1,5 +1,8 @@
 require 'buildr/git_auto_version'
 require 'buildr/gwt'
+require 'reality/naming'
+
+GWT_MODULES = %w(HelloTriangle)
 
 desc 'The Extensive WebGL Series coursework'
 define 'course-webgl' do
@@ -18,6 +21,32 @@ define 'course-webgl' do
                :elemental2_promise,
                :braincheck,
                :gwt_user
+
+  gwt_config = {}
+  GWT_MODULES.each do |m|
+    uname = Reality::Naming.underscore(m)
+    module_name = "org.realityforge.webgl.#{uname}.#{m}"
+    gwt_config[module_name] = false
+    gwt([module_name],
+        {
+          :java_args => %w(-Xms512M -Xmx1024M -Dgwt.watchFileChanges=false),
+          :dependencies => project.compile.dependencies + [project.compile.target] + [Buildr.artifact(:gwt_user)],
+          :gwtc_args => %w(-optimize 9 -checkAssertions -XmethodNameDisplayMode FULL -noincremental),
+          :output_key => uname
+        })
+    ipr.add_gwt_configuration(project,
+                              :gwt_module => module_name,
+                              :start_javascript_debugger => false,
+                              :open_in_browser => false,
+                              :vm_parameters => '-Xmx2G',
+                              :shell_parameters => "-style PRETTY -XmethodNameDisplayMode FULL -noincremental -port 8888 -codeServerPort 8889 -bindAddress 0.0.0.0 -war #{_(:generated, uname, 'gwt-export')}/",
+                              :launch_page => "http://127.0.0.1:8888/#{uname}/")
+  end
+
+  project.iml.add_gwt_facet(gwt_config, :settings => {
+    :compilerMaxHeapSize => '1024',
+    :compilerParameters => '-draftCompile -localWorkers 2 -strict'
+  }, :gwt_dev_artifact => :gwt_dev)
 
   iml.excluded_directories << project._('tmp')
 
