@@ -4,6 +4,7 @@
   <inherits name='jsinterop.annotations.Annotations'/>
   <inherits name='elemental2.core.Core'/>
   <inherits name='elemental2.promise.Promise'/>
+  <inherits name='elemental3.Elemental3'/>
 
   <source path='ignored'/>
 </module>
