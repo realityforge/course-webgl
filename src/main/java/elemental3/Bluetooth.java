@@ -41,13 +41,13 @@ public class Bluetooth extends EventTarget {
   public EventHandler onserviceremoved;
 
   @Nullable
+  public EventHandler oncharacteristicvaluechanged;
+
+  @Nullable
   public EventHandler onadvertisementreceived;
 
   @Nullable
   public EventHandler ongattserverdisconnected;
-
-  @Nullable
-  public EventHandler oncharacteristicvaluechanged;
 
   Bluetooth() {
   }

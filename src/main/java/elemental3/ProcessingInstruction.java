@@ -1,0 +1,36 @@
+package elemental3;
+
+import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
+/**
+ * The ProcessingInstruction interface represents a processing instruction; that is, a Node which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction">ProcessingInstruction - MDN</a>
+ */
+@Generated("org.realityforge.webtack")
+@JsType(
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "ProcessingInstruction"
+)
+public class ProcessingInstruction extends CharacterData {
+  ProcessingInstruction() {
+  }
+
+  @JsProperty(
+      name = "target"
+  )
+  @Nonnull
+  public native String target();
+
+  @JsProperty(
+      name = "sheet"
+  )
+  @Nullable
+  public native CSSStyleSheet sheet();
+}
