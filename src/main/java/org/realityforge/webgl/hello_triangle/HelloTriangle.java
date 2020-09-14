@@ -29,8 +29,8 @@ public class HelloTriangle
       // Vertex 1
       1.0, -1.0, 0.0,
       // Vertex 1
-      1.0, 1.0, 0.0,
       // Vertex 1
+      0.0, 1.0, 0.0,
       -1.0, -1.0, 0.0
     };
 
