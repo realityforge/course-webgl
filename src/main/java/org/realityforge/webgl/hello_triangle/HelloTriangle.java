@@ -11,9 +11,11 @@ public class HelloTriangle
   @Override
   public void onModuleLoad()
   {
+    // TODO: Rather than retrieve this from page maybe create and attach to body?
     final HTMLCanvasElement renderCanvas =
       (HTMLCanvasElement) Global.globalThis().document().getElementById( "renderCanvas" );
     assert null != renderCanvas;
+    // TODO: This method should have typing tightened up
     final WebGL2RenderingContext context = (WebGL2RenderingContext) renderCanvas.getContext( "webgl2" );
   }
 }
