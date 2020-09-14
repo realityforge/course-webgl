@@ -154,6 +154,18 @@ public class HelloTriangle
     gl.enableVertexAttribArray( colorAttribLocation );
     gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
     gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );
+
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
+  }
+
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
+  {
+    gl.clearColor( 0, 0, 0, 1 );
+    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
+
+    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 3 );
+
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
   }
 
   @Nonnull
