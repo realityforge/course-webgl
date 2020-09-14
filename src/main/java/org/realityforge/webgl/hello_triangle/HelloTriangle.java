@@ -8,6 +8,7 @@ import elemental3.HTMLCanvasElement;
 import elemental3.HTMLElement;
 import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
+import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -106,7 +107,7 @@ public class HelloTriangle
 
     gl.shaderSource( vertexShader, vertexShaderSource );
     gl.compileShader( vertexShader );
-    if ( !Objects.requireNonNull( gl.getShaderParameter( vertexShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
+    if ( !requireNonNull( gl.getShaderParameter( vertexShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
     {
       Global.globalThis().console().log( gl.getShaderInfoLog( vertexShader ) );
     }
@@ -117,10 +118,42 @@ public class HelloTriangle
 
     gl.shaderSource( fragmentShader, fragmentShaderSource );
     gl.compileShader( fragmentShader );
-    if ( !Objects.requireNonNull( gl.getShaderParameter( fragmentShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
+    if ( !requireNonNull( gl.getShaderParameter( fragmentShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
     {
       Global.globalThis().console().log( gl.getShaderInfoLog( fragmentShader ) );
     }
+
+    // Combine the shaders into a program
+    final WebGLProgram program = gl.createProgram();
+    assert null != program;
+    gl.attachShader( program, vertexShader );
+    gl.attachShader( program, fragmentShader );
+    gl.linkProgram( program );
+
+    if ( !requireNonNull( gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS ) ).asBoolean() )
+    {
+      Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
+    }
+
+    // Start using the program for all vertexes pass through gl until the program is changed
+    gl.useProgram( program );
+
+    // Tell GPU to load position data into program from out buffer
+    final int positionAttribLocation = gl.getAttribLocation( program, "position" );
+    gl.enableVertexAttribArray( positionAttribLocation );
+    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
+    gl.vertexAttribPointer( positionAttribLocation,
+      /* the number of values to take for each vertex*/3,
+      /* Each value is a float */ WebGL2RenderingContext.FLOAT,
+      /* Not normalized */ false,
+      /* 0 stride is a special signal to gl to indicate that the next value immediately follows */ 0,
+      /* no offset so start at the start of the buffer */ 0 );
+
+    // Tell GPU to load color data into program from out buffer
+    final int colorAttribLocation = gl.getAttribLocation( program, "color" );
+    gl.enableVertexAttribArray( colorAttribLocation );
+    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
+    gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );
   }
 
   @Nonnull
@@ -134,5 +167,11 @@ public class HelloTriangle
     assert null != body;
     body.appendChild( canvas );
     return canvas;
+  }
+
+  @Nonnull
+  public static <T> T requireNonNull( final T object )
+  {
+    return Objects.requireNonNull( object );
   }
 }
