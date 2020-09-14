@@ -32,6 +32,12 @@ public class RTCError extends DOMException {
   public native String errorDetail();
 
   @JsProperty(
+      name = "httpRequestStatusCode"
+  )
+  @Nullable
+  public native Double httpRequestStatusCode();
+
+  @JsProperty(
       name = "receivedAlert"
   )
   @Nullable
@@ -54,10 +60,4 @@ public class RTCError extends DOMException {
   )
   @Nullable
   public native Double sentAlert();
-
-  @JsProperty(
-      name = "httpRequestStatusCode"
-  )
-  @Nullable
-  public native Double httpRequestStatusCode();
 }

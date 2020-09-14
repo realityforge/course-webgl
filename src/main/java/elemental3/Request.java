@@ -72,6 +72,27 @@ public class Request {
   }
 
   /**
+   * The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/body">Body.body - MDN</a>
+   */
+  @JsProperty(
+      name = "body"
+  )
+  @Nullable
+  public native ReadableStream body();
+
+  /**
+   * The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/bodyUsed">Body.bodyUsed - MDN</a>
+   */
+  @JsProperty(
+      name = "bodyUsed"
+  )
+  public native boolean bodyUsed();
+
+  /**
    * The cache read-only property of the Request interface contains the cache mode of the request. It controls how the request will interact with the browser's HTTP cache.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/cache">Request.cache - MDN</a>
@@ -212,27 +233,6 @@ public class Request {
   )
   @Nonnull
   public native String url();
-
-  /**
-   * The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/body">Body.body - MDN</a>
-   */
-  @JsProperty(
-      name = "body"
-  )
-  @Nullable
-  public native ReadableStream body();
-
-  /**
-   * The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/bodyUsed">Body.bodyUsed - MDN</a>
-   */
-  @JsProperty(
-      name = "bodyUsed"
-  )
-  public native boolean bodyUsed();
 
   /**
    * The clone() method of the Request interface creates a copy of the current Request object.

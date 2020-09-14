@@ -167,6 +167,12 @@ public class RTCDataChannel extends EventTarget {
   )
   public native boolean ordered();
 
+  @JsProperty(
+      name = "priority"
+  )
+  @Nonnull
+  public native String priority();
+
   /**
    * The read-only RTCDataChannel property protocol returns a DOMString containing the name of the subprotocol in use. If no protocol was specified when the data channel was created, then this property's value is &quot;&quot; (the empty string).
    *
@@ -188,12 +194,6 @@ public class RTCDataChannel extends EventTarget {
   )
   @Nonnull
   public native String readyState();
-
-  @JsProperty(
-      name = "priority"
-  )
-  @Nonnull
-  public native String priority();
 
   /**
    * The RTCDataChannel.close() method closes the RTCDataChannel. Either peer is permitted to call this method to initiate closure of the channel.

@@ -23,6 +23,9 @@ import jsinterop.base.Js;
     name = "Bluetooth"
 )
 public class Bluetooth extends EventTarget {
+  @Nullable
+  public EventHandler onadvertisementreceived;
+
   /**
    * The onavailabilitychanged property of the Bluetooth interface is an EventHandler that processes availabilitychanged events that fire when the Bluetooth system as a whole becomes available or unavailable to the User Agent.
    *
@@ -32,6 +35,12 @@ public class Bluetooth extends EventTarget {
   public EventHandler onavailabilitychanged;
 
   @Nullable
+  public EventHandler oncharacteristicvaluechanged;
+
+  @Nullable
+  public EventHandler ongattserverdisconnected;
+
+  @Nullable
   public EventHandler onserviceadded;
 
   @Nullable
@@ -39,15 +48,6 @@ public class Bluetooth extends EventTarget {
 
   @Nullable
   public EventHandler onserviceremoved;
-
-  @Nullable
-  public EventHandler oncharacteristicvaluechanged;
-
-  @Nullable
-  public EventHandler onadvertisementreceived;
-
-  @Nullable
-  public EventHandler ongattserverdisconnected;
 
   Bluetooth() {
   }

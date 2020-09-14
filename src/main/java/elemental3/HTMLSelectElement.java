@@ -20,6 +20,12 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "HTMLSelectElement"
 )
 public class HTMLSelectElement extends HTMLElement {
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocompleteType.class
+  )
+  public String autocomplete;
+
   /**
    * The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
    *
@@ -47,12 +53,6 @@ public class HTMLSelectElement extends HTMLElement {
 
   @Nonnull
   public String value;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutocompleteType.class
-  )
-  public String autocomplete;
 
   public HTMLSelectElement() {
   }

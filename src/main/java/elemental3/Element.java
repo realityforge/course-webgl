@@ -40,34 +40,12 @@ public class Element extends Node {
   public String id;
 
   /**
-   * The slot property of the Element interface returns the name of the shadow DOM slot the element is inserted in.
+   * The Element property innerHTML gets or sets the HTML or XML markup contained within the element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/slot">Element.slot - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">Element.innerHTML - MDN</a>
    */
   @Nonnull
-  public String slot;
-
-  /**
-   * The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft">Element.scrollLeft - MDN</a>
-   */
-  public double scrollLeft;
-
-  /**
-   * The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop">Element.scrollTop - MDN</a>
-   */
-  public double scrollTop;
-
-  /**
-   * The outerHTML attribute of the Element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can also be set to replace the element with nodes parsed from the given string.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML">Element.outerHTML - MDN</a>
-   */
-  @Nonnull
-  public String outerHTML;
+  public String innerHTML;
 
   /**
    * The Element interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired when the element has transitioned into or out of full-screen mode.
@@ -86,15 +64,48 @@ public class Element extends Node {
   public EventHandler onfullscreenerror;
 
   /**
-   * The Element property innerHTML gets or sets the HTML or XML markup contained within the element.
+   * The outerHTML attribute of the Element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can also be set to replace the element with nodes parsed from the given string.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">Element.innerHTML - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML">Element.outerHTML - MDN</a>
    */
   @Nonnull
-  public String innerHTML;
+  public String outerHTML;
+
+  /**
+   * The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft">Element.scrollLeft - MDN</a>
+   */
+  public double scrollLeft;
+
+  /**
+   * The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop">Element.scrollTop - MDN</a>
+   */
+  public double scrollTop;
+
+  /**
+   * The slot property of the Element interface returns the name of the shadow DOM slot the element is inserted in.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/slot">Element.slot - MDN</a>
+   */
+  @Nonnull
+  public String slot;
 
   Element() {
   }
+
+  /**
+   * The assignedSlot read-only property of the Slottable interface returns an HTMLSlotElement representing the slot element the node is inserted in.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Slottable/assignedSlot">Slottable.assignedSlot - MDN</a>
+   */
+  @JsProperty(
+      name = "assignedSlot"
+  )
+  @Nullable
+  public native HTMLSlotElement assignedSlot();
 
   /**
    * The Element.attributes property returns a live collection of all attribute nodes registered to the specified node. It is a NamedNodeMap, not an Array, so it has no Array methods and the Attr nodes' indexes may differ among browsers. To be more specific, attributes is a key/value pair of strings that represents any information regarding that attribute.
@@ -108,6 +119,27 @@ public class Element extends Node {
   public native NamedNodeMap attributes();
 
   /**
+   * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
+   */
+  @JsProperty(
+      name = "childElementCount"
+  )
+  public native int childElementCount();
+
+  /**
+   * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
+   */
+  @JsProperty(
+      name = "children"
+  )
+  @Nonnull
+  public native HTMLCollection children();
+
+  /**
    * The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element.classList - MDN</a>
@@ -117,61 +149,6 @@ public class Element extends Node {
   )
   @Nonnull
   public native DOMTokenList classList();
-
-  /**
-   * The Element.localName read-only property returns the local part of the qualified name of an element.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/localName">Element.localName - MDN</a>
-   */
-  @JsProperty(
-      name = "localName"
-  )
-  @Nonnull
-  public native String localName();
-
-  /**
-   * The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI">Element.namespaceURI - MDN</a>
-   */
-  @JsProperty(
-      name = "namespaceURI"
-  )
-  @Nullable
-  public native String namespaceURI();
-
-  /**
-   * The Element.prefix read-only property returns the namespace prefix of the specified element, or null if no prefix is specified.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix">Element.prefix - MDN</a>
-   */
-  @JsProperty(
-      name = "prefix"
-  )
-  @Nullable
-  public native String prefix();
-
-  /**
-   * The Element.shadowRoot read-only property represents the shadow root hosted by the element.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot">Element.shadowRoot - MDN</a>
-   */
-  @JsProperty(
-      name = "shadowRoot"
-  )
-  @Nullable
-  public native ShadowRoot shadowRoot();
-
-  /**
-   * The tagName read-only property of the Element interface returns the tag name of the element on which it's called.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">Element.tagName - MDN</a>
-   */
-  @JsProperty(
-      name = "tagName"
-  )
-  @Nonnull
-  public native String tagName();
 
   /**
    * The Element.clientHeight read-only property is zero for elements with no CSS or inline layout boxes; otherwise, it's the inner height of an element in pixels. It includes padding but excludes borders, margins, and horizontal scrollbars (if present).
@@ -214,47 +191,6 @@ public class Element extends Node {
   public native int clientWidth();
 
   /**
-   * The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight">Element.scrollHeight - MDN</a>
-   */
-  @JsProperty(
-      name = "scrollHeight"
-  )
-  public native int scrollHeight();
-
-  /**
-   * The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth">Element.scrollWidth - MDN</a>
-   */
-  @JsProperty(
-      name = "scrollWidth"
-  )
-  public native int scrollWidth();
-
-  /**
-   * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
-   */
-  @JsProperty(
-      name = "childElementCount"
-  )
-  public native int childElementCount();
-
-  /**
-   * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
-   */
-  @JsProperty(
-      name = "children"
-  )
-  @Nonnull
-  public native HTMLCollection children();
-
-  /**
    * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
@@ -277,15 +213,26 @@ public class Element extends Node {
   public native Element lastElementChild();
 
   /**
-   * The assignedSlot read-only property of the Slottable interface returns an HTMLSlotElement representing the slot element the node is inserted in.
+   * The Element.localName read-only property returns the local part of the qualified name of an element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Slottable/assignedSlot">Slottable.assignedSlot - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/localName">Element.localName - MDN</a>
    */
   @JsProperty(
-      name = "assignedSlot"
+      name = "localName"
+  )
+  @Nonnull
+  public native String localName();
+
+  /**
+   * The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI">Element.namespaceURI - MDN</a>
+   */
+  @JsProperty(
+      name = "namespaceURI"
   )
   @Nullable
-  public native HTMLSlotElement assignedSlot();
+  public native String namespaceURI();
 
   /**
    * The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.
@@ -299,6 +246,17 @@ public class Element extends Node {
   public native Element nextElementSibling();
 
   /**
+   * The Element.prefix read-only property returns the namespace prefix of the specified element, or null if no prefix is specified.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix">Element.prefix - MDN</a>
+   */
+  @JsProperty(
+      name = "prefix"
+  )
+  @Nullable
+  public native String prefix();
+
+  /**
    * The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling">NonDocumentTypeChildNode.previousElementSibling - MDN</a>
@@ -308,6 +266,48 @@ public class Element extends Node {
   )
   @Nullable
   public native Element previousElementSibling();
+
+  /**
+   * The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight">Element.scrollHeight - MDN</a>
+   */
+  @JsProperty(
+      name = "scrollHeight"
+  )
+  public native int scrollHeight();
+
+  /**
+   * The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth">Element.scrollWidth - MDN</a>
+   */
+  @JsProperty(
+      name = "scrollWidth"
+  )
+  public native int scrollWidth();
+
+  /**
+   * The Element.shadowRoot read-only property represents the shadow root hosted by the element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot">Element.shadowRoot - MDN</a>
+   */
+  @JsProperty(
+      name = "shadowRoot"
+  )
+  @Nullable
+  public native ShadowRoot shadowRoot();
+
+  /**
+   * The tagName read-only property of the Element interface returns the tag name of the element on which it's called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">Element.tagName - MDN</a>
+   */
+  @JsProperty(
+      name = "tagName"
+  )
+  @Nonnull
+  public native String tagName();
 
   /**
    * The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot.

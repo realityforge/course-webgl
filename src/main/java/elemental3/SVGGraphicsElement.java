@@ -23,12 +23,6 @@ public class SVGGraphicsElement extends SVGElement {
   }
 
   @JsProperty(
-      name = "transform"
-  )
-  @Nonnull
-  public native SVGAnimatedTransformList transform();
-
-  @JsProperty(
       name = "requiredExtensions"
   )
   @Nonnull
@@ -39,6 +33,12 @@ public class SVGGraphicsElement extends SVGElement {
   )
   @Nonnull
   public native SVGStringList systemLanguage();
+
+  @JsProperty(
+      name = "transform"
+  )
+  @Nonnull
+  public native SVGAnimatedTransformList transform();
 
   /**
    * The SVGGraphicsElement.getBBox() allows us to determine the coordinates of the smallest rectangle in which the object fits. The coordinates returned are with respect to the current SVG space (after the application of all geometry attributes on all the elements contained in the target element).

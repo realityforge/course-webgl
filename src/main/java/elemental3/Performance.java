@@ -34,16 +34,6 @@ public class Performance extends EventTarget {
   }
 
   /**
-   * The timeOrigin read-only property of the Performance interface returns the high resolution timestamp of the start time of the performance measurement.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin">Performance.timeOrigin - MDN</a>
-   */
-  @JsProperty(
-      name = "timeOrigin"
-  )
-  public native double timeOrigin();
-
-  /**
    * The legacy Performance.navigation read-only property returns a PerformanceNavigation object representing the type of navigation that occurs in the given browsing context, such as the number of redirections needed to fetch the resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/navigation">Performance.navigation - MDN</a>
@@ -53,6 +43,16 @@ public class Performance extends EventTarget {
   )
   @Nonnull
   public native PerformanceNavigation navigation();
+
+  /**
+   * The timeOrigin read-only property of the Performance interface returns the high resolution timestamp of the start time of the performance measurement.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin">Performance.timeOrigin - MDN</a>
+   */
+  @JsProperty(
+      name = "timeOrigin"
+  )
+  public native double timeOrigin();
 
   /**
    * The legacy Performance.timing read-only property returns a PerformanceTiming object containing latency-related performance information.

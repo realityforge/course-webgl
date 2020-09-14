@@ -30,6 +30,18 @@ public class HTMLButtonElement extends HTMLElement {
   @Nonnull
   public String formAction;
 
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormEncodingType.class
+  )
+  public String formEnctype;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormMethodType.class
+  )
+  public String formMethod;
+
   public boolean formNoValidate;
 
   @Nonnull
@@ -39,25 +51,13 @@ public class HTMLButtonElement extends HTMLElement {
   public String name;
 
   @Nonnull
-  public String value;
-
-  @Nonnull
   @MagicConstant(
       valuesFromClass = ButtonType.class
   )
   public String type;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormMethodType.class
-  )
-  public String formMethod;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormEncodingType.class
-  )
-  public String formEnctype;
+  public String value;
 
   public HTMLButtonElement() {
   }

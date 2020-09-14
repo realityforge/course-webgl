@@ -19,6 +19,15 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableElement"
 )
 public class HTMLTableElement extends HTMLElement {
+  @Nonnull
+  public String align;
+
+  @Nonnull
+  public String bgColor;
+
+  @Nonnull
+  public String border;
+
   /**
    * The HTMLTableElement.caption property represents the table caption. If no caption element is associated with the table, this property is null.
    *
@@ -26,6 +35,21 @@ public class HTMLTableElement extends HTMLElement {
    */
   @Nullable
   public HTMLTableCaptionElement caption;
+
+  @Nonnull
+  public String cellPadding;
+
+  @Nonnull
+  public String cellSpacing;
+
+  @Nonnull
+  public String frame;
+
+  @Nonnull
+  public String rules;
+
+  @Nonnull
+  public String summary;
 
   /**
    * The HTMLTableElement.tFoot property represents the tfoot element of a table. Its value will be null if there is no such element.
@@ -42,30 +66,6 @@ public class HTMLTableElement extends HTMLElement {
    */
   @Nullable
   public HTMLTableSectionElement tHead;
-
-  @Nonnull
-  public String align;
-
-  @Nonnull
-  public String bgColor;
-
-  @Nonnull
-  public String border;
-
-  @Nonnull
-  public String cellPadding;
-
-  @Nonnull
-  public String cellSpacing;
-
-  @Nonnull
-  public String frame;
-
-  @Nonnull
-  public String rules;
-
-  @Nonnull
-  public String summary;
 
   @Nonnull
   public String width;

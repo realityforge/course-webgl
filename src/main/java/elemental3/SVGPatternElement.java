@@ -28,6 +28,12 @@ public class SVGPatternElement extends SVGElement {
   public native SVGAnimatedLength height();
 
   @JsProperty(
+      name = "href"
+  )
+  @Nonnull
+  public native SVGAnimatedString href();
+
+  @JsProperty(
       name = "patternContentUnits"
   )
   @Nonnull
@@ -46,6 +52,18 @@ public class SVGPatternElement extends SVGElement {
   public native SVGAnimatedEnumeration patternUnits();
 
   @JsProperty(
+      name = "preserveAspectRatio"
+  )
+  @Nonnull
+  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
+
+  @JsProperty(
+      name = "viewBox"
+  )
+  @Nonnull
+  public native SVGAnimatedRect viewBox();
+
+  @JsProperty(
       name = "width"
   )
   @Nonnull
@@ -62,22 +80,4 @@ public class SVGPatternElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedLength y();
-
-  @JsProperty(
-      name = "preserveAspectRatio"
-  )
-  @Nonnull
-  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
-
-  @JsProperty(
-      name = "viewBox"
-  )
-  @Nonnull
-  public native SVGAnimatedRect viewBox();
-
-  @JsProperty(
-      name = "href"
-  )
-  @Nonnull
-  public native SVGAnimatedString href();
 }

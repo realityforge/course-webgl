@@ -35,6 +35,12 @@ public class SVGUseElement extends SVGGraphicsElement {
   public native SVGAnimatedLength height();
 
   @JsProperty(
+      name = "href"
+  )
+  @Nonnull
+  public native SVGAnimatedString href();
+
+  @JsProperty(
       name = "instanceRoot"
   )
   @Nullable
@@ -57,10 +63,4 @@ public class SVGUseElement extends SVGGraphicsElement {
   )
   @Nonnull
   public native SVGAnimatedLength y();
-
-  @JsProperty(
-      name = "href"
-  )
-  @Nonnull
-  public native SVGAnimatedString href();
 }

@@ -35,138 +35,6 @@ public class Navigator {
   Navigator() {
   }
 
-  @JsProperty(
-      name = "clipboard"
-  )
-  @Nonnull
-  public native Clipboard clipboard();
-
-  /**
-   * The credentials property of the Navigator interface returns the CredentialsContainer interface, which exposes methods to request credentials. The CredentialsContainer interface also notifies the user agent when an interesting event occurs, such as a successful sign-in or sign-out. This interface can be used for feature detection.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials">Navigator.credentials - MDN</a>
-   */
-  @JsProperty(
-      name = "credentials"
-  )
-  @Nonnull
-  public native CredentialsContainer credentials();
-
-  @JsProperty(
-      name = "geolocation"
-  )
-  @Nonnull
-  public native Geolocation geolocation();
-
-  /**
-   * The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices">Navigator.mediaDevices - MDN</a>
-   */
-  @JsProperty(
-      name = "mediaDevices"
-  )
-  @Nonnull
-  public native MediaDevices mediaDevices();
-
-  @JsProperty(
-      name = "permissions"
-  )
-  @Nonnull
-  public native Permissions permissions();
-
-  @JsProperty(
-      name = "maxTouchPoints"
-  )
-  public native int maxTouchPoints();
-
-  /**
-   * The wakeLock read-only property returns a WakeLock interface which allows a document to acquire a screen wake lock. While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock">Navigator.wakeLock - MDN</a>
-   */
-  @JsProperty(
-      name = "wakeLock"
-  )
-  @Nonnull
-  public native WakeLock wakeLock();
-
-  @JsProperty(
-      name = "serviceWorker"
-  )
-  @Nonnull
-  public native ServiceWorkerContainer serviceWorker();
-
-  @JsProperty(
-      name = "bluetooth"
-  )
-  @Nonnull
-  public native Bluetooth bluetooth();
-
-  @JsProperty(
-      name = "xr"
-  )
-  @Nonnull
-  public native XR xr();
-
-  /**
-   * The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language">NavigatorLanguage.language - MDN</a>
-   */
-  @JsProperty(
-      name = "language"
-  )
-  @Nonnull
-  public native String language();
-
-  /**
-   * The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages">NavigatorLanguage.languages - MDN</a>
-   */
-  @JsProperty(
-      name = "languages"
-  )
-  @Nonnull
-  public native JsArray<String> languages();
-
-  /**
-   * Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine">NavigatorOnLine.onLine - MDN</a>
-   */
-  @JsProperty(
-      name = "onLine"
-  )
-  public native boolean onLine();
-
-  @JsProperty(
-      name = "cookieEnabled"
-  )
-  public native boolean cookieEnabled();
-
-  /**
-   * The NavigatorStorage.storage read-only property returns the singleton StorageManager object used to access the overall storage capabilities of the browser for the current site or app.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage">NavigatorStorage.storage - MDN</a>
-   */
-  @JsProperty(
-      name = "storage"
-  )
-  @Nonnull
-  public native StorageManager storage();
-
-  /**
-   * The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency">NavigatorConcurrentHardware.hardwareConcurrency - MDN</a>
-   */
-  @JsProperty(
-      name = "hardwareConcurrency"
-  )
-  public native int hardwareConcurrency();
-
   /**
    * The value of the NavigatorID.appCodeName property is always &quot;Mozilla&quot;, in any browser. This property is kept only for compatibility purposes.
    *
@@ -200,6 +68,126 @@ public class Navigator {
   @Nonnull
   public native String appVersion();
 
+  @JsProperty(
+      name = "bluetooth"
+  )
+  @Nonnull
+  public native Bluetooth bluetooth();
+
+  @JsProperty(
+      name = "clipboard"
+  )
+  @Nonnull
+  public native Clipboard clipboard();
+
+  @JsProperty(
+      name = "cookieEnabled"
+  )
+  public native boolean cookieEnabled();
+
+  /**
+   * The credentials property of the Navigator interface returns the CredentialsContainer interface, which exposes methods to request credentials. The CredentialsContainer interface also notifies the user agent when an interesting event occurs, such as a successful sign-in or sign-out. This interface can be used for feature detection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials">Navigator.credentials - MDN</a>
+   */
+  @JsProperty(
+      name = "credentials"
+  )
+  @Nonnull
+  public native CredentialsContainer credentials();
+
+  @JsProperty(
+      name = "geolocation"
+  )
+  @Nonnull
+  public native Geolocation geolocation();
+
+  /**
+   * The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency">NavigatorConcurrentHardware.hardwareConcurrency - MDN</a>
+   */
+  @JsProperty(
+      name = "hardwareConcurrency"
+  )
+  public native int hardwareConcurrency();
+
+  /**
+   * The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language">NavigatorLanguage.language - MDN</a>
+   */
+  @JsProperty(
+      name = "language"
+  )
+  @Nonnull
+  public native String language();
+
+  /**
+   * The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages">NavigatorLanguage.languages - MDN</a>
+   */
+  @JsProperty(
+      name = "languages"
+  )
+  @Nonnull
+  public native JsArray<String> languages();
+
+  @JsProperty(
+      name = "maxTouchPoints"
+  )
+  public native int maxTouchPoints();
+
+  /**
+   * The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices">Navigator.mediaDevices - MDN</a>
+   */
+  @JsProperty(
+      name = "mediaDevices"
+  )
+  @Nonnull
+  public native MediaDevices mediaDevices();
+
+  /**
+   * Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes">NavigatorPlugins.mimeTypes - MDN</a>
+   */
+  @JsProperty(
+      name = "mimeTypes"
+  )
+  @Nonnull
+  public native MimeTypeArray mimeTypes();
+
+  /**
+   * Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine">NavigatorOnLine.onLine - MDN</a>
+   */
+  @JsProperty(
+      name = "onLine"
+  )
+  public native boolean onLine();
+
+  /**
+   * The Navigator.oscpu property returns a string that identifies the current operating system.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu">Navigator.oscpu - MDN</a>
+   */
+  @JsProperty(
+      name = "oscpu"
+  )
+  @Nonnull
+  public native String oscpu();
+
+  @JsProperty(
+      name = "permissions"
+  )
+  @Nonnull
+  public native Permissions permissions();
+
   /**
    * Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
    *
@@ -210,6 +198,17 @@ public class Navigator {
   )
   @Nonnull
   public native String platform();
+
+  /**
+   * Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/plugins">NavigatorPlugins.plugins - MDN</a>
+   */
+  @JsProperty(
+      name = "plugins"
+  )
+  @Nonnull
+  public native PluginArray plugins();
 
   /**
    * The value of the NavigatorID.product property is always &quot;Gecko&quot;, in any browser. This property is kept only for compatibility purposes.
@@ -232,6 +231,23 @@ public class Navigator {
   )
   @Nonnull
   public native String productSub();
+
+  @JsProperty(
+      name = "serviceWorker"
+  )
+  @Nonnull
+  public native ServiceWorkerContainer serviceWorker();
+
+  /**
+   * The NavigatorStorage.storage read-only property returns the singleton StorageManager object used to access the overall storage capabilities of the browser for the current site or app.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage">NavigatorStorage.storage - MDN</a>
+   */
+  @JsProperty(
+      name = "storage"
+  )
+  @Nonnull
+  public native StorageManager storage();
 
   /**
    * The NavigatorID.userAgent read-only property returns the user agent string for the current browser.
@@ -267,42 +283,26 @@ public class Navigator {
   public native String vendorSub();
 
   /**
-   * The Navigator.oscpu property returns a string that identifies the current operating system.
+   * The wakeLock read-only property returns a WakeLock interface which allows a document to acquire a screen wake lock. While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu">Navigator.oscpu - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock">Navigator.wakeLock - MDN</a>
    */
   @JsProperty(
-      name = "oscpu"
+      name = "wakeLock"
   )
   @Nonnull
-  public native String oscpu();
+  public native WakeLock wakeLock();
 
   @JsProperty(
       name = "webdriver"
   )
   public native boolean webdriver();
 
-  /**
-   * Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes">NavigatorPlugins.mimeTypes - MDN</a>
-   */
   @JsProperty(
-      name = "mimeTypes"
+      name = "xr"
   )
   @Nonnull
-  public native MimeTypeArray mimeTypes();
-
-  /**
-   * Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/plugins">NavigatorPlugins.plugins - MDN</a>
-   */
-  @JsProperty(
-      name = "plugins"
-  )
-  @Nonnull
-  public native PluginArray plugins();
+  public native XR xr();
 
   /**
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.

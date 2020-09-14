@@ -16,16 +16,25 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "OffscreenCanvasRenderingContext2D"
 )
 public class OffscreenCanvasRenderingContext2D {
-  public double globalAlpha;
-
   @Nonnull
-  public String globalCompositeOperation;
+  @MagicConstant(
+      valuesFromClass = CanvasDirection.class
+  )
+  public String direction;
 
   @Nonnull
   public StringOrCanvasGradientOrCanvasPatternUnion fillStyle;
 
   @Nonnull
-  public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
+  public String filter;
+
+  @Nonnull
+  public String font;
+
+  public double globalAlpha;
+
+  @Nonnull
+  public String globalCompositeOperation;
 
   public boolean imageSmoothingEnabled;
 
@@ -34,9 +43,6 @@ public class OffscreenCanvasRenderingContext2D {
       valuesFromClass = ImageSmoothingQuality.class
   )
   public String imageSmoothingQuality;
-
-  @Nonnull
-  public String filter;
 
   @Nonnull
   @MagicConstant(
@@ -56,14 +62,17 @@ public class OffscreenCanvasRenderingContext2D {
 
   public double miterLimit;
 
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasDirection.class
-  )
-  public String direction;
+  public double shadowBlur;
 
   @Nonnull
-  public String font;
+  public String shadowColor;
+
+  public double shadowOffsetX;
+
+  public double shadowOffsetY;
+
+  @Nonnull
+  public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
 
   @Nonnull
   @MagicConstant(
@@ -76,15 +85,6 @@ public class OffscreenCanvasRenderingContext2D {
       valuesFromClass = CanvasTextBaseline.class
   )
   public String textBaseline;
-
-  public double shadowBlur;
-
-  @Nonnull
-  public String shadowColor;
-
-  public double shadowOffsetX;
-
-  public double shadowOffsetY;
 
   OffscreenCanvasRenderingContext2D() {
   }

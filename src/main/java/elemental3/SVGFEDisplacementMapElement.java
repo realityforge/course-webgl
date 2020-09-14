@@ -38,6 +38,12 @@ public class SVGFEDisplacementMapElement extends SVGElement {
   }
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -50,34 +56,16 @@ public class SVGFEDisplacementMapElement extends SVGElement {
   public native SVGAnimatedString in2();
 
   @JsProperty(
-      name = "scale"
-  )
-  @Nonnull
-  public native SVGAnimatedNumber scale();
-
-  @JsProperty(
-      name = "xChannelSelector"
-  )
-  @Nonnull
-  public native SVGAnimatedEnumeration xChannelSelector();
-
-  @JsProperty(
-      name = "yChannelSelector"
-  )
-  @Nonnull
-  public native SVGAnimatedEnumeration yChannelSelector();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
       name = "result"
   )
   @Nonnull
   public native SVGAnimatedString result();
+
+  @JsProperty(
+      name = "scale"
+  )
+  @Nonnull
+  public native SVGAnimatedNumber scale();
 
   @JsProperty(
       name = "width"
@@ -92,8 +80,20 @@ public class SVGFEDisplacementMapElement extends SVGElement {
   public native SVGAnimatedLength x();
 
   @JsProperty(
+      name = "xChannelSelector"
+  )
+  @Nonnull
+  public native SVGAnimatedEnumeration xChannelSelector();
+
+  @JsProperty(
       name = "y"
   )
   @Nonnull
   public native SVGAnimatedLength y();
+
+  @JsProperty(
+      name = "yChannelSelector"
+  )
+  @Nonnull
+  public native SVGAnimatedEnumeration yChannelSelector();
 }

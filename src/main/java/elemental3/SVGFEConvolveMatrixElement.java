@@ -53,6 +53,12 @@ public class SVGFEConvolveMatrixElement extends SVGElement {
   public native SVGAnimatedEnumeration edgeMode();
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -95,6 +101,12 @@ public class SVGFEConvolveMatrixElement extends SVGElement {
   public native SVGAnimatedBoolean preserveAlpha();
 
   @JsProperty(
+      name = "result"
+  )
+  @Nonnull
+  public native SVGAnimatedString result();
+
+  @JsProperty(
       name = "targetX"
   )
   @Nonnull
@@ -105,18 +117,6 @@ public class SVGFEConvolveMatrixElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedInteger targetY();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
-      name = "result"
-  )
-  @Nonnull
-  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "width"

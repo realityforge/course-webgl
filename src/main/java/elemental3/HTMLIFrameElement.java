@@ -21,6 +21,9 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public class HTMLIFrameElement extends HTMLElement {
   @Nonnull
+  public String align;
+
+  @Nonnull
   public String allow;
 
   public boolean allowFullscreen;
@@ -33,10 +36,42 @@ public class HTMLIFrameElement extends HTMLElement {
   public boolean allowPaymentRequest;
 
   @Nonnull
+  public String frameBorder;
+
+  @Nonnull
   public String height;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = LoadingType.class
+  )
+  public String loading;
+
+  @Nonnull
+  public String longDesc;
+
+  @Nonnull
+  public String marginHeight;
+
+  @Nonnull
+  public String marginWidth;
+
+  @Nonnull
   public String name;
+
+  /**
+   * The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy">HTMLIFrameElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
+
+  @Nonnull
+  public String scrolling;
 
   /**
    * The HTMLIFrameElement.src property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
@@ -56,41 +91,6 @@ public class HTMLIFrameElement extends HTMLElement {
 
   @Nonnull
   public String width;
-
-  @Nonnull
-  public String align;
-
-  @Nonnull
-  public String frameBorder;
-
-  @Nonnull
-  public String longDesc;
-
-  @Nonnull
-  public String marginHeight;
-
-  @Nonnull
-  public String marginWidth;
-
-  @Nonnull
-  public String scrolling;
-
-  /**
-   * The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy">HTMLIFrameElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReferrerPolicy.class
-  )
-  public String referrerPolicy;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = LoadingType.class
-  )
-  public String loading;
 
   public HTMLIFrameElement() {
   }

@@ -22,13 +22,6 @@ public class HTMLTableCellElement extends HTMLElement {
   @Nonnull
   public String abbr;
 
-  public int colSpan;
-
-  @Nonnull
-  public String headers;
-
-  public int rowSpan;
-
   @Nonnull
   public String align;
 
@@ -44,22 +37,29 @@ public class HTMLTableCellElement extends HTMLElement {
   @Nonnull
   public String chOff;
 
+  public int colSpan;
+
+  @Nonnull
+  public String headers;
+
   @Nonnull
   public String height;
 
   public boolean noWrap;
 
-  @Nonnull
-  public String vAlign;
-
-  @Nonnull
-  public String width;
+  public int rowSpan;
 
   @Nonnull
   @MagicConstant(
       valuesFromClass = ScopeType.class
   )
   public String scope;
+
+  @Nonnull
+  public String vAlign;
+
+  @Nonnull
+  public String width;
 
   public HTMLTableCellElement() {
   }

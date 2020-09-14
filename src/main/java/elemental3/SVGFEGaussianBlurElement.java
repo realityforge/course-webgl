@@ -41,10 +41,22 @@ public class SVGFEGaussianBlurElement extends SVGElement {
   public native SVGAnimatedEnumeration edgeMode();
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
   public native SVGAnimatedString in1();
+
+  @JsProperty(
+      name = "result"
+  )
+  @Nonnull
+  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "stdDeviationX"
@@ -57,18 +69,6 @@ public class SVGFEGaussianBlurElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedNumber stdDeviationY();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
-      name = "result"
-  )
-  @Nonnull
-  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "width"

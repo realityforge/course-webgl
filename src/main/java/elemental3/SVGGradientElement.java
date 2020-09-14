@@ -47,14 +47,14 @@ public class SVGGradientElement extends SVGElement {
   public native SVGAnimatedEnumeration gradientUnits();
 
   @JsProperty(
-      name = "spreadMethod"
-  )
-  @Nonnull
-  public native SVGAnimatedEnumeration spreadMethod();
-
-  @JsProperty(
       name = "href"
   )
   @Nonnull
   public native SVGAnimatedString href();
+
+  @JsProperty(
+      name = "spreadMethod"
+  )
+  @Nonnull
+  public native SVGAnimatedEnumeration spreadMethod();
 }

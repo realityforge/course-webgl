@@ -61,6 +61,17 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native NavigationPreloadManager navigationPreload();
 
   /**
+   * The pushManager property of the ServiceWorkerRegistration interface returns a reference to the PushManager interface for managing push subscriptions; this includes support for subscribing, getting an active subscription, and accessing push permission status.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/pushManager">ServiceWorkerRegistration.pushManager - MDN</a>
+   */
+  @JsProperty(
+      name = "pushManager"
+  )
+  @Nonnull
+  public native PushManager pushManager();
+
+  /**
    * The scope read-only property of the ServiceWorkerRegistration interface returns a unique identifier for a service worker registration. The service worker must be on the same origin as the document that registers the ServiceWorker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/scope">ServiceWorkerRegistration.scope - MDN</a>
@@ -70,6 +81,17 @@ public class ServiceWorkerRegistration extends EventTarget {
   )
   @Nonnull
   public native String scope();
+
+  /**
+   * The sync property of the ServiceWorkerRegistration interface returns a reference to the SyncManager interface, which manages background synchronization processes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/sync">ServiceWorkerRegistration.sync - MDN</a>
+   */
+  @JsProperty(
+      name = "sync"
+  )
+  @Nonnull
+  public native SyncManager sync();
 
   @JsProperty(
       name = "updateViaCache"
@@ -87,28 +109,6 @@ public class ServiceWorkerRegistration extends EventTarget {
   )
   @Nullable
   public native ServiceWorker waiting();
-
-  /**
-   * The sync property of the ServiceWorkerRegistration interface returns a reference to the SyncManager interface, which manages background synchronization processes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/sync">ServiceWorkerRegistration.sync - MDN</a>
-   */
-  @JsProperty(
-      name = "sync"
-  )
-  @Nonnull
-  public native SyncManager sync();
-
-  /**
-   * The pushManager property of the ServiceWorkerRegistration interface returns a reference to the PushManager interface for managing push subscriptions; this includes support for subscribing, getting an active subscription, and accessing push permission status.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/pushManager">ServiceWorkerRegistration.pushManager - MDN</a>
-   */
-  @JsProperty(
-      name = "pushManager"
-  )
-  @Nonnull
-  public native PushManager pushManager();
 
   /**
    * The unregister() method of the ServiceWorkerRegistration interface unregisters the service worker registration and returns a Promise. The promise will resolve to false if no registration was found, otherwise it resolves to true irrespective of whether unregistration happened or not (it may not unregister if someone else just called ServiceWorkerContainer.register() with the same scope.) The service worker will finish any ongoing operations before it is unregistered.

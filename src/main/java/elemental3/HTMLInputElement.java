@@ -26,7 +26,16 @@ public class HTMLInputElement extends HTMLElement {
   public String accept;
 
   @Nonnull
+  public String align;
+
+  @Nonnull
   public String alt;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocompleteType.class
+  )
+  public String autocomplete;
 
   public boolean checked;
 
@@ -45,6 +54,18 @@ public class HTMLInputElement extends HTMLElement {
 
   @Nonnull
   public String formAction;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormEncodingType.class
+  )
+  public String formEnctype;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormMethodType.class
+  )
+  public String formMethod;
 
   public boolean formNoValidate;
 
@@ -98,6 +119,15 @@ public class HTMLInputElement extends HTMLElement {
   public String step;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = InputType.class
+  )
+  public String type;
+
+  @Nonnull
+  public String useMap;
+
+  @Nonnull
   public String value;
 
   @Nullable
@@ -106,36 +136,6 @@ public class HTMLInputElement extends HTMLElement {
   public double valueAsNumber;
 
   public int width;
-
-  @Nonnull
-  public String align;
-
-  @Nonnull
-  public String useMap;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutocompleteType.class
-  )
-  public String autocomplete;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormMethodType.class
-  )
-  public String formMethod;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormEncodingType.class
-  )
-  public String formEnctype;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = InputType.class
-  )
-  public String type;
 
   public HTMLInputElement() {
   }

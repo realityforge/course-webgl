@@ -23,6 +23,9 @@ import jsinterop.base.Js;
     name = "Worker"
 )
 public class Worker extends EventTarget {
+  @Nullable
+  public EventHandler onerror;
+
   /**
    * The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method).
    *
@@ -38,9 +41,6 @@ public class Worker extends EventTarget {
    */
   @Nullable
   public MessageEventHandler onmessageerror;
-
-  @Nullable
-  public EventHandler onerror;
 
   /**
    * The Worker() constructor creates a Worker object that executes the script at the specified URL. This script must obey the same-origin policy.

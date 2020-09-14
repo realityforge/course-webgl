@@ -28,36 +28,13 @@ public class Window extends EventTarget {
   @Nonnull
   public String name;
 
-  @Nullable
-  public Any opener;
-
-  @Nonnull
-  public String status;
-
   /**
-   * An event handler for the deviceorientation event, which contains information about a relative device orientation change.
+   * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
    */
   @Nullable
-  public DeviceOrientationEventHandler ondeviceorientation;
-
-  @Nullable
-  public EventHandler ondeviceorientationabsolute;
-
-  @Nullable
-  public EventHandler oncompassneedscalibration;
-
-  /**
-   * An event handler for the devicemotion events sent to the window.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
-   */
-  @Nullable
-  public DeviceMotionEventHandler ondevicemotion;
-
-  @Nullable
-  public EventHandler onorientationchange;
+  public EventHandler onabort;
 
   /**
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
@@ -66,6 +43,46 @@ public class Window extends EventTarget {
    */
   @Nullable
   public EventHandler onafterprint;
+
+  /**
+   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationcancel;
+
+  /**
+   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationend;
+
+  /**
+   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationiteration;
+
+  /**
+   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationstart;
+
+  /**
+   * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
+   */
+  @Nullable
+  public EventHandler onauxclick;
 
   /**
    * The onbeforeprint property of the WindowEventHandlers mixin is the EventHandler for processing beforeprint events for the current window. These events are raised before the print dialog window is opened.
@@ -82,106 +99,6 @@ public class Window extends EventTarget {
    */
   @Nullable
   public OnBeforeUnloadEventHandler onbeforeunload;
-
-  /**
-   * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange">WindowEventHandlers.onhashchange - MDN</a>
-   */
-  @Nullable
-  public HashChangeEventHandler onhashchange;
-
-  /**
-   * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">WindowEventHandlers.onlanguagechange - MDN</a>
-   */
-  @Nullable
-  public EventHandler onlanguagechange;
-
-  /**
-   * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
-   */
-  @Nullable
-  public MessageEventHandler onmessage;
-
-  /**
-   * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
-   */
-  @Nullable
-  public MessageEventHandler onmessageerror;
-
-  @Nullable
-  public EventHandler onoffline;
-
-  @Nullable
-  public EventHandler ononline;
-
-  @Nullable
-  public PageTransitionEventHandler onpagehide;
-
-  @Nullable
-  public PageTransitionEventHandler onpageshow;
-
-  /**
-   * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate">WindowEventHandlers.onpopstate - MDN</a>
-   */
-  @Nullable
-  public EventHandler onpopstate;
-
-  /**
-   * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled">Window.onrejectionhandled - MDN</a>
-   */
-  @Nullable
-  public PromiseRejectionEventHandler onrejectionhandled;
-
-  /**
-   * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onstorage">WindowEventHandlers.onstorage - MDN</a>
-   */
-  @Nullable
-  public StorageEventHandler onstorage;
-
-  /**
-   * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">WindowEventHandlers.onunhandledrejection - MDN</a>
-   */
-  @Nullable
-  public PromiseRejectionEventHandler onunhandledrejection;
-
-  /**
-   * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload">WindowEventHandlers.onunload - MDN</a>
-   */
-  @Nullable
-  public EventHandler onunload;
-
-  /**
-   * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
-   */
-  @Nullable
-  public EventHandler onabort;
-
-  /**
-   * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
-   */
-  @Nullable
-  public EventHandler onauxclick;
 
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
@@ -239,6 +156,9 @@ public class Window extends EventTarget {
   @Nullable
   public EventHandler onclose;
 
+  @Nullable
+  public EventHandler oncompassneedscalibration;
+
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
@@ -262,6 +182,25 @@ public class Window extends EventTarget {
    */
   @Nullable
   public EventHandler ondblclick;
+
+  /**
+   * An event handler for the devicemotion events sent to the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
+   */
+  @Nullable
+  public DeviceMotionEventHandler ondevicemotion;
+
+  /**
+   * An event handler for the deviceorientation event, which contains information about a relative device orientation change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
+   */
+  @Nullable
+  public DeviceOrientationEventHandler ondeviceorientation;
+
+  @Nullable
+  public EventHandler ondeviceorientationabsolute;
 
   /**
    * A global event handler for the drag event.
@@ -376,6 +315,22 @@ public class Window extends EventTarget {
   public EventHandler onformdata;
 
   /**
+   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
+   */
+  @Nullable
+  public EventHandler ongotpointercapture;
+
+  /**
+   * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange">WindowEventHandlers.onhashchange - MDN</a>
+   */
+  @Nullable
+  public HashChangeEventHandler onhashchange;
+
+  /**
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
@@ -416,6 +371,14 @@ public class Window extends EventTarget {
   public EventHandler onkeyup;
 
   /**
+   * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">WindowEventHandlers.onlanguagechange - MDN</a>
+   */
+  @Nullable
+  public EventHandler onlanguagechange;
+
+  /**
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload">GlobalEventHandlers.onload - MDN</a>
@@ -446,6 +409,30 @@ public class Window extends EventTarget {
    */
   @Nullable
   public EventHandler onloadstart;
+
+  /**
+   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
+   */
+  @Nullable
+  public EventHandler onlostpointercapture;
+
+  /**
+   * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
+   */
+  @Nullable
+  public MessageEventHandler onmessage;
+
+  /**
+   * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
+   */
+  @Nullable
+  public MessageEventHandler onmessageerror;
 
   /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
@@ -503,6 +490,21 @@ public class Window extends EventTarget {
   @Nullable
   public EventHandler onmouseup;
 
+  @Nullable
+  public EventHandler onoffline;
+
+  @Nullable
+  public EventHandler ononline;
+
+  @Nullable
+  public EventHandler onorientationchange;
+
+  @Nullable
+  public PageTransitionEventHandler onpagehide;
+
+  @Nullable
+  public PageTransitionEventHandler onpageshow;
+
   /**
    * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
    *
@@ -526,172 +528,6 @@ public class Window extends EventTarget {
    */
   @Nullable
   public EventHandler onplaying;
-
-  @Nullable
-  public EventHandler onprogress;
-
-  @Nullable
-  public EventHandler onratechange;
-
-  /**
-   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
-   */
-  @Nullable
-  public EventHandler onreset;
-
-  /**
-   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
-   */
-  @Nullable
-  public UIEventHandler onresize;
-
-  /**
-   * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
-   */
-  @Nullable
-  public EventHandler onscroll;
-
-  @Nullable
-  public EventHandler onsecuritypolicyviolation;
-
-  @Nullable
-  public EventHandler onseeked;
-
-  @Nullable
-  public EventHandler onseeking;
-
-  /**
-   * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
-   */
-  @Nullable
-  public EventHandler onselect;
-
-  @Nullable
-  public EventHandler onslotchange;
-
-  @Nullable
-  public EventHandler onstalled;
-
-  /**
-   * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
-   */
-  @Nullable
-  public EventHandler onsubmit;
-
-  @Nullable
-  public EventHandler onsuspend;
-
-  @Nullable
-  public EventHandler ontimeupdate;
-
-  @Nullable
-  public EventHandler ontoggle;
-
-  @Nullable
-  public EventHandler onvolumechange;
-
-  @Nullable
-  public EventHandler onwaiting;
-
-  @Nullable
-  public EventHandler onwebkitanimationend;
-
-  @Nullable
-  public EventHandler onwebkitanimationiteration;
-
-  @Nullable
-  public EventHandler onwebkitanimationstart;
-
-  @Nullable
-  public EventHandler onwebkittransitionend;
-
-  /**
-   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
-   */
-  @Nullable
-  public EventHandler onwheel;
-
-  /**
-   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationcancel;
-
-  /**
-   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationend;
-
-  /**
-   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationiteration;
-
-  /**
-   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationstart;
-
-  /**
-   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
-   */
-  @Nullable
-  public TransitionEventHandler ontransitioncancel;
-
-  /**
-   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
-   */
-  @Nullable
-  public TransitionEventHandler ontransitionend;
-
-  @Nullable
-  public TransitionEventHandler ontransitionrun;
-
-  @Nullable
-  public TransitionEventHandler ontransitionstart;
-
-  /**
-   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
-   */
-  @Nullable
-  public EventHandler ongotpointercapture;
-
-  /**
-   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
-   */
-  @Nullable
-  public EventHandler onlostpointercapture;
 
   /**
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
@@ -758,6 +594,69 @@ public class Window extends EventTarget {
   public EventHandler onpointerup;
 
   /**
+   * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate">WindowEventHandlers.onpopstate - MDN</a>
+   */
+  @Nullable
+  public EventHandler onpopstate;
+
+  @Nullable
+  public EventHandler onprogress;
+
+  @Nullable
+  public EventHandler onratechange;
+
+  /**
+   * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled">Window.onrejectionhandled - MDN</a>
+   */
+  @Nullable
+  public PromiseRejectionEventHandler onrejectionhandled;
+
+  /**
+   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
+   */
+  @Nullable
+  public EventHandler onreset;
+
+  /**
+   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
+   */
+  @Nullable
+  public UIEventHandler onresize;
+
+  /**
+   * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
+   */
+  @Nullable
+  public EventHandler onscroll;
+
+  @Nullable
+  public EventHandler onsecuritypolicyviolation;
+
+  @Nullable
+  public EventHandler onseeked;
+
+  @Nullable
+  public EventHandler onseeking;
+
+  /**
+   * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
+   */
+  @Nullable
+  public EventHandler onselect;
+
+  /**
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
@@ -772,6 +671,37 @@ public class Window extends EventTarget {
    */
   @Nullable
   public EventHandler onselectstart;
+
+  @Nullable
+  public EventHandler onslotchange;
+
+  @Nullable
+  public EventHandler onstalled;
+
+  /**
+   * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onstorage">WindowEventHandlers.onstorage - MDN</a>
+   */
+  @Nullable
+  public StorageEventHandler onstorage;
+
+  /**
+   * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
+   */
+  @Nullable
+  public EventHandler onsubmit;
+
+  @Nullable
+  public EventHandler onsuspend;
+
+  @Nullable
+  public EventHandler ontimeupdate;
+
+  @Nullable
+  public EventHandler ontoggle;
 
   /**
    * The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.
@@ -805,6 +735,76 @@ public class Window extends EventTarget {
   @Nullable
   public EventHandler ontouchstart;
 
+  /**
+   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
+   */
+  @Nullable
+  public TransitionEventHandler ontransitioncancel;
+
+  /**
+   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
+   */
+  @Nullable
+  public TransitionEventHandler ontransitionend;
+
+  @Nullable
+  public TransitionEventHandler ontransitionrun;
+
+  @Nullable
+  public TransitionEventHandler ontransitionstart;
+
+  /**
+   * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">WindowEventHandlers.onunhandledrejection - MDN</a>
+   */
+  @Nullable
+  public PromiseRejectionEventHandler onunhandledrejection;
+
+  /**
+   * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload">WindowEventHandlers.onunload - MDN</a>
+   */
+  @Nullable
+  public EventHandler onunload;
+
+  @Nullable
+  public EventHandler onvolumechange;
+
+  @Nullable
+  public EventHandler onwaiting;
+
+  @Nullable
+  public EventHandler onwebkitanimationend;
+
+  @Nullable
+  public EventHandler onwebkitanimationiteration;
+
+  @Nullable
+  public EventHandler onwebkitanimationstart;
+
+  @Nullable
+  public EventHandler onwebkittransitionend;
+
+  /**
+   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
+   */
+  @Nullable
+  public EventHandler onwheel;
+
+  @Nullable
+  public Any opener;
+
+  @Nonnull
+  public String status;
+
   Window() {
   }
 
@@ -814,10 +814,37 @@ public class Window extends EventTarget {
   @Nonnull
   public native ApplicationCache applicationCache();
 
+  /**
+   * The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches">WindowOrWorkerGlobalScope.caches - MDN</a>
+   */
+  @JsProperty(
+      name = "caches"
+  )
+  @Nonnull
+  public native CacheStorage caches();
+
   @JsProperty(
       name = "closed"
   )
   public native boolean closed();
+
+  /**
+   * The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">WindowOrWorkerGlobalScope.crossOriginIsolated - MDN</a>
+   */
+  @JsProperty(
+      name = "crossOriginIsolated"
+  )
+  public native boolean crossOriginIsolated();
+
+  @JsProperty(
+      name = "crypto"
+  )
+  @Nonnull
+  public native Crypto crypto();
 
   @JsProperty(
       name = "customElements"
@@ -826,10 +853,27 @@ public class Window extends EventTarget {
   public native CustomElementRegistry customElements();
 
   @JsProperty(
+      name = "devicePixelRatio"
+  )
+  public native double devicePixelRatio();
+
+  @JsProperty(
       name = "document"
   )
   @Nonnull
   public native Document document();
+
+  @JsProperty(
+      name = "event"
+  )
+  @Nullable
+  public native Any event();
+
+  @JsProperty(
+      name = "external"
+  )
+  @Nonnull
+  public native External external();
 
   @JsProperty(
       name = "frameElement"
@@ -849,10 +893,47 @@ public class Window extends EventTarget {
   @Nonnull
   public native History history();
 
+  /**
+   * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB">WindowOrWorkerGlobalScope.indexedDB - MDN</a>
+   */
+  @JsProperty(
+      name = "indexedDB"
+  )
+  @Nonnull
+  public native IDBFactory indexedDB();
+
+  @JsProperty(
+      name = "innerHeight"
+  )
+  public native int innerHeight();
+
+  @JsProperty(
+      name = "innerWidth"
+  )
+  public native int innerWidth();
+
+  /**
+   * The isSecureContext read-only property of the WindowOrWorkerGlobalScope interface returns a boolean indicating whether the current context is secure (true) or not (false).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext">WindowOrWorkerGlobalScope.isSecureContext - MDN</a>
+   */
+  @JsProperty(
+      name = "isSecureContext"
+  )
+  public native boolean isSecureContext();
+
   @JsProperty(
       name = "length"
   )
   public native int length();
+
+  @JsProperty(
+      name = "localStorage"
+  )
+  @Nonnull
+  public native Storage localStorage();
 
   @JsProperty(
       name = "location"
@@ -879,67 +960,20 @@ public class Window extends EventTarget {
   public native Navigator navigator();
 
   @JsProperty(
-      name = "parent"
+      name = "orientation"
   )
-  @Nullable
-  public native Window parent();
+  public native short orientation();
 
+  /**
+   * The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin">WindowOrWorkerGlobalScope.origin - MDN</a>
+   */
   @JsProperty(
-      name = "personalbar"
+      name = "origin"
   )
   @Nonnull
-  public native BarProp personalbar();
-
-  @JsProperty(
-      name = "scrollbars"
-  )
-  @Nonnull
-  public native BarProp scrollbars();
-
-  @JsProperty(
-      name = "self"
-  )
-  @Nonnull
-  public native Window self();
-
-  @JsProperty(
-      name = "statusbar"
-  )
-  @Nonnull
-  public native BarProp statusbar();
-
-  @JsProperty(
-      name = "toolbar"
-  )
-  @Nonnull
-  public native BarProp toolbar();
-
-  @JsProperty(
-      name = "top"
-  )
-  @Nullable
-  public native Window top();
-
-  @JsProperty(
-      name = "window"
-  )
-  @Nonnull
-  public native Window window();
-
-  @JsProperty(
-      name = "devicePixelRatio"
-  )
-  public native double devicePixelRatio();
-
-  @JsProperty(
-      name = "innerHeight"
-  )
-  public native int innerHeight();
-
-  @JsProperty(
-      name = "innerWidth"
-  )
-  public native int innerWidth();
+  public native String origin();
 
   @JsProperty(
       name = "outerHeight"
@@ -960,6 +994,24 @@ public class Window extends EventTarget {
       name = "pageYOffset"
   )
   public native double pageYOffset();
+
+  @JsProperty(
+      name = "parent"
+  )
+  @Nullable
+  public native Window parent();
+
+  @JsProperty(
+      name = "performance"
+  )
+  @Nonnull
+  public native Performance performance();
+
+  @JsProperty(
+      name = "personalbar"
+  )
+  @Nonnull
+  public native BarProp personalbar();
 
   @JsProperty(
       name = "screen"
@@ -998,10 +1050,46 @@ public class Window extends EventTarget {
   public native double scrollY();
 
   @JsProperty(
+      name = "scrollbars"
+  )
+  @Nonnull
+  public native BarProp scrollbars();
+
+  @JsProperty(
+      name = "self"
+  )
+  @Nonnull
+  public native Window self();
+
+  @JsProperty(
+      name = "sessionStorage"
+  )
+  @Nonnull
+  public native Storage sessionStorage();
+
+  @JsProperty(
       name = "speechSynthesis"
   )
   @Nonnull
   public native SpeechSynthesis speechSynthesis();
+
+  @JsProperty(
+      name = "statusbar"
+  )
+  @Nonnull
+  public native BarProp statusbar();
+
+  @JsProperty(
+      name = "toolbar"
+  )
+  @Nonnull
+  public native BarProp toolbar();
+
+  @JsProperty(
+      name = "top"
+  )
+  @Nullable
+  public native Window top();
 
   @JsProperty(
       name = "visualViewport"
@@ -1010,98 +1098,10 @@ public class Window extends EventTarget {
   public native VisualViewport visualViewport();
 
   @JsProperty(
-      name = "orientation"
-  )
-  public native short orientation();
-
-  @JsProperty(
-      name = "event"
-  )
-  @Nullable
-  public native Any event();
-
-  @JsProperty(
-      name = "external"
+      name = "window"
   )
   @Nonnull
-  public native External external();
-
-  /**
-   * The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">WindowOrWorkerGlobalScope.crossOriginIsolated - MDN</a>
-   */
-  @JsProperty(
-      name = "crossOriginIsolated"
-  )
-  public native boolean crossOriginIsolated();
-
-  /**
-   * The isSecureContext read-only property of the WindowOrWorkerGlobalScope interface returns a boolean indicating whether the current context is secure (true) or not (false).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext">WindowOrWorkerGlobalScope.isSecureContext - MDN</a>
-   */
-  @JsProperty(
-      name = "isSecureContext"
-  )
-  public native boolean isSecureContext();
-
-  /**
-   * The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin">WindowOrWorkerGlobalScope.origin - MDN</a>
-   */
-  @JsProperty(
-      name = "origin"
-  )
-  @Nonnull
-  public native String origin();
-
-  @JsProperty(
-      name = "performance"
-  )
-  @Nonnull
-  public native Performance performance();
-
-  /**
-   * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB">WindowOrWorkerGlobalScope.indexedDB - MDN</a>
-   */
-  @JsProperty(
-      name = "indexedDB"
-  )
-  @Nonnull
-  public native IDBFactory indexedDB();
-
-  /**
-   * The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches">WindowOrWorkerGlobalScope.caches - MDN</a>
-   */
-  @JsProperty(
-      name = "caches"
-  )
-  @Nonnull
-  public native CacheStorage caches();
-
-  @JsProperty(
-      name = "crypto"
-  )
-  @Nonnull
-  public native Crypto crypto();
-
-  @JsProperty(
-      name = "localStorage"
-  )
-  @Nonnull
-  public native Storage localStorage();
-
-  @JsProperty(
-      name = "sessionStorage"
-  )
-  @Nonnull
-  public native Storage sessionStorage();
+  public native Window window();
 
   /**
    * The Window.alert() method displays an alert dialog with the optional specified content and an OK button.

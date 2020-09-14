@@ -22,6 +22,12 @@ public class SVGFESpecularLightingElement extends SVGElement {
   }
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -40,6 +46,12 @@ public class SVGFESpecularLightingElement extends SVGElement {
   public native SVGAnimatedNumber kernelUnitLengthY();
 
   @JsProperty(
+      name = "result"
+  )
+  @Nonnull
+  public native SVGAnimatedString result();
+
+  @JsProperty(
       name = "specularConstant"
   )
   @Nonnull
@@ -56,18 +68,6 @@ public class SVGFESpecularLightingElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedNumber surfaceScale();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
-      name = "result"
-  )
-  @Nonnull
-  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "width"

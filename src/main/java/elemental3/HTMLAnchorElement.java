@@ -19,6 +19,12 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "HTMLAnchorElement"
 )
 public class HTMLAnchorElement extends HTMLElement {
+  @Nonnull
+  public String charset;
+
+  @Nonnull
+  public String coords;
+
   /**
    * The HTMLAnchorElement.download property is a DOMString indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value, if any, specifies the default file name for use in labeling the resource in a local file system. If the name is not a valid file name in the underlying OS, the browser will adjust it.
    *
@@ -28,42 +34,37 @@ public class HTMLAnchorElement extends HTMLElement {
   public String download;
 
   @Nonnull
+  public String hash;
+
+  @Nonnull
+  public String host;
+
+  @Nonnull
+  public String hostname;
+
+  @Nonnull
+  public String href;
+
+  @Nonnull
   public String hreflang;
-
-  @Nonnull
-  public String ping;
-
-  /**
-   * The HTMLAnchorElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the a element and the current document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/rel">HTMLAnchorElement.rel - MDN</a>
-   */
-  @Nonnull
-  public String rel;
-
-  @Nonnull
-  public String target;
-
-  @Nonnull
-  public String text;
-
-  @Nonnull
-  public String type;
-
-  @Nonnull
-  public String charset;
-
-  @Nonnull
-  public String coords;
 
   @Nonnull
   public String name;
 
   @Nonnull
-  public String rev;
+  public String password;
 
   @Nonnull
-  public String shape;
+  public String pathname;
+
+  @Nonnull
+  public String ping;
+
+  @Nonnull
+  public String port;
+
+  @Nonnull
+  public String protocol;
 
   /**
    * The HTMLAnchorElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the a element defining which referrer is sent when fetching the resource.
@@ -76,38 +77,43 @@ public class HTMLAnchorElement extends HTMLElement {
   )
   public String referrerPolicy;
 
+  /**
+   * The HTMLAnchorElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the a element and the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/rel">HTMLAnchorElement.rel - MDN</a>
+   */
   @Nonnull
-  public String hash;
+  public String rel;
 
   @Nonnull
-  public String host;
-
-  @Nonnull
-  public String hostname;
-
-  @Nonnull
-  public String password;
-
-  @Nonnull
-  public String pathname;
-
-  @Nonnull
-  public String port;
-
-  @Nonnull
-  public String protocol;
+  public String rev;
 
   @Nonnull
   public String search;
 
   @Nonnull
-  public String username;
+  public String shape;
 
   @Nonnull
-  public String href;
+  public String target;
+
+  @Nonnull
+  public String text;
+
+  @Nonnull
+  public String type;
+
+  @Nonnull
+  public String username;
 
   public HTMLAnchorElement() {
   }
+
+  @JsProperty(
+      name = "origin"
+  )
+  @Nonnull
+  public native String origin();
 
   /**
    * The HTMLAnchorElement.relList read-only property reflects the rel attribute. It is a live DOMTokenList containing the set of link types indicating the relationship between the resource represented by the a element and the current document.
@@ -119,10 +125,4 @@ public class HTMLAnchorElement extends HTMLElement {
   )
   @Nonnull
   public native DOMTokenList relList();
-
-  @JsProperty(
-      name = "origin"
-  )
-  @Nonnull
-  public native String origin();
 }

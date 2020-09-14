@@ -23,10 +23,10 @@ import jsinterop.base.Any;
 )
 public class ServiceWorker extends EventTarget {
   @Nullable
-  public EventHandler onstatechange;
+  public EventHandler onerror;
 
   @Nullable
-  public EventHandler onerror;
+  public EventHandler onstatechange;
 
   ServiceWorker() {
   }

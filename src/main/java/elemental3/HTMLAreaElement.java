@@ -29,23 +29,33 @@ public class HTMLAreaElement extends HTMLElement {
   public String download;
 
   @Nonnull
-  public String ping;
-
-  /**
-   * The HTMLAreaElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the area element and the current document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/rel">HTMLAreaElement.rel - MDN</a>
-   */
-  @Nonnull
-  public String rel;
+  public String hash;
 
   @Nonnull
-  public String shape;
+  public String host;
 
   @Nonnull
-  public String target;
+  public String hostname;
+
+  @Nonnull
+  public String href;
 
   public boolean noHref;
+
+  @Nonnull
+  public String password;
+
+  @Nonnull
+  public String pathname;
+
+  @Nonnull
+  public String ping;
+
+  @Nonnull
+  public String port;
+
+  @Nonnull
+  public String protocol;
 
   /**
    * The HTMLAreaElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the area element defining which referrer is sent when fetching the resource.
@@ -58,38 +68,34 @@ public class HTMLAreaElement extends HTMLElement {
   )
   public String referrerPolicy;
 
+  /**
+   * The HTMLAreaElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the area element and the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/rel">HTMLAreaElement.rel - MDN</a>
+   */
   @Nonnull
-  public String hash;
-
-  @Nonnull
-  public String host;
-
-  @Nonnull
-  public String hostname;
-
-  @Nonnull
-  public String password;
-
-  @Nonnull
-  public String pathname;
-
-  @Nonnull
-  public String port;
-
-  @Nonnull
-  public String protocol;
+  public String rel;
 
   @Nonnull
   public String search;
 
   @Nonnull
-  public String username;
+  public String shape;
 
   @Nonnull
-  public String href;
+  public String target;
+
+  @Nonnull
+  public String username;
 
   public HTMLAreaElement() {
   }
+
+  @JsProperty(
+      name = "origin"
+  )
+  @Nonnull
+  public native String origin();
 
   /**
    * The HTMLAreaElement.relList read-only property reflects the rel attribute. It is a live DOMTokenList containing the set of link types indicating the relationship between the resource represented by the area element and the current document.
@@ -101,10 +107,4 @@ public class HTMLAreaElement extends HTMLElement {
   )
   @Nonnull
   public native DOMTokenList relList();
-
-  @JsProperty(
-      name = "origin"
-  )
-  @Nonnull
-  public native String origin();
 }

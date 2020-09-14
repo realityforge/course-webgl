@@ -23,18 +23,6 @@ public class TextDecoderStream {
   }
 
   @JsProperty(
-      name = "readable"
-  )
-  @Nonnull
-  public native ReadableStream readable();
-
-  @JsProperty(
-      name = "writable"
-  )
-  @Nonnull
-  public native WritableStream writable();
-
-  @JsProperty(
       name = "encoding"
   )
   @Nonnull
@@ -49,4 +37,16 @@ public class TextDecoderStream {
       name = "ignoreBOM"
   )
   public native boolean ignoreBOM();
+
+  @JsProperty(
+      name = "readable"
+  )
+  @Nonnull
+  public native ReadableStream readable();
+
+  @JsProperty(
+      name = "writable"
+  )
+  @Nonnull
+  public native WritableStream writable();
 }

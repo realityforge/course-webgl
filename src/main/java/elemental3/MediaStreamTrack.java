@@ -38,6 +38,9 @@ public class MediaStreamTrack extends EventTarget {
   @Nullable
   public EventHandler onended;
 
+  @Nullable
+  public EventHandler onisolationchange;
+
   /**
    * MediaStreamTrack's onmute event handler is called when the mute event is received.
    *
@@ -54,9 +57,6 @@ public class MediaStreamTrack extends EventTarget {
   @Nullable
   public EventHandler onunmute;
 
-  @Nullable
-  public EventHandler onisolationchange;
-
   MediaStreamTrack() {
   }
 
@@ -70,6 +70,11 @@ public class MediaStreamTrack extends EventTarget {
   )
   @Nonnull
   public native String id();
+
+  @JsProperty(
+      name = "isolated"
+  )
+  public native boolean isolated();
 
   /**
    * The MediaStreamTrack.kind read-only property returns a DOMString set to &quot;audio&quot; if the track is an audio track and to &quot;video&quot;, if it is a video track.
@@ -113,11 +118,6 @@ public class MediaStreamTrack extends EventTarget {
   )
   @Nonnull
   public native String readyState();
-
-  @JsProperty(
-      name = "isolated"
-  )
-  public native boolean isolated();
 
   /**
    * The applyConstraints() method of the MediaStreamTrack interface applies a set of constraints to the track; these constraints let the Web site or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancelation, and so forth.

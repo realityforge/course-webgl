@@ -21,6 +21,9 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "HTMLImageElement"
 )
 public class HTMLImageElement extends HTMLElement {
+  @Nonnull
+  public String align;
+
   /**
    * The HTMLImageElement property alt provides fallback (alternate) text to display when the image specified by the img element is not loaded.
    *
@@ -28,6 +31,20 @@ public class HTMLImageElement extends HTMLElement {
    */
   @Nonnull
   public String alt;
+
+  @Nonnull
+  public String border;
+
+  /**
+   * The HTMLImageElement interface's crossOrigin attribute is a string which specifies the Cross-Origin Resource Sharing (CORS) setting to use when retrieving the image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
+   */
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
 
   /**
    * The decoding property of the HTMLImageElement interface represents a hint given to the browser on how it should decode the image.
@@ -44,12 +61,45 @@ public class HTMLImageElement extends HTMLElement {
    */
   public int height;
 
+  public int hspace;
+
   /**
    * The HTMLImageElement proeprty isMap is a Boolean value which indicates that the image is to be used by a server-side image map. This may only be used on images located within an a element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/isMap">HTMLImageElement.isMap - MDN</a>
    */
   public boolean isMap;
+
+  /**
+   * The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = LoadingType.class
+  )
+  public String loading;
+
+  @Nonnull
+  public String longDesc;
+
+  @Nonnull
+  public String lowsrc;
+
+  @Nonnull
+  public String name;
+
+  /**
+   * The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy">HTMLImageElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
 
   /**
    * The HTMLImageElement property sizes allows you to specify the layout width of the image for each of a list of media conditions. This provides the ability to automatically select among different images&mdash;even images of different orientations or aspect ratios&mdash;as the document state changes to match different media conditions.
@@ -83,64 +133,14 @@ public class HTMLImageElement extends HTMLElement {
   @Nonnull
   public String useMap;
 
+  public int vspace;
+
   /**
    * The width property of the HTMLImageElement interface indicates the width at which an image is drawn in CSS pixels if it's being drawn or rendered to any visual medium such as a screen or printer. Otherwise, it's the natural, pixel density-corrected width of the image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width">HTMLImageElement.width - MDN</a>
    */
   public int width;
-
-  @Nonnull
-  public String align;
-
-  @Nonnull
-  public String border;
-
-  public int hspace;
-
-  @Nonnull
-  public String longDesc;
-
-  @Nonnull
-  public String lowsrc;
-
-  @Nonnull
-  public String name;
-
-  public int vspace;
-
-  /**
-   * The HTMLImageElement interface's crossOrigin attribute is a string which specifies the Cross-Origin Resource Sharing (CORS) setting to use when retrieving the image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
-   */
-  @Nullable
-  @MagicConstant(
-      valuesFromClass = CrossOriginType.class
-  )
-  public String crossOrigin;
-
-  /**
-   * The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy">HTMLImageElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReferrerPolicy.class
-  )
-  public String referrerPolicy;
-
-  /**
-   * The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
-   */
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = LoadingType.class
-  )
-  public String loading;
 
   public HTMLImageElement() {
   }

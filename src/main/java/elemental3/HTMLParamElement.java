@@ -21,10 +21,10 @@ public class HTMLParamElement extends HTMLElement {
   public String name;
 
   @Nonnull
-  public String value;
+  public String type;
 
   @Nonnull
-  public String type;
+  public String value;
 
   @Nonnull
   public String valueType;

@@ -69,6 +69,12 @@ public class SVGMarkerElement extends SVGElement {
   public native SVGAnimatedEnumeration orientType();
 
   @JsProperty(
+      name = "preserveAspectRatio"
+  )
+  @Nonnull
+  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
+
+  @JsProperty(
       name = "refX"
   )
   @Nonnull
@@ -79,12 +85,6 @@ public class SVGMarkerElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedLength refY();
-
-  @JsProperty(
-      name = "preserveAspectRatio"
-  )
-  @Nonnull
-  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
 
   @JsProperty(
       name = "viewBox"

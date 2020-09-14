@@ -43,6 +43,14 @@ public class Location {
   public String hostname;
 
   /**
+   * The href property of the Location interface is a stringifier that returns a USVString containing the whole URL, and allows the href to be updated.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href">Location.href - MDN</a>
+   */
+  @Nonnull
+  public String href;
+
+  /**
    * The pathname property of the Location interface is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname">Location.pathname - MDN</a>
@@ -73,14 +81,6 @@ public class Location {
    */
   @Nonnull
   public String search;
-
-  /**
-   * The href property of the Location interface is a stringifier that returns a USVString containing the whole URL, and allows the href to be updated.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href">Location.href - MDN</a>
-   */
-  @Nonnull
-  public String href;
 
   Location() {
   }

@@ -21,6 +21,26 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "CanvasRenderingContext2D"
 )
 public class CanvasRenderingContext2D {
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasDirection.class
+  )
+  public String direction;
+
+  @Nonnull
+  public StringOrCanvasGradientOrCanvasPatternUnion fillStyle;
+
+  @Nonnull
+  public String filter;
+
+  @Nonnull
+  public String font;
+
+  public double globalAlpha;
+
+  @Nonnull
+  public String globalCompositeOperation;
+
   public boolean imageSmoothingEnabled;
 
   @Nonnull
@@ -28,11 +48,6 @@ public class CanvasRenderingContext2D {
       valuesFromClass = ImageSmoothingQuality.class
   )
   public String imageSmoothingQuality;
-
-  public double globalAlpha;
-
-  @Nonnull
-  public String globalCompositeOperation;
 
   @Nonnull
   @MagicConstant(
@@ -52,14 +67,17 @@ public class CanvasRenderingContext2D {
 
   public double miterLimit;
 
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasDirection.class
-  )
-  public String direction;
+  public double shadowBlur;
 
   @Nonnull
-  public String font;
+  public String shadowColor;
+
+  public double shadowOffsetX;
+
+  public double shadowOffsetY;
+
+  @Nonnull
+  public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
 
   @Nonnull
   @MagicConstant(
@@ -72,24 +90,6 @@ public class CanvasRenderingContext2D {
       valuesFromClass = CanvasTextBaseline.class
   )
   public String textBaseline;
-
-  @Nonnull
-  public String filter;
-
-  public double shadowBlur;
-
-  @Nonnull
-  public String shadowColor;
-
-  public double shadowOffsetX;
-
-  public double shadowOffsetY;
-
-  @Nonnull
-  public StringOrCanvasGradientOrCanvasPatternUnion fillStyle;
-
-  @Nonnull
-  public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
 
   CanvasRenderingContext2D() {
   }

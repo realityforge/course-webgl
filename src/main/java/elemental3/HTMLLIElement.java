@@ -17,10 +17,10 @@ import jsinterop.annotations.JsType;
     name = "HTMLLIElement"
 )
 public class HTMLLIElement extends HTMLElement {
-  public int value;
-
   @Nonnull
   public String type;
+
+  public int value;
 
   public HTMLLIElement() {
   }

@@ -38,6 +38,12 @@ public class HTMLFormElement extends HTMLElement {
   @Nonnull
   public String action;
 
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormAutocompleteType.class
+  )
+  public String autocomplete;
+
   /**
    * The HTMLFormElement.encoding property is an alternative name for the enctype element on the DOM HTMLFormElement object.
    *
@@ -45,6 +51,28 @@ public class HTMLFormElement extends HTMLElement {
    */
   @Nonnull
   public String encoding;
+
+  /**
+   * The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormEncodingType.class
+  )
+  public String enctype;
+
+  /**
+   * The HTMLFormElement.method property represents the HTTP method used to submit the form.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormMethodType.class
+  )
+  public String method;
 
   /**
    * The HTMLFormElement.name property represents the name of the current form element as a string.
@@ -66,34 +94,6 @@ public class HTMLFormElement extends HTMLElement {
    */
   @Nonnull
   public String target;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormAutocompleteType.class
-  )
-  public String autocomplete;
-
-  /**
-   * The HTMLFormElement.method property represents the HTTP method used to submit the form.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
-   */
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormMethodType.class
-  )
-  public String method;
-
-  /**
-   * The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
-   */
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormEncodingType.class
-  )
-  public String enctype;
 
   public HTMLFormElement() {
   }

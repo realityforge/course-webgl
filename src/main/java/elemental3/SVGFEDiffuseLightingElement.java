@@ -28,6 +28,12 @@ public class SVGFEDiffuseLightingElement extends SVGElement {
   public native SVGAnimatedNumber diffuseConstant();
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -46,22 +52,16 @@ public class SVGFEDiffuseLightingElement extends SVGElement {
   public native SVGAnimatedNumber kernelUnitLengthY();
 
   @JsProperty(
-      name = "surfaceScale"
-  )
-  @Nonnull
-  public native SVGAnimatedNumber surfaceScale();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
       name = "result"
   )
   @Nonnull
   public native SVGAnimatedString result();
+
+  @JsProperty(
+      name = "surfaceScale"
+  )
+  @Nonnull
+  public native SVGAnimatedNumber surfaceScale();
 
   @JsProperty(
       name = "width"

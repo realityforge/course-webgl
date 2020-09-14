@@ -21,24 +21,16 @@ import org.intellij.lang.annotations.MagicConstant;
 public class HTMLScriptElement extends HTMLElement {
   public boolean async;
 
-  public boolean defer;
-
-  @Nonnull
-  public String integrity;
-
-  public boolean noModule;
-
-  @Nonnull
-  public String src;
-
-  @Nonnull
-  public String text;
-
-  @Nonnull
-  public String type;
-
   @Nonnull
   public String charset;
+
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
+
+  public boolean defer;
 
   @Nonnull
   public String event;
@@ -46,11 +38,10 @@ public class HTMLScriptElement extends HTMLElement {
   @Nonnull
   public String htmlFor;
 
-  @Nullable
-  @MagicConstant(
-      valuesFromClass = CrossOriginType.class
-  )
-  public String crossOrigin;
+  @Nonnull
+  public String integrity;
+
+  public boolean noModule;
 
   /**
    * The referrerPolicy property of the HTMLScriptElement interface reflects the HTML referrerpolicy of the script element and fetches made by that script, defining which referrer is sent when fetching the resource.
@@ -62,6 +53,15 @@ public class HTMLScriptElement extends HTMLElement {
       valuesFromClass = ReferrerPolicy.class
   )
   public String referrerPolicy;
+
+  @Nonnull
+  public String src;
+
+  @Nonnull
+  public String text;
+
+  @Nonnull
+  public String type;
 
   public HTMLScriptElement() {
   }

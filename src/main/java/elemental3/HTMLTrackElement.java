@@ -39,6 +39,12 @@ public class HTMLTrackElement extends HTMLElement {
   public boolean default_;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = TrackKind.class
+  )
+  public String kind;
+
+  @Nonnull
   public String label;
 
   /**
@@ -51,12 +57,6 @@ public class HTMLTrackElement extends HTMLElement {
 
   @Nonnull
   public String srclang;
-
-  @Nonnull
-  @MagicConstant(
-      valuesFromClass = TrackKind.class
-  )
-  public String kind;
 
   public HTMLTrackElement() {
   }

@@ -53,10 +53,22 @@ public class SVGFETurbulenceElement extends SVGElement {
   public native SVGAnimatedNumber baseFrequencyY();
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "numOctaves"
   )
   @Nonnull
   public native SVGAnimatedInteger numOctaves();
+
+  @JsProperty(
+      name = "result"
+  )
+  @Nonnull
+  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "seed"
@@ -75,18 +87,6 @@ public class SVGFETurbulenceElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedEnumeration type();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
-      name = "result"
-  )
-  @Nonnull
-  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "width"

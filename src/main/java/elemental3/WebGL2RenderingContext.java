@@ -44,6 +44,9 @@ public class WebGL2RenderingContext {
   public static final int ACTIVE_UNIFORMS = 0x8B86;
 
   @JsOverlay
+  public static final int ACTIVE_UNIFORM_BLOCKS = 0x8A36;
+
+  @JsOverlay
   public static final int ALIASED_LINE_WIDTH_RANGE = 0x846E;
 
   @JsOverlay
@@ -56,7 +59,16 @@ public class WebGL2RenderingContext {
   public static final int ALPHA_BITS = 0x0D55;
 
   @JsOverlay
+  public static final int ALREADY_SIGNALED = 0x911A;
+
+  @JsOverlay
   public static final int ALWAYS = 0x0207;
+
+  @JsOverlay
+  public static final int ANY_SAMPLES_PASSED = 0x8C2F;
+
+  @JsOverlay
+  public static final int ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A;
 
   @JsOverlay
   public static final int ARRAY_BUFFER = 0x8892;
@@ -131,7 +143,55 @@ public class WebGL2RenderingContext {
   public static final int CLAMP_TO_EDGE = 0x812F;
 
   @JsOverlay
+  public static final int COLOR = 0x1800;
+
+  @JsOverlay
   public static final int COLOR_ATTACHMENT0 = 0x8CE0;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT1 = 0x8CE1;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT10 = 0x8CEA;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT11 = 0x8CEB;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT12 = 0x8CEC;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT13 = 0x8CED;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT14 = 0x8CEE;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT15 = 0x8CEF;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT2 = 0x8CE2;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT3 = 0x8CE3;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT4 = 0x8CE4;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT5 = 0x8CE5;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT6 = 0x8CE6;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT7 = 0x8CE7;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT8 = 0x8CE8;
+
+  @JsOverlay
+  public static final int COLOR_ATTACHMENT9 = 0x8CE9;
 
   @JsOverlay
   public static final int COLOR_BUFFER_BIT = 0x00004000;
@@ -143,10 +203,16 @@ public class WebGL2RenderingContext {
   public static final int COLOR_WRITEMASK = 0x0C23;
 
   @JsOverlay
+  public static final int COMPARE_REF_TO_TEXTURE = 0x884E;
+
+  @JsOverlay
   public static final int COMPILE_STATUS = 0x8B81;
 
   @JsOverlay
   public static final int COMPRESSED_TEXTURE_FORMATS = 0x86A3;
+
+  @JsOverlay
+  public static final int CONDITION_SATISFIED = 0x911C;
 
   @JsOverlay
   public static final int CONSTANT_ALPHA = 0x8003;
@@ -158,6 +224,18 @@ public class WebGL2RenderingContext {
   public static final int CONTEXT_LOST_WEBGL = 0x9242;
 
   @JsOverlay
+  public static final int COPY_READ_BUFFER = 0x8F36;
+
+  @JsOverlay
+  public static final int COPY_READ_BUFFER_BINDING = 0x8F36;
+
+  @JsOverlay
+  public static final int COPY_WRITE_BUFFER = 0x8F37;
+
+  @JsOverlay
+  public static final int COPY_WRITE_BUFFER_BINDING = 0x8F37;
+
+  @JsOverlay
   public static final int CULL_FACE = 0x0B44;
 
   @JsOverlay
@@ -165,6 +243,9 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int CURRENT_PROGRAM = 0x8B8D;
+
+  @JsOverlay
+  public static final int CURRENT_QUERY = 0x8865;
 
   @JsOverlay
   public static final int CURRENT_VERTEX_ATTRIB = 0x8626;
@@ -180,6 +261,15 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int DELETE_STATUS = 0x8B80;
+
+  @JsOverlay
+  public static final int DEPTH = 0x1801;
+
+  @JsOverlay
+  public static final int DEPTH24_STENCIL8 = 0x88F0;
+
+  @JsOverlay
+  public static final int DEPTH32F_STENCIL8 = 0x8CAD;
 
   @JsOverlay
   public static final int DEPTH_ATTACHMENT = 0x8D00;
@@ -198,6 +288,12 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int DEPTH_COMPONENT16 = 0x81A5;
+
+  @JsOverlay
+  public static final int DEPTH_COMPONENT24 = 0x81A6;
+
+  @JsOverlay
+  public static final int DEPTH_COMPONENT32F = 0x8CAC;
 
   @JsOverlay
   public static final int DEPTH_FUNC = 0x0B74;
@@ -224,13 +320,73 @@ public class WebGL2RenderingContext {
   public static final int DONT_CARE = 0x1100;
 
   @JsOverlay
+  public static final int DRAW_BUFFER0 = 0x8825;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER1 = 0x8826;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER10 = 0x882F;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER11 = 0x8830;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER12 = 0x8831;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER13 = 0x8832;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER14 = 0x8833;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER15 = 0x8834;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER2 = 0x8827;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER3 = 0x8828;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER4 = 0x8829;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER5 = 0x882A;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER6 = 0x882B;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER7 = 0x882C;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER8 = 0x882D;
+
+  @JsOverlay
+  public static final int DRAW_BUFFER9 = 0x882E;
+
+  @JsOverlay
+  public static final int DRAW_FRAMEBUFFER = 0x8CA9;
+
+  @JsOverlay
+  public static final int DRAW_FRAMEBUFFER_BINDING = 0x8CA6;
+
+  @JsOverlay
   public static final int DST_ALPHA = 0x0304;
 
   @JsOverlay
   public static final int DST_COLOR = 0x0306;
 
   @JsOverlay
+  public static final int DYNAMIC_COPY = 0x88EA;
+
+  @JsOverlay
   public static final int DYNAMIC_DRAW = 0x88E8;
+
+  @JsOverlay
+  public static final int DYNAMIC_READ = 0x88E9;
 
   @JsOverlay
   public static final int ELEMENT_ARRAY_BUFFER = 0x8893;
@@ -248,13 +404,34 @@ public class WebGL2RenderingContext {
   public static final int FLOAT = 0x1406;
 
   @JsOverlay
+  public static final int FLOAT_32_UNSIGNED_INT_24_8_REV = 0x8DAD;
+
+  @JsOverlay
   public static final int FLOAT_MAT2 = 0x8B5A;
+
+  @JsOverlay
+  public static final int FLOAT_MAT2x3 = 0x8B65;
+
+  @JsOverlay
+  public static final int FLOAT_MAT2x4 = 0x8B66;
 
   @JsOverlay
   public static final int FLOAT_MAT3 = 0x8B5B;
 
   @JsOverlay
+  public static final int FLOAT_MAT3x2 = 0x8B67;
+
+  @JsOverlay
+  public static final int FLOAT_MAT3x4 = 0x8B68;
+
+  @JsOverlay
   public static final int FLOAT_MAT4 = 0x8B5C;
+
+  @JsOverlay
+  public static final int FLOAT_MAT4x2 = 0x8B69;
+
+  @JsOverlay
+  public static final int FLOAT_MAT4x3 = 0x8B6A;
 
   @JsOverlay
   public static final int FLOAT_VEC2 = 0x8B50;
@@ -269,7 +446,28 @@ public class WebGL2RenderingContext {
   public static final int FRAGMENT_SHADER = 0x8B30;
 
   @JsOverlay
+  public static final int FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B;
+
+  @JsOverlay
   public static final int FRAMEBUFFER = 0x8D40;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE = 0x8215;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_BLUE_SIZE = 0x8214;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING = 0x8210;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE = 0x8211;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE = 0x8216;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_GREEN_SIZE = 0x8213;
 
   @JsOverlay
   public static final int FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1;
@@ -278,7 +476,16 @@ public class WebGL2RenderingContext {
   public static final int FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0;
 
   @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_RED_SIZE = 0x8212;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE = 0x8217;
+
+  @JsOverlay
   public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER = 0x8CD4;
 
   @JsOverlay
   public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2;
@@ -290,6 +497,9 @@ public class WebGL2RenderingContext {
   public static final int FRAMEBUFFER_COMPLETE = 0x8CD5;
 
   @JsOverlay
+  public static final int FRAMEBUFFER_DEFAULT = 0x8218;
+
+  @JsOverlay
   public static final int FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6;
 
   @JsOverlay
@@ -297,6 +507,9 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7;
+
+  @JsOverlay
+  public static final int FRAMEBUFFER_INCOMPLETE_MULTISAMPLE = 0x8D56;
 
   @JsOverlay
   public static final int FRAMEBUFFER_UNSUPPORTED = 0x8CDD;
@@ -332,6 +545,9 @@ public class WebGL2RenderingContext {
   public static final int GREEN_BITS = 0x0D53;
 
   @JsOverlay
+  public static final int HALF_FLOAT = 0x140B;
+
+  @JsOverlay
   public static final int HIGH_FLOAT = 0x8DF2;
 
   @JsOverlay
@@ -353,6 +569,24 @@ public class WebGL2RenderingContext {
   public static final int INT = 0x1404;
 
   @JsOverlay
+  public static final int INTERLEAVED_ATTRIBS = 0x8C8C;
+
+  @JsOverlay
+  public static final int INT_2_10_10_10_REV = 0x8D9F;
+
+  @JsOverlay
+  public static final int INT_SAMPLER_2D = 0x8DCA;
+
+  @JsOverlay
+  public static final int INT_SAMPLER_2D_ARRAY = 0x8DCF;
+
+  @JsOverlay
+  public static final int INT_SAMPLER_3D = 0x8DCB;
+
+  @JsOverlay
+  public static final int INT_SAMPLER_CUBE = 0x8DCC;
+
+  @JsOverlay
   public static final int INT_VEC2 = 0x8B53;
 
   @JsOverlay
@@ -366,6 +600,9 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int INVALID_FRAMEBUFFER_OPERATION = 0x0506;
+
+  @JsOverlay
+  public static final int INVALID_INDEX = 0xFFFFFFFF;
 
   @JsOverlay
   public static final int INVALID_OPERATION = 0x0502;
@@ -422,22 +659,97 @@ public class WebGL2RenderingContext {
   public static final int LUMINANCE_ALPHA = 0x190A;
 
   @JsOverlay
+  public static final int MAX = 0x8008;
+
+  @JsOverlay
+  public static final int MAX_3D_TEXTURE_SIZE = 0x8073;
+
+  @JsOverlay
+  public static final int MAX_ARRAY_TEXTURE_LAYERS = 0x88FF;
+
+  @JsOverlay
+  public static final int MAX_CLIENT_WAIT_TIMEOUT_WEBGL = 0x9247;
+
+  @JsOverlay
+  public static final int MAX_COLOR_ATTACHMENTS = 0x8CDF;
+
+  @JsOverlay
+  public static final int MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS = 0x8A33;
+
+  @JsOverlay
   public static final int MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D;
+
+  @JsOverlay
+  public static final int MAX_COMBINED_UNIFORM_BLOCKS = 0x8A2E;
+
+  @JsOverlay
+  public static final int MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS = 0x8A31;
 
   @JsOverlay
   public static final int MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C;
 
   @JsOverlay
+  public static final int MAX_DRAW_BUFFERS = 0x8824;
+
+  @JsOverlay
+  public static final int MAX_ELEMENTS_INDICES = 0x80E9;
+
+  @JsOverlay
+  public static final int MAX_ELEMENTS_VERTICES = 0x80E8;
+
+  @JsOverlay
+  public static final int MAX_ELEMENT_INDEX = 0x8D6B;
+
+  @JsOverlay
+  public static final int MAX_FRAGMENT_INPUT_COMPONENTS = 0x9125;
+
+  @JsOverlay
+  public static final int MAX_FRAGMENT_UNIFORM_BLOCKS = 0x8A2D;
+
+  @JsOverlay
+  public static final int MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49;
+
+  @JsOverlay
   public static final int MAX_FRAGMENT_UNIFORM_VECTORS = 0x8DFD;
+
+  @JsOverlay
+  public static final int MAX_PROGRAM_TEXEL_OFFSET = 0x8905;
 
   @JsOverlay
   public static final int MAX_RENDERBUFFER_SIZE = 0x84E8;
 
   @JsOverlay
+  public static final int MAX_SAMPLES = 0x8D57;
+
+  @JsOverlay
+  public static final int MAX_SERVER_WAIT_TIMEOUT = 0x9111;
+
+  @JsOverlay
   public static final int MAX_TEXTURE_IMAGE_UNITS = 0x8872;
 
   @JsOverlay
+  public static final int MAX_TEXTURE_LOD_BIAS = 0x84FD;
+
+  @JsOverlay
   public static final int MAX_TEXTURE_SIZE = 0x0D33;
+
+  @JsOverlay
+  public static final int MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS = 0x8C8A;
+
+  @JsOverlay
+  public static final int MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 0x8C8B;
+
+  @JsOverlay
+  public static final int MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS = 0x8C80;
+
+  @JsOverlay
+  public static final int MAX_UNIFORM_BLOCK_SIZE = 0x8A30;
+
+  @JsOverlay
+  public static final int MAX_UNIFORM_BUFFER_BINDINGS = 0x8A2F;
+
+  @JsOverlay
+  public static final int MAX_VARYING_COMPONENTS = 0x8B4B;
 
   @JsOverlay
   public static final int MAX_VARYING_VECTORS = 0x8DFC;
@@ -446,7 +758,16 @@ public class WebGL2RenderingContext {
   public static final int MAX_VERTEX_ATTRIBS = 0x8869;
 
   @JsOverlay
+  public static final int MAX_VERTEX_OUTPUT_COMPONENTS = 0x9122;
+
+  @JsOverlay
   public static final int MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C;
+
+  @JsOverlay
+  public static final int MAX_VERTEX_UNIFORM_BLOCKS = 0x8A2B;
+
+  @JsOverlay
+  public static final int MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A;
 
   @JsOverlay
   public static final int MAX_VERTEX_UNIFORM_VECTORS = 0x8DFB;
@@ -459,6 +780,12 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int MEDIUM_INT = 0x8DF4;
+
+  @JsOverlay
+  public static final int MIN = 0x8007;
+
+  @JsOverlay
+  public static final int MIN_PROGRAM_TEXEL_OFFSET = 0x8904;
 
   @JsOverlay
   public static final int MIRRORED_REPEAT = 0x8370;
@@ -488,6 +815,9 @@ public class WebGL2RenderingContext {
   public static final int NO_ERROR = 0;
 
   @JsOverlay
+  public static final int OBJECT_TYPE = 0x9112;
+
+  @JsOverlay
   public static final int ONE = 1;
 
   @JsOverlay
@@ -515,6 +845,27 @@ public class WebGL2RenderingContext {
   public static final int PACK_ALIGNMENT = 0x0D05;
 
   @JsOverlay
+  public static final int PACK_ROW_LENGTH = 0x0D02;
+
+  @JsOverlay
+  public static final int PACK_SKIP_PIXELS = 0x0D04;
+
+  @JsOverlay
+  public static final int PACK_SKIP_ROWS = 0x0D03;
+
+  @JsOverlay
+  public static final int PIXEL_PACK_BUFFER = 0x88EB;
+
+  @JsOverlay
+  public static final int PIXEL_PACK_BUFFER_BINDING = 0x88ED;
+
+  @JsOverlay
+  public static final int PIXEL_UNPACK_BUFFER = 0x88EC;
+
+  @JsOverlay
+  public static final int PIXEL_UNPACK_BUFFER_BINDING = 0x88EF;
+
+  @JsOverlay
   public static final int POINTS = 0x0000;
 
   @JsOverlay
@@ -527,7 +878,64 @@ public class WebGL2RenderingContext {
   public static final int POLYGON_OFFSET_UNITS = 0x2A00;
 
   @JsOverlay
+  public static final int QUERY_RESULT = 0x8866;
+
+  @JsOverlay
+  public static final int QUERY_RESULT_AVAILABLE = 0x8867;
+
+  @JsOverlay
+  public static final int R11F_G11F_B10F = 0x8C3A;
+
+  @JsOverlay
+  public static final int R16F = 0x822D;
+
+  @JsOverlay
+  public static final int R16I = 0x8233;
+
+  @JsOverlay
+  public static final int R16UI = 0x8234;
+
+  @JsOverlay
+  public static final int R32F = 0x822E;
+
+  @JsOverlay
+  public static final int R32I = 0x8235;
+
+  @JsOverlay
+  public static final int R32UI = 0x8236;
+
+  @JsOverlay
+  public static final int R8 = 0x8229;
+
+  @JsOverlay
+  public static final int R8I = 0x8231;
+
+  @JsOverlay
+  public static final int R8UI = 0x8232;
+
+  @JsOverlay
+  public static final int R8_SNORM = 0x8F94;
+
+  @JsOverlay
+  public static final int RASTERIZER_DISCARD = 0x8C89;
+
+  @JsOverlay
+  public static final int READ_BUFFER = 0x0C02;
+
+  @JsOverlay
+  public static final int READ_FRAMEBUFFER = 0x8CA8;
+
+  @JsOverlay
+  public static final int READ_FRAMEBUFFER_BINDING = 0x8CAA;
+
+  @JsOverlay
+  public static final int RED = 0x1903;
+
+  @JsOverlay
   public static final int RED_BITS = 0x0D52;
+
+  @JsOverlay
+  public static final int RED_INTEGER = 0x8D94;
 
   @JsOverlay
   public static final int RENDERBUFFER = 0x8D41;
@@ -557,6 +965,9 @@ public class WebGL2RenderingContext {
   public static final int RENDERBUFFER_RED_SIZE = 0x8D50;
 
   @JsOverlay
+  public static final int RENDERBUFFER_SAMPLES = 0x8CAB;
+
+  @JsOverlay
   public static final int RENDERBUFFER_STENCIL_SIZE = 0x8D55;
 
   @JsOverlay
@@ -572,7 +983,64 @@ public class WebGL2RenderingContext {
   public static final int REPLACE = 0x1E01;
 
   @JsOverlay
+  public static final int RG = 0x8227;
+
+  @JsOverlay
+  public static final int RG16F = 0x822F;
+
+  @JsOverlay
+  public static final int RG16I = 0x8239;
+
+  @JsOverlay
+  public static final int RG16UI = 0x823A;
+
+  @JsOverlay
+  public static final int RG32F = 0x8230;
+
+  @JsOverlay
+  public static final int RG32I = 0x823B;
+
+  @JsOverlay
+  public static final int RG32UI = 0x823C;
+
+  @JsOverlay
+  public static final int RG8 = 0x822B;
+
+  @JsOverlay
+  public static final int RG8I = 0x8237;
+
+  @JsOverlay
+  public static final int RG8UI = 0x8238;
+
+  @JsOverlay
+  public static final int RG8_SNORM = 0x8F95;
+
+  @JsOverlay
   public static final int RGB = 0x1907;
+
+  @JsOverlay
+  public static final int RGB10_A2 = 0x8059;
+
+  @JsOverlay
+  public static final int RGB10_A2UI = 0x906F;
+
+  @JsOverlay
+  public static final int RGB16F = 0x881B;
+
+  @JsOverlay
+  public static final int RGB16I = 0x8D89;
+
+  @JsOverlay
+  public static final int RGB16UI = 0x8D77;
+
+  @JsOverlay
+  public static final int RGB32F = 0x8815;
+
+  @JsOverlay
+  public static final int RGB32I = 0x8D83;
+
+  @JsOverlay
+  public static final int RGB32UI = 0x8D71;
 
   @JsOverlay
   public static final int RGB565 = 0x8D62;
@@ -581,16 +1049,88 @@ public class WebGL2RenderingContext {
   public static final int RGB5_A1 = 0x8057;
 
   @JsOverlay
+  public static final int RGB8 = 0x8051;
+
+  @JsOverlay
+  public static final int RGB8I = 0x8D8F;
+
+  @JsOverlay
+  public static final int RGB8UI = 0x8D7D;
+
+  @JsOverlay
+  public static final int RGB8_SNORM = 0x8F96;
+
+  @JsOverlay
+  public static final int RGB9_E5 = 0x8C3D;
+
+  @JsOverlay
   public static final int RGBA = 0x1908;
+
+  @JsOverlay
+  public static final int RGBA16F = 0x881A;
+
+  @JsOverlay
+  public static final int RGBA16I = 0x8D88;
+
+  @JsOverlay
+  public static final int RGBA16UI = 0x8D76;
+
+  @JsOverlay
+  public static final int RGBA32F = 0x8814;
+
+  @JsOverlay
+  public static final int RGBA32I = 0x8D82;
+
+  @JsOverlay
+  public static final int RGBA32UI = 0x8D70;
 
   @JsOverlay
   public static final int RGBA4 = 0x8056;
 
   @JsOverlay
+  public static final int RGBA8 = 0x8058;
+
+  @JsOverlay
+  public static final int RGBA8I = 0x8D8E;
+
+  @JsOverlay
+  public static final int RGBA8UI = 0x8D7C;
+
+  @JsOverlay
+  public static final int RGBA8_SNORM = 0x8F97;
+
+  @JsOverlay
+  public static final int RGBA_INTEGER = 0x8D99;
+
+  @JsOverlay
+  public static final int RGB_INTEGER = 0x8D98;
+
+  @JsOverlay
+  public static final int RG_INTEGER = 0x8228;
+
+  @JsOverlay
   public static final int SAMPLER_2D = 0x8B5E;
 
   @JsOverlay
+  public static final int SAMPLER_2D_ARRAY = 0x8DC1;
+
+  @JsOverlay
+  public static final int SAMPLER_2D_ARRAY_SHADOW = 0x8DC4;
+
+  @JsOverlay
+  public static final int SAMPLER_2D_SHADOW = 0x8B62;
+
+  @JsOverlay
+  public static final int SAMPLER_3D = 0x8B5F;
+
+  @JsOverlay
+  public static final int SAMPLER_BINDING = 0x8919;
+
+  @JsOverlay
   public static final int SAMPLER_CUBE = 0x8B60;
+
+  @JsOverlay
+  public static final int SAMPLER_CUBE_SHADOW = 0x8DC5;
 
   @JsOverlay
   public static final int SAMPLES = 0x80A9;
@@ -617,6 +1157,9 @@ public class WebGL2RenderingContext {
   public static final int SCISSOR_TEST = 0x0C11;
 
   @JsOverlay
+  public static final int SEPARATE_ATTRIBS = 0x8C8D;
+
+  @JsOverlay
   public static final int SHADER_TYPE = 0x8B4F;
 
   @JsOverlay
@@ -624,6 +1167,12 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int SHORT = 0x1402;
+
+  @JsOverlay
+  public static final int SIGNALED = 0x9119;
+
+  @JsOverlay
+  public static final int SIGNED_NORMALIZED = 0x8F9C;
 
   @JsOverlay
   public static final int SRC_ALPHA = 0x0302;
@@ -635,7 +1184,25 @@ public class WebGL2RenderingContext {
   public static final int SRC_COLOR = 0x0300;
 
   @JsOverlay
+  public static final int SRGB = 0x8C40;
+
+  @JsOverlay
+  public static final int SRGB8 = 0x8C41;
+
+  @JsOverlay
+  public static final int SRGB8_ALPHA8 = 0x8C43;
+
+  @JsOverlay
+  public static final int STATIC_COPY = 0x88E6;
+
+  @JsOverlay
   public static final int STATIC_DRAW = 0x88E4;
+
+  @JsOverlay
+  public static final int STATIC_READ = 0x88E5;
+
+  @JsOverlay
+  public static final int STENCIL = 0x1802;
 
   @JsOverlay
   public static final int STENCIL_ATTACHMENT = 0x8D20;
@@ -698,10 +1265,34 @@ public class WebGL2RenderingContext {
   public static final int STENCIL_WRITEMASK = 0x0B98;
 
   @JsOverlay
+  public static final int STREAM_COPY = 0x88E2;
+
+  @JsOverlay
   public static final int STREAM_DRAW = 0x88E0;
 
   @JsOverlay
+  public static final int STREAM_READ = 0x88E1;
+
+  @JsOverlay
   public static final int SUBPIXEL_BITS = 0x0D50;
+
+  @JsOverlay
+  public static final int SYNC_CONDITION = 0x9113;
+
+  @JsOverlay
+  public static final int SYNC_FENCE = 0x9116;
+
+  @JsOverlay
+  public static final int SYNC_FLAGS = 0x9115;
+
+  @JsOverlay
+  public static final int SYNC_FLUSH_COMMANDS_BIT = 0x00000001;
+
+  @JsOverlay
+  public static final int SYNC_GPU_COMMANDS_COMPLETE = 0x9117;
+
+  @JsOverlay
+  public static final int SYNC_STATUS = 0x9114;
 
   @JsOverlay
   public static final int TEXTURE = 0x1702;
@@ -806,10 +1397,31 @@ public class WebGL2RenderingContext {
   public static final int TEXTURE_2D = 0x0DE1;
 
   @JsOverlay
+  public static final int TEXTURE_2D_ARRAY = 0x8C1A;
+
+  @JsOverlay
+  public static final int TEXTURE_3D = 0x806F;
+
+  @JsOverlay
+  public static final int TEXTURE_BASE_LEVEL = 0x813C;
+
+  @JsOverlay
   public static final int TEXTURE_BINDING_2D = 0x8069;
 
   @JsOverlay
+  public static final int TEXTURE_BINDING_2D_ARRAY = 0x8C1D;
+
+  @JsOverlay
+  public static final int TEXTURE_BINDING_3D = 0x806A;
+
+  @JsOverlay
   public static final int TEXTURE_BINDING_CUBE_MAP = 0x8514;
+
+  @JsOverlay
+  public static final int TEXTURE_COMPARE_FUNC = 0x884D;
+
+  @JsOverlay
+  public static final int TEXTURE_COMPARE_MODE = 0x884C;
 
   @JsOverlay
   public static final int TEXTURE_CUBE_MAP = 0x8513;
@@ -833,712 +1445,13 @@ public class WebGL2RenderingContext {
   public static final int TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519;
 
   @JsOverlay
-  public static final int TEXTURE_MAG_FILTER = 0x2800;
-
-  @JsOverlay
-  public static final int TEXTURE_MIN_FILTER = 0x2801;
-
-  @JsOverlay
-  public static final int TEXTURE_WRAP_S = 0x2802;
-
-  @JsOverlay
-  public static final int TEXTURE_WRAP_T = 0x2803;
-
-  @JsOverlay
-  public static final int TRIANGLES = 0x0004;
-
-  @JsOverlay
-  public static final int TRIANGLE_FAN = 0x0006;
-
-  @JsOverlay
-  public static final int TRIANGLE_STRIP = 0x0005;
-
-  @JsOverlay
-  public static final int UNPACK_ALIGNMENT = 0x0CF5;
-
-  @JsOverlay
-  public static final int UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243;
-
-  @JsOverlay
-  public static final int UNPACK_FLIP_Y_WEBGL = 0x9240;
-
-  @JsOverlay
-  public static final int UNPACK_PREMULTIPLY_ALPHA_WEBGL = 0x9241;
-
-  @JsOverlay
-  public static final int UNSIGNED_BYTE = 0x1401;
-
-  @JsOverlay
-  public static final int UNSIGNED_INT = 0x1405;
-
-  @JsOverlay
-  public static final int UNSIGNED_SHORT = 0x1403;
-
-  @JsOverlay
-  public static final int UNSIGNED_SHORT_4_4_4_4 = 0x8033;
-
-  @JsOverlay
-  public static final int UNSIGNED_SHORT_5_5_5_1 = 0x8034;
-
-  @JsOverlay
-  public static final int UNSIGNED_SHORT_5_6_5 = 0x8363;
-
-  @JsOverlay
-  public static final int VALIDATE_STATUS = 0x8B83;
-
-  @JsOverlay
-  public static final int VENDOR = 0x1F00;
-
-  @JsOverlay
-  public static final int VERSION = 0x1F02;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_POINTER = 0x8645;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_SIZE = 0x8623;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624;
-
-  @JsOverlay
-  public static final int VERTEX_ATTRIB_ARRAY_TYPE = 0x8625;
-
-  @JsOverlay
-  public static final int VERTEX_SHADER = 0x8B31;
-
-  @JsOverlay
-  public static final int VIEWPORT = 0x0BA2;
-
-  @JsOverlay
-  public static final int ZERO = 0;
-
-  @JsOverlay
-  public static final int ACTIVE_UNIFORM_BLOCKS = 0x8A36;
-
-  @JsOverlay
-  public static final int ALREADY_SIGNALED = 0x911A;
-
-  @JsOverlay
-  public static final int ANY_SAMPLES_PASSED = 0x8C2F;
-
-  @JsOverlay
-  public static final int ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A;
-
-  @JsOverlay
-  public static final int COLOR = 0x1800;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT1 = 0x8CE1;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT10 = 0x8CEA;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT11 = 0x8CEB;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT12 = 0x8CEC;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT13 = 0x8CED;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT14 = 0x8CEE;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT15 = 0x8CEF;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT2 = 0x8CE2;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT3 = 0x8CE3;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT4 = 0x8CE4;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT5 = 0x8CE5;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT6 = 0x8CE6;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT7 = 0x8CE7;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT8 = 0x8CE8;
-
-  @JsOverlay
-  public static final int COLOR_ATTACHMENT9 = 0x8CE9;
-
-  @JsOverlay
-  public static final int COMPARE_REF_TO_TEXTURE = 0x884E;
-
-  @JsOverlay
-  public static final int CONDITION_SATISFIED = 0x911C;
-
-  @JsOverlay
-  public static final int COPY_READ_BUFFER = 0x8F36;
-
-  @JsOverlay
-  public static final int COPY_READ_BUFFER_BINDING = 0x8F36;
-
-  @JsOverlay
-  public static final int COPY_WRITE_BUFFER = 0x8F37;
-
-  @JsOverlay
-  public static final int COPY_WRITE_BUFFER_BINDING = 0x8F37;
-
-  @JsOverlay
-  public static final int CURRENT_QUERY = 0x8865;
-
-  @JsOverlay
-  public static final int DEPTH = 0x1801;
-
-  @JsOverlay
-  public static final int DEPTH24_STENCIL8 = 0x88F0;
-
-  @JsOverlay
-  public static final int DEPTH32F_STENCIL8 = 0x8CAD;
-
-  @JsOverlay
-  public static final int DEPTH_COMPONENT24 = 0x81A6;
-
-  @JsOverlay
-  public static final int DEPTH_COMPONENT32F = 0x8CAC;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER0 = 0x8825;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER1 = 0x8826;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER10 = 0x882F;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER11 = 0x8830;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER12 = 0x8831;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER13 = 0x8832;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER14 = 0x8833;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER15 = 0x8834;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER2 = 0x8827;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER3 = 0x8828;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER4 = 0x8829;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER5 = 0x882A;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER6 = 0x882B;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER7 = 0x882C;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER8 = 0x882D;
-
-  @JsOverlay
-  public static final int DRAW_BUFFER9 = 0x882E;
-
-  @JsOverlay
-  public static final int DRAW_FRAMEBUFFER = 0x8CA9;
-
-  @JsOverlay
-  public static final int DRAW_FRAMEBUFFER_BINDING = 0x8CA6;
-
-  @JsOverlay
-  public static final int DYNAMIC_COPY = 0x88EA;
-
-  @JsOverlay
-  public static final int DYNAMIC_READ = 0x88E9;
-
-  @JsOverlay
-  public static final int FLOAT_32_UNSIGNED_INT_24_8_REV = 0x8DAD;
-
-  @JsOverlay
-  public static final int FLOAT_MAT2x3 = 0x8B65;
-
-  @JsOverlay
-  public static final int FLOAT_MAT2x4 = 0x8B66;
-
-  @JsOverlay
-  public static final int FLOAT_MAT3x2 = 0x8B67;
-
-  @JsOverlay
-  public static final int FLOAT_MAT3x4 = 0x8B68;
-
-  @JsOverlay
-  public static final int FLOAT_MAT4x2 = 0x8B69;
-
-  @JsOverlay
-  public static final int FLOAT_MAT4x3 = 0x8B6A;
-
-  @JsOverlay
-  public static final int FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE = 0x8215;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_BLUE_SIZE = 0x8214;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING = 0x8210;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE = 0x8211;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE = 0x8216;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_GREEN_SIZE = 0x8213;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_RED_SIZE = 0x8212;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE = 0x8217;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER = 0x8CD4;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_DEFAULT = 0x8218;
-
-  @JsOverlay
-  public static final int FRAMEBUFFER_INCOMPLETE_MULTISAMPLE = 0x8D56;
-
-  @JsOverlay
-  public static final int HALF_FLOAT = 0x140B;
-
-  @JsOverlay
-  public static final int INTERLEAVED_ATTRIBS = 0x8C8C;
-
-  @JsOverlay
-  public static final int INT_2_10_10_10_REV = 0x8D9F;
-
-  @JsOverlay
-  public static final int INT_SAMPLER_2D = 0x8DCA;
-
-  @JsOverlay
-  public static final int INT_SAMPLER_2D_ARRAY = 0x8DCF;
-
-  @JsOverlay
-  public static final int INT_SAMPLER_3D = 0x8DCB;
-
-  @JsOverlay
-  public static final int INT_SAMPLER_CUBE = 0x8DCC;
-
-  @JsOverlay
-  public static final int INVALID_INDEX = 0xFFFFFFFF;
-
-  @JsOverlay
-  public static final int MAX = 0x8008;
-
-  @JsOverlay
-  public static final int MAX_3D_TEXTURE_SIZE = 0x8073;
-
-  @JsOverlay
-  public static final int MAX_ARRAY_TEXTURE_LAYERS = 0x88FF;
-
-  @JsOverlay
-  public static final int MAX_CLIENT_WAIT_TIMEOUT_WEBGL = 0x9247;
-
-  @JsOverlay
-  public static final int MAX_COLOR_ATTACHMENTS = 0x8CDF;
-
-  @JsOverlay
-  public static final int MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS = 0x8A33;
-
-  @JsOverlay
-  public static final int MAX_COMBINED_UNIFORM_BLOCKS = 0x8A2E;
-
-  @JsOverlay
-  public static final int MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS = 0x8A31;
-
-  @JsOverlay
-  public static final int MAX_DRAW_BUFFERS = 0x8824;
-
-  @JsOverlay
-  public static final int MAX_ELEMENTS_INDICES = 0x80E9;
-
-  @JsOverlay
-  public static final int MAX_ELEMENTS_VERTICES = 0x80E8;
-
-  @JsOverlay
-  public static final int MAX_ELEMENT_INDEX = 0x8D6B;
-
-  @JsOverlay
-  public static final int MAX_FRAGMENT_INPUT_COMPONENTS = 0x9125;
-
-  @JsOverlay
-  public static final int MAX_FRAGMENT_UNIFORM_BLOCKS = 0x8A2D;
-
-  @JsOverlay
-  public static final int MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49;
-
-  @JsOverlay
-  public static final int MAX_PROGRAM_TEXEL_OFFSET = 0x8905;
-
-  @JsOverlay
-  public static final int MAX_SAMPLES = 0x8D57;
-
-  @JsOverlay
-  public static final int MAX_SERVER_WAIT_TIMEOUT = 0x9111;
-
-  @JsOverlay
-  public static final int MAX_TEXTURE_LOD_BIAS = 0x84FD;
-
-  @JsOverlay
-  public static final int MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS = 0x8C8A;
-
-  @JsOverlay
-  public static final int MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 0x8C8B;
-
-  @JsOverlay
-  public static final int MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS = 0x8C80;
-
-  @JsOverlay
-  public static final int MAX_UNIFORM_BLOCK_SIZE = 0x8A30;
-
-  @JsOverlay
-  public static final int MAX_UNIFORM_BUFFER_BINDINGS = 0x8A2F;
-
-  @JsOverlay
-  public static final int MAX_VARYING_COMPONENTS = 0x8B4B;
-
-  @JsOverlay
-  public static final int MAX_VERTEX_OUTPUT_COMPONENTS = 0x9122;
-
-  @JsOverlay
-  public static final int MAX_VERTEX_UNIFORM_BLOCKS = 0x8A2B;
-
-  @JsOverlay
-  public static final int MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A;
-
-  @JsOverlay
-  public static final int MIN = 0x8007;
-
-  @JsOverlay
-  public static final int MIN_PROGRAM_TEXEL_OFFSET = 0x8904;
-
-  @JsOverlay
-  public static final int OBJECT_TYPE = 0x9112;
-
-  @JsOverlay
-  public static final int PACK_ROW_LENGTH = 0x0D02;
-
-  @JsOverlay
-  public static final int PACK_SKIP_PIXELS = 0x0D04;
-
-  @JsOverlay
-  public static final int PACK_SKIP_ROWS = 0x0D03;
-
-  @JsOverlay
-  public static final int PIXEL_PACK_BUFFER = 0x88EB;
-
-  @JsOverlay
-  public static final int PIXEL_PACK_BUFFER_BINDING = 0x88ED;
-
-  @JsOverlay
-  public static final int PIXEL_UNPACK_BUFFER = 0x88EC;
-
-  @JsOverlay
-  public static final int PIXEL_UNPACK_BUFFER_BINDING = 0x88EF;
-
-  @JsOverlay
-  public static final int QUERY_RESULT = 0x8866;
-
-  @JsOverlay
-  public static final int QUERY_RESULT_AVAILABLE = 0x8867;
-
-  @JsOverlay
-  public static final int R11F_G11F_B10F = 0x8C3A;
-
-  @JsOverlay
-  public static final int R16F = 0x822D;
-
-  @JsOverlay
-  public static final int R16I = 0x8233;
-
-  @JsOverlay
-  public static final int R16UI = 0x8234;
-
-  @JsOverlay
-  public static final int R32F = 0x822E;
-
-  @JsOverlay
-  public static final int R32I = 0x8235;
-
-  @JsOverlay
-  public static final int R32UI = 0x8236;
-
-  @JsOverlay
-  public static final int R8 = 0x8229;
-
-  @JsOverlay
-  public static final int R8I = 0x8231;
-
-  @JsOverlay
-  public static final int R8UI = 0x8232;
-
-  @JsOverlay
-  public static final int R8_SNORM = 0x8F94;
-
-  @JsOverlay
-  public static final int RASTERIZER_DISCARD = 0x8C89;
-
-  @JsOverlay
-  public static final int READ_BUFFER = 0x0C02;
-
-  @JsOverlay
-  public static final int READ_FRAMEBUFFER = 0x8CA8;
-
-  @JsOverlay
-  public static final int READ_FRAMEBUFFER_BINDING = 0x8CAA;
-
-  @JsOverlay
-  public static final int RED = 0x1903;
-
-  @JsOverlay
-  public static final int RED_INTEGER = 0x8D94;
-
-  @JsOverlay
-  public static final int RENDERBUFFER_SAMPLES = 0x8CAB;
-
-  @JsOverlay
-  public static final int RG = 0x8227;
-
-  @JsOverlay
-  public static final int RG16F = 0x822F;
-
-  @JsOverlay
-  public static final int RG16I = 0x8239;
-
-  @JsOverlay
-  public static final int RG16UI = 0x823A;
-
-  @JsOverlay
-  public static final int RG32F = 0x8230;
-
-  @JsOverlay
-  public static final int RG32I = 0x823B;
-
-  @JsOverlay
-  public static final int RG32UI = 0x823C;
-
-  @JsOverlay
-  public static final int RG8 = 0x822B;
-
-  @JsOverlay
-  public static final int RG8I = 0x8237;
-
-  @JsOverlay
-  public static final int RG8UI = 0x8238;
-
-  @JsOverlay
-  public static final int RG8_SNORM = 0x8F95;
-
-  @JsOverlay
-  public static final int RGB10_A2 = 0x8059;
-
-  @JsOverlay
-  public static final int RGB10_A2UI = 0x906F;
-
-  @JsOverlay
-  public static final int RGB16F = 0x881B;
-
-  @JsOverlay
-  public static final int RGB16I = 0x8D89;
-
-  @JsOverlay
-  public static final int RGB16UI = 0x8D77;
-
-  @JsOverlay
-  public static final int RGB32F = 0x8815;
-
-  @JsOverlay
-  public static final int RGB32I = 0x8D83;
-
-  @JsOverlay
-  public static final int RGB32UI = 0x8D71;
-
-  @JsOverlay
-  public static final int RGB8 = 0x8051;
-
-  @JsOverlay
-  public static final int RGB8I = 0x8D8F;
-
-  @JsOverlay
-  public static final int RGB8UI = 0x8D7D;
-
-  @JsOverlay
-  public static final int RGB8_SNORM = 0x8F96;
-
-  @JsOverlay
-  public static final int RGB9_E5 = 0x8C3D;
-
-  @JsOverlay
-  public static final int RGBA16F = 0x881A;
-
-  @JsOverlay
-  public static final int RGBA16I = 0x8D88;
-
-  @JsOverlay
-  public static final int RGBA16UI = 0x8D76;
-
-  @JsOverlay
-  public static final int RGBA32F = 0x8814;
-
-  @JsOverlay
-  public static final int RGBA32I = 0x8D82;
-
-  @JsOverlay
-  public static final int RGBA32UI = 0x8D70;
-
-  @JsOverlay
-  public static final int RGBA8 = 0x8058;
-
-  @JsOverlay
-  public static final int RGBA8I = 0x8D8E;
-
-  @JsOverlay
-  public static final int RGBA8UI = 0x8D7C;
-
-  @JsOverlay
-  public static final int RGBA8_SNORM = 0x8F97;
-
-  @JsOverlay
-  public static final int RGBA_INTEGER = 0x8D99;
-
-  @JsOverlay
-  public static final int RGB_INTEGER = 0x8D98;
-
-  @JsOverlay
-  public static final int RG_INTEGER = 0x8228;
-
-  @JsOverlay
-  public static final int SAMPLER_2D_ARRAY = 0x8DC1;
-
-  @JsOverlay
-  public static final int SAMPLER_2D_ARRAY_SHADOW = 0x8DC4;
-
-  @JsOverlay
-  public static final int SAMPLER_2D_SHADOW = 0x8B62;
-
-  @JsOverlay
-  public static final int SAMPLER_3D = 0x8B5F;
-
-  @JsOverlay
-  public static final int SAMPLER_BINDING = 0x8919;
-
-  @JsOverlay
-  public static final int SAMPLER_CUBE_SHADOW = 0x8DC5;
-
-  @JsOverlay
-  public static final int SEPARATE_ATTRIBS = 0x8C8D;
-
-  @JsOverlay
-  public static final int SIGNALED = 0x9119;
-
-  @JsOverlay
-  public static final int SIGNED_NORMALIZED = 0x8F9C;
-
-  @JsOverlay
-  public static final int SRGB = 0x8C40;
-
-  @JsOverlay
-  public static final int SRGB8 = 0x8C41;
-
-  @JsOverlay
-  public static final int SRGB8_ALPHA8 = 0x8C43;
-
-  @JsOverlay
-  public static final int STATIC_COPY = 0x88E6;
-
-  @JsOverlay
-  public static final int STATIC_READ = 0x88E5;
-
-  @JsOverlay
-  public static final int STENCIL = 0x1802;
-
-  @JsOverlay
-  public static final int STREAM_COPY = 0x88E2;
-
-  @JsOverlay
-  public static final int STREAM_READ = 0x88E1;
-
-  @JsOverlay
-  public static final int SYNC_CONDITION = 0x9113;
-
-  @JsOverlay
-  public static final int SYNC_FENCE = 0x9116;
-
-  @JsOverlay
-  public static final int SYNC_FLAGS = 0x9115;
-
-  @JsOverlay
-  public static final int SYNC_FLUSH_COMMANDS_BIT = 0x00000001;
-
-  @JsOverlay
-  public static final int SYNC_GPU_COMMANDS_COMPLETE = 0x9117;
-
-  @JsOverlay
-  public static final int SYNC_STATUS = 0x9114;
-
-  @JsOverlay
-  public static final int TEXTURE_2D_ARRAY = 0x8C1A;
-
-  @JsOverlay
-  public static final int TEXTURE_3D = 0x806F;
-
-  @JsOverlay
-  public static final int TEXTURE_BASE_LEVEL = 0x813C;
-
-  @JsOverlay
-  public static final int TEXTURE_BINDING_2D_ARRAY = 0x8C1D;
-
-  @JsOverlay
-  public static final int TEXTURE_BINDING_3D = 0x806A;
-
-  @JsOverlay
-  public static final int TEXTURE_COMPARE_FUNC = 0x884D;
-
-  @JsOverlay
-  public static final int TEXTURE_COMPARE_MODE = 0x884C;
-
-  @JsOverlay
   public static final int TEXTURE_IMMUTABLE_FORMAT = 0x912F;
 
   @JsOverlay
   public static final int TEXTURE_IMMUTABLE_LEVELS = 0x82DF;
+
+  @JsOverlay
+  public static final int TEXTURE_MAG_FILTER = 0x2800;
 
   @JsOverlay
   public static final int TEXTURE_MAX_LEVEL = 0x813D;
@@ -1547,10 +1460,19 @@ public class WebGL2RenderingContext {
   public static final int TEXTURE_MAX_LOD = 0x813B;
 
   @JsOverlay
+  public static final int TEXTURE_MIN_FILTER = 0x2801;
+
+  @JsOverlay
   public static final int TEXTURE_MIN_LOD = 0x813A;
 
   @JsOverlay
   public static final int TEXTURE_WRAP_R = 0x8072;
+
+  @JsOverlay
+  public static final int TEXTURE_WRAP_S = 0x2802;
+
+  @JsOverlay
+  public static final int TEXTURE_WRAP_T = 0x2803;
 
   @JsOverlay
   public static final int TIMEOUT_EXPIRED = 0x911B;
@@ -1590,6 +1512,15 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int TRANSFORM_FEEDBACK_VARYINGS = 0x8C83;
+
+  @JsOverlay
+  public static final int TRIANGLES = 0x0004;
+
+  @JsOverlay
+  public static final int TRIANGLE_FAN = 0x0006;
+
+  @JsOverlay
+  public static final int TRIANGLE_STRIP = 0x0005;
 
   @JsOverlay
   public static final int UNIFORM_ARRAY_STRIDE = 0x8A3C;
@@ -1646,7 +1577,19 @@ public class WebGL2RenderingContext {
   public static final int UNIFORM_TYPE = 0x8A37;
 
   @JsOverlay
+  public static final int UNPACK_ALIGNMENT = 0x0CF5;
+
+  @JsOverlay
+  public static final int UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243;
+
+  @JsOverlay
+  public static final int UNPACK_FLIP_Y_WEBGL = 0x9240;
+
+  @JsOverlay
   public static final int UNPACK_IMAGE_HEIGHT = 0x806E;
+
+  @JsOverlay
+  public static final int UNPACK_PREMULTIPLY_ALPHA_WEBGL = 0x9241;
 
   @JsOverlay
   public static final int UNPACK_ROW_LENGTH = 0x0CF2;
@@ -1662,6 +1605,12 @@ public class WebGL2RenderingContext {
 
   @JsOverlay
   public static final int UNSIGNALED = 0x9118;
+
+  @JsOverlay
+  public static final int UNSIGNED_BYTE = 0x1401;
+
+  @JsOverlay
+  public static final int UNSIGNED_INT = 0x1405;
 
   @JsOverlay
   public static final int UNSIGNED_INT_10F_11F_11F_REV = 0x8C3B;
@@ -1700,16 +1649,67 @@ public class WebGL2RenderingContext {
   public static final int UNSIGNED_NORMALIZED = 0x8C17;
 
   @JsOverlay
+  public static final int UNSIGNED_SHORT = 0x1403;
+
+  @JsOverlay
+  public static final int UNSIGNED_SHORT_4_4_4_4 = 0x8033;
+
+  @JsOverlay
+  public static final int UNSIGNED_SHORT_5_5_5_1 = 0x8034;
+
+  @JsOverlay
+  public static final int UNSIGNED_SHORT_5_6_5 = 0x8363;
+
+  @JsOverlay
+  public static final int VALIDATE_STATUS = 0x8B83;
+
+  @JsOverlay
+  public static final int VENDOR = 0x1F00;
+
+  @JsOverlay
+  public static final int VERSION = 0x1F02;
+
+  @JsOverlay
   public static final int VERTEX_ARRAY_BINDING = 0x85B5;
+
+  @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F;
 
   @JsOverlay
   public static final int VERTEX_ATTRIB_ARRAY_DIVISOR = 0x88FE;
 
   @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622;
+
+  @JsOverlay
   public static final int VERTEX_ATTRIB_ARRAY_INTEGER = 0x88FD;
 
   @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A;
+
+  @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_POINTER = 0x8645;
+
+  @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_SIZE = 0x8623;
+
+  @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624;
+
+  @JsOverlay
+  public static final int VERTEX_ATTRIB_ARRAY_TYPE = 0x8625;
+
+  @JsOverlay
+  public static final int VERTEX_SHADER = 0x8B31;
+
+  @JsOverlay
+  public static final int VIEWPORT = 0x0BA2;
+
+  @JsOverlay
   public static final int WAIT_FAILED = 0x911D;
+
+  @JsOverlay
+  public static final int ZERO = 0;
 
   WebGL2RenderingContext() {
   }

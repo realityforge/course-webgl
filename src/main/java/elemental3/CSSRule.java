@@ -30,6 +30,12 @@ public class CSSRule {
   public static final int IMPORT_RULE = 3;
 
   @JsOverlay
+  public static final int KEYFRAMES_RULE = 7;
+
+  @JsOverlay
+  public static final int KEYFRAME_RULE = 8;
+
+  @JsOverlay
   public static final int MARGIN_RULE = 9;
 
   @JsOverlay
@@ -43,12 +49,6 @@ public class CSSRule {
 
   @JsOverlay
   public static final int STYLE_RULE = 1;
-
-  @JsOverlay
-  public static final int KEYFRAMES_RULE = 7;
-
-  @JsOverlay
-  public static final int KEYFRAME_RULE = 8;
 
   @JsOverlay
   public static final int SUPPORTS_RULE = 12;

@@ -32,6 +32,14 @@ public class RTCPeerConnection extends EventTarget {
   public EventHandler onconnectionstatechange;
 
   /**
+   * The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
+   */
+  @Nullable
+  public RTCDataChannelEventHandler ondatachannel;
+
+  /**
    * The RTCPeerConnection property onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate">RTCPeerConnection.onicecandidate - MDN</a>
@@ -86,14 +94,6 @@ public class RTCPeerConnection extends EventTarget {
    */
   @Nullable
   public RTCTrackEventHandler ontrack;
-
-  /**
-   * The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
-   */
-  @Nullable
-  public RTCDataChannelEventHandler ondatachannel;
 
   /**
    * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
@@ -177,6 +177,18 @@ public class RTCPeerConnection extends EventTarget {
   @Nonnull
   public native String iceGatheringState();
 
+  @JsProperty(
+      name = "idpErrorInfo"
+  )
+  @Nullable
+  public native String idpErrorInfo();
+
+  @JsProperty(
+      name = "idpLoginUrl"
+  )
+  @Nullable
+  public native String idpLoginUrl();
+
   /**
    * The read-only property RTCPeerConnection.localDescription returns an RTCSessionDescription describing the session for the local end of the connection. If it has not yet been set, this is
    * null
@@ -189,6 +201,17 @@ public class RTCPeerConnection extends EventTarget {
   )
   @Nullable
   public native RTCSessionDescription localDescription();
+
+  /**
+   * The read-only RTCPeerConnection property peerIdentity returns a JavaScript Promise that resolves to an RTCIdentityAssertion which contains a DOMString identifying the remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity">RTCPeerConnection.peerIdentity - MDN</a>
+   */
+  @JsProperty(
+      name = "peerIdentity"
+  )
+  @Nonnull
+  public native Promise<RTCIdentityAssertion> peerIdentity();
 
   /**
    * The read-only property RTCPeerConnection.pendingLocalDescription returns an RTCSessionDescription object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentLocalDescription or RTCPeerConnection.localDescription to get the current state of the endpoint. For details on the difference, see Pending and current descriptions in WebRTC connectivity.
@@ -224,17 +247,6 @@ public class RTCPeerConnection extends EventTarget {
   public native RTCSessionDescription remoteDescription();
 
   /**
-   * The read-only signalingState property on the RTCPeerConnection interface returns one of the string values specified by the RTCSignalingState enum; these values describe the state of the signaling process on the local end of the connection while connecting or reconnecting to another peer. See Signaling in Lifetime of a WebRTC session for more details about the signaling process.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingState">RTCPeerConnection.signalingState - MDN</a>
-   */
-  @JsProperty(
-      name = "signalingState"
-  )
-  @Nonnull
-  public native String signalingState();
-
-  /**
    * The read-only sctp property on the RTCPeerConnection interface returns an RTCSctpTransport describing the SCTP transport over which SCTP data is being sent and received. If SCTP hasn't been negotiated, this value is null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/sctp">RTCPeerConnection.sctp - MDN</a>
@@ -245,28 +257,16 @@ public class RTCPeerConnection extends EventTarget {
   @Nullable
   public native RTCSctpTransport sctp();
 
-  @JsProperty(
-      name = "idpErrorInfo"
-  )
-  @Nullable
-  public native String idpErrorInfo();
-
-  @JsProperty(
-      name = "idpLoginUrl"
-  )
-  @Nullable
-  public native String idpLoginUrl();
-
   /**
-   * The read-only RTCPeerConnection property peerIdentity returns a JavaScript Promise that resolves to an RTCIdentityAssertion which contains a DOMString identifying the remote peer.
+   * The read-only signalingState property on the RTCPeerConnection interface returns one of the string values specified by the RTCSignalingState enum; these values describe the state of the signaling process on the local end of the connection while connecting or reconnecting to another peer. See Signaling in Lifetime of a WebRTC session for more details about the signaling process.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity">RTCPeerConnection.peerIdentity - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingState">RTCPeerConnection.signalingState - MDN</a>
    */
   @JsProperty(
-      name = "peerIdentity"
+      name = "signalingState"
   )
   @Nonnull
-  public native Promise<RTCIdentityAssertion> peerIdentity();
+  public native String signalingState();
 
   /**
    * When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate().

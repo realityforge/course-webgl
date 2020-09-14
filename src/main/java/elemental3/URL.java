@@ -43,6 +43,14 @@ public class URL {
   public String hostname;
 
   /**
+   * The href property of the URL interface is a USVString containing the whole URL.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/href">URL.href - MDN</a>
+   */
+  @Nonnull
+  public String href;
+
+  /**
    * The password property of the URL interface is a USVString containing the password specified before the domain name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/password">URL.password - MDN</a>
@@ -89,14 +97,6 @@ public class URL {
    */
   @Nonnull
   public String username;
-
-  /**
-   * The href property of the URL interface is a USVString containing the whole URL.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/href">URL.href - MDN</a>
-   */
-  @Nonnull
-  public String href;
 
   public URL(@Nonnull final String url, @Nonnull final String base) {
   }

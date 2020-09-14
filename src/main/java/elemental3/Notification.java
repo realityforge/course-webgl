@@ -51,17 +51,6 @@ public class Notification extends EventTarget {
   }
 
   @JsProperty(
-      name = "maxActions"
-  )
-  public native int maxActions();
-
-  @JsProperty(
-      name = "permission"
-  )
-  @Nonnull
-  public native String permission();
-
-  @JsProperty(
       name = "actions"
   )
   @Nonnull
@@ -108,6 +97,17 @@ public class Notification extends EventTarget {
   )
   @Nonnull
   public native String lang();
+
+  @JsProperty(
+      name = "maxActions"
+  )
+  public native int maxActions();
+
+  @JsProperty(
+      name = "permission"
+  )
+  @Nonnull
+  public native String permission();
 
   @JsProperty(
       name = "renotify"

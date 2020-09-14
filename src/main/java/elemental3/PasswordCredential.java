@@ -35,17 +35,6 @@ public class PasswordCredential extends Credential {
   }
 
   /**
-   * The password read-only property of the PasswordCredential interface returns a USVString containing the password of the credential.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/password">PasswordCredential.password - MDN</a>
-   */
-  @JsProperty(
-      name = "password"
-  )
-  @Nonnull
-  public native String password();
-
-  /**
    * The iconURL read-only property of the PasswordCredential interface returns a USVString containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/iconURL">PasswordCredential.iconURL - MDN</a>
@@ -66,4 +55,15 @@ public class PasswordCredential extends Credential {
   )
   @Nonnull
   public native String name();
+
+  /**
+   * The password read-only property of the PasswordCredential interface returns a USVString containing the password of the credential.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/password">PasswordCredential.password - MDN</a>
+   */
+  @JsProperty(
+      name = "password"
+  )
+  @Nonnull
+  public native String password();
 }

@@ -21,9 +21,6 @@ public class HTMLFrameSetElement extends HTMLElement {
   @Nonnull
   public String cols;
 
-  @Nonnull
-  public String rows;
-
   /**
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
    *
@@ -131,6 +128,9 @@ public class HTMLFrameSetElement extends HTMLElement {
    */
   @Nullable
   public EventHandler onunload;
+
+  @Nonnull
+  public String rows;
 
   public HTMLFrameSetElement() {
   }

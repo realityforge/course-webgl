@@ -17,14 +17,14 @@ import jsinterop.annotations.JsType;
     name = "HTMLOListElement"
 )
 public class HTMLOListElement extends HTMLElement {
+  public boolean compact;
+
   public boolean reversed;
 
   public int start;
 
   @Nonnull
   public String type;
-
-  public boolean compact;
 
   public HTMLOListElement() {
   }

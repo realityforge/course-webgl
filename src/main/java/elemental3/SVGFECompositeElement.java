@@ -44,6 +44,12 @@ public class SVGFECompositeElement extends SVGElement {
   }
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -84,12 +90,6 @@ public class SVGFECompositeElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedEnumeration operator();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
 
   @JsProperty(
       name = "result"

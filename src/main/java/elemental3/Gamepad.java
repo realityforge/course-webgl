@@ -55,6 +55,18 @@ public class Gamepad {
   )
   public native boolean connected();
 
+  @JsProperty(
+      name = "hand"
+  )
+  @Nonnull
+  public native String hand();
+
+  @JsProperty(
+      name = "hapticActuators"
+  )
+  @Nonnull
+  public native JsArray<GamepadHapticActuator> hapticActuators();
+
   /**
    * The Gamepad.id property of the Gamepad interface returns a string containing some information about the controller.
    *
@@ -87,6 +99,12 @@ public class Gamepad {
   @Nonnull
   public native String mapping();
 
+  @JsProperty(
+      name = "pose"
+  )
+  @Nullable
+  public native GamepadPose pose();
+
   /**
    * The Gamepad.timestamp property of the Gamepad interface returns a DOMHighResTimeStamp representing the last time the data for this gamepad was updated.
    *
@@ -96,22 +114,4 @@ public class Gamepad {
       name = "timestamp"
   )
   public native double timestamp();
-
-  @JsProperty(
-      name = "hand"
-  )
-  @Nonnull
-  public native String hand();
-
-  @JsProperty(
-      name = "hapticActuators"
-  )
-  @Nonnull
-  public native JsArray<GamepadHapticActuator> hapticActuators();
-
-  @JsProperty(
-      name = "pose"
-  )
-  @Nullable
-  public native GamepadPose pose();
 }

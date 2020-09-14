@@ -22,24 +22,6 @@ public class SVGAElement extends SVGGraphicsElement {
   public String download;
 
   @Nonnull
-  public String hreflang;
-
-  @Nonnull
-  public String ping;
-
-  @Nonnull
-  public String referrerPolicy;
-
-  @Nonnull
-  public String rel;
-
-  @Nonnull
-  public String text;
-
-  @Nonnull
-  public String type;
-
-  @Nonnull
   public String hash;
 
   @Nonnull
@@ -49,10 +31,19 @@ public class SVGAElement extends SVGGraphicsElement {
   public String hostname;
 
   @Nonnull
+  public String href;
+
+  @Nonnull
+  public String hreflang;
+
+  @Nonnull
   public String password;
 
   @Nonnull
   public String pathname;
+
+  @Nonnull
+  public String ping;
 
   @Nonnull
   public String port;
@@ -61,16 +52,31 @@ public class SVGAElement extends SVGGraphicsElement {
   public String protocol;
 
   @Nonnull
+  public String referrerPolicy;
+
+  @Nonnull
+  public String rel;
+
+  @Nonnull
   public String search;
+
+  @Nonnull
+  public String text;
+
+  @Nonnull
+  public String type;
 
   @Nonnull
   public String username;
 
-  @Nonnull
-  public String href;
-
   SVGAElement() {
   }
+
+  @JsProperty(
+      name = "origin"
+  )
+  @Nonnull
+  public native String origin();
 
   @JsProperty(
       name = "relList"
@@ -88,10 +94,4 @@ public class SVGAElement extends SVGGraphicsElement {
   )
   @Nonnull
   public native SVGAnimatedString target();
-
-  @JsProperty(
-      name = "origin"
-  )
-  @Nonnull
-  public native String origin();
 }

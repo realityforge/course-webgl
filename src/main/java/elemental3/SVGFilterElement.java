@@ -34,6 +34,12 @@ public class SVGFilterElement extends SVGElement {
   public native SVGAnimatedLength height();
 
   @JsProperty(
+      name = "href"
+  )
+  @Nonnull
+  public native SVGAnimatedString href();
+
+  @JsProperty(
       name = "primitiveUnits"
   )
   @Nonnull
@@ -56,10 +62,4 @@ public class SVGFilterElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedLength y();
-
-  @JsProperty(
-      name = "href"
-  )
-  @Nonnull
-  public native SVGAnimatedString href();
 }

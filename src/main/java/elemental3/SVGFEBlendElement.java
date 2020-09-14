@@ -74,6 +74,12 @@ public class SVGFEBlendElement extends SVGElement {
   }
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -90,12 +96,6 @@ public class SVGFEBlendElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedEnumeration mode();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
 
   @JsProperty(
       name = "result"

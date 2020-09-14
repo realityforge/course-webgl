@@ -19,54 +19,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLObjectElement"
 )
 public class HTMLObjectElement extends HTMLElement {
-  /**
-   * The data property of the HTMLObjectElement interface returns a DOMString that reflects the data HTML attribute, specifying the address of a resource's data.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/data">HTMLObjectElement.data - MDN</a>
-   */
-  @Nonnull
-  public String data;
-
-  /**
-   * The height property of the HTMLObjectElement interface Returns a DOMString that reflects the height HTML attribute, specifying the displayed height of the resource in CSS pixels.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/height">HTMLObjectElement.height - MDN</a>
-   */
-  @Nonnull
-  public String height;
-
-  /**
-   * The name property of the HTMLObjectElement interface returns a DOMString that reflects the name HTML attribute, specifying the name of the browsing context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/name">HTMLObjectElement.name - MDN</a>
-   */
-  @Nonnull
-  public String name;
-
-  /**
-   * The type property of the HTMLObjectElement interface returns a DOMString that reflects the type HTML attribute, specifying the MIME type of the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/type">HTMLObjectElement.type - MDN</a>
-   */
-  @Nonnull
-  public String type;
-
-  /**
-   * The useMap property of the HTMLObjectElement interface returns a DOMString that reflects the usemap HTML attribute, specifying a map element to use.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/useMap">HTMLObjectElement.useMap - MDN</a>
-   */
-  @Nonnull
-  public String useMap;
-
-  /**
-   * The width property of the HTMLObjectElement interface returns a DOMString that reflects the width HTML attribute, specifying the displayed width of the resource in CSS pixels.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/width">HTMLObjectElement.width - MDN</a>
-   */
-  @Nonnull
-  public String width;
-
   @Nonnull
   public String align;
 
@@ -85,14 +37,62 @@ public class HTMLObjectElement extends HTMLElement {
   @Nonnull
   public String codeType;
 
+  /**
+   * The data property of the HTMLObjectElement interface returns a DOMString that reflects the data HTML attribute, specifying the address of a resource's data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/data">HTMLObjectElement.data - MDN</a>
+   */
+  @Nonnull
+  public String data;
+
   public boolean declare;
 
+  /**
+   * The height property of the HTMLObjectElement interface Returns a DOMString that reflects the height HTML attribute, specifying the displayed height of the resource in CSS pixels.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/height">HTMLObjectElement.height - MDN</a>
+   */
+  @Nonnull
+  public String height;
+
   public int hspace;
+
+  /**
+   * The name property of the HTMLObjectElement interface returns a DOMString that reflects the name HTML attribute, specifying the name of the browsing context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/name">HTMLObjectElement.name - MDN</a>
+   */
+  @Nonnull
+  public String name;
 
   @Nonnull
   public String standby;
 
+  /**
+   * The type property of the HTMLObjectElement interface returns a DOMString that reflects the type HTML attribute, specifying the MIME type of the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/type">HTMLObjectElement.type - MDN</a>
+   */
+  @Nonnull
+  public String type;
+
+  /**
+   * The useMap property of the HTMLObjectElement interface returns a DOMString that reflects the usemap HTML attribute, specifying a map element to use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/useMap">HTMLObjectElement.useMap - MDN</a>
+   */
+  @Nonnull
+  public String useMap;
+
   public int vspace;
+
+  /**
+   * The width property of the HTMLObjectElement interface returns a DOMString that reflects the width HTML attribute, specifying the displayed width of the resource in CSS pixels.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/width">HTMLObjectElement.width - MDN</a>
+   */
+  @Nonnull
+  public String width;
 
   public HTMLObjectElement() {
   }

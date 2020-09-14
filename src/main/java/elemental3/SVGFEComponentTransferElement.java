@@ -22,16 +22,16 @@ public class SVGFEComponentTransferElement extends SVGElement {
   }
 
   @JsProperty(
-      name = "in1"
-  )
-  @Nonnull
-  public native SVGAnimatedString in1();
-
-  @JsProperty(
       name = "height"
   )
   @Nonnull
   public native SVGAnimatedLength height();
+
+  @JsProperty(
+      name = "in1"
+  )
+  @Nonnull
+  public native SVGAnimatedString in1();
 
   @JsProperty(
       name = "result"

@@ -362,6 +362,27 @@ public class Response {
   }
 
   /**
+   * The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/body">Body.body - MDN</a>
+   */
+  @JsProperty(
+      name = "body"
+  )
+  @Nullable
+  public native ReadableStream body();
+
+  /**
+   * The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/bodyUsed">Body.bodyUsed - MDN</a>
+   */
+  @JsProperty(
+      name = "bodyUsed"
+  )
+  public native boolean bodyUsed();
+
+  /**
    * The headers read-only property of the Response interface contains the Headers object associated with the response.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/headers">Response.headers - MDN</a>
@@ -434,27 +455,6 @@ public class Response {
   )
   @Nonnull
   public native String url();
-
-  /**
-   * The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/body">Body.body - MDN</a>
-   */
-  @JsProperty(
-      name = "body"
-  )
-  @Nullable
-  public native ReadableStream body();
-
-  /**
-   * The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/bodyUsed">Body.bodyUsed - MDN</a>
-   */
-  @JsProperty(
-      name = "bodyUsed"
-  )
-  public native boolean bodyUsed();
 
   /**
    * The error() method of the Response interface returns a new Response object associated with a network error.

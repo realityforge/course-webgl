@@ -23,14 +23,14 @@ public class ProcessingInstruction extends CharacterData {
   }
 
   @JsProperty(
-      name = "target"
-  )
-  @Nonnull
-  public native String target();
-
-  @JsProperty(
       name = "sheet"
   )
   @Nullable
   public native CSSStyleSheet sheet();
+
+  @JsProperty(
+      name = "target"
+  )
+  @Nonnull
+  public native String target();
 }

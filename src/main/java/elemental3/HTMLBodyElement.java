@@ -18,9 +18,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLBodyElement"
 )
 public class HTMLBodyElement extends HTMLElement {
-  @Nullable
-  public EventHandler onorientationchange;
-
   @Nonnull
   public String aLink;
 
@@ -32,12 +29,6 @@ public class HTMLBodyElement extends HTMLElement {
 
   @Nonnull
   public String link;
-
-  @Nonnull
-  public String text;
-
-  @Nonnull
-  public String vLink;
 
   /**
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
@@ -102,6 +93,9 @@ public class HTMLBodyElement extends HTMLElement {
   public EventHandler ononline;
 
   @Nullable
+  public EventHandler onorientationchange;
+
+  @Nullable
   public EventHandler onpagehide;
 
   @Nullable
@@ -146,6 +140,12 @@ public class HTMLBodyElement extends HTMLElement {
    */
   @Nullable
   public EventHandler onunload;
+
+  @Nonnull
+  public String text;
+
+  @Nonnull
+  public String vLink;
 
   public HTMLBodyElement() {
   }

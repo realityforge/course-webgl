@@ -41,6 +41,12 @@ public class SVGTextPathElement extends SVGTextContentElement {
   }
 
   @JsProperty(
+      name = "href"
+  )
+  @Nonnull
+  public native SVGAnimatedString href();
+
+  @JsProperty(
       name = "method"
   )
   @Nonnull
@@ -57,10 +63,4 @@ public class SVGTextPathElement extends SVGTextContentElement {
   )
   @Nonnull
   public native SVGAnimatedLength startOffset();
-
-  @JsProperty(
-      name = "href"
-  )
-  @Nonnull
-  public native SVGAnimatedString href();
 }

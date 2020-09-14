@@ -17,8 +17,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableColElement"
 )
 public class HTMLTableColElement extends HTMLElement {
-  public int span;
-
   @Nonnull
   public String align;
 
@@ -27,6 +25,8 @@ public class HTMLTableColElement extends HTMLElement {
 
   @Nonnull
   public String chOff;
+
+  public int span;
 
   @Nonnull
   public String vAlign;

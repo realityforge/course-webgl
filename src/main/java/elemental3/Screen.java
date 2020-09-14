@@ -42,6 +42,12 @@ public class Screen {
   public native int height();
 
   @JsProperty(
+      name = "orientation"
+  )
+  @Nonnull
+  public native ScreenOrientation orientation();
+
+  @JsProperty(
       name = "pixelDepth"
   )
   public native int pixelDepth();
@@ -50,10 +56,4 @@ public class Screen {
       name = "width"
   )
   public native int width();
-
-  @JsProperty(
-      name = "orientation"
-  )
-  @Nonnull
-  public native ScreenOrientation orientation();
 }

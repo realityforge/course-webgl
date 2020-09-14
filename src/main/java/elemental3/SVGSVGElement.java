@@ -31,8 +31,6 @@ public class SVGSVGElement extends SVGGraphicsElement {
 
   public float currentScale;
 
-  public int zoomAndPan;
-
   /**
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
    *
@@ -141,6 +139,8 @@ public class SVGSVGElement extends SVGGraphicsElement {
   @Nullable
   public EventHandler onunload;
 
+  public int zoomAndPan;
+
   SVGSVGElement() {
   }
 
@@ -155,6 +155,18 @@ public class SVGSVGElement extends SVGGraphicsElement {
   )
   @Nonnull
   public native SVGAnimatedLength height();
+
+  @JsProperty(
+      name = "preserveAspectRatio"
+  )
+  @Nonnull
+  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
+
+  @JsProperty(
+      name = "viewBox"
+  )
+  @Nonnull
+  public native SVGAnimatedRect viewBox();
 
   @JsProperty(
       name = "width"
@@ -173,18 +185,6 @@ public class SVGSVGElement extends SVGGraphicsElement {
   )
   @Nonnull
   public native SVGAnimatedLength y();
-
-  @JsProperty(
-      name = "preserveAspectRatio"
-  )
-  @Nonnull
-  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
-
-  @JsProperty(
-      name = "viewBox"
-  )
-  @Nonnull
-  public native SVGAnimatedRect viewBox();
 
   public native boolean checkEnclosure(@Nonnull SVGElement element, @Nonnull DOMRectReadOnly rect);
 

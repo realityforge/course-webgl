@@ -68,6 +68,26 @@ public class MouseEvent extends UIEvent {
   public native int buttons();
 
   /**
+   * The clientX read-only property of the MouseEvent interface provides the horizontal coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX">MouseEvent.clientX - MDN</a>
+   */
+  @JsProperty(
+      name = "clientX"
+  )
+  public native double clientX();
+
+  /**
+   * The clientY read-only property of the MouseEvent interface provides the vertical coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY">MouseEvent.clientY - MDN</a>
+   */
+  @JsProperty(
+      name = "clientY"
+  )
+  public native double clientY();
+
+  /**
    * The MouseEvent.ctrlKey read-only property is a Boolean that indicates whether the ctrl key was pressed or not when a given mouse event occurs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/ctrlKey">MouseEvent.ctrlKey - MDN</a>
@@ -88,45 +108,24 @@ public class MouseEvent extends UIEvent {
   public native boolean metaKey();
 
   /**
-   * The MouseEvent.relatedTarget read-only property is the secondary target for the mouse event, if there is one. That is:
+   * The movementX read-only property of the MouseEvent interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementX = currentEvent.screenX - previousEvent.screenX.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget">MouseEvent.relatedTarget - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX">MouseEvent.movementX - MDN</a>
    */
   @JsProperty(
-      name = "relatedTarget"
+      name = "movementX"
   )
-  @Nullable
-  public native EventTarget relatedTarget();
+  public native int movementX();
 
   /**
-   * The MouseEvent.shiftKey read-only property is a Boolean that indicates whether the shift key was pressed or not when a given mouse event occurs.
+   * The movementY read-only property of the MouseEvent interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementY = currentEvent.screenY - previousEvent.screenY.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/shiftKey">MouseEvent.shiftKey - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementY">MouseEvent.movementY - MDN</a>
    */
   @JsProperty(
-      name = "shiftKey"
+      name = "movementY"
   )
-  public native boolean shiftKey();
-
-  /**
-   * The clientX read-only property of the MouseEvent interface provides the horizontal coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX">MouseEvent.clientX - MDN</a>
-   */
-  @JsProperty(
-      name = "clientX"
-  )
-  public native double clientX();
-
-  /**
-   * The clientY read-only property of the MouseEvent interface provides the vertical coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY">MouseEvent.clientY - MDN</a>
-   */
-  @JsProperty(
-      name = "clientY"
-  )
-  public native double clientY();
+  public native int movementY();
 
   /**
    * The offsetX read-only property of the MouseEvent interface provides the offset in the X coordinate of the mouse pointer between that event and the padding edge of the target node.
@@ -169,6 +168,17 @@ public class MouseEvent extends UIEvent {
   public native double pageY();
 
   /**
+   * The MouseEvent.relatedTarget read-only property is the secondary target for the mouse event, if there is one. That is:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget">MouseEvent.relatedTarget - MDN</a>
+   */
+  @JsProperty(
+      name = "relatedTarget"
+  )
+  @Nullable
+  public native EventTarget relatedTarget();
+
+  /**
    * The screenX read-only property of the MouseEvent interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/screenX">MouseEvent.screenX - MDN</a>
@@ -189,6 +199,16 @@ public class MouseEvent extends UIEvent {
   public native double screenY();
 
   /**
+   * The MouseEvent.shiftKey read-only property is a Boolean that indicates whether the shift key was pressed or not when a given mouse event occurs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/shiftKey">MouseEvent.shiftKey - MDN</a>
+   */
+  @JsProperty(
+      name = "shiftKey"
+  )
+  public native boolean shiftKey();
+
+  /**
    * The MouseEvent.x property is an alias for the MouseEvent.clientX property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/x">MouseEvent.x - MDN</a>
@@ -207,26 +227,6 @@ public class MouseEvent extends UIEvent {
       name = "y"
   )
   public native double y();
-
-  /**
-   * The movementX read-only property of the MouseEvent interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementX = currentEvent.screenX - previousEvent.screenX.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX">MouseEvent.movementX - MDN</a>
-   */
-  @JsProperty(
-      name = "movementX"
-  )
-  public native int movementX();
-
-  /**
-   * The movementY read-only property of the MouseEvent interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementY = currentEvent.screenY - previousEvent.screenY.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementY">MouseEvent.movementY - MDN</a>
-   */
-  @JsProperty(
-      name = "movementY"
-  )
-  public native int movementY();
 
   /**
    * The MouseEvent.getModifierState() method returns the current state of the specified modifier key: true if the modifier is active (i.e., the modifier key is pressed or locked), otherwise, false.

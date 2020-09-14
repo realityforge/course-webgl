@@ -23,30 +23,11 @@ import jsinterop.base.Js;
     name = "Document"
 )
 public class Document extends Node {
-  /**
-   * The Document.onvisibilitychange property represents the event handler that is called when a visibilitychange event reaches this object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onvisibilitychange">Document.onvisibilitychange - MDN</a>
-   */
-  @Nullable
-  public EventHandler onvisibilitychange;
+  @Nonnull
+  public String alinkColor;
 
-  @Nullable
-  public EventHandler onpointerlockchange;
-
-  @Nullable
-  public EventHandler onpointerlockerror;
-
-  /**
-   * The Document interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired immediately before a document transitions into or out of full-screen mode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenchange">Document.onfullscreenchange - MDN</a>
-   */
-  @Nullable
-  public EventHandler onfullscreenchange;
-
-  @Nullable
-  public EventHandler onfullscreenerror;
+  @Nonnull
+  public String bgColor;
 
   /**
    * The Document.body property represents the body or frameset node of the current document, or null if no such element exists.
@@ -68,26 +49,11 @@ public class Document extends Node {
   @Nonnull
   public String domain;
 
-  @Nullable
-  public EventHandler onreadystatechange;
-
-  @Nonnull
-  public String title;
-
-  @Nonnull
-  public String alinkColor;
-
-  @Nonnull
-  public String bgColor;
-
   @Nonnull
   public String fgColor;
 
   @Nonnull
   public String linkColor;
-
-  @Nonnull
-  public String vlinkColor;
 
   /**
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
@@ -96,6 +62,38 @@ public class Document extends Node {
    */
   @Nullable
   public EventHandler onabort;
+
+  /**
+   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationcancel;
+
+  /**
+   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationend;
+
+  /**
+   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationiteration;
+
+  /**
+   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
+   */
+  @Nullable
+  public AnimationEventHandler onanimationstart;
 
   /**
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
@@ -169,6 +167,9 @@ public class Document extends Node {
   @Nullable
   public EventHandler oncontextmenu;
 
+  @Nullable
+  public ClipboardEventHandler oncopy;
+
   /**
    * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
    *
@@ -176,6 +177,9 @@ public class Document extends Node {
    */
   @Nullable
   public EventHandler oncuechange;
+
+  @Nullable
+  public ClipboardEventHandler oncut;
 
   /**
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
@@ -298,6 +302,25 @@ public class Document extends Node {
   public EventHandler onformdata;
 
   /**
+   * The Document interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired immediately before a document transitions into or out of full-screen mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenchange">Document.onfullscreenchange - MDN</a>
+   */
+  @Nullable
+  public EventHandler onfullscreenchange;
+
+  @Nullable
+  public EventHandler onfullscreenerror;
+
+  /**
+   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler ongotpointercapture;
+
+  /**
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
@@ -370,6 +393,14 @@ public class Document extends Node {
   public EventHandler onloadstart;
 
   /**
+   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onlostpointercapture;
+
+  /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">GlobalEventHandlers.onmousedown - MDN</a>
@@ -425,6 +456,9 @@ public class Document extends Node {
   @Nullable
   public EventHandler onmouseup;
 
+  @Nullable
+  public ClipboardEventHandler onpaste;
+
   /**
    * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
    *
@@ -449,11 +483,84 @@ public class Document extends Node {
   @Nullable
   public EventHandler onplaying;
 
+  /**
+   * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointercancel;
+
+  /**
+   * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointerdown;
+
+  /**
+   * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointerenter;
+
+  /**
+   * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointerleave;
+
+  @Nullable
+  public EventHandler onpointerlockchange;
+
+  @Nullable
+  public EventHandler onpointerlockerror;
+
+  /**
+   * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointermove;
+
+  /**
+   * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointerout;
+
+  /**
+   * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointerover;
+
+  /**
+   * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
+   */
+  @Nullable
+  public PointerEventHandler onpointerup;
+
   @Nullable
   public EventHandler onprogress;
 
   @Nullable
   public EventHandler onratechange;
+
+  @Nullable
+  public EventHandler onreadystatechange;
 
   /**
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
@@ -496,6 +603,22 @@ public class Document extends Node {
   @Nullable
   public EventHandler onselect;
 
+  /**
+   * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onselectionchange">Document.onselectionchange - MDN</a>
+   */
+  @Nullable
+  public EventHandler onselectionchange;
+
+  /**
+   * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
+   */
+  @Nullable
+  public EventHandler onselectstart;
+
   @Nullable
   public EventHandler onslotchange;
 
@@ -518,182 +641,6 @@ public class Document extends Node {
 
   @Nullable
   public EventHandler ontoggle;
-
-  @Nullable
-  public EventHandler onvolumechange;
-
-  @Nullable
-  public EventHandler onwaiting;
-
-  @Nullable
-  public EventHandler onwebkitanimationend;
-
-  @Nullable
-  public EventHandler onwebkitanimationiteration;
-
-  @Nullable
-  public EventHandler onwebkitanimationstart;
-
-  @Nullable
-  public EventHandler onwebkittransitionend;
-
-  /**
-   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
-   */
-  @Nullable
-  public WheelEventHandler onwheel;
-
-  /**
-   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationcancel;
-
-  /**
-   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationend;
-
-  /**
-   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationiteration;
-
-  /**
-   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
-   */
-  @Nullable
-  public AnimationEventHandler onanimationstart;
-
-  /**
-   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
-   */
-  @Nullable
-  public TransitionEventHandler ontransitioncancel;
-
-  /**
-   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
-   */
-  @Nullable
-  public TransitionEventHandler ontransitionend;
-
-  @Nullable
-  public TransitionEventHandler ontransitionrun;
-
-  @Nullable
-  public TransitionEventHandler ontransitionstart;
-
-  /**
-   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler ongotpointercapture;
-
-  /**
-   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onlostpointercapture;
-
-  /**
-   * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointercancel;
-
-  /**
-   * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointerdown;
-
-  /**
-   * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointerenter;
-
-  /**
-   * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointerleave;
-
-  /**
-   * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointermove;
-
-  /**
-   * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointerout;
-
-  /**
-   * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointerover;
-
-  /**
-   * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
-   */
-  @Nullable
-  public PointerEventHandler onpointerup;
-
-  /**
-   * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onselectionchange">Document.onselectionchange - MDN</a>
-   */
-  @Nullable
-  public EventHandler onselectionchange;
-
-  /**
-   * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
-   */
-  @Nullable
-  public EventHandler onselectstart;
 
   /**
    * The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.
@@ -727,14 +674,67 @@ public class Document extends Node {
   @Nullable
   public TouchEventHandler ontouchstart;
 
+  /**
+   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
+   */
   @Nullable
-  public ClipboardEventHandler oncopy;
+  public TransitionEventHandler ontransitioncancel;
+
+  /**
+   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
+   */
+  @Nullable
+  public TransitionEventHandler ontransitionend;
 
   @Nullable
-  public ClipboardEventHandler oncut;
+  public TransitionEventHandler ontransitionrun;
 
   @Nullable
-  public ClipboardEventHandler onpaste;
+  public TransitionEventHandler ontransitionstart;
+
+  /**
+   * The Document.onvisibilitychange property represents the event handler that is called when a visibilitychange event reaches this object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onvisibilitychange">Document.onvisibilitychange - MDN</a>
+   */
+  @Nullable
+  public EventHandler onvisibilitychange;
+
+  @Nullable
+  public EventHandler onvolumechange;
+
+  @Nullable
+  public EventHandler onwaiting;
+
+  @Nullable
+  public EventHandler onwebkitanimationend;
+
+  @Nullable
+  public EventHandler onwebkitanimationiteration;
+
+  @Nullable
+  public EventHandler onwebkitanimationstart;
+
+  @Nullable
+  public EventHandler onwebkittransitionend;
+
+  /**
+   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
+   */
+  @Nullable
+  public WheelEventHandler onwheel;
+
+  @Nonnull
+  public String title;
+
+  @Nonnull
+  public String vlinkColor;
 
   /**
    * The Document constructor creates a new Document object that is a web page loaded in the browser and serving as an entry point into the page's content.
@@ -749,6 +749,40 @@ public class Document extends Node {
   )
   @Nonnull
   public native String URL();
+
+  /**
+   * The activeElement read-only property of the Document and ShadowRoot interfaces returns the Element within the DOM or shadow DOM tree that currently has focus.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">DocumentOrShadowRoot.activeElement - MDN</a>
+   */
+  @JsProperty(
+      name = "activeElement"
+  )
+  @Nullable
+  public native Element activeElement();
+
+  @JsProperty(
+      name = "all"
+  )
+  @Nonnull
+  public native HTMLAllCollection all();
+
+  /**
+   * The anchors read-only property of the Document interface returns a list of all of the anchors in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/anchors">Document.anchors - MDN</a>
+   */
+  @JsProperty(
+      name = "anchors"
+  )
+  @Nonnull
+  public native HTMLCollection anchors();
+
+  @JsProperty(
+      name = "applets"
+  )
+  @Nonnull
+  public native HTMLCollection applets();
 
   /**
    * The Document.characterSet read-only property returns the character encoding of the document that it's currently rendered with.
@@ -766,6 +800,27 @@ public class Document extends Node {
   )
   @Nonnull
   public native String charset();
+
+  /**
+   * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
+   */
+  @JsProperty(
+      name = "childElementCount"
+  )
+  public native int childElementCount();
+
+  /**
+   * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
+   */
+  @JsProperty(
+      name = "children"
+  )
+  @Nonnull
+  public native HTMLCollection children();
 
   /**
    * The Document.compatMode property indicates whether the document is rendered in Quirks mode or Standards mode.
@@ -788,6 +843,18 @@ public class Document extends Node {
   )
   @Nonnull
   public native String contentType();
+
+  @JsProperty(
+      name = "currentScript"
+  )
+  @Nullable
+  public native HTMLOrSVGScriptElement currentScript();
+
+  @JsProperty(
+      name = "defaultView"
+  )
+  @Nullable
+  public native Window defaultView();
 
   /**
    * Returns the Document Type Declaration (DTD) associated with current document. The returned object implements the DocumentType interface. Use DOMImplementation.createDocumentType() to create a DocumentType.
@@ -823,6 +890,92 @@ public class Document extends Node {
   public native String documentURI();
 
   /**
+   * The embeds read-only property of the Document interface returns a list of the embedded object elements within the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/embeds">Document.embeds - MDN</a>
+   */
+  @JsProperty(
+      name = "embeds"
+  )
+  @Nonnull
+  public native HTMLCollection embeds();
+
+  /**
+   * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
+   */
+  @JsProperty(
+      name = "firstElementChild"
+  )
+  @Nullable
+  public native Element firstElementChild();
+
+  /**
+   * The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/forms">Document.forms - MDN</a>
+   */
+  @JsProperty(
+      name = "forms"
+  )
+  @Nonnull
+  public native HTMLCollection forms();
+
+  @JsProperty(
+      name = "fullscreen"
+  )
+  public native boolean fullscreen();
+
+  /**
+   * The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement">DocumentOrShadowRoot.fullscreenElement - MDN</a>
+   */
+  @JsProperty(
+      name = "fullscreenElement"
+  )
+  @Nullable
+  public native Element fullscreenElement();
+
+  @JsProperty(
+      name = "fullscreenEnabled"
+  )
+  public native boolean fullscreenEnabled();
+
+  /**
+   * The head read-only property of the Document interface returns the head element of the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/head">Document.head - MDN</a>
+   */
+  @JsProperty(
+      name = "head"
+  )
+  @Nullable
+  public native HTMLHeadElement head();
+
+  /**
+   * The Document.hidden read-only property returns a Boolean value indicating if the page is considered hidden or not.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hidden">Document.hidden - MDN</a>
+   */
+  @JsProperty(
+      name = "hidden"
+  )
+  public native boolean hidden();
+
+  /**
+   * The images read-only property of the Document interface returns a collection of the images in the current HTML document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/images">Document.images - MDN</a>
+   */
+  @JsProperty(
+      name = "images"
+  )
+  @Nonnull
+  public native HTMLCollection images();
+
+  /**
    * The Document.implementation property returns a DOMImplementation object associated with the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/implementation">Document.implementation - MDN</a>
@@ -840,119 +993,15 @@ public class Document extends Node {
   public native String inputEncoding();
 
   /**
-   * The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement.
+   * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement">Document.scrollingElement - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild">ParentNode.lastElementChild - MDN</a>
    */
   @JsProperty(
-      name = "scrollingElement"
+      name = "lastElementChild"
   )
   @Nullable
-  public native Element scrollingElement();
-
-  /**
-   * The Document.hidden read-only property returns a Boolean value indicating if the page is considered hidden or not.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hidden">Document.hidden - MDN</a>
-   */
-  @JsProperty(
-      name = "hidden"
-  )
-  public native boolean hidden();
-
-  /**
-   * The Document.visibilityState read-only property returns the visibility of the document, that is in which context this element is now visible. It is useful to know if the document is in the background or an invisible tab, or only loaded for pre-rendering.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState">Document.visibilityState - MDN</a>
-   */
-  @JsProperty(
-      name = "visibilityState"
-  )
-  @Nonnull
-  public native String visibilityState();
-
-  @JsProperty(
-      name = "rootElement"
-  )
-  @Nullable
-  public native SVGSVGElement rootElement();
-
-  /**
-   * The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/timeline">Document.timeline - MDN</a>
-   */
-  @JsProperty(
-      name = "timeline"
-  )
-  @Nonnull
-  public native DocumentTimeline timeline();
-
-  @JsProperty(
-      name = "fullscreen"
-  )
-  public native boolean fullscreen();
-
-  @JsProperty(
-      name = "fullscreenEnabled"
-  )
-  public native boolean fullscreenEnabled();
-
-  @JsProperty(
-      name = "currentScript"
-  )
-  @Nullable
-  public native HTMLOrSVGScriptElement currentScript();
-
-  @JsProperty(
-      name = "defaultView"
-  )
-  @Nullable
-  public native Window defaultView();
-
-  /**
-   * The embeds read-only property of the Document interface returns a list of the embedded object elements within the current document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/embeds">Document.embeds - MDN</a>
-   */
-  @JsProperty(
-      name = "embeds"
-  )
-  @Nonnull
-  public native HTMLCollection embeds();
-
-  /**
-   * The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/forms">Document.forms - MDN</a>
-   */
-  @JsProperty(
-      name = "forms"
-  )
-  @Nonnull
-  public native HTMLCollection forms();
-
-  /**
-   * The head read-only property of the Document interface returns the head element of the current document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/head">Document.head - MDN</a>
-   */
-  @JsProperty(
-      name = "head"
-  )
-  @Nullable
-  public native HTMLHeadElement head();
-
-  /**
-   * The images read-only property of the Document interface returns a collection of the images in the current HTML document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/images">Document.images - MDN</a>
-   */
-  @JsProperty(
-      name = "images"
-  )
-  @Nonnull
-  public native HTMLCollection images();
+  public native Element lastElementChild();
 
   @JsProperty(
       name = "lastModified"
@@ -988,6 +1037,17 @@ public class Document extends Node {
   @Nonnull
   public native HTMLCollection plugins();
 
+  /**
+   * The pointerLockElement property of the Document and ShadowRoot interfaces provides the element set as the target for mouse events while the pointer is locked. It is null if lock is pending, pointer is unlocked, or the target is in another document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement">DocumentOrShadowRoot.pointerLockElement - MDN</a>
+   */
+  @JsProperty(
+      name = "pointerLockElement"
+  )
+  @Nullable
+  public native Element pointerLockElement();
+
   @JsProperty(
       name = "readyState"
   )
@@ -1000,6 +1060,12 @@ public class Document extends Node {
   @Nonnull
   public native String referrer();
 
+  @JsProperty(
+      name = "rootElement"
+  )
+  @Nullable
+  public native SVGSVGElement rootElement();
+
   /**
    * The scripts property of the Document interface returns a list of the script elements in the document. The returned object is an HTMLCollection.
    *
@@ -1011,71 +1077,16 @@ public class Document extends Node {
   @Nonnull
   public native HTMLCollection scripts();
 
-  @JsProperty(
-      name = "all"
-  )
-  @Nonnull
-  public native HTMLAllCollection all();
-
   /**
-   * The anchors read-only property of the Document interface returns a list of all of the anchors in the document.
+   * The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/anchors">Document.anchors - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement">Document.scrollingElement - MDN</a>
    */
   @JsProperty(
-      name = "anchors"
-  )
-  @Nonnull
-  public native HTMLCollection anchors();
-
-  @JsProperty(
-      name = "applets"
-  )
-  @Nonnull
-  public native HTMLCollection applets();
-
-  /**
-   * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
-   */
-  @JsProperty(
-      name = "childElementCount"
-  )
-  public native int childElementCount();
-
-  /**
-   * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
-   */
-  @JsProperty(
-      name = "children"
-  )
-  @Nonnull
-  public native HTMLCollection children();
-
-  /**
-   * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
-   */
-  @JsProperty(
-      name = "firstElementChild"
+      name = "scrollingElement"
   )
   @Nullable
-  public native Element firstElementChild();
-
-  /**
-   * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild">ParentNode.lastElementChild - MDN</a>
-   */
-  @JsProperty(
-      name = "lastElementChild"
-  )
-  @Nullable
-  public native Element lastElementChild();
+  public native Element scrollingElement();
 
   /**
    * The styleSheets read-only property of the DocumentOrShadowRoot interface returns a StyleSheetList of CSSStyleSheet objects, for stylesheets explicitly linked into or embedded in a document.
@@ -1089,37 +1100,26 @@ public class Document extends Node {
   public native StyleSheetList styleSheets();
 
   /**
-   * The pointerLockElement property of the Document and ShadowRoot interfaces provides the element set as the target for mouse events while the pointer is locked. It is null if lock is pending, pointer is unlocked, or the target is in another document.
+   * The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement">DocumentOrShadowRoot.pointerLockElement - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/timeline">Document.timeline - MDN</a>
    */
   @JsProperty(
-      name = "pointerLockElement"
+      name = "timeline"
   )
-  @Nullable
-  public native Element pointerLockElement();
+  @Nonnull
+  public native DocumentTimeline timeline();
 
   /**
-   * The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use.
+   * The Document.visibilityState read-only property returns the visibility of the document, that is in which context this element is now visible. It is useful to know if the document is in the background or an invisible tab, or only loaded for pre-rendering.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement">DocumentOrShadowRoot.fullscreenElement - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState">Document.visibilityState - MDN</a>
    */
   @JsProperty(
-      name = "fullscreenElement"
+      name = "visibilityState"
   )
-  @Nullable
-  public native Element fullscreenElement();
-
-  /**
-   * The activeElement read-only property of the Document and ShadowRoot interfaces returns the Element within the DOM or shadow DOM tree that currently has focus.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">DocumentOrShadowRoot.activeElement - MDN</a>
-   */
-  @JsProperty(
-      name = "activeElement"
-  )
-  @Nullable
-  public native Element activeElement();
+  @Nonnull
+  public native String visibilityState();
 
   /**
    * Document.adoptNode() transfers a node from another document into the method's document. The adopted node and its subtree is removed from its original document (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document.

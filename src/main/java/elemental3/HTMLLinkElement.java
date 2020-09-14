@@ -28,6 +28,15 @@ public class HTMLLinkElement extends HTMLElement {
   @Nonnull
   public String as;
 
+  @Nonnull
+  public String charset;
+
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
+
   public boolean disabled;
 
   @Nonnull
@@ -49,32 +58,6 @@ public class HTMLLinkElement extends HTMLElement {
   public String media;
 
   /**
-   * The HTMLLinkElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the link element and the current document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel">HTMLLinkElement.rel - MDN</a>
-   */
-  @Nonnull
-  public String rel;
-
-  @Nonnull
-  public String type;
-
-  @Nonnull
-  public String charset;
-
-  @Nonnull
-  public String rev;
-
-  @Nonnull
-  public String target;
-
-  @Nullable
-  @MagicConstant(
-      valuesFromClass = CrossOriginType.class
-  )
-  public String crossOrigin;
-
-  /**
    * The HTMLLinkElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the link element defining which referrer is sent when fetching the resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/referrerPolicy">HTMLLinkElement.referrerPolicy - MDN</a>
@@ -84,6 +67,23 @@ public class HTMLLinkElement extends HTMLElement {
       valuesFromClass = ReferrerPolicy.class
   )
   public String referrerPolicy;
+
+  /**
+   * The HTMLLinkElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the link element and the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel">HTMLLinkElement.rel - MDN</a>
+   */
+  @Nonnull
+  public String rel;
+
+  @Nonnull
+  public String rev;
+
+  @Nonnull
+  public String target;
+
+  @Nonnull
+  public String type;
 
   public HTMLLinkElement() {
   }
@@ -100,14 +100,14 @@ public class HTMLLinkElement extends HTMLElement {
   public native DOMTokenList relList();
 
   @JsProperty(
-      name = "sizes"
-  )
-  @Nonnull
-  public native DOMTokenList sizes();
-
-  @JsProperty(
       name = "sheet"
   )
   @Nullable
   public native CSSStyleSheet sheet();
+
+  @JsProperty(
+      name = "sizes"
+  )
+  @Nonnull
+  public native DOMTokenList sizes();
 }

@@ -36,6 +36,12 @@ public class SVGImageElement extends SVGGraphicsElement {
   @Nonnull
   public native SVGAnimatedLength height();
 
+  @JsProperty(
+      name = "href"
+  )
+  @Nonnull
+  public native SVGAnimatedString href();
+
   /**
    * The preserveAspectRatio read-only property of the SVGImageElement interface returns an SVGAnimatedPreserveAspectRatio corresponding to the preserveAspectRatio attribute of the given image element.
    *
@@ -79,10 +85,4 @@ public class SVGImageElement extends SVGGraphicsElement {
   )
   @Nonnull
   public native SVGAnimatedLength y();
-
-  @JsProperty(
-      name = "href"
-  )
-  @Nonnull
-  public native SVGAnimatedString href();
 }

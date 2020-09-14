@@ -36,17 +36,6 @@ public class Text extends CharacterData {
   }
 
   /**
-   * The Text.wholeText read-only property returns the full text of all Text nodes logically adjacent to the node.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/wholeText">Text.wholeText - MDN</a>
-   */
-  @JsProperty(
-      name = "wholeText"
-  )
-  @Nonnull
-  public native String wholeText();
-
-  /**
    * The assignedSlot property of the Text interface returns the HTMLSlotElement object associated with the element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/assignedSlot">Text.assignedSlot - MDN</a>
@@ -56,6 +45,17 @@ public class Text extends CharacterData {
   )
   @Nullable
   public native HTMLSlotElement assignedSlot();
+
+  /**
+   * The Text.wholeText read-only property returns the full text of all Text nodes logically adjacent to the node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/wholeText">Text.wholeText - MDN</a>
+   */
+  @JsProperty(
+      name = "wholeText"
+  )
+  @Nonnull
+  public native String wholeText();
 
   @Nonnull
   public native Text splitText(int offset);

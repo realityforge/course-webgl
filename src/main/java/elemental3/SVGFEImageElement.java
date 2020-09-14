@@ -28,10 +28,10 @@ public class SVGFEImageElement extends SVGElement {
   public native SVGAnimatedString crossOrigin();
 
   @JsProperty(
-      name = "preserveAspectRatio"
+      name = "height"
   )
   @Nonnull
-  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
+  public native SVGAnimatedLength height();
 
   @JsProperty(
       name = "href"
@@ -40,10 +40,10 @@ public class SVGFEImageElement extends SVGElement {
   public native SVGAnimatedString href();
 
   @JsProperty(
-      name = "height"
+      name = "preserveAspectRatio"
   )
   @Nonnull
-  public native SVGAnimatedLength height();
+  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
 
   @JsProperty(
       name = "result"

@@ -19,14 +19,10 @@ import jsinterop.annotations.JsType;
     name = "SVGElement"
 )
 public class SVGElement extends Element {
-  @Nullable
-  public ClipboardEventHandler oncopy;
+  public boolean autofocus;
 
-  @Nullable
-  public ClipboardEventHandler oncut;
-
-  @Nullable
-  public ClipboardEventHandler onpaste;
+  @Nonnull
+  public String nonce;
 
   /**
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
@@ -35,6 +31,38 @@ public class SVGElement extends Element {
    */
   @Nullable
   public EventHandler onabort;
+
+  /**
+   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
+   */
+  @Nullable
+  public EventHandler onanimationcancel;
+
+  /**
+   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
+   */
+  @Nullable
+  public EventHandler onanimationend;
+
+  /**
+   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
+   */
+  @Nullable
+  public EventHandler onanimationiteration;
+
+  /**
+   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
+   */
+  @Nullable
+  public EventHandler onanimationstart;
 
   /**
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
@@ -108,6 +136,9 @@ public class SVGElement extends Element {
   @Nullable
   public MouseEventHandler oncontextmenu;
 
+  @Nullable
+  public ClipboardEventHandler oncopy;
+
   /**
    * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
    *
@@ -115,6 +146,9 @@ public class SVGElement extends Element {
    */
   @Nullable
   public EventHandler oncuechange;
+
+  @Nullable
+  public ClipboardEventHandler oncut;
 
   /**
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
@@ -237,6 +271,14 @@ public class SVGElement extends Element {
   public EventHandler onformdata;
 
   /**
+   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
+   */
+  @Nullable
+  public EventHandler ongotpointercapture;
+
+  /**
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
@@ -309,6 +351,14 @@ public class SVGElement extends Element {
   public EventHandler onloadstart;
 
   /**
+   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
+   */
+  @Nullable
+  public EventHandler onlostpointercapture;
+
+  /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">GlobalEventHandlers.onmousedown - MDN</a>
@@ -364,6 +414,9 @@ public class SVGElement extends Element {
   @Nullable
   public MouseEventHandler onmouseup;
 
+  @Nullable
+  public ClipboardEventHandler onpaste;
+
   /**
    * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
    *
@@ -387,172 +440,6 @@ public class SVGElement extends Element {
    */
   @Nullable
   public EventHandler onplaying;
-
-  @Nullable
-  public EventHandler onprogress;
-
-  @Nullable
-  public EventHandler onratechange;
-
-  /**
-   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
-   */
-  @Nullable
-  public EventHandler onreset;
-
-  /**
-   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
-   */
-  @Nullable
-  public EventHandler onresize;
-
-  /**
-   * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
-   */
-  @Nullable
-  public EventHandler onscroll;
-
-  @Nullable
-  public EventHandler onsecuritypolicyviolation;
-
-  @Nullable
-  public EventHandler onseeked;
-
-  @Nullable
-  public EventHandler onseeking;
-
-  /**
-   * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
-   */
-  @Nullable
-  public EventHandler onselect;
-
-  @Nullable
-  public EventHandler onslotchange;
-
-  @Nullable
-  public EventHandler onstalled;
-
-  /**
-   * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
-   */
-  @Nullable
-  public EventHandler onsubmit;
-
-  @Nullable
-  public EventHandler onsuspend;
-
-  @Nullable
-  public EventHandler ontimeupdate;
-
-  @Nullable
-  public EventHandler ontoggle;
-
-  @Nullable
-  public EventHandler onvolumechange;
-
-  @Nullable
-  public EventHandler onwaiting;
-
-  @Nullable
-  public EventHandler onwebkitanimationend;
-
-  @Nullable
-  public EventHandler onwebkitanimationiteration;
-
-  @Nullable
-  public EventHandler onwebkitanimationstart;
-
-  @Nullable
-  public EventHandler onwebkittransitionend;
-
-  /**
-   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
-   */
-  @Nullable
-  public WheelEventHandler onwheel;
-
-  /**
-   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
-   */
-  @Nullable
-  public EventHandler onanimationcancel;
-
-  /**
-   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
-   */
-  @Nullable
-  public EventHandler onanimationend;
-
-  /**
-   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
-   */
-  @Nullable
-  public EventHandler onanimationiteration;
-
-  /**
-   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
-   */
-  @Nullable
-  public EventHandler onanimationstart;
-
-  /**
-   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
-   */
-  @Nullable
-  public EventHandler ontransitioncancel;
-
-  /**
-   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
-   */
-  @Nullable
-  public EventHandler ontransitionend;
-
-  @Nullable
-  public EventHandler ontransitionrun;
-
-  @Nullable
-  public EventHandler ontransitionstart;
-
-  /**
-   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
-   */
-  @Nullable
-  public EventHandler ongotpointercapture;
-
-  /**
-   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
-   */
-  @Nullable
-  public EventHandler onlostpointercapture;
 
   /**
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
@@ -618,6 +505,53 @@ public class SVGElement extends Element {
   @Nullable
   public EventHandler onpointerup;
 
+  @Nullable
+  public EventHandler onprogress;
+
+  @Nullable
+  public EventHandler onratechange;
+
+  /**
+   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
+   */
+  @Nullable
+  public EventHandler onreset;
+
+  /**
+   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
+   */
+  @Nullable
+  public EventHandler onresize;
+
+  /**
+   * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
+   */
+  @Nullable
+  public EventHandler onscroll;
+
+  @Nullable
+  public EventHandler onsecuritypolicyviolation;
+
+  @Nullable
+  public EventHandler onseeked;
+
+  @Nullable
+  public EventHandler onseeking;
+
+  /**
+   * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
+   */
+  @Nullable
+  public EventHandler onselect;
+
   /**
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
@@ -633,6 +567,29 @@ public class SVGElement extends Element {
    */
   @Nullable
   public EventHandler onselectstart;
+
+  @Nullable
+  public EventHandler onslotchange;
+
+  @Nullable
+  public EventHandler onstalled;
+
+  /**
+   * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
+   */
+  @Nullable
+  public EventHandler onsubmit;
+
+  @Nullable
+  public EventHandler onsuspend;
+
+  @Nullable
+  public EventHandler ontimeupdate;
+
+  @Nullable
+  public EventHandler ontoggle;
 
   /**
    * The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.
@@ -666,10 +623,53 @@ public class SVGElement extends Element {
   @Nullable
   public TouchEventHandler ontouchstart;
 
-  public boolean autofocus;
+  /**
+   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
+   */
+  @Nullable
+  public EventHandler ontransitioncancel;
 
-  @Nonnull
-  public String nonce;
+  /**
+   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
+   */
+  @Nullable
+  public EventHandler ontransitionend;
+
+  @Nullable
+  public EventHandler ontransitionrun;
+
+  @Nullable
+  public EventHandler ontransitionstart;
+
+  @Nullable
+  public EventHandler onvolumechange;
+
+  @Nullable
+  public EventHandler onwaiting;
+
+  @Nullable
+  public EventHandler onwebkitanimationend;
+
+  @Nullable
+  public EventHandler onwebkitanimationiteration;
+
+  @Nullable
+  public EventHandler onwebkitanimationstart;
+
+  @Nullable
+  public EventHandler onwebkittransitionend;
+
+  /**
+   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
+   */
+  @Nullable
+  public WheelEventHandler onwheel;
 
   public int tabIndex;
 
@@ -681,18 +681,6 @@ public class SVGElement extends Element {
   )
   @Nonnull
   public native SVGAnimatedString className();
-
-  @JsProperty(
-      name = "ownerSVGElement"
-  )
-  @Nullable
-  public native SVGSVGElement ownerSVGElement();
-
-  @JsProperty(
-      name = "viewportElement"
-  )
-  @Nullable
-  public native SVGElement viewportElement();
 
   @JsProperty(
       name = "correspondingElement"
@@ -707,6 +695,23 @@ public class SVGElement extends Element {
   public native SVGUseElement correspondingUseElement();
 
   /**
+   * The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset">SVGElement.dataset - MDN</a>
+   */
+  @JsProperty(
+      name = "dataset"
+  )
+  @Nonnull
+  public native DOMStringMap dataset();
+
+  @JsProperty(
+      name = "ownerSVGElement"
+  )
+  @Nullable
+  public native SVGSVGElement ownerSVGElement();
+
+  /**
    * The style property is used to get as well as set the inline style of an element. When getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style">ElementCSSInlineStyle.style - MDN</a>
@@ -717,16 +722,11 @@ public class SVGElement extends Element {
   @Nonnull
   public native CSSStyleDeclaration style();
 
-  /**
-   * The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset">SVGElement.dataset - MDN</a>
-   */
   @JsProperty(
-      name = "dataset"
+      name = "viewportElement"
   )
-  @Nonnull
-  public native DOMStringMap dataset();
+  @Nullable
+  public native SVGElement viewportElement();
 
   public native void blur();
 

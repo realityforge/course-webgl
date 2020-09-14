@@ -27,6 +27,18 @@ public class FederatedCredential extends Credential {
   public FederatedCredential(@Nonnull final FederatedCredentialInit data) {
   }
 
+  @JsProperty(
+      name = "iconURL"
+  )
+  @Nonnull
+  public native String iconURL();
+
+  @JsProperty(
+      name = "name"
+  )
+  @Nonnull
+  public native String name();
+
   /**
    * The protocol property of the FederatedCredential interface returns a read-only DOMString containing a credential's federated identity protocol. If this property is null, the protocol may be inferred from the FederatedCredential.provider property.
    *
@@ -48,16 +60,4 @@ public class FederatedCredential extends Credential {
   )
   @Nonnull
   public native String provider();
-
-  @JsProperty(
-      name = "iconURL"
-  )
-  @Nonnull
-  public native String iconURL();
-
-  @JsProperty(
-      name = "name"
-  )
-  @Nonnull
-  public native String name();
 }

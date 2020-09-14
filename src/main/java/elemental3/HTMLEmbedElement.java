@@ -19,7 +19,13 @@ import jsinterop.annotations.JsType;
 )
 public class HTMLEmbedElement extends HTMLElement {
   @Nonnull
+  public String align;
+
+  @Nonnull
   public String height;
+
+  @Nonnull
+  public String name;
 
   @Nonnull
   public String src;
@@ -29,12 +35,6 @@ public class HTMLEmbedElement extends HTMLElement {
 
   @Nonnull
   public String width;
-
-  @Nonnull
-  public String align;
-
-  @Nonnull
-  public String name;
 
   public HTMLEmbedElement() {
   }

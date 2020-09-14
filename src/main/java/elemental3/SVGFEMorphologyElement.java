@@ -32,6 +32,12 @@ public class SVGFEMorphologyElement extends SVGElement {
   }
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
@@ -54,12 +60,6 @@ public class SVGFEMorphologyElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedNumber radiusY();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
 
   @JsProperty(
       name = "result"

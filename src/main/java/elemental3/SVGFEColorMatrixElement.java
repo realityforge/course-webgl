@@ -38,10 +38,22 @@ public class SVGFEColorMatrixElement extends SVGElement {
   }
 
   @JsProperty(
+      name = "height"
+  )
+  @Nonnull
+  public native SVGAnimatedLength height();
+
+  @JsProperty(
       name = "in1"
   )
   @Nonnull
   public native SVGAnimatedString in1();
+
+  @JsProperty(
+      name = "result"
+  )
+  @Nonnull
+  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "type"
@@ -54,18 +66,6 @@ public class SVGFEColorMatrixElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedNumberList values();
-
-  @JsProperty(
-      name = "height"
-  )
-  @Nonnull
-  public native SVGAnimatedLength height();
-
-  @JsProperty(
-      name = "result"
-  )
-  @Nonnull
-  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "width"
