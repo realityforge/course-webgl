@@ -6,6 +6,7 @@ import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.HTMLElement;
+import elemental3.RenderContextType;
 import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
 import elemental3.WebGLProgram;
@@ -20,8 +21,7 @@ public class HelloTriangle
   public void onModuleLoad()
   {
     final HTMLCanvasElement canvas = createCanvas();
-    // TODO: This method should have typing tightened up
-    final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( "webgl2" );
+    final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
     assert null != gl;
 
     // Vertex position data for triangle

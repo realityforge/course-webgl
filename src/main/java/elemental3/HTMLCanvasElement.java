@@ -9,6 +9,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.
@@ -38,31 +39,6 @@ public class HTMLCanvasElement extends HTMLElement {
 
   public HTMLCanvasElement() {
   }
-
-  /**
-   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
-   */
-  @Nullable
-  public native RenderingContext getContext(@Nonnull String contextId, @Nullable Any options);
-
-  /**
-   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
-   */
-  @Nullable
-  public native RenderingContext getContext(@Nonnull String contextId,
-      @DoNotAutobox @Nullable Object options);
-
-  /**
-   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
-   */
-  @Nullable
-  public native RenderingContext getContext(@Nonnull String contextId);
 
   /**
    * The HTMLCanvasElement.toBlob() method creates a Blob object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent. If type is not specified, the image type is image/png. The created image is in a resolution of 96dpi.
@@ -133,6 +109,35 @@ public class HTMLCanvasElement extends HTMLElement {
    */
   @Nonnull
   public native OffscreenCanvas transferControlToOffscreen();
+
+  /**
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
+   */
+  @Nullable
+  public native RenderingContext getContext(
+      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
+      @Nullable Any options);
+
+  /**
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
+   */
+  @Nullable
+  public native RenderingContext getContext(
+      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
+      @DoNotAutobox @Nullable Object options);
+
+  /**
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
+   */
+  @Nullable
+  public native RenderingContext getContext(
+      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId);
 
   @JsOverlay
   public final void addWebglcontextcreationerrorListener(
