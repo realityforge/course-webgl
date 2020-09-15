@@ -126,7 +126,7 @@ public final class Cube
       "in vec4 color;\n" +
       // The output vertex color that will be fed to the next shader
       "out vec4 fcolor;\n" +
-      "" +
+      "\n" +
       // The main program/kernel
       "void main()\n" +
       "{\n" +
