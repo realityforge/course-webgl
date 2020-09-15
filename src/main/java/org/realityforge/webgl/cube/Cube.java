@@ -25,24 +25,94 @@ public class Cube
     final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
     assert null != gl;
 
-    // Vertex position data for triangle
+    // Vertex position data
     double[] positions = new double[]{
-      // Vertex 1
-      1.0, -1.0, 0.0,
-      // Vertex 2
-      0.0, 1.0, 0.0,
-      // Vertex 3
-      -1.0, -1.0, 0.0
+      -0.5, -0.5, -0.5,
+      0.5, -0.5, -0.5,
+      0.5, 0.5, -0.5,
+      0.5, 0.5, -0.5,
+      -0.5, 0.5, -0.5,
+      -0.5, -0.5, -0.5,
+
+      -0.5, -0.5, 0.5,
+      0.5, -0.5, 0.5,
+      0.5, 0.5, 0.5,
+      0.5, 0.5, 0.5,
+      -0.5, 0.5, 0.5,
+      -0.5, -0.5, 0.5,
+
+      -0.5, 0.5, 0.5,
+      -0.5, 0.5, -0.5,
+      -0.5, -0.5, -0.5,
+      -0.5, -0.5, -0.5,
+      -0.5, -0.5, 0.5,
+      -0.5, 0.5, 0.5,
+
+      0.5, 0.5, 0.5,
+      0.5, 0.5, -0.5,
+      0.5, -0.5, -0.5,
+      0.5, -0.5, -0.5,
+      0.5, -0.5, 0.5,
+      0.5, 0.5, 0.5,
+
+      -0.5, -0.5, -0.5,
+      0.5, -0.5, -0.5,
+      0.5, -0.5, 0.5,
+      0.5, -0.5, 0.5,
+      -0.5, -0.5, 0.5,
+      -0.5, -0.5, -0.5,
+
+      -0.5, 0.5, -0.5,
+      0.5, 0.5, -0.5,
+      0.5, 0.5, 0.5,
+      0.5, 0.5, 0.5,
+      -0.5, 0.5, 0.5,
+      -0.5, 0.5, -0.5
     };
 
     // Vertex color data for triangle in RGBA form
     double[] colors = new double[]{
-      // Red
-      1.0, 0.0, 0.0, 1.0,
-      // Green
-      0.0, 1.0, 0.0, 1.0,
-      // Blue
-      0.0, 0.0, 1.0, 1.0
+      1.0, 0.0, 0.0, 1.0, // Front face
+      1.0, 0.0, 0.0, 1.0, // Front face
+      1.0, 0.0, 0.0, 1.0, // Front face
+      1.0, 0.0, 0.0, 1.0, // Front face
+      1.0, 0.0, 0.0, 1.0, // Front face
+      1.0, 0.0, 0.0, 1.0, // Front face
+
+      0.0, 1.0, 0.0, 1.0, // Back face
+      0.0, 1.0, 0.0, 1.0, // Back face
+      0.0, 1.0, 0.0, 1.0, // Back face
+      0.0, 1.0, 0.0, 1.0, // Back face
+      0.0, 1.0, 0.0, 1.0, // Back face
+      0.0, 1.0, 0.0, 1.0, // Back face
+
+      0.0, 0.0, 1.0, 1.0, // Top face
+      0.0, 0.0, 1.0, 1.0, // Top face
+      0.0, 0.0, 1.0, 1.0, // Top face
+      0.0, 0.0, 1.0, 1.0, // Top face
+      0.0, 0.0, 1.0, 1.0, // Top face
+      0.0, 0.0, 1.0, 1.0, // Top face
+
+      1.0, 1.0, 0.0, 1.0, // Bottom face
+      1.0, 1.0, 0.0, 1.0, // Bottom face
+      1.0, 1.0, 0.0, 1.0, // Bottom face
+      1.0, 1.0, 0.0, 1.0, // Bottom face
+      1.0, 1.0, 0.0, 1.0, // Bottom face
+      1.0, 1.0, 0.0, 1.0, // Bottom face
+
+      1.0, 0.0, 1.0, 1.0, // Right face
+      1.0, 0.0, 1.0, 1.0, // Right face
+      1.0, 0.0, 1.0, 1.0, // Right face
+      1.0, 0.0, 1.0, 1.0, // Right face
+      1.0, 0.0, 1.0, 1.0, // Right face
+      1.0, 0.0, 1.0, 1.0, // Right face
+
+      0.0, 1.0, 1.0, 1.0, // Left face
+      0.0, 1.0, 1.0, 1.0, // Left face
+      0.0, 1.0, 1.0, 1.0, // Left face
+      0.0, 1.0, 1.0, 1.0, // Left face
+      0.0, 1.0, 1.0, 1.0, // Left face
+      0.0, 1.0, 1.0, 1.0 // Left face
     };
 
     // The vertex shader that will be run for every vertex
@@ -164,7 +234,7 @@ public class Cube
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 3 );
+    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
   }
