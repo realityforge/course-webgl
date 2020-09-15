@@ -15,7 +15,7 @@ import elemental3.Window;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
-public class Cube
+public final class Cube
   implements EntryPoint
 {
   @Override
