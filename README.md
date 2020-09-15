@@ -1,5 +1,7 @@
-# Coursework for "The Extensive WebGL Series ! - Part1 : Low Level Graphics"
+# Coursework for learning WebGL
 
-This contains the projects used for the course [The Extensive WebGL Series ! - Part1 : Low Level Graphics](https://www.udemy.com/course/the-extensive-webgl-series-part1-low-level-basics/).
+This repository contains code that developed while working through two separate WebGL courses.
 
-The vendor directory contains course materials provided by the teacher.
+The first course is the [The Extensive WebGL Series ! - Part1 : Low Level Graphics](https://www.udemy.com/course/the-extensive-webgl-series-part1-low-level-basics/). The `vendor/course-code-examples` directory contains the course materials provided by the teacher.
+
+The second course is the [WebGL internals](https://www.udemy.com/course/webgl-internals/). The `vendor/webglinternals` directory contains the course materials provided by the teacher.
