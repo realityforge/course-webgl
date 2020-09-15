@@ -11,6 +11,7 @@ import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
 import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
+import elemental3.Window;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
@@ -171,10 +172,11 @@ public class HelloTriangle
   @Nonnull
   private HTMLCanvasElement createCanvas()
   {
-    final Document document = Global.globalThis().document();
+    final Window window = Global.globalThis();
+    final Document document = window.document();
     final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
-    canvas.width = 1024;
-    canvas.height = 786;
+    canvas.width = window.innerWidth();
+    canvas.height = window.innerHeight();
     final HTMLElement body = document.body;
     assert null != body;
     body.appendChild( canvas );
