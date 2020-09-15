@@ -118,7 +118,7 @@ public class HTMLCanvasElement extends HTMLElement {
   @Nullable
   public native RenderingContext getContext(
       @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
-      @Nullable Any options);
+      @Nonnull CanvasRenderingContext2DSettings options);
 
   /**
    * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
@@ -128,7 +128,17 @@ public class HTMLCanvasElement extends HTMLElement {
   @Nullable
   public native RenderingContext getContext(
       @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
-      @DoNotAutobox @Nullable Object options);
+      @Nonnull ImageBitmapRenderingContextSettings options);
+
+  /**
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
+   */
+  @Nullable
+  public native RenderingContext getContext(
+      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
+      @Nonnull WebGLContextAttributes options);
 
   /**
    * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
