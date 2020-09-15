@@ -1,0 +1,10 @@
+{
+  "config_version": 1,
+  "mirrors": {
+    "vendor/webglinternals": {
+      "url": "https://github.com/subhasishdash/webglinternals.git",
+      "branch": "master",
+      "revision": "5e60781c90c57627ddb088069be9856ef1b19c54"
+    }
+  }
+}
