@@ -14,8 +14,6 @@ define 'course-webgl' do
   project.version = ENV['PRODUCT_VERSION'] if ENV['PRODUCT_VERSION']
 
   compile.with :javax_annotation,
-               :vecmath,
-               :vecmath_sources,
                :jetbrains_annotations,
                :jsinterop_base,
                :jsinterop_annotations,
