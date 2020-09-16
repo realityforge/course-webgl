@@ -15,6 +15,7 @@ import elemental3.WebGLUniformLocation;
 import elemental3.Window;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 import org.joml.Matrix4d;
 
 public final class Cube
@@ -194,26 +195,10 @@ public final class Cube
                    WebGL2RenderingContext.STATIC_DRAW );
 
     // Build and compile the vertex shader
-    final WebGLShader vertexShader = gl.createShader( WebGL2RenderingContext.VERTEX_SHADER );
-    assert null != vertexShader;
-
-    gl.shaderSource( vertexShader, vertexShaderSource );
-    gl.compileShader( vertexShader );
-    if ( !requireNonNull( gl.getShaderParameter( vertexShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getShaderInfoLog( vertexShader ) );
-    }
+    final WebGLShader vertexShader = createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
 
     // Build and compile the vertex shader
-    final WebGLShader fragmentShader = gl.createShader( WebGL2RenderingContext.FRAGMENT_SHADER );
-    assert null != fragmentShader;
-
-    gl.shaderSource( fragmentShader, fragmentShaderSource );
-    gl.compileShader( fragmentShader );
-    if ( !requireNonNull( gl.getShaderParameter( fragmentShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getShaderInfoLog( fragmentShader ) );
-    }
+    final WebGLShader fragmentShader = createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
 
     // Combine the shaders into a program
     final WebGLProgram program = gl.createProgram();
@@ -282,6 +267,24 @@ public final class Cube
   private Float32Array toFloat32Array( @Nonnull final Matrix4d matrix )
   {
     return new Float32Array( matrix.get( new double[ 16 ] ) );
+  }
+
+  @Nonnull
+  private WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
+                                    @MagicConstant( intValues = { WebGL2RenderingContext.VERTEX_SHADER,
+                                                                  WebGL2RenderingContext.FRAGMENT_SHADER } ) final int type,
+                                    final String source )
+  {
+    final WebGLShader vertexShader = gl.createShader( type );
+    assert null != vertexShader;
+
+    gl.shaderSource( vertexShader, source );
+    gl.compileShader( vertexShader );
+    if ( !requireNonNull( gl.getShaderParameter( vertexShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
+    {
+      Global.globalThis().console().log( gl.getShaderInfoLog( vertexShader ) );
+    }
+    return vertexShader;
   }
 
   @Nonnull
