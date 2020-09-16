@@ -287,14 +287,14 @@ public final class Cube
                                    @Nonnull final WebGLBuffer colorBuffer,
                                    final int index,
                                    final int target,
-                                   final int size,
+                                   final int dimension,
                                    final int type,
                                    final int stride,
                                    final int offset )
   {
     gl.enableVertexAttribArray( index );
     gl.bindBuffer( target, colorBuffer );
-    gl.vertexAttribPointer( index, size, type, false, stride, offset );
+    gl.vertexAttribPointer( index, dimension, type, false, stride, offset );
   }
 
   @Nonnull
