@@ -9,7 +9,6 @@ import elemental3.WebGLShader;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.Language;
-import org.intellij.lang.annotations.MagicConstant;
 
 public final class GL
 {
@@ -66,8 +65,7 @@ public final class GL
 
   @Nonnull
   static WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
-                                   @MagicConstant( intValues = { WebGL2RenderingContext.VERTEX_SHADER,
-                                                                 WebGL2RenderingContext.FRAGMENT_SHADER } ) final int type,
+                                   @ShaderType final int type,
                                    @Language( "GLSL" ) @Nonnull final String source )
   {
     final WebGLShader vertexShader = gl.createShader( type );
