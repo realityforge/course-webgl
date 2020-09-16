@@ -201,16 +201,7 @@ public final class Cube
     final WebGLShader fragmentShader = createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
 
     // Combine the shaders into a program
-    final WebGLProgram program = gl.createProgram();
-    assert null != program;
-    gl.attachShader( program, vertexShader );
-    gl.attachShader( program, fragmentShader );
-    gl.linkProgram( program );
-
-    if ( !requireNonNull( gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
-    }
+    final WebGLProgram program = createProgram( gl, vertexShader, fragmentShader );
 
     c_modelMatrixLocation = gl.getUniformLocation( program, "modelMatrix" );
     c_viewMatrixLocation = gl.getUniformLocation( program, "viewMatrix" );
@@ -267,6 +258,24 @@ public final class Cube
   private Float32Array toFloat32Array( @Nonnull final Matrix4d matrix )
   {
     return new Float32Array( matrix.get( new double[ 16 ] ) );
+  }
+
+  @Nonnull
+  private WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
+                                      @Nonnull final WebGLShader vertexShader,
+                                      @Nonnull final WebGLShader fragmentShader )
+  {
+    final WebGLProgram program = gl.createProgram();
+    assert null != program;
+    gl.attachShader( program, vertexShader );
+    gl.attachShader( program, fragmentShader );
+    gl.linkProgram( program );
+
+    if ( !requireNonNull( gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS ) ).asBoolean() )
+    {
+      Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
+    }
+    return program;
   }
 
   @Nonnull
