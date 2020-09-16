@@ -11,13 +11,27 @@ import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
 import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
+import elemental3.WebGLUniformLocation;
 import elemental3.Window;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.joml.Matrix4d;
 
 public final class Cube
   implements EntryPoint
 {
+  // Cube rotation angle
+  private static double c_angle;
+  private WebGLUniformLocation c_modelMatrixLocation;
+  private WebGLUniformLocation c_viewMatrixLocation;
+  private WebGLUniformLocation c_projectionMatrixLocation;
+  @Nonnull
+  private final Matrix4d c_modelMatrix = new Matrix4d();
+  @Nonnull
+  private final Matrix4d c_viewMatrix = new Matrix4d();
+  @Nonnull
+  private final Matrix4d c_projectionMatrix = new Matrix4d();
+
   @Override
   public void onModuleLoad()
   {
@@ -127,11 +141,16 @@ public final class Cube
       // The output vertex color that will be fed to the next shader
       "out vec4 fcolor;\n" +
       "\n" +
+      // The following are the unions (aka constant across multiple vertices)
+      "uniform mat4 modelMatrix;\n" +
+      "uniform mat4 viewMatrix;\n" +
+      "uniform mat4 projectionMatrix;\n" +
       // The main program/kernel
       "void main()\n" +
       "{\n" +
       // Copy position from input to output, converting to vec4 by adding using 1 for 4th dimension
-      "  gl_Position = vec4(position, 1);" +
+      // and transforming via model/view/project matrices
+      "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
       // Copy color from input to output
       "  fcolor = color;" +
       "}\n";
@@ -153,6 +172,8 @@ public final class Cube
       // Copy color from input to output
       "  finalColor = fcolor;" +
       "}\n";
+
+    c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     // Create a GPU resource for position data
     final WebGLBuffer positionBuffer = gl.createBuffer();
@@ -206,6 +227,10 @@ public final class Cube
       Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
     }
 
+    c_modelMatrixLocation = gl.getUniformLocation( program, "modelMatrix" );
+    c_viewMatrixLocation = gl.getUniformLocation( program, "viewMatrix" );
+    c_projectionMatrixLocation = gl.getUniformLocation( program, "projectionMatrix" );
+
     // Start using the program for all vertexes pass through gl until the program is changed
     gl.useProgram( program );
 
@@ -232,11 +257,31 @@ public final class Cube
   private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
     gl.clearColor( 0, 0, 0, 1 );
-    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
+    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
+    gl.enable( WebGL2RenderingContext.DEPTH_TEST );
+
+    c_modelMatrix.identity();
+    c_modelMatrix.translate( 0, 0, -7 );
+    c_modelMatrix.rotateY( c_angle );
+    c_modelMatrix.rotateX( 0.25 );
+
+    c_viewMatrix.identity();
+
+    gl.uniformMatrix4fv( c_modelMatrixLocation, false, toFloat32Array( c_modelMatrix ) );
+    gl.uniformMatrix4fv( c_viewMatrixLocation, false, toFloat32Array( c_viewMatrix ) );
+    gl.uniformMatrix4fv( c_projectionMatrixLocation, false, toFloat32Array( c_projectionMatrix ) );
+
+    c_angle += 0.1;
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
+  }
+
+  @Nonnull
+  private Float32Array toFloat32Array( @Nonnull final Matrix4d matrix )
+  {
+    return new Float32Array( matrix.get( new double[ 16 ] ) );
   }
 
   @Nonnull
