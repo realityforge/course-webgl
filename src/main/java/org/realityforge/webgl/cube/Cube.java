@@ -23,8 +23,7 @@ public final class Cube
   private final Matrix4d c_viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d c_projectionMatrix = new Matrix4d();
-  private Geometry _geometry;
-  private Material _material;
+  private Mesh _mesh;
 
   @Override
   public void onModuleLoad()
@@ -35,16 +34,12 @@ public final class Cube
 
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _geometry = CubeTemplate.createGeometry( gl );
-    _material = CubeTemplate.createMaterial( gl );
-
-    // Start using the program for all vertexes pass through gl until the program is changed
-    gl.useProgram( _material.getProgram() );
+    _mesh = CubeTemplate.create( gl );
 
     // Tell GPU to load position data into program from out buffer
     GL.linkBufferResource( gl,
-                           _geometry.getPositionBuffer(),
-                           _material.getPositionIndex(),
+                           _mesh.getGeometry().getPositionBuffer(),
+                           _mesh.getMaterial().getPositionIndex(),
                            WebGL2RenderingContext.ARRAY_BUFFER,
                            3,
                            WebGL2RenderingContext.FLOAT,
@@ -53,13 +48,16 @@ public final class Cube
 
     // Tell GPU to load color data into program from out buffer
     GL.linkBufferResource( gl,
-                           _geometry.getColorBuffer(),
-                           _material.getColorIndex(),
+                           _mesh.getGeometry().getColorBuffer(),
+                           _mesh.getMaterial().getColorIndex(),
                            WebGL2RenderingContext.ARRAY_BUFFER,
                            4,
                            WebGL2RenderingContext.FLOAT,
                            0,
                            0 );
+
+    // Start using the program for all vertexes pass through gl until the program is changed
+    gl.useProgram( _mesh.getMaterial().getProgram() );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
   }
@@ -77,9 +75,10 @@ public final class Cube
 
     c_viewMatrix.identity();
 
-    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, toFloat32Array( c_modelMatrix ) );
-    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, toFloat32Array( c_viewMatrix ) );
-    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, toFloat32Array( c_projectionMatrix ) );
+    final Material material = _mesh.getMaterial();
+    gl.uniformMatrix4fv( material.getModelMatrixLocation(), false, toFloat32Array( c_modelMatrix ) );
+    gl.uniformMatrix4fv( material.getViewMatrixLocation(), false, toFloat32Array( c_viewMatrix ) );
+    gl.uniformMatrix4fv( material.getProjectionMatrixLocation(), false, toFloat32Array( c_projectionMatrix ) );
 
     c_angle += 0.1;
 
