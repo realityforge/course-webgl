@@ -8,7 +8,6 @@ import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.intellij.lang.annotations.Language;
 
 public final class GL
 {
@@ -66,7 +65,7 @@ public final class GL
   @Nonnull
   static WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
                                    @ShaderType final int type,
-                                   @Language( "GLSL" ) @Nonnull final String source )
+                                   @GLSL @Nonnull final String source )
   {
     final WebGLShader vertexShader = gl.createShader( type );
     assert null != vertexShader;
