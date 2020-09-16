@@ -33,56 +33,10 @@ public final class Cube
     final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
     assert null != gl;
 
-    // The vertex shader that will be run for every vertex
-    @GLSL
-    final String vertexShaderSource =
-      // The shader language is OpenGL 3 (i.e. 300) ES and this version pragma must
-      // be the first thing present in the shader source
-      "#version 300 es\n" +
-      // The incoming vertex position
-      "in vec3 position;\n" +
-      // The incoming vertex color
-      "in vec4 color;\n" +
-      // The output vertex color that will be fed to the next shader
-      "out vec4 fcolor;\n" +
-      "\n" +
-      // The following are the unions (aka constant across multiple vertices)
-      "uniform mat4 modelMatrix;\n" +
-      "uniform mat4 viewMatrix;\n" +
-      "uniform mat4 projectionMatrix;\n" +
-      // The main program/kernel
-      "void main()\n" +
-      "{\n" +
-      // Copy position from input to output, converting to vec4 by adding using 1 for 4th dimension
-      // and transforming via model/view/project matrices
-      "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
-      // Copy color from input to output
-      "  fcolor = color;" +
-      "}\n";
-
-    // The fragment shader that will be run for every pixel
-    @GLSL
-    final String fragmentShaderSource =
-      // The version of language in use
-      "#version 300 es\n" +
-      // There is no default precision for floats in fragment shaders so specify it
-      "precision mediump float;\n" +
-      // The incoming fragment color
-      "in vec4 fcolor;\n" +
-      // The output fragment color
-      "out vec4 finalColor;\n" +
-      "" +
-      // The main program/kernel
-      "void main()\n" +
-      "{\n" +
-      // Copy color from input to output
-      "  finalColor = fcolor;" +
-      "}\n";
-
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _geometry = CubeTemplate.create( gl );
-    _material = new Material( gl, vertexShaderSource, fragmentShaderSource );
+    _geometry = CubeTemplate.createGeometry( gl );
+    _material = CubeTemplate.createMaterial( gl );
 
     // Start using the program for all vertexes pass through gl until the program is changed
     gl.useProgram( _material.getProgram() );
