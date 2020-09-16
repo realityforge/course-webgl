@@ -8,9 +8,6 @@ import elemental3.HTMLCanvasElement;
 import elemental3.HTMLElement;
 import elemental3.RenderContextType;
 import elemental3.WebGL2RenderingContext;
-import elemental3.WebGLProgram;
-import elemental3.WebGLShader;
-import elemental3.WebGLUniformLocation;
 import elemental3.Window;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
@@ -20,15 +17,14 @@ public final class Cube
 {
   // Cube rotation angle
   private static double c_angle;
-  private WebGLUniformLocation c_modelMatrixLocation;
-  private WebGLUniformLocation c_viewMatrixLocation;
-  private WebGLUniformLocation c_projectionMatrixLocation;
   @Nonnull
   private final Matrix4d c_modelMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d c_viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d c_projectionMatrix = new Matrix4d();
+  private Mesh _mesh;
+  private Material _material;
 
   @Override
   public void onModuleLoad()
@@ -85,32 +81,16 @@ public final class Cube
 
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    final Mesh mesh = CubeTemplate.create( gl );
-
-    // Build and compile the vertex shader
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
-
-    // Build and compile the vertex shader
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
-
-    // Combine the shaders into a program
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
-
-    c_modelMatrixLocation = gl.getUniformLocation( program, "modelMatrix" );
-    c_viewMatrixLocation = gl.getUniformLocation( program, "viewMatrix" );
-    c_projectionMatrixLocation = gl.getUniformLocation( program, "projectionMatrix" );
-
-    final int c_positionIndex = gl.getAttribLocation( program, "position" );
-    final int c_colorIndex = gl.getAttribLocation( program, "color" );
+    _mesh = CubeTemplate.create( gl );
+    _material = new Material( gl, vertexShaderSource, fragmentShaderSource );
 
     // Start using the program for all vertexes pass through gl until the program is changed
-    gl.useProgram( program );
+    gl.useProgram( _material.getProgram() );
 
     // Tell GPU to load position data into program from out buffer
     GL.linkBufferResource( gl,
-                           mesh.getPositionBuffer(),
-                           c_positionIndex,
+                           _mesh.getPositionBuffer(),
+                           _material.getPositionIndex(),
                            WebGL2RenderingContext.ARRAY_BUFFER,
                            3,
                            WebGL2RenderingContext.FLOAT,
@@ -119,8 +99,8 @@ public final class Cube
 
     // Tell GPU to load color data into program from out buffer
     GL.linkBufferResource( gl,
-                           mesh.getColorBuffer(),
-                           c_colorIndex,
+                           _mesh.getColorBuffer(),
+                           _material.getColorIndex(),
                            WebGL2RenderingContext.ARRAY_BUFFER,
                            4,
                            WebGL2RenderingContext.FLOAT,
@@ -143,9 +123,9 @@ public final class Cube
 
     c_viewMatrix.identity();
 
-    gl.uniformMatrix4fv( c_modelMatrixLocation, false, toFloat32Array( c_modelMatrix ) );
-    gl.uniformMatrix4fv( c_viewMatrixLocation, false, toFloat32Array( c_viewMatrix ) );
-    gl.uniformMatrix4fv( c_projectionMatrixLocation, false, toFloat32Array( c_projectionMatrix ) );
+    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, toFloat32Array( c_modelMatrix ) );
+    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, toFloat32Array( c_viewMatrix ) );
+    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, toFloat32Array( c_projectionMatrix ) );
 
     c_angle += 0.1;
 
