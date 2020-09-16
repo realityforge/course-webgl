@@ -36,7 +36,7 @@ package javax.vecmath;
  * Primarily to support 3D rotations.
  *
  */
-public class Matrix3f implements java.io.Serializable, Cloneable {
+public class Matrix3f implements java.io.Serializable {
 
   // Compatible with 1.1
   static final long serialVersionUID = 329697160112089834L;
@@ -2091,26 +2091,6 @@ public class Matrix3f implements java.io.Serializable, Cloneable {
        
     }
 
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see Cloneable
-     * @since vecmath 1.3
-     */
-    public Object clone() {
-	Matrix3f m1 = null;
-	try {
-	    m1 = (Matrix3f)super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-	return m1;
-    }
-
-    
     /**
 	 * Get the first matrix element in the first row.
 	 * 

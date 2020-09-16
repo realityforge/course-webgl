@@ -45,7 +45,7 @@ package javax.vecmath;
  * correct value will be extracted when it is used (by masking off the upper
  * bits).
  */
-public abstract class Tuple3b implements java.io.Serializable, Cloneable {
+public abstract class Tuple3b implements java.io.Serializable {
 
     static final long serialVersionUID = -483782685323607044L;
 
@@ -224,25 +224,6 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 		(((int)y & 0xff) <<  8) |
 		(((int)z & 0xff) << 16));
     }
-   
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see Cloneable
-     * @since vecmath 1.3
-     */
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
     /**
 	 * Get <i>x</i>, the  first value.

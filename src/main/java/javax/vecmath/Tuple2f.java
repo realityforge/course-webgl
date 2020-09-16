@@ -36,7 +36,7 @@ package javax.vecmath;
  * floating point x,y coordinates.
  *
  */
-public abstract class Tuple2f implements java.io.Serializable, Cloneable {
+public abstract class Tuple2f implements java.io.Serializable {
 
     static final long serialVersionUID = 9011180388985266884L;
 
@@ -538,25 +538,6 @@ public abstract class Tuple2f implements java.io.Serializable, Cloneable {
      this.y = (1-alpha)*this.y + alpha*t1.y;
 
   } 
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see Cloneable
-     * @since vecmath 1.3
-     */
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
     /**
 	 * Get the <i>x</i> coordinate.

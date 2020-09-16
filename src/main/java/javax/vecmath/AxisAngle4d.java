@@ -37,7 +37,7 @@ package javax.vecmath;
  * about the vector (x,y,z).
  *
  */
-public class AxisAngle4d implements java.io.Serializable, Cloneable {
+public class AxisAngle4d implements java.io.Serializable {
 
 
     // Compatible with 1.1
@@ -532,25 +532,6 @@ public class AxisAngle4d implements java.io.Serializable, Cloneable {
 	bits = 31L * bits + VecMathUtil.doubleToLongBits(angle);
 	return (int) (bits ^ (bits >> 32));
     }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see Cloneable
-     * @since vecmath 1.3
-     */
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
 	/**
 	 * Get the axis angle, in radians.<br>

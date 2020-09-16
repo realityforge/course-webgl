@@ -37,7 +37,7 @@ package javax.vecmath;
  *
  * @since vecmath 1.4
  */
-public abstract class Tuple2i implements java.io.Serializable, Cloneable {
+public abstract class Tuple2i implements java.io.Serializable {
 
     static final long serialVersionUID = -3555701650170169638L;
 
@@ -436,24 +436,6 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
 	x = Math.abs(x);
 	y = Math.abs(y);
     }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see Cloneable
-     */
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
     /**
 	 * Get the <i>x</i> coordinate.

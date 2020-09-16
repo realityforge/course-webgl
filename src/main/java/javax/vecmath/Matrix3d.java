@@ -36,7 +36,7 @@ package javax.vecmath;
  * Primarily to support 3D rotations.
  *
  */
-public class Matrix3d implements java.io.Serializable, Cloneable {
+public class Matrix3d implements java.io.Serializable {
 
     // Compatible with 1.1
     static final long serialVersionUID = 6837536777072402710L;
@@ -3097,27 +3097,6 @@ static  double max3( double[] values) {
             return true;
 
         return false;
-    }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see Cloneable
-     * @since vecmath 1.3
-     */
-    public Object clone() {
-	Matrix3d m1 = null;
-	try {
-	    m1 = (Matrix3d)super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-
-	// Also need to create new tmp arrays (no need to actually clone them)
-	return m1;
     }
 
 	/**
