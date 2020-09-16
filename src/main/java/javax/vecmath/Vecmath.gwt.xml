@@ -1,4 +1,0 @@
-<module rename-to='cube'>
-  <inherits name='com.google.gwt.core.Core'/>
-  <source path=''/>
-</module>

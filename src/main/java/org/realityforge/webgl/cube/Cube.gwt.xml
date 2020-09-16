@@ -1,6 +1,5 @@
 <module rename-to='cube'>
   <inherits name='org.realityforge.webgl.Webgl'/>
-  <inherits name='javax.vecmath.Vecmath'/>
 
   <entry-point class='org.realityforge.webgl.cube.Cube'/>
 
