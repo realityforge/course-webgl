@@ -179,23 +179,20 @@ public final class Cube
 
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    // Create a GPU resource for position data
-    final WebGLBuffer positionBuffer = gl.createBuffer();
-    // Bind a gate between CPU and GPU
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
+    // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
+    // the data is static and the CPU will not update it often which means that the GPU can store it
+    // close to where it is used without worrying about latency to update
+    final WebGLBuffer positionBuffer =
+      prepareBuffer( gl,
+                     WebGL2RenderingContext.ARRAY_BUFFER,
+                     WebGL2RenderingContext.STATIC_DRAW,
+                     new Float32Array( positions ) );
 
-    // Send data via ARRAY_BUFFER gate and whatever it is bound to which is a buffer in this case
-    // The last parameter is a hint indicating that this data is static and the CPU will not update it often
-    // which means that the GPU can store it close to where it is used without worrying about latency to update
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER,
-                   new Float32Array( positions ),
-                   WebGL2RenderingContext.STATIC_DRAW );
-
-    final WebGLBuffer colorBuffer = gl.createBuffer();
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER,
-                   new Float32Array( colors ),
-                   WebGL2RenderingContext.STATIC_DRAW );
+    final WebGLBuffer colorBuffer =
+      prepareBuffer( gl,
+                     WebGL2RenderingContext.ARRAY_BUFFER,
+                     WebGL2RenderingContext.STATIC_DRAW,
+                     new Float32Array( colors ) );
 
     // Build and compile the vertex shader
     final WebGLShader vertexShader = createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
@@ -261,6 +258,20 @@ public final class Cube
   private Float32Array toFloat32Array( @Nonnull final Matrix4d matrix )
   {
     return new Float32Array( matrix.get( new double[ 16 ] ) );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  private WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
+                                     final int target,
+                                     final int usage,
+                                     @Nonnull final Float32Array data )
+  {
+    final WebGLBuffer buffer = gl.createBuffer();
+    assert null != buffer;
+    gl.bindBuffer( target, buffer );
+    gl.bufferData( target, data, usage );
+    return buffer;
   }
 
   @Nonnull
