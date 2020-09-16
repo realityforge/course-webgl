@@ -33,8 +33,6 @@ public final class Cube
   private final Matrix4d c_viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d c_projectionMatrix = new Matrix4d();
-  private int c_positionIndex;
-  private int c_colorIndex;
 
   @Override
   public void onModuleLoad()
@@ -209,8 +207,8 @@ public final class Cube
     c_viewMatrixLocation = gl.getUniformLocation( program, "viewMatrix" );
     c_projectionMatrixLocation = gl.getUniformLocation( program, "projectionMatrix" );
 
-    c_positionIndex = gl.getAttribLocation( program, "position" );
-    c_colorIndex = gl.getAttribLocation( program, "color" );
+    final int c_positionIndex = gl.getAttribLocation( program, "position" );
+    final int c_colorIndex = gl.getAttribLocation( program, "color" );
 
     // Start using the program for all vertexes pass through gl until the program is changed
     gl.useProgram( program );
