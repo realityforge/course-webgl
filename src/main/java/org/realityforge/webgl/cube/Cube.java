@@ -1,7 +1,6 @@
 package org.realityforge.webgl.cube;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental2.core.Float32Array;
 import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
@@ -35,11 +34,7 @@ public final class Cube
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
-
-    _mesh.sendToGpu(gl );
-
-    // Start using the program for all vertexes pass through gl until the program is changed
-    gl.useProgram( _mesh.getMaterial().getProgram() );
+    _mesh.sendToGpu( gl );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
   }
@@ -57,22 +52,14 @@ public final class Cube
 
     c_viewMatrix.identity();
 
-    final Material material = _mesh.getMaterial();
-    gl.uniformMatrix4fv( material.getModelMatrixLocation(), false, toFloat32Array( c_modelMatrix ) );
-    gl.uniformMatrix4fv( material.getViewMatrixLocation(), false, toFloat32Array( c_viewMatrix ) );
-    gl.uniformMatrix4fv( material.getProjectionMatrixLocation(), false, toFloat32Array( c_projectionMatrix ) );
+    gl.useProgram( _mesh.getMaterial().getProgram() );
+    _mesh.setUniforms( gl, this.c_modelMatrix, this.c_viewMatrix, this.c_projectionMatrix );
 
     c_angle += 0.1;
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
-  }
-
-  @Nonnull
-  private Float32Array toFloat32Array( @Nonnull final Matrix4d matrix )
-  {
-    return new Float32Array( matrix.get( new double[ 16 ] ) );
   }
 
   @Nonnull

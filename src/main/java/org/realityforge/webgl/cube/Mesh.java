@@ -3,6 +3,7 @@ package org.realityforge.webgl.cube;
 import elemental3.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.joml.Matrix4d;
 
 final class Mesh
 {
@@ -27,6 +28,16 @@ final class Mesh
   Material getMaterial()
   {
     return _material;
+  }
+
+   void setUniforms( @Nonnull final WebGL2RenderingContext gl,
+                            @Nonnull final Matrix4d modelMatrix,
+                            @Nonnull final Matrix4d viewMatrix,
+                            @Nonnull final Matrix4d projectionMatrix )
+  {
+    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
+    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
+    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
   }
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
