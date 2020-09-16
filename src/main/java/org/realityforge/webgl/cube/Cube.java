@@ -8,15 +8,12 @@ import elemental3.HTMLCanvasElement;
 import elemental3.HTMLElement;
 import elemental3.RenderContextType;
 import elemental3.WebGL2RenderingContext;
-import elemental3.WebGLBuffer;
 import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
 import elemental3.WebGLUniformLocation;
 import elemental3.Window;
-import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.Language;
-import org.intellij.lang.annotations.MagicConstant;
 import org.joml.Matrix4d;
 
 public final class Cube
@@ -40,96 +37,6 @@ public final class Cube
     final HTMLCanvasElement canvas = createCanvas();
     final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
     assert null != gl;
-
-    // Vertex position data
-    double[] positions = new double[]{
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, -0.5, 0.5,
-
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, 0.5, 0.5,
-
-      0.5, 0.5, 0.5,
-      0.5, 0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5
-    };
-
-    // Vertex color data for triangle in RGBA form
-    double[] colors = new double[]{
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0 // Left face
-    };
 
     // The vertex shader that will be run for every vertex
     @Language( "GLSL" )
@@ -179,29 +86,17 @@ public final class Cube
 
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
-    // the data is static and the CPU will not update it often which means that the GPU can store it
-    // close to where it is used without worrying about latency to update
-    final WebGLBuffer positionBuffer =
-      prepareBuffer( gl,
-                     WebGL2RenderingContext.ARRAY_BUFFER,
-                     WebGL2RenderingContext.STATIC_DRAW,
-                     new Float32Array( positions ) );
-
-    final WebGLBuffer colorBuffer =
-      prepareBuffer( gl,
-                     WebGL2RenderingContext.ARRAY_BUFFER,
-                     WebGL2RenderingContext.STATIC_DRAW,
-                     new Float32Array( colors ) );
+    final Mesh mesh = CubeTemplate.create( gl );
 
     // Build and compile the vertex shader
-    final WebGLShader vertexShader = createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
+    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
 
     // Build and compile the vertex shader
-    final WebGLShader fragmentShader = createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
+    final WebGLShader fragmentShader =
+      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
 
     // Combine the shaders into a program
-    final WebGLProgram program = createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
 
     c_modelMatrixLocation = gl.getUniformLocation( program, "modelMatrix" );
     c_viewMatrixLocation = gl.getUniformLocation( program, "viewMatrix" );
@@ -214,24 +109,24 @@ public final class Cube
     gl.useProgram( program );
 
     // Tell GPU to load position data into program from out buffer
-    linkBufferResource( gl,
-                        positionBuffer,
-                        c_positionIndex,
-                        WebGL2RenderingContext.ARRAY_BUFFER,
-                        3,
-                        WebGL2RenderingContext.FLOAT,
-                        0,
-                        0 );
+    GL.linkBufferResource( gl,
+                           mesh.getPositionBuffer(),
+                           c_positionIndex,
+                           WebGL2RenderingContext.ARRAY_BUFFER,
+                           3,
+                           WebGL2RenderingContext.FLOAT,
+                           0,
+                           0 );
 
     // Tell GPU to load color data into program from out buffer
-    linkBufferResource( gl,
-                        colorBuffer,
-                        c_colorIndex,
-                        WebGL2RenderingContext.ARRAY_BUFFER,
-                        4,
-                        WebGL2RenderingContext.FLOAT,
-                        0,
-                        0 );
+    GL.linkBufferResource( gl,
+                           mesh.getColorBuffer(),
+                           c_colorIndex,
+                           WebGL2RenderingContext.ARRAY_BUFFER,
+                           4,
+                           WebGL2RenderingContext.FLOAT,
+                           0,
+                           0 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
   }
@@ -266,71 +161,6 @@ public final class Cube
     return new Float32Array( matrix.get( new double[ 16 ] ) );
   }
 
-  @SuppressWarnings( "SameParameterValue" )
-  @Nonnull
-  private WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                     final int target,
-                                     final int usage,
-                                     @Nonnull final Float32Array data )
-  {
-    final WebGLBuffer buffer = gl.createBuffer();
-    assert null != buffer;
-    gl.bindBuffer( target, buffer );
-    gl.bufferData( target, data, usage );
-    return buffer;
-  }
-
-  @SuppressWarnings( "SameParameterValue" )
-  private void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
-                                   @Nonnull final WebGLBuffer colorBuffer,
-                                   final int index,
-                                   final int target,
-                                   final int dimension,
-                                   final int type,
-                                   final int stride,
-                                   final int offset )
-  {
-    gl.enableVertexAttribArray( index );
-    gl.bindBuffer( target, colorBuffer );
-    gl.vertexAttribPointer( index, dimension, type, false, stride, offset );
-  }
-
-  @Nonnull
-  private WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
-                                      @Nonnull final WebGLShader vertexShader,
-                                      @Nonnull final WebGLShader fragmentShader )
-  {
-    final WebGLProgram program = gl.createProgram();
-    assert null != program;
-    gl.attachShader( program, vertexShader );
-    gl.attachShader( program, fragmentShader );
-    gl.linkProgram( program );
-
-    if ( !requireNonNull( gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
-    }
-    return program;
-  }
-
-  @Nonnull
-  private WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
-                                    @MagicConstant( intValues = { WebGL2RenderingContext.VERTEX_SHADER,
-                                                                  WebGL2RenderingContext.FRAGMENT_SHADER } ) final int type,
-                                    @Language( "GLSL" ) @Nonnull final String source )
-  {
-    final WebGLShader vertexShader = gl.createShader( type );
-    assert null != vertexShader;
-
-    gl.shaderSource( vertexShader, source );
-    gl.compileShader( vertexShader );
-    if ( !requireNonNull( gl.getShaderParameter( vertexShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getShaderInfoLog( vertexShader ) );
-    }
-    return vertexShader;
-  }
-
   @Nonnull
   private HTMLCanvasElement createCanvas()
   {
@@ -343,11 +173,5 @@ public final class Cube
     assert null != body;
     body.appendChild( canvas );
     return canvas;
-  }
-
-  @Nonnull
-  public static <T> T requireNonNull( final T object )
-  {
-    return Objects.requireNonNull( object );
   }
 }
