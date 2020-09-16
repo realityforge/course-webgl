@@ -36,25 +36,7 @@ public final class Cube
 
     _mesh = CubeTemplate.create( gl );
 
-    // Tell GPU to load position data into program from out buffer
-    GL.linkBufferResource( gl,
-                           _mesh.getGeometry().getPositionBuffer(),
-                           _mesh.getMaterial().getPositionIndex(),
-                           WebGL2RenderingContext.ARRAY_BUFFER,
-                           3,
-                           WebGL2RenderingContext.FLOAT,
-                           0,
-                           0 );
-
-    // Tell GPU to load color data into program from out buffer
-    GL.linkBufferResource( gl,
-                           _mesh.getGeometry().getColorBuffer(),
-                           _mesh.getMaterial().getColorIndex(),
-                           WebGL2RenderingContext.ARRAY_BUFFER,
-                           4,
-                           WebGL2RenderingContext.FLOAT,
-                           0,
-                           0 );
+    _mesh.sendToGpu(gl );
 
     // Start using the program for all vertexes pass through gl until the program is changed
     gl.useProgram( _mesh.getMaterial().getProgram() );
