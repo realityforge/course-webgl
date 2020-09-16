@@ -23,7 +23,7 @@ public final class Cube
   private final Matrix4d c_viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d c_projectionMatrix = new Matrix4d();
-  private Mesh _mesh;
+  private Geometry _geometry;
   private Material _material;
 
   @Override
@@ -81,7 +81,7 @@ public final class Cube
 
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _mesh = CubeTemplate.create( gl );
+    _geometry = CubeTemplate.create( gl );
     _material = new Material( gl, vertexShaderSource, fragmentShaderSource );
 
     // Start using the program for all vertexes pass through gl until the program is changed
@@ -89,7 +89,7 @@ public final class Cube
 
     // Tell GPU to load position data into program from out buffer
     GL.linkBufferResource( gl,
-                           _mesh.getPositionBuffer(),
+                           _geometry.getPositionBuffer(),
                            _material.getPositionIndex(),
                            WebGL2RenderingContext.ARRAY_BUFFER,
                            3,
@@ -99,7 +99,7 @@ public final class Cube
 
     // Tell GPU to load color data into program from out buffer
     GL.linkBufferResource( gl,
-                           _mesh.getColorBuffer(),
+                           _geometry.getColorBuffer(),
                            _material.getColorIndex(),
                            WebGL2RenderingContext.ARRAY_BUFFER,
                            4,

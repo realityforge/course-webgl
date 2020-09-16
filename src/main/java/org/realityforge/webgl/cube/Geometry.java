@@ -5,16 +5,16 @@ import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
 import javax.annotation.Nonnull;
 
-final class Mesh
+final class Geometry
 {
   @Nonnull
   private final WebGLBuffer _positionBuffer;
   @Nonnull
   private final WebGLBuffer _colorBuffer;
 
-  Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Float32Array positionData,
-        @Nonnull final Float32Array colorData )
+  Geometry( @Nonnull final WebGL2RenderingContext gl,
+            @Nonnull final Float32Array positionData,
+            @Nonnull final Float32Array colorData )
   {
     // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
     // the data is static and the CPU will not update it often which means that the GPU can store it

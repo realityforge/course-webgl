@@ -102,8 +102,8 @@ final class CubeTemplate
   }
 
   @Nonnull
-  public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
+  public static Geometry create( @Nonnull final WebGL2RenderingContext gl )
   {
-    return new Mesh( gl, new Float32Array( POSITIONS ), new Float32Array( COLORS ) );
+    return new Geometry( gl, new Float32Array( POSITIONS ), new Float32Array( COLORS ) );
   }
 }
