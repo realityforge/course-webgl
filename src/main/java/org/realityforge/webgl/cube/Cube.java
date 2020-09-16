@@ -15,6 +15,7 @@ import elemental3.WebGLUniformLocation;
 import elemental3.Window;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.Language;
 import org.intellij.lang.annotations.MagicConstant;
 import org.joml.Matrix4d;
 
@@ -131,6 +132,7 @@ public final class Cube
     };
 
     // The vertex shader that will be run for every vertex
+    @Language( "GLSL" )
     final String vertexShaderSource =
       // The shader language is OpenGL 3 (i.e. 300) ES and this version pragma must
       // be the first thing present in the shader source
@@ -157,6 +159,7 @@ public final class Cube
       "}\n";
 
     // The fragment shader that will be run for every pixel
+    @Language( "GLSL" )
     final String fragmentShaderSource =
       // The version of language in use
       "#version 300 es\n" +
@@ -282,7 +285,7 @@ public final class Cube
   private WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
                                     @MagicConstant( intValues = { WebGL2RenderingContext.VERTEX_SHADER,
                                                                   WebGL2RenderingContext.FRAGMENT_SHADER } ) final int type,
-                                    final String source )
+                                    @Language( "GLSL" ) @Nonnull final String source )
   {
     final WebGLShader vertexShader = gl.createShader( type );
     assert null != vertexShader;
