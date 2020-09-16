@@ -33,6 +33,8 @@ public final class Cube
   private final Matrix4d c_viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d c_projectionMatrix = new Matrix4d();
+  private int c_positionIndex;
+  private int c_colorIndex;
 
   @Override
   public void onModuleLoad()
@@ -207,25 +209,31 @@ public final class Cube
     c_viewMatrixLocation = gl.getUniformLocation( program, "viewMatrix" );
     c_projectionMatrixLocation = gl.getUniformLocation( program, "projectionMatrix" );
 
+    c_positionIndex = gl.getAttribLocation( program, "position" );
+    c_colorIndex = gl.getAttribLocation( program, "color" );
+
     // Start using the program for all vertexes pass through gl until the program is changed
     gl.useProgram( program );
 
     // Tell GPU to load position data into program from out buffer
-    final int positionAttribLocation = gl.getAttribLocation( program, "position" );
-    gl.enableVertexAttribArray( positionAttribLocation );
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
-    gl.vertexAttribPointer( positionAttribLocation,
-      /* the number of values to take for each vertex*/3,
-      /* Each value is a float */ WebGL2RenderingContext.FLOAT,
-      /* Not normalized */ false,
-      /* 0 stride is a special signal to gl to indicate that the next value immediately follows */ 0,
-      /* no offset so start at the start of the buffer */ 0 );
+    linkBufferResource( gl,
+                        positionBuffer,
+                        c_positionIndex,
+                        WebGL2RenderingContext.ARRAY_BUFFER,
+                        3,
+                        WebGL2RenderingContext.FLOAT,
+                        0,
+                        0 );
 
     // Tell GPU to load color data into program from out buffer
-    final int colorAttribLocation = gl.getAttribLocation( program, "color" );
-    gl.enableVertexAttribArray( colorAttribLocation );
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
-    gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );
+    linkBufferResource( gl,
+                        colorBuffer,
+                        c_colorIndex,
+                        WebGL2RenderingContext.ARRAY_BUFFER,
+                        4,
+                        WebGL2RenderingContext.FLOAT,
+                        0,
+                        0 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
   }
@@ -272,6 +280,21 @@ public final class Cube
     gl.bindBuffer( target, buffer );
     gl.bufferData( target, data, usage );
     return buffer;
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  private void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
+                                   @Nonnull final WebGLBuffer colorBuffer,
+                                   final int index,
+                                   final int target,
+                                   final int size,
+                                   final int type,
+                                   final int stride,
+                                   final int offset )
+  {
+    gl.enableVertexAttribArray( index );
+    gl.bindBuffer( target, colorBuffer );
+    gl.vertexAttribPointer( index, size, type, false, stride, offset );
   }
 
   @Nonnull
