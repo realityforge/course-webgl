@@ -31,7 +31,7 @@ public final class GL
 
   @SuppressWarnings( "SameParameterValue" )
   static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
-                                  @Nonnull final WebGLBuffer colorBuffer,
+                                  @Nonnull final WebGLBuffer buffer,
                                   final int index,
                                   final int target,
                                   final int dimension,
@@ -40,7 +40,7 @@ public final class GL
                                   final int offset )
   {
     gl.enableVertexAttribArray( index );
-    gl.bindBuffer( target, colorBuffer );
+    gl.bindBuffer( target, buffer );
     gl.vertexAttribPointer( index, dimension, type, false, stride, offset );
   }
 
