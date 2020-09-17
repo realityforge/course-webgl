@@ -97,7 +97,6 @@ final class CubeTemplate
       0.0, 1.0, 1.0, 1.0 // Left face
     };
   // The vertex shader that will be run for every vertex
-  @GLSL
   @Nonnull
   private static final String VERTEX_SHADER_SOURCE =
     // The shader language is OpenGL 3 (i.e. 300) ES and this version pragma must
@@ -124,7 +123,6 @@ final class CubeTemplate
     "  fcolor = color;" +
     "}\n";
   // The fragment shader that will be run for every pixel
-  @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
     // The version of language in use
     "#version 300 es\n" +

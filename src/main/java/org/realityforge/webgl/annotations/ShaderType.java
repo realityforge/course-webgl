@@ -1,4 +1,4 @@
-package org.realityforge.webgl.cube2;
+package org.realityforge.webgl.annotations;
 
 import elemental3.WebGL2RenderingContext;
 import org.intellij.lang.annotations.MagicConstant;

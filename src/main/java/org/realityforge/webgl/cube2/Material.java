@@ -20,8 +20,8 @@ final class Material
   private final int _colorIndex;
 
   Material( @Nonnull final WebGL2RenderingContext gl,
-            @GLSL @Nonnull final String vertexShaderSource,
-            @GLSL @Nonnull final String fragmentShaderSource )
+            @Nonnull final String vertexShaderSource,
+            @Nonnull final String fragmentShaderSource )
   {
     final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     final WebGLShader fragmentShader =

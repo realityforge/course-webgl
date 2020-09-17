@@ -9,8 +9,8 @@ import elemental3.WebGLShader;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webgl.cube.GLSL;
-import org.realityforge.webgl.cube.ShaderType;
+import org.realityforge.webgl.annotations.GLSL;
+import org.realityforge.webgl.annotations.ShaderType;
 
 public final class GL
 {

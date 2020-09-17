@@ -1,4 +1,4 @@
-package org.realityforge.webgl.cube2;
+package org.realityforge.webgl.annotations;
 
 import org.intellij.lang.annotations.Language;
 
