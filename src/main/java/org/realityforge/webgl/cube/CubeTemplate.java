@@ -148,21 +148,9 @@ final class CubeTemplate
   }
 
   @Nonnull
-  private static Geometry createGeometry( @Nonnull final WebGL2RenderingContext gl )
-  {
-    return new Geometry( gl, new Float32Array( POSITIONS ), new Float32Array( COLORS ) );
-  }
-
-  @Nonnull
-  private static Material createMaterial( @Nonnull final WebGL2RenderingContext gl )
-  {
-    return new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
-  }
-
-  @Nonnull
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
-    return new Mesh( createGeometry( gl ), createMaterial( gl ) );
+    return new Mesh( new Geometry( gl, new Float32Array( POSITIONS ), new Float32Array( COLORS ) ),
+                     new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
   }
-
 }
