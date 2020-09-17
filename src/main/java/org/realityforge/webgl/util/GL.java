@@ -1,4 +1,4 @@
-package org.realityforge.webgl.cube;
+package org.realityforge.webgl.util;
 
 import elemental2.core.Float32Array;
 import elemental3.Global;
@@ -20,10 +20,10 @@ public final class GL
 
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
-  static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                    final int target,
-                                    final int usage,
-                                    @Nonnull final Float32Array data )
+  public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
+                                           final int target,
+                                           final int usage,
+                                           @Nonnull final Float32Array data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
     assert null != buffer;
@@ -33,14 +33,14 @@ public final class GL
   }
 
   @SuppressWarnings( "SameParameterValue" )
-  static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
-                                  @Nonnull final WebGLBuffer buffer,
-                                  final int index,
-                                  final int target,
-                                  final int dimension,
-                                  final int type,
-                                  final int stride,
-                                  final int offset )
+  public static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
+                                         @Nonnull final WebGLBuffer buffer,
+                                         final int index,
+                                         final int target,
+                                         final int dimension,
+                                         final int type,
+                                         final int stride,
+                                         final int offset )
   {
     gl.enableVertexAttribArray( index );
     gl.bindBuffer( target, buffer );
@@ -48,9 +48,9 @@ public final class GL
   }
 
   @Nullable
-  static WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
-                                     @Nonnull final WebGLShader vertexShader,
-                                     @Nonnull final WebGLShader fragmentShader )
+  public static WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
+                                            @Nonnull final WebGLShader vertexShader,
+                                            @Nonnull final WebGLShader fragmentShader )
   {
     final WebGLProgram program = gl.createProgram();
     assert null != program;
@@ -71,9 +71,9 @@ public final class GL
   }
 
   @Nullable
-  static WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
-                                   @ShaderType final int type,
-                                   @GLSL @Nonnull final String source )
+  public static WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
+                                          @ShaderType final int type,
+                                          @GLSL @Nonnull final String source )
   {
     final WebGLShader shader = gl.createShader( type );
     assert null != shader;
@@ -93,7 +93,7 @@ public final class GL
   }
 
   @Nonnull
-  public static <T> T requireNonNull( final T object )
+  private static <T> T requireNonNull( final T object )
   {
     return Objects.requireNonNull( object );
   }

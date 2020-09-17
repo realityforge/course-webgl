@@ -4,6 +4,7 @@ import elemental2.core.Float32Array;
 import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.GL;
 
 final class Geometry
 {

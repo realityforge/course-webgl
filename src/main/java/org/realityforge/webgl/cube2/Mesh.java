@@ -4,6 +4,7 @@ import elemental3.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.realityforge.webgl.util.GL;
 
 final class Mesh
 {

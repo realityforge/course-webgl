@@ -12,9 +12,9 @@ import elemental3.WebGLBuffer;
 import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
 import elemental3.Window;
-import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
+import org.realityforge.webgl.util.GL;
 
 public class HelloTriangle
   implements EntryPoint
@@ -106,38 +106,16 @@ public class HelloTriangle
                    WebGL2RenderingContext.STATIC_DRAW );
 
     // Build and compile the vertex shader
-    final WebGLShader vertexShader = gl.createShader( WebGL2RenderingContext.VERTEX_SHADER );
+    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     assert null != vertexShader;
 
-    gl.shaderSource( vertexShader, vertexShaderSource );
-    gl.compileShader( vertexShader );
-    if ( !requireNonNull( gl.getShaderParameter( vertexShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getShaderInfoLog( vertexShader ) );
-    }
-
-    // Build and compile the vertex shader
-    final WebGLShader fragmentShader = gl.createShader( WebGL2RenderingContext.FRAGMENT_SHADER );
+    final WebGLShader fragmentShader =
+      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
     assert null != fragmentShader;
 
-    gl.shaderSource( fragmentShader, fragmentShaderSource );
-    gl.compileShader( fragmentShader );
-    if ( !requireNonNull( gl.getShaderParameter( fragmentShader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getShaderInfoLog( fragmentShader ) );
-    }
-
     // Combine the shaders into a program
-    final WebGLProgram program = gl.createProgram();
+    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
-    gl.attachShader( program, vertexShader );
-    gl.attachShader( program, fragmentShader );
-    gl.linkProgram( program );
-
-    if ( !requireNonNull( gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS ) ).asBoolean() )
-    {
-      Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
-    }
 
     // Start using the program for all vertexes pass through gl until the program is changed
     gl.useProgram( program );
@@ -184,11 +162,5 @@ public class HelloTriangle
     assert null != body;
     body.appendChild( canvas );
     return canvas;
-  }
-
-  @Nonnull
-  public static <T> T requireNonNull( final T object )
-  {
-    return Objects.requireNonNull( object );
   }
 }

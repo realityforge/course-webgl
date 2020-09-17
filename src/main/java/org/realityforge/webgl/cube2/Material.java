@@ -5,6 +5,7 @@ import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
 import elemental3.WebGLUniformLocation;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.GL;
 
 final class Material
 {
