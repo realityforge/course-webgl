@@ -5,6 +5,7 @@ import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
 import elemental3.WebGLUniformLocation;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.GL;
 
 final class Material
@@ -21,8 +22,8 @@ final class Material
   private final int _colorIndex;
 
   Material( @Nonnull final WebGL2RenderingContext gl,
-            @Nonnull final String vertexShaderSource,
-            @Nonnull final String fragmentShaderSource )
+            @GLSL @Nonnull final String vertexShaderSource,
+            @GLSL @Nonnull final String fragmentShaderSource )
   {
     final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     final WebGLShader fragmentShader =
