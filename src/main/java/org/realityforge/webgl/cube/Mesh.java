@@ -30,10 +30,10 @@ final class Mesh
     return _material;
   }
 
-   void setUniforms( @Nonnull final WebGL2RenderingContext gl,
-                            @Nonnull final Matrix4d modelMatrix,
-                            @Nonnull final Matrix4d viewMatrix,
-                            @Nonnull final Matrix4d projectionMatrix )
+  void setUniforms( @Nonnull final WebGL2RenderingContext gl,
+                    @Nonnull final Matrix4d modelMatrix,
+                    @Nonnull final Matrix4d viewMatrix,
+                    @Nonnull final Matrix4d projectionMatrix )
   {
     gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
