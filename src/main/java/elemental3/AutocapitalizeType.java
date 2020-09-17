@@ -9,16 +9,22 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class AutocapitalizeType {
   /**
-   * No autocapitalization is applied (all letters default to lowercase).
+   * All letters should default to uppercase.
    */
   @Nonnull
-  public static final String off = "off";
+  public static final String characters = "characters";
 
   /**
    * No autocapitalization is applied (all letters default to lowercase).
    */
   @Nonnull
   public static final String none = "none";
+
+  /**
+   * No autocapitalization is applied (all letters default to lowercase).
+   */
+  @Nonnull
+  public static final String off = "off";
 
   /**
    * The first letter of each sentence defaults to a capital letter; all other letters default to lowercase.
@@ -37,12 +43,6 @@ public final class AutocapitalizeType {
    */
   @Nonnull
   public static final String words = "words";
-
-  /**
-   * All letters should default to uppercase.
-   */
-  @Nonnull
-  public static final String characters = "characters";
 
   private AutocapitalizeType() {
   }

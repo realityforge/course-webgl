@@ -11,19 +11,6 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class InputModeType {
   /**
-   * No virtual keyboard. For when the page implements its own keyboard input control.
-   */
-  @Nonnull
-  public static final String none = "none";
-
-  /**
-   * Standard input keyboard for the user's current locale.
-   * This is the default value.
-   */
-  @Nonnull
-  public static final String text = "text";
-
-  /**
    * Fractional numeric input keyboard containing the digits and decimal separator for the user's locale (typically <code>.</code> or <code>,</code>).
    * Devices may or may not show a minus key (<code>-</code>).
    */
@@ -31,17 +18,24 @@ public final class InputModeType {
   public static final String decimal = "decimal";
 
   /**
+   * A virtual keyboard optimized for entering email addresses.
+   * Typically includes the <code>@</code> character as well as other optimizations. Inputs that require email
+   * addresses should typically use <code>&lt;input type="email"&gt;</code> instead.
+   */
+  @Nonnull
+  public static final String email = "email";
+
+  /**
+   * No virtual keyboard. For when the page implements its own keyboard input control.
+   */
+  @Nonnull
+  public static final String none = "none";
+
+  /**
    * Numeric input keyboard, but only requires the digits 0–9. Devices may or may not show a minus key.
    */
   @Nonnull
   public static final String numeric = "numeric";
-
-  /**
-   * A telephone keypad input, including the digits 0–9, the asterisk (<code>*</code>), and the pound (<code>#</code>) key.
-   * Inputs that require a telephone number should typically use <code>&lt;input type="tel"&gt;</code> instead.
-   */
-  @Nonnull
-  public static final String tel = "tel";
 
   /**
    * A virtual keyboard optimized for search input.
@@ -52,12 +46,18 @@ public final class InputModeType {
   public static final String search = "search";
 
   /**
-   * A virtual keyboard optimized for entering email addresses.
-   * Typically includes the <code>@</code> character as well as other optimizations. Inputs that require email
-   * addresses should typically use <code>&lt;input type="email"&gt;</code> instead.
+   * A telephone keypad input, including the digits 0–9, the asterisk (<code>*</code>), and the pound (<code>#</code>) key.
+   * Inputs that require a telephone number should typically use <code>&lt;input type="tel"&gt;</code> instead.
    */
   @Nonnull
-  public static final String email = "email";
+  public static final String tel = "tel";
+
+  /**
+   * Standard input keyboard for the user's current locale.
+   * This is the default value.
+   */
+  @Nonnull
+  public static final String text = "text";
 
   /**
    * A keypad optimized for entering URLs.

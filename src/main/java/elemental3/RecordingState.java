@@ -9,10 +9,10 @@ public final class RecordingState {
   public static final String inactive = "inactive";
 
   @Nonnull
-  public static final String recording = "recording";
+  public static final String paused = "paused";
 
   @Nonnull
-  public static final String paused = "paused";
+  public static final String recording = "recording";
 
   private RecordingState() {
   }

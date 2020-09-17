@@ -15,6 +15,13 @@ public final class RenderContextType {
   public static final String _2d = "2d";
 
   /**
+   * The context type designates a {@link ImageBitmapRenderingContext}.
+   * The context provides functionality to replace the content of the canvas with a given ImageBitmap.
+   */
+  @Nonnull
+  public static final String bitmaprenderer = "bitmaprenderer";
+
+  /**
    * The context type designates a {@link WebGLRenderingContext}, a three-dimensional rendering context.
    * This context is only available on browsers that implement WebGL version 1 (OpenGL ES 2.0).
    */
@@ -27,13 +34,6 @@ public final class RenderContextType {
    */
   @Nonnull
   public static final String webgl2 = "webgl2";
-
-  /**
-   * The context type designates a {@link ImageBitmapRenderingContext}.
-   * The context provides functionality to replace the content of the canvas with a given ImageBitmap.
-   */
-  @Nonnull
-  public static final String bitmaprenderer = "bitmaprenderer";
 
   private RenderContextType() {
   }

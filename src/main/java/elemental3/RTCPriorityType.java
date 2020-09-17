@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCPriorityType {
   @Nonnull
-  public static final String very_low = "very-low";
+  public static final String high = "high";
 
   @Nonnull
   public static final String low = "low";
@@ -15,7 +15,7 @@ public final class RTCPriorityType {
   public static final String medium = "medium";
 
   @Nonnull
-  public static final String high = "high";
+  public static final String very_low = "very-low";
 
   private RTCPriorityType() {
   }

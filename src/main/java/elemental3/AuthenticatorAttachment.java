@@ -6,10 +6,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class AuthenticatorAttachment {
   @Nonnull
-  public static final String platform = "platform";
+  public static final String cross_platform = "cross-platform";
 
   @Nonnull
-  public static final String cross_platform = "cross-platform";
+  public static final String platform = "platform";
 
   private AuthenticatorAttachment() {
   }

@@ -6,16 +6,16 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class PositionAlignSetting {
   @Nonnull
-  public static final String line_left = "line-left";
+  public static final String auto = "auto";
 
   @Nonnull
   public static final String center = "center";
 
   @Nonnull
-  public static final String line_right = "line-right";
+  public static final String line_left = "line-left";
 
   @Nonnull
-  public static final String auto = "auto";
+  public static final String line_right = "line-right";
 
   private PositionAlignSetting() {
   }

@@ -6,10 +6,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCIceTransportPolicy {
   @Nonnull
-  public static final String relay = "relay";
+  public static final String all = "all";
 
   @Nonnull
-  public static final String all = "all";
+  public static final String relay = "relay";
 
   private RTCIceTransportPolicy() {
   }

@@ -9,10 +9,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class FormMethodType {
   /**
-   * The POST method; form data sent as the request body.
+   * When the form is inside a &lt;dialog&gt;, closes the dialog on submission.
    */
   @Nonnull
-  public static final String post = "post";
+  public static final String dialog = "dialog";
 
   /**
    * The GET method; form data appended to the action URL with a ? separator. Use this method when the form has no side-effects.
@@ -21,10 +21,10 @@ public final class FormMethodType {
   public static final String get = "get";
 
   /**
-   * When the form is inside a &lt;dialog&gt;, closes the dialog on submission.
+   * The POST method; form data sent as the request body.
    */
   @Nonnull
-  public static final String dialog = "dialog";
+  public static final String post = "post";
 
   private FormMethodType() {
   }

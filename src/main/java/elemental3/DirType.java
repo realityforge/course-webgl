@@ -9,6 +9,12 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class DirType {
   /**
+   * Auto direction which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.
+   */
+  @Nonnull
+  public static final String auto = "auto";
+
+  /**
    * Left to right direction which is to be used for languages that are written from the left to the right, such as English.
    */
   @Nonnull
@@ -19,12 +25,6 @@ public final class DirType {
    */
   @Nonnull
   public static final String rtl = "rtl";
-
-  /**
-   * Auto direction which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.
-   */
-  @Nonnull
-  public static final String auto = "auto";
 
   private DirType() {
   }

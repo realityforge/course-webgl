@@ -9,18 +9,6 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class ButtonType {
   /**
-   * The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
-   */
-  @Nonnull
-  public static final String submit = "submit";
-
-  /**
-   * The button resets the form.
-   */
-  @Nonnull
-  public static final String reset = "reset";
-
-  /**
    * The button has no default behaviour.
    */
   @Nonnull
@@ -32,6 +20,18 @@ public final class ButtonType {
    */
   @Nonnull
   public static final String menu = "menu";
+
+  /**
+   * The button resets the form.
+   */
+  @Nonnull
+  public static final String reset = "reset";
+
+  /**
+   * The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
+   */
+  @Nonnull
+  public static final String submit = "submit";
 
   private ButtonType() {
   }

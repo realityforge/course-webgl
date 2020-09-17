@@ -9,13 +9,13 @@ public final class RTCIceCandidateType {
   public static final String host = "host";
 
   @Nonnull
-  public static final String srflx = "srflx";
-
-  @Nonnull
   public static final String prflx = "prflx";
 
   @Nonnull
   public static final String relay = "relay";
+
+  @Nonnull
+  public static final String srflx = "srflx";
 
   private RTCIceCandidateType() {
   }

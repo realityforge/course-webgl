@@ -9,10 +9,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class ScopeType {
   /**
-   * The header relates to all cells of the row it belongs to.
+   * The default value.
    */
   @Nonnull
-  public static final String row = "row";
+  public static final String auto = "auto";
 
   /**
    * The header relates to all cells of the column it belongs to.
@@ -21,24 +21,24 @@ public final class ScopeType {
   public static final String col = "col";
 
   /**
-   * The header belongs to a rowgroup and relates to all of its cells. These cells can be
-   * placed to the right or the left of the header, depending on the value of the <code>dir</code>
-   * attribute in the <code>&lt;table&gt;</code> element.
-   */
-  @Nonnull
-  public static final String rowgroup = "rowgroup";
-
-  /**
    * The header belongs to a colgroup and relates to all of its cells.
    */
   @Nonnull
   public static final String colgroup = "colgroup";
 
   /**
-   * The default value.
+   * The header relates to all cells of the row it belongs to.
    */
   @Nonnull
-  public static final String auto = "auto";
+  public static final String row = "row";
+
+  /**
+   * The header belongs to a rowgroup and relates to all of its cells. These cells can be
+   * placed to the right or the left of the header, depending on the value of the <code>dir</code>
+   * attribute in the <code>&lt;table&gt;</code> element.
+   */
+  @Nonnull
+  public static final String rowgroup = "rowgroup";
 
   private ScopeType() {
   }

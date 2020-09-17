@@ -6,13 +6,13 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCSctpTransportState {
   @Nonnull
-  public static final String connecting = "connecting";
+  public static final String closed = "closed";
 
   @Nonnull
   public static final String connected = "connected";
 
   @Nonnull
-  public static final String closed = "closed";
+  public static final String connecting = "connecting";
 
   private RTCSctpTransportState() {
   }

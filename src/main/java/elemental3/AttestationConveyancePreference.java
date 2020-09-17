@@ -6,13 +6,13 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class AttestationConveyancePreference {
   @Nonnull
-  public static final String none = "none";
+  public static final String direct = "direct";
 
   @Nonnull
   public static final String indirect = "indirect";
 
   @Nonnull
-  public static final String direct = "direct";
+  public static final String none = "none";
 
   private AttestationConveyancePreference() {
   }

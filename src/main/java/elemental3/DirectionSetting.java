@@ -6,10 +6,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class DirectionSetting {
   @Nonnull
-  public static final String rl = "rl";
+  public static final String lr = "lr";
 
   @Nonnull
-  public static final String lr = "lr";
+  public static final String rl = "rl";
 
   private DirectionSetting() {
   }

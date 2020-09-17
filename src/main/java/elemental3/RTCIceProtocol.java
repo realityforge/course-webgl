@@ -6,10 +6,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCIceProtocol {
   @Nonnull
-  public static final String udp = "udp";
+  public static final String tcp = "tcp";
 
   @Nonnull
-  public static final String tcp = "tcp";
+  public static final String udp = "udp";
 
   private RTCIceProtocol() {
   }

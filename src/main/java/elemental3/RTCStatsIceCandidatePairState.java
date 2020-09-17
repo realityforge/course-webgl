@@ -6,19 +6,19 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCStatsIceCandidatePairState {
   @Nonnull
-  public static final String frozen = "frozen";
+  public static final String failed = "failed";
 
   @Nonnull
-  public static final String waiting = "waiting";
+  public static final String frozen = "frozen";
 
   @Nonnull
   public static final String in_progress = "in-progress";
 
   @Nonnull
-  public static final String failed = "failed";
+  public static final String succeeded = "succeeded";
 
   @Nonnull
-  public static final String succeeded = "succeeded";
+  public static final String waiting = "waiting";
 
   private RTCStatsIceCandidatePairState() {
   }

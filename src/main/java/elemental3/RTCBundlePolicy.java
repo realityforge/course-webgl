@@ -9,10 +9,10 @@ public final class RTCBundlePolicy {
   public static final String balanced = "balanced";
 
   @Nonnull
-  public static final String max_compat = "max-compat";
+  public static final String max_bundle = "max-bundle";
 
   @Nonnull
-  public static final String max_bundle = "max-bundle";
+  public static final String max_compat = "max-compat";
 
   private RTCBundlePolicy() {
   }

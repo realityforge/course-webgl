@@ -6,13 +6,13 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class UserVerificationRequirement {
   @Nonnull
-  public static final String required = "required";
+  public static final String discouraged = "discouraged";
 
   @Nonnull
   public static final String preferred = "preferred";
 
   @Nonnull
-  public static final String discouraged = "discouraged";
+  public static final String required = "required";
 
   private UserVerificationRequirement() {
   }

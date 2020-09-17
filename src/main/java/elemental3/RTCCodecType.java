@@ -6,10 +6,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCCodecType {
   @Nonnull
-  public static final String encode = "encode";
+  public static final String decode = "decode";
 
   @Nonnull
-  public static final String decode = "decode";
+  public static final String encode = "encode";
 
   private RTCCodecType() {
   }

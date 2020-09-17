@@ -9,19 +9,19 @@ public final class RTCPeerConnectionState {
   public static final String closed = "closed";
 
   @Nonnull
-  public static final String failed = "failed";
-
-  @Nonnull
-  public static final String disconnected = "disconnected";
-
-  @Nonnull
-  public static final String new_ = "new";
+  public static final String connected = "connected";
 
   @Nonnull
   public static final String connecting = "connecting";
 
   @Nonnull
-  public static final String connected = "connected";
+  public static final String disconnected = "disconnected";
+
+  @Nonnull
+  public static final String failed = "failed";
+
+  @Nonnull
+  public static final String new_ = "new";
 
   private RTCPeerConnectionState() {
   }

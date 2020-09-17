@@ -6,13 +6,13 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCIceGathererState {
   @Nonnull
-  public static final String new_ = "new";
+  public static final String complete = "complete";
 
   @Nonnull
   public static final String gathering = "gathering";
 
   @Nonnull
-  public static final String complete = "complete";
+  public static final String new_ = "new";
 
   private RTCIceGathererState() {
   }

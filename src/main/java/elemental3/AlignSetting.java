@@ -6,9 +6,6 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class AlignSetting {
   @Nonnull
-  public static final String start = "start";
-
-  @Nonnull
   public static final String center = "center";
 
   @Nonnull
@@ -19,6 +16,9 @@ public final class AlignSetting {
 
   @Nonnull
   public static final String right = "right";
+
+  @Nonnull
+  public static final String start = "start";
 
   private AlignSetting() {
   }

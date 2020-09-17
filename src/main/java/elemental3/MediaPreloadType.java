@@ -9,10 +9,10 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class MediaPreloadType {
   /**
-   * Indicates that the audio should not be preloaded.
+   * Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
    */
   @Nonnull
-  public static final String none = "none";
+  public static final String auto = "auto";
 
   /**
    * Indicates that only audio metadata (e.g. length) is fetched.
@@ -21,10 +21,10 @@ public final class MediaPreloadType {
   public static final String metadata = "metadata";
 
   /**
-   * Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
+   * Indicates that the audio should not be preloaded.
    */
   @Nonnull
-  public static final String auto = "auto";
+  public static final String none = "none";
 
   private MediaPreloadType() {
   }

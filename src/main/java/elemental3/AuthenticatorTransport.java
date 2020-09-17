@@ -6,16 +6,16 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class AuthenticatorTransport {
   @Nonnull
-  public static final String usb = "usb";
+  public static final String ble = "ble";
+
+  @Nonnull
+  public static final String internal = "internal";
 
   @Nonnull
   public static final String nfc = "nfc";
 
   @Nonnull
-  public static final String ble = "ble";
-
-  @Nonnull
-  public static final String internal = "internal";
+  public static final String usb = "usb";
 
   private AuthenticatorTransport() {
   }

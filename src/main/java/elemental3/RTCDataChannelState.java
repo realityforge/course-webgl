@@ -6,16 +6,16 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCDataChannelState {
   @Nonnull
-  public static final String connecting = "connecting";
-
-  @Nonnull
-  public static final String open = "open";
+  public static final String closed = "closed";
 
   @Nonnull
   public static final String closing = "closing";
 
   @Nonnull
-  public static final String closed = "closed";
+  public static final String connecting = "connecting";
+
+  @Nonnull
+  public static final String open = "open";
 
   private RTCDataChannelState() {
   }
