@@ -21,12 +21,6 @@ final class Mesh
   }
 
   @Nonnull
-  Geometry getGeometry()
-  {
-    return _geometry;
-  }
-
-  @Nonnull
   Material getMaterial()
   {
     return _material;
