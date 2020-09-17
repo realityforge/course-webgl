@@ -44,6 +44,9 @@ public class RTCRtpTransceiver {
       name = "currentDirection"
   )
   @Nullable
+  @MagicConstant(
+      valuesFromClass = RTCRtpTransceiverDirection.class
+  )
   public native String currentDirection();
 
   /**

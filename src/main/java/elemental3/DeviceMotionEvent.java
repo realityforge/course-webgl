@@ -20,11 +20,21 @@ import jsinterop.annotations.JsType;
     name = "DeviceMotionEvent"
 )
 public class DeviceMotionEvent extends Event {
+  /**
+   * The DeviceMotionEvent constructor creates a new DeviceMotionEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/DeviceMotionEvent">DeviceMotionEvent.DeviceMotionEvent - MDN</a>
+   */
   public DeviceMotionEvent(@Nonnull final String type,
       @Nonnull final DeviceMotionEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The DeviceMotionEvent constructor creates a new DeviceMotionEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/DeviceMotionEvent">DeviceMotionEvent.DeviceMotionEvent - MDN</a>
+   */
   public DeviceMotionEvent(@Nonnull final String type) {
     super( null );
   }

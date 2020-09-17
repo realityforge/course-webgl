@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system.
@@ -43,6 +44,9 @@ public class XRInputSource {
       name = "handedness"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = XRHandedness.class
+  )
   public native String handedness();
 
   /**
@@ -65,6 +69,9 @@ public class XRInputSource {
       name = "targetRayMode"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = XRTargetRayMode.class
+  )
   public native String targetRayMode();
 
   /**

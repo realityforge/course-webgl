@@ -107,14 +107,29 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats.bytesReceived - MDN</a>
+   */
   @JsProperty(
       name = "bytesReceived"
   )
   int bytesReceived();
 
+  /**
+   * The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats.bytesReceived - MDN</a>
+   */
   @JsProperty
   void setBytesReceived(int bytesReceived);
 
+  /**
+   * The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats.bytesReceived - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidatePairStats bytesReceived(final int bytesReceived) {

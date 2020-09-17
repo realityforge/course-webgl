@@ -86,6 +86,11 @@ public class HTMLInputElement extends HTMLElement {
 
   public int minLength;
 
+  /**
+   * The HTMLInputElement.multiple property indicates if an input can have more than one value. Firefox currently only supports multiple for input type=&quot;file&quot;.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/multiple">HTMLInputElement.multiple - MDN</a>
+   */
   public boolean multiple;
 
   @Nonnull
@@ -146,6 +151,11 @@ public class HTMLInputElement extends HTMLElement {
   @Nullable
   public native HTMLFormElement form();
 
+  /**
+   * The HTMLInputElement.labels read-only property returns a NodeList of the label elements associated with the input element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/labels">HTMLInputElement.labels - MDN</a>
+   */
   @JsProperty(
       name = "labels"
   )
@@ -179,27 +189,77 @@ public class HTMLInputElement extends HTMLElement {
 
   public native boolean reportValidity();
 
+  /**
+   * The HTMLInputElement.select() method selects all the text in a textarea element or in an input element that includes a text field.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select - MDN</a>
+   */
   public native void select();
 
   public native void setCustomValidity(@Nonnull String error);
 
+  /**
+   * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
+   */
   public native void setRangeText(@Nonnull String replacement);
 
+  /**
+   * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
+   */
   public native void setRangeText(@Nonnull String replacement, int start, int end,
       @MagicConstant(valuesFromClass = SelectionMode.class) @Nonnull String selectionMode);
 
+  /**
+   * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
+   */
   public native void setRangeText(@Nonnull String replacement, int start, int end);
 
+  /**
+   * The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange - MDN</a>
+   */
   public native void setSelectionRange(int start, int end, @Nonnull String direction);
 
+  /**
+   * The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange - MDN</a>
+   */
   public native void setSelectionRange(int start, int end);
 
+  /**
+   * The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown">HTMLInputElement.stepDown - MDN</a>
+   */
   public native void stepDown(int n);
 
+  /**
+   * The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown">HTMLInputElement.stepDown - MDN</a>
+   */
   public native void stepDown();
 
+  /**
+   * The HTMLInputElement.stepUp() method increments the value of a numeric type of  input element by the value of the step attribute, or the default step value if the step attribute is not explicitly set. The method, when invoked, increments the value by (step * n), where n defaults to 1 if not specified, and step defaults to the default value for step if not specified.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp">HTMLInputElement.stepUp - MDN</a>
+   */
   public native void stepUp(int n);
 
+  /**
+   * The HTMLInputElement.stepUp() method increments the value of a numeric type of  input element by the value of the step attribute, or the default step value if the step attribute is not explicitly set. The method, when invoked, increments the value by (step * n), where n defaults to 1 if not specified, and step defaults to the default value for step if not specified.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp">HTMLInputElement.stepUp - MDN</a>
+   */
   public native void stepUp();
 
   @JsOverlay

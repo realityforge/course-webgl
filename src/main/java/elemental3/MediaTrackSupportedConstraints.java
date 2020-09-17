@@ -462,14 +462,29 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
+  /**
+   * The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor">MediaTrackSupportedConstraints.cursor - MDN</a>
+   */
   @JsProperty(
       name = "cursor"
   )
   boolean cursor();
 
+  /**
+   * The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor">MediaTrackSupportedConstraints.cursor - MDN</a>
+   */
   @JsProperty
   void setCursor(boolean cursor);
 
+  /**
+   * The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor">MediaTrackSupportedConstraints.cursor - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSupportedConstraints cursor(final boolean cursor) {
@@ -477,14 +492,29 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
+  /**
+   * The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface">MediaTrackSupportedConstraints.displaySurface - MDN</a>
+   */
   @JsProperty(
       name = "displaySurface"
   )
   boolean displaySurface();
 
+  /**
+   * The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface">MediaTrackSupportedConstraints.displaySurface - MDN</a>
+   */
   @JsProperty
   void setDisplaySurface(boolean displaySurface);
 
+  /**
+   * The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface">MediaTrackSupportedConstraints.displaySurface - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSupportedConstraints displaySurface(final boolean displaySurface) {

@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The PermissionStatus interface of the Permissions API provides the state of an object and an event handler for monitoring changes to said state.
@@ -19,6 +20,11 @@ import jsinterop.annotations.JsType;
     name = "PermissionStatus"
 )
 public class PermissionStatus extends EventTarget {
+  /**
+   * The onchange event handler of the PermissionStatus interface is called whenever the PermissionStatus.state property changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/onchange">PermissionStatus.onchange - MDN</a>
+   */
   @Nullable
   public EventHandler onchange;
 
@@ -34,5 +40,8 @@ public class PermissionStatus extends EventTarget {
       name = "state"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = PermissionState.class
+  )
   public native String state();
 }

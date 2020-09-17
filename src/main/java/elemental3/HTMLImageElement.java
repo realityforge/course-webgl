@@ -87,6 +87,11 @@ public class HTMLImageElement extends HTMLElement {
   @Nonnull
   public String lowsrc;
 
+  /**
+   * The HTMLImageElement interface's deprecated name property specifies a name for the element. This has been replaced by the id property available on all elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/name">HTMLImageElement.name - MDN</a>
+   */
   @Nonnull
   public String name;
 

@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the IDBRequest instance.
@@ -61,6 +62,9 @@ public class IDBRequest extends EventTarget {
       name = "readyState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = IDBRequestReadyState.class
+  )
   public native String readyState();
 
   /**

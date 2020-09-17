@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "AudioWorkletNode"
 )
 public class AudioWorkletNode extends AudioNode {
+  /**
+   * The onprocessorerror property of the AudioWorkletNode interface defines an event handler function to be called when the processorerror event fires. This occurs when the underlying AudioWorkletProcessor behind the node throws an exception in its constructor, the process method, or any user-defined class method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/onprocessorerror">AudioWorkletNode.onprocessorerror - MDN</a>
+   */
   @Nullable
   public EventHandler onprocessorerror;
 

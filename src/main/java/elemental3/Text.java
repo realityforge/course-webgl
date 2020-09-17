@@ -57,6 +57,11 @@ public class Text extends CharacterData {
   @Nonnull
   public native String wholeText();
 
+  /**
+   * The Text.splitText() method breaks the Text node into two nodes at the specified offset, keeping both nodes in the tree as siblings.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/splitText">Text.splitText - MDN</a>
+   */
   @Nonnull
   public native Text splitText(int offset);
 }

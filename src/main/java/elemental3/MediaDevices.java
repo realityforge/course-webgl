@@ -20,6 +20,11 @@ import jsinterop.annotations.JsType;
     name = "MediaDevices"
 )
 public class MediaDevices extends EventTarget {
+  /**
+   * The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app has changed. You can at any time use enumerateDevices() to get the updated list of available devices.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange">MediaDevices.ondevicechange - MDN</a>
+   */
   @Nullable
   public EventHandler ondevicechange;
 

@@ -10,6 +10,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
@@ -117,6 +118,9 @@ public class MediaStreamTrack extends EventTarget {
       name = "readyState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = MediaStreamTrackState.class
+  )
   public native String readyState();
 
   /**

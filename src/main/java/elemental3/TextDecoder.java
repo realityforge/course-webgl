@@ -53,6 +53,11 @@ public class TextDecoder {
   public TextDecoder() {
   }
 
+  /**
+   * The TextDecoder.prototype.encoding read-only property returns a DOMString containing the name of the decoding algorithm used by the specific decoder.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/encoding">TextDecoder.encoding - MDN</a>
+   */
   @JsProperty(
       name = "encoding"
   )
@@ -69,84 +74,219 @@ public class TextDecoder {
   )
   public native boolean ignoreBOM();
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull BufferSource input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull ArrayBufferView input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Int8Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Int16Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Int32Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint8Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint16Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint32Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint8ClampedArray input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Float32Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Float64Array input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull DataView input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull ArrayBuffer input, @Nonnull TextDecodeOptions options);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull BufferSource input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull ArrayBufferView input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Int8Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Int16Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Int32Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint8Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint16Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint32Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Uint8ClampedArray input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Float32Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull Float64Array input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull DataView input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode(@Nonnull ArrayBuffer input);
 
+  /**
+   * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
+   */
   @Nonnull
   public native String decode();
 }

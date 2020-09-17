@@ -62,24 +62,59 @@ public class TreeWalker {
   )
   public native int whatToShow();
 
+  /**
+   * The TreeWalker.firstChild() method moves the current Node to the first visible child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/firstChild">TreeWalker.firstChild - MDN</a>
+   */
   @Nullable
   public native Node firstChild();
 
+  /**
+   * The TreeWalker.lastChild() method moves the current Node to the last visible child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/lastChild">TreeWalker.lastChild - MDN</a>
+   */
   @Nullable
   public native Node lastChild();
 
+  /**
+   * The TreeWalker.nextNode() method moves the current Node to the next visible node in the document order, and returns the found node. It also moves the current node to this one. If no such node exists, returns null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode">TreeWalker.nextNode - MDN</a>
+   */
   @Nullable
   public native Node nextNode();
 
+  /**
+   * The TreeWalker.nextSibling() method moves the current Node to its next sibling, if any, and returns the found sibling. If there is no such node, return null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextSibling">TreeWalker.nextSibling - MDN</a>
+   */
   @Nullable
   public native Node nextSibling();
 
+  /**
+   * The TreeWalker.parentNode() method moves the current Node to the first visible ancestor node in the document order, and returns the found node. If no such node exists, or if it is above the TreeWalker's root node, returns null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/parentNode">TreeWalker.parentNode - MDN</a>
+   */
   @Nullable
   public native Node parentNode();
 
+  /**
+   * The TreeWalker.previousNode() method moves the current Node to the previous visible node in the document order, and returns the found node. It also moves the current node to this one. If no such node exists,or if it is before that the root node defined at the object construction, returns null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousNode">TreeWalker.previousNode - MDN</a>
+   */
   @Nullable
   public native Node previousNode();
 
+  /**
+   * The TreeWalker.previousSibling() method moves the current Node to its previous sibling, if any, and returns the found sibling. If there is no such node, return null and the current node is not changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousSibling">TreeWalker.previousSibling - MDN</a>
+   */
   @Nullable
   public native Node previousSibling();
 }

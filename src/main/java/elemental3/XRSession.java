@@ -73,6 +73,9 @@ public class XRSession extends EventTarget {
       name = "visibilityState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = XRVisibilityState.class
+  )
   public native String visibilityState();
 
   /**

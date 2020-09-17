@@ -48,10 +48,25 @@ public class RTCDTMFSender extends EventTarget {
   @Nonnull
   public native String toneBuffer();
 
+  /**
+   * The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF">RTCDTMFSender.insertDTMF - MDN</a>
+   */
   public native void insertDTMF(@Nonnull String tones, int duration, int interToneGap);
 
+  /**
+   * The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF">RTCDTMFSender.insertDTMF - MDN</a>
+   */
   public native void insertDTMF(@Nonnull String tones, int duration);
 
+  /**
+   * The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF">RTCDTMFSender.insertDTMF - MDN</a>
+   */
   public native void insertDTMF(@Nonnull String tones);
 
   @JsOverlay

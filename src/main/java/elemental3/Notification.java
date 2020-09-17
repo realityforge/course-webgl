@@ -9,6 +9,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Notification interface of the Notifications API is used to configure and display desktop notifications to the user.
@@ -123,6 +124,9 @@ public class Notification extends EventTarget {
       name = "dir"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = NotificationDirection.class
+  )
   public native String dir();
 
   /**
@@ -177,6 +181,9 @@ public class Notification extends EventTarget {
       name = "permission"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = NotificationPermission.class
+  )
   public native String permission();
 
   /**

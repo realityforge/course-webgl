@@ -67,6 +67,9 @@ public class TextTrack extends EventTarget {
       name = "kind"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = TextTrackKind.class
+  )
   public native String kind();
 
   @JsProperty(

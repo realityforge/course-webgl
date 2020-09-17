@@ -124,7 +124,17 @@ public class WEBGL_draw_buffers {
   WEBGL_draw_buffers() {
   }
 
+  /**
+   * The WEBGL_draw_buffers.drawBuffersWEBGL() method is part of the WebGL API and allows you to define the draw buffers to which all fragment colors are written.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers/drawBuffersWEBGL">WEBGL_draw_buffers.drawBuffersWEBGL - MDN</a>
+   */
   public native void drawBuffersWEBGL(@Nonnull JsArray<Double> buffers);
 
+  /**
+   * The WEBGL_draw_buffers.drawBuffersWEBGL() method is part of the WebGL API and allows you to define the draw buffers to which all fragment colors are written.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers/drawBuffersWEBGL">WEBGL_draw_buffers.drawBuffersWEBGL - MDN</a>
+   */
   public native void drawBuffersWEBGL(@Nonnull Double[] buffers);
 }

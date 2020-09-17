@@ -185,15 +185,45 @@ public class Event {
   @Nonnull
   public native JsArray<EventTarget> composedPath();
 
+  /**
+   * The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/initEvent">Event.initEvent - MDN</a>
+   */
   public native void initEvent(@Nonnull String type, boolean bubbles, boolean cancelable);
 
+  /**
+   * The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/initEvent">Event.initEvent - MDN</a>
+   */
   public native void initEvent(@Nonnull String type, boolean bubbles);
 
+  /**
+   * The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/initEvent">Event.initEvent - MDN</a>
+   */
   public native void initEvent(@Nonnull String type);
 
+  /**
+   * The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault - MDN</a>
+   */
   public native void preventDefault();
 
+  /**
+   * The stopImmediatePropagation() method of the Event interface prevents other listeners of the same event from being called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation">Event.stopImmediatePropagation - MDN</a>
+   */
   public native void stopImmediatePropagation();
 
+  /**
+   * The stopPropagation() method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases. It does not, however, prevent any default behaviors from occurring; for instance, clicks on links are still processed. If you want to stop those behaviors, see the preventDefault() method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation - MDN</a>
+   */
   public native void stopPropagation();
 }

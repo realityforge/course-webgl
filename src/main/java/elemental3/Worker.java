@@ -23,6 +23,11 @@ import jsinterop.base.Js;
     name = "Worker"
 )
 public class Worker extends EventTarget {
+  /**
+   * The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onerror">Worker.onerror - MDN</a>
+   */
   @Nullable
   public EventHandler onerror;
 

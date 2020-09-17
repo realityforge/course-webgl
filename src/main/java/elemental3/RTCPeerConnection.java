@@ -10,6 +10,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.
@@ -131,6 +132,9 @@ public class RTCPeerConnection extends EventTarget {
       name = "connectionState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCPeerConnectionState.class
+  )
   public native String connectionState();
 
   /**
@@ -164,6 +168,9 @@ public class RTCPeerConnection extends EventTarget {
       name = "iceConnectionState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCIceConnectionState.class
+  )
   public native String iceConnectionState();
 
   /**
@@ -175,6 +182,9 @@ public class RTCPeerConnection extends EventTarget {
       name = "iceGatheringState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCIceGatheringState.class
+  )
   public native String iceGatheringState();
 
   @JsProperty(
@@ -266,6 +276,9 @@ public class RTCPeerConnection extends EventTarget {
       name = "signalingState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCSignalingState.class
+  )
   public native String signalingState();
 
   /**

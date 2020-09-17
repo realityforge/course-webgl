@@ -38,7 +38,7 @@ public class Navigator {
   /**
    * The value of the NavigatorID.appCodeName property is always &quot;Mozilla&quot;, in any browser. This property is kept only for compatibility purposes.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appCodeName">NavigatorID.appCodeName - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appCodeName">Navigator.appCodeName - MDN</a>
    */
   @JsProperty(
       name = "appCodeName"
@@ -49,7 +49,7 @@ public class Navigator {
   /**
    * The value of the NavigatorID.appName property is always &quot;Netscape&quot;, in any browser. This property is kept only for compatibility purposes.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appName">NavigatorID.appName - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appName">Navigator.appName - MDN</a>
    */
   @JsProperty(
       name = "appName"
@@ -60,7 +60,7 @@ public class Navigator {
   /**
    * Returns either &quot;4.0&quot; or a string representing version information about the browser.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appVersion">NavigatorID.appVersion - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appVersion">Navigator.appVersion - MDN</a>
    */
   @JsProperty(
       name = "appVersion"
@@ -74,12 +74,22 @@ public class Navigator {
   @Nonnull
   public native Bluetooth bluetooth();
 
+  /**
+   * The Clipboard API adds to the Navigator interface the read-only clipboard property, which returns the Clipboard object used to read and write the clipboard's contents.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard">Navigator.clipboard - MDN</a>
+   */
   @JsProperty(
       name = "clipboard"
   )
   @Nonnull
   public native Clipboard clipboard();
 
+  /**
+   * navigator.cookieEnabled returns a Boolean value that indicates whether cookies are enabled or not.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled">Navigator.cookieEnabled - MDN</a>
+   */
   @JsProperty(
       name = "cookieEnabled"
   )

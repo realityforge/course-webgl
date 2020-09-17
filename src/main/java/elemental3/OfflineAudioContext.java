@@ -30,9 +30,19 @@ public class OfflineAudioContext extends BaseAudioContext {
   @Nullable
   public OfflineAudioCompletionEventHandler oncomplete;
 
+  /**
+   * The OfflineAudioContext() constructor&mdash;part of the Web Audio API&mdash;creates and returns a new OfflineAudioContext object instance, which can then be used to render audio to an AudioBuffer rather than to an audio output device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/OfflineAudioContext">OfflineAudioContext.OfflineAudioContext - MDN</a>
+   */
   public OfflineAudioContext(@Nonnull final OfflineAudioContextOptions contextOptions) {
   }
 
+  /**
+   * The OfflineAudioContext() constructor&mdash;part of the Web Audio API&mdash;creates and returns a new OfflineAudioContext object instance, which can then be used to render audio to an AudioBuffer rather than to an audio output device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/OfflineAudioContext">OfflineAudioContext.OfflineAudioContext - MDN</a>
+   */
   public OfflineAudioContext(final int numberOfChannels, final int length, final float sampleRate) {
   }
 
@@ -46,6 +56,11 @@ public class OfflineAudioContext extends BaseAudioContext {
   )
   public native int length();
 
+  /**
+   * The resume() method of the OfflineAudioContext interface resumes the progression of time in an audio context that has been suspended. The promise resolves immediately because the OfflineAudioContext does not require the audio hardware. If the context is not currently suspended or the rendering has not started, the promise is rejected with InvalidStateError.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/resume">OfflineAudioContext.resume - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> resume();
 

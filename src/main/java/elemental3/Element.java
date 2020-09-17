@@ -121,7 +121,7 @@ public class Element extends Node {
   /**
    * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/childElementCount">Element.childElementCount - MDN</a>
    */
   @JsProperty(
       name = "childElementCount"
@@ -131,7 +131,7 @@ public class Element extends Node {
   /**
    * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/children">Element.children - MDN</a>
    */
   @JsProperty(
       name = "children"
@@ -193,7 +193,7 @@ public class Element extends Node {
   /**
    * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild">Element.firstElementChild - MDN</a>
    */
   @JsProperty(
       name = "firstElementChild"
@@ -204,7 +204,7 @@ public class Element extends Node {
   /**
    * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild">ParentNode.lastElementChild - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild">Element.lastElementChild - MDN</a>
    */
   @JsProperty(
       name = "lastElementChild"
@@ -237,7 +237,7 @@ public class Element extends Node {
   /**
    * The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling">NonDocumentTypeChildNode.nextElementSibling - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling">Element.nextElementSibling - MDN</a>
    */
   @JsProperty(
       name = "nextElementSibling"
@@ -259,7 +259,7 @@ public class Element extends Node {
   /**
    * The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling">NonDocumentTypeChildNode.previousElementSibling - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling">Element.previousElementSibling - MDN</a>
    */
   @JsProperty(
       name = "previousElementSibling"
@@ -745,7 +745,7 @@ public class Element extends Node {
   /**
    * The ChildNode.remove() method removes the object from the tree it belongs to.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove">ChildNode.remove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove">Element.remove - MDN</a>
    */
   public native void remove();
 

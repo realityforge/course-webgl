@@ -20,11 +20,21 @@ import jsinterop.annotations.JsType;
     name = "DeviceOrientationEvent"
 )
 public class DeviceOrientationEvent extends Event {
+  /**
+   * The DeviceOrientationEvent constructor creates a new DeviceOrientationEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/DeviceOrientationEvent">DeviceOrientationEvent.DeviceOrientationEvent - MDN</a>
+   */
   public DeviceOrientationEvent(@Nonnull final String type,
       @Nonnull final DeviceOrientationEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The DeviceOrientationEvent constructor creates a new DeviceOrientationEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/DeviceOrientationEvent">DeviceOrientationEvent.DeviceOrientationEvent - MDN</a>
+   */
   public DeviceOrientationEvent(@Nonnull final String type) {
     super( null );
   }

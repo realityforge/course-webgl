@@ -98,9 +98,19 @@ public class URL {
   @Nonnull
   public String username;
 
+  /**
+   * The URL() constructor returns a newly created URL object representing the URL defined by the parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL">URL.URL - MDN</a>
+   */
   public URL(@Nonnull final String url, @Nonnull final String base) {
   }
 
+  /**
+   * The URL() constructor returns a newly created URL object representing the URL defined by the parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL">URL.URL - MDN</a>
+   */
   public URL(@Nonnull final String url) {
   }
 

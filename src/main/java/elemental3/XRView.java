@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint.
@@ -31,6 +32,9 @@ public class XRView {
       name = "eye"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = XREye.class
+  )
   public native String eye();
 
   /**

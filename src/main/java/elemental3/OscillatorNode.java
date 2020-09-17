@@ -19,6 +19,11 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "OscillatorNode"
 )
 public class OscillatorNode extends AudioScheduledSourceNode {
+  /**
+   * A DOMString specifying the shape of oscillator wave. The different available values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type">OscillatorNode.type - MDN</a>
+   */
   @Nonnull
   @MagicConstant(
       valuesFromClass = OscillatorType.class
@@ -42,6 +47,11 @@ public class OscillatorNode extends AudioScheduledSourceNode {
   public OscillatorNode(@Nonnull final BaseAudioContext context) {
   }
 
+  /**
+   * An a-rate AudioParam.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/detune">OscillatorNode.detune - MDN</a>
+   */
   @JsProperty(
       name = "detune"
   )

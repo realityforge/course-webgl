@@ -9,6 +9,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
@@ -22,9 +23,19 @@ import jsinterop.base.Any;
     name = "ServiceWorker"
 )
 public class ServiceWorker extends EventTarget {
+  /**
+   * The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onerror">ServiceWorker.onerror - MDN</a>
+   */
   @Nullable
   public EventHandler onerror;
 
+  /**
+   * An EventListener property called whenever an event of type statechange is fired; it is basically fired anytime the ServiceWorker.state changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange">ServiceWorker.onstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler onstatechange;
 
@@ -51,6 +62,9 @@ public class ServiceWorker extends EventTarget {
       name = "state"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ServiceWorkerState.class
+  )
   public native String state();
 
   public native void postMessage(@Nullable Any message, @Nonnull JsArray<Object> transfer);

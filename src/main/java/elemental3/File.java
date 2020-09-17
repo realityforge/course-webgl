@@ -53,11 +53,21 @@ public class File extends Blob {
   public File(@Nonnull final BlobPart[] fileBits, @Nonnull final String fileName) {
   }
 
+  /**
+   * The File.lastModified read-only property provides the last modified date of the file as the number of milliseconds since the Unix epoch (January 1, 1970 at midnight). Files without a known last modified date return the current date.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/lastModified">File.lastModified - MDN</a>
+   */
   @JsProperty(
       name = "lastModified"
   )
   public native int lastModified();
 
+  /**
+   * Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/name">File.name - MDN</a>
+   */
   @JsProperty(
       name = "name"
   )

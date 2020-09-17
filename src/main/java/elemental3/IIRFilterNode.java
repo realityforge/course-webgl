@@ -27,6 +27,11 @@ public class IIRFilterNode extends AudioNode {
       @Nonnull final IIRFilterOptions options) {
   }
 
+  /**
+   * undefined
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse">IIRFilterNode.getFrequencyResponse - MDN</a>
+   */
   public native void getFrequencyResponse(@Nonnull Float32Array frequencyHz,
       @Nonnull Float32Array magResponse, @Nonnull Float32Array phaseResponse);
 }

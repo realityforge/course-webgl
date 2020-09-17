@@ -25,13 +25,18 @@ import jsinterop.base.Js;
     name = "Window"
 )
 public class Window extends EventTarget {
+  /**
+   * Gets/sets the name of the window's browsing context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name">Window.name - MDN</a>
+   */
   @Nonnull
   public String name;
 
   /**
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onabort">Window.onabort - MDN</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -39,7 +44,7 @@ public class Window extends EventTarget {
   /**
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onafterprint">WindowEventHandlers.onafterprint - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onafterprint">Window.onafterprint - MDN</a>
    */
   @Nullable
   public EventHandler onafterprint;
@@ -87,7 +92,7 @@ public class Window extends EventTarget {
   /**
    * The onbeforeprint property of the WindowEventHandlers mixin is the EventHandler for processing beforeprint events for the current window. These events are raised before the print dialog window is opened.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint">WindowEventHandlers.onbeforeprint - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeprint">Window.onbeforeprint - MDN</a>
    */
   @Nullable
   public EventHandler onbeforeprint;
@@ -95,7 +100,7 @@ public class Window extends EventTarget {
   /**
    * The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload">WindowEventHandlers.onbeforeunload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeunload">Window.onbeforeunload - MDN</a>
    */
   @Nullable
   public OnBeforeUnloadEventHandler onbeforeunload;
@@ -103,7 +108,7 @@ public class Window extends EventTarget {
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">GlobalEventHandlers.onblur - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onblur">Window.onblur - MDN</a>
    */
   @Nullable
   public FocusEventHandler onblur;
@@ -135,7 +140,7 @@ public class Window extends EventTarget {
   /**
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">GlobalEventHandlers.onchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onchange">Window.onchange - MDN</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -143,7 +148,7 @@ public class Window extends EventTarget {
   /**
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">GlobalEventHandlers.onclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onclick">Window.onclick - MDN</a>
    */
   @Nullable
   public EventHandler onclick;
@@ -162,7 +167,7 @@ public class Window extends EventTarget {
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu">GlobalEventHandlers.oncontextmenu - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oncontextmenu">Window.oncontextmenu - MDN</a>
    */
   @Nullable
   public EventHandler oncontextmenu;
@@ -178,7 +183,7 @@ public class Window extends EventTarget {
   /**
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">GlobalEventHandlers.ondblclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondblclick">Window.ondblclick - MDN</a>
    */
   @Nullable
   public EventHandler ondblclick;
@@ -199,6 +204,11 @@ public class Window extends EventTarget {
   @Nullable
   public DeviceOrientationEventHandler ondeviceorientation;
 
+  /**
+   * An event handler for the deviceorientationabsolute event containing information about an absolute device orientation change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientationabsolute">Window.ondeviceorientationabsolute - MDN</a>
+   */
   @Nullable
   public EventHandler ondeviceorientationabsolute;
 
@@ -301,7 +311,7 @@ public class Window extends EventTarget {
   /**
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus">GlobalEventHandlers.onfocus - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onfocus">Window.onfocus - MDN</a>
    */
   @Nullable
   public FocusEventHandler onfocus;
@@ -325,15 +335,15 @@ public class Window extends EventTarget {
   /**
    * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange">WindowEventHandlers.onhashchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onhashchange">Window.onhashchange - MDN</a>
    */
   @Nullable
   public HashChangeEventHandler onhashchange;
 
   /**
-   * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
+   * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oninput">Window.oninput - MDN</a>
    */
   @Nullable
   public EventHandler oninput;
@@ -349,7 +359,7 @@ public class Window extends EventTarget {
   /**
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">GlobalEventHandlers.onkeydown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeydown">Window.onkeydown - MDN</a>
    */
   @Nullable
   public EventHandler onkeydown;
@@ -357,7 +367,7 @@ public class Window extends EventTarget {
   /**
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">GlobalEventHandlers.onkeypress - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeypress">Window.onkeypress - MDN</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -365,7 +375,7 @@ public class Window extends EventTarget {
   /**
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">GlobalEventHandlers.onkeyup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeyup">Window.onkeyup - MDN</a>
    */
   @Nullable
   public EventHandler onkeyup;
@@ -373,7 +383,7 @@ public class Window extends EventTarget {
   /**
    * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">WindowEventHandlers.onlanguagechange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onlanguagechange">Window.onlanguagechange - MDN</a>
    */
   @Nullable
   public EventHandler onlanguagechange;
@@ -381,7 +391,7 @@ public class Window extends EventTarget {
   /**
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload">GlobalEventHandlers.onload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onload">Window.onload - MDN</a>
    */
   @Nullable
   public EventHandler onload;
@@ -437,7 +447,7 @@ public class Window extends EventTarget {
   /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">GlobalEventHandlers.onmousedown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousedown">Window.onmousedown - MDN</a>
    */
   @Nullable
   public EventHandler onmousedown;
@@ -461,7 +471,7 @@ public class Window extends EventTarget {
   /**
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousemove">GlobalEventHandlers.onmousemove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousemove">Window.onmousemove - MDN</a>
    */
   @Nullable
   public EventHandler onmousemove;
@@ -469,7 +479,7 @@ public class Window extends EventTarget {
   /**
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">GlobalEventHandlers.onmouseout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseout">Window.onmouseout - MDN</a>
    */
   @Nullable
   public EventHandler onmouseout;
@@ -477,7 +487,7 @@ public class Window extends EventTarget {
   /**
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">GlobalEventHandlers.onmouseover - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseover">Window.onmouseover - MDN</a>
    */
   @Nullable
   public EventHandler onmouseover;
@@ -485,7 +495,7 @@ public class Window extends EventTarget {
   /**
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">GlobalEventHandlers.onmouseup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseup">Window.onmouseup - MDN</a>
    */
   @Nullable
   public EventHandler onmouseup;
@@ -596,7 +606,7 @@ public class Window extends EventTarget {
   /**
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate">WindowEventHandlers.onpopstate - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onpopstate">Window.onpopstate - MDN</a>
    */
   @Nullable
   public EventHandler onpopstate;
@@ -618,7 +628,7 @@ public class Window extends EventTarget {
   /**
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onreset">Window.onreset - MDN</a>
    */
   @Nullable
   public EventHandler onreset;
@@ -626,7 +636,7 @@ public class Window extends EventTarget {
   /**
    * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onresize">Window.onresize - MDN</a>
    */
   @Nullable
   public UIEventHandler onresize;
@@ -634,7 +644,7 @@ public class Window extends EventTarget {
   /**
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onscroll">Window.onscroll - MDN</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -651,7 +661,7 @@ public class Window extends EventTarget {
   /**
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onselect">Window.onselect - MDN</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -681,7 +691,7 @@ public class Window extends EventTarget {
   /**
    * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onstorage">WindowEventHandlers.onstorage - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onstorage">Window.onstorage - MDN</a>
    */
   @Nullable
   public StorageEventHandler onstorage;
@@ -689,7 +699,7 @@ public class Window extends EventTarget {
   /**
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onsubmit">Window.onsubmit - MDN</a>
    */
   @Nullable
   public EventHandler onsubmit;
@@ -760,7 +770,7 @@ public class Window extends EventTarget {
   /**
    * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">WindowEventHandlers.onunhandledrejection - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunhandledrejection">Window.onunhandledrejection - MDN</a>
    */
   @Nullable
   public PromiseRejectionEventHandler onunhandledrejection;
@@ -768,7 +778,7 @@ public class Window extends EventTarget {
   /**
    * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload">WindowEventHandlers.onunload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunload">Window.onunload - MDN</a>
    */
   @Nullable
   public EventHandler onunload;
@@ -799,15 +809,30 @@ public class Window extends EventTarget {
   @Nullable
   public EventHandler onwheel;
 
+  /**
+   * The Window interface's opener property returns a reference to the window that opened the window, either with open(), or by navigating a link with a target attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener">Window.opener - MDN</a>
+   */
   @Nullable
   public Any opener;
 
+  /**
+   * The status property of the Window interface was originally intended to set the text in the status bar at the bottom of the browser window. However, the HTML standard now requires setting window.status to have no effect on the text displayed in the status bar.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/status">Window.status - MDN</a>
+   */
   @Nonnull
   public String status;
 
   Window() {
   }
 
+  /**
+   * Returns a reference to the application cache object for the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/applicationCache">Window.applicationCache - MDN</a>
+   */
   @JsProperty(
       name = "applicationCache"
   )
@@ -817,7 +842,7 @@ public class Window extends EventTarget {
   /**
    * The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches">WindowOrWorkerGlobalScope.caches - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/caches">Window.caches - MDN</a>
    */
   @JsProperty(
       name = "caches"
@@ -825,6 +850,11 @@ public class Window extends EventTarget {
   @Nonnull
   public native CacheStorage caches();
 
+  /**
+   * The Window.closed read-only property indicates whether the referenced window is closed or not.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed">Window.closed - MDN</a>
+   */
   @JsProperty(
       name = "closed"
   )
@@ -840,29 +870,54 @@ public class Window extends EventTarget {
   )
   public native boolean crossOriginIsolated();
 
+  /**
+   * The read-only Window.crypto property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crypto">Window.crypto - MDN</a>
+   */
   @JsProperty(
       name = "crypto"
   )
   @Nonnull
   public native Crypto crypto();
 
+  /**
+   * The customElements read-only property of the Window interface returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and get information about previously registered custom elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements">Window.customElements - MDN</a>
+   */
   @JsProperty(
       name = "customElements"
   )
   @Nonnull
   public native CustomElementRegistry customElements();
 
+  /**
+   * The devicePixelRatio of Window interface returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio - MDN</a>
+   */
   @JsProperty(
       name = "devicePixelRatio"
   )
   public native double devicePixelRatio();
 
+  /**
+   * window.document returns a reference to the document contained in the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/document">Window.document - MDN</a>
+   */
   @JsProperty(
       name = "document"
   )
   @Nonnull
   public native Document document();
 
+  /**
+   * The read-only Window property event returns the Event which is currently being handled by the site's code. Outside the context of an event handler, the value is always undefined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/event">Window.event - MDN</a>
+   */
   @JsProperty(
       name = "event"
   )
@@ -875,18 +930,33 @@ public class Window extends EventTarget {
   @Nonnull
   public native External external();
 
+  /**
+   * The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement">Window.frameElement - MDN</a>
+   */
   @JsProperty(
       name = "frameElement"
   )
   @Nullable
   public native Element frameElement();
 
+  /**
+   * Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">Window.frames - MDN</a>
+   */
   @JsProperty(
       name = "frames"
   )
   @Nonnull
   public native Window frames();
 
+  /**
+   * The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history">Window.history - MDN</a>
+   */
   @JsProperty(
       name = "history"
   )
@@ -896,7 +966,7 @@ public class Window extends EventTarget {
   /**
    * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB">WindowOrWorkerGlobalScope.indexedDB - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/indexedDB">Window.indexedDB - MDN</a>
    */
   @JsProperty(
       name = "indexedDB"
@@ -904,55 +974,95 @@ public class Window extends EventTarget {
   @Nonnull
   public native IDBFactory indexedDB();
 
+  /**
+   * The read-only innerHeight property of the Window interface returns the interior height of the window in pixels, including the height of the horizontal scroll bar, if present.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight">Window.innerHeight - MDN</a>
+   */
   @JsProperty(
       name = "innerHeight"
   )
   public native int innerHeight();
 
+  /**
+   * The read-only Window property innerWidth returns the interior width of the window in pixels. This includes the width of the vertical scroll bar, if one is present.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth">Window.innerWidth - MDN</a>
+   */
   @JsProperty(
       name = "innerWidth"
   )
   public native int innerWidth();
 
   /**
-   * The isSecureContext read-only property of the WindowOrWorkerGlobalScope interface returns a boolean indicating whether the current context is secure (true) or not (false).
+   * The window.isSecureContext read-only property indicates whether a context is capable of using features that require secure contexts.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext">WindowOrWorkerGlobalScope.isSecureContext - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/isSecureContext">Window.isSecureContext - MDN</a>
    */
   @JsProperty(
       name = "isSecureContext"
   )
   public native boolean isSecureContext();
 
+  /**
+   * Returns the number of frames (either frame or iframe elements) in the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/length">Window.length - MDN</a>
+   */
   @JsProperty(
       name = "length"
   )
   public native int length();
 
+  /**
+   * The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Window.localStorage - MDN</a>
+   */
   @JsProperty(
       name = "localStorage"
   )
   @Nonnull
   public native Storage localStorage();
 
+  /**
+   * The Window.location read-only property returns a Location object with information about the current location of the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location">Window.location - MDN</a>
+   */
   @JsProperty(
       name = "location"
   )
   @Nonnull
   public native Location location();
 
+  /**
+   * Returns the locationbar object, whose visibility can be checked.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar">Window.locationbar - MDN</a>
+   */
   @JsProperty(
       name = "locationbar"
   )
   @Nonnull
   public native BarProp locationbar();
 
+  /**
+   * The Window.menubar property returns the menubar object, whose visibility can be checked.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar">Window.menubar - MDN</a>
+   */
   @JsProperty(
       name = "menubar"
   )
   @Nonnull
   public native BarProp menubar();
 
+  /**
+   * The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator">Window.navigator - MDN</a>
+   */
   @JsProperty(
       name = "navigator"
   )
@@ -975,128 +1085,243 @@ public class Window extends EventTarget {
   @Nonnull
   public native String origin();
 
+  /**
+   * The Window.outerHeight read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight - MDN</a>
+   */
   @JsProperty(
       name = "outerHeight"
   )
   public native int outerHeight();
 
+  /**
+   * Window.outerWidth read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth - MDN</a>
+   */
   @JsProperty(
       name = "outerWidth"
   )
   public native int outerWidth();
 
+  /**
+   * The read-only Window property pageXOffset is an alias for scrollX.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageXOffset">Window.pageXOffset - MDN</a>
+   */
   @JsProperty(
       name = "pageXOffset"
   )
   public native double pageXOffset();
 
+  /**
+   * The read-only Window property pageYOffset is an alias for scrollY; as such, it returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down) with a value of 0.0, indicating that the top edge of the Document is currently aligned with the top edge of the window's content area.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset">Window.pageYOffset - MDN</a>
+   */
   @JsProperty(
       name = "pageYOffset"
   )
   public native double pageYOffset();
 
+  /**
+   * The Window.parent property is a reference to the parent of the current window or subframe.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/parent">Window.parent - MDN</a>
+   */
   @JsProperty(
       name = "parent"
   )
   @Nullable
   public native Window parent();
 
+  /**
+   * The Window interface's performance property returns a Performance object, which can be used to gather performance information about the current document. It serves as the point of exposure for the Performance Timeline API, the High Resolution Time API, the Navigation Timing API, the User Timing API, and the Resource Timing API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/performance">Window.performance - MDN</a>
+   */
   @JsProperty(
       name = "performance"
   )
   @Nonnull
   public native Performance performance();
 
+  /**
+   * Returns the personalbar object, whose visibility can be toggled in the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/personalbar">Window.personalbar - MDN</a>
+   */
   @JsProperty(
       name = "personalbar"
   )
   @Nonnull
   public native BarProp personalbar();
 
+  /**
+   * The Window property screen returns a reference to the screen object associated with the window. The screen object, implementing the Screen interface, is a special object for inspecting properties of the screen on which the current window is being rendered.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screen">Window.screen - MDN</a>
+   */
   @JsProperty(
       name = "screen"
   )
   @Nonnull
   public native Screen screen();
 
+  /**
+   * The Window.screenLeft read-only property returns the horizontal distance, in CSS pixels, from the left border of the user's browser viewport to the left side of the screen.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenLeft">Window.screenLeft - MDN</a>
+   */
   @JsProperty(
       name = "screenLeft"
   )
   public native int screenLeft();
 
+  /**
+   * The Window.screenTop read-only property returns the vertical distance, in CSS pixels, from the top border of the user's browser viewport to the top side of the screen.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenTop">Window.screenTop - MDN</a>
+   */
   @JsProperty(
       name = "screenTop"
   )
   public native int screenTop();
 
+  /**
+   * The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser viewport to the left side of the screen.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenX">Window.screenX - MDN</a>
+   */
   @JsProperty(
       name = "screenX"
   )
   public native int screenX();
 
+  /**
+   * The Window.screenY read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenY">Window.screenY - MDN</a>
+   */
   @JsProperty(
       name = "screenY"
   )
   public native int screenY();
 
+  /**
+   * The read-only scrollX property of the Window interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the scrollY property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollX">Window.scrollX - MDN</a>
+   */
   @JsProperty(
       name = "scrollX"
   )
   public native double scrollX();
 
+  /**
+   * The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY">Window.scrollY - MDN</a>
+   */
   @JsProperty(
       name = "scrollY"
   )
   public native double scrollY();
 
+  /**
+   * The Window.scrollbars property returns the scrollbars object, whose visibility can be checked.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars">Window.scrollbars - MDN</a>
+   */
   @JsProperty(
       name = "scrollbars"
   )
   @Nonnull
   public native BarProp scrollbars();
 
+  /**
+   * The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/self">Window.self - MDN</a>
+   */
   @JsProperty(
       name = "self"
   )
   @Nonnull
   public native Window self();
 
+  /**
+   * The read-only sessionStorage property accesses a session Storage object for the current origin. sessionStorage is similar to localStorage; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Window.sessionStorage - MDN</a>
+   */
   @JsProperty(
       name = "sessionStorage"
   )
   @Nonnull
   public native Storage sessionStorage();
 
+  /**
+   * The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/speechSynthesis">Window.speechSynthesis - MDN</a>
+   */
   @JsProperty(
       name = "speechSynthesis"
   )
   @Nonnull
   public native SpeechSynthesis speechSynthesis();
 
+  /**
+   * The Window.statusbar property returns the statusbar object, whose visibility can be toggled in the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar">Window.statusbar - MDN</a>
+   */
   @JsProperty(
       name = "statusbar"
   )
   @Nonnull
   public native BarProp statusbar();
 
+  /**
+   * The Window.toolbar property returns the toolbar object, whose visibility can be toggled in the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar">Window.toolbar - MDN</a>
+   */
   @JsProperty(
       name = "toolbar"
   )
   @Nonnull
   public native BarProp toolbar();
 
+  /**
+   * Returns a reference to the topmost window in the window hierarchy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/top">Window.top - MDN</a>
+   */
   @JsProperty(
       name = "top"
   )
   @Nullable
   public native Window top();
 
+  /**
+   * The visualViewport read-only property of the Window interface returns a VisualViewport object representing the visual viewport for a given window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/visualViewport">Window.visualViewport - MDN</a>
+   */
   @JsProperty(
       name = "visualViewport"
   )
   @Nonnull
   public native VisualViewport visualViewport();
 
+  /**
+   * The window property of a Window object points to the window object itself.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/window">Window.window - MDN</a>
+   */
   @JsProperty(
       name = "window"
   )
@@ -1422,14 +1647,24 @@ public class Window extends EventTarget {
   @Nullable
   public native Selection getSelection();
 
+  /**
+   * The Window.captureEvents() method registers the window to capture all events of the specified type.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents">Window.captureEvents - MDN</a>
+   */
   public native void captureEvents();
 
+  /**
+   * Releases the window from trapping events of a specific type.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/releaseEvents">Window.releaseEvents - MDN</a>
+   */
   public native void releaseEvents();
 
   /**
    * The WindowOrWorkerGlobalScope.atob() function decodes a string of data which has been encoded using Base64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob">WindowOrWorkerGlobalScope.atob - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/atob">Window.atob - MDN</a>
    */
   @Nonnull
   public native String atob(@Nonnull String data);
@@ -1437,7 +1672,7 @@ public class Window extends EventTarget {
   /**
    * The WindowOrWorkerGlobalScope.btoa() method creates a Base64-encoded ASCII string from a binary string (i.e., a String object in which each character in the string is treated as a byte of binary data).
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa">WindowOrWorkerGlobalScope.btoa - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/btoa">Window.btoa - MDN</a>
    */
   @Nonnull
   public native String btoa(@Nonnull String data);
@@ -1445,28 +1680,28 @@ public class Window extends EventTarget {
   /**
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">WindowOrWorkerGlobalScope.clearInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval">Window.clearInterval - MDN</a>
    */
   public native void clearInterval(int handle);
 
   /**
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">WindowOrWorkerGlobalScope.clearInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval">Window.clearInterval - MDN</a>
    */
   public native void clearInterval();
 
   /**
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout">WindowOrWorkerGlobalScope.clearTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout">Window.clearTimeout - MDN</a>
    */
   public native void clearTimeout(int handle);
 
   /**
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout">WindowOrWorkerGlobalScope.clearTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout">Window.clearTimeout - MDN</a>
    */
   public native void clearTimeout();
 
@@ -1865,7 +2100,7 @@ public class Window extends EventTarget {
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout,
       @Nullable Any... arguments);
@@ -1873,21 +2108,21 @@ public class Window extends EventTarget {
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull String handler, int timeout, @Nullable Any... arguments);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout, @Nullable Any... arguments);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -1895,7 +2130,7 @@ public class Window extends EventTarget {
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull String handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -1903,7 +2138,7 @@ public class Window extends EventTarget {
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -1911,28 +2146,28 @@ public class Window extends EventTarget {
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull String handler, int timeout);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull TimerHandler handler, int timeout,
       @Nullable Any... arguments);
@@ -1940,21 +2175,21 @@ public class Window extends EventTarget {
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull String handler, int timeout, @Nullable Any... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout, @Nullable Any... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -1962,7 +2197,7 @@ public class Window extends EventTarget {
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull String handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -1970,7 +2205,7 @@ public class Window extends EventTarget {
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -1978,28 +2213,28 @@ public class Window extends EventTarget {
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull TimerHandler handler, int timeout);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull String handler, int timeout);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout);
 
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">WindowOrWorkerGlobalScope.fetch - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull RequestInfo input, @Nonnull RequestInit init);
@@ -2007,7 +2242,7 @@ public class Window extends EventTarget {
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">WindowOrWorkerGlobalScope.fetch - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull Request input, @Nonnull RequestInit init);
@@ -2015,7 +2250,7 @@ public class Window extends EventTarget {
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">WindowOrWorkerGlobalScope.fetch - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull String input, @Nonnull RequestInit init);
@@ -2023,7 +2258,7 @@ public class Window extends EventTarget {
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">WindowOrWorkerGlobalScope.fetch - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull RequestInfo input);
@@ -2031,7 +2266,7 @@ public class Window extends EventTarget {
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">WindowOrWorkerGlobalScope.fetch - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull Request input);
@@ -2039,7 +2274,7 @@ public class Window extends EventTarget {
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">WindowOrWorkerGlobalScope.fetch - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull String input);

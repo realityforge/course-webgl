@@ -8,6 +8,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The IDBTransaction interface of the IndexedDB API provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use IDBDatabase to start transactions, IDBTransaction to set the mode of the transaction (e.g. is it readonly or readwrite), and you access an IDBObjectStore to make a request. You can also use an IDBTransaction object to abort transactions.
@@ -63,6 +64,9 @@ public class IDBTransaction extends EventTarget {
       name = "durability"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = IDBTransactionDurability.class
+  )
   public native String durability();
 
   /**
@@ -85,6 +89,9 @@ public class IDBTransaction extends EventTarget {
       name = "mode"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = IDBTransactionMode.class
+  )
   public native String mode();
 
   /**

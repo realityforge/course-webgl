@@ -17,10 +17,20 @@ import jsinterop.annotations.JsType;
     name = "PeriodicWave"
 )
 public class PeriodicWave {
+  /**
+   * The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave/PeriodicWave">PeriodicWave.PeriodicWave - MDN</a>
+   */
   public PeriodicWave(@Nonnull final BaseAudioContext context,
       @Nonnull final PeriodicWaveOptions options) {
   }
 
+  /**
+   * The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave/PeriodicWave">PeriodicWave.PeriodicWave - MDN</a>
+   */
   public PeriodicWave(@Nonnull final BaseAudioContext context) {
   }
 }

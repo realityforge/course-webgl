@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "MediaRecorderErrorEvent"
 )
 public class MediaRecorderErrorEvent extends Event {
+  /**
+   * The MediaRecorderErrorEvent() constructor creates a new MediaRecorderErrorEvent object that represents an error that occurred during the recording of media by the MediaStream Recording API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent">MediaRecorderErrorEvent.MediaRecorderErrorEvent - MDN</a>
+   */
   public MediaRecorderErrorEvent(@Nonnull final String type,
       @Nonnull final MediaRecorderErrorEventInit eventInitDict) {
     super( null );

@@ -59,6 +59,11 @@ public class KeyboardEvent extends UIEvent {
   )
   public native boolean altKey();
 
+  /**
+   * The charCode read-only property of the KeyboardEvent interface returns the Unicode value of a character key pressed during a keypress event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/charCode">KeyboardEvent.charCode - MDN</a>
+   */
   @JsProperty(
       name = "charCode"
   )
@@ -106,6 +111,11 @@ public class KeyboardEvent extends UIEvent {
   @Nonnull
   public native String key();
 
+  /**
+   * The deprecated KeyboardEvent.keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">KeyboardEvent.keyCode - MDN</a>
+   */
   @JsProperty(
       name = "keyCode"
   )

@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "PointerEvent"
 )
 public class PointerEvent extends MouseEvent {
+  /**
+   * The PointerEvent() constructor creates a new synthetic and untrusted PointerEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/PointerEvent">PointerEvent.PointerEvent - MDN</a>
+   */
   public PointerEvent(@Nonnull final String type, @Nonnull final PointerEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The PointerEvent() constructor creates a new synthetic and untrusted PointerEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/PointerEvent">PointerEvent.PointerEvent - MDN</a>
+   */
   public PointerEvent(@Nonnull final String type) {
     super( null );
   }

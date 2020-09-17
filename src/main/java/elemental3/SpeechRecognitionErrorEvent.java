@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The SpeechRecognitionErrorEvent interface of the Web Speech API represents error messages from the recognition service.
@@ -32,6 +33,9 @@ public class SpeechRecognitionErrorEvent extends Event {
       name = "error"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = SpeechRecognitionErrorCode.class
+  )
   public native String error();
 
   /**

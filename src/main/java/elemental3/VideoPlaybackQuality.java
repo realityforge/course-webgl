@@ -20,6 +20,11 @@ public class VideoPlaybackQuality {
   VideoPlaybackQuality() {
   }
 
+  /**
+   * The VideoPlaybackQuality interface's read-only corruptedVideoFrames property the number of corrupted video frames that have been received since the video element was last loaded or reloaded.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/corruptedVideoFrames">VideoPlaybackQuality.corruptedVideoFrames - MDN</a>
+   */
   @JsProperty(
       name = "corruptedVideoFrames"
   )

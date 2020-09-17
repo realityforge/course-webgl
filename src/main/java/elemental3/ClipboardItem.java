@@ -8,6 +8,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.
@@ -42,6 +43,9 @@ public class ClipboardItem {
       name = "presentationStyle"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = PresentationStyle.class
+  )
   public native String presentationStyle();
 
   /**

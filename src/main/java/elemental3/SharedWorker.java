@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "SharedWorker"
 )
 public class SharedWorker extends EventTarget {
+  /**
+   * The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/onerror">SharedWorker.onerror - MDN</a>
+   */
   @Nullable
   public EventHandler onerror;
 

@@ -30,7 +30,7 @@ public class DocumentFragment extends Node {
   /**
    * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/childElementCount">DocumentFragment.childElementCount - MDN</a>
    */
   @JsProperty(
       name = "childElementCount"
@@ -40,7 +40,7 @@ public class DocumentFragment extends Node {
   /**
    * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/children">DocumentFragment.children - MDN</a>
    */
   @JsProperty(
       name = "children"
@@ -51,7 +51,7 @@ public class DocumentFragment extends Node {
   /**
    * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/firstElementChild">DocumentFragment.firstElementChild - MDN</a>
    */
   @JsProperty(
       name = "firstElementChild"
@@ -62,7 +62,7 @@ public class DocumentFragment extends Node {
   /**
    * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild">ParentNode.lastElementChild - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/lastElementChild">DocumentFragment.lastElementChild - MDN</a>
    */
   @JsProperty(
       name = "lastElementChild"

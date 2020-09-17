@@ -28,11 +28,21 @@ public class CSSStyleDeclaration {
   CSSStyleDeclaration() {
   }
 
+  /**
+   * The read-only property returns an integer that represents the number of style declarations in this CSS declaration block.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/length">CSSStyleDeclaration.length - MDN</a>
+   */
   @JsProperty(
       name = "length"
   )
   public native int length();
 
+  /**
+   * The CSSStyleDeclaration.parentRule read-only property returns a CSSRule that is the parent of this style block
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/parentRule">CSSStyleDeclaration.parentRule - MDN</a>
+   */
   @JsProperty(
       name = "parentRule"
   )

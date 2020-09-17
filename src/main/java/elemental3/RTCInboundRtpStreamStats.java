@@ -1081,6 +1081,11 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
+  /**
+   * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -1089,6 +1094,11 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
+  /**
+   * The kind property of the RTCRtpStreamStats dictionary is a string indicating whether the described RTP stream contains audio or video media.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/kind">RTCRtpStreamStats.kind - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -1097,6 +1107,11 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
+  /**
+   * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -1105,6 +1120,11 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
+  /**
+   * The RTCRtpStreamStats dictionary's transportId property is a string which uniquely identifies the object from which the statistics contained in the RTCTransportStats properties in the RTCStatsReport.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/transportId">RTCRtpStreamStats.transportId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override

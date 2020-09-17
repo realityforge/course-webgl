@@ -20,6 +20,11 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "BiquadFilterNode"
 )
 public class BiquadFilterNode extends AudioNode {
+  /**
+   * A string (enum) representing a BiquadFilterType.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/type">BiquadFilterNode.type - MDN</a>
+   */
   @Nonnull
   @MagicConstant(
       valuesFromClass = BiquadFilterType.class
@@ -43,24 +48,44 @@ public class BiquadFilterNode extends AudioNode {
   public BiquadFilterNode(@Nonnull final BaseAudioContext context) {
   }
 
+  /**
+   * An AudioParam.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/Q">BiquadFilterNode.Q - MDN</a>
+   */
   @JsProperty(
       name = "Q"
   )
   @Nonnull
   public native AudioParam Q();
 
+  /**
+   * An a-rate AudioParam.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/detune">BiquadFilterNode.detune - MDN</a>
+   */
   @JsProperty(
       name = "detune"
   )
   @Nonnull
   public native AudioParam detune();
 
+  /**
+   * An AudioParam.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/frequency">BiquadFilterNode.frequency - MDN</a>
+   */
   @JsProperty(
       name = "frequency"
   )
   @Nonnull
   public native AudioParam frequency();
 
+  /**
+   * An AudioParam.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/gain">BiquadFilterNode.gain - MDN</a>
+   */
   @JsProperty(
       name = "gain"
   )

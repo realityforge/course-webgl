@@ -4,6 +4,7 @@ import elemental2.core.Float32Array;
 import elemental3.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 
+// Rename as Prefab?
 final class CubeTemplate
 {
   // Vertices position data

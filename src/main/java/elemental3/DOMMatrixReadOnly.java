@@ -21,15 +21,35 @@ import jsinterop.annotations.JsType;
     name = "DOMMatrixReadOnly"
 )
 public class DOMMatrixReadOnly {
+  /**
+   * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   */
   public DOMMatrixReadOnly(@Nonnull final String init) {
   }
 
+  /**
+   * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   */
   public DOMMatrixReadOnly(@Nonnull final JsArray<Double> init) {
   }
 
+  /**
+   * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   */
   public DOMMatrixReadOnly(@Nonnull final Double[] init) {
   }
 
+  /**
+   * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   */
   public DOMMatrixReadOnly() {
   }
 

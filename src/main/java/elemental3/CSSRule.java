@@ -53,6 +53,11 @@ public class CSSRule {
   @JsOverlay
   public static final int SUPPORTS_RULE = 12;
 
+  /**
+   * The cssText property of the CSSRule interface returns the actual text of a CSSStyleSheet style-rule.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/cssText">CSSRule.cssText - MDN</a>
+   */
   @Nonnull
   public String cssText;
 
@@ -65,6 +70,11 @@ public class CSSRule {
   @Nullable
   public native CSSRule parentRule();
 
+  /**
+   * The parentStyleSheet property of the CSSRule interface returns the StyleSheet object in which the current rule is defined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/parentStyleSheet">CSSRule.parentStyleSheet - MDN</a>
+   */
   @JsProperty(
       name = "parentStyleSheet"
   )

@@ -44,9 +44,19 @@ public class OffscreenCanvas extends EventTarget {
   public OffscreenCanvas(final int width, final int height) {
   }
 
+  /**
+   * The OffscreenCanvas.convertToBlob()method creates a Blob object representing the image contained in the canvas.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/convertToBlob">OffscreenCanvas.convertToBlob - MDN</a>
+   */
   @Nonnull
   public native Promise<Blob> convertToBlob(@Nonnull ImageEncodeOptions options);
 
+  /**
+   * The OffscreenCanvas.convertToBlob()method creates a Blob object representing the image contained in the canvas.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/convertToBlob">OffscreenCanvas.convertToBlob - MDN</a>
+   */
   @Nonnull
   public native Promise<Blob> convertToBlob();
 
@@ -79,6 +89,11 @@ public class OffscreenCanvas extends EventTarget {
   public native OffscreenRenderingContext getContext(
       @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId);
 
+  /**
+   * The OffscreenCanvas.transferToImageBitmap() method creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap">OffscreenCanvas.transferToImageBitmap - MDN</a>
+   */
   @Nonnull
   public native ImageBitmap transferToImageBitmap();
 }

@@ -75,8 +75,18 @@ public class AnalyserNode extends AudioNode {
   )
   public native int frequencyBinCount();
 
+  /**
+   * The getByteFrequencyData() method of the AnalyserNode interface copies the current frequency data into a Uint8Array (unsigned byte array) passed into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData">AnalyserNode.getByteFrequencyData - MDN</a>
+   */
   public native void getByteFrequencyData(@Nonnull Uint8Array array);
 
+  /**
+   * The getByteTimeDomainData() method of the AnalyserNode Interface copies the current waveform, or time-domain, data into a Uint8Array (unsigned byte array) passed into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteTimeDomainData">AnalyserNode.getByteTimeDomainData - MDN</a>
+   */
   public native void getByteTimeDomainData(@Nonnull Uint8Array array);
 
   /**
@@ -86,5 +96,10 @@ public class AnalyserNode extends AudioNode {
    */
   public native void getFloatFrequencyData(@Nonnull Float32Array array);
 
+  /**
+   * The getFloatTimeDomainData() method of the AnalyserNode Interface copies the current waveform, or time-domain, data into a Float32Array array passed into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getFloatTimeDomainData">AnalyserNode.getFloatTimeDomainData - MDN</a>
+   */
   public native void getFloatTimeDomainData(@Nonnull Float32Array array);
 }

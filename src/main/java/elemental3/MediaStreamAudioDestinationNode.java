@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "MediaStreamAudioDestinationNode"
 )
 public class MediaStreamAudioDestinationNode extends AudioNode {
+  /**
+   * The MediaStreamAudioDestinationNode() constructor of the Web Audio API creates a new MediaStreamAudioDestinationNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode - MDN</a>
+   */
   public MediaStreamAudioDestinationNode(@Nonnull final AudioContext context,
       @Nonnull final AudioNodeOptions options) {
   }
 
+  /**
+   * The MediaStreamAudioDestinationNode() constructor of the Web Audio API creates a new MediaStreamAudioDestinationNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode - MDN</a>
+   */
   public MediaStreamAudioDestinationNode(@Nonnull final AudioContext context) {
   }
 

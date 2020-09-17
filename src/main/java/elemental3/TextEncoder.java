@@ -27,18 +27,38 @@ public class TextEncoder {
   public TextEncoder() {
   }
 
+  /**
+   * The TextEncoder.encoding read-only property returns a DOMString containing the name of the encoding algorithm used by the specific encoder.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encoding">TextEncoder.encoding - MDN</a>
+   */
   @JsProperty(
       name = "encoding"
   )
   @Nonnull
   public native String encoding();
 
+  /**
+   * The TextEncoder.prototype.encode() method takes a USVString as input, and returns a Uint8Array containing the text given in parameters encoded with the specific method for that TextEncoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode">TextEncoder.encode - MDN</a>
+   */
   @Nonnull
   public native Uint8Array encode(@Nonnull String input);
 
+  /**
+   * The TextEncoder.prototype.encode() method takes a USVString as input, and returns a Uint8Array containing the text given in parameters encoded with the specific method for that TextEncoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode">TextEncoder.encode - MDN</a>
+   */
   @Nonnull
   public native Uint8Array encode();
 
+  /**
+   * The TextEncoder.prototype.encodeInto() method takes a USVString to encode and a destination Uint8Array to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older encode() method especially when the target buffer is a view into a Wasm heap.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto">TextEncoder.encodeInto - MDN</a>
+   */
   @Nonnull
   public native TextEncoderEncodeIntoResult encodeInto(@Nonnull String source,
       @Nonnull Uint8Array destination);

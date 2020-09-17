@@ -27,7 +27,7 @@ public class SVGElement extends Element {
   /**
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onabort">SVGElement.onabort - MDN</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -75,7 +75,7 @@ public class SVGElement extends Element {
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">GlobalEventHandlers.onblur - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onblur">SVGElement.onblur - MDN</a>
    */
   @Nullable
   public FocusEventHandler onblur;
@@ -107,7 +107,7 @@ public class SVGElement extends Element {
   /**
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">GlobalEventHandlers.onchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onchange">SVGElement.onchange - MDN</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -115,7 +115,7 @@ public class SVGElement extends Element {
   /**
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">GlobalEventHandlers.onclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onclick">SVGElement.onclick - MDN</a>
    */
   @Nullable
   public MouseEventHandler onclick;
@@ -131,7 +131,7 @@ public class SVGElement extends Element {
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu">GlobalEventHandlers.oncontextmenu - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/oncontextmenu">SVGElement.oncontextmenu - MDN</a>
    */
   @Nullable
   public MouseEventHandler oncontextmenu;
@@ -153,7 +153,7 @@ public class SVGElement extends Element {
   /**
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">GlobalEventHandlers.ondblclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/ondblclick">SVGElement.ondblclick - MDN</a>
    */
   @Nullable
   public MouseEventHandler ondblclick;
@@ -257,7 +257,7 @@ public class SVGElement extends Element {
   /**
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus">GlobalEventHandlers.onfocus - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onfocus">SVGElement.onfocus - MDN</a>
    */
   @Nullable
   public FocusEventHandler onfocus;
@@ -281,7 +281,7 @@ public class SVGElement extends Element {
   /**
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/oninput">SVGElement.oninput - MDN</a>
    */
   @Nullable
   public EventHandler oninput;
@@ -297,7 +297,7 @@ public class SVGElement extends Element {
   /**
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">GlobalEventHandlers.onkeydown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onkeydown">SVGElement.onkeydown - MDN</a>
    */
   @Nullable
   public EventHandler onkeydown;
@@ -305,7 +305,7 @@ public class SVGElement extends Element {
   /**
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">GlobalEventHandlers.onkeypress - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onkeypress">SVGElement.onkeypress - MDN</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -313,7 +313,7 @@ public class SVGElement extends Element {
   /**
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">GlobalEventHandlers.onkeyup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onkeyup">SVGElement.onkeyup - MDN</a>
    */
   @Nullable
   public EventHandler onkeyup;
@@ -321,7 +321,7 @@ public class SVGElement extends Element {
   /**
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload">GlobalEventHandlers.onload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onload">SVGElement.onload - MDN</a>
    */
   @Nullable
   public EventHandler onload;
@@ -361,7 +361,7 @@ public class SVGElement extends Element {
   /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">GlobalEventHandlers.onmousedown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmousedown">SVGElement.onmousedown - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmousedown;
@@ -385,7 +385,7 @@ public class SVGElement extends Element {
   /**
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousemove">GlobalEventHandlers.onmousemove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmousemove">SVGElement.onmousemove - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmousemove;
@@ -393,7 +393,7 @@ public class SVGElement extends Element {
   /**
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">GlobalEventHandlers.onmouseout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmouseout">SVGElement.onmouseout - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmouseout;
@@ -401,7 +401,7 @@ public class SVGElement extends Element {
   /**
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">GlobalEventHandlers.onmouseover - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmouseover">SVGElement.onmouseover - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmouseover;
@@ -409,7 +409,7 @@ public class SVGElement extends Element {
   /**
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">GlobalEventHandlers.onmouseup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmouseup">SVGElement.onmouseup - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmouseup;
@@ -514,15 +514,15 @@ public class SVGElement extends Element {
   /**
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onreset">SVGElement.onreset - MDN</a>
    */
   @Nullable
   public EventHandler onreset;
 
   /**
-   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
+   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onresize">SVGElement.onresize - MDN</a>
    */
   @Nullable
   public EventHandler onresize;
@@ -530,7 +530,7 @@ public class SVGElement extends Element {
   /**
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onscroll">SVGElement.onscroll - MDN</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -547,7 +547,7 @@ public class SVGElement extends Element {
   /**
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onselect">SVGElement.onselect - MDN</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -577,7 +577,7 @@ public class SVGElement extends Element {
   /**
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onsubmit">SVGElement.onsubmit - MDN</a>
    */
   @Nullable
   public EventHandler onsubmit;

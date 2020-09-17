@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.
@@ -35,6 +36,11 @@ public class RTCIceCandidate {
   public RTCIceCandidate() {
   }
 
+  /**
+   * The RTCIceCandidate interface's read-only address property is a string providing the address of the device which is the source of the candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/address">RTCIceCandidate.address - MDN</a>
+   */
   @JsProperty(
       name = "address"
   )
@@ -61,6 +67,9 @@ public class RTCIceCandidate {
       name = "component"
   )
   @Nullable
+  @MagicConstant(
+      valuesFromClass = RTCIceComponent.class
+  )
   public native String component();
 
   /**
@@ -105,6 +114,9 @@ public class RTCIceCandidate {
       name = "protocol"
   )
   @Nullable
+  @MagicConstant(
+      valuesFromClass = RTCIceProtocol.class
+  )
   public native String protocol();
 
   /**
@@ -160,6 +172,9 @@ public class RTCIceCandidate {
       name = "tcpType"
   )
   @Nullable
+  @MagicConstant(
+      valuesFromClass = RTCIceTcpCandidateType.class
+  )
   public native String tcpType();
 
   /**
@@ -171,6 +186,9 @@ public class RTCIceCandidate {
       name = "type"
   )
   @Nullable
+  @MagicConstant(
+      valuesFromClass = RTCIceCandidateType.class
+  )
   public native String type();
 
   /**

@@ -20,10 +20,20 @@ import jsinterop.annotations.JsType;
     name = "IntersectionObserver"
 )
 public class IntersectionObserver {
+  /**
+   * The IntersectionObserver() constructor creates and returns a new IntersectionObserver object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver">IntersectionObserver.IntersectionObserver - MDN</a>
+   */
   public IntersectionObserver(@Nonnull final IntersectionObserverCallback callback,
       @Nonnull final IntersectionObserverInit options) {
   }
 
+  /**
+   * The IntersectionObserver() constructor creates and returns a new IntersectionObserver object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver">IntersectionObserver.IntersectionObserver - MDN</a>
+   */
   public IntersectionObserver(@Nonnull final IntersectionObserverCallback callback) {
   }
 

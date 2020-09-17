@@ -121,9 +121,19 @@ public class SpeechSynthesisUtterance extends EventTarget {
    */
   public float volume;
 
+  /**
+   * The SpeechSynthesisUtterance() constructor of the SpeechSynthesisUtterance interface returns a new SpeechSynthesisUtterance object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance">SpeechSynthesisUtterance.SpeechSynthesisUtterance - MDN</a>
+   */
   public SpeechSynthesisUtterance(@Nonnull final String text) {
   }
 
+  /**
+   * The SpeechSynthesisUtterance() constructor of the SpeechSynthesisUtterance interface returns a new SpeechSynthesisUtterance object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance">SpeechSynthesisUtterance.SpeechSynthesisUtterance - MDN</a>
+   */
   public SpeechSynthesisUtterance() {
   }
 

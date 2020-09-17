@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
@@ -31,6 +32,9 @@ public class GamepadHapticActuator {
       name = "type"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = GamepadHapticActuatorType.class
+  )
   public native String type();
 
   /**

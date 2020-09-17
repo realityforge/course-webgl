@@ -19,6 +19,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
@@ -63,6 +64,11 @@ public class RTCDataChannel extends EventTarget {
   @Nullable
   public EventHandler onclose;
 
+  /**
+   * The RTCDataChannel.onclosing property is an EventHandler which specifies a function to be called by the browser when the closing event is received by the RTCDataChannel. This is a simple Event which indicates that the data channel is being closed, that is, RTCDataChannel transitions to &quot;closing&quot; state. For example, after RTCDataChannel.close() was called but the underlying data transport might not have been closed yet.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclosing">RTCDataChannel.onclosing - MDN</a>
+   */
   @Nullable
   public EventHandler onclosing;
 
@@ -171,6 +177,9 @@ public class RTCDataChannel extends EventTarget {
       name = "priority"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCPriorityType.class
+  )
   public native String priority();
 
   /**
@@ -193,6 +202,9 @@ public class RTCDataChannel extends EventTarget {
       name = "readyState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCDataChannelState.class
+  )
   public native String readyState();
 
   /**

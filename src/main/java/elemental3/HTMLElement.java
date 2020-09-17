@@ -22,6 +22,11 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "HTMLElement"
 )
 public class HTMLElement extends Element {
+  /**
+   * The HTMLElement.accessKey property sets the keystroke which a user can press to jump to a given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKey">HTMLElement.accessKey - MDN</a>
+   */
   @Nonnull
   public String accessKey;
 
@@ -92,7 +97,7 @@ public class HTMLElement extends Element {
   /**
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onabort">HTMLElement.onabort - MDN</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -140,7 +145,7 @@ public class HTMLElement extends Element {
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">GlobalEventHandlers.onblur - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onblur">HTMLElement.onblur - MDN</a>
    */
   @Nullable
   public FocusEventHandler onblur;
@@ -172,7 +177,7 @@ public class HTMLElement extends Element {
   /**
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">GlobalEventHandlers.onchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onchange">HTMLElement.onchange - MDN</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -180,7 +185,7 @@ public class HTMLElement extends Element {
   /**
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">GlobalEventHandlers.onclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onclick">HTMLElement.onclick - MDN</a>
    */
   @Nullable
   public MouseEventHandler onclick;
@@ -196,11 +201,16 @@ public class HTMLElement extends Element {
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu">GlobalEventHandlers.oncontextmenu - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncontextmenu">HTMLElement.oncontextmenu - MDN</a>
    */
   @Nullable
   public MouseEventHandler oncontextmenu;
 
+  /**
+   * The oncopy property of the HTMLElement interface is an EventHandler that processes copy events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncopy">HTMLElement.oncopy - MDN</a>
+   */
   @Nullable
   public ClipboardEventHandler oncopy;
 
@@ -212,13 +222,18 @@ public class HTMLElement extends Element {
   @Nullable
   public EventHandler oncuechange;
 
+  /**
+   * The HTMLElement.oncut property of the HTMLElement interface is an EventHandler that processes cut events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncut">HTMLElement.oncut - MDN</a>
+   */
   @Nullable
   public ClipboardEventHandler oncut;
 
   /**
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">GlobalEventHandlers.ondblclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/ondblclick">HTMLElement.ondblclick - MDN</a>
    */
   @Nullable
   public MouseEventHandler ondblclick;
@@ -322,7 +337,7 @@ public class HTMLElement extends Element {
   /**
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus">GlobalEventHandlers.onfocus - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onfocus">HTMLElement.onfocus - MDN</a>
    */
   @Nullable
   public FocusEventHandler onfocus;
@@ -346,7 +361,7 @@ public class HTMLElement extends Element {
   /**
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oninput">HTMLElement.oninput - MDN</a>
    */
   @Nullable
   public InputEventHandler oninput;
@@ -362,7 +377,7 @@ public class HTMLElement extends Element {
   /**
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">GlobalEventHandlers.onkeydown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onkeydown">HTMLElement.onkeydown - MDN</a>
    */
   @Nullable
   public EventHandler onkeydown;
@@ -370,7 +385,7 @@ public class HTMLElement extends Element {
   /**
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">GlobalEventHandlers.onkeypress - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onkeypress">HTMLElement.onkeypress - MDN</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -378,7 +393,7 @@ public class HTMLElement extends Element {
   /**
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">GlobalEventHandlers.onkeyup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onkeyup">HTMLElement.onkeyup - MDN</a>
    */
   @Nullable
   public EventHandler onkeyup;
@@ -386,7 +401,7 @@ public class HTMLElement extends Element {
   /**
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload">GlobalEventHandlers.onload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onload">HTMLElement.onload - MDN</a>
    */
   @Nullable
   public EventHandler onload;
@@ -426,7 +441,7 @@ public class HTMLElement extends Element {
   /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">GlobalEventHandlers.onmousedown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmousedown">HTMLElement.onmousedown - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmousedown;
@@ -450,7 +465,7 @@ public class HTMLElement extends Element {
   /**
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousemove">GlobalEventHandlers.onmousemove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmousemove">HTMLElement.onmousemove - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmousemove;
@@ -458,7 +473,7 @@ public class HTMLElement extends Element {
   /**
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">GlobalEventHandlers.onmouseout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmouseout">HTMLElement.onmouseout - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmouseout;
@@ -466,7 +481,7 @@ public class HTMLElement extends Element {
   /**
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">GlobalEventHandlers.onmouseover - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmouseover">HTMLElement.onmouseover - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmouseover;
@@ -474,11 +489,16 @@ public class HTMLElement extends Element {
   /**
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">GlobalEventHandlers.onmouseup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmouseup">HTMLElement.onmouseup - MDN</a>
    */
   @Nullable
   public MouseEventHandler onmouseup;
 
+  /**
+   * The HTMLElement.onpaste property of the HTMLElement interface is an EventHandler that processes paste events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onpaste">HTMLElement.onpaste - MDN</a>
+   */
   @Nullable
   public ClipboardEventHandler onpaste;
 
@@ -579,15 +599,15 @@ public class HTMLElement extends Element {
   /**
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onreset">HTMLElement.onreset - MDN</a>
    */
   @Nullable
   public EventHandler onreset;
 
   /**
-   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
+   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onresize">HTMLElement.onresize - MDN</a>
    */
   @Nullable
   public EventHandler onresize;
@@ -595,7 +615,7 @@ public class HTMLElement extends Element {
   /**
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onscroll">HTMLElement.onscroll - MDN</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -612,7 +632,7 @@ public class HTMLElement extends Element {
   /**
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onselect">HTMLElement.onselect - MDN</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -642,7 +662,7 @@ public class HTMLElement extends Element {
   /**
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onsubmit">HTMLElement.onsubmit - MDN</a>
    */
   @Nullable
   public EventHandler onsubmit;

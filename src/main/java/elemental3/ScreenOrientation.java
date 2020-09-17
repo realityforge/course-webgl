@@ -21,6 +21,11 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "ScreenOrientation"
 )
 public class ScreenOrientation extends EventTarget {
+  /**
+   * The onchange property of the ScreenOrientation is an event handler fired whenever is the EventHandler called when the screen changes orientation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/onchange">ScreenOrientation.onchange - MDN</a>
+   */
   @Nullable
   public EventHandler onchange;
 
@@ -46,6 +51,9 @@ public class ScreenOrientation extends EventTarget {
       name = "type"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = OrientationType.class
+  )
   public native String type();
 
   /**

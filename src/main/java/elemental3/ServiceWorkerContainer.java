@@ -24,6 +24,11 @@ import jsinterop.base.Js;
     name = "ServiceWorkerContainer"
 )
 public class ServiceWorkerContainer extends EventTarget {
+  /**
+   * The oncontrollerchange property of the ServiceWorkerContainer interface is an event handler fired whenever a controllerchange event occurs &mdash; when the document's associated ServiceWorkerRegistration acquires a new active worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange">ServiceWorkerContainer.oncontrollerchange - MDN</a>
+   */
   @Nullable
   public EventHandler oncontrollerchange;
 
@@ -52,6 +57,11 @@ public class ServiceWorkerContainer extends EventTarget {
   @Nullable
   public native ServiceWorker controller();
 
+  /**
+   * The ready read-only property of the ServiceWorkerContainer interface provides a way of delaying code execution until a service worker is active. It returns a Promise that will never reject, and which waits indefinitely until the ServiceWorkerRegistration associated with the current page has an active worker. Once that condition is met, it resolves with the ServiceWorkerRegistration.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/ready">ServiceWorkerContainer.ready - MDN</a>
+   */
   @JsProperty(
       name = "ready"
   )

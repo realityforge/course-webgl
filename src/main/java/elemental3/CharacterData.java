@@ -33,7 +33,7 @@ public class CharacterData extends Node {
   /**
    * The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling">NonDocumentTypeChildNode.nextElementSibling - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/nextElementSibling">CharacterData.nextElementSibling - MDN</a>
    */
   @JsProperty(
       name = "nextElementSibling"
@@ -44,7 +44,7 @@ public class CharacterData extends Node {
   /**
    * The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling">NonDocumentTypeChildNode.previousElementSibling - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/previousElementSibling">CharacterData.previousElementSibling - MDN</a>
    */
   @JsProperty(
       name = "previousElementSibling"
@@ -94,7 +94,7 @@ public class CharacterData extends Node {
   /**
    * The ChildNode.remove() method removes the object from the tree it belongs to.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove">ChildNode.remove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/remove">CharacterData.remove - MDN</a>
    */
   public native void remove();
 

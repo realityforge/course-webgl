@@ -106,6 +106,11 @@ public class WEBGL_compressed_texture_astc {
   WEBGL_compressed_texture_astc() {
   }
 
+  /**
+   * The WEBGL_compressed_texture_astc.getSupportedProfiles() method returns an array of strings containing the names of the ASTC profiles supported by the implementation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles">WEBGL_compressed_texture_astc.getSupportedProfiles - MDN</a>
+   */
   @Nonnull
   public native JsArray<String> getSupportedProfiles();
 }

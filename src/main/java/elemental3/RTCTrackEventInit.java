@@ -29,15 +29,30 @@ public interface RTCTrackEventInit extends EventInit {
     return Js.<RTCTrackEventInit>uncheckedCast( JsPropertyMap.of() ).receiver( receiver ).track( track ).transceiver( transceiver );
   }
 
+  /**
+   * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
+   */
   @JsProperty(
       name = "receiver"
   )
   @Nonnull
   RTCRtpReceiver receiver();
 
+  /**
+   * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
+   */
   @JsProperty
   void setReceiver(@Nonnull RTCRtpReceiver receiver);
 
+  /**
+   * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCTrackEventInit receiver(@Nonnull final RTCRtpReceiver receiver) {
@@ -45,14 +60,29 @@ public interface RTCTrackEventInit extends EventInit {
     return this;
   }
 
+  /**
+   * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
+   */
   @JsProperty(
       name = "streams"
   )
   JsArray<MediaStream> streams();
 
+  /**
+   * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
+   */
   @JsProperty
   void setStreams(@Nonnull JsArray<MediaStream> streams);
 
+  /**
+   * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCTrackEventInit streams(@Nonnull final JsArray<MediaStream> streams) {
@@ -60,11 +90,21 @@ public interface RTCTrackEventInit extends EventInit {
     return this;
   }
 
+  /**
+   * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
+   */
   @JsOverlay
   default void setStreams(@Nonnull final MediaStream... streams) {
     setStreams( Js.<JsArray<MediaStream>>uncheckedCast( streams ) );
   }
 
+  /**
+   * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCTrackEventInit streams(@Nonnull final MediaStream... streams) {
@@ -72,15 +112,30 @@ public interface RTCTrackEventInit extends EventInit {
     return this;
   }
 
+  /**
+   * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
+   */
   @JsProperty(
       name = "track"
   )
   @Nonnull
   MediaStreamTrack track();
 
+  /**
+   * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
+   */
   @JsProperty
   void setTrack(@Nonnull MediaStreamTrack track);
 
+  /**
+   * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCTrackEventInit track(@Nonnull final MediaStreamTrack track) {

@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCSctpTransport interface provides information which describes a Stream Control Transmission Protocol (SCTP) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (DTLS) transport over which SCTP packets for all of an RTCPeerConnection's data channels are sent and received.
@@ -45,6 +46,9 @@ public class RTCSctpTransport extends EventTarget {
       name = "state"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCSctpTransportState.class
+  )
   public native String state();
 
   @JsProperty(

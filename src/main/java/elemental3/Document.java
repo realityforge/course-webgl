@@ -10,6 +10,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
@@ -23,9 +24,19 @@ import jsinterop.base.Js;
     name = "Document"
 )
 public class Document extends Node {
+  /**
+   * Returns or sets the color of an active link in the document body. A link is active during the time between mousedown and mouseup events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/alinkColor">Document.alinkColor - MDN</a>
+   */
   @Nonnull
   public String alinkColor;
 
+  /**
+   * The deprecated  bgColor property gets or sets the background color of the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/bgColor">Document.bgColor - MDN</a>
+   */
   @Nonnull
   public String bgColor;
 
@@ -40,25 +51,50 @@ public class Document extends Node {
   @Nonnull
   public String cookie;
 
+  /**
+   * document.designMode controls whether the entire document is editable. Valid values are &quot;on&quot; and &quot;off&quot;. According to the specification, this property is meant to default to &quot;off&quot;. Firefox follows this standard. The earlier versions of Chrome and IE default to &quot;inherit&quot;. Starting in Chrome 43, the default is &quot;off&quot; and &quot;inherit&quot; is no longer supported. In IE6-10, the value is capitalized.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode">Document.designMode - MDN</a>
+   */
   @Nonnull
   public String designMode;
 
+  /**
+   * The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/dir">Document.dir - MDN</a>
+   */
   @Nonnull
   public String dir;
 
+  /**
+   * The domain property of the Document interface gets/sets the domain portion of the origin of the current document, as used by the same origin policy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/domain">Document.domain - MDN</a>
+   */
   @Nonnull
   public String domain;
 
+  /**
+   * fgColor gets/sets the foreground color, or text color, of the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fgColor">Document.fgColor - MDN</a>
+   */
   @Nonnull
   public String fgColor;
 
+  /**
+   * The Document.linkColor property gets/sets the color of links within the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/linkColor">Document.linkColor - MDN</a>
+   */
   @Nonnull
   public String linkColor;
 
   /**
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onabort">Document.onabort - MDN</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -106,7 +142,7 @@ public class Document extends Node {
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">GlobalEventHandlers.onblur - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onblur">Document.onblur - MDN</a>
    */
   @Nullable
   public EventHandler onblur;
@@ -138,7 +174,7 @@ public class Document extends Node {
   /**
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">GlobalEventHandlers.onchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onchange">Document.onchange - MDN</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -146,7 +182,7 @@ public class Document extends Node {
   /**
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">GlobalEventHandlers.onclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onclick">Document.onclick - MDN</a>
    */
   @Nullable
   public EventHandler onclick;
@@ -162,7 +198,7 @@ public class Document extends Node {
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu">GlobalEventHandlers.oncontextmenu - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/oncontextmenu">Document.oncontextmenu - MDN</a>
    */
   @Nullable
   public EventHandler oncontextmenu;
@@ -184,7 +220,7 @@ public class Document extends Node {
   /**
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">GlobalEventHandlers.ondblclick - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/ondblclick">Document.ondblclick - MDN</a>
    */
   @Nullable
   public EventHandler ondblclick;
@@ -288,7 +324,7 @@ public class Document extends Node {
   /**
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus">GlobalEventHandlers.onfocus - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfocus">Document.onfocus - MDN</a>
    */
   @Nullable
   public EventHandler onfocus;
@@ -309,6 +345,11 @@ public class Document extends Node {
   @Nullable
   public EventHandler onfullscreenchange;
 
+  /**
+   * The Document.onfullscreenerror property is an event handler for the fullscreenerror event that is sent to the  document when it fails to transition into full-screen mode after a prior call to Element.requestFullscreen().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenerror">Document.onfullscreenerror - MDN</a>
+   */
   @Nullable
   public EventHandler onfullscreenerror;
 
@@ -323,7 +364,7 @@ public class Document extends Node {
   /**
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/oninput">Document.oninput - MDN</a>
    */
   @Nullable
   public EventHandler oninput;
@@ -339,7 +380,7 @@ public class Document extends Node {
   /**
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">GlobalEventHandlers.onkeydown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeydown">Document.onkeydown - MDN</a>
    */
   @Nullable
   public KeyboardEventHandler onkeydown;
@@ -347,7 +388,7 @@ public class Document extends Node {
   /**
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">GlobalEventHandlers.onkeypress - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeypress">Document.onkeypress - MDN</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -355,7 +396,7 @@ public class Document extends Node {
   /**
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">GlobalEventHandlers.onkeyup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeyup">Document.onkeyup - MDN</a>
    */
   @Nullable
   public KeyboardEventHandler onkeyup;
@@ -363,7 +404,7 @@ public class Document extends Node {
   /**
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload">GlobalEventHandlers.onload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onload">Document.onload - MDN</a>
    */
   @Nullable
   public EventHandler onload;
@@ -403,7 +444,7 @@ public class Document extends Node {
   /**
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">GlobalEventHandlers.onmousedown - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmousedown">Document.onmousedown - MDN</a>
    */
   @Nullable
   public EventHandler onmousedown;
@@ -427,7 +468,7 @@ public class Document extends Node {
   /**
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousemove">GlobalEventHandlers.onmousemove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmousemove">Document.onmousemove - MDN</a>
    */
   @Nullable
   public EventHandler onmousemove;
@@ -435,7 +476,7 @@ public class Document extends Node {
   /**
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">GlobalEventHandlers.onmouseout - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmouseout">Document.onmouseout - MDN</a>
    */
   @Nullable
   public EventHandler onmouseout;
@@ -443,7 +484,7 @@ public class Document extends Node {
   /**
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">GlobalEventHandlers.onmouseover - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmouseover">Document.onmouseover - MDN</a>
    */
   @Nullable
   public EventHandler onmouseover;
@@ -451,7 +492,7 @@ public class Document extends Node {
   /**
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">GlobalEventHandlers.onmouseup - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmouseup">Document.onmouseup - MDN</a>
    */
   @Nullable
   public EventHandler onmouseup;
@@ -565,7 +606,7 @@ public class Document extends Node {
   /**
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onreset">GlobalEventHandlers.onreset - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onreset">Document.onreset - MDN</a>
    */
   @Nullable
   public EventHandler onreset;
@@ -573,7 +614,7 @@ public class Document extends Node {
   /**
    * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize">GlobalEventHandlers.onresize - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onresize">Document.onresize - MDN</a>
    */
   @Nullable
   public EventHandler onresize;
@@ -581,7 +622,7 @@ public class Document extends Node {
   /**
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll">GlobalEventHandlers.onscroll - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onscroll">Document.onscroll - MDN</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -598,7 +639,7 @@ public class Document extends Node {
   /**
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect">GlobalEventHandlers.onselect - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onselect">Document.onselect - MDN</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -628,7 +669,7 @@ public class Document extends Node {
   /**
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">GlobalEventHandlers.onsubmit - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onsubmit">Document.onsubmit - MDN</a>
    */
   @Nullable
   public EventHandler onsubmit;
@@ -730,9 +771,19 @@ public class Document extends Node {
   @Nullable
   public WheelEventHandler onwheel;
 
+  /**
+   * The document.title property gets or sets the current title of the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/title">Document.title - MDN</a>
+   */
   @Nonnull
   public String title;
 
+  /**
+   * The Document.vlinkColor property gets/sets the color of links that the user has visited in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/vlinkColor">Document.vlinkColor - MDN</a>
+   */
   @Nonnull
   public String vlinkColor;
 
@@ -744,6 +795,11 @@ public class Document extends Node {
   public Document() {
   }
 
+  /**
+   * The URL read-only property of the Document interface returns the document location as a string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/URL">Document.URL - MDN</a>
+   */
   @JsProperty(
       name = "URL"
   )
@@ -761,6 +817,11 @@ public class Document extends Node {
   @Nullable
   public native Element activeElement();
 
+  /**
+   * The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns all of the document's elements, accessible by order (like an array) and by ID (like a regular object).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/all">Document.all - MDN</a>
+   */
   @JsProperty(
       name = "all"
   )
@@ -778,6 +839,11 @@ public class Document extends Node {
   @Nonnull
   public native HTMLCollection anchors();
 
+  /**
+   * The applets property of the Document interface returns a list of the applets within a document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/applets">Document.applets - MDN</a>
+   */
   @JsProperty(
       name = "applets"
   )
@@ -804,7 +870,7 @@ public class Document extends Node {
   /**
    * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/childElementCount">Document.childElementCount - MDN</a>
    */
   @JsProperty(
       name = "childElementCount"
@@ -814,7 +880,7 @@ public class Document extends Node {
   /**
    * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/children">Document.children - MDN</a>
    */
   @JsProperty(
       name = "children"
@@ -844,12 +910,22 @@ public class Document extends Node {
   @Nonnull
   public native String contentType();
 
+  /**
+   * The Document.currentScript property returns the script element whose script is currently being processed and isn't a JavaScript module. (For modules use import.meta instead.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript">Document.currentScript - MDN</a>
+   */
   @JsProperty(
       name = "currentScript"
   )
   @Nullable
   public native HTMLOrSVGScriptElement currentScript();
 
+  /**
+   * In browsers, document.defaultView returns the window object associated with a document, or null if none is available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView">Document.defaultView - MDN</a>
+   */
   @JsProperty(
       name = "defaultView"
   )
@@ -903,7 +979,7 @@ public class Document extends Node {
   /**
    * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/firstElementChild">Document.firstElementChild - MDN</a>
    */
   @JsProperty(
       name = "firstElementChild"
@@ -922,6 +998,11 @@ public class Document extends Node {
   @Nonnull
   public native HTMLCollection forms();
 
+  /**
+   * The obsolete Document interface's fullscreen read-only property reports whether or not the document is currently displaying content in full-screen mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreen">Document.fullscreen - MDN</a>
+   */
   @JsProperty(
       name = "fullscreen"
   )
@@ -938,6 +1019,11 @@ public class Document extends Node {
   @Nullable
   public native Element fullscreenElement();
 
+  /**
+   * The read-only fullscreenEnabled property on the Document interface indicates whether or not full-screen mode is available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenEnabled">Document.fullscreenEnabled - MDN</a>
+   */
   @JsProperty(
       name = "fullscreenEnabled"
   )
@@ -995,7 +1081,7 @@ public class Document extends Node {
   /**
    * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild">ParentNode.lastElementChild - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/lastElementChild">Document.lastElementChild - MDN</a>
    */
   @JsProperty(
       name = "lastElementChild"
@@ -1003,6 +1089,11 @@ public class Document extends Node {
   @Nullable
   public native Element lastElementChild();
 
+  /**
+   * The lastModified property of the Document interface returns a string containing the date and time on which the current document was last modified.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified">Document.lastModified - MDN</a>
+   */
   @JsProperty(
       name = "lastModified"
   )
@@ -1020,6 +1111,11 @@ public class Document extends Node {
   @Nonnull
   public native HTMLCollection links();
 
+  /**
+   * The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/location">Document.location - MDN</a>
+   */
   @JsProperty(
       name = "location"
   )
@@ -1048,12 +1144,25 @@ public class Document extends Node {
   @Nullable
   public native Element pointerLockElement();
 
+  /**
+   * The Document.readyState property describes the loading state of the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState">Document.readyState - MDN</a>
+   */
   @JsProperty(
       name = "readyState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = DocumentReadyState.class
+  )
   public native String readyState();
 
+  /**
+   * The Document.referrer property returns the URI of the page that linked to this page.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">Document.referrer - MDN</a>
+   */
   @JsProperty(
       name = "referrer"
   )
@@ -1119,6 +1228,9 @@ public class Document extends Node {
       name = "visibilityState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = VisibilityState.class
+  )
   public native String visibilityState();
 
   /**
@@ -1366,52 +1478,132 @@ public class Document extends Node {
   @Nonnull
   public native JsArray<Animation> getAnimations();
 
+  /**
+   * The Document method exitFullscreen() requests that the element on this document which is currently being presented in full-screen mode be taken out of full-screen mode, restoring the previous state of the screen.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen">Document.exitFullscreen - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> exitFullscreen();
 
+  /**
+   * The Document.close() method finishes writing to a document, opened with Document.open().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/close">Document.close - MDN</a>
+   */
   public native void close();
 
+  /**
+   * When an HTML document has been switched to designMode, its document object exposes an execCommand method to run commands that manipulate the current editable region, such as form inputs or contentEditable elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">Document.execCommand - MDN</a>
+   */
   public native boolean execCommand(@Nonnull String commandId, boolean showUI,
       @Nonnull String value);
 
+  /**
+   * When an HTML document has been switched to designMode, its document object exposes an execCommand method to run commands that manipulate the current editable region, such as form inputs or contentEditable elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">Document.execCommand - MDN</a>
+   */
   public native boolean execCommand(@Nonnull String commandId, boolean showUI);
 
+  /**
+   * When an HTML document has been switched to designMode, its document object exposes an execCommand method to run commands that manipulate the current editable region, such as form inputs or contentEditable elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">Document.execCommand - MDN</a>
+   */
   public native boolean execCommand(@Nonnull String commandId);
 
+  /**
+   * The getElementsByName() method of the Document object returns a NodeList Collection of elements with a given name in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName">Document.getElementsByName - MDN</a>
+   */
   @Nonnull
   public native NodeList getElementsByName(@Nonnull String elementName);
 
+  /**
+   * The hasFocus() method of the Document interface returns a Boolean value indicating whether the document or any element inside the document has focus. This method can be used to determine whether the active element in a document has focus.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus">Document.hasFocus - MDN</a>
+   */
   public native boolean hasFocus();
 
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   */
   @Nonnull
   public native Document open(@Nonnull String unused1, @Nonnull String unused2);
 
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   */
   @Nonnull
   public native Document open(@Nonnull String unused1);
 
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   */
   @Nonnull
   public native Document open();
 
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   */
   @Nullable
   public native Window open(@Nonnull String url, @Nonnull String name, @Nonnull String features);
 
+  /**
+   * The Document.queryCommandEnabled() method reports whether or not the specified editor command is enabled by the browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandEnabled">Document.queryCommandEnabled - MDN</a>
+   */
   public native boolean queryCommandEnabled(@Nonnull String commandId);
 
   public native boolean queryCommandIndeterm(@Nonnull String commandId);
 
   public native boolean queryCommandState(@Nonnull String commandId);
 
+  /**
+   * The Document.queryCommandSupported() method reports whether or not the specified editor command is supported by the browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported">Document.queryCommandSupported - MDN</a>
+   */
   public native boolean queryCommandSupported(@Nonnull String commandId);
 
   @Nonnull
   public native String queryCommandValue(@Nonnull String commandId);
 
+  /**
+   * The Document.write() method writes a string of text to a document stream opened by document.open().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write">Document.write - MDN</a>
+   */
   public native void write(@Nonnull String... text);
 
+  /**
+   * Writes a string of text followed by a newline character to a document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln">Document.writeln - MDN</a>
+   */
   public native void writeln(@Nonnull String... text);
 
   public native void captureEvents();
 
+  /**
+   * The Document.clear() method clears the whole specified document in early (pre-1.0) versions of Mozilla.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/clear">Document.clear - MDN</a>
+   */
   public native void clear();
 
   public native void releaseEvents();
@@ -1445,17 +1637,17 @@ public class Document extends Node {
   public native void prepend(@Nonnull String... nodes);
 
   /**
-   * The ParentNode mixin defines the querySelector() method as returning an Element representing the first element matching the specified group of selectors which are descendants of the object on which the method was called.
+   * The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelector">ParentNode.querySelector - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">Document.querySelector - MDN</a>
    */
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
 
   /**
-   * The ParentNode mixin defines the querySelectorAll() method as returning a NodeList representing a list of elements matching the specified group of selectors which are descendants of the object on which the method was called.
+   * The Document method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelectorAll">ParentNode.querySelectorAll - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">Document.querySelectorAll - MDN</a>
    */
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
@@ -1474,31 +1666,71 @@ public class Document extends Node {
    */
   public native void replaceChildren(@Nonnull String... nodes);
 
+  /**
+   * This method compiles an XPathExpression which can then be used for (repeated) evaluations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createExpression">Document.createExpression - MDN</a>
+   */
   @Nonnull
   public native XPathExpression createExpression(@Nonnull String expression,
       @Nullable XPathNSResolver resolver);
 
+  /**
+   * This method compiles an XPathExpression which can then be used for (repeated) evaluations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createExpression">Document.createExpression - MDN</a>
+   */
   @Nonnull
   public native XPathExpression createExpression(@Nonnull String expression);
 
+  /**
+   * Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createNSResolver">Document.createNSResolver - MDN</a>
+   */
   @Nonnull
   public native XPathNSResolver createNSResolver(@Nonnull Node nodeResolver);
 
+  /**
+   * Returns an XPathResult based on an XPath expression and other given parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
       @Nullable XPathNSResolver resolver, int type, @Nullable XPathResult result);
 
+  /**
+   * Returns an XPathResult based on an XPath expression and other given parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
       @Nullable XPathNSResolver resolver, int type);
 
+  /**
+   * Returns an XPathResult based on an XPath expression and other given parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
       @Nullable XPathNSResolver resolver);
 
+  /**
+   * Returns an XPathResult based on an XPath expression and other given parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode);
 
+  /**
+   * The Document method getElementById() returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Document.getElementById - MDN</a>
+   */
   @Nullable
   public native Element getElementById(@Nonnull String elementId);
 

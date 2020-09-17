@@ -59,6 +59,9 @@ public class MediaSource extends EventTarget {
       name = "readyState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReadyState.class
+  )
   public native String readyState();
 
   /**

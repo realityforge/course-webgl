@@ -118,5 +118,10 @@ public class KeyframeEffect extends AnimationEffect {
   @Nonnull
   public native JsArray<Object> getKeyframes();
 
+  /**
+   * The setKeyframes() method of the KeyframeEffect interface replaces the keyframes that make up the affected KeyframeEffect with a new set of keyframes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/setKeyframes">KeyframeEffect.setKeyframes - MDN</a>
+   */
   public native void setKeyframes(@Nullable Object keyframes);
 }

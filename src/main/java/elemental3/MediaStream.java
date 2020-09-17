@@ -81,6 +81,11 @@ public class MediaStream extends EventTarget {
   )
   public native boolean active();
 
+  /**
+   * The MediaStream.id() read-only property is a DOMString containing 36 characters denoting a unique identifier (GUID) for the object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/id">MediaStream.id - MDN</a>
+   */
   @JsProperty(
       name = "id"
   )
@@ -94,21 +99,46 @@ public class MediaStream extends EventTarget {
    */
   public native void addTrack(@Nonnull MediaStreamTrack track);
 
+  /**
+   * The clone() method of the MediaStream interface creates a duplicate of the MediaStream. This new MediaStream object has a new unique id and contains clones of every MediaStreamTrack contained by the MediaStream on which clone() was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/clone">MediaStream.clone - MDN</a>
+   */
   @JsMethod(
       name = "clone"
   )
   @Nonnull
   public native MediaStream clone_();
 
+  /**
+   * The getAudioTracks() method of the MediaStream interface returns a sequence that represents all the MediaStreamTrack objects in this stream's track set where MediaStreamTrack.kind is audio.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getAudioTracks">MediaStream.getAudioTracks - MDN</a>
+   */
   @Nonnull
   public native JsArray<MediaStreamTrack> getAudioTracks();
 
+  /**
+   * The MediaStream.getTrackById() method returns a MediaStreamTrack object representing the track with the specified ID string. If there is no track with the specified ID, this method returns null.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTrackById">MediaStream.getTrackById - MDN</a>
+   */
   @Nullable
   public native MediaStreamTrack getTrackById(@Nonnull String trackId);
 
+  /**
+   * The getTracks() method of the MediaStream interface returns a sequence that represents all the MediaStreamTrack objects in this stream's track set, regardless of MediaStreamTrack.kind.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTracks">MediaStream.getTracks - MDN</a>
+   */
   @Nonnull
   public native JsArray<MediaStreamTrack> getTracks();
 
+  /**
+   * The getVideoTracks() method of the MediaStream interface returns a sequence of MediaStreamTrack objects representing the video tracks in this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getVideoTracks">MediaStream.getVideoTracks - MDN</a>
+   */
   @Nonnull
   public native JsArray<MediaStreamTrack> getVideoTracks();
 

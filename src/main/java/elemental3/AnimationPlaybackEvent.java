@@ -19,21 +19,41 @@ import jsinterop.annotations.JsType;
     name = "AnimationPlaybackEvent"
 )
 public class AnimationPlaybackEvent extends Event {
+  /**
+   * The AnimationPlaybackEvent() constructor of the Web Animations API returns a new AnimationPlaybackEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent">AnimationPlaybackEvent.AnimationPlaybackEvent - MDN</a>
+   */
   public AnimationPlaybackEvent(@Nonnull final String type,
       @Nonnull final AnimationPlaybackEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The AnimationPlaybackEvent() constructor of the Web Animations API returns a new AnimationPlaybackEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent">AnimationPlaybackEvent.AnimationPlaybackEvent - MDN</a>
+   */
   public AnimationPlaybackEvent(@Nonnull final String type) {
     super( null );
   }
 
+  /**
+   * The currentTime read-only property of the AnimationPlaybackEvent interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was idle at the time the event was generated.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/currentTime">AnimationPlaybackEvent.currentTime - MDN</a>
+   */
   @JsProperty(
       name = "currentTime"
   )
   @Nullable
   public native Double currentTime();
 
+  /**
+   * The timelineTime read-only property of the AnimationPlaybackEvent interface represents the time value of the animation's timeline at the moment the event is queued. This will be unresolved if the animation was not associated with a timeline at the time the event was generated or if the associated timeline was inactive.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/timelineTime">AnimationPlaybackEvent.timelineTime - MDN</a>
+   */
   @JsProperty(
       name = "timelineTime"
   )

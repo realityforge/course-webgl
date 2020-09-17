@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaKeyMessageEvent interface of the EncryptedMediaExtensions API contains the content and related data when the content decryption module generates a message for the session.
@@ -49,5 +50,8 @@ public class MediaKeyMessageEvent extends Event {
       name = "messageType"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = MediaKeyMessageType.class
+  )
   public native String messageType();
 }

@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
@@ -21,52 +22,105 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
   PerformanceNavigationTiming() {
   }
 
+  /**
+   * The domComplete read-only property returns a timestamp representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to complete.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domComplete">PerformanceNavigationTiming.domComplete - MDN</a>
+   */
   @JsProperty(
       name = "domComplete"
   )
   public native double domComplete();
 
+  /**
+   * The domContentLoadedEventEnd read-only property returns a timestamp representing the time value equal to the time immediately after the current document's DOMContentLoaded event completes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd">PerformanceNavigationTiming.domContentLoadedEventEnd - MDN</a>
+   */
   @JsProperty(
       name = "domContentLoadedEventEnd"
   )
   public native double domContentLoadedEventEnd();
 
+  /**
+   * The domContentLoadedEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent fires the DOMContentLoaded event at the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart">PerformanceNavigationTiming.domContentLoadedEventStart - MDN</a>
+   */
   @JsProperty(
       name = "domContentLoadedEventStart"
   )
   public native double domContentLoadedEventStart();
 
+  /**
+   * The domInteractive read-only property returns a timestamp representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to interactive.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domInteractive">PerformanceNavigationTiming.domInteractive - MDN</a>
+   */
   @JsProperty(
       name = "domInteractive"
   )
   public native double domInteractive();
 
+  /**
+   * The loadEventEnd read-only property returns a timestamp which is equal to the time when the load event of the current document is completed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd">PerformanceNavigationTiming.loadEventEnd - MDN</a>
+   */
   @JsProperty(
       name = "loadEventEnd"
   )
   public native double loadEventEnd();
 
+  /**
+   * The loadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the load event of the current document is fired.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventStart">PerformanceNavigationTiming.loadEventStart - MDN</a>
+   */
   @JsProperty(
       name = "loadEventStart"
   )
   public native double loadEventStart();
 
+  /**
+   * The redirectCount property returns a timestamp representing the number of redirects since the last non-redirect navigation under the current browsing context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/redirectCount">PerformanceNavigationTiming.redirectCount - MDN</a>
+   */
   @JsProperty(
       name = "redirectCount"
   )
   public native int redirectCount();
 
+  /**
+   * The type read-only property returns a string representing the type of navigation. The value must be one of the following:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type">PerformanceNavigationTiming.type - MDN</a>
+   */
   @JsProperty(
       name = "type"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = NavigationType.class
+  )
   public native String type();
 
+  /**
+   * The unloadEventEnd read-only property returns a timestamp representing the time value equal to the time immediately after the user agent finishes the unload event of the previous document. If there is no previous document, this property value is 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd">PerformanceNavigationTiming.unloadEventEnd - MDN</a>
+   */
   @JsProperty(
       name = "unloadEventEnd"
   )
   public native double unloadEventEnd();
 
+  /**
+   * The unloadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent starts the unload event of the previous document. If there is no previous document, this property returns 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventStart">PerformanceNavigationTiming.unloadEventStart - MDN</a>
+   */
   @JsProperty(
       name = "unloadEventStart"
   )

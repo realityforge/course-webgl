@@ -58,18 +58,33 @@ public class IDBDatabase extends EventTarget {
   IDBDatabase() {
   }
 
+  /**
+   * A DOMString containing the name of the connected database.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/name">IDBDatabase.name - MDN</a>
+   */
   @JsProperty(
       name = "name"
   )
   @Nonnull
   public native String name();
 
+  /**
+   * A DOMStringList containing a list of the names of the object stores currently in the connected database.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames">IDBDatabase.objectStoreNames - MDN</a>
+   */
   @JsProperty(
       name = "objectStoreNames"
   )
   @Nonnull
   public native DOMStringList objectStoreNames();
 
+  /**
+   * An integer containing the version of the connected database.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/version">IDBDatabase.version - MDN</a>
+   */
   @JsProperty(
       name = "version"
   )

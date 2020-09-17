@@ -37,6 +37,11 @@ public class TextTrackList extends EventTarget {
   @Nullable
   public EventHandler onchange;
 
+  /**
+   * The TextTrackList onremovetrack event handler is called when the removetrack event occurs, indicating that a text track has been removed from the media element, and therefore also from the TextTrackList.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onremovetrack">TextTrackList.onremovetrack - MDN</a>
+   */
   @Nullable
   public EventHandler onremovetrack;
 

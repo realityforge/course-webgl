@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "OfflineAudioCompletionEvent"
 )
 public class OfflineAudioCompletionEvent extends Event {
+  /**
+   * The OfflineAudioCompletionEvent() constructor of the Web Audio API creates a new OfflineAudioCompletionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent">OfflineAudioCompletionEvent.OfflineAudioCompletionEvent - MDN</a>
+   */
   public OfflineAudioCompletionEvent(@Nonnull final String type,
       @Nonnull final OfflineAudioCompletionEventInit eventInitDict) {
     super( null );

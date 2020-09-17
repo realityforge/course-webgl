@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated.
@@ -78,6 +79,9 @@ public class SecurityPolicyViolationEvent extends Event {
       name = "disposition"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = SecurityPolicyViolationEventDisposition.class
+  )
   public native String disposition();
 
   /**

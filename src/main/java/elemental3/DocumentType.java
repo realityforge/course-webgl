@@ -70,7 +70,7 @@ public class DocumentType extends Node {
   /**
    * The ChildNode.remove() method removes the object from the tree it belongs to.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove">ChildNode.remove - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/remove">DocumentType.remove - MDN</a>
    */
   public native void remove();
 

@@ -23,10 +23,25 @@ public class ANGLE_instanced_arrays {
   ANGLE_instanced_arrays() {
   }
 
+  /**
+   * The ANGLE_instanced_arrays.drawArraysInstancedANGLE() method of the WebGL API renders primitives from array data like the gl.drawArrays() method. In addition, it can execute multiple instances of the range of elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE">ANGLE_instanced_arrays.drawArraysInstancedANGLE - MDN</a>
+   */
   public native void drawArraysInstancedANGLE(int mode, int first, int count, int primcount);
 
+  /**
+   * The ANGLE_instanced_arrays.drawElementsInstancedANGLE() method of the WebGL API renders primitives from array data like the gl.drawElements() method. In addition, it can execute multiple instances of a set of elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE">ANGLE_instanced_arrays.drawElementsInstancedANGLE - MDN</a>
+   */
   public native void drawElementsInstancedANGLE(int mode, int count, int type, int offset,
       int primcount);
 
+  /**
+   * The ANGLE_instanced_arrays.vertexAttribDivisorANGLE() method of the WebGL API  modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with ext.drawArraysInstancedANGLE() and ext.drawElementsInstancedANGLE().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE">ANGLE_instanced_arrays.vertexAttribDivisorANGLE - MDN</a>
+   */
   public native void vertexAttribDivisorANGLE(int index, int divisor);
 }

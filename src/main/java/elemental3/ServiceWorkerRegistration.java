@@ -8,6 +8,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -21,6 +22,11 @@ import jsinterop.annotations.JsType;
     name = "ServiceWorkerRegistration"
 )
 public class ServiceWorkerRegistration extends EventTarget {
+  /**
+   * The onupdatefound property of the ServiceWorkerRegistration interface is an EventListener property called whenever an event of type statechange is fired; it is fired any time the ServiceWorkerRegistration.installing property acquires a new service worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">ServiceWorkerRegistration.onupdatefound - MDN</a>
+   */
   @Nullable
   public EventHandler onupdatefound;
 
@@ -97,6 +103,9 @@ public class ServiceWorkerRegistration extends EventTarget {
       name = "updateViaCache"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ServiceWorkerUpdateViaCache.class
+  )
   public native String updateViaCache();
 
   /**

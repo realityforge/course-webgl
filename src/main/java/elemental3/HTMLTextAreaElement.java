@@ -74,6 +74,11 @@ public class HTMLTextAreaElement extends HTMLElement {
   @Nullable
   public native HTMLFormElement form();
 
+  /**
+   * The HTMLTextAreaElement.labels read-only property returns a NodeList of the label elements associated with the textarea element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/labels">HTMLTextAreaElement.labels - MDN</a>
+   */
   @JsProperty(
       name = "labels"
   )

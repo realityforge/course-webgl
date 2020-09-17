@@ -51,7 +51,7 @@ public class MediaKeys {
   public native MediaKeySession createSession();
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -59,7 +59,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull BufferSource serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -67,7 +67,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull ArrayBufferView serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -75,7 +75,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Int8Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -83,7 +83,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Int16Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -91,7 +91,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Int32Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -99,7 +99,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Uint8Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -107,7 +107,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Uint16Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -115,7 +115,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Uint32Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -123,7 +123,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Uint8ClampedArray serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -131,7 +131,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Float32Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -139,7 +139,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull Float64Array serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */
@@ -147,7 +147,7 @@ public class MediaKeys {
   public native Promise<Boolean> setServerCertificate(@Nonnull DataView serverCertificate);
 
   /**
-   * The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server.
+   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
    */

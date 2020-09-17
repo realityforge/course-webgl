@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
@@ -55,12 +56,25 @@ public class Gamepad {
   )
   public native boolean connected();
 
+  /**
+   * The hand read-only property of the Gamepad interface returns an enum defining what hand the controller is being held in, or is most likely to be held in.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/hand">Gamepad.hand - MDN</a>
+   */
   @JsProperty(
       name = "hand"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = GamepadHand.class
+  )
   public native String hand();
 
+  /**
+   * The hapticActuators read-only property of the Gamepad interface returns an array containing GamepadHapticActuator objects, each of which represents haptic feedback hardware available on the controller.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/hapticActuators">Gamepad.hapticActuators - MDN</a>
+   */
   @JsProperty(
       name = "hapticActuators"
   )
@@ -97,8 +111,16 @@ public class Gamepad {
       name = "mapping"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = GamepadMappingType.class
+  )
   public native String mapping();
 
+  /**
+   * The pose read-only property of the Gamepad interface returns a GamepadPose object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/pose">Gamepad.pose - MDN</a>
+   */
   @JsProperty(
       name = "pose"
   )

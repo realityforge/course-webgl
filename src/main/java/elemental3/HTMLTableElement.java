@@ -19,12 +19,27 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableElement"
 )
 public class HTMLTableElement extends HTMLElement {
+  /**
+   * The HTMLTableElement.align property represents the alignment of the table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/align">HTMLTableElement.align - MDN</a>
+   */
   @Nonnull
   public String align;
 
+  /**
+   * The HTMLTableElement.bgcolor property represents the background color of the table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/bgColor">HTMLTableElement.bgColor - MDN</a>
+   */
   @Nonnull
   public String bgColor;
 
+  /**
+   * The HTMLTableElement.border property represents the border width of the table element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/border">HTMLTableElement.border - MDN</a>
+   */
   @Nonnull
   public String border;
 
@@ -36,18 +51,38 @@ public class HTMLTableElement extends HTMLElement {
   @Nullable
   public HTMLTableCaptionElement caption;
 
+  /**
+   * The HTMLTableElement.cellPadding property represents the padding around the individual cells of the table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/cellPadding">HTMLTableElement.cellPadding - MDN</a>
+   */
   @Nonnull
   public String cellPadding;
 
   @Nonnull
   public String cellSpacing;
 
+  /**
+   * The HTMLTableElement interface's frame property is a string that indicates which of the table's exterior borders should be drawn.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/frame">HTMLTableElement.frame - MDN</a>
+   */
   @Nonnull
   public String frame;
 
+  /**
+   * The HTMLTableElement.rules property indicates which cell borders to render in the table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rules">HTMLTableElement.rules - MDN</a>
+   */
   @Nonnull
   public String rules;
 
+  /**
+   * The HTMLTableElement.summary property represents the table description.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/summary">HTMLTableElement.summary - MDN</a>
+   */
   @Nonnull
   public String summary;
 
@@ -67,6 +102,11 @@ public class HTMLTableElement extends HTMLElement {
   @Nullable
   public HTMLTableSectionElement tHead;
 
+  /**
+   * The HTMLTableElement.width property represents the desired width of the table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/width">HTMLTableElement.width - MDN</a>
+   */
   @Nonnull
   public String width;
 

@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaDeviceInfo interface contains information that describes a single media input or output device.
@@ -52,6 +53,9 @@ public class MediaDeviceInfo {
       name = "kind"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = MediaDeviceKind.class
+  )
   public native String kind();
 
   /**

@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The SpeechSynthesisErrorEvent interface of the Web Speech API contains information about any errors that occur while processing SpeechSynthesisUtterance objects in the speech service.
@@ -32,5 +33,8 @@ public class SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
       name = "error"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = SpeechSynthesisErrorCode.class
+  )
   public native String error();
 }
