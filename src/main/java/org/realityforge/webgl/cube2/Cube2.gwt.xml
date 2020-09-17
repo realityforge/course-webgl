@@ -1,0 +1,11 @@
+<module rename-to='cube2'>
+  <inherits name='org.realityforge.webgl.Webgl'/>
+  <inherits name='com.google.gwt.typedarrays.TypedArrays'/>
+  <!-- TODO: Why does JOML not inherit TypedArrays? -->
+  <inherits name='org.joml.JOML'/>
+
+  <entry-point class='org.realityforge.webgl.cube2.Cube2'/>
+
+  <source path=''/>
+  <public path='public'/>
+</module>
