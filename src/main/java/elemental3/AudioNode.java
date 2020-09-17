@@ -19,14 +19,29 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "AudioNode"
 )
 public class AudioNode extends EventTarget {
+  /**
+   * The channelCount property of the AudioNode interface represents an integer used to determine how many channels are used when up-mixing and down-mixing connections to any inputs to the node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCount">AudioNode.channelCount - MDN</a>
+   */
   public int channelCount;
 
+  /**
+   * The channelCountMode property of the AudioNode interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCountMode">AudioNode.channelCountMode - MDN</a>
+   */
   @Nonnull
   @MagicConstant(
       valuesFromClass = ChannelCountMode.class
   )
   public String channelCountMode;
 
+  /**
+   * When the number of channels doesn't match between an input and an output, up- or down-mixing happens according the following rules. This can be somewhat controlled by setting the AudioNode.channelInterpretation property to speakers or discrete:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelInterpretation">AudioNode.channelInterpretation - MDN</a>
+   */
   @Nonnull
   @MagicConstant(
       valuesFromClass = ChannelInterpretation.class
@@ -47,11 +62,21 @@ public class AudioNode extends EventTarget {
   @Nonnull
   public native BaseAudioContext context();
 
+  /**
+   * The numberOfInputs property of the AudioNode interface returns the number of inputs feeding the node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfInputs">AudioNode.numberOfInputs - MDN</a>
+   */
   @JsProperty(
       name = "numberOfInputs"
   )
   public native int numberOfInputs();
 
+  /**
+   * The numberOfOutputs property of the AudioNode interface returns the number of outputs coming out of the node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfOutputs">AudioNode.numberOfOutputs - MDN</a>
+   */
   @JsProperty(
       name = "numberOfOutputs"
   )

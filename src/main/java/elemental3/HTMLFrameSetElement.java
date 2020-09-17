@@ -22,9 +22,9 @@ public class HTMLFrameSetElement extends HTMLElement {
   public String cols;
 
   /**
-   * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
+   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onafterprint">WindowEventHandlers.onafterprint - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onafterprint">HTMLFrameSetElement.onafterprint - MDN</a>
    */
   @Nullable
   public EventHandler onafterprint;
@@ -40,7 +40,7 @@ public class HTMLFrameSetElement extends HTMLElement {
   /**
    * The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload">WindowEventHandlers.onbeforeunload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onbeforeunload">HTMLFrameSetElement.onbeforeunload - MDN</a>
    */
   @Nullable
   public OnBeforeUnloadEventHandler onbeforeunload;
@@ -48,7 +48,7 @@ public class HTMLFrameSetElement extends HTMLElement {
   /**
    * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange">WindowEventHandlers.onhashchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onhashchange">HTMLFrameSetElement.onhashchange - MDN</a>
    */
   @Nullable
   public EventHandler onhashchange;
@@ -56,7 +56,7 @@ public class HTMLFrameSetElement extends HTMLElement {
   /**
    * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">WindowEventHandlers.onlanguagechange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange">HTMLFrameSetElement.onlanguagechange - MDN</a>
    */
   @Nullable
   public EventHandler onlanguagechange;
@@ -92,7 +92,7 @@ public class HTMLFrameSetElement extends HTMLElement {
   /**
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate">WindowEventHandlers.onpopstate - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onpopstate">HTMLFrameSetElement.onpopstate - MDN</a>
    */
   @Nullable
   public EventHandler onpopstate;
@@ -124,7 +124,7 @@ public class HTMLFrameSetElement extends HTMLElement {
   /**
    * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload">WindowEventHandlers.onunload - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onunload">HTMLFrameSetElement.onunload - MDN</a>
    */
   @Nullable
   public EventHandler onunload;

@@ -27,14 +27,29 @@ public interface MediaTrackSettings {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
+  /**
+   * The MediaTrackSettings dictionary's aspectRatio property is a double-precision floating-point number indicating the aspect ratio of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.aspectRatio property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/aspectRatio">MediaTrackSettings.aspectRatio - MDN</a>
+   */
   @JsProperty(
       name = "aspectRatio"
   )
   double aspectRatio();
 
+  /**
+   * The MediaTrackSettings dictionary's aspectRatio property is a double-precision floating-point number indicating the aspect ratio of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.aspectRatio property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/aspectRatio">MediaTrackSettings.aspectRatio - MDN</a>
+   */
   @JsProperty
   void setAspectRatio(double aspectRatio);
 
+  /**
+   * The MediaTrackSettings dictionary's aspectRatio property is a double-precision floating-point number indicating the aspect ratio of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.aspectRatio property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/aspectRatio">MediaTrackSettings.aspectRatio - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings aspectRatio(final double aspectRatio) {
@@ -42,14 +57,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's autoGainControl property is a Boolean value whose value indicates whether or not automatic gain control (AGC) is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.autoGainControl property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/autoGainControl">MediaTrackSettings.autoGainControl - MDN</a>
+   */
   @JsProperty(
       name = "autoGainControl"
   )
   boolean autoGainControl();
 
+  /**
+   * The MediaTrackSettings dictionary's autoGainControl property is a Boolean value whose value indicates whether or not automatic gain control (AGC) is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.autoGainControl property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/autoGainControl">MediaTrackSettings.autoGainControl - MDN</a>
+   */
   @JsProperty
   void setAutoGainControl(boolean autoGainControl);
 
+  /**
+   * The MediaTrackSettings dictionary's autoGainControl property is a Boolean value whose value indicates whether or not automatic gain control (AGC) is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.autoGainControl property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/autoGainControl">MediaTrackSettings.autoGainControl - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings autoGainControl(final boolean autoGainControl) {
@@ -57,14 +87,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's channelCount property is an integer indicating how many audio channel the MediaStreamTrack is currently configured to have. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.channelCount property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/channelCount">MediaTrackSettings.channelCount - MDN</a>
+   */
   @JsProperty(
       name = "channelCount"
   )
   int channelCount();
 
+  /**
+   * The MediaTrackSettings dictionary's channelCount property is an integer indicating how many audio channel the MediaStreamTrack is currently configured to have. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.channelCount property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/channelCount">MediaTrackSettings.channelCount - MDN</a>
+   */
   @JsProperty
   void setChannelCount(int channelCount);
 
+  /**
+   * The MediaTrackSettings dictionary's channelCount property is an integer indicating how many audio channel the MediaStreamTrack is currently configured to have. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.channelCount property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/channelCount">MediaTrackSettings.channelCount - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings channelCount(final int channelCount) {
@@ -72,14 +117,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId">MediaTrackSettings.deviceId - MDN</a>
+   */
   @JsProperty(
       name = "deviceId"
   )
   String deviceId();
 
+  /**
+   * The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId">MediaTrackSettings.deviceId - MDN</a>
+   */
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
 
+  /**
+   * The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId">MediaTrackSettings.deviceId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings deviceId(@Nonnull final String deviceId) {
@@ -87,14 +147,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/echoCancellation">MediaTrackSettings.echoCancellation - MDN</a>
+   */
   @JsProperty(
       name = "echoCancellation"
   )
   boolean echoCancellation();
 
+  /**
+   * The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/echoCancellation">MediaTrackSettings.echoCancellation - MDN</a>
+   */
   @JsProperty
   void setEchoCancellation(boolean echoCancellation);
 
+  /**
+   * The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/echoCancellation">MediaTrackSettings.echoCancellation - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings echoCancellation(final boolean echoCancellation) {
@@ -102,14 +177,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's facingMode property is a DOMString indicating the direction in which the camera producing the video track represented by the MediaStreamTrack is currently facing. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.facingMode property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/facingMode">MediaTrackSettings.facingMode - MDN</a>
+   */
   @JsProperty(
       name = "facingMode"
   )
   String facingMode();
 
+  /**
+   * The MediaTrackSettings dictionary's facingMode property is a DOMString indicating the direction in which the camera producing the video track represented by the MediaStreamTrack is currently facing. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.facingMode property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/facingMode">MediaTrackSettings.facingMode - MDN</a>
+   */
   @JsProperty
   void setFacingMode(@Nonnull String facingMode);
 
+  /**
+   * The MediaTrackSettings dictionary's facingMode property is a DOMString indicating the direction in which the camera producing the video track represented by the MediaStreamTrack is currently facing. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.facingMode property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/facingMode">MediaTrackSettings.facingMode - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings facingMode(@Nonnull final String facingMode) {
@@ -117,14 +207,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's frameRate property is a double-precision floating-point number indicating the frame rate, in frames per second, of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.frameRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/frameRate">MediaTrackSettings.frameRate - MDN</a>
+   */
   @JsProperty(
       name = "frameRate"
   )
   double frameRate();
 
+  /**
+   * The MediaTrackSettings dictionary's frameRate property is a double-precision floating-point number indicating the frame rate, in frames per second, of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.frameRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/frameRate">MediaTrackSettings.frameRate - MDN</a>
+   */
   @JsProperty
   void setFrameRate(double frameRate);
 
+  /**
+   * The MediaTrackSettings dictionary's frameRate property is a double-precision floating-point number indicating the frame rate, in frames per second, of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.frameRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/frameRate">MediaTrackSettings.frameRate - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings frameRate(final double frameRate) {
@@ -132,14 +237,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's groupId property is a browsing-session unique DOMString which identifies the group of devices which includes the source for the MediaStreamTrack. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.groupId property you provided when calling either getUserMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/groupId">MediaTrackSettings.groupId - MDN</a>
+   */
   @JsProperty(
       name = "groupId"
   )
   String groupId();
 
+  /**
+   * The MediaTrackSettings dictionary's groupId property is a browsing-session unique DOMString which identifies the group of devices which includes the source for the MediaStreamTrack. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.groupId property you provided when calling either getUserMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/groupId">MediaTrackSettings.groupId - MDN</a>
+   */
   @JsProperty
   void setGroupId(@Nonnull String groupId);
 
+  /**
+   * The MediaTrackSettings dictionary's groupId property is a browsing-session unique DOMString which identifies the group of devices which includes the source for the MediaStreamTrack. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.groupId property you provided when calling either getUserMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/groupId">MediaTrackSettings.groupId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings groupId(@Nonnull final String groupId) {
@@ -147,14 +267,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's height property is an integer indicating the number of pixels tall MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.height property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/height">MediaTrackSettings.height - MDN</a>
+   */
   @JsProperty(
       name = "height"
   )
   int height();
 
+  /**
+   * The MediaTrackSettings dictionary's height property is an integer indicating the number of pixels tall MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.height property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/height">MediaTrackSettings.height - MDN</a>
+   */
   @JsProperty
   void setHeight(int height);
 
+  /**
+   * The MediaTrackSettings dictionary's height property is an integer indicating the number of pixels tall MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.height property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/height">MediaTrackSettings.height - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings height(final int height) {
@@ -162,14 +297,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's latency property is a double-precision floating-point number indicating the estimated latency (specified in seconds) of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.latency property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/latency">MediaTrackSettings.latency - MDN</a>
+   */
   @JsProperty(
       name = "latency"
   )
   double latency();
 
+  /**
+   * The MediaTrackSettings dictionary's latency property is a double-precision floating-point number indicating the estimated latency (specified in seconds) of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.latency property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/latency">MediaTrackSettings.latency - MDN</a>
+   */
   @JsProperty
   void setLatency(double latency);
 
+  /**
+   * The MediaTrackSettings dictionary's latency property is a double-precision floating-point number indicating the estimated latency (specified in seconds) of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.latency property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/latency">MediaTrackSettings.latency - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings latency(final double latency) {
@@ -177,14 +327,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's noiseSuppression property is a Boolean value whose value indicates whether or not noise suppression technology is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.noiseSuppression property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/noiseSuppression">MediaTrackSettings.noiseSuppression - MDN</a>
+   */
   @JsProperty(
       name = "noiseSuppression"
   )
   boolean noiseSuppression();
 
+  /**
+   * The MediaTrackSettings dictionary's noiseSuppression property is a Boolean value whose value indicates whether or not noise suppression technology is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.noiseSuppression property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/noiseSuppression">MediaTrackSettings.noiseSuppression - MDN</a>
+   */
   @JsProperty
   void setNoiseSuppression(boolean noiseSuppression);
 
+  /**
+   * The MediaTrackSettings dictionary's noiseSuppression property is a Boolean value whose value indicates whether or not noise suppression technology is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.noiseSuppression property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/noiseSuppression">MediaTrackSettings.noiseSuppression - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings noiseSuppression(final boolean noiseSuppression) {
@@ -207,14 +372,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's sampleRate property is an integer indicating how many audio samples per second the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleRate">MediaTrackSettings.sampleRate - MDN</a>
+   */
   @JsProperty(
       name = "sampleRate"
   )
   int sampleRate();
 
+  /**
+   * The MediaTrackSettings dictionary's sampleRate property is an integer indicating how many audio samples per second the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleRate">MediaTrackSettings.sampleRate - MDN</a>
+   */
   @JsProperty
   void setSampleRate(int sampleRate);
 
+  /**
+   * The MediaTrackSettings dictionary's sampleRate property is an integer indicating how many audio samples per second the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleRate">MediaTrackSettings.sampleRate - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings sampleRate(final int sampleRate) {
@@ -222,14 +402,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's sampleSize property is an integer indicating the linear sample size (in bits per sample) the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleSize property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleSize">MediaTrackSettings.sampleSize - MDN</a>
+   */
   @JsProperty(
       name = "sampleSize"
   )
   int sampleSize();
 
+  /**
+   * The MediaTrackSettings dictionary's sampleSize property is an integer indicating the linear sample size (in bits per sample) the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleSize property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleSize">MediaTrackSettings.sampleSize - MDN</a>
+   */
   @JsProperty
   void setSampleSize(int sampleSize);
 
+  /**
+   * The MediaTrackSettings dictionary's sampleSize property is an integer indicating the linear sample size (in bits per sample) the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleSize property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleSize">MediaTrackSettings.sampleSize - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings sampleSize(final int sampleSize) {
@@ -237,14 +432,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's width property is an integer indicating the number of pixels wide MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.width property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/width">MediaTrackSettings.width - MDN</a>
+   */
   @JsProperty(
       name = "width"
   )
   int width();
 
+  /**
+   * The MediaTrackSettings dictionary's width property is an integer indicating the number of pixels wide MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.width property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/width">MediaTrackSettings.width - MDN</a>
+   */
   @JsProperty
   void setWidth(int width);
 
+  /**
+   * The MediaTrackSettings dictionary's width property is an integer indicating the number of pixels wide MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.width property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/width">MediaTrackSettings.width - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings width(final int width) {
@@ -252,14 +462,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's cursor property indicates whether or not the cursor should be captured as part of the video track included in the MediaStream returned by getDisplayMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/cursor">MediaTrackSettings.cursor - MDN</a>
+   */
   @JsProperty(
       name = "cursor"
   )
   String cursor();
 
+  /**
+   * The MediaTrackSettings dictionary's cursor property indicates whether or not the cursor should be captured as part of the video track included in the MediaStream returned by getDisplayMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/cursor">MediaTrackSettings.cursor - MDN</a>
+   */
   @JsProperty
   void setCursor(@Nonnull String cursor);
 
+  /**
+   * The MediaTrackSettings dictionary's cursor property indicates whether or not the cursor should be captured as part of the video track included in the MediaStream returned by getDisplayMedia().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/cursor">MediaTrackSettings.cursor - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings cursor(@Nonnull final String cursor) {
@@ -267,14 +492,29 @@ public interface MediaTrackSettings {
     return this;
   }
 
+  /**
+   * The MediaTrackSettings dictionary's displaySurface property indicates the type of display surface being captured.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/displaySurface">MediaTrackSettings.displaySurface - MDN</a>
+   */
   @JsProperty(
       name = "displaySurface"
   )
   String displaySurface();
 
+  /**
+   * The MediaTrackSettings dictionary's displaySurface property indicates the type of display surface being captured.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/displaySurface">MediaTrackSettings.displaySurface - MDN</a>
+   */
   @JsProperty
   void setDisplaySurface(@Nonnull String displaySurface);
 
+  /**
+   * The MediaTrackSettings dictionary's displaySurface property indicates the type of display surface being captured.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/displaySurface">MediaTrackSettings.displaySurface - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaTrackSettings displaySurface(@Nonnull final String displaySurface) {

@@ -64,17 +64,42 @@ public class RTCRtpSender {
   @Nullable
   public static native RTCRtpCapabilities getCapabilities(@Nonnull String kind);
 
+  /**
+   * The getParameters() method of the RTCRtpSender interface returns an RTCRtpSendParameters object describing the current configuration for the encoding and transmission of media on the sender's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getParameters">RTCRtpSender.getParameters - MDN</a>
+   */
   @Nonnull
   public native RTCRtpSendParameters getParameters();
 
+  /**
+   * The RTCRtpSender method getStats() asynchronously requests an RTCStatsReport object which provides statistics about outgoing traffic on the RTCPeerConnection which owns the sender, returning a Promise which is fulfilled when the results are available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getStats">RTCRtpSender.getStats - MDN</a>
+   */
   @Nonnull
   public native Promise<RTCStatsReport> getStats();
 
+  /**
+   * The RTCRtpSender method replaceTrack() replaces the track currently being used as the sender's source with a new MediaStreamTrack.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/replaceTrack">RTCRtpSender.replaceTrack - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> replaceTrack(@Nullable MediaStreamTrack withTrack);
 
+  /**
+   * The setParameters() method of the RTCRtpSender interface applies changes the configuration of sender's track, which is the MediaStreamTrack for which the RTCRtpSender is responsible.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters">RTCRtpSender.setParameters - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> setParameters(@Nonnull RTCRtpSendParameters parameters);
 
+  /**
+   * The RTCRtpSender method setStreams() associates the sender's track with the specified MediaStream or array of MediaStream objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setStreams">RTCRtpSender.setStreams - MDN</a>
+   */
   public native void setStreams(@Nonnull MediaStream... streams);
 }

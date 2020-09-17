@@ -18,6 +18,11 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "DOMParser"
 )
 public class DOMParser {
+  /**
+   * The DOMParser() constructor creates a new DOMParser object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser/DOMParser">DOMParser.DOMParser - MDN</a>
+   */
   public DOMParser() {
   }
 

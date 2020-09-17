@@ -26,6 +26,11 @@ public class WakeLockSentinel extends EventTarget {
   WakeLockSentinel() {
   }
 
+  /**
+   * The read-only released property of the WakeLockSentinel interface returns a boolean that indicates whether a WakeLockSentinel has been released yet.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/released">WakeLockSentinel.released - MDN</a>
+   */
   @JsProperty(
       name = "released"
   )

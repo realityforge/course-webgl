@@ -57,7 +57,7 @@ public class ProgressEvent extends Event {
   public native int loaded();
 
   /**
-   * The ProgressEvent.total read-only property is an integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this only represent the content itself, not headers and other overhead.
+   * The ProgressEvent.total read-only property is an unsigned 64-bit integer value indicating the total size of the data being processed or transmitted. In the case of an HTTP transmission, this is the size of the body of the message (the Content-Length), and does not include headers and other overhead.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/total">ProgressEvent.total - MDN</a>
    */

@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class SpeechGrammarList {
+  /**
+   * The SpeechGrammarList() constructor creates a new SpeechGrammarList object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/SpeechGrammarList">SpeechGrammarList.SpeechGrammarList - MDN</a>
+   */
   public SpeechGrammarList() {
   }
 

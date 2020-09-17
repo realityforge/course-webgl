@@ -26,6 +26,11 @@ public class RTCSessionDescription {
   public RTCSessionDescription(@Nonnull final RTCSessionDescriptionInit descriptionInitDict) {
   }
 
+  /**
+   * The property RTCSessionDescription.sdp is a read-only DOMString containing the SDP which describes the session.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/sdp">RTCSessionDescription.sdp - MDN</a>
+   */
   @JsProperty(
       name = "sdp"
   )

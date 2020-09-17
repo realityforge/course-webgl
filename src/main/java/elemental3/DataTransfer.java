@@ -19,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "DataTransfer"
 )
 public class DataTransfer {
+  /**
+   * The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect">DataTransfer.dropEffect - MDN</a>
+   */
   @Nonnull
   public String dropEffect;
 
+  /**
+   * The DataTransfer.effectAllowed property specifies the effect that is allowed for a drag operation. The copy operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The move operation is used to indicate that the data being dragged will be moved, and the link operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed">DataTransfer.effectAllowed - MDN</a>
+   */
   @Nonnull
   public String effectAllowed;
 
@@ -33,32 +43,72 @@ public class DataTransfer {
   public DataTransfer() {
   }
 
+  /**
+   * The DataTransfer.files property is a list of the files in the drag operation. If the operation includes no files, the list is empty.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files">DataTransfer.files - MDN</a>
+   */
   @JsProperty(
       name = "files"
   )
   @Nonnull
   public native FileList files();
 
+  /**
+   * The read-only DataTransfer property items property is a list of the data transfer items in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items">DataTransfer.items - MDN</a>
+   */
   @JsProperty(
       name = "items"
   )
   @Nonnull
   public native DataTransferItemList items();
 
+  /**
+   * The DataTransfer.types read-only property returns an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types">DataTransfer.types - MDN</a>
+   */
   @JsProperty(
       name = "types"
   )
   @Nonnull
   public native JsArray<String> types();
 
+  /**
+   * The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData">DataTransfer.clearData - MDN</a>
+   */
   public native void clearData(@Nonnull String format);
 
+  /**
+   * The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData">DataTransfer.clearData - MDN</a>
+   */
   public native void clearData();
 
+  /**
+   * The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData">DataTransfer.getData - MDN</a>
+   */
   @Nonnull
   public native String getData(@Nonnull String format);
 
+  /**
+   * The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData">DataTransfer.setData - MDN</a>
+   */
   public native void setData(@Nonnull String format, @Nonnull String data);
 
+  /**
+   * When a drag occurs, a translucent image is generated from the drag target (the element the dragstart event is fired at), and follows the mouse pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, if a custom image is desired, the DataTransfer.setDragImage() method can be used to set the custom image to be used. The image will typically be an image element but it can also be a canvas or any other visible element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage">DataTransfer.setDragImage - MDN</a>
+   */
   public native void setDragImage(@Nonnull Element image, int x, int y);
 }

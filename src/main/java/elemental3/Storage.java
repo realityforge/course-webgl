@@ -32,6 +32,11 @@ public class Storage {
   )
   public native int length();
 
+  /**
+   * The clear() method of the Storage interface clears all keys stored in a given Storage object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear">Storage.clear - MDN</a>
+   */
   public native void clear();
 
   /**
@@ -42,10 +47,25 @@ public class Storage {
   @Nullable
   public native String key(int index);
 
+  /**
+   * The getItem() method of the Storage interface, when passed a key name, will return that key's value, or null if the key does not exist, in the given Storage object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem">Storage.getItem - MDN</a>
+   */
   @Nullable
   public native String getItem(@Nonnull String key);
 
+  /**
+   * The setItem() method of the Storage interface, when passed a key name and value, will add that key to the given Storage object, or update that key's value if it already exists.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem">Storage.setItem - MDN</a>
+   */
   public native void setItem(@Nonnull String key, @Nonnull String value);
 
+  /**
+   * The removeItem() method of the Storage interface, when passed a key name, will remove that key from the given Storage object if it exists. The Storage interface of the Web Storage API provides access to a particular domain's session or local storage.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem">Storage.removeItem - MDN</a>
+   */
   public native void removeItem(@Nonnull String key);
 }

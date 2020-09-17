@@ -145,6 +145,11 @@ public class SpeechRecognition extends EventTarget {
   @Nullable
   public EventHandler onstart;
 
+  /**
+   * The SpeechRecognition() constructor creates a new SpeechRecognition object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition">SpeechRecognition.SpeechRecognition - MDN</a>
+   */
   public SpeechRecognition() {
   }
 

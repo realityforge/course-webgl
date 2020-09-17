@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "MediaStreamAudioSourceNode"
 )
 public class MediaStreamAudioSourceNode extends AudioNode {
+  /**
+   * The Web Audio API's MediaStreamAudioSourceNode() constructor creates and returns a new MediaStreamAudioSourceNode object which uses the first audio track of a given MediaStream as its source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode">MediaStreamAudioSourceNode.MediaStreamAudioSourceNode - MDN</a>
+   */
   public MediaStreamAudioSourceNode(@Nonnull final AudioContext context,
       @Nonnull final MediaStreamAudioSourceOptions options) {
   }

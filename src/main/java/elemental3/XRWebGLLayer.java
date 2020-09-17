@@ -19,26 +19,56 @@ import jsinterop.annotations.JsType;
     name = "XRWebGLLayer"
 )
 public class XRWebGLLayer {
+  /**
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
+   */
   public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final XRWebGLRenderingContext context, @Nonnull final XRWebGLLayerInit layerInit) {
   }
 
+  /**
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
+   */
   public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final WebGLRenderingContext context, @Nonnull final XRWebGLLayerInit layerInit) {
   }
 
+  /**
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
+   */
   public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final WebGL2RenderingContext context, @Nonnull final XRWebGLLayerInit layerInit) {
   }
 
+  /**
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
+   */
   public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final XRWebGLRenderingContext context) {
   }
 
+  /**
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
+   */
   public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final WebGLRenderingContext context) {
   }
 
+  /**
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
+   */
   public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final WebGL2RenderingContext context) {
   }

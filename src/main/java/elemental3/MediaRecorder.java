@@ -21,6 +21,11 @@ import jsinterop.base.Js;
     name = "MediaRecorder"
 )
 public class MediaRecorder extends EventTarget {
+  /**
+   * The MediaRecorder.ondataavailable event handler (part of the MediaStream Recording API) handles the dataavailable event, letting you run code in response to Blob data being made available for use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ondataavailable">MediaRecorder.ondataavailable - MDN</a>
+   */
   @Nullable
   public EventHandler ondataavailable;
 
@@ -32,15 +37,35 @@ public class MediaRecorder extends EventTarget {
   @Nullable
   public MediaRecorderErrorEventHandler onerror;
 
+  /**
+   * The MediaRecorder.onpause event handler (part of the MediaRecorder API) handles the pause event, allowing you to run code in response to the media recording being paused.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onpause">MediaRecorder.onpause - MDN</a>
+   */
   @Nullable
   public EventHandler onpause;
 
+  /**
+   * The MediaRecorder.onresume event handler (part of the MediaRecorder API) handles the resume event, allowing you to run code in response to the media recording being resumed after pausing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onresume">MediaRecorder.onresume - MDN</a>
+   */
   @Nullable
   public EventHandler onresume;
 
+  /**
+   * The MediaRecorder.onstartevent handler (part of the MediaRecorder API) handles the start event, allowing you to run code in response to media recording being started by a MediaRecorder.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstart">MediaRecorder.onstart - MDN</a>
+   */
   @Nullable
   public EventHandler onstart;
 
+  /**
+   * The MediaRecorder.onstop event handler (part of the MediaRecorder API) handles the stop event, allowing you to run code in response to media recording via a MediaRecorder being stopped.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstop">MediaRecorder.onstop - MDN</a>
+   */
   @Nullable
   public EventHandler onstop;
 

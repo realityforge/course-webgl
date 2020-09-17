@@ -24,12 +24,32 @@ public class OES_vertex_array_object {
   OES_vertex_array_object() {
   }
 
+  /**
+   * The OES_vertex_array_object.bindVertexArrayOES() method of the WebGL API binds a passed WebGLVertexArrayObject object to the buffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES">OES_vertex_array_object.bindVertexArrayOES - MDN</a>
+   */
   public native void bindVertexArrayOES(@Nullable WebGLVertexArrayObjectOES arrayObject);
 
+  /**
+   * The OES_vertex_array_object.createVertexArrayOES() method of the WebGL API creates and initializes a WebGLVertexArrayObject object that represents a vertex array object (VAO) pointing to vertex array data and which provides names for different sets of vertex data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/createVertexArrayOES">OES_vertex_array_object.createVertexArrayOES - MDN</a>
+   */
   @Nullable
   public native WebGLVertexArrayObjectOES createVertexArrayOES();
 
+  /**
+   * The OES_vertex_array_object.deleteVertexArrayOES() method of the WebGL API deletes a given WebGLVertexArrayObject object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/deleteVertexArrayOES">OES_vertex_array_object.deleteVertexArrayOES - MDN</a>
+   */
   public native void deleteVertexArrayOES(@Nullable WebGLVertexArrayObjectOES arrayObject);
 
+  /**
+   * The OES_vertex_array_object.isVertexArrayOES() method of the WebGL API returns true if the passed object is a WebGLVertexArrayObject object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/isVertexArrayOES">OES_vertex_array_object.isVertexArrayOES - MDN</a>
+   */
   public native boolean isVertexArrayOES(@Nullable WebGLVertexArrayObjectOES arrayObject);
 }
