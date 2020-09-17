@@ -21,7 +21,7 @@ import org.intellij.lang.annotations.MagicConstant;
     namespace = JsPackage.GLOBAL,
     name = "OffscreenCanvas"
 )
-public class OffscreenCanvas extends EventTarget {
+public class OffscreenCanvas extends EventTarget implements Transferable {
   /**
    * The height property returns and sets the height of an OffscreenCanvas object.
    *

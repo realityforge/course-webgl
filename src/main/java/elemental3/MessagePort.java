@@ -22,7 +22,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "MessagePort"
 )
-public class MessagePort extends EventTarget {
+public class MessagePort extends EventTarget implements Transferable {
   /**
    * The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port &mdash; that is, when the port receives a message.
    *
