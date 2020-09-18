@@ -13,9 +13,6 @@ final class Geometry
 
   Geometry( @Nonnull final WebGL2RenderingContext gl, @Nonnull final Float32Array positionData )
   {
-    // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
-    // the data is static and the CPU will not update it often which means that the GPU can store it
-    // close to where it is used without worrying about latency to update
     _positionBuffer = GL.prepareBuffer( gl,
                                         WebGL2RenderingContext.ARRAY_BUFFER,
                                         WebGL2RenderingContext.STATIC_DRAW,
