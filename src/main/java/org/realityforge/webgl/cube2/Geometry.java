@@ -10,12 +10,9 @@ final class Geometry
 {
   @Nonnull
   private final WebGLBuffer _positionBuffer;
-  @Nonnull
-  private final WebGLBuffer _colorBuffer;
 
   Geometry( @Nonnull final WebGL2RenderingContext gl,
-            @Nonnull final Float32Array positionData,
-            @Nonnull final Float32Array colorData )
+            @Nonnull final Float32Array positionData )
   {
     // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
     // the data is static and the CPU will not update it often which means that the GPU can store it
@@ -24,21 +21,11 @@ final class Geometry
                                         WebGL2RenderingContext.ARRAY_BUFFER,
                                         WebGL2RenderingContext.STATIC_DRAW,
                                         positionData );
-    _colorBuffer = GL.prepareBuffer( gl,
-                                     WebGL2RenderingContext.ARRAY_BUFFER,
-                                     WebGL2RenderingContext.STATIC_DRAW,
-                                     colorData );
   }
 
   @Nonnull
   WebGLBuffer getPositionBuffer()
   {
     return _positionBuffer;
-  }
-
-  @Nonnull
-  WebGLBuffer getColorBuffer()
-  {
-    return _colorBuffer;
   }
 }

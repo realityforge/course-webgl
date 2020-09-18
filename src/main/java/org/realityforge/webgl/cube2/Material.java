@@ -18,8 +18,15 @@ final class Material
   private final WebGLUniformLocation _viewMatrixLocation;
   @Nonnull
   private final WebGLUniformLocation _projectionMatrixLocation;
+  @Nonnull
+  private final WebGLUniformLocation _colorsLocation1;
+  @Nonnull
+  private final WebGLUniformLocation _colorsLocation2;
+  @Nonnull
+  private final WebGLUniformLocation _colorsLocation3;
+  @Nonnull
+  private final WebGLUniformLocation _xOffsetsLocation;
   private final int _positionIndex;
-  private final int _colorIndex;
 
   Material( @Nonnull final WebGL2RenderingContext gl,
             @GLSL @Nonnull final String vertexShaderSource,
@@ -33,19 +40,25 @@ final class Material
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrixLocation = getModelMatrix( gl, _program, "modelMatrix" );
-    _viewMatrixLocation = getModelMatrix( gl, _program, "viewMatrix" );
-    _projectionMatrixLocation = getModelMatrix( gl, _program, "projectionMatrix" );
+    _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
+    _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
+    _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
+
+    // Notice how we name these uniforms. So rather than uploading a
+    // single 3x4f array we upload 3 separate 4f arrays
+    _colorsLocation1 = getUniformLocation( gl, _program, "u_colors[0]" );
+    _colorsLocation2 = getUniformLocation( gl, _program, "u_colors[1]" );
+    _colorsLocation3 = getUniformLocation( gl, _program, "u_colors[2]" );
+
+    _xOffsetsLocation = getUniformLocation( gl, _program, "u_xOffsets" );
 
     _positionIndex = gl.getAttribLocation( _program, "position" );
-    _colorIndex = gl.getAttribLocation( _program, "color" );
-
   }
 
   @Nonnull
-  private static WebGLUniformLocation getModelMatrix( @Nonnull final WebGL2RenderingContext gl,
-                                                      @Nonnull final WebGLProgram program,
-                                                      @Nonnull final String name )
+  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
+                                                          @Nonnull final WebGLProgram program,
+                                                          @Nonnull final String name )
   {
     final WebGLUniformLocation location = gl.getUniformLocation( program, name );
     assert null != location;
@@ -76,13 +89,32 @@ final class Material
     return _projectionMatrixLocation;
   }
 
+  @Nonnull
+  WebGLUniformLocation getColorsLocation1()
+  {
+    return _colorsLocation1;
+  }
+
+  @Nonnull
+  WebGLUniformLocation getColorsLocation2()
+  {
+    return _colorsLocation2;
+  }
+
+  @Nonnull
+  WebGLUniformLocation getColorsLocation3()
+  {
+    return _colorsLocation3;
+  }
+
+  @Nonnull
+  WebGLUniformLocation getOffsetsLocation()
+  {
+    return _xOffsetsLocation;
+  }
+
   int getPositionIndex()
   {
     return _positionIndex;
-  }
-
-  int getColorIndex()
-  {
-    return _colorIndex;
   }
 }
