@@ -1,4 +1,4 @@
-package org.realityforge.webgl.cube2;
+package org.realityforge.webgl.cube;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Global;
@@ -6,21 +6,19 @@ import elemental3.HTMLCanvasElement;
 import elemental3.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector3d;
-import org.joml.Vector4d;
 import org.realityforge.webgl.util.CanvasUtil;
 
-public final class Cube2
+public final class Main
   implements EntryPoint
 {
-  @Nonnull
-  private final Matrix4d _modelMatrix = new Matrix4d();
-  @Nonnull
-  private final Matrix4d _viewMatrix = new Matrix4d();
-  @Nonnull
-  private final Matrix4d _projectionMatrix = new Matrix4d();
   // Cube rotation angle
-  private double _angle;
+  private static double c_angle;
+  @Nonnull
+  private final Matrix4d c_modelMatrix = new Matrix4d();
+  @Nonnull
+  private final Matrix4d c_viewMatrix = new Matrix4d();
+  @Nonnull
+  private final Matrix4d c_projectionMatrix = new Matrix4d();
   private Mesh _mesh;
 
   @Override
@@ -29,7 +27,7 @@ public final class Cube2
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
+    c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
     _mesh.sendToGpu( gl );
@@ -45,24 +43,19 @@ public final class Cube2
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
-    _modelMatrix.rotateY( _angle );
-    _modelMatrix.rotateX( 0.25 );
+    c_modelMatrix.identity();
+    c_modelMatrix.translate( 0, 0, -7 );
+    c_modelMatrix.rotateY( c_angle );
+    c_modelMatrix.rotateX( 0.25 );
 
-    _viewMatrix.identity();
+    c_viewMatrix.identity();
 
     gl.useProgram( _mesh.getMaterial().getProgram() );
-    final Vector4d[] colors = { new Vector4d( 1, 0, 0, 1 ),
-                                new Vector4d( 0, 1, 0, 1 ),
-                                new Vector4d( 0, 0, 1, 1 ) };
-    final Vector3d offsets = new Vector3d( -2, 0, 2 );
-    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, colors, offsets );
+    _mesh.setUniforms( gl, this.c_modelMatrix, this.c_viewMatrix, this.c_projectionMatrix );
 
-    _angle += 0.1;
+    c_angle += 0.1;
 
-    // Draw 3 instances of the cube
-    gl.drawArraysInstanced( WebGL2RenderingContext.TRIANGLES, 0, 36, 3 );
+    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }

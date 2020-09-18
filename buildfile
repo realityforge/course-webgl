@@ -25,7 +25,7 @@ define 'course-webgl' do
   gwt_config = {}
   GWT_MODULES.each do |m|
     uname = Reality::Naming.underscore(m)
-    module_name = "org.realityforge.webgl.#{uname}.#{m}"
+    module_name = "org.realityforge.webgl.#{uname}.Main"
     gwt_config[module_name] = false
     gwt([module_name],
         {

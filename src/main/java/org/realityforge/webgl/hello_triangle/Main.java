@@ -13,7 +13,7 @@ import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 
-public class HelloTriangle
+public class Main
   implements EntryPoint
 {
   @Override

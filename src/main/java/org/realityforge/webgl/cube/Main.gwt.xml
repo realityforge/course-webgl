@@ -4,7 +4,7 @@
   <!-- TODO: Why does JOML not inherit TypedArrays? -->
   <inherits name='org.joml.JOML'/>
 
-  <entry-point class='org.realityforge.webgl.cube.Cube'/>
+  <entry-point class='org.realityforge.webgl.cube.Main'/>
 
   <source path=''/>
 </module>
