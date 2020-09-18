@@ -39,7 +39,6 @@ final class Material
 
     _positionIndex = gl.getAttribLocation( _program, "position" );
     _colorIndex = gl.getAttribLocation( _program, "color" );
-
   }
 
   @Nonnull
