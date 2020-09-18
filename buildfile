@@ -35,12 +35,13 @@ define 'course-webgl' do
           :output_key => uname
         })
     ipr.add_gwt_configuration(project,
+                              :name => "Run #{m}",
                               :gwt_module => module_name,
                               :start_javascript_debugger => false,
                               :open_in_browser => false,
                               :vm_parameters => '-Xmx2G',
                               :shell_parameters => "-strict -style PRETTY -XmethodNameDisplayMode FULL -nostartServer -incremental -codeServerPort 8889 -bindAddress 0.0.0.0 -deploy #{_(:generated, :gwt, 'deploy')} -extra #{_(:generated, :gwt, 'extra')} -war #{_(:generated, :gwt, 'war')}",
-                              :launch_page => "http://127.0.0.1:8889/#{uname}/index.html")
+                              :launch_page => "http://127.0.0.1:8889/example/index.html")
   end
 
   project.iml.add_gwt_facet(gwt_config, :settings => {

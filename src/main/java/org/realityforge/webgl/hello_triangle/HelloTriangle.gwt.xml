@@ -1,8 +1,7 @@
-<module rename-to='hello_triangle'>
+<module rename-to='example'>
   <inherits name='org.realityforge.webgl.Webgl'/>
 
   <entry-point class='org.realityforge.webgl.hello_triangle.HelloTriangle'/>
 
   <source path=''/>
-  <public path='public'/>
 </module>

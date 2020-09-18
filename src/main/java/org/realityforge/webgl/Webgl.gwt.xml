@@ -7,4 +7,5 @@
 
   <source path='annotations'/>
   <source path='util'/>
+  <public path='public'/>
 </module>

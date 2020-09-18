@@ -1,4 +1,4 @@
-<module rename-to='rectangle'>
+<module rename-to='example'>
   <inherits name='org.realityforge.webgl.Webgl'/>
   <inherits name='com.google.gwt.typedarrays.TypedArrays'/>
   <!-- TODO: Why does JOML not inherit TypedArrays? -->
@@ -7,5 +7,4 @@
   <entry-point class='org.realityforge.webgl.rectangle.Main'/>
 
   <source path=''/>
-  <public path='public'/>
 </module>
