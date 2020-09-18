@@ -22,36 +22,28 @@ public final class CanvasUtil
     final Window window = Global.globalThis();
     final Document document = window.document();
     final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
-    resizeCanvasToViewport( canvas );
     final HTMLElement body = document.body;
     assert null != body;
     body.appendChild( canvas );
-    window.onresize = e -> resizeCanvasToViewport( canvas );
     return canvas;
   }
 
-  private static void resizeCanvasToViewport( @Nonnull final HTMLCanvasElement canvas )
+  public static void resize( @Nonnull final WebGL2RenderingContext gl, @Nonnull final HTMLCanvasElement canvas )
   {
     final Window window = Global.globalThis();
     final Element element = window.document().documentElement();
     assert null != element;
-    canvas.width = element.clientWidth();
-    canvas.height = element.clientHeight();
-    resize( canvas );
-  }
 
-  public static void resize( @Nonnull final HTMLCanvasElement canvas )
-  {
-    // Lookup the size the browser is displaying the canvas.
-    final int displayWidth = canvas.clientWidth();
-    final int displayHeight = canvas.clientHeight();
+    final int displayWidth = element.clientWidth();
+    final int displayHeight = element.clientHeight();
 
-    // Check if the canvas is not the same size.
-    if ( 0 != displayWidth && 0 != displayHeight && ( canvas.width != displayWidth || canvas.height != displayHeight ) )
+    if ( canvas.width != displayWidth || canvas.height != displayHeight )
     {
       // Make the canvas the same size
       canvas.width = displayWidth;
       canvas.height = displayHeight;
+
+      gl.viewport( 0, 0, canvas.width, canvas.height );
     }
   }
 

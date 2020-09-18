@@ -32,11 +32,13 @@ public final class Cube
     _mesh = CubeTemplate.create( gl );
     _mesh.sendToGpu( gl );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 
-  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
+  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
+    CanvasUtil.resize( gl, canvas );
+
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
@@ -55,6 +57,6 @@ public final class Cube
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 }
