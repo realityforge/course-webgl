@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.webgl.util.CanvasUtil;
 
-public final class Rectangle
+public final class Main
   implements EntryPoint
 {
   // Cube rotation angle
