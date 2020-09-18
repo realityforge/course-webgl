@@ -1,6 +1,7 @@
 package org.realityforge.webgl.util;
 
 import elemental2.core.Float32Array;
+import elemental2.core.Uint16Array;
 import elemental3.Global;
 import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
@@ -16,6 +17,20 @@ public final class GL
 {
   private GL()
   {
+  }
+
+  @SuppressWarnings( { "SameParameterValue", "UnusedReturnValue" } )
+  @Nonnull
+  public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
+                                           final int target,
+                                           final int usage,
+                                           @Nonnull final Uint16Array data )
+  {
+    final WebGLBuffer buffer = gl.createBuffer();
+    assert null != buffer;
+    gl.bindBuffer( target, buffer );
+    gl.bufferData( target, data, usage );
+    return buffer;
   }
 
   @SuppressWarnings( "SameParameterValue" )
