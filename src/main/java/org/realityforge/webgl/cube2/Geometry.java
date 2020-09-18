@@ -11,8 +11,7 @@ final class Geometry
   @Nonnull
   private final WebGLBuffer _positionBuffer;
 
-  Geometry( @Nonnull final WebGL2RenderingContext gl,
-            @Nonnull final Float32Array positionData )
+  Geometry( @Nonnull final WebGL2RenderingContext gl, @Nonnull final Float32Array positionData )
   {
     // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
     // the data is static and the CPU will not update it often which means that the GPU can store it
