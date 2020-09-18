@@ -1,4 +1,4 @@
-<module rename-to='cube'>
+<module rename-to='rectangle'>
   <inherits name='org.realityforge.webgl.Webgl'/>
   <inherits name='com.google.gwt.typedarrays.TypedArrays'/>
   <!-- TODO: Why does JOML not inherit TypedArrays? -->
