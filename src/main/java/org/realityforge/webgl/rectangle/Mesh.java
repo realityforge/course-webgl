@@ -38,6 +38,7 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
+    gl.bindVertexArray( _geometry.getVertexArrayObject() );
     // Tell GPU to load position data into program from out buffer
     GL.linkBufferResource( gl,
                            _geometry.getPositionBuffer(),

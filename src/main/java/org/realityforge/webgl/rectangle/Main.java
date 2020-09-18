@@ -55,7 +55,7 @@ public final class Main
 
     c_angle += 0.1;
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
+    gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }

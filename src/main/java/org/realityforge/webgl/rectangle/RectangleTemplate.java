@@ -1,101 +1,36 @@
 package org.realityforge.webgl.rectangle;
 
 import elemental2.core.Float32Array;
+import elemental2.core.Uint16Array;
 import elemental3.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
 
 final class RectangleTemplate
 {
+  // indexes into vertex attribute buffers
+  private static final double[] INDEXES = new double[]
+    {
+      // Triangle 1
+      0, 1, 2,
+      // Triangle 2
+      0, 2, 3
+    };
   // Vertices position data
   private static final double[] POSITIONS = new double[]
     {
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, -0.5, 0.5,
-
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, 0.5, 0.5,
-
-      0.5, 0.5, 0.5,
-      0.5, 0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5
+      -1.0, -1.0, 0.0, //0
+      1.0, -1.0, 0.0, //1
+      1.0, 1.0, 0.0, //2
+      -1.0, 1.0, 0.0 //3
     };
   // Vertices color data in RGBA form
   private static final double[] COLORS = new double[]
     {
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0 // Left face
+      1.0, 0.0, 0.0, 1.0,
+      1.0, 0.0, 0.0, 1.0,
+      1.0, 0.0, 0.0, 1.0,
+      1.0, 0.0, 0.0, 1.0
     };
   // The vertex shader that will be run for every vertex
   @GLSL
@@ -150,7 +85,10 @@ final class RectangleTemplate
   @Nonnull
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
-    return new Mesh( new Geometry( gl, new Float32Array( POSITIONS ), new Float32Array( COLORS ) ),
+    return new Mesh( new Geometry( gl,
+                                   new Uint16Array( INDEXES ),
+                                   new Float32Array( POSITIONS ),
+                                   new Float32Array( COLORS ) ),
                      new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
   }
 }
