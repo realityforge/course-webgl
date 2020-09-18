@@ -26,7 +26,7 @@ package org.joml;
 
 /**
  * Interface to a read-only view of a 3-dimensional vector of integers.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Vector3ic {
@@ -106,7 +106,7 @@ public interface Vector3ic {
 
     /**
      * Multiply the components of this vector by the given scalar and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *        the value to multiply this vector's components by
      * @param dest
@@ -283,7 +283,7 @@ public interface Vector3ic {
 
     /**
      * Get the value of the specified component of this vector.
-     * 
+     *
      * @param component
      *          the component, within <code>[0..2]</code>
      * @return the value
@@ -293,14 +293,14 @@ public interface Vector3ic {
 
     /**
      * Determine the component with the biggest absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..2]</code>
      */
     int maxComponent();
 
     /**
      * Determine the component with the smallest (towards zero) absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..2]</code>
      */
     int minComponent();
@@ -308,7 +308,7 @@ public interface Vector3ic {
     /**
      * Compute the absolute of each of this vector's components
      * and store the result into <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest

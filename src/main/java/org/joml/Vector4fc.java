@@ -27,7 +27,7 @@ import java.util.*;
 
 /**
  * Interface to a read-only view of a 4-dimensional vector of single-precision floats.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Vector4fc {
@@ -56,7 +56,7 @@ public interface Vector4fc {
 
     /**
      * Subtract the supplied vector from this one and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to subtract from <code>this</code>
      * @param dest
@@ -67,7 +67,7 @@ public interface Vector4fc {
 
     /**
      * Subtract <code>(x, y, z, w)</code> from this and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to subtract
      * @param y
@@ -84,7 +84,7 @@ public interface Vector4fc {
 
     /**
      * Add the supplied vector to this one and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to add
      * @param dest
@@ -95,7 +95,7 @@ public interface Vector4fc {
 
     /**
      * Increment the components of this vector by the given values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to add
      * @param y
@@ -113,7 +113,7 @@ public interface Vector4fc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -127,7 +127,7 @@ public interface Vector4fc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -141,7 +141,7 @@ public interface Vector4fc {
     /**
      * Add the component-wise multiplication of <code>this * a</code> to <code>b</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the multiplicand
      * @param b
@@ -155,7 +155,7 @@ public interface Vector4fc {
     /**
      * Add the component-wise multiplication of <code>this * a</code> to <code>b</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the multiplicand
      * @param b
@@ -168,7 +168,7 @@ public interface Vector4fc {
 
     /**
      * Multiply this Vector4f component-wise by another Vector4f and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the other vector
      * @param dest
@@ -179,7 +179,7 @@ public interface Vector4fc {
 
     /**
      * Divide this Vector4f component-wise by another Vector4f and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @param dest
@@ -191,7 +191,7 @@ public interface Vector4fc {
     /**
      * Multiply the given matrix mat with this Vector4f and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply the vector with
      * @param dest
@@ -203,7 +203,7 @@ public interface Vector4fc {
     /**
      * Multiply the transpose of the given matrix <code>mat</code> with this Vector4f and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply the vector with
      * @param dest
@@ -215,7 +215,7 @@ public interface Vector4fc {
     /**
      * Multiply the given affine matrix mat with this Vector4f and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the affine matrix to multiply the vector with
      * @param dest
@@ -227,7 +227,7 @@ public interface Vector4fc {
     /**
      * Multiply the transpose of the given affine matrix <code>mat</code> with this Vector4f and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the affine matrix whose transpose to multiply the vector with
      * @param dest
@@ -239,7 +239,7 @@ public interface Vector4fc {
     /**
      * Multiply the given matrix mat with this Vector4f and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply the vector with
      * @param dest
@@ -251,7 +251,7 @@ public interface Vector4fc {
     /**
      * Multiply the given matrix <code>mat</code> with this Vector4f, perform perspective division
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -263,7 +263,7 @@ public interface Vector4fc {
     /**
      * Multiply the given matrix <code>mat</code> with this Vector4f, perform perspective division
      * and store the <code>(x, y, z)</code> result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -275,7 +275,7 @@ public interface Vector4fc {
     /**
      * Multiply all components of this {@link Vector4f} by the given scalar
      * value and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *          the scalar to multiply by
      * @param dest
@@ -286,7 +286,7 @@ public interface Vector4fc {
 
     /**
      * Multiply the components of this Vector4f by the given scalar values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to multiply by
      * @param y
@@ -304,7 +304,7 @@ public interface Vector4fc {
     /**
      * Divide all components of this {@link Vector4f} by the given scalar
      * value and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *          the scalar to divide by
      * @param dest
@@ -315,7 +315,7 @@ public interface Vector4fc {
 
     /**
      * Divide the components of this Vector4f by the given scalar values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to divide by
      * @param y
@@ -332,9 +332,9 @@ public interface Vector4fc {
 
     /**
      * Rotate this vector by the given quaternion <code>quat</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @see Quaternionf#transform(Vector4f)
-     * 
+     *
      * @param quat
      *          the quaternion to rotate this vector
      * @param dest
@@ -346,7 +346,7 @@ public interface Vector4fc {
     /**
      * Rotate this vector the specified radians around the given rotation axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param aX
@@ -364,7 +364,7 @@ public interface Vector4fc {
     /**
      * Rotate this vector the specified radians around the X axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param dest
@@ -376,7 +376,7 @@ public interface Vector4fc {
     /**
      * Rotate this vector the specified radians around the Y axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param dest
@@ -388,7 +388,7 @@ public interface Vector4fc {
     /**
      * Rotate this vector the specified radians around the Z axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param dest
@@ -399,21 +399,21 @@ public interface Vector4fc {
 
     /**
      * Return the length squared of this vector.
-     * 
+     *
      * @return the length squared
      */
     float lengthSquared();
 
     /**
      * Return the length of this vector.
-     * 
+     *
      * @return the length
      */
     float length();
 
     /**
      * Normalizes this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -422,7 +422,7 @@ public interface Vector4fc {
 
     /**
      * Scale this vector to have the given length and store the result in <code>dest</code>.
-     * 
+     *
      * @param length
      *          the desired length
      * @param dest
@@ -433,7 +433,7 @@ public interface Vector4fc {
 
     /**
      * Normalize this vector by computing only the norm of <code>(x, y, z)</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -492,7 +492,7 @@ public interface Vector4fc {
     /**
      * Compute the dot product (inner product) of this vector and <code>v</code>
      * .
-     * 
+     *
      * @param v
      *          the other vector
      * @return the dot product
@@ -501,7 +501,7 @@ public interface Vector4fc {
 
     /**
      * Compute the dot product (inner product) of this vector and <code>(x, y, z, w)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -516,9 +516,9 @@ public interface Vector4fc {
 
     /**
      * Return the cosine of the angle between this vector and the supplied vector. Use this instead of <code>Math.cos(angle(v))</code>.
-     * 
+     *
      * @see #angle(Vector4fc)
-     * 
+     *
      * @param v
      *          the other vector
      * @return the cosine of the angle
@@ -527,9 +527,9 @@ public interface Vector4fc {
 
     /**
      * Return the angle between this vector and the supplied vector.
-     * 
+     *
      * @see #angleCos(Vector4fc)
-     * 
+     *
      * @param v
      *          the other vector
      * @return the angle, in radians
@@ -538,7 +538,7 @@ public interface Vector4fc {
 
     /**
      * Negate this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -573,7 +573,7 @@ public interface Vector4fc {
      * <p>
      * If <code>t</code> is <code>0.0</code> then the result is <code>this</code>. If the interpolation factor is <code>1.0</code>
      * then the result is <code>other</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param t
@@ -588,7 +588,7 @@ public interface Vector4fc {
      * Compute a smooth-step (i.e. hermite with zero tangents) interpolation
      * between <code>this</code> vector and the given vector <code>v</code> and
      * store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the other vector
      * @param t
@@ -598,13 +598,13 @@ public interface Vector4fc {
      * @return dest
      */
     Vector4f smoothStep(Vector4fc v, float t, Vector4f dest);
-    
+
     /**
      * Compute a hermite interpolation between <code>this</code> vector and its
      * associated tangent <code>t0</code> and the given vector <code>v</code>
      * with its tangent <code>t1</code> and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param t0
      *          the tangent of <code>this</code> vector
      * @param v1
@@ -621,7 +621,7 @@ public interface Vector4fc {
 
     /**
      * Get the value of the specified component of this vector.
-     * 
+     *
      * @param component
      *          the component, within <code>[0..3]</code>
      * @return the value
@@ -643,7 +643,7 @@ public interface Vector4fc {
 
     /**
      * Set the components of the given vector <code>dest</code> to those of <code>this</code> vector.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -652,7 +652,7 @@ public interface Vector4fc {
 
     /**
      * Set the components of the given vector <code>dest</code> to those of <code>this</code> vector.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -661,14 +661,14 @@ public interface Vector4fc {
 
     /**
      * Determine the component with the biggest absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..3]</code>
      */
     int maxComponent();
 
     /**
      * Determine the component with the smallest (towards zero) absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..3]</code>
      */
     int minComponent();
@@ -721,7 +721,7 @@ public interface Vector4fc {
     /**
      * Compute the absolute of each of this vector's components
      * and store the result into <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -735,7 +735,7 @@ public interface Vector4fc {
      * Please note that this method is not used by any data structure such as {@link ArrayList} {@link HashSet} or {@link HashMap}
      * and their operations, such as {@link ArrayList#contains(Object)} or {@link HashSet#remove(Object)}, since those
      * data structures only use the {@link Object#equals(Object)} and {@link Object#hashCode()} methods.
-     * 
+     *
      * @param v
      *          the other vector
      * @param delta

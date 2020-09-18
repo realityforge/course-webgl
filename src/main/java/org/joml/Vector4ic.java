@@ -26,7 +26,7 @@ package org.joml;
 
 /**
  * Interface to a read-only view of a 4-dimensional vector of integers.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Vector4ic {
@@ -304,7 +304,7 @@ public interface Vector4ic {
 
     /**
      * Get the value of the specified component of this vector.
-     * 
+     *
      * @param component
      *          the component, within <code>[0..3]</code>
      * @return the value
@@ -314,14 +314,14 @@ public interface Vector4ic {
 
     /**
      * Determine the component with the biggest absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..3]</code>
      */
     int maxComponent();
 
     /**
      * Determine the component with the smallest (towards zero) absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..3]</code>
      */
     int minComponent();
@@ -329,7 +329,7 @@ public interface Vector4ic {
     /**
      * Compute the absolute of each of this vector's components
      * and store the result into <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest

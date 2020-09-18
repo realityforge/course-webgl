@@ -40,7 +40,7 @@ import com.google.gwt.typedarrays.shared.Float32Array;
  *      m01  m11  m21  m31<br>
  *      m02  m12  m22  m32<br>
  *      m03  m13  m23  m33<br>
- * 
+ *
  * @author Richard Greenlees
  * @author Kai Burjack
  */
@@ -69,7 +69,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Create a new {@link Matrix4f} by setting its uppper left 3x3 submatrix to the values of the given {@link Matrix3fc}
      * and the rest to identity.
-     * 
+     *
      * @param mat
      *          the {@link Matrix3fc}
      */
@@ -79,7 +79,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Create a new {@link Matrix4f} and make it a copy of the given matrix.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4fc} to copy the values from
      */
@@ -90,7 +90,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Create a new {@link Matrix4f} and set its upper 4x3 submatrix to the given matrix <code>mat</code>
      * and all other elements to identity.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4x3fc} to copy the values from
      */
@@ -103,7 +103,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * Note that due to the given {@link Matrix4dc} storing values in double-precision and the constructed {@link Matrix4f} storing them
      * in single-precision, there is the possibility of losing precision.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4dc} to copy the values from
      */
@@ -119,7 +119,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *   m01, m11, m21, m31<br>
      *   m02, m12, m22, m32<br>
      *   m03, m13, m23, m33
-     * 
+     *
      * @param m00
      *          the value of m00
      * @param m01
@@ -153,8 +153,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * @param m33
      *          the value of m33
      */
-    public Matrix4f(float m00, float m01, float m02, float m03, 
-                    float m10, float m11, float m12, float m13, 
+    public Matrix4f(float m00, float m01, float m02, float m03,
+                    float m10, float m11, float m12, float m13,
                     float m20, float m21, float m22, float m23,
                     float m30, float m31, float m32, float m33) {
         this._m00(m00)
@@ -179,7 +179,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Create a new {@link Matrix4f} and initialize its four columns using the supplied vectors.
-     * 
+     *
      * @param col0
      *          the first column
      * @param col1
@@ -204,7 +204,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Use one or multiple of 0, {@link Matrix4fc#PROPERTY_IDENTITY},
      * {@link Matrix4fc#PROPERTY_TRANSLATION}, {@link Matrix4fc#PROPERTY_AFFINE},
      * {@link Matrix4fc#PROPERTY_PERSPECTIVE}, {@link Matrix4fc#PROPERTY_ORTHONORMAL}.
-     * 
+     *
      * @param properties
      *          bitset of the properties to assume about this matrix
      * @return this
@@ -217,7 +217,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Compute and set the matrix properties returned by {@link #properties()} based
      * on the current matrix element values.
-     * 
+     *
      * @return this
      */
     public Matrix4f determineProperties() {
@@ -231,7 +231,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
                     if (m30 == 0.0f && m31 == 0.0f && m32 == 0.0f)
                         properties |= PROPERTY_IDENTITY;
                 }
-                /* 
+                /*
                  * We do not determine orthogonality, since it would require arbitrary epsilons
                  * and is rather expensive (6 dot products) in the worst case.
                  */
@@ -299,7 +299,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the value of the matrix element at column 0 and row 0.
-     * 
+     *
      * @param m00
      *          the new value
      * @return this
@@ -313,7 +313,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 1.
-     * 
+     *
      * @param m01
      *          the new value
      * @return this
@@ -327,7 +327,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 2.
-     * 
+     *
      * @param m02
      *          the new value
      * @return this
@@ -341,7 +341,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 3.
-     * 
+     *
      * @param m03
      *          the new value
      * @return this
@@ -354,7 +354,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 0.
-     * 
+     *
      * @param m10
      *          the new value
      * @return this
@@ -368,7 +368,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 1.
-     * 
+     *
      * @param m11
      *          the new value
      * @return this
@@ -382,7 +382,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 2.
-     * 
+     *
      * @param m12
      *          the new value
      * @return this
@@ -396,7 +396,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 3.
-     * 
+     *
      * @param m13
      *          the new value
      * @return this
@@ -409,7 +409,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 0.
-     * 
+     *
      * @param m20
      *          the new value
      * @return this
@@ -423,7 +423,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 1.
-     * 
+     *
      * @param m21
      *          the new value
      * @return this
@@ -437,7 +437,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 2.
-     * 
+     *
      * @param m22
      *          the new value
      * @return this
@@ -451,7 +451,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 3.
-     * 
+     *
      * @param m23
      *          the new value
      * @return this
@@ -464,7 +464,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 0.
-     * 
+     *
      * @param m30
      *          the new value
      * @return this
@@ -477,7 +477,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 1.
-     * 
+     *
      * @param m31
      *          the new value
      * @return this
@@ -490,7 +490,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 2.
-     * 
+     *
      * @param m32
      *          the new value
      * @return this
@@ -503,7 +503,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 3.
-     * 
+     *
      * @param m33
      *          the new value
      * @return this
@@ -519,7 +519,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the value of the matrix element at column 0 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m00
      *          the new value
      * @return this
@@ -530,7 +530,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m01
      *          the new value
      * @return this
@@ -541,7 +541,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m02
      *          the new value
      * @return this
@@ -552,7 +552,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 3 without updating the properties of the matrix.
-     * 
+     *
      * @param m03
      *          the new value
      * @return this
@@ -563,7 +563,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m10
      *          the new value
      * @return this
@@ -574,7 +574,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m11
      *          the new value
      * @return this
@@ -585,7 +585,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m12
      *          the new value
      * @return this
@@ -596,7 +596,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 3 without updating the properties of the matrix.
-     * 
+     *
      * @param m13
      *          the new value
      * @return this
@@ -607,7 +607,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m20
      *          the new value
      * @return this
@@ -618,7 +618,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m21
      *          the new value
      * @return this
@@ -629,7 +629,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m22
      *          the new value
      * @return this
@@ -640,7 +640,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 3 without updating the properties of the matrix.
-     * 
+     *
      * @param m23
      *          the new value
      * @return this
@@ -651,7 +651,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m30
      *          the new value
      * @return this
@@ -662,7 +662,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m31
      *          the new value
      * @return this
@@ -673,7 +673,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m32
      *          the new value
      * @return this
@@ -685,7 +685,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the value of the matrix element at column 3 and row 3 without updating the properties of the matrix.
-     * 
+     *
      * @param m33
      *          the new value
      * @return this
@@ -699,7 +699,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Reset this matrix to the identity.
      * <p>
      * Please note that if a call to {@link #identity()} is immediately followed by a call to:
-     * {@link #translate(float, float, float) translate}, 
+     * {@link #translate(float, float, float) translate},
      * {@link #rotate(float, float, float, float) rotate},
      * {@link #scale(float, float, float) scale},
      * {@link #perspective(float, float, float, float) perspective},
@@ -719,7 +719,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * {@link #setLookAt(float, float, float, float, float, float, float, float, float) setLookAt},
      * {@link #setLookAlong(float, float, float, float, float, float) setLookAlong},
      * or any of their overloads.
-     * 
+     *
      * @return this
      */
     public Matrix4f identity() {
@@ -747,10 +747,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Store the values of the given matrix <code>m</code> into <code>this</code> matrix.
-     * 
+     *
      * @see #Matrix4f(Matrix4fc)
      * @see #get(Matrix4f)
-     * 
+     *
      * @param m
      *          the matrix to copy the values from
      * @return this
@@ -778,7 +778,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Store the values of the transpose of the given matrix <code>m</code> into <code>this</code> matrix.
-     * 
+     *
      * @param m
      *          the matrix to copy the transposed values from
      * @return this
@@ -803,9 +803,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Store the values of the given matrix <code>m</code> into <code>this</code> matrix
      * and set the other matrix elements to identity.
-     * 
+     *
      * @see #Matrix4f(Matrix4x3fc)
-     * 
+     *
      * @param m
      *          the matrix to copy the values from
      * @return this
@@ -836,10 +836,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * Note that due to the given matrix <code>m</code> storing values in double-precision and <code>this</code> matrix storing
      * them in single-precision, there is the possibility to lose precision.
-     * 
+     *
      * @see #Matrix4f(Matrix4dc)
      * @see #get(Matrix4d)
-     * 
+     *
      * @param m
      *          the matrix to copy the values from
      * @return this
@@ -866,11 +866,11 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set the upper left 3x3 submatrix of this {@link Matrix4f} to the given {@link Matrix3fc} 
+     * Set the upper left 3x3 submatrix of this {@link Matrix4f} to the given {@link Matrix3fc}
      * and the rest to identity.
-     * 
+     *
      * @see #Matrix4f(Matrix3fc)
-     * 
+     *
      * @param mat
      *          the {@link Matrix3fc}
      * @return this
@@ -898,7 +898,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set this matrix to be equivalent to the rotation specified by the given {@link AxisAngle4f}.
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f}
      * @return this
@@ -944,7 +944,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set this matrix to be equivalent to the rotation specified by the given {@link AxisAngle4d}.
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4d}
      * @return this
@@ -994,9 +994,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * This method is equivalent to calling: <code>rotation(q)</code>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToMatrix/">http://www.euclideanspace.com/</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param q
      *          the {@link Quaternionfc}
      * @return this
@@ -1009,7 +1009,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set this matrix to be equivalent to the rotation specified by the given {@link Quaterniondc}.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToMatrix/">http://www.euclideanspace.com/</a>
-     * 
+     *
      * @param q
      *          the {@link Quaterniondc}
      * @return this
@@ -1045,9 +1045,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set the upper left 3x3 submatrix of this {@link Matrix4f} to that of the given {@link Matrix4f} 
+     * Set the upper left 3x3 submatrix of this {@link Matrix4f} to that of the given {@link Matrix4f}
      * and don't change the other elements.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4f}
      * @return this
@@ -1059,11 +1059,11 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
 
     /**
-     * Set the upper 4x3 submatrix of this {@link Matrix4f} to the given {@link Matrix4x3fc} 
+     * Set the upper 4x3 submatrix of this {@link Matrix4f} to the given {@link Matrix4x3fc}
      * and don't change the other elements.
-     * 
+     *
      * @see Matrix4x3f#get(Matrix4f)
-     * 
+     *
      * @param mat
      *          the {@link Matrix4x3fc}
      * @return this
@@ -1086,9 +1086,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set the upper 4x3 submatrix of this {@link Matrix4f} to the upper 4x3 submatrix of the given {@link Matrix4f} 
+     * Set the upper 4x3 submatrix of this {@link Matrix4f} to the upper 4x3 submatrix of the given {@link Matrix4f}
      * and don't change the other elements.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4f}
      * @return this
@@ -1141,7 +1141,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * This method neither assumes nor checks for any matrix properties of <code>this</code> or <code>right</code>
      * and will always perform a complete 4x4 matrix multiplication. This method should only be used whenever the
      * multiplied matrices do not have any properties for which there are optimized multiplication methods available.
-     * 
+     *
      * @param right
      *          the right operand of the matrix multiplication
      * @return this
@@ -1190,7 +1190,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Multiply this matrix by the matrix with the supplied elements.
      * <p>
-     * If <code>M</code> is <code>this</code> matrix and <code>R</code> the <code>right</code> matrix whose 
+     * If <code>M</code> is <code>this</code> matrix and <code>R</code> the <code>right</code> matrix whose
      * elements are supplied via the parameters, then the new matrix will be <code>M * R</code>.
      * So when transforming a vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
@@ -1330,10 +1330,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Multiply this matrix by the 3x3 matrix with the supplied elements expanded to a 4x4 matrix with 
+     * Multiply this matrix by the 3x3 matrix with the supplied elements expanded to a 4x4 matrix with
      * all other matrix elements set to identity.
      * <p>
-     * If <code>M</code> is <code>this</code> matrix and <code>R</code> the <code>right</code> matrix whose 
+     * If <code>M</code> is <code>this</code> matrix and <code>R</code> the <code>right</code> matrix whose
      * elements are supplied via the parameters, then the new matrix will be <code>M * R</code>.
      * So when transforming a vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
@@ -1925,9 +1925,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * adding that result to <code>this</code>.
      * <p>
      * The matrix <code>other</code> will not be changed.
-     * 
+     *
      * @param other
-     *          the other matrix 
+     *          the other matrix
      * @param otherFactor
      *          the factor to multiply each of the other matrix's 4x3 components
      * @return this
@@ -1959,9 +1959,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Component-wise add <code>this</code> and <code>other</code>.
-     * 
+     *
      * @param other
-     *          the other addend 
+     *          the other addend
      * @return this
      */
     public Matrix4f add(Matrix4fc other) {
@@ -1991,7 +1991,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Component-wise subtract <code>subtrahend</code> from <code>this</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @return this
@@ -2023,7 +2023,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Component-wise multiply <code>this</code> by <code>other</code>.
-     * 
+     *
      * @param other
      *          the other matrix
      * @return this
@@ -2055,9 +2055,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Component-wise add the upper 4x3 submatrices of <code>this</code> and <code>other</code>.
-     * 
+     *
      * @param other
-     *          the other addend 
+     *          the other addend
      * @return this
      */
     public Matrix4f add4x3(Matrix4fc other) {
@@ -2087,7 +2087,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Component-wise subtract the upper 4x3 submatrices of <code>subtrahend</code> from <code>this</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @return this
@@ -2119,7 +2119,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Component-wise multiply the upper 4x3 submatrices of <code>this</code> by <code>other</code>.
-     * 
+     *
      * @param other
      *          the other matrix
      * @return this
@@ -2156,7 +2156,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *  m01, m11, m21, m31<br>
      *  m02, m12, m22, m32<br>
      *  m03, m13, m23, m33
-     * 
+     *
      * @param m00
      *          the new value of m00
      * @param m01
@@ -2193,7 +2193,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      */
     public Matrix4f set(float m00, float m01, float m02, float m03,
                         float m10, float m11, float m12, float m13,
-                        float m20, float m21, float m22, float m23, 
+                        float m20, float m21, float m22, float m23,
                         float m30, float m31, float m32, float m33) {
         return this
         ._m00(m00)
@@ -2219,14 +2219,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set the values in the matrix using a float array that contains the matrix elements in column-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 4, 8, 12<br>
      * 1, 5, 9, 13<br>
      * 2, 6, 10, 14<br>
      * 3, 7, 11, 15<br>
-     * 
+     *
      * @see #set(float[])
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @param off
@@ -2242,14 +2242,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set the values in the matrix using a float array that contains the matrix elements in column-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 4, 8, 12<br>
      * 1, 5, 9, 13<br>
      * 2, 6, 10, 14<br>
      * 3, 7, 11, 15<br>
-     * 
+     *
      * @see #set(float[], int)
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @return this
@@ -2262,14 +2262,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set the values in the matrix using a float array that contains the matrix elements in row-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 1, 2, 3<br>
      * 4, 5, 6, 7<br>
      * 8, 9, 10, 11<br>
      * 12, 13, 14, 15<br>
-     * 
+     *
      * @see #setTransposed(float[])
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @param off
@@ -2285,14 +2285,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set the values in the matrix using a float array that contains the matrix elements in row-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 1, 2, 3<br>
      * 4, 5, 6, 7<br>
      * 8, 9, 10, 11<br>
      * 12, 13, 14, 15<br>
-     * 
+     *
      * @see #setTransposed(float[], int)
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @return this
@@ -2305,7 +2305,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the four columns of this matrix to the supplied vectors, respectively.
-     * 
+     *
      * @param col0
      *          the first column
      * @param col1
@@ -2499,9 +2499,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * If <code>this</code> matrix represents an {@link #isAffine() affine} transformation, such as translation, rotation, scaling and shearing,
      * and thus its last row is equal to <code>(0, 0, 0, 1)</code>, then {@link #invertAffine()} can be used instead of this method.
-     * 
+     *
      * @see #invertAffine()
-     * 
+     *
      * @return this
      */
     public Matrix4f invert() {
@@ -2514,9 +2514,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then this method builds the inverse of <code>this</code> and stores it into the given <code>dest</code>.
      * <p>
      * This method can be used to quickly obtain the inverse of a perspective projection matrix when being obtained via {@link #perspective(float, float, float, float) perspective()}.
-     * 
+     *
      * @see #perspective(float, float, float, float)
-     * 
+     *
      * @param dest
      *          will hold the inverse of <code>this</code>
      * @return dest
@@ -2538,9 +2538,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then this method builds the inverse of <code>this</code>.
      * <p>
      * This method can be used to quickly obtain the inverse of a perspective projection matrix when being obtained via {@link #perspective(float, float, float, float) perspective()}.
-     * 
+     *
      * @see #perspective(float, float, float, float)
-     * 
+     *
      * @return this
      */
     public Matrix4f invertPerspective() {
@@ -2556,10 +2556,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * If this matrix represents a symmetric perspective frustum transformation, as obtained via {@link #perspective(float, float, float, float) perspective()}, then
      * {@link #invertPerspective(Matrix4f)} should be used instead.
-     * 
+     *
      * @see #frustum(float, float, float, float, float, float)
      * @see #invertPerspective(Matrix4f)
-     * 
+     *
      * @param dest
      *          will hold the inverse of <code>this</code>
      * @return dest
@@ -2585,10 +2585,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * If this matrix represents a symmetric perspective frustum transformation, as obtained via {@link #perspective(float, float, float, float) perspective()}, then
      * {@link #invertPerspective()} should be used instead.
-     * 
+     *
      * @see #frustum(float, float, float, float, float, float)
      * @see #invertPerspective()
-     * 
+     *
      * @return this
      */
     public Matrix4f invertFrustum() {
@@ -2611,7 +2611,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Invert <code>this</code> orthographic projection matrix.
      * <p>
      * This method can be used to quickly obtain the inverse of an orthographic projection matrix.
-     * 
+     *
      * @return this
      */
     public Matrix4f invertOrtho() {
@@ -2632,7 +2632,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <pre>
      * dest.set(this).mul(view).invert();
      * </pre>
-     * 
+     *
      * @param view
      *          the view transformation (must be {@link #isAffine() affine} and have unit scaling)
      * @param dest
@@ -2688,7 +2688,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <pre>
      * dest.set(this).mul(view).invert();
      * </pre>
-     * 
+     *
      * @param view
      *          the view transformation (must have unit scaling)
      * @param dest
@@ -2759,7 +2759,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Invert this matrix by assuming that it is an {@link #isAffine() affine} transformation (i.e. its last row is equal to <code>(0, 0, 0, 1)</code>).
-     * 
+     *
      * @return this
      */
     public Matrix4f invertAffine() {
@@ -2820,7 +2820,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Transpose only the upper left 3x3 submatrix of this matrix.
      * <p>
      * All other matrix elements are left unchanged.
-     * 
+     *
      * @return this
      */
     public Matrix4f transpose3x3() {
@@ -2857,7 +2857,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Transpose this matrix.
-     * 
+     *
      * @return this
      */
     public Matrix4f transpose() {
@@ -2872,9 +2872,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to post-multiply a translation transformation directly to a
      * matrix, use {@link #translate(float, float, float) translate()} instead.
-     * 
+     *
      * @see #translate(float, float, float)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -2897,9 +2897,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to post-multiply a translation transformation directly to a
      * matrix, use {@link #translate(Vector3fc) translate()} instead.
-     * 
+     *
      * @see #translate(float, float, float)
-     * 
+     *
      * @param offset
      *              the offsets in x, y and z to translate
      * @return this
@@ -2915,10 +2915,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * To build a translation matrix instead, use {@link #translation(float, float, float)}.
      * To apply a translation, use {@link #translate(float, float, float)}.
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #translate(float, float, float)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -2938,10 +2938,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * To build a translation matrix instead, use {@link #translation(Vector3fc)}.
      * To apply a translation, use {@link #translate(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
      * @see #translate(Vector3fc)
-     * 
+     *
      * @param xyz
      *          the units to translate in <code>(x, y, z)</code>
      * @return this
@@ -2968,7 +2968,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Return a string representation of this matrix.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -2994,7 +2994,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Return a string representation of this matrix by formatting the matrix elements with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the matrix values with
      * @return the string representation
@@ -3012,9 +3012,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This is the reverse method of {@link #set(Matrix4fc)} and allows to obtain
      * intermediate calculation results when chaining multiple transformations.
-     * 
+     *
      * @see #set(Matrix4fc)
-     * 
+     *
      * @param dest
      *            the destination matrix
      * @return the passed in destination
@@ -3033,9 +3033,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This is the reverse method of {@link #set(Matrix4dc)} and allows to obtain
      * intermediate calculation results when chaining multiple transformations.
-     * 
+     *
      * @see #set(Matrix4dc)
-     * 
+     *
      * @param dest
      *            the destination matrix
      * @return the passed in destination
@@ -3128,7 +3128,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set all the values within this matrix to <code>0</code>.
-     * 
+     *
      * @return this
      */
     public Matrix4f zero() {
@@ -3144,9 +3144,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix, use {@link #scale(float) scale()} instead.
-     * 
+     *
      * @see #scale(float)
-     * 
+     *
      * @param factor
      *             the scale factor in x, y and z
      * @return this
@@ -3163,9 +3163,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix, use {@link #scale(float, float, float) scale()} instead.
-     * 
+     *
      * @see #scale(float, float, float)
-     * 
+     *
      * @param x
      *             the scale in x
      * @param y
@@ -3184,7 +3184,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
         ._m22(z)
         ._properties(PROPERTY_AFFINE | (one ? PROPERTY_ORTHONORMAL : 0));
     }
-    
+
     /**
      * Set this matrix to be a simple scale matrix which scales the base axes by <code>xyz.x</code>, <code>xyz.y</code> and <code>xyz.z</code> respectively.
      * <p>
@@ -3193,9 +3193,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix use {@link #scale(Vector3fc) scale()} instead.
-     * 
+     *
      * @see #scale(Vector3fc)
-     * 
+     *
      * @param xyz
      *             the scale in x, y and z respectively
      * @return this
@@ -3209,7 +3209,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3218,9 +3218,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to post-multiply a rotation transformation directly to a
      * matrix, use {@link #rotate(float, Vector3fc) rotate()} instead.
-     * 
+     *
      * @see #rotate(float, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -3234,7 +3234,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a rotation transformation using the given {@link AxisAngle4f}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3247,7 +3247,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
      *
      * @see #rotate(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @return this
@@ -3261,7 +3261,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3272,9 +3272,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotate(float, float, float, float) rotate()} instead.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param x
@@ -3315,12 +3315,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a rotation transformation about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -3336,12 +3336,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a rotation transformation about the Y axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -3357,12 +3357,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a rotation transformation about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -3378,7 +3378,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set this matrix to a rotation transformation about the Z axis to align the local <code>+X</code> towards <code>(dirX, dirY)</code>.
      * <p>
      * The vector <code>(dirX, dirY)</code> must be a unit vector.
-     * 
+     *
      * @param dirX
      *            the x component of the normalized direction
      * @param dirY
@@ -3395,12 +3395,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set this matrix to a rotation of <code>angleX</code> radians about the X axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -3436,12 +3436,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set this matrix to a rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationZ(angleZ).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -3483,12 +3483,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set this matrix to a rotation of <code>angleY</code> radians about the Y axis, followed by a rotation
      * of <code>angleX</code> radians about the X axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationY(angleY).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -3529,10 +3529,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set only the upper left 3x3 submatrix of this matrix to a rotation of <code>angleX</code> radians about the X axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -3567,10 +3567,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set only the upper left 3x3 submatrix of this matrix to a rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -3604,10 +3604,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Set only the upper left 3x3 submatrix of this matrix to a rotation of <code>angleY</code> radians about the Y axis, followed by a rotation
      * of <code>angleX</code> radians about the X axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -3640,7 +3640,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to the rotation transformation of the given {@link Quaternionfc}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3651,9 +3651,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotate(Quaternionfc) rotate()} instead.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -3692,16 +3692,16 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).scale(sx, sy, sz)</code>
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #rotate(Quaternionfc)
      * @see #scale(float, float, float)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -3724,8 +3724,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factor for the z-axis
      * @return this
      */
-    public Matrix4f translationRotateScale(float tx, float ty, float tz, 
-                                           float qx, float qy, float qz, float qw, 
+    public Matrix4f translationRotateScale(float tx, float ty, float tz,
+                                           float qx, float qy, float qz, float qw,
                                            float sx, float sy, float sz) {
         float dqx = qx + qx;
         float dqy = qy + qy;
@@ -3768,16 +3768,16 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(translation).rotate(quat).scale(scale)</code>
-     * 
+     *
      * @see #translation(Vector3fc)
      * @see #rotate(Quaternionfc)
      * @see #scale(Vector3fc)
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -3786,8 +3786,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factors
      * @return this
      */
-    public Matrix4f translationRotateScale(Vector3fc translation, 
-                                           Quaternionfc quat, 
+    public Matrix4f translationRotateScale(Vector3fc translation,
+                                           Quaternionfc quat,
                                            Vector3fc scale) {
         return translationRotateScale(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale.x(), scale.y(), scale.z());
     }
@@ -3800,16 +3800,16 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).scale(scale)</code>
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #rotate(Quaternionfc)
      * @see #scale(float)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -3828,8 +3828,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factor for all three axes
      * @return this
      */
-    public Matrix4f translationRotateScale(float tx, float ty, float tz, 
-                                           float qx, float qy, float qz, float qw, 
+    public Matrix4f translationRotateScale(float tx, float ty, float tz,
+                                           float qx, float qy, float qz, float qw,
                                            float scale) {
         return translationRotateScale(tx, ty, tz, qx, qy, qz, qw, scale, scale, scale);
     }
@@ -3842,16 +3842,16 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(translation).rotate(quat).scale(scale)</code>
-     * 
+     *
      * @see #translation(Vector3fc)
      * @see #rotate(Quaternionfc)
      * @see #scale(float)
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -3860,8 +3860,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factors
      * @return this
      */
-    public Matrix4f translationRotateScale(Vector3fc translation, 
-                                           Quaternionfc quat, 
+    public Matrix4f translationRotateScale(Vector3fc translation,
+                                           Quaternionfc quat,
                                            float scale) {
         return translationRotateScale(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale, scale, scale);
     }
@@ -3872,10 +3872,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * which scales the three axes x, y and z by <code>(sx, sy, sz)</code>.
      * <p>
      * This method is equivalent to calling: <code>translationRotateScale(...).invert()</code>
-     * 
+     *
      * @see #translationRotateScale(float, float, float, float, float, float, float, float, float, float)
      * @see #invert()
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -3898,8 +3898,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factor for the z-axis
      * @return this
      */
-    public Matrix4f translationRotateScaleInvert(float tx, float ty, float tz, 
-                                                 float qx, float qy, float qz, float qw, 
+    public Matrix4f translationRotateScaleInvert(float tx, float ty, float tz,
+                                                 float qx, float qy, float qz, float qw,
                                                  float sx, float sy, float sz) {
         boolean one = Math.absEqualsOne(sx) && Math.absEqualsOne(sy) && Math.absEqualsOne(sz);
         if (one)
@@ -3944,10 +3944,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * which scales the axes by <code>scale</code>.
      * <p>
      * This method is equivalent to calling: <code>translationRotateScale(...).invert()</code>
-     * 
+     *
      * @see #translationRotateScale(Vector3fc, Quaternionfc, Vector3fc)
      * @see #invert()
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -3956,8 +3956,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factors
      * @return this
      */
-    public Matrix4f translationRotateScaleInvert(Vector3fc translation, 
-                                                 Quaternionfc quat, 
+    public Matrix4f translationRotateScaleInvert(Vector3fc translation,
+                                                 Quaternionfc quat,
                                                  Vector3fc scale) {
         return translationRotateScaleInvert(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale.x(), scale.y(), scale.z());
     }
@@ -3968,10 +3968,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * which scales all three axes by <code>scale</code>.
      * <p>
      * This method is equivalent to calling: <code>translationRotateScale(...).invert()</code>
-     * 
+     *
      * @see #translationRotateScale(Vector3fc, Quaternionfc, float)
      * @see #invert()
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -3980,8 +3980,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the scaling factors
      * @return this
      */
-    public Matrix4f translationRotateScaleInvert(Vector3fc translation, 
-                                                 Quaternionfc quat, 
+    public Matrix4f translationRotateScaleInvert(Vector3fc translation,
+                                                 Quaternionfc quat,
                                                  float scale) {
         return translationRotateScaleInvert(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale, scale, scale);
     }
@@ -3994,17 +3994,17 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * When transforming a vector by the resulting matrix the transformation described by <code>M</code> will be applied first, then the scaling, then rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).scale(sx, sy, sz).mulAffine(m)</code>
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #rotate(Quaternionfc)
      * @see #scale(float, float, float)
      * @see #mulAffine(Matrix4fc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4029,8 +4029,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the {@link #isAffine() affine} matrix to multiply by
      * @return this
      */
-    public Matrix4f translationRotateScaleMulAffine(float tx, float ty, float tz, 
-                                                    float qx, float qy, float qz, float qw, 
+    public Matrix4f translationRotateScaleMulAffine(float tx, float ty, float tz,
+                                                    float qx, float qy, float qz, float qw,
                                                     float sx, float sy, float sz,
                                                     Matrix4f m) {
         float w2 = qw * qw;
@@ -4088,16 +4088,16 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * When transforming a vector by the resulting matrix the transformation described by <code>M</code> will be applied first, then the scaling, then rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(translation).rotate(quat).scale(scale).mulAffine(m)</code>
-     * 
+     *
      * @see #translation(Vector3fc)
      * @see #rotate(Quaternionfc)
      * @see #mulAffine(Matrix4fc)
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -4108,8 +4108,8 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      *          the {@link #isAffine() affine} matrix to multiply by
      * @return this
      */
-    public Matrix4f translationRotateScaleMulAffine(Vector3fc translation, 
-                                                    Quaternionfc quat, 
+    public Matrix4f translationRotateScaleMulAffine(Vector3fc translation,
+                                                    Quaternionfc quat,
                                                     Vector3fc scale,
                                                     Matrix4f m) {
         return translationRotateScaleMulAffine(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale.x(), scale.y(), scale.z(), m);
@@ -4121,15 +4121,15 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * When transforming a vector by the resulting matrix the rotation - and possibly scaling - transformation will be applied first and then the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat)</code>
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #rotate(Quaternionfc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4180,15 +4180,15 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * When transforming a vector by the resulting matrix the rotation - and possibly scaling - transformation will be applied first and then the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat)</code>
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #rotate(Quaternionfc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4205,7 +4205,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the upper left 3x3 submatrix of this {@link Matrix4f} to the given {@link Matrix3fc} and don't change the other elements.
-     * 
+     *
      * @param mat
      *          the 3x3 matrix
      * @return this
@@ -4330,7 +4330,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param xyz
      *            the factors of the x, y and z component, respectively
      * @return this
@@ -4351,10 +4351,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
      * <p>
-     * Individual scaling of all three axes can be applied using {@link #scale(float, float, float)}. 
-     * 
+     * Individual scaling of all three axes can be applied using {@link #scale(float, float, float)}.
+     *
      * @see #scale(float, float, float)
-     * 
+     *
      * @param xyz
      *            the factor for all components
      * @return this
@@ -4374,7 +4374,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -4421,7 +4421,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -4471,7 +4471,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * scaling will be applied first!
      * <p>
      * This method is equivalent to calling: <code>translate(ox, oy, oz).scale(sx, sy, sz).translate(-ox, -oy, -oz)</code>
-     * 
+     *
      * @param sx
      *            the scaling factor of the x component
      * @param sy
@@ -4500,7 +4500,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * scaling will be applied first!
      * <p>
      * This method is equivalent to calling: <code>translate(ox, oy, oz).scale(factor).translate(-ox, -oy, -oz)</code>
-     * 
+     *
      * @param factor
      *            the scaling factor for all three axes
      * @param ox
@@ -4570,7 +4570,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>, the
      * scaling will be applied last!
-     * 
+     *
      * @param xyz
      *            the factor of the x, y and z component
      * @return this
@@ -4587,7 +4587,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>, the
      * scaling will be applied last!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -4633,7 +4633,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * scaling will be applied last!
      * <p>
      * This method is equivalent to calling: <code>new Matrix4f().translate(ox, oy, oz).scale(sx, sy, sz).translate(-ox, -oy, -oz).mul(this, this)</code>
-     * 
+     *
      * @param sx
      *            the scaling factor of the x component
      * @param sy
@@ -4662,7 +4662,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * scaling will be applied last!
      * <p>
      * This method is equivalent to calling: <code>new Matrix4f().translate(ox, oy, oz).scale(factor).translate(-ox, -oy, -oz).mul(this, this)</code>
-     * 
+     *
      * @param factor
      *            the scaling factor for all three axes
      * @param ox
@@ -4716,7 +4716,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply rotation about the X axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4726,7 +4726,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -4777,7 +4777,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply rotation about the Y axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4787,7 +4787,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -4814,7 +4814,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply rotation about the Z axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4824,7 +4824,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -4842,7 +4842,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * The vector <code>(dirX, dirY)</code> must be a unit vector.
-     * 
+     *
      * @param dirX
      *            the x component of the normalized direction
      * @param dirY
@@ -4884,7 +4884,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angles.x</code> radians about the X axis, followed by a rotation of <code>angles.y</code> radians about the Y axis and
      * followed by a rotation of <code>angles.z</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4894,7 +4894,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angles.x()).rotateY(angles.y()).rotateZ(angles.z())</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -4907,7 +4907,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angleX</code> radians about the X axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4917,7 +4917,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -4991,7 +4991,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angleX</code> radians about the X axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5004,7 +5004,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -5074,7 +5074,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angles.z</code> radians about the Z axis, followed by a rotation of <code>angles.y</code> radians about the Y axis and
      * followed by a rotation of <code>angles.x</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5084,7 +5084,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angles.z).rotateY(angles.y).rotateX(angles.x)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -5097,7 +5097,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5107,7 +5107,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angleZ).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -5179,7 +5179,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5190,7 +5190,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * rotation will be applied first!
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -5249,7 +5249,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angles.y</code> radians about the Y axis, followed by a rotation of <code>angles.x</code> radians about the X axis and
      * followed by a rotation of <code>angles.z</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5259,7 +5259,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angles.y).rotateX(angles.x).rotateZ(angles.z)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -5272,7 +5272,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angleY</code> radians about the Y axis, followed by a rotation of <code>angleX</code> radians about the X axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5282,7 +5282,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angleY).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -5354,7 +5354,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply rotation of <code>angleY</code> radians about the Y axis, followed by a rotation of <code>angleX</code> radians about the X axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5365,7 +5365,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * rotation will be applied first!
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -5426,7 +5426,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5439,9 +5439,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5522,7 +5522,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5535,9 +5535,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5560,7 +5560,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5573,9 +5573,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5641,7 +5641,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5654,9 +5654,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5731,7 +5731,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5744,9 +5744,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5767,7 +5767,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5780,9 +5780,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5863,7 +5863,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5876,9 +5876,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -5897,7 +5897,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Pre-multiply a rotation around the X axis to this matrix by rotating the given amount of radians
      * about the X axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5910,9 +5910,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotationX(float) rotationX()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationX(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the X axis
      * @param dest
@@ -5949,7 +5949,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5962,9 +5962,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotationX(float) rotationX()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationX(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the X axis
      * @return this
@@ -5977,7 +5977,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Pre-multiply a rotation around the Y axis to this matrix by rotating the given amount of radians
      * about the Y axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5990,9 +5990,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotationY(float) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Y axis
      * @param dest
@@ -6029,7 +6029,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the Y axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -6042,9 +6042,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotationY(float) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Y axis
      * @return this
@@ -6057,7 +6057,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Pre-multiply a rotation around the Z axis to this matrix by rotating the given amount of radians
      * about the Z axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -6070,9 +6070,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotationZ(float) rotationZ()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationZ(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Z axis
      * @param dest
@@ -6109,7 +6109,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -6122,9 +6122,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * transformation, use {@link #rotationZ(float) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Z axis
      * @return this
@@ -6144,9 +6144,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @return this
@@ -6166,9 +6166,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -6190,9 +6190,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(float, float, float)}.
-     * 
+     *
      * @see #translation(float, float, float)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -6229,9 +6229,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(float, float, float)}.
-     * 
+     *
      * @see #translation(float, float, float)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -6265,9 +6265,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @return this
@@ -6287,9 +6287,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -6311,9 +6311,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(float, float, float)}.
-     * 
+     *
      * @see #translation(float, float, float)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -6373,9 +6373,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(float, float, float)}.
-     * 
+     *
      * @see #translation(float, float, float)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -6440,9 +6440,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho(float, float, float, float, float, float, boolean) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6510,9 +6510,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho(float, float, float, float, float, float) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6545,9 +6545,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho(float, float, float, float, float, float, boolean) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6582,9 +6582,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho(float, float, float, float, float, float) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6616,9 +6616,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoLH(float, float, float, float, float, float, boolean) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6687,9 +6687,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoLH(float, float, float, float, float, float) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6723,9 +6723,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoLH(float, float, float, float, float, float, boolean) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6760,9 +6760,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoLH(float, float, float, float, float, float) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6789,9 +6789,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #ortho(float, float, float, float, float, float, boolean) ortho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6830,9 +6830,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #ortho(float, float, float, float, float, float) ortho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6859,9 +6859,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #orthoLH(float, float, float, float, float, float, boolean) orthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6900,9 +6900,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #orthoLH(float, float, float, float, float, float) orthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6937,9 +6937,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetric(float, float, float, float, boolean) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7004,9 +7004,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetric(float, float, float, float) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(float, float, float, float)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7039,9 +7039,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetric(float, float, float, float, boolean) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7075,9 +7075,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetric(float, float, float, float) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(float, float, float, float)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7108,9 +7108,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetricLH(float, float, float, float, boolean) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7175,9 +7175,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetricLH(float, float, float, float) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(float, float, float, float)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7210,9 +7210,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetricLH(float, float, float, float, boolean) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7246,9 +7246,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrthoSymmetricLH(float, float, float, float) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(float, float, float, float)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7273,9 +7273,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #orthoSymmetric(float, float, float, float, boolean) orthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetric(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7311,9 +7311,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #orthoSymmetric(float, float, float, float) orthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetric(float, float, float, float)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7338,9 +7338,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #orthoSymmetricLH(float, float, float, float, boolean) orthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetricLH(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7376,9 +7376,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #orthoSymmetricLH(float, float, float, float) orthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetricLH(float, float, float, float)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7409,10 +7409,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho2D(float, float, float, float) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(float, float, float, float, float, float, Matrix4f)
      * @see #setOrtho2D(float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7473,10 +7473,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho2D(float, float, float, float) setOrtho2D()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(float, float, float, float, float, float)
      * @see #setOrtho2D(float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7506,10 +7506,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho2DLH(float, float, float, float) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(float, float, float, float, float, float, Matrix4f)
      * @see #setOrtho2DLH(float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7571,10 +7571,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setOrtho2DLH(float, float, float, float) setOrtho2DLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(float, float, float, float, float, float)
      * @see #setOrtho2DLH(float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7599,10 +7599,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #ortho2D(float, float, float, float) ortho2D()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(float, float, float, float, float, float)
      * @see #ortho2D(float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7635,10 +7635,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #ortho2DLH(float, float, float, float) ortho2DLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(float, float, float, float, float, float)
      * @see #ortho2DLH(float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7661,7 +7661,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>. 
+     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7674,11 +7674,11 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(Vector3fc, Vector3fc) setLookAlong()}.
-     * 
+     *
      * @see #lookAlong(float, float, float, float, float, float)
      * @see #lookAt(Vector3fc, Vector3fc, Vector3fc)
      * @see #setLookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -7691,7 +7691,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7704,11 +7704,11 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(Vector3fc, Vector3fc) setLookAlong()}.
-     * 
+     *
      * @see #lookAlong(float, float, float, float, float, float)
      * @see #lookAt(Vector3fc, Vector3fc, Vector3fc)
      * @see #setLookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -7723,7 +7723,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7736,10 +7736,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(float, float, float, float, float, float) setLookAlong()}
-     * 
+     *
      * @see #lookAt(float, float, float, float, float, float, float, float, float)
      * @see #setLookAlong(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -7813,7 +7813,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>. 
+     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7826,10 +7826,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(float, float, float, float, float, float) setLookAlong()}
-     * 
+     *
      * @see #lookAt(float, float, float, float, float, float, float, float, float)
      * @see #setLookAlong(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -7854,15 +7854,15 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * point along <code>dir</code>.
      * <p>
      * This is equivalent to calling
-     * {@link #setLookAt(Vector3fc, Vector3fc, Vector3fc) setLookAt()} 
+     * {@link #setLookAt(Vector3fc, Vector3fc, Vector3fc) setLookAt()}
      * with <code>eye = (0, 0, 0)</code> and <code>center = dir</code>.
      * <p>
      * In order to apply the lookalong transformation to any previous existing transformation,
      * use {@link #lookAlong(Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #setLookAlong(Vector3fc, Vector3fc)
      * @see #lookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -7883,10 +7883,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the lookalong transformation to any previous existing transformation,
      * use {@link #lookAlong(float, float, float, float, float, float) lookAlong()}
-     * 
+     *
      * @see #setLookAlong(float, float, float, float, float, float)
      * @see #lookAlong(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -7948,10 +7948,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAt(Vector3fc, Vector3fc, Vector3fc) lookAt()}.
-     * 
+     *
      * @see #setLookAt(float, float, float, float, float, float, float, float, float)
      * @see #lookAt(Vector3fc, Vector3fc, Vector3fc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -7965,15 +7965,15 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set this matrix to be a "lookat" transformation for a right-handed coordinate system, 
+     * Set this matrix to be a "lookat" transformation for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code>.
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAt(float, float, float, float, float, float, float, float, float) lookAt}.
-     * 
+     *
      * @see #setLookAt(Vector3fc, Vector3fc, Vector3fc)
      * @see #lookAt(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8042,7 +8042,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8052,10 +8052,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(Vector3fc, Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #lookAt(float, float, float, float, float, float, float, float, float)
      * @see #setLookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8071,7 +8071,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8081,10 +8081,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(Vector3fc, Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #lookAt(float, float, float, float, float, float, float, float, float)
      * @see #setLookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8098,7 +8098,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8108,10 +8108,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(float, float, float, float, float, float, float, float, float) setLookAt()}.
-     * 
+     *
      * @see #lookAt(Vector3fc, Vector3fc, Vector3fc)
      * @see #setLookAt(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8208,7 +8208,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * This method assumes <code>this</code> to be a perspective transformation, obtained via
@@ -8222,9 +8222,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(float, float, float, float, float, float, float, float, float) setLookAt()}.
-     * 
+     *
      * @see #setLookAt(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8305,7 +8305,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8315,10 +8315,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(float, float, float, float, float, float, float, float, float) setLookAt()}.
-     * 
+     *
      * @see #lookAt(Vector3fc, Vector3fc, Vector3fc)
      * @see #setLookAt(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8355,10 +8355,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAtLH(Vector3fc, Vector3fc, Vector3fc) lookAt()}.
-     * 
+     *
      * @see #setLookAtLH(float, float, float, float, float, float, float, float, float)
      * @see #lookAtLH(Vector3fc, Vector3fc, Vector3fc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8372,15 +8372,15 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set this matrix to be a "lookat" transformation for a left-handed coordinate system, 
+     * Set this matrix to be a "lookat" transformation for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code>.
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAtLH(float, float, float, float, float, float, float, float, float) lookAtLH}.
-     * 
+     *
      * @see #setLookAtLH(Vector3fc, Vector3fc, Vector3fc)
      * @see #lookAtLH(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8449,7 +8449,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8459,9 +8459,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(Vector3fc, Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #lookAtLH(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8477,7 +8477,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8487,9 +8487,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(Vector3fc, Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #lookAtLH(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8503,7 +8503,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8513,10 +8513,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(float, float, float, float, float, float, float, float, float) setLookAtLH()}.
-     * 
+     *
      * @see #lookAtLH(Vector3fc, Vector3fc, Vector3fc)
      * @see #setLookAtLH(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8613,7 +8613,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8623,10 +8623,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(float, float, float, float, float, float, float, float, float) setLookAtLH()}.
-     * 
+     *
      * @see #lookAtLH(Vector3fc, Vector3fc, Vector3fc)
      * @see #setLookAtLH(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8654,7 +8654,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * This method assumes <code>this</code> to be a perspective transformation, obtained via
@@ -8668,9 +8668,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(float, float, float, float, float, float, float, float, float) setLookAtLH()}.
-     * 
+     *
      * @see #setLookAtLH(float, float, float, float, float, float, float, float, float)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8773,9 +8773,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspective(float, float, float, float, boolean) setPerspective}.
-     * 
+     *
      * @see #setPerspective(float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -8856,9 +8856,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspective(float, float, float, float) setPerspective}.
-     * 
+     *
      * @see #setPerspective(float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -8888,9 +8888,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspective(float, float, float, float, boolean) setPerspective}.
-     * 
+     *
      * @see #setPerspective(float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -8921,9 +8921,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspective(float, float, float, float) setPerspective}.
-     * 
+     *
      * @see #setPerspective(float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -8951,9 +8951,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveRect(float, float, float, float, boolean) setPerspectiveRect}.
-     * 
+     *
      * @see #setPerspectiveRect(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the width of the near frustum plane
      * @param height
@@ -9031,9 +9031,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveRect(float, float, float, float) setPerspectiveRect}.
-     * 
+     *
      * @see #setPerspectiveRect(float, float, float, float)
-     * 
+     *
      * @param width
      *            the width of the near frustum plane
      * @param height
@@ -9063,9 +9063,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveRect(float, float, float, float, boolean) setPerspectiveRect}.
-     * 
+     *
      * @see #setPerspectiveRect(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the width of the near frustum plane
      * @param height
@@ -9096,9 +9096,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveRect(float, float, float, float) setPerspectiveRect}.
-     * 
+     *
      * @see #setPerspectiveRect(float, float, float, float)
-     * 
+     *
      * @param width
      *            the width of the near frustum plane
      * @param height
@@ -9121,7 +9121,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The given angles <code>offAngleX</code> and <code>offAngleY</code> are the horizontal and vertical angles between
      * the line of sight and the line given by the center of the near and far frustum planes. So, when <code>offAngleY</code>
-     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane 
+     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane
      * is parallel to the XZ-plane.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>P</code> the perspective projection matrix,
@@ -9131,9 +9131,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveOffCenter(float, float, float, float, float, float, boolean) setPerspectiveOffCenter}.
-     * 
+     *
      * @see #setPerspectiveOffCenter(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param offAngleX
@@ -9217,7 +9217,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The given angles <code>offAngleX</code> and <code>offAngleY</code> are the horizontal and vertical angles between
      * the line of sight and the line given by the center of the near and far frustum planes. So, when <code>offAngleY</code>
-     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane 
+     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane
      * is parallel to the XZ-plane.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>P</code> the perspective projection matrix,
@@ -9227,9 +9227,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveOffCenter(float, float, float, float, float, float) setPerspectiveOffCenter}.
-     * 
+     *
      * @see #setPerspectiveOffCenter(float, float, float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param offAngleX
@@ -9258,7 +9258,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The given angles <code>offAngleX</code> and <code>offAngleY</code> are the horizontal and vertical angles between
      * the line of sight and the line given by the center of the near and far frustum planes. So, when <code>offAngleY</code>
-     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane 
+     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane
      * is parallel to the XZ-plane.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>P</code> the perspective projection matrix,
@@ -9268,9 +9268,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveOffCenter(float, float, float, float, float, float, boolean) setPerspectiveOffCenter}.
-     * 
+     *
      * @see #setPerspectiveOffCenter(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param offAngleX
@@ -9300,7 +9300,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The given angles <code>offAngleX</code> and <code>offAngleY</code> are the horizontal and vertical angles between
      * the line of sight and the line given by the center of the near and far frustum planes. So, when <code>offAngleY</code>
-     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane 
+     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane
      * is parallel to the XZ-plane.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>P</code> the perspective projection matrix,
@@ -9310,9 +9310,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveOffCenter(float, float, float, float, float, float) setPerspectiveOffCenter}.
-     * 
+     *
      * @see #setPerspectiveOffCenter(float, float, float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param offAngleX
@@ -9339,9 +9339,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspective(float, float, float, float, boolean) perspective()}.
-     * 
+     *
      * @see #perspective(float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9388,9 +9388,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspective(float, float, float, float) perspective()}.
-     * 
+     *
      * @see #perspective(float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9413,9 +9413,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspectiveRect(float, float, float, float, boolean) perspectiveRect()}.
-     * 
+     *
      * @see #perspectiveRect(float, float, float, float, boolean)
-     * 
+     *
      * @param width
      *            the width of the near frustum plane
      * @param height
@@ -9461,9 +9461,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspectiveRect(float, float, float, float) perspectiveRect()}.
-     * 
+     *
      * @see #perspectiveRect(float, float, float, float)
-     * 
+     *
      * @param width
      *            the width of the near frustum plane
      * @param height
@@ -9486,14 +9486,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The given angles <code>offAngleX</code> and <code>offAngleY</code> are the horizontal and vertical angles between
      * the line of sight and the line given by the center of the near and far frustum planes. So, when <code>offAngleY</code>
-     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane 
+     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane
      * is parallel to the XZ-plane.
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspectiveOffCenter(float, float, float, float, float, float) perspectiveOffCenter()}.
-     * 
+     *
      * @see #perspectiveOffCenter(float, float, float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param offAngleX
@@ -9520,14 +9520,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The given angles <code>offAngleX</code> and <code>offAngleY</code> are the horizontal and vertical angles between
      * the line of sight and the line given by the center of the near and far frustum planes. So, when <code>offAngleY</code>
-     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane 
+     * is just <code>fovy/2</code> then the projection frustum is rotated towards +Y and the bottom frustum plane
      * is parallel to the XZ-plane.
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspectiveOffCenter(float, float, float, float, float, float) perspectiveOffCenter()}.
-     * 
+     *
      * @see #perspectiveOffCenter(float, float, float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param offAngleX
@@ -9588,9 +9588,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveLH(float, float, float, float, boolean) setPerspectiveLH}.
-     * 
+     *
      * @see #setPerspectiveLH(float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9671,9 +9671,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveLH(float, float, float, float, boolean) setPerspectiveLH}.
-     * 
+     *
      * @see #setPerspectiveLH(float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9704,9 +9704,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveLH(float, float, float, float) setPerspectiveLH}.
-     * 
+     *
      * @see #setPerspectiveLH(float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9736,9 +9736,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to set the matrix to a perspective frustum transformation without post-multiplying,
      * use {@link #setPerspectiveLH(float, float, float, float) setPerspectiveLH}.
-     * 
+     *
      * @see #setPerspectiveLH(float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9761,9 +9761,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspectiveLH(float, float, float, float, boolean) perspectiveLH()}.
-     * 
+     *
      * @see #perspectiveLH(float, float, float, float, boolean)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9810,9 +9810,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to apply the perspective projection transformation to an existing transformation,
      * use {@link #perspectiveLH(float, float, float, float) perspectiveLH()}.
-     * 
+     *
      * @see #perspectiveLH(float, float, float, float)
-     * 
+     *
      * @param fovy
      *            the vertical field of view in radians (must be greater than zero and less than {@link Math#PI PI})
      * @param aspect
@@ -9842,9 +9842,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustum(float, float, float, float, float, float, boolean) setFrustum()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustum(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -9936,9 +9936,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustum(float, float, float, float, float, float) setFrustum()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustum(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -9974,9 +9974,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustum(float, float, float, float, float, float, boolean) setFrustum()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustum(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10013,9 +10013,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustum(float, float, float, float, float, float) setFrustum()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustum(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10044,9 +10044,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #frustum(float, float, float, float, float, float, boolean) frustum()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #frustum(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10102,9 +10102,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #frustum(float, float, float, float, float, float) frustum()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #frustum(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10138,9 +10138,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustumLH(float, float, float, float, float, float, boolean) setFrustumLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustumLH(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10232,9 +10232,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustumLH(float, float, float, float, float, float, boolean) setFrustumLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustumLH(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10271,9 +10271,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustumLH(float, float, float, float, float, float) setFrustumLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustumLH(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10309,9 +10309,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #setFrustumLH(float, float, float, float, float, float) setFrustumLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #setFrustumLH(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10340,9 +10340,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #frustumLH(float, float, float, float, float, float, boolean) frustumLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #frustumLH(float, float, float, float, float, float, boolean)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10398,9 +10398,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #frustumLH(float, float, float, float, float, float) frustumLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective">http://www.songho.ca</a>
-     * 
+     *
      * @see #frustumLH(float, float, float, float, float, float)
-     * 
+     *
      * @param left
      *            the distance along the x-axis to the left frustum edge
      * @param right
@@ -10428,7 +10428,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * See: <a href="https://en.wikipedia.org/wiki/Camera_resectioning#Intrinsic_parameters">https://en.wikipedia.org/</a>
      * <p>
      * Reference: <a href="http://ksimek.github.io/2013/06/03/calibrated_cameras_in_opengl/">http://ksimek.github.io/</a>
-     * 
+     *
      * @param alphaX
      *          specifies the focal length and scale along the X axis
      * @param alphaY
@@ -10477,7 +10477,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Apply the rotation transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10490,9 +10490,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -10554,7 +10554,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply the rotation transformation of the given {@link Quaternionfc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10567,9 +10567,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -10584,7 +10584,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This method assumes <code>this</code> to be {@link #isAffine() affine}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10597,9 +10597,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -10652,7 +10652,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This method assumes <code>this</code> to be {@link #isAffine() affine}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10665,9 +10665,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -10682,7 +10682,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This method assumes <code>this</code> to only contain a translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10695,9 +10695,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -10742,7 +10742,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply the rotation transformation of the given {@link Quaternionfc} to this matrix while using <code>(ox, oy, oz)</code> as the rotation origin.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10754,7 +10754,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * This method is equivalent to calling: <code>translate(ox, oy, oz).rotate(quat).translate(-ox, -oy, -oz)</code>
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param ox
@@ -10869,14 +10869,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a transformation composed of a rotation of the specified {@link Quaternionfc} while using <code>(ox, oy, oz)</code> as the rotation origin.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(ox, oy, oz).rotate(quat).translate(-ox, -oy, -oz)</code>
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param ox
@@ -10917,7 +10917,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Pre-multiply the rotation transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -10930,9 +10930,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -10989,7 +10989,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Pre-multiply the rotation transformation of the given {@link Quaternionfc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -11002,9 +11002,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -11069,7 +11069,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Pre-multiply the rotation transformation of the given {@link Quaternionfc} to this matrix while using <code>(ox, oy, oz)</code>
      * as the rotation origin.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -11081,7 +11081,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * This method is equivalent to calling: <code>translateLocal(-ox, -oy, -oz).rotateLocal(quat).translateLocal(ox, oy, oz)</code>
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param ox
@@ -11099,7 +11099,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4f}, to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -11112,10 +11112,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(AxisAngle4f)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @return this
@@ -11127,7 +11127,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4f} and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -11140,10 +11140,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(AxisAngle4f)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @param dest
@@ -11159,7 +11159,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -11172,10 +11172,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(float, Vector3fc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(float, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -11191,7 +11191,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -11204,10 +11204,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotation(float, Vector3fc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(float, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -11546,7 +11546,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb281733(v=vs.85).aspx">msdn.microsoft.com</a>
-     * 
+     *
      * @param a
      *          the x factor in the plane equation
      * @param b
@@ -11569,7 +11569,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -11605,7 +11605,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param normal
      *          the plane normal
      * @param point
@@ -11628,7 +11628,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param orientation
      *          the plane orientation
      * @param point
@@ -11660,7 +11660,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * The vector <code>(a, b, c)</code> must be a unit vector.
      * <p>
      * Reference: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb281733(v=vs.85).aspx">msdn.microsoft.com</a>
-     * 
+     *
      * @param a
      *          the x factor in the plane equation
      * @param b
@@ -11696,7 +11696,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a mirror/reflection transformation that reflects about the given plane
      * specified via the plane normal and a point on the plane.
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -11723,7 +11723,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Set this matrix to a mirror/reflection transformation that reflects about the given plane
      * specified via the plane normal and a point on the plane.
-     * 
+     *
      * @param normal
      *          the plane normal
      * @param point
@@ -11741,7 +11741,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * This method can be used to build a reflection transformation based on the orientation of a mirror object in the scene.
      * It is assumed that the default mirror plane's normal is <code>(0, 0, 1)</code>. So, if the given {@link Quaternionfc} is
      * the identity (does not apply any additional rotation), the reflection plane will be <code>z=0</code>, offset by the given <code>point</code>.
-     * 
+     *
      * @param orientation
      *          the plane orientation
      * @param point
@@ -11790,7 +11790,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the row at the given <code>row</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..3]</code>
      * @param src
@@ -11834,7 +11834,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the column at the given <code>column</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param column
      *          the column index in <code>[0..3]</code>
      * @param src
@@ -11854,7 +11854,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the matrix element at the given column and row to the specified value.
-     * 
+     *
      * @param column
      *          the colum index in <code>[0..3]</code>
      * @param row
@@ -11873,7 +11873,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Set the matrix element at the given row and column to the specified value.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..3]</code>
      * @param column
@@ -11893,13 +11893,13 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In that case, use {@link #set3x3(Matrix4f)} to set a given Matrix4f to only the upper left 3x3 submatrix
      * of this matrix.
-     * 
+     *
      * @see #set3x3(Matrix4f)
-     * 
+     *
      * @return this
      */
     public Matrix4f normal() {
@@ -11913,13 +11913,13 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In that case, use {@link #set3x3(Matrix4f)} to set a given Matrix4f to only the upper left 3x3 submatrix
      * of this matrix.
-     * 
+     *
      * @see #set3x3(Matrix4f)
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -11981,14 +11981,14 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In that case, use {@link Matrix3f#set(Matrix4fc)} to set a given Matrix3f to only the upper left 3x3 submatrix
      * of this matrix.
-     * 
+     *
      * @see Matrix3f#set(Matrix4fc)
      * @see #get3x3(Matrix3f)
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -12024,7 +12024,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal()} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @return this
      */
     public Matrix4f cofactor3x3() {
@@ -12037,7 +12037,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix3f)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -12061,7 +12061,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix4f)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -12099,7 +12099,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * The resulting matrix will map unit vectors to unit vectors, though a pair of orthogonal input unit
      * vectors need not be mapped to a pair of orthogonal output vectors if the original matrix was not orthogonal itself
      * (i.e. had <i>skewing</i>).
-     * 
+     *
      * @return this
      */
     public Matrix4f normalize3x3() {
@@ -12247,7 +12247,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Compute the eye/origin of the perspective frustum transformation defined by <code>this</code> matrix, 
+     * Compute the eye/origin of the perspective frustum transformation defined by <code>this</code> matrix,
      * which can be a projection matrix or a combined modelview-projection matrix, and store the result
      * in the given <code>origin</code>.
      * <p>
@@ -12267,9 +12267,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @see #perspectiveInvOrigin(Vector3f)
-     * 
+     *
      * @param origin
      *          will hold the origin of the coordinate system before applying <code>this</code>
      *          perspective projection transformation
@@ -12304,7 +12304,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Compute the eye/origin of the inverse of the perspective frustum transformation defined by <code>this</code> matrix, 
+     * Compute the eye/origin of the inverse of the perspective frustum transformation defined by <code>this</code> matrix,
      * which can be the inverse of a projection matrix or the inverse of a combined modelview-projection matrix, and store the result
      * in the given <code>dest</code>.
      * <p>
@@ -12314,9 +12314,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * If the inverse of the modelview-projection matrix is not available, then calling {@link #perspectiveOrigin(Vector3f)}
      * on the original modelview-projection matrix is preferred.
-     * 
+     *
      * @see #perspectiveOrigin(Vector3f)
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -12340,7 +12340,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @return the vertical field-of-view angle in radians
      */
     public float perspectiveFov() {
@@ -12359,7 +12359,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Extract the near clip plane distance from <code>this</code> perspective projection matrix.
      * <p>
      * This method only works if <code>this</code> is a perspective projection matrix, for example obtained via {@link #perspective(float, float, float, float)}.
-     * 
+     *
      * @return the near clip plane distance
      */
     public float perspectiveNear() {
@@ -12370,7 +12370,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * Extract the far clip plane distance from <code>this</code> perspective projection matrix.
      * <p>
      * This method only works if <code>this</code> is a perspective projection matrix, for example obtained via {@link #perspective(float, float, float, float)}.
-     * 
+     *
      * @return the far clip plane distance
      */
     public float perspectiveFar() {
@@ -12382,7 +12382,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
          * This method works by first obtaining the frustum plane normals,
          * then building the cross product to obtain the corner rays,
          * and finally bilinearly interpolating to obtain the desired direction.
-         * The code below uses a condense form of doing all this making use 
+         * The code below uses a condense form of doing all this making use
          * of some mathematical identities to simplify the overall expression.
          */
         float a = m10 * m23, b = m13 * m21, c = m10 * m21, d = m11 * m23, e = m13 * m20, f = m11 * m20;
@@ -12490,7 +12490,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node192.html">ftp.sgi.com</a>
-     * 
+     *
      * @param light
      *          the light's vector
      * @param a
@@ -12523,7 +12523,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node192.html">ftp.sgi.com</a>
-     * 
+     *
      * @param lightX
      *          the x-component of the light's vector
      * @param lightY
@@ -12628,7 +12628,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param light
      *          the light's vector
      * @param planeTransform
@@ -12660,7 +12660,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param lightX
      *          the x-component of the light vector
      * @param lightY
@@ -12683,7 +12683,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This method can be used to create the complete model transformation for a given object, including the translation of the object to
      * its position <code>objPos</code>.
-     * 
+     *
      * @param objPos
      *          the position of the object to rotate towards <code>targetPos</code>
      * @param targetPos
@@ -12743,11 +12743,11 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * This method can be used to create the complete model transformation for a given object, including the translation of the object to
      * its position <code>objPos</code>.
      * <p>
-     * If preserving an <i>up</i> vector is not necessary when rotating the +Z axis, then a shortest arc rotation can be obtained 
+     * If preserving an <i>up</i> vector is not necessary when rotating the +Z axis, then a shortest arc rotation can be obtained
      * using {@link #billboardSpherical(Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #billboardSpherical(Vector3fc, Vector3fc)
-     * 
+     *
      * @param objPos
      *          the position of the object to rotate towards <code>targetPos</code>
      * @param targetPos
@@ -12808,9 +12808,9 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * In order to specify an <i>up</i> vector which needs to be maintained when rotating the +Z axis of the object,
      * use {@link #billboardSpherical(Vector3fc, Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #billboardSpherical(Vector3fc, Vector3fc, Vector3fc)
-     * 
+     *
      * @param objPos
      *          the position of the object to rotate towards <code>targetPos</code>
      * @param targetPos
@@ -12984,7 +12984,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     /**
      * Apply a picking transformation to this matrix using the given window coordinates <code>(x, y)</code> as the pick center
      * and the given <code>(width, height)</code> as the size of the picking region in window coordinates.
-     * 
+     *
      * @param x
      *          the x coordinate of the picking region center in window coordinates
      * @param y
@@ -13007,7 +13007,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
 
     /**
      * Exchange the values of <code>this</code> matrix with the given <code>other</code> matrix.
-     * 
+     *
      * @param other
      *          the other matrix to exchange the values with
      * @return this
@@ -13074,7 +13074,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * position of the arcball and the specified X and Y rotation angles.
      * <p>
      * This method is equivalent to calling: <code>translate(0, 0, -radius).rotateX(angleX).rotateY(angleY).translate(-centerX, -centerY, -centerZ)</code>
-     * 
+     *
      * @param radius
      *          the arcball radius
      * @param centerX
@@ -13098,7 +13098,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * position of the arcball and the specified X and Y rotation angles.
      * <p>
      * This method is equivalent to calling: <code>translate(0, 0, -radius).rotateX(angleX).rotateY(angleY).translate(-center.x, -center.y, -center.z)</code>
-     * 
+     *
      * @param radius
      *          the arcball radius
      * @param center
@@ -13121,7 +13121,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * for which to compute the axis-aligned bounding box in world-space.
      * <p>
      * The axis-aligned bounding box of the unit frustum is <code>(-1, -1, -1)</code>, <code>(1, 1, 1)</code>.
-     * 
+     *
      * @param min
      *          will hold the minimum corner coordinates of the axis-aligned bounding box
      * @param max
@@ -13227,10 +13227,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This method only works if <code>this</code> is a perspective projection frustum transformation, for example obtained
      * via {@link #perspective(float, float, float, float) perspective()} or {@link #frustum(float, float, float, float, float, float) frustum()}.
-     * 
+     *
      * @see #perspective(float, float, float, float)
      * @see #frustum(float, float, float, float, float, float)
-     * 
+     *
      * @param near
      *          the new near clip plane distance
      * @param far
@@ -13273,7 +13273,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * It be obtained via any affine transformation or for example via {@link #lookAt(float, float, float, float, float, float, float, float, float) lookAt()}.
      * <p>
      * Reference: <a href="http://developer.download.nvidia.com/SDK/10.5/opengl/screenshots/samples/cascaded_shadow_maps.html">OpenGL SDK - Cascaded Shadow Maps</a>
-     * 
+     *
      * @param view
      *          the view transformation to build a corresponding orthographic projection to fit the frustum of <code>this</code>
      * @param dest
@@ -13316,7 +13316,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * seen when looking at the trapezoid oriented with its shorter parallel edge at the bottom and its longer parallel edge at the top.
      * <p>
      * Reference: <a href="http://www.comp.nus.edu.sg/~tants/tsm/TSM_recipe.html">Trapezoidal Shadow Maps (TSM) - Recipe</a>
-     * 
+     *
      * @param p0x
      *          the x coordinate of the left corner at the shorter edge of the trapezoid
      * @param p0y
@@ -13497,7 +13497,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>dir</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -13510,10 +13510,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotationTowards(Vector3fc, Vector3fc) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mulAffine(new Matrix4f().lookAt(new Vector3f(), new Vector3f(dir).negate(), up).invertAffine(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(float, float, float, float, float, float, Matrix4f)
      * @see #rotationTowards(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *              the direction to rotate towards
      * @param up
@@ -13527,7 +13527,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -13539,10 +13539,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotationTowards(Vector3fc, Vector3fc) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mulAffine(new Matrix4f().lookAt(new Vector3f(), new Vector3f(dir).negate(), up).invertAffine())</code>
-     * 
+     *
      * @see #rotateTowards(float, float, float, float, float, float)
      * @see #rotationTowards(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *              the direction to orient towards
      * @param up
@@ -13554,7 +13554,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -13566,10 +13566,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotationTowards(float, float, float, float, float, float) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mulAffine(new Matrix4f().lookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invertAffine())</code>
-     * 
+     *
      * @see #rotateTowards(Vector3fc, Vector3fc)
      * @see #rotationTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -13589,7 +13589,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>(dirX, dirY, dirZ)</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -13602,10 +13602,10 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * use {@link #rotationTowards(float, float, float, float, float, float) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mulAffine(new Matrix4f().lookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invertAffine(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(Vector3fc, Vector3fc)
      * @see #rotationTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -13680,17 +13680,17 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that aligns the local <code>-z</code> axis with <code>dir</code>.
      * <p>
      * In order to apply the rotation transformation to a previous existing transformation,
      * use {@link #rotateTowards(float, float, float, float, float, float) rotateTowards}.
      * <p>
      * This method is equivalent to calling: <code>setLookAt(new Vector3f(), new Vector3f(dir).negate(), up).invertAffine()</code>
-     * 
+     *
      * @see #rotationTowards(Vector3fc, Vector3fc)
      * @see #rotateTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dir
      *              the direction to orient the local -z axis towards
      * @param up
@@ -13702,17 +13702,17 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that aligns the local <code>-z</code> axis with <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * In order to apply the rotation transformation to a previous existing transformation,
      * use {@link #rotateTowards(float, float, float, float, float, float) rotateTowards}.
      * <p>
      * This method is equivalent to calling: <code>setLookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invertAffine()</code>
-     * 
+     *
      * @see #rotateTowards(Vector3fc, Vector3fc)
      * @see #rotationTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -13763,12 +13763,12 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that translates to the given <code>pos</code> and aligns the local <code>-z</code>
      * axis with <code>dir</code>.
      * <p>
      * This method is equivalent to calling: <code>translation(pos).rotateTowards(dir, up)</code>
-     * 
+     *
      * @see #translation(Vector3fc)
      * @see #rotateTowards(Vector3fc, Vector3fc)
      *
@@ -13785,15 +13785,15 @@ public class Matrix4f implements Externalizable, Matrix4fc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that translates to the given <code>(posX, posY, posZ)</code> and aligns the local <code>-z</code>
      * axis with <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * This method is equivalent to calling: <code>translation(posX, posY, posZ).rotateTowards(dirX, dirY, dirZ, upX, upY, upZ)</code>
-     * 
+     *
      * @see #translation(float, float, float)
      * @see #rotateTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param posX
      *              the x-coordinate of the position to translate to
      * @param posY
@@ -13871,7 +13871,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * </pre>
      * <p>
      * Reference: <a href="http://nghiaho.com/?page_id=846">http://nghiaho.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the extracted Euler angles
      * @return dest
@@ -13894,7 +13894,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * <p>
      * This method is equivalent to computing at least three adjacent corners using {@link #frustumCorner(int, Vector3f)}
      * and subtracting them to obtain the length and direction of the span vectors.
-     * 
+     *
      * @param corner
      *          will hold one corner of the span (usually the corner {@link Matrix4fc#CORNER_NXNYNZ})
      * @param xDir
@@ -14002,7 +14002,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * 0 0 1 0
      * 0 0 0 1
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b
@@ -14039,7 +14039,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * 0 0 1 0
      * 0 0 0 1
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b
@@ -14078,7 +14078,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * projecting the scene onto the near plane defined by the rectangle.
      * <p>
      * All positions and lengths are in the same (world) unit.
-     * 
+     *
      * @param eye
      *          the position of the camera
      * @param p
@@ -14090,7 +14090,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * @param nearFarDist
      *          the distance between the far and near plane (the near plane will be calculated by this method).
      *          If the special value {@link Float#POSITIVE_INFINITY} is used, the far clipping plane will be at positive infinity.
-     *          If the special value {@link Float#NEGATIVE_INFINITY} is used, the near and far planes will be swapped and 
+     *          If the special value {@link Float#NEGATIVE_INFINITY} is used, the near and far planes will be swapped and
      *          the near clipping plane will be at positive infinity.
      *          If a negative value is used (except for {@link Float#NEGATIVE_INFINITY}) the near and far planes will be swapped
      * @param zeroToOne
@@ -14106,7 +14106,7 @@ public class Matrix4f implements Externalizable, Matrix4fc {
             Matrix4f projDest, Matrix4f viewDest) {
         float zx = y.y * x.z - y.z * x.y, zy = y.z * x.x - y.x * x.z, zz = y.x * x.y - y.y * x.x;
         float zd = zx * (p.x - eye.x) + zy * (p.y - eye.y) + zz * (p.z - eye.z);
-        float zs = zd >= 0 ? 1 : -1; zx *= zs; zy *= zs; zz *= zs; zd *= zs; 
+        float zs = zd >= 0 ? 1 : -1; zx *= zs; zy *= zs; zz *= zs; zd *= zs;
         viewDest.setLookAt(eye.x, eye.y, eye.z, eye.x + zx, eye.y + zy, eye.z + zz, y.x, y.y, y.z);
         float px = viewDest.m00 * p.x + viewDest.m10 * p.y + viewDest.m20 * p.z + viewDest.m30;
         float py = viewDest.m01 * p.x + viewDest.m11 * p.y + viewDest.m21 * p.z + viewDest.m31;
@@ -14133,13 +14133,13 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * will be coplanar to the plane spanned by the local Z axis (as obtained by {@link #positiveZ(Vector3f)}) and the
      * given vector <code>up</code>.
      * <p>
-     * This effectively ensures that the resulting matrix will be equal to the one obtained from 
-     * {@link #setLookAt(Vector3fc, Vector3fc, Vector3fc)} called with the current 
-     * local origin of this matrix (as obtained by {@link #originAffine(Vector3f)}), the sum of this position and the 
+     * This effectively ensures that the resulting matrix will be equal to the one obtained from
+     * {@link #setLookAt(Vector3fc, Vector3fc, Vector3fc)} called with the current
+     * local origin of this matrix (as obtained by {@link #originAffine(Vector3f)}), the sum of this position and the
      * negated local Z axis as well as the given vector <code>up</code>.
      * <p>
      * This method must only be called on {@link #isAffine()} matrices.
-     * 
+     *
      * @param up
      *            the up vector
      * @return this
@@ -14157,13 +14157,13 @@ public class Matrix4f implements Externalizable, Matrix4fc {
      * will be coplanar to the plane spanned by the local Z axis (as obtained by {@link #positiveZ(Vector3f)}) and the
      * given vector <code>(upX, upY, upZ)</code>.
      * <p>
-     * This effectively ensures that the resulting matrix will be equal to the one obtained from 
-     * {@link #setLookAt(float, float, float, float, float, float, float, float, float)} called with the current 
-     * local origin of this matrix (as obtained by {@link #originAffine(Vector3f)}), the sum of this position and the 
+     * This effectively ensures that the resulting matrix will be equal to the one obtained from
+     * {@link #setLookAt(float, float, float, float, float, float, float, float, float)} called with the current
+     * local origin of this matrix (as obtained by {@link #originAffine(Vector3f)}), the sum of this position and the
      * negated local Z axis as well as the given vector <code>(upX, upY, upZ)</code>.
      * <p>
      * This method must only be called on {@link #isAffine()} matrices.
-     * 
+     *
      * @param upX
      *            the x coordinate of the up vector
      * @param upY

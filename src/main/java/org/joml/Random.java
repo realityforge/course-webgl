@@ -25,7 +25,7 @@ package org.joml;
 
 /**
  * Pseudo-random number generator.
- * 
+ *
  * @author Kai Burjack
  */
 public class Random {
@@ -65,7 +65,7 @@ public class Random {
 
         /**
          * Reference: <a href="https://github.com/roquendm/JGO-Grabbag/blob/master/src/roquen/math/rng/PRNG.java">https://github.com/roquendm/</a>
-         * 
+         *
          * @author roquendm
          */
         final float nextFloat() {
@@ -93,7 +93,7 @@ public class Random {
 
         /**
          * Reference: <a href="https://github.com/roquendm/JGO-Grabbag/blob/master/src/roquen/math/rng/PRNG.java">https://github.com/roquendm/</a>
-         * 
+         *
          * @author roquendm
          */
         final int nextInt(int n) {
@@ -134,7 +134,7 @@ public class Random {
 
     /**
      * Create a new instance of {@link Random} and initialize it with the given <code>seed</code>.
-     * 
+     *
      * @param seed
      *            the seed number
      */
@@ -144,7 +144,7 @@ public class Random {
 
     /**
      * Generate a uniformly distributed floating-point number in the half-open range [0, 1).
-     * 
+     *
      * @return a random float in the range [0..1)
      */
     public float nextFloat() {
@@ -153,7 +153,7 @@ public class Random {
 
     /**
      * Generate a uniformly distributed integer in the half-open range [0, n).
-     * 
+     *
      * @param n
      *            the upper limit (exclusive) of the generated integer
      * @return a random integer in the range [0..n)

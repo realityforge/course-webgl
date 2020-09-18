@@ -39,7 +39,7 @@ import com.google.gwt.typedarrays.shared.Float32Array;
  *      m00  m10  m20<br>
  *      m01  m11  m21<br>
  *      m02  m12  m22<br>
- * 
+ *
  * @author Richard Greenlees
  * @author Kai Burjack
  */
@@ -73,7 +73,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Create a new {@link Matrix3f} and make it a copy of the given matrix.
-     * 
+     *
      * @param mat
      *          the {@link Matrix3fc} to copy the values from
      */
@@ -83,7 +83,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Create a new {@link Matrix3f} and make it a copy of the upper left 3x3 of the given {@link Matrix4fc}.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4fc} to copy the values from
      */
@@ -92,9 +92,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Create a new 3x3 matrix using the supplied float values. The order of the parameter is column-major, 
+     * Create a new 3x3 matrix using the supplied float values. The order of the parameter is column-major,
      * so the first three parameters specify the three elements of the first column.
-     * 
+     *
      * @param m00
      *          the value of m00
      * @param m01
@@ -115,7 +115,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      *          the value of m22
      */
     public Matrix3f(float m00, float m01, float m02,
-                    float m10, float m11, float m12, 
+                    float m10, float m11, float m12,
                     float m20, float m21, float m22) {
         this.m00 = m00;
         this.m01 = m01;
@@ -131,7 +131,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Create a new {@link Matrix3f} and initialize its three columns using the supplied vectors.
-     * 
+     *
      * @param col0
      *          the first column
      * @param col1
@@ -173,7 +173,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the value of the matrix element at column 0 and row 0.
-     * 
+     *
      * @param m00
      *          the new value
      * @return this
@@ -184,7 +184,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 1.
-     * 
+     *
      * @param m01
      *          the new value
      * @return this
@@ -195,7 +195,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 2.
-     * 
+     *
      * @param m02
      *          the new value
      * @return this
@@ -206,7 +206,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 0.
-     * 
+     *
      * @param m10
      *          the new value
      * @return this
@@ -217,7 +217,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 1.
-     * 
+     *
      * @param m11
      *          the new value
      * @return this
@@ -228,7 +228,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 2.
-     * 
+     *
      * @param m12
      *          the new value
      * @return this
@@ -239,7 +239,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 0.
-     * 
+     *
      * @param m20
      *          the new value
      * @return this
@@ -250,7 +250,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 1.
-     * 
+     *
      * @param m21
      *          the new value
      * @return this
@@ -261,7 +261,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 2.
-     * 
+     *
      * @param m22
      *          the new value
      * @return this
@@ -273,7 +273,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the value of the matrix element at column 0 and row 0.
-     * 
+     *
      * @param m00
      *          the new value
      * @return this
@@ -284,7 +284,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 1.
-     * 
+     *
      * @param m01
      *          the new value
      * @return this
@@ -295,7 +295,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 2.
-     * 
+     *
      * @param m02
      *          the new value
      * @return this
@@ -306,7 +306,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 0.
-     * 
+     *
      * @param m10
      *          the new value
      * @return this
@@ -317,7 +317,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 1.
-     * 
+     *
      * @param m11
      *          the new value
      * @return this
@@ -328,7 +328,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 2.
-     * 
+     *
      * @param m12
      *          the new value
      * @return this
@@ -339,7 +339,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 0.
-     * 
+     *
      * @param m20
      *          the new value
      * @return this
@@ -350,7 +350,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 1.
-     * 
+     *
      * @param m21
      *          the new value
      * @return this
@@ -361,7 +361,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 2.
-     * 
+     *
      * @param m22
      *          the new value
      * @return this
@@ -373,13 +373,13 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the elements of this matrix to the ones in <code>m</code>.
-     * 
+     *
      * @param m
      *          the matrix to copy the elements from
      * @return this
      */
     public Matrix3f set(Matrix3fc m) {
-        return 
+        return
         _m00(m.m00()).
         _m01(m.m01()).
         _m02(m.m02()).
@@ -393,7 +393,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Store the values of the transpose of the given matrix <code>m</code> into <code>this</code> matrix.
-     * 
+     *
      * @param m
      *          the matrix to copy the transposed values from
      * @return this
@@ -409,7 +409,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the elements of this matrix to the left 3x3 submatrix of <code>m</code>.
-     * 
+     *
      * @param m
      *          the matrix to copy the elements from
      * @return this
@@ -472,7 +472,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set this matrix to be equivalent to the rotation specified by the given {@link AxisAngle4f}.
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f}
      * @return this
@@ -509,7 +509,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set this matrix to be equivalent to the rotation specified by the given {@link AxisAngle4d}.
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4d}
      * @return this
@@ -550,9 +550,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * This method is equivalent to calling: <code>rotation(q)</code>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToMatrix/">http://www.euclideanspace.com/</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param q
      *          the {@link Quaternionfc}
      * @return this
@@ -565,7 +565,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Set this matrix to a rotation - and possibly scaling - equivalent to the given quaternion.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToMatrix/">http://www.euclideanspace.com/</a>
-     * 
+     *
      * @param q
      *          the quaternion
      * @return this
@@ -600,7 +600,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
-     * 
+     *
      * @param right
      *          the right operand of the matrix multiplication
      * @return this
@@ -675,7 +675,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * m00, m10, m20<br>
      * m01, m11, m21<br>
      * m02, m12, m22<br>
-     * 
+     *
      * @param m00
      *          the new value of m00
      * @param m01
@@ -697,7 +697,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * @return this
      */
     public Matrix3f set(float m00, float m01, float m02,
-                        float m10, float m11, float m12, 
+                        float m10, float m11, float m12,
                         float m20, float m21, float m22) {
         this.m00 = m00;
         this.m01 = m01;
@@ -717,9 +717,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * 0, 3, 6<br>
      * 1, 4, 7<br>
      * 2, 5, 8<br>
-     * 
+     *
      * This method only uses the first 9 values, all others are ignored.
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @return this
@@ -731,7 +731,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the three columns of this matrix to the supplied vectors, respectively.
-     * 
+     *
      * @param col0
      *          the first column
      * @param col1
@@ -797,7 +797,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Transpose this matrix.
-     * 
+     *
      * @return this
      */
     public Matrix3f transpose() {
@@ -814,7 +814,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Return a string representation of this matrix.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -840,7 +840,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Return a string representation of this matrix by formatting the matrix elements with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the matrix values with
      * @return the string representation
@@ -857,9 +857,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * This is the reverse method of {@link #set(Matrix3fc)} and allows to obtain
      * intermediate calculation results when chaining multiple transformations.
-     * 
+     *
      * @see #set(Matrix3fc)
-     * 
+     *
      * @param dest
      *          the destination matrix
      * @return the passed in destination
@@ -931,7 +931,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set all values within this matrix to zero.
-     * 
+     *
      * @return this
      */
     public Matrix3f zero() {
@@ -941,7 +941,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set this matrix to the identity.
-     * 
+     *
      * @return this
      */
     public Matrix3f identity() {
@@ -961,7 +961,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param xyz
      *            the factors of the x, y and z component, respectively
      * @return this
@@ -994,7 +994,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -1018,9 +1018,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @see #scale(float, float, float)
-     * 
+     *
      * @param xyz
      *            the factor for all components
      * @return this
@@ -1059,7 +1059,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>, the
      * scaling will be applied last!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -1080,9 +1080,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix, use {@link #scale(float) scale()} instead.
-     * 
+     *
      * @see #scale(float)
-     * 
+     *
      * @param factor
      *             the scale factor in x, y and z
      * @return this
@@ -1097,7 +1097,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set this matrix to be a simple scale matrix.
-     * 
+     *
      * @param x
      *             the scale in x
      * @param y
@@ -1122,9 +1122,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix use {@link #scale(Vector3fc) scale()} instead.
-     * 
+     *
      * @see #scale(Vector3fc)
-     * 
+     *
      * @param xyz
      *             the scale in x, y and z respectively
      * @return this
@@ -1138,7 +1138,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1147,9 +1147,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to post-multiply a rotation transformation directly to a
      * matrix, use {@link #rotate(float, Vector3fc) rotate()} instead.
-     * 
+     *
      * @see #rotate(float, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -1163,7 +1163,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to a rotation transformation using the given {@link AxisAngle4f}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1176,7 +1176,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
      *
      * @see #rotate(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @return this
@@ -1190,7 +1190,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1201,9 +1201,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotate(float, float, float, float) rotate()} instead.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param x
@@ -1234,12 +1234,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to a rotation transformation about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1263,12 +1263,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to a rotation transformation about the Y axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1292,12 +1292,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to a rotation transformation about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1322,12 +1322,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Set this matrix to a rotation of <code>angleX</code> radians about the X axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -1373,12 +1373,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Set this matrix to a rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationZ(angleZ).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -1424,12 +1424,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Set this matrix to a rotation of <code>angleY</code> radians about the Y axis, followed by a rotation
      * of <code>angleX</code> radians about the X axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationY(angleY).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -1474,7 +1474,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to the rotation - and possibly scaling - transformation of the given {@link Quaternionfc}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1485,9 +1485,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotate(Quaternionfc) rotate()} instead.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -1597,7 +1597,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply rotation about the X axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1607,7 +1607,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * , the rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1646,7 +1646,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply rotation about the Y axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1656,7 +1656,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * , the rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1695,7 +1695,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply rotation about the Z axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1705,7 +1705,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * , the rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1718,7 +1718,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply rotation of <code>angles.x</code> radians about the X axis, followed by a rotation of <code>angles.y</code> radians about the Y axis and
      * followed by a rotation of <code>angles.z</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1728,7 +1728,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angles.x).rotateY(angles.y).rotateZ(angles.z)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -1741,7 +1741,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply rotation of <code>angleX</code> radians about the X axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1751,7 +1751,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -1803,7 +1803,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply rotation of <code>angles.z</code> radians about the Z axis, followed by a rotation of <code>angles.y</code> radians about the Y axis and
      * followed by a rotation of <code>angles.x</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1813,7 +1813,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angles.z).rotateY(angles.y).rotateX(angles.x)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -1826,7 +1826,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1836,7 +1836,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angleZ).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -1888,7 +1888,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply rotation of <code>angles.y</code> radians about the Y axis, followed by a rotation of <code>angles.x</code> radians about the X axis and
      * followed by a rotation of <code>angles.z</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1898,7 +1898,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angles.y).rotateX(angles.x).rotateZ(angles.z)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -1911,7 +1911,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply rotation of <code>angleY</code> radians about the Y axis, followed by a rotation of <code>angleX</code> radians about the X axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1921,7 +1921,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angleY).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -1975,7 +1975,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1985,7 +1985,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * , the rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -2047,7 +2047,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2060,9 +2060,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -2118,7 +2118,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2131,9 +2131,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotation(float, float, float, float) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(float, float, float, float)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -2152,7 +2152,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Pre-multiply a rotation around the X axis to this matrix by rotating the given amount of radians
      * about the X axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2165,9 +2165,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotationX(float) rotationX()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationX(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the X axis
      * @param dest
@@ -2198,7 +2198,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2211,9 +2211,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotationX(float) rotationX()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationX(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the X axis
      * @return this
@@ -2226,7 +2226,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Pre-multiply a rotation around the Y axis to this matrix by rotating the given amount of radians
      * about the Y axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2239,9 +2239,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotationY(float) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Y axis
      * @param dest
@@ -2272,7 +2272,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the Y axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2285,9 +2285,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotationY(float) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Y axis
      * @return this
@@ -2300,7 +2300,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Pre-multiply a rotation around the Z axis to this matrix by rotating the given amount of radians
      * about the Z axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2313,9 +2313,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotationZ(float) rotationZ()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationZ(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Z axis
      * @param dest
@@ -2346,7 +2346,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2359,9 +2359,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * transformation, use {@link #rotationZ(float) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(float)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Z axis
      * @return this
@@ -2373,7 +2373,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2386,9 +2386,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -2401,7 +2401,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2414,9 +2414,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -2460,7 +2460,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2473,9 +2473,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -2521,7 +2521,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2534,9 +2534,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -2548,7 +2548,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4f}, to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2561,10 +2561,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(AxisAngle4f)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @return this
@@ -2576,7 +2576,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4f} and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2589,10 +2589,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(AxisAngle4f)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @param dest
@@ -2606,7 +2606,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis, to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2619,10 +2619,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(float, Vector3fc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(float, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -2636,7 +2636,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2649,10 +2649,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotation(float, Vector3fc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(float, float, float, float)
      * @see #rotation(float, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -2666,7 +2666,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>. 
+     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -2675,10 +2675,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(Vector3fc, Vector3fc) setLookAlong()}.
-     * 
+     *
      * @see #lookAlong(float, float, float, float, float, float)
      * @see #setLookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -2691,7 +2691,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -2700,10 +2700,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(Vector3fc, Vector3fc) setLookAlong()}.
-     * 
+     *
      * @see #lookAlong(float, float, float, float, float, float)
      * @see #setLookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -2718,7 +2718,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -2727,9 +2727,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(float, float, float, float, float, float) setLookAlong()}
-     * 
+     *
      * @see #setLookAlong(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -2801,7 +2801,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>. 
+     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -2810,9 +2810,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(float, float, float, float, float, float) setLookAlong()}
-     * 
+     *
      * @see #setLookAlong(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -2838,10 +2838,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to apply the lookalong transformation to any previous existing transformation,
      * use {@link #lookAlong(Vector3fc, Vector3fc)}.
-     * 
+     *
      * @see #setLookAlong(Vector3fc, Vector3fc)
      * @see #lookAlong(Vector3fc, Vector3fc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -2858,10 +2858,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * In order to apply the lookalong transformation to any previous existing transformation,
      * use {@link #lookAlong(float, float, float, float, float, float) lookAlong()}
-     * 
+     *
      * @see #setLookAlong(float, float, float, float, float, float)
      * @see #lookAlong(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -2926,7 +2926,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the row at the given <code>row</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..2]</code>
      * @param src
@@ -2940,7 +2940,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the row at the given <code>row</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..2]</code>
      * @param x
@@ -2990,7 +2990,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the column at the given <code>column</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param column
      *          the column index in <code>[0..2]</code>
      * @param src
@@ -3004,7 +3004,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the column at the given <code>column</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param column
      *          the column index in <code>[0..2]</code>
      * @param x
@@ -3045,7 +3045,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the matrix element at the given column and row to the specified value.
-     * 
+     *
      * @param column
      *          the colum index in <code>[0..2]</code>
      * @param row
@@ -3064,7 +3064,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Set the matrix element at the given row and column to the specified value.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..2]</code>
      * @param column
@@ -3082,12 +3082,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In this case, use {@link #set(Matrix3fc)} to set a given Matrix3f to this matrix.
-     * 
+     *
      * @see #set(Matrix3fc)
-     * 
+     *
      * @return this
      */
     public Matrix3f normal() {
@@ -3099,12 +3099,12 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In this case, use {@link #set(Matrix3fc)} to set a given Matrix3f to this matrix.
-     * 
+     *
      * @see #set(Matrix3fc)
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -3145,7 +3145,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal()} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @return this
      */
     public Matrix3f cofactor() {
@@ -3157,7 +3157,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix3f)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -3306,7 +3306,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Exchange the values of <code>this</code> matrix with the given <code>other</code> matrix.
-     * 
+     *
      * @param other
      *          the other matrix to exchange the values with
      * @return this
@@ -3318,9 +3318,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Component-wise add <code>this</code> and <code>other</code>.
-     * 
+     *
      * @param other
-     *          the other addend 
+     *          the other addend
      * @return this
      */
     public Matrix3f add(Matrix3fc other) {
@@ -3342,7 +3342,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Component-wise subtract <code>subtrahend</code> from <code>this</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @return this
@@ -3366,7 +3366,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
 
     /**
      * Component-wise multiply <code>this</code> by <code>other</code>.
-     * 
+     *
      * @param other
      *          the other matrix
      * @return this
@@ -3395,9 +3395,9 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * -a,  0,  c
      *  b, -c,  0
      * </pre>
-     * 
+     *
      * Reference: <a href="https://en.wikipedia.org/wiki/Skew-symmetric_matrix">https://en.wikipedia.org</a>
-     * 
+     *
      * @param a
      *          the value used for the matrix elements m01 and m10
      * @param b
@@ -3448,7 +3448,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>direction</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -3461,10 +3461,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotationTowards(Vector3fc, Vector3fc) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix3f().lookAlong(new Vector3f(dir).negate(), up).invert(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(float, float, float, float, float, float, Matrix3f)
      * @see #rotationTowards(Vector3fc, Vector3fc)
-     * 
+     *
      * @param direction
      *              the direction to rotate towards
      * @param up
@@ -3478,7 +3478,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>direction</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -3490,10 +3490,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotationTowards(Vector3fc, Vector3fc) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix3f().lookAlong(new Vector3f(dir).negate(), up).invert())</code>
-     * 
+     *
      * @see #rotateTowards(float, float, float, float, float, float)
      * @see #rotationTowards(Vector3fc, Vector3fc)
-     * 
+     *
      * @param direction
      *              the direction to orient towards
      * @param up
@@ -3505,7 +3505,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>direction</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -3517,10 +3517,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotationTowards(float, float, float, float, float, float) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix3f().lookAlong(-dirX, -dirY, -dirZ, upX, upY, upZ).invert())</code>
-     * 
+     *
      * @see #rotateTowards(Vector3fc, Vector3fc)
      * @see #rotationTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -3540,7 +3540,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>dir</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -3553,10 +3553,10 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * use {@link #rotationTowards(float, float, float, float, float, float) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix3f().lookAlong(-dirX, -dirY, -dirZ, upX, upY, upZ).invert(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(Vector3fc, Vector3fc)
      * @see #rotationTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -3621,17 +3621,17 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that aligns the local <code>-z</code> axis with <code>center - eye</code>.
      * <p>
      * In order to apply the rotation transformation to a previous existing transformation,
      * use {@link #rotateTowards(float, float, float, float, float, float) rotateTowards}.
      * <p>
      * This method is equivalent to calling: <code>setLookAlong(new Vector3f(dir).negate(), up).invert()</code>
-     * 
+     *
      * @see #rotationTowards(Vector3fc, Vector3fc)
      * @see #rotateTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dir
      *              the direction to orient the local -z axis towards
      * @param up
@@ -3643,17 +3643,17 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that aligns the local <code>-z</code> axis with <code>center - eye</code>.
      * <p>
      * In order to apply the rotation transformation to a previous existing transformation,
      * use {@link #rotateTowards(float, float, float, float, float, float) rotateTowards}.
      * <p>
      * This method is equivalent to calling: <code>setLookAlong(-dirX, -dirY, -dirZ, upX, upY, upZ).invert()</code>
-     * 
+     *
      * @see #rotateTowards(Vector3fc, Vector3fc)
      * @see #rotationTowards(float, float, float, float, float, float)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -3716,7 +3716,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * </pre>
      * <p>
      * Reference: <a href="http://nghiaho.com/?page_id=846">http://nghiaho.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the extracted Euler angles
      * @return dest
@@ -3749,7 +3749,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * 0 1 b
      * 0 0 1
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b
@@ -3784,7 +3784,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * 0 1 b
      * 0 0 1
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b
@@ -3843,7 +3843,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -3864,7 +3864,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param normal
      *          the plane normal
      * @return this
@@ -3885,7 +3885,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param orientation
      *          the plane orientation
      * @return this
@@ -3911,7 +3911,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to a mirror/reflection transformation that reflects through the given plane
      * specified via the plane normal.
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -3937,7 +3937,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
     /**
      * Set this matrix to a mirror/reflection transformation that reflects through the given plane
      * specified via the plane normal.
-     * 
+     *
      * @param normal
      *          the plane normal
      * @return this
@@ -3953,7 +3953,7 @@ public class Matrix3f implements Externalizable, Matrix3fc {
      * This method can be used to build a reflection transformation based on the orientation of a mirror object in the scene.
      * It is assumed that the default mirror plane's normal is <code>(0, 0, 1)</code>. So, if the given {@link Quaternionfc} is
      * the identity (does not apply any additional rotation), the reflection plane will be <code>z=0</code>, offset by the given <code>point</code>.
-     * 
+     *
      * @param orientation
      *          the plane orientation
      * @return this

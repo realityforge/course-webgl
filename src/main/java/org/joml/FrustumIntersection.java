@@ -27,7 +27,7 @@ package org.joml;
  * Efficiently performs frustum intersection tests by caching the frustum planes of an arbitrary transformation {@link Matrix4fc matrix}.
  * <p>
  * This class is preferred over the frustum intersection methods in {@link Matrix4fc} when many objects need to be culled by the same static frustum.
- * 
+ *
  * @author Kai Burjack
  */
 public class FrustumIntersection {
@@ -142,9 +142,9 @@ public class FrustumIntersection {
      * Create a new {@link FrustumIntersection} from the given {@link Matrix4fc matrix} by extracing the matrix's frustum planes.
      * <p>
      * In order to update the compute frustum planes later on, call {@link #set(Matrix4fc)}.
-     * 
+     *
      * @see #set(Matrix4fc)
-     * 
+     *
      * @param m
      *          the {@link Matrix4fc} to create the frustum culler from
      */
@@ -156,15 +156,15 @@ public class FrustumIntersection {
      * Create a new {@link FrustumIntersection} from the given {@link Matrix4fc matrix} by extracing the matrix's frustum planes.
      * <p>
      * In order to update the compute frustum planes later on, call {@link #set(Matrix4fc)}.
-     * 
+     *
      * @see #set(Matrix4fc)
-     * 
+     *
      * @param m
      *          the {@link Matrix4fc} to create the frustum culler from
      * @param allowTestSpheres
      *          whether the methods {@link #testSphere(Vector3fc, float)}, {@link #testSphere(float, float, float, float)},
      *          {@link #intersectSphere(Vector3fc, float)} or {@link #intersectSphere(float, float, float, float)} will used.
-     *          If no spheres need to be tested, then <code>false</code> should be used 
+     *          If no spheres need to be tested, then <code>false</code> should be used
      */
     public FrustumIntersection(Matrix4fc m, boolean allowTestSpheres) {
         set(m, allowTestSpheres);
@@ -175,7 +175,7 @@ public class FrustumIntersection {
      * <p>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @param m
      *          the {@link Matrix4fc matrix} to update <code>this</code> frustum culler's frustum planes from
      * @return this
@@ -190,7 +190,7 @@ public class FrustumIntersection {
      * <p>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @param m
      *          the {@link Matrix4fc matrix} to update <code>this</code> frustum culler's frustum planes from
      * @param allowTestSpheres
@@ -242,7 +242,7 @@ public class FrustumIntersection {
 
     /**
      * Test whether the given point is within the frustum defined by <code>this</code> frustum culler.
-     * 
+     *
      * @param point
      *          the point to test
      * @return <code>true</code> if the given point is inside the frustum; <code>false</code> otherwise
@@ -253,7 +253,7 @@ public class FrustumIntersection {
 
     /**
      * Test whether the given point <code>(x, y, z)</code> is within the frustum defined by <code>this</code> frustum culler.
-     * 
+     *
      * @param x
      *          the x-coordinate of the point
      * @param y
@@ -277,7 +277,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>true</code> for spheres that are actually not visible.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param center
      *          the sphere's center
      * @param radius
@@ -295,7 +295,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>true</code> for spheres that are actually not visible.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param x
      *          the x-coordinate of the sphere's center
      * @param y
@@ -322,7 +322,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>true</code> for spheres that are actually not visible.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param center
      *          the sphere's center
      * @param radius
@@ -340,7 +340,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>true</code> for spheres that are actually not visible.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param x
      *          the x-coordinate of the sphere's center
      * @param y
@@ -390,7 +390,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>-1</code> for boxes that are actually not visible/do not intersect the frustum.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param min
      *          the minimum corner coordinates of the axis-aligned box
      * @param max
@@ -410,7 +410,7 @@ public class FrustumIntersection {
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
      * <p>
      * Reference: <a href="http://old.cescg.org/CESCG-2002/DSykoraJJelinek/">Efficient View Frustum Culling</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -445,7 +445,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>-1</code> for planes that are actually not visible/do not intersect the frustum.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param min
      *          the minimum corner coordinates of the XY-plane
      * @param max
@@ -465,7 +465,7 @@ public class FrustumIntersection {
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
      * <p>
      * Reference: <a href="http://old.cescg.org/CESCG-2002/DSykoraJJelinek/">Efficient View Frustum Culling</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -498,7 +498,7 @@ public class FrustumIntersection {
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
      * <p>
      * Reference: <a href="http://old.cescg.org/CESCG-2002/DSykoraJJelinek/">Efficient View Frustum Culling</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minZ
@@ -530,7 +530,7 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>-1</code> for boxes that are actually not visible/do not intersect the frustum.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param min
      *          the minimum corner coordinates of the axis-aligned box
      * @param max
@@ -553,7 +553,7 @@ public class FrustumIntersection {
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
      * <p>
      * Reference: <a href="http://old.cescg.org/CESCG-2002/DSykoraJJelinek/">Efficient View Frustum Culling</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -573,7 +573,7 @@ public class FrustumIntersection {
     public int intersectAab(float minX, float minY, float minZ, float maxX, float maxY, float maxZ) {
         /*
          * This is an implementation of the "2.4 Basic intersection test" of the mentioned site.
-         * 
+         *
          * In addition to the algorithm in the paper, this method also returns the index of the first plane that culled the box.
          */
         int plane = PLANE_NX;
@@ -607,7 +607,7 @@ public class FrustumIntersection {
 
     /**
      * Compute the signed distance from the given axis-aligned box to the <code>plane</code>.
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -621,9 +621,9 @@ public class FrustumIntersection {
      * @param maxZ
      *          the z-coordinate of the maximum corner
      * @param plane
-     *          one of 
+     *          one of
      *          {@link #PLANE_NX}, {@link #PLANE_PX},
-     *          {@link #PLANE_NY}, {@link #PLANE_PY}, 
+     *          {@link #PLANE_NY}, {@link #PLANE_PY},
      *          {@link #PLANE_NZ} and {@link #PLANE_PZ}
      * @return the signed distance of the axis-aligned box to the plane
      */
@@ -639,22 +639,22 @@ public class FrustumIntersection {
      * <p>
      * This method differs from {@link #intersectAab(Vector3fc, Vector3fc)} in that
      * it allows to mask-off planes that should not be calculated. For example, in order to only test a box against the
-     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use 
+     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use
      * a mask of <code>(~0 ^ PLANE_MASK_NX)</code>.
      * <p>
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>-1</code> for boxes that are actually not visible/do not intersect the frustum.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param min
      *          the minimum corner coordinates of the axis-aligned box
      * @param max
      *          the maximum corner coordinates of the axis-aligned box
      * @param mask
      *          contains as bitset all the planes that should be tested.
-     *          This value can be any combination of 
+     *          This value can be any combination of
      *          {@link #PLANE_MASK_NX}, {@link #PLANE_MASK_PX},
-     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY}, 
+     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY},
      *          {@link #PLANE_MASK_NZ} and {@link #PLANE_MASK_PZ}
      * @return the index of the first plane that culled the box, if the box does not intersect the frustum,
      *         or {@link #INTERSECT} if the box intersects the frustum, or {@link #INSIDE} if the box is fully inside of the frustum.
@@ -671,7 +671,7 @@ public class FrustumIntersection {
      * <p>
      * This method differs from {@link #intersectAab(float, float, float, float, float, float)} in that
      * it allows to mask-off planes that should not be calculated. For example, in order to only test a box against the
-     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use 
+     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use
      * a mask of <code>(~0 ^ PLANE_MASK_NX)</code>.
      * <p>
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
@@ -679,7 +679,7 @@ public class FrustumIntersection {
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
      * <p>
      * Reference: <a href="http://old.cescg.org/CESCG-2002/DSykoraJJelinek/">Efficient View Frustum Culling</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -694,9 +694,9 @@ public class FrustumIntersection {
      *          the z-coordinate of the maximum corner
      * @param mask
      *          contains as bitset all the planes that should be tested.
-     *          This value can be any combination of 
+     *          This value can be any combination of
      *          {@link #PLANE_MASK_NX}, {@link #PLANE_MASK_PX},
-     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY}, 
+     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY},
      *          {@link #PLANE_MASK_NZ} and {@link #PLANE_MASK_PZ}
      * @return the index of the first plane that culled the box, if the box does not intersect the frustum,
      *         or {@link #INTERSECT} if the box intersects the frustum, or {@link #INSIDE} if the box is fully inside of the frustum.
@@ -705,7 +705,7 @@ public class FrustumIntersection {
     public int intersectAab(float minX, float minY, float minZ, float maxX, float maxY, float maxZ, int mask) {
         /*
          * This is an implementation of the first algorithm in "2.5 Plane masking and coherency" of the mentioned site.
-         * 
+         *
          * In addition to the algorithm in the paper, this method also returns the index of the first plane that culled the box.
          */
         int plane = PLANE_NX;
@@ -744,7 +744,7 @@ public class FrustumIntersection {
      * <p>
      * This method differs from {@link #intersectAab(Vector3fc, Vector3fc)} in that
      * it allows to mask-off planes that should not be calculated. For example, in order to only test a box against the
-     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use 
+     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use
      * a mask of <code>(~0 ^ PLANE_MASK_NX)</code>.
      * <p>
      * In addition, the <code>startPlane</code> denotes the first frustum plane to test the box against. To use this effectively means to store the
@@ -755,16 +755,16 @@ public class FrustumIntersection {
      * The algorithm implemented by this method is conservative. This means that in certain circumstances a <i>false positive</i>
      * can occur, when the method returns <code>-1</code> for boxes that are actually not visible/do not intersect the frustum.
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
-     * 
+     *
      * @param min
      *          the minimum corner coordinates of the axis-aligned box
      * @param max
      *          the maximum corner coordinates of the axis-aligned box
      * @param mask
      *          contains as bitset all the planes that should be tested.
-     *          This value can be any combination of 
+     *          This value can be any combination of
      *          {@link #PLANE_MASK_NX}, {@link #PLANE_MASK_PX},
-     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY}, 
+     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY},
      *          {@link #PLANE_MASK_NZ} and {@link #PLANE_MASK_PZ}
      * @param startPlane
      *          the first frustum plane to test the axis-aligned box against. It is one of
@@ -784,7 +784,7 @@ public class FrustumIntersection {
      * <p>
      * This method differs from {@link #intersectAab(float, float, float, float, float, float)} in that
      * it allows to mask-off planes that should not be calculated. For example, in order to only test a box against the
-     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use 
+     * left frustum plane, use a mask of {@link #PLANE_MASK_NX}. Or in order to test all planes <i>except</i> the left plane, use
      * a mask of <code>(~0 ^ PLANE_MASK_NX)</code>.
      * <p>
      * In addition, the <code>startPlane</code> denotes the first frustum plane to test the box against. To use this effectively means to store the
@@ -797,7 +797,7 @@ public class FrustumIntersection {
      * See <a href="http://iquilezles.org/www/articles/frustumcorrect/frustumcorrect.htm">iquilezles.org</a> for an examination of this problem.
      * <p>
      * Reference: <a href="http://old.cescg.org/CESCG-2002/DSykoraJJelinek/">Efficient View Frustum Culling</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -812,9 +812,9 @@ public class FrustumIntersection {
      *          the z-coordinate of the maximum corner
      * @param mask
      *          contains as bitset all the planes that should be tested.
-     *          This value can be any combination of 
+     *          This value can be any combination of
      *          {@link #PLANE_MASK_NX}, {@link #PLANE_MASK_PX},
-     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY}, 
+     *          {@link #PLANE_MASK_NY}, {@link #PLANE_MASK_PY},
      *          {@link #PLANE_MASK_NZ} and {@link #PLANE_MASK_PZ}
      * @param startPlane
      *          the first frustum plane to test the axis-aligned box against. It is one of
@@ -826,7 +826,7 @@ public class FrustumIntersection {
     public int intersectAab(float minX, float minY, float minZ, float maxX, float maxY, float maxZ, int mask, int startPlane) {
         /*
          * This is an implementation of the second algorithm in "2.5 Plane masking and coherency" of the mentioned site.
-         * 
+         *
          * In addition to the algorithm in the paper, this method also returns the index of the first plane that culled the box.
          */
         int plane = startPlane;

@@ -122,7 +122,7 @@ public class SimplexNoise {
      * Compute 2D simplex noise for the given input vector <code>(x, y)</code>.
      * <p>
      * The result is in the range <code>[-1..+1]</code>.
-     * 
+     *
      * @param x
      *          the x coordinate
      * @param y
@@ -195,7 +195,7 @@ public class SimplexNoise {
      * Compute 3D simplex noise for the given input vector <code>(x, y, z)</code>.
      * <p>
      * The result is in the range <code>[-1..+1]</code>.
-     * 
+     *
      * @param x
      *          the x coordinate
      * @param y
@@ -332,7 +332,7 @@ public class SimplexNoise {
      * Compute 4D simplex noise for the given input vector <code>(x, y, z, w)</code>.
      * <p>
      * The result is in the range <code>[-1..+1]</code>.
-     * 
+     *
      * @param x
      *          the x coordinate
      * @param y

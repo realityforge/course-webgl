@@ -25,13 +25,13 @@ package org.joml.sampling;
 
 /**
  * Callback used for notifying about a new generated 3D sample.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Callback3d {
     /**
      * Will be called whenever a new sample with the given coordinates <code>(x, y, z)</code> is generated.
-     * 
+     *
      * @param x
      *            the x coordinate of the new sample point
      * @param y

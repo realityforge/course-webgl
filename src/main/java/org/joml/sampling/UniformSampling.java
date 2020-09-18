@@ -27,14 +27,14 @@ import org.joml.Random;
 
 /**
  * Generates uniform samples.
- * 
+ *
  * @author Kai Burjack
  */
 public class UniformSampling {
 
     /**
      * Generates uniform samples on a unit disk.
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Disk {
@@ -43,7 +43,7 @@ public class UniformSampling {
         /**
          * Create a new instance of {@link Disk}, initialize the random number generator with the given <code>seed</code> and generate <code>numSamples</code> number of sample
          * positions on the unit disk, and call the given <code>callback</code> for each sample generate.
-         * 
+         *
          * @param seed
          *            the seed to initialize the random number generator with
          * @param numSamples
@@ -70,7 +70,7 @@ public class UniformSampling {
 
     /**
      * Generates uniform samples on a unit sphere.
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Sphere {
@@ -79,7 +79,7 @@ public class UniformSampling {
         /**
          * Create a new instance of {@link Sphere}, initialize the random number generator with the given <code>seed</code> and generate <code>numSamples</code> number of sample
          * positions on the unit sphere, and call the given <code>callback</code> for each sample generate.
-         * 
+         *
          * @param seed
          *            the seed to initialize the random number generator with
          * @param numSamples
@@ -96,7 +96,7 @@ public class UniformSampling {
          * Create <code>numSamples</code> number of samples which are uniformly distributed on a unit sphere, and call the given <code>callback</code> for each sample generated.
          * <p>
          * Reference: <a href="http://mathworld.wolfram.com/SpherePointPicking.html">http://mathworld.wolfram.com/</a>
-         * 
+         *
          * @param numSamples
          *            the number of samples to generate
          * @param callback

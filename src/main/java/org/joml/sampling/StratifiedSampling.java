@@ -27,7 +27,7 @@ import org.joml.Random;
 
 /**
  * Creates samples on a unit quad using an NxN strata grid.
- * 
+ *
  * @author Kai Burjack
  */
 public class StratifiedSampling {
@@ -37,7 +37,7 @@ public class StratifiedSampling {
     /**
      * Create a new instance of {@link StratifiedSampling} and initialize the random number generator with the given
      * <code>seed</code>.
-     * 
+     *
      * @param seed
      *            the seed to initialize the random number generator with
      */
@@ -49,7 +49,7 @@ public class StratifiedSampling {
      * Generate <code>n * n</code> random sample positions in the unit square of <code>x, y = [-1..+1]</code>.
      * <p>
      * Each sample within its stratum is distributed randomly.
-     * 
+     *
      * @param n
      *            the number of strata in each dimension
      * @param callback
@@ -69,7 +69,7 @@ public class StratifiedSampling {
      * Generate <code>n * n</code> random sample positions in the unit square of <code>x, y = [-1..+1]</code>.
      * <p>
      * Each sample within its stratum is confined to be within <code>[-centering/2..1-centering]</code> of its stratum.
-     * 
+     *
      * @param n
      *            the number of strata in each dimension
      * @param centering

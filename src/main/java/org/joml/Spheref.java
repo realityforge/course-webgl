@@ -32,7 +32,7 @@ import java.text.NumberFormat;
 
 /**
  * Represents a 3D sphere.
- * 
+ *
  * @author Kai Burjack
  */
 public class Spheref implements Externalizable {
@@ -62,7 +62,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Create a new {@link Spheref} as a copy of the given <code>source</code>.
-     * 
+     *
      * @param source
      *          the {@link Spheref} to copy from
      */
@@ -75,7 +75,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Create a new {@link Spheref} with center position <code>c</code> and radius <code>r</code>.
-     * 
+     *
      * @param c
      *          the center position of the sphere
      * @param r
@@ -90,7 +90,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Create a new {@link Spheref} with center position <code>(x, y, z)</code> and radius <code>r</code>.
-     * 
+     *
      * @param x
      *          the x coordinate of the sphere's center
      * @param y
@@ -109,7 +109,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Translate <code>this</code> by the given vector <code>xyz</code>.
-     * 
+     *
      * @param xyz
      *          the vector to translate by
      * @return this
@@ -120,7 +120,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Translate <code>this</code> by the given vector <code>xyz</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param xyz
      *          the vector to translate by
      * @param dest
@@ -133,7 +133,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Translate <code>this</code> by the vector <code>(x, y, z)</code>.
-     * 
+     *
      * @param x
      *          the x coordinate to translate by
      * @param y
@@ -148,7 +148,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Translate <code>this</code> by the vector <code>(x, y, z)</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x coordinate to translate by
      * @param y
@@ -199,7 +199,7 @@ public class Spheref implements Externalizable {
      * Return a string representation of this sphere.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -208,7 +208,7 @@ public class Spheref implements Externalizable {
 
     /**
      * Return a string representation of this sphere by formatting the components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the components with
      * @return the string representation

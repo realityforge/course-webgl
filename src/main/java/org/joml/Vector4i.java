@@ -199,7 +199,7 @@ public class Vector4i implements Externalizable, Vector4ic {
     /**
      * Create a new {@link Vector4i} and initialize its four components from the first
      * four elements of the given array.
-     * 
+     *
      * @param xyzw
      *          the array containing at least four elements
      */
@@ -377,7 +377,7 @@ public class Vector4i implements Externalizable, Vector4ic {
 
     /**
      * Set the four components of this vector to the first four elements of the given array.
-     * 
+     *
      * @param xyzw
      *          the array containing at least four elements
      * @return this
@@ -867,7 +867,7 @@ public class Vector4i implements Externalizable, Vector4ic {
      * Return a string representation of this vector.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -876,7 +876,7 @@ public class Vector4i implements Externalizable, Vector4ic {
 
     /**
      * Return a string representation of this vector by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation
@@ -947,7 +947,7 @@ public class Vector4i implements Externalizable, Vector4ic {
 
     /**
      * Compute the absolute of each of this vector's components.
-     * 
+     *
      * @return this
      */
     public Vector4i absolute() {

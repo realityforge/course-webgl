@@ -32,7 +32,7 @@ import java.text.NumberFormat;
 
 /**
  * Represents a 2D axis-aligned rectangle.
- * 
+ *
  * @author Kai Burjack
  */
 public class Rectangled implements Externalizable {
@@ -62,7 +62,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Create a new {@link Rectangled} as a copy of the given <code>source</code>.
-     * 
+     *
      * @param source
      *          the {@link Rectangled} to copy from
      */
@@ -75,7 +75,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Create a new {@link Rectangled} with the given <code>min</code> and <code>max</code> corner coordinates.
-     * 
+     *
      * @param min
      *          the minimum coordinates
      * @param max
@@ -90,7 +90,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Create a new {@link Rectangled} with the given minimum and maximum corner coordinates.
-     * 
+     *
      * @param minX
      *          the x coordinate of the minimum corner
      * @param minY
@@ -146,7 +146,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check whether <code>this</code> rectangle represents a valid rectangle.
-     * 
+     *
      * @return <code>true</code> iff this rectangle is valid; <code>false</code> otherwise
      */
     public boolean isValid() {
@@ -158,7 +158,7 @@ public class Rectangled implements Externalizable {
      * <p>
      * If the two rectangles do not intersect, then {@link Double#NaN} is stored in each component
      * of <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @return this
@@ -173,7 +173,7 @@ public class Rectangled implements Externalizable {
      * <p>
      * If the two rectangles do not intersect, then {@link Double#NaN} is stored in each component
      * of <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @param dest
@@ -194,7 +194,7 @@ public class Rectangled implements Externalizable {
      * <p>
      * If the two rectangles do not intersect, then {@link Double#NaN} is stored in each component
      * of <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @param dest
@@ -215,7 +215,7 @@ public class Rectangled implements Externalizable {
      * <p>
      * If the two rectangles do not intersect, then {@link Double#NaN} is stored in each component
      * of <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @param dest
@@ -232,7 +232,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Return the length of this rectangle in the X and Y dimensions and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -243,7 +243,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this rectangle contains the given <code>rectangle</code>.
-     * 
+     *
      * @param rectangle
      *          the rectangle to test
      * @return <code>true</code> iff this rectangle contains the rectangle; <code>false</code> otherwise
@@ -255,7 +255,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this rectangle contains the given <code>rectangle</code>.
-     * 
+     *
      * @param rectangle
      *          the rectangle to test
      * @return <code>true</code> iff this rectangle contains the rectangle; <code>false</code> otherwise
@@ -267,7 +267,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this rectangle contains the given <code>rectangle</code>.
-     * 
+     *
      * @param rectangle
      *          the rectangle to test
      * @return <code>true</code> iff this rectangle contains the rectangle; <code>false</code> otherwise
@@ -279,7 +279,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this and the given rectangle intersect.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @return <code>true</code> iff both rectangles intersect; <code>false</code> otherwise
@@ -291,7 +291,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this and the given rectangle intersect.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @return <code>true</code> iff both rectangles intersect; <code>false</code> otherwise
@@ -303,7 +303,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this and the given rectangle intersect.
-     * 
+     *
      * @param other
      *          the other rectangle
      * @return <code>true</code> iff both rectangles intersect; <code>false</code> otherwise
@@ -315,7 +315,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this rectangle contains the given <code>point</code>.
-     * 
+     *
      * @param point
      *          the point to test
      * @return <code>true</code> iff this rectangle contains the point; <code>false</code> otherwise
@@ -326,7 +326,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Check if this rectangle contains the given point <code>(x, y)</code>.
-     * 
+     *
      * @param x
      *          the x coordinate of the point to check
      * @param y
@@ -339,7 +339,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Translate <code>this</code> by the given vector <code>xy</code>.
-     * 
+     *
      * @param xy
      *          the vector to translate by
      * @return this
@@ -350,7 +350,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Translate <code>this</code> by the given vector <code>xy</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param xy
      *          the vector to translate by
      * @param dest
@@ -363,7 +363,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Translate <code>this</code> by the given vector <code>xy</code>.
-     * 
+     *
      * @param xy
      *          the vector to translate by
      * @return this
@@ -374,7 +374,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Translate <code>this</code> by the given vector <code>xy</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param xy
      *          the vector to translate by
      * @param dest
@@ -387,7 +387,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Translate <code>this</code> by the vector <code>(x, y)</code>.
-     * 
+     *
      * @param x
      *          the x coordinate to translate by
      * @param y
@@ -400,7 +400,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Translate <code>this</code> by the vector <code>(x, y)</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x coordinate to translate by
      * @param y
@@ -659,7 +659,7 @@ public class Rectangled implements Externalizable {
      * Return a string representation of this rectangle.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -668,7 +668,7 @@ public class Rectangled implements Externalizable {
 
     /**
      * Return a string representation of this rectangle by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation

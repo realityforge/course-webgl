@@ -30,13 +30,13 @@ package org.joml;
  * <p>
  * There are two algorithms for approximating sin/cos:
  * <ol>
- * <li>arithmetic <a href="http://www.java-gaming.org/topics/joml-1-8-0-release/37491/msg/361815/view.html#msg361815">polynomial approximation</a> contributed by roquendm 
+ * <li>arithmetic <a href="http://www.java-gaming.org/topics/joml-1-8-0-release/37491/msg/361815/view.html#msg361815">polynomial approximation</a> contributed by roquendm
  * <li>theagentd's <a href="http://www.java-gaming.org/topics/extremely-fast-sine-cosine/36469/msg/346213/view.html#msg346213">linear interpolation</a> variant of Riven's algorithm from
  * <a href="http://www.java-gaming.org/topics/extremely-fast-sine-cosine/36469/view.html">http://www.java-gaming.org/</a>
  * </ol>
  * By default, the first algorithm is being used. In order to use the second one, start the JVM with <code>-Djoml.sinLookup</code>. The lookup table bit length of the second algorithm can also be adjusted
  * for improved accuracy via <code>-Djoml.sinLookup.bits=&lt;n&gt;</code>, where &lt;n&gt; is the number of bits of the lookup table.
- * 
+ *
  * @author Kai Burjack
  */
 public class Math {
@@ -44,7 +44,7 @@ public class Math {
     /*
      * The following implementation of an approximation of sine and cosine was
      * thankfully donated by Riven from http://java-gaming.org/.
-     * 
+     *
      * The code for linear interpolation was gratefully donated by theagentd
      * from the same site.
      */

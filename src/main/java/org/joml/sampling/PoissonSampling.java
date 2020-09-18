@@ -33,7 +33,7 @@ import org.joml.Vector2f;
  * <p>
  * The algorithm implemented here is based on <a href= "http://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf">Fast Poisson Disk Sampling in Arbitrary
  * Dimensions</a>.
- * 
+ *
  * @author Kai Burjack
  */
 public class PoissonSampling {
@@ -43,7 +43,7 @@ public class PoissonSampling {
      * <p>
      * The algorithm implemented here is based on <a href= "http://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf">Fast Poisson Disk Sampling in Arbitrary
      * Dimensions</a>.
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Disk {
@@ -63,7 +63,7 @@ public class PoissonSampling {
          * <code>callback</code> for each found sample point.
          * <p>
          * The samples are distributed evenly on the disk with a minimum distance to one another of at least <code>minDist</code>.
-         * 
+         *
          * @param seed
          *            the seed to initialize the random number generator with
          * @param diskRadius

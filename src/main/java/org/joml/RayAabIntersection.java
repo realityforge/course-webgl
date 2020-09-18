@@ -31,7 +31,7 @@ package org.joml;
  * It is an efficient implementation when testing many axis-aligned boxes against the same ray.
  * <p>
  * This class is thread-safe and can be used in a multithreaded environment when testing many axis-aligned boxes against the same ray concurrently.
- * 
+ *
  * @author Kai Burjack
  */
 public class RayAabIntersection {
@@ -49,7 +49,7 @@ public class RayAabIntersection {
      * Before using the {@link #test(float, float, float, float, float, float) intersect()} method,
      * the method {@link #set(float, float, float, float, float, float) set()} must be called in order to
      * initialize the created RayAabIntersection instance with a ray.
-     * 
+     *
      * @see #set(float, float, float, float, float, float)
      */
     public RayAabIntersection() {
@@ -60,9 +60,9 @@ public class RayAabIntersection {
      * and direction <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * In order to change the direction and/or origin of the ray later, use {@link #set(float, float, float, float, float, float) set()}.
-     * 
+     *
      * @see #set(float, float, float, float, float, float)
-     * 
+     *
      * @param originX
      *          the x coordinate of the origin
      * @param originY
@@ -83,7 +83,7 @@ public class RayAabIntersection {
     /**
      * Update the ray stored by this {@link RayAabIntersection} with the new origin <code>(originX, originY, originZ)</code>
      * and direction <code>(dirX, dirY, dirZ)</code>.
-     * 
+     *
      * @param originX
      *          the x coordinate of the ray origin
      * @param originY
@@ -143,7 +143,7 @@ public class RayAabIntersection {
      * This implementation uses a tableswitch to dispatch to the correct intersection method.
      * <p>
      * This method is thread-safe and can be used to test many axis-aligned boxes concurrently.
-     * 
+     *
      * @param minX
      *          the x coordinate of the minimum corner
      * @param minY
@@ -169,7 +169,7 @@ public class RayAabIntersection {
             return PMM(minX, minY, minZ, maxX, maxY, maxZ);
         case 3: // 0b000011: // not used
             return false;
-        case 4: // 0b000100: // MOM 
+        case 4: // 0b000100: // MOM
             return MOM(minX, minY, minZ, maxX, maxY, maxZ);
         case 5: // 0b000101: // OOM
             return OOM(minX, minY, minZ, maxX, maxY);

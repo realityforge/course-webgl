@@ -27,7 +27,7 @@ package org.joml;
  * Computes the weighted average of multiple rotations represented as {@link Quaternionf} instances.
  * <p>
  * Instances of this class are <i>not</i> thread-safe.
- * 
+ *
  * @author Kai Burjack
  */
 public class QuaternionfInterpolator {
@@ -36,7 +36,7 @@ public class QuaternionfInterpolator {
      * Performs singular value decomposition on {@link Matrix3f}.
      * <p>
      * This code was adapted from <a href="http://www.public.iastate.edu/~dicook/JSS/paper/code/svd.c">http://www.public.iastate.edu/</a>.
-     * 
+     *
      * @author Kai Burjack
      */
     private static class SvdDecomposition3f {
@@ -294,7 +294,7 @@ public class QuaternionfInterpolator {
 
     /**
      * Compute the weighted average of all of the quaternions given in <code>qs</code> using the specified interpolation factors <code>weights</code>, and store the result in <code>dest</code>.
-     * 
+     *
      * @param qs
      *            the quaternions to interpolate over
      * @param weights

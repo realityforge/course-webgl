@@ -34,7 +34,7 @@ import java.io.ObjectOutput;
  * {@link Matrix4x3fStack}/{@link Matrix4x3f} itself. This affects all operations in {@link Matrix4x3f} that take
  * another {@link Matrix4x3f} as parameter. If a {@link Matrix4x3fStack} is used as argument to those methods, the
  * effective argument will always be the <i>current</i> matrix of the matrix stack.
- * 
+ *
  * @author Kai Burjack
  */
 public class Matrix4x3fStack extends Matrix4x3f {
@@ -55,7 +55,7 @@ public class Matrix4x3fStack extends Matrix4x3f {
      * Create a new {@link Matrix4x3fStack} of the given size.
      * <p>
      * Initially the stack pointer is at zero and the current matrix is set to identity.
-     * 
+     *
      * @param stackSize
      *            the size of the stack. This must be at least 1, in which case the {@link Matrix4x3fStack} simply only consists of <code>this</code>
      *            {@link Matrix4x3f}
@@ -74,7 +74,7 @@ public class Matrix4x3fStack extends Matrix4x3f {
     /**
      * Do not invoke manually! Only meant for serialization.
      * <p>
-     * Invoking this constructor from client code will result in an inconsistent state of the 
+     * Invoking this constructor from client code will result in an inconsistent state of the
      * created {@link Matrix4x3fStack} instance.
      */
     public Matrix4x3fStack() {
@@ -83,7 +83,7 @@ public class Matrix4x3fStack extends Matrix4x3f {
 
     /**
      * Set the stack pointer to zero and set the current/bottom matrix to {@link #identity() identity}.
-     * 
+     *
      * @return this
      */
     public Matrix4x3fStack clear() {
@@ -94,7 +94,7 @@ public class Matrix4x3fStack extends Matrix4x3f {
 
     /**
      * Increment the stack pointer by one and set the values of the new current matrix to the one directly below it.
-     * 
+     *
      * @return this
      */
     public Matrix4x3fStack pushMatrix() {
@@ -109,7 +109,7 @@ public class Matrix4x3fStack extends Matrix4x3f {
      * Decrement the stack pointer by one.
      * <p>
      * This will effectively dispose of the current matrix.
-     * 
+     *
      * @return this
      */
     public Matrix4x3fStack popMatrix() {
@@ -132,7 +132,7 @@ public class Matrix4x3fStack extends Matrix4x3f {
 
     /*
      * Contract between Matrix4x3f and Matrix4x3fStack:
-     * 
+     *
      * - Matrix4x3f.equals(Matrix4x3fStack) is true iff all the 12 matrix elements are equal
      * - Matrix4x3fStack.equals(Matrix4x3f) is true iff all the 12 matrix elements are equal
      * - Matrix4x3fStack.equals(Matrix4x3fStack) is true iff all 12 matrix elements are equal AND the matrix arrays as well as the stack pointer are equal

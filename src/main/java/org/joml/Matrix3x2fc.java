@@ -29,49 +29,49 @@ import com.google.gwt.typedarrays.shared.Float32Array;
 
 /**
  * Interface to a read-only view of a 3x2 matrix of single-precision floats.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Matrix3x2fc {
 
     /**
      * Return the value of the matrix element at column 0 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     float m00();
 
     /**
      * Return the value of the matrix element at column 0 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     float m01();
 
     /**
      * Return the value of the matrix element at column 1 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     float m10();
 
     /**
      * Return the value of the matrix element at column 1 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     float m11();
 
     /**
      * Return the value of the matrix element at column 2 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     float m20();
 
     /**
      * Return the value of the matrix element at column 2 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     float m21();
@@ -84,7 +84,7 @@ public interface Matrix3x2fc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
-     * 
+     *
      * @param right
      *          the right operand of the matrix multiplication
      * @param dest
@@ -111,7 +111,7 @@ public interface Matrix3x2fc {
 
     /**
      * Return the determinant of this matrix.
-     * 
+     *
      * @return the determinant
      */
     float determinant();
@@ -119,7 +119,7 @@ public interface Matrix3x2fc {
     /**
      * Invert the <code>this</code> matrix by assuming a third row in this matrix of <code>(0, 0, 1)</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -134,7 +134,7 @@ public interface Matrix3x2fc {
      * matrix, then the new matrix will be <code>M * T</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>M * T * v</code>, the translation will be applied first!
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -153,7 +153,7 @@ public interface Matrix3x2fc {
      * matrix, then the new matrix will be <code>M * T</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>M * T * v</code>, the translation will be applied first!
-     * 
+     *
      * @param offset
      *          the offset to translate
      * @param dest
@@ -170,7 +170,7 @@ public interface Matrix3x2fc {
      * matrix, then the new matrix will be <code>T * M</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>T * M * v</code>, the translation will be applied last!
-     * 
+     *
      * @param offset
      *          the number of units in x and y by which to translate
      * @param dest
@@ -187,7 +187,7 @@ public interface Matrix3x2fc {
      * matrix, then the new matrix will be <code>T * M</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>T * M * v</code>, the translation will be applied last!
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -201,7 +201,7 @@ public interface Matrix3x2fc {
     /**
      * Get the current values of <code>this</code> matrix and store them into
      * <code>dest</code>.
-     * 
+     *
      * @param dest
      *          the destination matrix
      * @return dest
@@ -210,7 +210,7 @@ public interface Matrix3x2fc {
 
     /**
      * Store this matrix in column-major order into the supplied {@link Float32Array}.
-     * 
+     *
      * @param buffer
      *            will receive the values of this matrix in column-major order
      * @return the passed in buffer
@@ -219,9 +219,9 @@ public interface Matrix3x2fc {
     /**
      * Store this matrix in column-major order into the supplied {@link Float32Array}
      * at the given index.
-     * 
+     *
      * @param index
-     *            the index at which to store this matrix in the supplied Float32Array 
+     *            the index at which to store this matrix in the supplied Float32Array
      * @param buffer
      *            will receive the values of this matrix in column-major order
      * @return the passed in buffer
@@ -232,7 +232,7 @@ public interface Matrix3x2fc {
 
     /**
      * Store this matrix into the supplied float array in column-major order at the given offset.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -245,9 +245,9 @@ public interface Matrix3x2fc {
      * Store this matrix into the supplied float array in column-major order.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get(float[], int)}.
-     * 
+     *
      * @see #get(float[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -256,7 +256,7 @@ public interface Matrix3x2fc {
 
     /**
      * Store this matrix as an equivalent 3x3 matrix into the supplied float array in column-major order at the given offset.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -269,9 +269,9 @@ public interface Matrix3x2fc {
      * Store this matrix as an equivalent 3x3 matrix into the supplied float array in column-major order.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get3x3(float[], int)}.
-     * 
+     *
      * @see #get3x3(float[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -280,7 +280,7 @@ public interface Matrix3x2fc {
 
     /**
      * Store this matrix as an equivalent 4x4 matrix into the supplied float array in column-major order at the given offset.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -293,9 +293,9 @@ public interface Matrix3x2fc {
      * Store this matrix as an equivalent 4x4 matrix into the supplied float array in column-major order.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get4x4(float[], int)}.
-     * 
+     *
      * @see #get4x4(float[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -308,7 +308,7 @@ public interface Matrix3x2fc {
      * If <code>M</code> is <code>this</code> matrix and <code>S</code> the scaling matrix,
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -326,7 +326,7 @@ public interface Matrix3x2fc {
      * If <code>M</code> is <code>this</code> matrix and <code>S</code> the scaling matrix,
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the scaling will be applied first!
-     * 
+     *
      * @param xy
      *            the factors of the x and y component, respectively
      * @param dest
@@ -346,7 +346,7 @@ public interface Matrix3x2fc {
      * , the scaling will be applied last!
      * <p>
      * This method is equivalent to calling: <code>new Matrix3x2f().translate(ox, oy).scale(sx, sy).translate(-ox, -oy).mul(this, dest)</code>
-     * 
+     *
      * @param sx
      *            the scaling factor of the x component
      * @param sy
@@ -372,7 +372,7 @@ public interface Matrix3x2fc {
      * scaling will be applied last!
      * <p>
      * This method is equivalent to calling: <code>new Matrix3x2f().translate(ox, oy).scale(factor).translate(-ox, -oy).mul(this, dest)</code>
-     * 
+     *
      * @param factor
      *            the scaling factor for all three axes
      * @param ox
@@ -392,9 +392,9 @@ public interface Matrix3x2fc {
      * If <code>M</code> is <code>this</code> matrix and <code>S</code> the scaling matrix,
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the scaling will be applied first!
-     * 
+     *
      * @see #scale(float, float, Matrix3x2f)
-     * 
+     *
      * @param xy
      *            the factor for the two components
      * @param dest
@@ -411,7 +411,7 @@ public interface Matrix3x2fc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>
      * , the scaling will be applied last!
-     * 
+     *
      * @param xy
      *            the factor to scale all two base axes by
      * @param dest
@@ -428,7 +428,7 @@ public interface Matrix3x2fc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>
      * , the scaling will be applied last!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -449,7 +449,7 @@ public interface Matrix3x2fc {
      * , the scaling will be applied first!
      * <p>
      * This method is equivalent to calling: <code>translate(ox, oy, dest).scale(sx, sy).translate(-ox, -oy)</code>
-     * 
+     *
      * @param sx
      *            the scaling factor of the x component
      * @param sy
@@ -475,7 +475,7 @@ public interface Matrix3x2fc {
      * scaling will be applied first!
      * <p>
      * This method is equivalent to calling: <code>translate(ox, oy, dest).scale(factor).translate(-ox, -oy)</code>
-     * 
+     *
      * @param factor
      *            the scaling factor for all three axes
      * @param ox
@@ -491,9 +491,9 @@ public interface Matrix3x2fc {
     /**
      * Transform/multiply the given vector by this matrix by assuming a third row in this matrix of <code>(0, 0, 1)</code>
      * and store the result in that vector.
-     * 
+     *
      * @see Vector3f#mul(Matrix3x2fc)
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @return v
@@ -502,9 +502,9 @@ public interface Matrix3x2fc {
 
     /**
      * Transform/multiply the given vector by this matrix and store the result in <code>dest</code>.
-     * 
+     *
      * @see Vector3f#mul(Matrix3x2fc, Vector3f)
-     * 
+     *
      * @param v
      *          the vector to transform
      * @param dest
@@ -515,7 +515,7 @@ public interface Matrix3x2fc {
 
     /**
      * Transform/multiply the given vector <code>(x, y, z)</code> by this matrix and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component of the vector to transform
      * @param y
@@ -536,10 +536,10 @@ public interface Matrix3x2fc {
      * will represent a position/location in 2D-space rather than a direction.
      * <p>
      * In order to store the result in another vector, use {@link #transformPosition(Vector2fc, Vector2f)}.
-     * 
+     *
      * @see #transformPosition(Vector2fc, Vector2f)
      * @see #transform(Vector3f)
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @return v
@@ -554,10 +554,10 @@ public interface Matrix3x2fc {
      * will represent a position/location in 2D-space rather than a direction.
      * <p>
      * In order to store the result in the same vector, use {@link #transformPosition(Vector2f)}.
-     * 
+     *
      * @see #transformPosition(Vector2f)
      * @see #transform(Vector3f, Vector3f)
-     * 
+     *
      * @param v
      *          the vector to transform
      * @param dest
@@ -574,10 +574,10 @@ public interface Matrix3x2fc {
      * will represent a position/location in 2D-space rather than a direction.
      * <p>
      * In order to store the result in the same vector, use {@link #transformPosition(Vector2f)}.
-     * 
+     *
      * @see #transformPosition(Vector2f)
      * @see #transform(Vector3f, Vector3f)
-     * 
+     *
      * @param x
      *          the x component of the vector to transform
      * @param y
@@ -597,9 +597,9 @@ public interface Matrix3x2fc {
      * not take the translation part of the matrix into account.
      * <p>
      * In order to store the result in another vector, use {@link #transformDirection(Vector2fc, Vector2f)}.
-     * 
+     *
      * @see #transformDirection(Vector2fc, Vector2f)
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @return v
@@ -615,9 +615,9 @@ public interface Matrix3x2fc {
      * not take the translation part of the matrix into account.
      * <p>
      * In order to store the result in the same vector, use {@link #transformDirection(Vector2f)}.
-     * 
+     *
      * @see #transformDirection(Vector2f)
-     * 
+     *
      * @param v
      *          the vector to transform
      * @param dest
@@ -635,9 +635,9 @@ public interface Matrix3x2fc {
      * not take the translation part of the matrix into account.
      * <p>
      * In order to store the result in the same vector, use {@link #transformDirection(Vector2f)}.
-     * 
+     *
      * @see #transformDirection(Vector2f)
-     * 
+     *
      * @param x
      *          the x component of the vector to transform
      * @param y
@@ -654,7 +654,7 @@ public interface Matrix3x2fc {
      * If <code>M</code> is <code>this</code> matrix and <code>R</code> the rotation matrix,
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the rotation will be applied first!
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param dest
@@ -672,7 +672,7 @@ public interface Matrix3x2fc {
      * rotation will be applied last!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param dest
@@ -690,10 +690,10 @@ public interface Matrix3x2fc {
      * If <code>M</code> is <code>this</code> matrix and <code>R</code> the rotation matrix,
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the rotation will be applied first!
-     * 
+     *
      * @see #translate(float, float, Matrix3x2f)
      * @see #rotate(float, Matrix3x2f)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -713,7 +713,7 @@ public interface Matrix3x2fc {
      * If <code>M</code> is <code>this</code> matrix and <code>R</code> the rotation matrix,
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the rotation will be applied first!
-     * 
+     *
      * @param fromDir
      *            the normalized direction which should be rotate to point along <code>toDir</code>
      * @param toDir
@@ -732,7 +732,7 @@ public interface Matrix3x2fc {
      * then the new matrix will be <code>M * O</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * O * v</code>, the
      * orthographic projection transformation will be applied first!
-     * 
+     *
      * @param left
      *            the distance from the center to the left view edge
      * @param right
@@ -756,7 +756,7 @@ public interface Matrix3x2fc {
      * Matrix3x2f inv = new Matrix3x2f(this).invertAffine();
      * inv.transform(origin.set(0, 0));
      * </pre>
-     * 
+     *
      * @param origin
      *          will hold the position transformed to the origin
      * @return origin
@@ -766,7 +766,7 @@ public interface Matrix3x2fc {
     /**
      * Obtain the extents of the view transformation of <code>this</code> matrix and store it in <code>area</code>.
      * This can be used to determine which region of the screen (i.e. the NDC space) is covered by the view.
-     * 
+     *
      * @param area
      *          will hold the view area as <code>[minX, minY, maxX, maxY]</code>
      * @return area
@@ -776,7 +776,7 @@ public interface Matrix3x2fc {
     /**
      * Obtain the direction of <code>+X</code> before the transformation represented by <code>this</code> matrix is applied.
      * <p>
-     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction
      * that is transformed to <code>+X</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -787,7 +787,7 @@ public interface Matrix3x2fc {
      * If <code>this</code> is already an orthogonal matrix, then consider using {@link #normalizedPositiveX(Vector2f)} instead.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+X</code>
      * @return dir
@@ -798,7 +798,7 @@ public interface Matrix3x2fc {
      * Obtain the direction of <code>+X</code> before the transformation represented by <code>this</code> <i>orthogonal</i> matrix is applied.
      * This method only produces correct results if <code>this</code> is an <i>orthogonal</i> matrix.
      * <p>
-     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction
      * that is transformed to <code>+X</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -808,7 +808,7 @@ public interface Matrix3x2fc {
      * </pre>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+X</code>
      * @return dir
@@ -818,7 +818,7 @@ public interface Matrix3x2fc {
     /**
      * Obtain the direction of <code>+Y</code> before the transformation represented by <code>this</code> matrix is applied.
      * <p>
-     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction
      * that is transformed to <code>+Y</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -829,7 +829,7 @@ public interface Matrix3x2fc {
      * If <code>this</code> is already an orthogonal matrix, then consider using {@link #normalizedPositiveY(Vector2f)} instead.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+Y</code>
      * @return dir
@@ -840,7 +840,7 @@ public interface Matrix3x2fc {
      * Obtain the direction of <code>+Y</code> before the transformation represented by <code>this</code> <i>orthogonal</i> matrix is applied.
      * This method only produces correct results if <code>this</code> is an <i>orthogonal</i> matrix.
      * <p>
-     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 2x2 submatrix to obtain the direction
      * that is transformed to <code>+Y</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -850,7 +850,7 @@ public interface Matrix3x2fc {
      * </pre>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+Y</code>
      * @return dir
@@ -861,15 +861,15 @@ public interface Matrix3x2fc {
      * Unproject the given window coordinates <code>(winX, winY)</code> by <code>this</code> matrix using the specified viewport.
      * <p>
      * This method first converts the given window coordinates to normalized device coordinates in the range <code>[-1..1]</code>
-     * and then transforms those NDC coordinates by the inverse of <code>this</code> matrix.  
+     * and then transforms those NDC coordinates by the inverse of <code>this</code> matrix.
      * <p>
      * As a necessary computation step for unprojecting, this method computes the inverse of <code>this</code> matrix.
      * In order to avoid computing the matrix inverse with every invocation, the inverse of <code>this</code> matrix can be built
      * once outside using {@link #invert(Matrix3x2f)} and then the method {@link #unprojectInv(float, float, int[], Vector2f) unprojectInv()} can be invoked on it.
-     * 
+     *
      * @see #unprojectInv(float, float, int[], Vector2f)
      * @see #invert(Matrix3x2f)
-     * 
+     *
      * @param winX
      *          the x-coordinate in window coordinates (pixels)
      * @param winY
@@ -885,12 +885,12 @@ public interface Matrix3x2fc {
     /**
      * Unproject the given window coordinates <code>(winX, winY)</code> by <code>this</code> matrix using the specified viewport.
      * <p>
-     * This method differs from {@link #unproject(float, float, int[], Vector2f) unproject()} 
+     * This method differs from {@link #unproject(float, float, int[], Vector2f) unproject()}
      * in that it assumes that <code>this</code> is already the inverse matrix of the original projection matrix.
      * It exists to avoid recomputing the matrix inverse with every invocation.
-     * 
+     *
      * @see #unproject(float, float, int[], Vector2f)
-     * 
+     *
      * @param winX
      *          the x-coordinate in window coordinates (pixels)
      * @param winY
@@ -912,7 +912,7 @@ public interface Matrix3x2fc {
      * <p>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @param x
      *          the x-coordinate of the point
      * @param y
@@ -930,7 +930,7 @@ public interface Matrix3x2fc {
      * <p>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @param x
      *          the x-coordinate of the circle's center
      * @param y
@@ -953,7 +953,7 @@ public interface Matrix3x2fc {
      * <br>
      * Reference: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf">
      * Fast Extraction of Viewing Frustum Planes from the World-View-Projection Matrix</a>
-     * 
+     *
      * @param minX
      *          the x-coordinate of the minimum corner
      * @param minY
@@ -973,7 +973,7 @@ public interface Matrix3x2fc {
      * Please note that this method is not used by any data structure such as {@link ArrayList} {@link HashSet} or {@link HashMap}
      * and their operations, such as {@link ArrayList#contains(Object)} or {@link HashSet#remove(Object)}, since those
      * data structures only use the {@link Object#equals(Object)} and {@link Object#hashCode()} methods.
-     * 
+     *
      * @param m
      *          the other matrix
      * @param delta

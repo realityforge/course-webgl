@@ -25,7 +25,7 @@ package org.joml;
 
 /**
  * Rounding modes.
- * 
+ *
  * @author Kai Burjack
  */
 public class RoundingMode {

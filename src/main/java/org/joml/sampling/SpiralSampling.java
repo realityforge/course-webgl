@@ -27,7 +27,7 @@ import org.joml.Random;
 
 /**
  * Creates samples on a spiral around a center point.
- * 
+ *
  * @author Kai Burjack
  */
 public class SpiralSampling {
@@ -35,7 +35,7 @@ public class SpiralSampling {
 
     /**
      * Create a new instance of {@link SpiralSampling} and initialize the random number generator with the given <code>seed</code>.
-     * 
+     *
      * @param seed
      *            the seed to initialize the random number generator with
      */
@@ -48,7 +48,7 @@ public class SpiralSampling {
      * along the spiral, and call the given <code>callback</code> for each sample generated.
      * <p>
      * The generated sample points are distributed with equal angle differences around the spiral, so they concentrate towards the center.
-     * 
+     *
      * @param radius
      *            the maximum radius of the spiral
      * @param numRotations
@@ -75,7 +75,7 @@ public class SpiralSampling {
      * The generated sample points are distributed with equal angle differences around the spiral, so they concentrate towards the center.
      * <p>
      * Additionally, the radius of each sample point is jittered by the given <code>jitter</code> factor.
-     * 
+     *
      * @param radius
      *            the maximum radius of the spiral
      * @param numRotations

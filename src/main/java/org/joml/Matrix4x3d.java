@@ -37,7 +37,7 @@ import java.text.NumberFormat;
  *      m00  m10  m20  m30<br>
  *      m01  m11  m21  m31<br>
  *      m02  m12  m22  m32<br>
- * 
+ *
  * @author Richard Greenlees
  * @author Kai Burjack
  */
@@ -64,7 +64,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Create a new {@link Matrix4x3d} and make it a copy of the given matrix.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4x3dc} to copy the values from
      */
@@ -74,7 +74,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Create a new {@link Matrix4x3d} and make it a copy of the given matrix.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4x3fc} to copy the values from
      */
@@ -85,7 +85,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Create a new {@link Matrix4x3d} by setting its left 3x3 submatrix to the values of the given {@link Matrix3dc}
      * and the rest to identity.
-     * 
+     *
      * @param mat
      *          the {@link Matrix3dc}
      */
@@ -96,7 +96,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Create a new {@link Matrix4x3d} by setting its left 3x3 submatrix to the values of the given {@link Matrix3fc}
      * and the rest to identity.
-     * 
+     *
      * @param mat
      *          the {@link Matrix3dc}
      */
@@ -106,7 +106,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Create a new 4x4 matrix using the supplied double values.
-     * 
+     *
      * @param m00
      *          the value of m00
      * @param m01
@@ -133,8 +133,8 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      *          the value of m32
      */
     public Matrix4x3d(double m00, double m01, double m02,
-                      double m10, double m11, double m12, 
-                      double m20, double m21, double m22, 
+                      double m10, double m11, double m12,
+                      double m20, double m21, double m22,
                       double m30, double m31, double m32) {
         this.m00 = m00;
         this.m01 = m01;
@@ -157,7 +157,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * Use one or multiple of 0, {@link Matrix4x3dc#PROPERTY_IDENTITY},
      * {@link Matrix4x3dc#PROPERTY_TRANSLATION}, {@link Matrix4x3dc#PROPERTY_ORTHONORMAL}.
-     * 
+     *
      * @param properties
      *          bitset of the properties to assume about this matrix
      * @return this
@@ -170,7 +170,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Compute and set the matrix properties returned by {@link #properties()} based
      * on the current matrix element values.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d determineProperties() {
@@ -181,7 +181,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
             if (m30 == 0.0 && m31 == 0.0 && m32 == 0.0)
                 properties |= PROPERTY_IDENTITY;
         }
-        /* 
+        /*
          * We do not determine orthogonality, since it would require arbitrary epsilons
          * and is rather expensive (6 dot products) in the worst case.
          */
@@ -237,7 +237,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the value of the matrix element at column 0 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m00
      *          the new value
      * @return this
@@ -248,7 +248,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m01
      *          the new value
      * @return this
@@ -259,7 +259,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m02
      *          the new value
      * @return this
@@ -270,7 +270,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m10
      *          the new value
      * @return this
@@ -281,7 +281,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m11
      *          the new value
      * @return this
@@ -292,7 +292,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m12
      *          the new value
      * @return this
@@ -303,7 +303,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m20
      *          the new value
      * @return this
@@ -314,7 +314,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m21
      *          the new value
      * @return this
@@ -325,7 +325,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m22
      *          the new value
      * @return this
@@ -336,7 +336,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 0 without updating the properties of the matrix.
-     * 
+     *
      * @param m30
      *          the new value
      * @return this
@@ -347,7 +347,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 1 without updating the properties of the matrix.
-     * 
+     *
      * @param m31
      *          the new value
      * @return this
@@ -358,7 +358,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 2 without updating the properties of the matrix.
-     * 
+     *
      * @param m32
      *          the new value
      * @return this
@@ -370,7 +370,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the value of the matrix element at column 0 and row 0.
-     * 
+     *
      * @param m00
      *          the new value
      * @return this
@@ -384,7 +384,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 1.
-     * 
+     *
      * @param m01
      *          the new value
      * @return this
@@ -398,7 +398,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 0 and row 2.
-     * 
+     *
      * @param m02
      *          the new value
      * @return this
@@ -412,7 +412,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 0.
-     * 
+     *
      * @param m10
      *          the new value
      * @return this
@@ -426,7 +426,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 1.
-     * 
+     *
      * @param m11
      *          the new value
      * @return this
@@ -440,7 +440,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 1 and row 2.
-     * 
+     *
      * @param m12
      *          the new value
      * @return this
@@ -454,7 +454,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 0.
-     * 
+     *
      * @param m20
      *          the new value
      * @return this
@@ -468,7 +468,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 1.
-     * 
+     *
      * @param m21
      *          the new value
      * @return this
@@ -482,7 +482,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 2 and row 2.
-     * 
+     *
      * @param m22
      *          the new value
      * @return this
@@ -496,7 +496,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 0.
-     * 
+     *
      * @param m30
      *          the new value
      * @return this
@@ -509,7 +509,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 1.
-     * 
+     *
      * @param m31
      *          the new value
      * @return this
@@ -522,7 +522,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
     /**
      * Set the value of the matrix element at column 3 and row 2.
-     * 
+     *
      * @param m32
      *          the new value
      * @return this
@@ -538,7 +538,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Reset this matrix to the identity.
      * <p>
      * Please note that if a call to {@link #identity()} is immediately followed by a call to:
-     * {@link #translate(double, double, double) translate}, 
+     * {@link #translate(double, double, double) translate},
      * {@link #rotate(double, double, double, double) rotate},
      * {@link #scale(double, double, double) scale},
      * {@link #ortho(double, double, double, double, double, double) ortho},
@@ -554,7 +554,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * {@link #setLookAt(double, double, double, double, double, double, double, double, double) setLookAt},
      * {@link #setLookAlong(double, double, double, double, double, double) setLookAlong},
      * or any of their overloads.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d identity() {
@@ -578,7 +578,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Store the values of the given matrix <code>m</code> into <code>this</code> matrix.
-     * 
+     *
      * @param m
      *          the matrix to copy the values from
      * @return this
@@ -602,7 +602,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Store the values of the given matrix <code>m</code> into <code>this</code> matrix.
-     * 
+     *
      * @param m
      *          the matrix to copy the values from
      * @return this
@@ -626,9 +626,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Store the values of the upper 4x3 submatrix of <code>m</code> into <code>this</code> matrix.
-     * 
+     *
      * @see Matrix4dc#get4x3(Matrix4x3d)
-     * 
+     *
      * @param m
      *          the matrix to copy the values from
      * @return this
@@ -655,11 +655,11 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set the left 3x3 submatrix of this {@link Matrix4x3d} to the given {@link Matrix3dc} 
+     * Set the left 3x3 submatrix of this {@link Matrix4x3d} to the given {@link Matrix3dc}
      * and the rest to identity.
-     * 
+     *
      * @see #Matrix4x3d(Matrix3dc)
-     * 
+     *
      * @param mat
      *          the {@link Matrix3dc}
      * @return this
@@ -681,11 +681,11 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set the left 3x3 submatrix of this {@link Matrix4x3d} to the given {@link Matrix3fc} 
+     * Set the left 3x3 submatrix of this {@link Matrix4x3d} to the given {@link Matrix3fc}
      * and the rest to identity.
-     * 
+     *
      * @see #Matrix4x3d(Matrix3fc)
-     * 
+     *
      * @param mat
      *          the {@link Matrix3fc}
      * @return this
@@ -708,7 +708,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the four columns of this matrix to the supplied vectors, respectively.
-     * 
+     *
      * @param col0
      *          the first column
      * @param col1
@@ -720,7 +720,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * @return this
      */
     public Matrix4x3d set(Vector3dc col0,
-                          Vector3dc col1, 
+                          Vector3dc col1,
                           Vector3dc col2,
                           Vector3dc col3) {
         this.m00 = col0.x();
@@ -739,9 +739,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set the left 3x3 submatrix of this {@link Matrix4x3d} to that of the given {@link Matrix4x3dc} 
+     * Set the left 3x3 submatrix of this {@link Matrix4x3d} to that of the given {@link Matrix4x3dc}
      * and don't change the other elements.
-     * 
+     *
      * @param mat
      *          the {@link Matrix4x3dc}
      * @return this
@@ -762,7 +762,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set this matrix to be equivalent to the rotation specified by the given {@link AxisAngle4f}.
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f}
      * @return this
@@ -803,7 +803,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set this matrix to be equivalent to the rotation specified by the given {@link AxisAngle4d}.
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4d}
      * @return this
@@ -846,9 +846,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set this matrix to be equivalent to the rotation - and possibly scaling - specified by the given {@link Quaternionfc}.
      * <p>
      * This method is equivalent to calling: <code>rotation(q)</code>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param q
      *          the {@link Quaternionfc}
      * @return this
@@ -861,7 +861,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set this matrix to be equivalent to the rotation - and possibly scaling - specified by the given {@link Quaterniondc}.
      * <p>
      * This method is equivalent to calling: <code>rotation(q)</code>
-     * 
+     *
      * @param q
      *          the {@link Quaterniondc}
      * @return this
@@ -877,7 +877,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
-     * 
+     *
      * @param right
      *          the right operand of the multiplication
      * @return this
@@ -926,7 +926,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
-     * 
+     *
      * @param right
      *          the right operand of the multiplication
      * @return this
@@ -1053,9 +1053,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * adding that result to <code>this</code>.
      * <p>
      * The matrix <code>other</code> will not be changed.
-     * 
+     *
      * @param other
-     *          the other matrix 
+     *          the other matrix
      * @param otherFactor
      *          the factor to multiply each of the other matrix's components
      * @return this
@@ -1088,9 +1088,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * adding that result to <code>this</code>.
      * <p>
      * The matrix <code>other</code> will not be changed.
-     * 
+     *
      * @param other
-     *          the other matrix 
+     *          the other matrix
      * @param otherFactor
      *          the factor to multiply each of the other matrix's components
      * @return this
@@ -1119,7 +1119,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Component-wise add <code>this</code> and <code>other</code>.
-     * 
+     *
      * @param other
      *          the other addend
      * @return this
@@ -1147,7 +1147,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Component-wise add <code>this</code> and <code>other</code>.
-     * 
+     *
      * @param other
      *          the other addend
      * @return this
@@ -1175,7 +1175,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Component-wise subtract <code>subtrahend</code> from <code>this</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @return this
@@ -1203,7 +1203,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Component-wise subtract <code>subtrahend</code> from <code>this</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @return this
@@ -1231,7 +1231,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Component-wise multiply <code>this</code> by <code>other</code>.
-     * 
+     *
      * @param other
      *          the other matrix
      * @return this
@@ -1292,7 +1292,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      */
     public Matrix4x3d set(double m00, double m01, double m02,
                           double m10, double m11, double m12,
-                          double m20, double m21, double m22, 
+                          double m20, double m21, double m22,
                           double m30, double m31, double m32) {
         this.m00 = m00;
         this.m10 = m10;
@@ -1313,13 +1313,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set the values in the matrix using a double array that contains the matrix elements in column-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 3, 6, 9<br>
      * 1, 4, 7, 10<br>
      * 2, 5, 8, 11<br>
-     * 
+     *
      * @see #set(double[])
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @param off
@@ -1346,13 +1346,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set the values in the matrix using a double array that contains the matrix elements in column-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 3, 6, 9<br>
      * 1, 4, 7, 10<br>
      * 2, 5, 8, 11<br>
-     * 
+     *
      * @see #set(double[], int)
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @return this
@@ -1365,13 +1365,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set the values in the matrix using a float array that contains the matrix elements in column-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 3, 6, 9<br>
      * 1, 4, 7, 10<br>
      * 2, 5, 8, 11<br>
-     * 
+     *
      * @see #set(float[])
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @param off
@@ -1398,13 +1398,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set the values in the matrix using a float array that contains the matrix elements in column-major order.
      * <p>
      * The results will look like this:<br><br>
-     * 
+     *
      * 0, 3, 6, 9<br>
      * 1, 4, 7, 10<br>
      * 2, 5, 8, 11<br>
-     * 
+     *
      * @see #set(float[], int)
-     * 
+     *
      * @param m
      *          the array to read the matrix values from
      * @return this
@@ -1423,7 +1423,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Invert this matrix.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d invert() {
@@ -1511,7 +1511,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Invert <code>this</code> orthographic projection matrix.
      * <p>
      * This method can be used to quickly obtain the inverse of an orthographic projection matrix.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d invertOrtho() {
@@ -1520,7 +1520,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Transpose only the left 3x3 submatrix of this matrix and set the rest of the matrix elements to identity.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d transpose3x3() {
@@ -1568,7 +1568,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The resulting matrix can be multiplied against another transformation
      * matrix to obtain an additional translation.
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -1592,7 +1592,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The resulting matrix can be multiplied against another transformation
      * matrix to obtain an additional translation.
-     * 
+     *
      * @param offset
      *              the offsets in x, y and z to translate
      * @return this
@@ -1620,10 +1620,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * To build a translation matrix instead, use {@link #translation(double, double, double)}.
      * To apply a translation, use {@link #translate(double, double, double)}.
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #translate(double, double, double)
-     * 
+     *
      * @param x
      *          the units to translate in x
      * @param y
@@ -1645,10 +1645,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * To build a translation matrix instead, use {@link #translation(Vector3dc)}.
      * To apply a translation, use {@link #translate(Vector3dc)}.
-     * 
+     *
      * @see #translation(Vector3dc)
      * @see #translate(Vector3dc)
-     * 
+     *
      * @param xyz
      *          the units to translate in <code>(x, y, z)</code>
      * @return this
@@ -1675,7 +1675,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Return a string representation of this matrix.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -1701,7 +1701,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Return a string representation of this matrix by formatting the matrix elements with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the matrix values with
      * @return the string representation
@@ -1718,9 +1718,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * This is the reverse method of {@link #set(Matrix4x3dc)} and allows to obtain
      * intermediate calculation results when chaining multiple transformations.
-     * 
+     *
      * @see #set(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *          the destination matrix
      * @return the passed in destination
@@ -1827,7 +1827,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set all the values within this matrix to 0.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d zero() {
@@ -1855,9 +1855,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix, use {@link #scale(double) scale()} instead.
-     * 
+     *
      * @see #scale(double)
-     * 
+     *
      * @param factor
      *             the scale factor in x, y and z
      * @return this
@@ -1868,13 +1868,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set this matrix to be a simple scale matrix.
-     * 
+     *
      * @param x
      *          the scale in x
      * @param y
      *          the scale in y
      * @param z
-     *          the scale in z         
+     *          the scale in z
      * @return this
      */
     public Matrix4x3d scaling(double x, double y, double z) {
@@ -1897,9 +1897,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to post-multiply a scaling transformation directly to a
      * matrix use {@link #scale(Vector3dc) scale()} instead.
-     * 
+     *
      * @see #scale(Vector3dc)
-     * 
+     *
      * @param xyz
      *             the scale in x, y and z, respectively
      * @return this
@@ -1911,12 +1911,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a rotation matrix which rotates the given radians about a given axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * From <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">Wikipedia</a>
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param x
@@ -1960,12 +1960,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a rotation transformation about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -1993,12 +1993,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a rotation transformation about the Y axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -2026,12 +2026,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a rotation transformation about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -2060,12 +2060,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set this matrix to a rotation of <code>angleX</code> radians about the X axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -2116,12 +2116,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set this matrix to a rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationZ(angleZ).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -2172,12 +2172,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set this matrix to a rotation of <code>angleY</code> radians about the Y axis, followed by a rotation
      * of <code>angleX</code> radians about the X axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>rotationY(angleY).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -2228,10 +2228,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set only the left 3x3 submatrix of this matrix to a rotation of <code>angleX</code> radians about the X axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -2278,10 +2278,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set only the left 3x3 submatrix of this matrix to a rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation
      * of <code>angleY</code> radians about the Y axis and followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -2328,10 +2328,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Set only the left 3x3 submatrix of this matrix to a rotation of <code>angleY</code> radians about the Y axis, followed by a rotation
      * of <code>angleX</code> radians about the X axis and followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -2379,10 +2379,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -2398,10 +2398,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -2450,7 +2450,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the left 3x3 submatrix of this {@link Matrix4x3d} to the given {@link Matrix3dc} and don't change the other elements.
-     * 
+     *
      * @param mat
      *          the 3x3 matrix
      * @return this
@@ -2471,7 +2471,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the left 3x3 submatrix of this {@link Matrix4x3d} to the given {@link Matrix3fc} and don't change the other elements.
-     * 
+     *
      * @param mat
      *          the 3x3 matrix
      * @return this
@@ -2502,7 +2502,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param xyz
      *            the factors of the x, y and z component, respectively
      * @return this
@@ -2541,7 +2541,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -2565,9 +2565,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @see #scale(double, double, double)
-     * 
+     *
      * @param xyz
      *            the factor for all components
      * @return this
@@ -2587,7 +2587,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -2638,7 +2638,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>, the
      * scaling will be applied last!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -2712,7 +2712,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation to this matrix by rotating the given amount of radians
      * about the given axis specified as x, y and z components.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2723,9 +2723,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a rotation matrix without post-multiplying the rotation
      * transformation, use {@link #rotation(double, double, double, double) rotation()}.
-     * 
+     *
      * @see #rotation(double, double, double, double)
-     *  
+     *
      * @param ang
      *            the angle is in radians
      * @param x
@@ -2748,7 +2748,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2761,9 +2761,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotation(double, double, double, double) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(double, double, double, double)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -2830,7 +2830,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply the rotation transformation of the given {@link Quaterniondc} to this matrix while using <code>(ox, oy, oz)</code> as the rotation origin.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2842,7 +2842,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * This method is equivalent to calling: <code>translate(ox, oy, oz).rotate(quat).translate(-ox, -oy, -oz)</code>
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param ox
@@ -2907,14 +2907,14 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a transformation composed of a rotation of the specified {@link Quaterniondc} while using <code>(ox, oy, oz)</code> as the rotation origin.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(ox, oy, oz).rotate(quat).translate(-ox, -oy, -oz)</code>
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param ox
@@ -2953,7 +2953,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -2966,9 +2966,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotation(double, double, double, double) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(double, double, double, double)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -3040,7 +3040,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3053,9 +3053,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotation(double, double, double, double) rotation()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(double, double, double, double)
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -3074,7 +3074,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Pre-multiply a rotation around the X axis to this matrix by rotating the given amount of radians
      * about the X axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3087,9 +3087,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotationX(double) rotationX()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationX(double)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the X axis
      * @param dest
@@ -3126,7 +3126,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3139,9 +3139,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotationX(double) rotationX()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationX(double)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the X axis
      * @return this
@@ -3154,7 +3154,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Pre-multiply a rotation around the Y axis to this matrix by rotating the given amount of radians
      * about the Y axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3167,9 +3167,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotationY(double) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(double)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Y axis
      * @param dest
@@ -3206,7 +3206,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the Y axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3219,9 +3219,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotationY(double) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(double)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Y axis
      * @return this
@@ -3234,7 +3234,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Pre-multiply a rotation around the Z axis to this matrix by rotating the given amount of radians
      * about the Z axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3247,9 +3247,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotationZ(double) rotationZ()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationZ(double)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Z axis
      * @param dest
@@ -3286,7 +3286,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Pre-multiply a rotation to this matrix by rotating the given amount of radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3299,9 +3299,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * transformation, use {@link #rotationZ(double) rotationY()}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotationY(double)
-     * 
+     *
      * @param ang
      *            the angle in radians to rotate about the Z axis
      * @return this
@@ -3321,9 +3321,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(Vector3dc)}.
-     * 
+     *
      * @see #translation(Vector3dc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @return this
@@ -3343,9 +3343,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(Vector3dc)}.
-     * 
+     *
      * @see #translation(Vector3dc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -3367,9 +3367,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @return this
@@ -3389,9 +3389,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -3413,9 +3413,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(double, double, double)}.
-     * 
+     *
      * @see #translation(double, double, double)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -3459,9 +3459,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without post-multiplying
      * it, use {@link #translation(double, double, double)}.
-     * 
+     *
      * @see #translation(double, double, double)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -3492,9 +3492,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @return this
@@ -3514,9 +3514,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(Vector3fc)}.
-     * 
+     *
      * @see #translation(Vector3fc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -3538,9 +3538,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(Vector3dc)}.
-     * 
+     *
      * @see #translation(Vector3dc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @return this
@@ -3560,9 +3560,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(Vector3dc)}.
-     * 
+     *
      * @see #translation(Vector3dc)
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -3584,9 +3584,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(double, double, double)}.
-     * 
+     *
      * @see #translation(double, double, double)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -3625,9 +3625,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a translation transformation without pre-multiplying
      * it, use {@link #translation(double, double, double)}.
-     * 
+     *
      * @see #translation(double, double, double)
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -3714,7 +3714,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply rotation about the X axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3724,7 +3724,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -3776,7 +3776,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply rotation about the Y axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3786,7 +3786,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -3838,7 +3838,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply rotation about the Z axis to this matrix by rotating the given amount of radians.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3848,7 +3848,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @return this
@@ -3861,7 +3861,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation of <code>angles.x</code> radians about the X axis, followed by a rotation of <code>angles.y</code> radians about the Y axis and
      * followed by a rotation of <code>angles.z</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3871,7 +3871,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angles.x).rotateY(angles.y).rotateZ(angles.z)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -3884,7 +3884,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation of <code>angleX</code> radians about the X axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3894,7 +3894,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angleX).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -3960,7 +3960,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation of <code>angles.z</code> radians about the Z axis, followed by a rotation of <code>angles.y</code> radians about the Y axis and
      * followed by a rotation of <code>angles.x</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3970,7 +3970,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angles.z).rotateY(angles.y).rotateX(angles.x)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -3983,7 +3983,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleX</code> radians about the X axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -3993,7 +3993,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angleZ).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -4059,7 +4059,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation of <code>angles.y</code> radians about the Y axis, followed by a rotation of <code>angles.x</code> radians about the X axis and
      * followed by a rotation of <code>angles.z</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4069,7 +4069,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angles.y).rotateX(angles.x).rotateZ(angles.z)</code>
-     * 
+     *
      * @param angles
      *            the Euler angles
      * @return this
@@ -4082,7 +4082,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply rotation of <code>angleY</code> radians about the Y axis, followed by a rotation of <code>angleX</code> radians about the X axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4092,7 +4092,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angleY).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -4157,7 +4157,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a rotation transformation using the given {@link AxisAngle4f}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4170,7 +4170,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
      *
      * @see #rotate(AxisAngle4f)
-     * 
+     *
      * @param angleAxis
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @return this
@@ -4182,7 +4182,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a rotation transformation using the given {@link AxisAngle4d}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4195,7 +4195,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
      *
      * @see #rotate(AxisAngle4d)
-     * 
+     *
      * @param angleAxis
      *          the {@link AxisAngle4d} (needs to be {@link AxisAngle4d#normalize() normalized})
      * @return this
@@ -4207,7 +4207,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to the rotation - and possibly scaling - transformation of the given {@link Quaterniondc}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4218,9 +4218,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotate(Quaterniondc) rotate()} instead.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(Quaterniondc)
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @return this
@@ -4255,7 +4255,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to the rotation - and possibly scaling - transformation of the given {@link Quaternionfc}.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4266,9 +4266,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotate(Quaternionfc) rotate()} instead.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -4308,16 +4308,16 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).scale(sx, sy, sz)</code>
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #rotate(Quaterniondc)
      * @see #scale(double, double, double)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4340,8 +4340,8 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      *          the scaling factor for the z-axis
      * @return this
      */
-    public Matrix4x3d translationRotateScale(double tx, double ty, double tz, 
-                                           double qx, double qy, double qz, double qw, 
+    public Matrix4x3d translationRotateScale(double tx, double ty, double tz,
+                                           double qx, double qy, double qz, double qw,
                                            double sx, double sy, double sz) {
         double dqx = qx + qx, dqy = qy + qy, dqz = qz + qz;
         double q00 = dqx * qx;
@@ -4377,15 +4377,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(translation).rotate(quat).scale(scale)</code>
-     * 
+     *
      * @see #translation(Vector3fc)
      * @see #rotate(Quaternionfc)
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -4394,8 +4394,8 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      *          the scaling factors
      * @return this
      */
-    public Matrix4x3d translationRotateScale(Vector3fc translation, 
-                                           Quaternionfc quat, 
+    public Matrix4x3d translationRotateScale(Vector3fc translation,
+                                           Quaternionfc quat,
                                            Vector3fc scale) {
         return translationRotateScale(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale.x(), scale.y(), scale.z());
     }
@@ -4408,15 +4408,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the scaling transformation will be applied first, then the rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(translation).rotate(quat).scale(scale)</code>
-     * 
+     *
      * @see #translation(Vector3dc)
      * @see #rotate(Quaterniondc)
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -4425,8 +4425,8 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      *          the scaling factors
      * @return this
      */
-    public Matrix4x3d translationRotateScale(Vector3dc translation, 
-                                           Quaterniondc quat, 
+    public Matrix4x3d translationRotateScale(Vector3dc translation,
+                                           Quaterniondc quat,
                                            Vector3dc scale) {
         return translationRotateScale(translation.x(), translation.y(), translation.z(), quat.x(), quat.y(), quat.z(), quat.w(), scale.x(), scale.y(), scale.z());
     }
@@ -4439,17 +4439,17 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the transformation described by <code>M</code> will be applied first, then the scaling, then rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).scale(sx, sy, sz).mul(m)</code>
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #rotate(Quaterniondc)
      * @see #scale(double, double, double)
      * @see #mul(Matrix4x3dc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4475,8 +4475,8 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * @return this
      */
     public Matrix4x3d translationRotateScaleMul(
-            double tx, double ty, double tz, 
-            double qx, double qy, double qz, double qw, 
+            double tx, double ty, double tz,
+            double qx, double qy, double qz, double qw,
             double sx, double sy, double sz,
             Matrix4x3dc m) {
         double dqx = qx + qx;
@@ -4532,16 +4532,16 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the transformation described by <code>M</code> will be applied first, then the scaling, then rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(translation).rotate(quat).scale(scale).mul(m)</code>
-     * 
+     *
      * @see #translation(Vector3dc)
      * @see #rotate(Quaterniondc)
      * @see #mul(Matrix4x3dc)
-     * 
+     *
      * @param translation
      *          the translation
      * @param quat
@@ -4562,15 +4562,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * When transforming a vector by the resulting matrix the rotation transformation will be applied first and then the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat)</code>
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #rotate(Quaterniondc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4615,16 +4615,16 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the transformation described by <code>M</code> will be applied first, then the scaling, then rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).mul(mat)</code>
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #rotate(Quaternionfc)
      * @see #mul(Matrix4x3dc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4648,16 +4648,16 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * When transforming a vector by the resulting matrix the transformation described by <code>M</code> will be applied first, then the scaling, then rotation and
      * at last the translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
      * This method is equivalent to calling: <code>translation(tx, ty, tz).rotate(quat).mul(mat)</code>
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #rotate(Quaternionfc)
      * @see #mul(Matrix4x3dc)
-     * 
+     *
      * @param tx
      *          the number of units by which to translate the x-component
      * @param ty
@@ -4716,7 +4716,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaterniondc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4729,9 +4729,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaterniondc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaterniondc)
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param dest
@@ -4786,7 +4786,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4799,9 +4799,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -4860,7 +4860,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaterniondc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4873,9 +4873,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaterniondc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaterniondc)
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @return this
@@ -4887,7 +4887,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4900,9 +4900,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -4917,7 +4917,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * This method assumes <code>this</code> to only contain a translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4930,9 +4930,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaterniondc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaterniondc)
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param dest
@@ -4976,7 +4976,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * This method assumes <code>this</code> to only contain a translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -4989,9 +4989,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -5044,7 +5044,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaterniondc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5057,9 +5057,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaterniondc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaterniondc)
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param dest
@@ -5112,7 +5112,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Pre-multiply the rotation transformation of the given {@link Quaterniondc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5125,9 +5125,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaterniondc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaterniondc)
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @return this
@@ -5140,7 +5140,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5153,9 +5153,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -5208,7 +5208,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5221,9 +5221,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(Quaternionfc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotation(Quaternionfc)
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @return this
@@ -5237,7 +5237,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5250,10 +5250,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(AxisAngle4f)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @return this
@@ -5267,7 +5267,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5280,10 +5280,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(AxisAngle4f)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(AxisAngle4f)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @param dest
@@ -5297,7 +5297,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4d}, to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5310,10 +5310,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(AxisAngle4d)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(AxisAngle4d)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4d} (needs to be {@link AxisAngle4d#normalize() normalized})
      * @return this
@@ -5325,7 +5325,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4d} and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5338,10 +5338,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(AxisAngle4d)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(AxisAngle4d)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4d} (needs to be {@link AxisAngle4d#normalize() normalized})
      * @param dest
@@ -5355,7 +5355,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis, to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5368,10 +5368,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(double, Vector3dc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(double, Vector3dc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -5385,7 +5385,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5398,10 +5398,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(double, Vector3dc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(double, Vector3dc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -5417,7 +5417,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis, to this matrix.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5430,10 +5430,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(double, Vector3fc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(double, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -5447,7 +5447,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -5460,10 +5460,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotation(double, Vector3fc)}.
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double)
      * @see #rotation(double, Vector3fc)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -5504,7 +5504,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the row at the given <code>row</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..2]</code>
      * @param src
@@ -5569,7 +5569,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Set the column at the given <code>column</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param column
      *          the column index in <code>[0..3]</code>
      * @param src
@@ -5613,13 +5613,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In that case, use {@link #set3x3(Matrix4x3dc)} to set a given Matrix4x3d to only the left 3x3 submatrix
      * of this matrix.
-     * 
+     *
      * @see #set3x3(Matrix4x3dc)
-     * 
+     *
      * @return this
      */
     public Matrix4x3d normal() {
@@ -5633,13 +5633,13 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
      * <p>
-     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors, 
+     * Please note that, if <code>this</code> is an orthogonal matrix or a matrix whose columns are orthogonal vectors,
      * then this method <i>need not</i> be invoked, since in that case <code>this</code> itself is its normal matrix.
      * In that case, use {@link #set3x3(Matrix4x3dc)} to set a given Matrix4x3d to only the left 3x3 submatrix
      * of a given matrix.
-     * 
+     *
      * @see #set3x3(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -5726,7 +5726,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal()} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @return this
      */
     public Matrix4x3d cofactor3x3() {
@@ -5739,7 +5739,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix3d)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -5764,7 +5764,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix4x3d)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -5801,7 +5801,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * The resulting matrix will map unit vectors to unit vectors, though a pair of orthogonal input unit
      * vectors need not be mapped to a pair of orthogonal output vectors if the original matrix was not orthogonal itself
      * (i.e. had <i>skewing</i>).
-     * 
+     *
      * @return this
      */
     public Matrix4x3d normalize3x3() {
@@ -5882,7 +5882,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb281733(v=vs.85).aspx">msdn.microsoft.com</a>
-     * 
+     *
      * @param a
      *          the x factor in the plane equation
      * @param b
@@ -5905,7 +5905,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -5941,7 +5941,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param normal
      *          the plane normal
      * @param point
@@ -5964,7 +5964,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param orientation
      *          the plane orientation relative to an implied normal vector of <code>(0, 0, 1)</code>
      * @param point
@@ -5996,7 +5996,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * The vector <code>(a, b, c)</code> must be a unit vector.
      * <p>
      * Reference: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb281733(v=vs.85).aspx">msdn.microsoft.com</a>
-     * 
+     *
      * @param a
      *          the x factor in the plane equation
      * @param b
@@ -6028,7 +6028,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a mirror/reflection transformation that reflects about the given plane
      * specified via the plane normal and a point on the plane.
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -6055,7 +6055,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Set this matrix to a mirror/reflection transformation that reflects about the given plane
      * specified via the plane normal and a point on the plane.
-     * 
+     *
      * @param normal
      *          the plane normal
      * @param point
@@ -6073,7 +6073,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * This method can be used to build a reflection transformation based on the orientation of a mirror object in the scene.
      * It is assumed that the default mirror plane's normal is <code>(0, 0, 1)</code>. So, if the given {@link Quaterniondc} is
      * the identity (does not apply any additional rotation), the reflection plane will be <code>z=0</code>, offset by the given <code>point</code>.
-     * 
+     *
      * @param orientation
      *          the plane orientation
      * @param point
@@ -6103,9 +6103,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho(double, double, double, double, double, double, boolean) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(double, double, double, double, double, double, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6166,9 +6166,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho(double, double, double, double, double, double) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(double, double, double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6202,9 +6202,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho(double, double, double, double, double, double, boolean) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(double, double, double, double, double, double, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6239,9 +6239,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho(double, double, double, double, double, double) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(double, double, double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6273,9 +6273,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoLH(double, double, double, double, double, double, boolean) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(double, double, double, double, double, double, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6336,9 +6336,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoLH(double, double, double, double, double, double) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(double, double, double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6372,9 +6372,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoLH(double, double, double, double, double, double, boolean) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(double, double, double, double, double, double, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6409,9 +6409,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoLH(double, double, double, double, double, double) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(double, double, double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6438,9 +6438,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #ortho(double, double, double, double, double, double, boolean) ortho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(double, double, double, double, double, double, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6483,9 +6483,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #ortho(double, double, double, double, double, double) ortho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(double, double, double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6512,9 +6512,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #orthoLH(double, double, double, double, double, double, boolean) orthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(double, double, double, double, double, double, boolean)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6557,9 +6557,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #orthoLH(double, double, double, double, double, double) orthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(double, double, double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -6594,9 +6594,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetric(double, double, double, double, boolean) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(double, double, double, double, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6654,9 +6654,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetric(double, double, double, double) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(double, double, double, double)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6689,9 +6689,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetric(double, double, double, double, boolean) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(double, double, double, double, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6725,9 +6725,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetric(double, double, double, double) setOrthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetric(double, double, double, double)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6758,9 +6758,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetricLH(double, double, double, double, boolean) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(double, double, double, double, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6818,9 +6818,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetricLH(double, double, double, double) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(double, double, double, double)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6853,9 +6853,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetricLH(double, double, double, double, boolean) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(double, double, double, double, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6889,9 +6889,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrthoSymmetricLH(double, double, double, double) setOrthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoSymmetricLH(double, double, double, double)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6917,9 +6917,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #orthoSymmetric(double, double, double, double, boolean) orthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetric(double, double, double, double, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6961,9 +6961,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #orthoSymmetric(double, double, double, double) orthoSymmetric()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetric(double, double, double, double)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -6988,9 +6988,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #orthoSymmetricLH(double, double, double, double, boolean) orthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetricLH(double, double, double, double, boolean)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7032,9 +7032,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #orthoSymmetricLH(double, double, double, double) orthoSymmetricLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoSymmetricLH(double, double, double, double)
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -7065,10 +7065,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho2D(double, double, double, double) setOrtho()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(double, double, double, double, double, double, Matrix4x3d)
      * @see #setOrtho2D(double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7122,10 +7122,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho2D(double, double, double, double) setOrtho2D()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(double, double, double, double, double, double)
      * @see #setOrtho2D(double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7155,10 +7155,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho2DLH(double, double, double, double) setOrthoLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(double, double, double, double, double, double, Matrix4x3d)
      * @see #setOrtho2DLH(double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7212,10 +7212,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #setOrtho2DLH(double, double, double, double) setOrtho2DLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(double, double, double, double, double, double)
      * @see #setOrtho2DLH(double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7240,10 +7240,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #ortho2D(double, double, double, double) ortho2D()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrtho(double, double, double, double, double, double)
      * @see #ortho2D(double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7281,10 +7281,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #ortho2DLH(double, double, double, double) ortho2DLH()}.
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #setOrthoLH(double, double, double, double, double, double)
      * @see #ortho2DLH(double, double, double, double)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -7313,7 +7313,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>. 
+     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7326,11 +7326,11 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(Vector3dc, Vector3dc) setLookAlong()}.
-     * 
+     *
      * @see #lookAlong(double, double, double, double, double, double)
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc)
      * @see #setLookAlong(Vector3dc, Vector3dc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -7343,7 +7343,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7356,11 +7356,11 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(Vector3dc, Vector3dc) setLookAlong()}.
-     * 
+     *
      * @see #lookAlong(double, double, double, double, double, double)
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc)
      * @see #setLookAlong(Vector3dc, Vector3dc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -7375,7 +7375,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7388,10 +7388,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(double, double, double, double, double, double) setLookAlong()}
-     * 
+     *
      * @see #lookAt(double, double, double, double, double, double, double, double, double)
      * @see #setLookAlong(double, double, double, double, double, double)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -7471,7 +7471,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>. 
+     * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -7484,10 +7484,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookalong transformation without post-multiplying it,
      * use {@link #setLookAlong(double, double, double, double, double, double) setLookAlong()}
-     * 
+     *
      * @see #lookAt(double, double, double, double, double, double, double, double, double)
      * @see #setLookAlong(double, double, double, double, double, double)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -7512,15 +7512,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * point along <code>dir</code>.
      * <p>
      * This is equivalent to calling
-     * {@link #setLookAt(Vector3dc, Vector3dc, Vector3dc) setLookAt()} 
+     * {@link #setLookAt(Vector3dc, Vector3dc, Vector3dc) setLookAt()}
      * with <code>eye = (0, 0, 0)</code> and <code>center = dir</code>.
      * <p>
      * In order to apply the lookalong transformation to any previous existing transformation,
      * use {@link #lookAlong(Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #setLookAlong(Vector3dc, Vector3dc)
      * @see #lookAlong(Vector3dc, Vector3dc)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -7541,10 +7541,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to apply the lookalong transformation to any previous existing transformation,
      * use {@link #lookAlong(double, double, double, double, double, double) lookAlong()}
-     * 
+     *
      * @see #setLookAlong(double, double, double, double, double, double)
      * @see #lookAlong(double, double, double, double, double, double)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -7608,10 +7608,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAt(Vector3dc, Vector3dc, Vector3dc) lookAt()}.
-     * 
+     *
      * @see #setLookAt(double, double, double, double, double, double, double, double, double)
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -7625,15 +7625,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set this matrix to be a "lookat" transformation for a right-handed coordinate system, 
+     * Set this matrix to be a "lookat" transformation for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code>.
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAt(double, double, double, double, double, double, double, double, double) lookAt}.
-     * 
+     *
      * @see #setLookAt(Vector3dc, Vector3dc, Vector3dc)
      * @see #lookAt(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -7700,7 +7700,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -7710,10 +7710,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(Vector3dc, Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #lookAt(double, double, double, double, double, double, double, double, double)
      * @see #setLookAlong(Vector3dc, Vector3dc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -7729,7 +7729,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -7739,10 +7739,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(Vector3dc, Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #lookAt(double, double, double, double, double, double, double, double, double)
      * @see #setLookAlong(Vector3dc, Vector3dc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -7756,7 +7756,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -7766,10 +7766,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(double, double, double, double, double, double, double, double, double) setLookAt()}.
-     * 
+     *
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc)
      * @see #setLookAt(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -7869,7 +7869,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -7879,10 +7879,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAt(double, double, double, double, double, double, double, double, double) setLookAt()}.
-     * 
+     *
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc)
      * @see #setLookAt(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -7919,10 +7919,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAtLH(Vector3dc, Vector3dc, Vector3dc) lookAt()}.
-     * 
+     *
      * @see #setLookAtLH(double, double, double, double, double, double, double, double, double)
      * @see #lookAtLH(Vector3dc, Vector3dc, Vector3dc)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -7936,15 +7936,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set this matrix to be a "lookat" transformation for a left-handed coordinate system, 
+     * Set this matrix to be a "lookat" transformation for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code>.
      * <p>
      * In order to apply the lookat transformation to a previous existing transformation,
      * use {@link #lookAtLH(double, double, double, double, double, double, double, double, double) lookAtLH}.
-     * 
+     *
      * @see #setLookAtLH(Vector3dc, Vector3dc, Vector3dc)
      * @see #lookAtLH(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8011,7 +8011,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8021,9 +8021,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(Vector3dc, Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #lookAtLH(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8039,7 +8039,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8049,9 +8049,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(Vector3dc, Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #lookAtLH(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -8065,7 +8065,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8075,10 +8075,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(double, double, double, double, double, double, double, double, double) setLookAtLH()}.
-     * 
+     *
      * @see #lookAtLH(Vector3dc, Vector3dc, Vector3dc)
      * @see #setLookAtLH(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8178,7 +8178,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -8188,10 +8188,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to set the matrix to a lookat transformation without post-multiplying it,
      * use {@link #setLookAtLH(double, double, double, double, double, double, double, double, double) setLookAtLH()}.
-     * 
+     *
      * @see #lookAtLH(Vector3dc, Vector3dc, Vector3dc)
      * @see #setLookAtLH(double, double, double, double, double, double, double, double, double)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -8311,7 +8311,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node192.html">ftp.sgi.com</a>
-     * 
+     *
      * @param light
      *          the light's vector
      * @param a
@@ -8344,7 +8344,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node192.html">ftp.sgi.com</a>
-     * 
+     *
      * @param lightX
      *          the x-component of the light's vector
      * @param lightY
@@ -8443,7 +8443,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param light
      *          the light's vector
      * @param planeTransform
@@ -8475,7 +8475,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param lightX
      *          the x-component of the light vector
      * @param lightY
@@ -8498,7 +8498,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * This method can be used to create the complete model transformation for a given object, including the translation of the object to
      * its position <code>objPos</code>.
-     * 
+     *
      * @param objPos
      *          the position of the object to rotate towards <code>targetPos</code>
      * @param targetPos
@@ -8554,11 +8554,11 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * This method can be used to create the complete model transformation for a given object, including the translation of the object to
      * its position <code>objPos</code>.
      * <p>
-     * If preserving an <i>up</i> vector is not necessary when rotating the +Z axis, then a shortest arc rotation can be obtained 
+     * If preserving an <i>up</i> vector is not necessary when rotating the +Z axis, then a shortest arc rotation can be obtained
      * using {@link #billboardSpherical(Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #billboardSpherical(Vector3dc, Vector3dc)
-     * 
+     *
      * @param objPos
      *          the position of the object to rotate towards <code>targetPos</code>
      * @param targetPos
@@ -8615,9 +8615,9 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * <p>
      * In order to specify an <i>up</i> vector which needs to be maintained when rotating the +Z axis of the object,
      * use {@link #billboardSpherical(Vector3dc, Vector3dc, Vector3dc)}.
-     * 
+     *
      * @see #billboardSpherical(Vector3dc, Vector3dc, Vector3dc)
-     * 
+     *
      * @param objPos
      *          the position of the object to rotate towards <code>targetPos</code>
      * @param targetPos
@@ -8777,7 +8777,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     /**
      * Apply a picking transformation to this matrix using the given window coordinates <code>(x, y)</code> as the pick center
      * and the given <code>(width, height)</code> as the size of the picking region in window coordinates.
-     * 
+     *
      * @param x
      *          the x coordinate of the picking region center in window coordinates
      * @param y
@@ -8796,7 +8796,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
 
     /**
      * Exchange the values of <code>this</code> matrix with the given <code>other</code> matrix.
-     * 
+     *
      * @param other
      *          the other matrix to exchange the values with
      * @return this
@@ -8866,7 +8866,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * position of the arcball and the specified X and Y rotation angles.
      * <p>
      * This method is equivalent to calling: <code>translate(0, 0, -radius).rotateX(angleX).rotateY(angleY).translate(-centerX, -centerY, -centerZ)</code>
-     * 
+     *
      * @param radius
      *          the arcball radius
      * @param centerX
@@ -8890,7 +8890,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * position of the arcball and the specified X and Y rotation angles.
      * <p>
      * This method is equivalent to calling: <code>translate(0, 0, -radius).rotateX(angleX).rotateY(angleY).translate(-center.x, -center.y, -center.z)</code>
-     * 
+     *
      * @param radius
      *          the arcball radius
      * @param center
@@ -9025,7 +9025,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>dir</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -9038,10 +9038,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotationTowards(Vector3dc, Vector3dc) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix4x3d().lookAt(new Vector3d(), new Vector3d(dir).negate(), up).invert(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(double, double, double, double, double, double, Matrix4x3d)
      * @see #rotationTowards(Vector3dc, Vector3dc)
-     * 
+     *
      * @param dir
      *              the direction to rotate towards
      * @param up
@@ -9055,7 +9055,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>dir</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -9067,10 +9067,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotationTowards(Vector3dc, Vector3dc) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix4x3d().lookAt(new Vector3d(), new Vector3d(dir).negate(), up).invert())</code>
-     * 
+     *
      * @see #rotateTowards(double, double, double, double, double, double)
      * @see #rotationTowards(Vector3dc, Vector3dc)
-     * 
+     *
      * @param dir
      *              the direction to orient towards
      * @param up
@@ -9082,7 +9082,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
@@ -9094,10 +9094,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotationTowards(double, double, double, double, double, double) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix4x3d().lookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invert())</code>
-     * 
+     *
      * @see #rotateTowards(Vector3dc, Vector3dc)
      * @see #rotationTowards(double, double, double, double, double, double)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -9117,7 +9117,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the local <code>+Z</code> axis with <code>(dirX, dirY, dirZ)</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -9130,10 +9130,10 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * use {@link #rotationTowards(double, double, double, double, double, double) rotationTowards()}.
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix4x3d().lookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invert(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(Vector3dc, Vector3dc)
      * @see #rotationTowards(double, double, double, double, double, double)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -9202,17 +9202,17 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that aligns the local <code>-z</code> axis with <code>dir</code>.
      * <p>
      * In order to apply the rotation transformation to a previous existing transformation,
      * use {@link #rotateTowards(double, double, double, double, double, double) rotateTowards}.
      * <p>
      * This method is equivalent to calling: <code>setLookAt(new Vector3d(), new Vector3d(dir).negate(), up).invert()</code>
-     * 
+     *
      * @see #rotationTowards(Vector3dc, Vector3dc)
      * @see #rotateTowards(double, double, double, double, double, double)
-     * 
+     *
      * @param dir
      *              the direction to orient the local -z axis towards
      * @param up
@@ -9224,17 +9224,17 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that aligns the local <code>-z</code> axis with <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * In order to apply the rotation transformation to a previous existing transformation,
      * use {@link #rotateTowards(double, double, double, double, double, double) rotateTowards}.
      * <p>
      * This method is equivalent to calling: <code>setLookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invert()</code>
-     * 
+     *
      * @see #rotateTowards(Vector3dc, Vector3dc)
      * @see #rotationTowards(double, double, double, double, double, double)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -9286,12 +9286,12 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that translates to the given <code>pos</code> and aligns the local <code>-z</code>
      * axis with <code>dir</code>.
      * <p>
      * This method is equivalent to calling: <code>translation(pos).rotateTowards(dir, up)</code>
-     * 
+     *
      * @see #translation(Vector3dc)
      * @see #rotateTowards(Vector3dc, Vector3dc)
      *
@@ -9308,15 +9308,15 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
     }
 
     /**
-     * Set this matrix to a model transformation for a right-handed coordinate system, 
+     * Set this matrix to a model transformation for a right-handed coordinate system,
      * that translates to the given <code>(posX, posY, posZ)</code> and aligns the local <code>-z</code>
      * axis with <code>(dirX, dirY, dirZ)</code>.
      * <p>
      * This method is equivalent to calling: <code>translation(posX, posY, posZ).rotateTowards(dirX, dirY, dirZ, upX, upY, upZ)</code>
-     * 
+     *
      * @see #translation(double, double, double)
      * @see #rotateTowards(double, double, double, double, double, double)
-     * 
+     *
      * @param posX
      *              the x-coordinate of the position to translate to
      * @param posY
@@ -9401,7 +9401,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * 0 1 b 0
      * 0 0 1 0
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b
@@ -9437,7 +9437,7 @@ public class Matrix4x3d implements Externalizable, Matrix4x3dc {
      * 0 1 b 0
      * 0 0 1 0
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b

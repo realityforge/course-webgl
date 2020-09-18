@@ -27,7 +27,7 @@ import java.util.*;
 
 /**
  * Interface to a read-only view of a 2-dimensional vector of single-precision floats.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Vector2fc {
@@ -46,7 +46,7 @@ public interface Vector2fc {
 
     /**
      * Subtract <code>v</code> from <code>this</code> vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to subtract
      * @param dest
@@ -57,20 +57,20 @@ public interface Vector2fc {
 
     /**
      * Subtract <code>(x, y)</code> from this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to subtract
      * @param y
      *          the y component to subtract
      * @param dest
-     *          will hold the result         
+     *          will hold the result
      * @return dest
      */
     Vector2f sub(float x, float y, Vector2f dest);
 
     /**
      * Return the dot product of this vector and <code>v</code>.
-     * 
+     *
      * @param v
      *        the other vector
      * @return the dot product
@@ -79,7 +79,7 @@ public interface Vector2fc {
 
     /**
      * Return the angle between this vector and the supplied vector.
-     * 
+     *
      * @param v
      *        the other vector
      * @return the angle, in radians
@@ -95,14 +95,14 @@ public interface Vector2fc {
 
     /**
      * Return the length of this vector.
-     * 
+     *
      * @return the length
      */
     float length();
 
     /**
      * Return the distance between this and <code>v</code>.
-     * 
+     *
      * @param v
      *        the other vector
      * @return the distance
@@ -111,7 +111,7 @@ public interface Vector2fc {
 
     /**
      * Return the distance squared between this and <code>v</code>.
-     * 
+     *
      * @param v
      *        the other vector
      * @return the distance squared
@@ -120,7 +120,7 @@ public interface Vector2fc {
 
     /**
      * Return the distance between <code>this</code> vector and <code>(x, y)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -131,7 +131,7 @@ public interface Vector2fc {
 
     /**
      * Return the distance squared between <code>this</code> vector and <code>(x, y)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -142,7 +142,7 @@ public interface Vector2fc {
 
     /**
      * Normalize this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *        will hold the result
      * @return dest
@@ -151,7 +151,7 @@ public interface Vector2fc {
 
     /**
      * Scale this vector to have the given length and store the result in <code>dest</code>.
-     * 
+     *
      * @param length
      *          the desired length
      * @param dest
@@ -174,7 +174,7 @@ public interface Vector2fc {
 
     /**
      * Increment the components of this vector by the given values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to add
      * @param y
@@ -187,7 +187,7 @@ public interface Vector2fc {
 
     /**
      * Negate this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *        will hold the result
      * @return dest
@@ -196,7 +196,7 @@ public interface Vector2fc {
 
     /**
      * Multiply the components of this vector by the given scalar and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *        the value to multiply this vector's components by
      * @param dest
@@ -207,7 +207,7 @@ public interface Vector2fc {
 
     /**
      * Multiply the components of this Vector2f by the given scalar values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to multiply this vector by
      * @param y
@@ -220,7 +220,7 @@ public interface Vector2fc {
 
     /**
      * Multiply this Vector2f component-wise by another Vector2f and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to multiply by
      * @param dest
@@ -232,7 +232,7 @@ public interface Vector2fc {
     /**
      * Divide all components of this {@link Vector2f} by the given scalar
      * value and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *          the scalar to divide by
      * @param dest
@@ -243,7 +243,7 @@ public interface Vector2fc {
 
     /**
      * Divide the components of this Vector2f by the given scalar values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to divide this vector by
      * @param y
@@ -292,7 +292,7 @@ public interface Vector2fc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>z</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -306,7 +306,7 @@ public interface Vector2fc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>z</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -321,7 +321,7 @@ public interface Vector2fc {
      * <p>
      * If <code>t</code> is <code>0.0</code> then the result is <code>this</code>. If the interpolation factor is <code>1.0</code>
      * then the result is <code>other</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param t
@@ -335,7 +335,7 @@ public interface Vector2fc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -349,7 +349,7 @@ public interface Vector2fc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -384,21 +384,21 @@ public interface Vector2fc {
 
     /**
      * Determine the component with the biggest absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..1]</code>
      */
     int maxComponent();
 
     /**
      * Determine the component with the smallest (towards zero) absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..1]</code>
      */
     int minComponent();
 
     /**
      * Get the value of the specified component of this vector.
-     * 
+     *
      * @param component
      *          the component, within <code>[0..1]</code>
      * @return the value
@@ -420,7 +420,7 @@ public interface Vector2fc {
 
     /**
      * Set the components of the given vector <code>dest</code> to those of <code>this</code> vector.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -429,7 +429,7 @@ public interface Vector2fc {
 
     /**
      * Set the components of the given vector <code>dest</code> to those of <code>this</code> vector.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -484,7 +484,7 @@ public interface Vector2fc {
     /**
      * Compute the absolute of each of this vector's components
      * and store the result into <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -498,7 +498,7 @@ public interface Vector2fc {
      * Please note that this method is not used by any data structure such as {@link ArrayList} {@link HashSet} or {@link HashMap}
      * and their operations, such as {@link ArrayList#contains(Object)} or {@link HashSet#remove(Object)}, since those
      * data structures only use the {@link Object#equals(Object)} and {@link Object#hashCode()} methods.
-     * 
+     *
      * @param v
      *          the other vector
      * @param delta

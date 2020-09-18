@@ -22,4 +22,3 @@
  * THE SOFTWARE.
  */
 package org.joml;
-

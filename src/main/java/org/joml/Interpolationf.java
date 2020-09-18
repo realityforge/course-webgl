@@ -25,7 +25,7 @@ package org.joml;
 
 /**
  * Contains various interpolation functions.
- * 
+ *
  * @author Kai Burjack
  */
 public class Interpolationf {
@@ -34,7 +34,7 @@ public class Interpolationf {
      * Bilinearly interpolate the single scalar value <i>f</i> over the given triangle.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system">https://en.wikipedia.org/</a>
-     * 
+     *
      * @param v0X
      *            the x coordinate of the first triangle vertex
      * @param v0Y
@@ -80,7 +80,7 @@ public class Interpolationf {
      * Bilinearly interpolate the two-dimensional vector <i>f</i> over the given triangle and store the result in <code>dest</code>.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system">https://en.wikipedia.org/</a>
-     * 
+     *
      * @param v0X
      *            the x coordinate of the first triangle vertex
      * @param v0Y
@@ -139,7 +139,7 @@ public class Interpolationf {
      * <p>
      * This method computes the constant rate of change for <i>f</i> given the three values of <i>f</i>
      * at the specified three inputs <code>(v0X, v0Y)</code>, <code>(v1X, v1Y)</code> and <code>(v2X, v2Y)</code>.
-     * 
+     *
      * @param v0X
      *            the x coordinate of the first triangle vertex
      * @param v0Y
@@ -188,7 +188,7 @@ public class Interpolationf {
      * <p>
      * This method computes the constant rate of change for <i>f</i> given the three values of <i>f</i>
      * at the specified three inputs <code>(v0X, v0Y)</code>, <code>(v1X, v1Y)</code> and <code>(v2X, v2Y)</code>.
-     * 
+     *
      * @param v0X
      *            the x coordinate of the first triangle vertex
      * @param v0Y
@@ -236,7 +236,7 @@ public class Interpolationf {
      * Bilinearly interpolate the three-dimensional vector <i>f</i> over the given triangle and store the result in <code>dest</code>.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system">https://en.wikipedia.org/</a>
-     * 
+     *
      * @param v0X
      *            the x coordinate of the first triangle vertex
      * @param v0Y
@@ -290,14 +290,14 @@ public class Interpolationf {
     }
 
     /**
-     * Compute the interpolation factors <code>(t0, t1, t2)</code> in order to interpolate an arbitrary value over a given 
+     * Compute the interpolation factors <code>(t0, t1, t2)</code> in order to interpolate an arbitrary value over a given
      * triangle at the given point <code>(x, y)</code>.
      * <p>
-     * This method takes in the 2D vertex positions of the three vertices of a triangle and stores in <code>dest</code> the 
+     * This method takes in the 2D vertex positions of the three vertices of a triangle and stores in <code>dest</code> the
      * factors <code>(t0, t1, t2)</code> in the equation <code>v' = v0 * t0 + v1 * t1 + v2 * t2</code> where <code>(v0, v1, v2)</code> are
      * arbitrary (scalar or vector) values associated with the respective vertices of the triangle. The computed value <code>v'</code>
      * is the interpolated value at the given position <code>(x, y)</code>.
-     * 
+     *
      * @param v0X
      *            the x coordinate of the first triangle vertex
      * @param v0Y

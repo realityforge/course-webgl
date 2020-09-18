@@ -33,7 +33,7 @@ import java.text.NumberFormat;
 /**
  * Contains the definition of a Vector comprising 4 floats and associated
  * transformations.
- * 
+ *
  * @author Richard Greenlees
  * @author Kai Burjack
  * @author F. Neurath
@@ -68,7 +68,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Create a new {@link Vector4f} with the same values as <code>v</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector4fc} to copy the values from
      */
@@ -81,7 +81,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Create a new {@link Vector4f} with the same values as <code>v</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector4ic} to copy the values from
      */
@@ -95,7 +95,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Create a new {@link Vector4f} with the first three components from the
      * given <code>v</code> and the given <code>w</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector3fc}
      * @param w
@@ -111,7 +111,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Create a new {@link Vector4f} with the first three components from the
      * given <code>v</code> and the given <code>w</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector3ic}
      * @param w
@@ -127,7 +127,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Create a new {@link Vector4f} with the first two components from the
      * given <code>v</code> and the given <code>z</code>, and <code>w</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector2fc}
      * @param z
@@ -145,7 +145,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Create a new {@link Vector4f} with the first two components from the
      * given <code>v</code> and the given <code>z</code>, and <code>w</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector2ic}
      * @param z
@@ -175,7 +175,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Create a new {@link Vector4f} with the given component values.
-     * 
+     *
      * @param x
      *          the x component
      * @param y
@@ -195,7 +195,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Create a new {@link Vector4f} and initialize its four components from the first
      * four elements of the given array.
-     * 
+     *
      * @param xyzw
      *          the array containing at least four elements
      */
@@ -225,7 +225,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set this {@link Vector4f} to the values of the given <code>v</code>.
-     * 
+     *
      * @param v
      *          the vector whose values will be copied into this
      * @return this
@@ -240,7 +240,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set this {@link Vector4f} to the values of the given <code>v</code>.
-     * 
+     *
      * @param v
      *          the vector whose values will be copied into this
      * @return this
@@ -258,7 +258,7 @@ public class Vector4f implements Externalizable, Vector4fc {
      * <p>
      * Note that due to the given vector <code>v</code> storing the components in double-precision,
      * there is the possibility to lose precision.
-     * 
+     *
      * @param v
      *          the vector whose values will be copied into this
      * @return this
@@ -274,7 +274,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Set the first three components of this to the components of
      * <code>v</code> and the last component to <code>w</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector3fc} to copy
      * @param w
@@ -292,7 +292,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Set the first three components of this to the components of
      * <code>v</code> and the last component to <code>w</code>.
-     * 
+     *
      * @param v
      *          the {@link Vector3ic} to copy
      * @param w
@@ -364,7 +364,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set the x, y, z, and w components to the supplied values.
-     * 
+     *
      * @param x
      *          the x component
      * @param y
@@ -385,7 +385,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set the x, y, z components to the supplied values.
-     * 
+     *
      * @param x
      *          the x component
      * @param y
@@ -418,7 +418,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set the x, y, z, and w components to the supplied values.
-     * 
+     *
      * @param x
      *          the x component
      * @param y
@@ -439,7 +439,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set the four components of this vector to the first four elements of the given array.
-     * 
+     *
      * @param xyzw
      *          the array containing at least four elements
      * @return this
@@ -488,7 +488,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Subtract the supplied vector from this one.
-     * 
+     *
      * @param v
      *          the vector to subtract
      * @return this
@@ -503,7 +503,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Subtract <code>(x, y, z, w)</code> from this.
-     * 
+     *
      * @param x
      *          the x component to subtract
      * @param y
@@ -540,7 +540,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Add the supplied vector to this one.
-     * 
+     *
      * @param v
      *          the vector to add
      * @return this
@@ -563,7 +563,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Increment the components of this vector by the given values.
-     * 
+     *
      * @param x
      *          the x component to add
      * @param y
@@ -592,7 +592,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -609,7 +609,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -642,7 +642,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -658,7 +658,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -688,7 +688,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Multiply this Vector4f component-wise by another Vector4f.
-     * 
+     *
      * @param v
      *          the other vector
      * @return this
@@ -711,7 +711,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Divide this Vector4f component-wise by another Vector4f.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @return this
@@ -735,7 +735,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Multiply the given matrix mat with this Vector4f and store the result in
      * <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply the vector with
      * @return this
@@ -754,7 +754,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Multiply the transpose of the given matrix <code>mat</code> with this Vector4f and store the result in
      * <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply the vector with
      * @return this
@@ -808,7 +808,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Multiply the given matrix mat with this Vector4f and store the result in
      * <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply the vector with
      * @return this
@@ -843,7 +843,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Multiply the given matrix <code>mat</code> with this Vector4f, perform perspective division.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -870,7 +870,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Multiply all components of this {@link Vector4f} by the given scalar
      * value.
-     * 
+     *
      * @param scalar
      *          the scalar to multiply by
      * @return this
@@ -893,7 +893,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Multiply the components of this Vector4f by the given scalar values and store the result in <code>this</code>.
-     * 
+     *
      * @param x
      *          the x component to multiply by
      * @param y
@@ -923,7 +923,7 @@ public class Vector4f implements Externalizable, Vector4fc {
     /**
      * Divide all components of this {@link Vector4f} by the given scalar
      * value.
-     * 
+     *
      * @param scalar
      *          the scalar to divide by
      * @return this
@@ -948,7 +948,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Divide the components of this Vector4f by the given scalar values and store the result in <code>this</code>.
-     * 
+     *
      * @param x
      *          the x component to divide by
      * @param y
@@ -977,9 +977,9 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Rotate this vector by the given quaternion <code>quat</code> and store the result in <code>this</code>.
-     * 
+     *
      * @see Quaternionf#transform(Vector4f)
-     * 
+     *
      * @param quat
      *          the quaternion to rotate this vector
      * @return this
@@ -994,7 +994,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Rotate this vector the specified radians around the given rotation axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param x
@@ -1040,7 +1040,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Rotate this vector the specified radians around the X axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @return this
@@ -1067,7 +1067,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Rotate this vector the specified radians around the Y axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @return this
@@ -1094,7 +1094,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Rotate this vector the specified radians around the Z axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @return this
@@ -1165,7 +1165,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Normalizes this vector.
-     * 
+     *
      * @return this
      */
     public Vector4f normalize() {
@@ -1188,7 +1188,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Scale this vector to have the given length.
-     * 
+     *
      * @param length
      *          the desired length
      * @return this
@@ -1213,7 +1213,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Normalize this vector by computing only the norm of <code>(x, y, z)</code>.
-     * 
+     *
      * @return this
      */
     public Vector4f normalize3() {
@@ -1350,7 +1350,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Set all components to zero.
-     * 
+     *
      * @return this
      */
     public Vector4f zero() {
@@ -1363,7 +1363,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Negate this vector.
-     * 
+     *
      * @return this
      */
     public Vector4f negate() {
@@ -1386,7 +1386,7 @@ public class Vector4f implements Externalizable, Vector4fc {
      * Return a string representation of this vector.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -1395,7 +1395,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Return a string representation of this vector by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation
@@ -1552,7 +1552,7 @@ public class Vector4f implements Externalizable, Vector4fc {
      * <p>
      * If <code>t</code> is <code>0.0</code> then the result is <code>this</code>. If the interpolation factor is <code>1.0</code>
      * then the result is <code>other</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param t
@@ -1718,7 +1718,7 @@ public class Vector4f implements Externalizable, Vector4fc {
 
     /**
      * Compute the absolute of each of this vector's components.
-     * 
+     *
      * @return this
      */
     public Vector4f absolute() {

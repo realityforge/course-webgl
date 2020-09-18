@@ -28,7 +28,7 @@ package org.joml;
  * Helper class to do efficient memory operations on all JOML objects, NIO buffers and primitive arrays.
  * This class is used internally throughout JOML, is undocumented and is subject to change.
  * Use with extreme caution!
- * 
+ *
  * @author The LWJGL authors
  * @author Kai Burjack
  */
@@ -376,7 +376,7 @@ abstract class MemUtil {
             }
             throw new IllegalArgumentException();
         }
-        
+
         public float get(Matrix3f m, int column, int row) {
             switch (column) {
             case 0:
@@ -1304,7 +1304,7 @@ abstract class MemUtil {
             tmp = m1.m31(); m1._m31(m2.m31()); m2._m31(tmp);
             tmp = m1.m32(); m1._m32(m2.m32()); m2._m32(tmp);
         }
-        
+
         public void swap(Matrix3f m1, Matrix3f m2) {
             float tmp;
             tmp = m1.m00(); m1._m00(m2.m00()); m2._m00(tmp);

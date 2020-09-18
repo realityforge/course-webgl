@@ -184,7 +184,7 @@ public class Vector3i implements Externalizable, Vector3ic {
     /**
      * Create a new {@link Vector3i} and initialize its three components from the first
      * three elements of the given array.
-     * 
+     *
      * @param xyz
      *          the array containing at least three elements
      */
@@ -327,7 +327,7 @@ public class Vector3i implements Externalizable, Vector3ic {
 
     /**
      * Set the three components of this vector to the first three elements of the given array.
-     * 
+     *
      * @param xyz
      *          the array containing at least three elements
      * @return this
@@ -479,7 +479,7 @@ public class Vector3i implements Externalizable, Vector3ic {
     /**
      * Multiply all components of this {@link Vector3i} by the given scalar
      * value.
-     * 
+     *
      * @param scalar
      *          the scalar to multiply this vector by
      * @return this
@@ -719,7 +719,7 @@ public class Vector3i implements Externalizable, Vector3ic {
      * Return a string representation of this vector.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -728,7 +728,7 @@ public class Vector3i implements Externalizable, Vector3ic {
 
     /**
      * Return a string representation of this vector by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation
@@ -836,7 +836,7 @@ public class Vector3i implements Externalizable, Vector3ic {
 
     /**
      * Set <code>this</code> vector's components to their respective absolute values.
-     * 
+     *
      * @return this
      */
     public Vector3i absolute() {

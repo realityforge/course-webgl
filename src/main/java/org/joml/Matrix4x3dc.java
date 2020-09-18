@@ -27,39 +27,39 @@ import java.util.*;
 
 /**
  * Interface to a read-only view of a 4x3 matrix of double-precision floats.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Matrix4x3dc {
 
     /**
      * Argument to the first parameter of {@link #frustumPlane(int, Planed)}
-     * identifying the plane with equation <code>x=-1</code> when using the identity matrix.  
+     * identifying the plane with equation <code>x=-1</code> when using the identity matrix.
      */
     int PLANE_NX = 0;
     /**
      * Argument to the first parameter of {@link #frustumPlane(int, Planed)}
-     * identifying the plane with equation <code>x=1</code> when using the identity matrix.  
+     * identifying the plane with equation <code>x=1</code> when using the identity matrix.
      */
     int PLANE_PX = 1;
     /**
      * Argument to the first parameter of {@link #frustumPlane(int, Planed)}
-     * identifying the plane with equation <code>y=-1</code> when using the identity matrix.  
+     * identifying the plane with equation <code>y=-1</code> when using the identity matrix.
      */
     int PLANE_NY = 2;
     /**
      * Argument to the first parameter of {@link #frustumPlane(int, Planed)}
-     * identifying the plane with equation <code>y=1</code> when using the identity matrix.  
+     * identifying the plane with equation <code>y=1</code> when using the identity matrix.
      */
     int PLANE_PY = 3;
     /**
      * Argument to the first parameter of {@link #frustumPlane(int, Planed)}
-     * identifying the plane with equation <code>z=-1</code> when using the identity matrix.  
+     * identifying the plane with equation <code>z=-1</code> when using the identity matrix.
      */
     int PLANE_NZ = 4;
     /**
      * Argument to the first parameter of {@link #frustumPlane(int, Planed)}
-     * identifying the plane with equation <code>z=1</code> when using the identity matrix.  
+     * identifying the plane with equation <code>z=1</code> when using the identity matrix.
      */
     int PLANE_PZ = 5;
 
@@ -84,84 +84,84 @@ public interface Matrix4x3dc {
 
     /**
      * Return the value of the matrix element at column 0 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m00();
 
     /**
      * Return the value of the matrix element at column 0 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m01();
 
     /**
      * Return the value of the matrix element at column 0 and row 2.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m02();
 
     /**
      * Return the value of the matrix element at column 1 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m10();
 
     /**
      * Return the value of the matrix element at column 1 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m11();
 
     /**
      * Return the value of the matrix element at column 1 and row 2.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m12();
 
     /**
      * Return the value of the matrix element at column 2 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m20();
 
     /**
      * Return the value of the matrix element at column 2 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m21();
 
     /**
      * Return the value of the matrix element at column 2 and row 2.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m22();
 
     /**
      * Return the value of the matrix element at column 3 and row 0.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m30();
 
     /**
      * Return the value of the matrix element at column 3 and row 1.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m31();
 
     /**
      * Return the value of the matrix element at column 3 and row 2.
-     * 
+     *
      * @return the value of the matrix element
      */
     double m32();
@@ -170,9 +170,9 @@ public interface Matrix4x3dc {
      * Get the current values of <code>this</code> matrix and store them into the upper 4x3 submatrix of <code>dest</code>.
      * <p>
      * The other elements of <code>dest</code> will not be modified.
-     * 
+     *
      * @see Matrix4d#set4x3(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *            the destination matrix
      * @return dest
@@ -186,7 +186,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
-     * 
+     *
      * @param right
      *          the right operand of the multiplication
      * @param dest
@@ -202,7 +202,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * transformation of the right matrix will be applied first!
-     * 
+     *
      * @param right
      *          the right operand of the multiplication
      * @param dest
@@ -276,9 +276,9 @@ public interface Matrix4x3dc {
      * The other components of <code>dest</code> will be set to the ones of <code>this</code>.
      * <p>
      * The matrices <code>this</code> and <code>other</code> will not be changed.
-     * 
+     *
      * @param other
-     *          the other matrix 
+     *          the other matrix
      * @param otherFactor
      *          the factor to multiply each of the other matrix's components
      * @param dest
@@ -295,9 +295,9 @@ public interface Matrix4x3dc {
      * The other components of <code>dest</code> will be set to the ones of <code>this</code>.
      * <p>
      * The matrices <code>this</code> and <code>other</code> will not be changed.
-     * 
+     *
      * @param other
-     *          the other matrix 
+     *          the other matrix
      * @param otherFactor
      *          the factor to multiply each of the other matrix's components
      * @param dest
@@ -308,7 +308,7 @@ public interface Matrix4x3dc {
 
     /**
      * Component-wise add <code>this</code> and <code>other</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other addend
      * @param dest
@@ -319,7 +319,7 @@ public interface Matrix4x3dc {
 
     /**
      * Component-wise add <code>this</code> and <code>other</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other addend
      * @param dest
@@ -330,7 +330,7 @@ public interface Matrix4x3dc {
 
     /**
      * Component-wise subtract <code>subtrahend</code> from <code>this</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @param dest
@@ -341,7 +341,7 @@ public interface Matrix4x3dc {
 
     /**
      * Component-wise subtract <code>subtrahend</code> from <code>this</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param subtrahend
      *          the subtrahend
      * @param dest
@@ -352,7 +352,7 @@ public interface Matrix4x3dc {
 
     /**
      * Component-wise multiply <code>this</code> by <code>other</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other matrix
      * @param dest
@@ -363,14 +363,14 @@ public interface Matrix4x3dc {
 
     /**
      * Return the determinant of this matrix.
-     * 
+     *
      * @return the determinant
      */
     double determinant();
 
     /**
      * Invert <code>this</code> matrix and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -381,7 +381,7 @@ public interface Matrix4x3dc {
      * Invert <code>this</code> orthographic projection matrix and store the result into the given <code>dest</code>.
      * <p>
      * This method can be used to quickly obtain the inverse of an orthographic projection matrix.
-     * 
+     *
      * @param dest
      *          will hold the inverse of <code>this</code>
      * @return dest
@@ -392,7 +392,7 @@ public interface Matrix4x3dc {
      * Transpose only the left 3x3 submatrix of this matrix and store the result in <code>dest</code>.
      * <p>
      * All other matrix elements are left unchanged.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -401,7 +401,7 @@ public interface Matrix4x3dc {
 
     /**
      * Transpose only the left 3x3 submatrix of this matrix and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -410,7 +410,7 @@ public interface Matrix4x3dc {
 
     /**
      * Get only the translation components <code>(m30, m31, m32)</code> of this matrix and store them in the given vector <code>xyz</code>.
-     * 
+     *
      * @param dest
      *          will hold the translation components of this matrix
      * @return dest
@@ -419,7 +419,7 @@ public interface Matrix4x3dc {
 
     /**
      * Get the scaling factors of <code>this</code> matrix for the three base axes.
-     * 
+     *
      * @param dest
      *          will hold the scaling factors for <code>x</code>, <code>y</code> and <code>z</code>
      * @return dest
@@ -429,7 +429,7 @@ public interface Matrix4x3dc {
     /**
      * Get the current values of <code>this</code> matrix and store them into
      * <code>dest</code>.
-     * 
+     *
      * @param dest
      *          the destination matrix
      * @return the passed in destination
@@ -442,9 +442,9 @@ public interface Matrix4x3dc {
      * <p>
      * This method assumes that the first three column vectors of the left 3x3 submatrix are not normalized and
      * thus allows to ignore any additional scaling factor that is applied to the matrix.
-     * 
+     *
      * @see Quaternionf#setFromUnnormalized(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *          the destination {@link Quaternionf}
      * @return the passed in destination
@@ -456,9 +456,9 @@ public interface Matrix4x3dc {
      * into the given {@link Quaternionf}.
      * <p>
      * This method assumes that the first three column vectors of the left 3x3 submatrix are normalized.
-     * 
+     *
      * @see Quaternionf#setFromNormalized(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *          the destination {@link Quaternionf}
      * @return the passed in destination
@@ -471,9 +471,9 @@ public interface Matrix4x3dc {
      * <p>
      * This method assumes that the first three column vectors of the left 3x3 submatrix are not normalized and
      * thus allows to ignore any additional scaling factor that is applied to the matrix.
-     * 
+     *
      * @see Quaterniond#setFromUnnormalized(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *          the destination {@link Quaterniond}
      * @return the passed in destination
@@ -485,9 +485,9 @@ public interface Matrix4x3dc {
      * into the given {@link Quaterniond}.
      * <p>
      * This method assumes that the first three column vectors of the left 3x3 submatrix are normalized.
-     * 
+     *
      * @see Quaterniond#setFromNormalized(Matrix4x3dc)
-     * 
+     *
      * @param dest
      *          the destination {@link Quaterniond}
      * @return the passed in destination
@@ -498,7 +498,7 @@ public interface Matrix4x3dc {
 
     /**
      * Store this matrix into the supplied double array in column-major order at the given offset.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -511,9 +511,9 @@ public interface Matrix4x3dc {
      * Store this matrix into the supplied double array in column-major order.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get(double[], int)}.
-     * 
+     *
      * @see #get(double[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -525,7 +525,7 @@ public interface Matrix4x3dc {
      * <p>
      * Please note that due to this matrix storing double values those values will potentially
      * lose precision when they are converted to float values before being put into the given float array.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -541,9 +541,9 @@ public interface Matrix4x3dc {
      * lose precision when they are converted to float values before being put into the given float array.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get(float[], int)}.
-     * 
+     *
      * @see #get(float[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -553,7 +553,7 @@ public interface Matrix4x3dc {
     /**
      * Store a 4x4 matrix in column-major order into the supplied array at the given offset,
      * where the upper 4x3 submatrix is <code>this</code> and the last row is <code>(0, 0, 0, 1)</code>.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -567,9 +567,9 @@ public interface Matrix4x3dc {
      * where the upper 4x3 submatrix is <code>this</code> and the last row is <code>(0, 0, 0, 1)</code>.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get4x4(double[], int)}.
-     * 
+     *
      * @see #get4x4(double[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -582,7 +582,7 @@ public interface Matrix4x3dc {
      * <p>
      * Please note that due to this matrix storing double values those values will potentially
      * lose precision when they are converted to float values before being put into the given float array.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -599,9 +599,9 @@ public interface Matrix4x3dc {
      * lose precision when they are converted to float values before being put into the given float array.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #get4x4(float[], int)}.
-     * 
+     *
      * @see #get4x4(float[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -611,7 +611,7 @@ public interface Matrix4x3dc {
 
     /**
      * Store this matrix into the supplied float array in row-major order at the given offset.
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @param offset
@@ -624,9 +624,9 @@ public interface Matrix4x3dc {
      * Store this matrix into the supplied float array in row-major order.
      * <p>
      * In order to specify an explicit offset into the array, use the method {@link #getTransposed(double[], int)}.
-     * 
+     *
      * @see #getTransposed(double[], int)
-     * 
+     *
      * @param arr
      *          the array to write the matrix values into
      * @return the passed in array
@@ -635,9 +635,9 @@ public interface Matrix4x3dc {
 
     /**
      * Transform/multiply the given vector by this matrix and store the result in that vector.
-     * 
+     *
      * @see Vector4d#mul(Matrix4x3dc)
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @return v
@@ -646,9 +646,9 @@ public interface Matrix4x3dc {
 
     /**
      * Transform/multiply the given vector by this matrix and store the result in <code>dest</code>.
-     * 
+     *
      * @see Vector4d#mul(Matrix4x3dc, Vector4d)
-     * 
+     *
      * @param v
      *          the vector to transform
      * @param dest
@@ -665,10 +665,10 @@ public interface Matrix4x3dc {
      * will represent a position/location in 3D-space rather than a direction.
      * <p>
      * In order to store the result in another vector, use {@link #transformPosition(Vector3dc, Vector3d)}.
-     * 
+     *
      * @see #transformPosition(Vector3dc, Vector3d)
      * @see #transform(Vector4d)
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @return v
@@ -683,10 +683,10 @@ public interface Matrix4x3dc {
      * will represent a position/location in 3D-space rather than a direction.
      * <p>
      * In order to store the result in the same vector, use {@link #transformPosition(Vector3d)}.
-     * 
+     *
      * @see #transformPosition(Vector3d)
      * @see #transform(Vector4dc, Vector4d)
-     * 
+     *
      * @param v
      *          the vector to transform
      * @param dest
@@ -704,7 +704,7 @@ public interface Matrix4x3dc {
      * not take the translation part of the matrix into account.
      * <p>
      * In order to store the result in another vector, use {@link #transformDirection(Vector3dc, Vector3d)}.
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @return v
@@ -720,7 +720,7 @@ public interface Matrix4x3dc {
      * not take the translation part of the matrix into account.
      * <p>
      * In order to store the result in the same vector, use {@link #transformDirection(Vector3d)}.
-     * 
+     *
      * @param v
      *          the vector to transform and to hold the final result
      * @param dest
@@ -737,7 +737,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @param xyz
      *            the factors of the x, y and z component, respectively
      * @param dest
@@ -754,7 +754,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -775,9 +775,9 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>
      * , the scaling will be applied first!
-     * 
+     *
      * @see #scale(double, double, double, Matrix4x3d)
-     * 
+     *
      * @param xyz
      *            the factor for all components
      * @param dest
@@ -794,7 +794,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * scaling will be applied first!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -813,7 +813,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>S * M</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>S * M * v</code>
      * , the scaling will be applied last!
-     * 
+     *
      * @param x
      *            the factor of the x component
      * @param y
@@ -830,7 +830,7 @@ public interface Matrix4x3dc {
      * Apply rotation to this matrix by rotating the given amount of radians
      * about the given axis specified as x, y and z components and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -838,7 +838,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>
      * , the rotation will be applied first!
-     * 
+     *
      * @param ang
      *            the angle is in radians
      * @param x
@@ -861,7 +861,7 @@ public interface Matrix4x3dc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -871,7 +871,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -890,7 +890,7 @@ public interface Matrix4x3dc {
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaterniondc} to this matrix while using <code>(ox, oy, oz)</code> as the rotation origin,
      * and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -902,7 +902,7 @@ public interface Matrix4x3dc {
      * This method is equivalent to calling: <code>translate(ox, oy, oz, dest).rotate(quat).translate(-ox, -oy, -oz)</code>
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param ox
@@ -923,7 +923,7 @@ public interface Matrix4x3dc {
      * <p>
      * The axis described by the three components needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -933,7 +933,7 @@ public interface Matrix4x3dc {
      * rotation will be applied last!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param x
@@ -956,7 +956,7 @@ public interface Matrix4x3dc {
      * matrix, then the new matrix will be <code>M * T</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>M * T * v</code>, the translation will be applied first!
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -973,7 +973,7 @@ public interface Matrix4x3dc {
      * matrix, then the new matrix will be <code>M * T</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>M * T * v</code>, the translation will be applied first!
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -990,7 +990,7 @@ public interface Matrix4x3dc {
      * matrix, then the new matrix will be <code>M * T</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>M * T * v</code>, the translation will be applied first!
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -1011,7 +1011,7 @@ public interface Matrix4x3dc {
      * matrix, then the new matrix will be <code>T * M</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>T * M * v</code>, the translation will be applied last!
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -1028,7 +1028,7 @@ public interface Matrix4x3dc {
      * matrix, then the new matrix will be <code>T * M</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>T * M * v</code>, the translation will be applied last!
-     * 
+     *
      * @param offset
      *          the number of units in x, y and z by which to translate
      * @param dest
@@ -1045,7 +1045,7 @@ public interface Matrix4x3dc {
      * matrix, then the new matrix will be <code>T * M</code>. So when
      * transforming a vector <code>v</code> with the new matrix by using
      * <code>T * M * v</code>, the translation will be applied last!
-     * 
+     *
      * @param x
      *          the offset to translate in x
      * @param y
@@ -1059,10 +1059,10 @@ public interface Matrix4x3dc {
     Matrix4x3d translateLocal(double x, double y, double z, Matrix4x3d dest);
 
     /**
-     * Apply rotation about the X axis to this matrix by rotating the given amount of radians 
+     * Apply rotation about the X axis to this matrix by rotating the given amount of radians
      * and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1072,7 +1072,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param dest
@@ -1082,10 +1082,10 @@ public interface Matrix4x3dc {
     Matrix4x3d rotateX(double ang, Matrix4x3d dest);
 
     /**
-     * Apply rotation about the Y axis to this matrix by rotating the given amount of radians 
+     * Apply rotation about the Y axis to this matrix by rotating the given amount of radians
      * and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1095,7 +1095,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param dest
@@ -1105,10 +1105,10 @@ public interface Matrix4x3dc {
     Matrix4x3d rotateY(double ang, Matrix4x3d dest);
 
     /**
-     * Apply rotation about the Z axis to this matrix by rotating the given amount of radians 
+     * Apply rotation about the Z axis to this matrix by rotating the given amount of radians
      * and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1118,7 +1118,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations">http://en.wikipedia.org</a>
-     * 
+     *
      * @param ang
      *            the angle in radians
      * @param dest
@@ -1131,7 +1131,7 @@ public interface Matrix4x3dc {
      * Apply rotation of <code>angleX</code> radians about the X axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1141,7 +1141,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateX(angleX, dest).rotateY(angleY).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleX
      *            the angle to rotate about X
      * @param angleY
@@ -1158,7 +1158,7 @@ public interface Matrix4x3dc {
      * Apply rotation of <code>angleZ</code> radians about the Z axis, followed by a rotation of <code>angleY</code> radians about the Y axis and
      * followed by a rotation of <code>angleX</code> radians about the X axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1168,7 +1168,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angleZ, dest).rotateY(angleY).rotateX(angleX)</code>
-     * 
+     *
      * @param angleZ
      *            the angle to rotate about Z
      * @param angleY
@@ -1185,7 +1185,7 @@ public interface Matrix4x3dc {
      * Apply rotation of <code>angleY</code> radians about the Y axis, followed by a rotation of <code>angleX</code> radians about the X axis and
      * followed by a rotation of <code>angleZ</code> radians about the Z axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1195,7 +1195,7 @@ public interface Matrix4x3dc {
      * rotation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>rotateY(angleY, dest).rotateX(angleX).rotateZ(angleZ)</code>
-     * 
+     *
      * @param angleY
      *            the angle to rotate about Y
      * @param angleX
@@ -1212,7 +1212,7 @@ public interface Matrix4x3dc {
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaterniondc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1222,7 +1222,7 @@ public interface Matrix4x3dc {
      * the quaternion rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param dest
@@ -1235,7 +1235,7 @@ public interface Matrix4x3dc {
      * Apply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1245,7 +1245,7 @@ public interface Matrix4x3dc {
      * the quaternion rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -1260,7 +1260,7 @@ public interface Matrix4x3dc {
      * <p>
      * This method assumes <code>this</code> to only contain a translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1270,7 +1270,7 @@ public interface Matrix4x3dc {
      * the quaternion rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param dest
@@ -1285,7 +1285,7 @@ public interface Matrix4x3dc {
      * <p>
      * This method assumes <code>this</code> to only contain a translation.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1295,7 +1295,7 @@ public interface Matrix4x3dc {
      * the quaternion rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -1308,7 +1308,7 @@ public interface Matrix4x3dc {
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaterniondc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1318,7 +1318,7 @@ public interface Matrix4x3dc {
      * the quaternion rotation will be applied last!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaterniondc}
      * @param dest
@@ -1331,7 +1331,7 @@ public interface Matrix4x3dc {
      * Pre-multiply the rotation - and possibly scaling - transformation of the given {@link Quaternionfc} to this matrix and store
      * the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1341,7 +1341,7 @@ public interface Matrix4x3dc {
      * the quaternion rotation will be applied last!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Quaternion">http://en.wikipedia.org</a>
-     * 
+     *
      * @param quat
      *          the {@link Quaternionfc}
      * @param dest
@@ -1355,7 +1355,7 @@ public interface Matrix4x3dc {
      * <p>
      * The axis described by the <code>axis</code> vector needs to be a unit vector.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1365,9 +1365,9 @@ public interface Matrix4x3dc {
      * the {@link AxisAngle4f} rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4f} (needs to be {@link AxisAngle4f#normalize() normalized})
      * @param dest
@@ -1379,7 +1379,7 @@ public interface Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating about the given {@link AxisAngle4d} and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1389,9 +1389,9 @@ public interface Matrix4x3dc {
      * the {@link AxisAngle4d} rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param axisAngle
      *          the {@link AxisAngle4d} (needs to be {@link AxisAngle4d#normalize() normalized})
      * @param dest
@@ -1403,7 +1403,7 @@ public interface Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1413,9 +1413,9 @@ public interface Matrix4x3dc {
      * the axis-angle rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -1429,7 +1429,7 @@ public interface Matrix4x3dc {
     /**
      * Apply a rotation transformation, rotating the given radians about the specified axis and store the result in <code>dest</code>.
      * <p>
-     * When used with a right-handed coordinate system, the produced rotation will rotate a vector 
+     * When used with a right-handed coordinate system, the produced rotation will rotate a vector
      * counter-clockwise around the rotation axis, when viewing along the negative axis direction towards the origin.
      * When used with a left-handed coordinate system, the rotation is clockwise.
      * <p>
@@ -1439,9 +1439,9 @@ public interface Matrix4x3dc {
      * the axis-angle rotation will be applied first!
      * <p>
      * Reference: <a href="http://en.wikipedia.org/wiki/Rotation_matrix#Axis_and_angle">http://en.wikipedia.org</a>
-     * 
+     *
      * @see #rotate(double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param axis
@@ -1454,7 +1454,7 @@ public interface Matrix4x3dc {
 
     /**
      * Get the row at the given <code>row</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param row
      *          the row index in <code>[0..2]</code>
      * @param dest
@@ -1466,7 +1466,7 @@ public interface Matrix4x3dc {
 
     /**
      * Get the column at the given <code>column</code> index, starting with <code>0</code>.
-     * 
+     *
      * @param column
      *          the column index in <code>[0..3]</code>
      * @param dest
@@ -1482,7 +1482,7 @@ public interface Matrix4x3dc {
      * All other values of <code>dest</code> will be set to identity.
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -1494,7 +1494,7 @@ public interface Matrix4x3dc {
      * and store it into <code>dest</code>.
      * <p>
      * The normal matrix of <code>m</code> is the transpose of the inverse of <code>m</code>.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -1507,7 +1507,7 @@ public interface Matrix4x3dc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix3d)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -1521,7 +1521,7 @@ public interface Matrix4x3dc {
      * <p>
      * The cofactor matrix can be used instead of {@link #normal(Matrix4x3d)} to transform normals
      * when the orientation of the normals with respect to the surface should be preserved.
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -1534,7 +1534,7 @@ public interface Matrix4x3dc {
      * The resulting matrix will map unit vectors to unit vectors, though a pair of orthogonal input unit
      * vectors need not be mapped to a pair of orthogonal output vectors if the original matrix was not orthogonal itself
      * (i.e. had <i>skewing</i>).
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -1547,7 +1547,7 @@ public interface Matrix4x3dc {
      * The resulting matrix will map unit vectors to unit vectors, though a pair of orthogonal input unit
      * vectors need not be mapped to a pair of orthogonal output vectors if the original matrix was not orthogonal itself
      * (i.e. had <i>skewing</i>).
-     * 
+     *
      * @param dest
      *             will hold the result
      * @return dest
@@ -1566,7 +1566,7 @@ public interface Matrix4x3dc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb281733(v=vs.85).aspx">msdn.microsoft.com</a>
-     * 
+     *
      * @param a
      *          the x factor in the plane equation
      * @param b
@@ -1589,7 +1589,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param nx
      *          the x-coordinate of the plane normal
      * @param ny
@@ -1620,7 +1620,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param orientation
      *          the plane orientation
      * @param point
@@ -1639,7 +1639,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * R</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * R * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param normal
      *          the plane normal
      * @param point
@@ -1660,7 +1660,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -1692,7 +1692,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -1721,7 +1721,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -1753,7 +1753,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -1785,7 +1785,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -1816,7 +1816,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -1844,7 +1844,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -1875,7 +1875,7 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @param width
      *            the distance between the right and left frustum edges
      * @param height
@@ -1903,9 +1903,9 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #ortho(double, double, double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -1932,9 +1932,9 @@ public interface Matrix4x3dc {
      * orthographic projection transformation will be applied first!
      * <p>
      * Reference: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html#ortho">http://www.songho.ca</a>
-     * 
+     *
      * @see #orthoLH(double, double, double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param left
      *            the distance from the center to the left frustum edge
      * @param right
@@ -1951,7 +1951,7 @@ public interface Matrix4x3dc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -1961,10 +1961,10 @@ public interface Matrix4x3dc {
      * This is equivalent to calling
      * {@link #lookAt(Vector3dc, Vector3dc, Vector3dc, Matrix4x3d) lookAt}
      * with <code>eye = (0, 0, 0)</code> and <code>center = dir</code>.
-     * 
+     *
      * @see #lookAlong(double, double, double, double, double, double, Matrix4x3d)
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc, Matrix4x3d)
-     * 
+     *
      * @param dir
      *            the direction in space to look along
      * @param up
@@ -1977,7 +1977,7 @@ public interface Matrix4x3dc {
 
     /**
      * Apply a rotation transformation to this matrix to make <code>-z</code> point along <code>dir</code>
-     * and store the result in <code>dest</code>. 
+     * and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookalong rotation matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
@@ -1987,9 +1987,9 @@ public interface Matrix4x3dc {
      * This is equivalent to calling
      * {@link #lookAt(double, double, double, double, double, double, double, double, double, Matrix4x3d) lookAt()}
      * with <code>eye = (0, 0, 0)</code> and <code>center = dir</code>.
-     * 
+     *
      * @see #lookAt(double, double, double, double, double, double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -2009,16 +2009,16 @@ public interface Matrix4x3dc {
     Matrix4x3d lookAlong(double dirX, double dirY, double dirZ, double upX, double upY, double upZ, Matrix4x3d dest);
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * L * v</code>,
      * the lookat transformation will be applied first!
-     * 
+     *
      * @see #lookAt(double, double, double, double, double, double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -2032,16 +2032,16 @@ public interface Matrix4x3dc {
     Matrix4x3d lookAt(Vector3dc eye, Vector3dc center, Vector3dc up, Matrix4x3d dest);
 
     /**
-     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a right-handed coordinate system,
      * that aligns <code>-z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * L * v</code>,
      * the lookat transformation will be applied first!
-     * 
+     *
      * @see #lookAt(Vector3dc, Vector3dc, Vector3dc, Matrix4x3d)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -2067,16 +2067,16 @@ public interface Matrix4x3dc {
     Matrix4x3d lookAt(double eyeX, double eyeY, double eyeZ, double centerX, double centerY, double centerZ, double upX, double upY, double upZ, Matrix4x3d dest);
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * L * v</code>,
      * the lookat transformation will be applied first!
-     * 
+     *
      * @see #lookAtLH(double, double, double, double, double, double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param eye
      *            the position of the camera
      * @param center
@@ -2090,16 +2090,16 @@ public interface Matrix4x3dc {
     Matrix4x3d lookAtLH(Vector3dc eye, Vector3dc center, Vector3dc up, Matrix4x3d dest);
 
     /**
-     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system, 
+     * Apply a "lookat" transformation to this matrix for a left-handed coordinate system,
      * that aligns <code>+z</code> with <code>center - eye</code> and store the result in <code>dest</code>.
      * <p>
      * If <code>M</code> is <code>this</code> matrix and <code>L</code> the lookat matrix,
      * then the new matrix will be <code>M * L</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * L * v</code>,
      * the lookat transformation will be applied first!
-     * 
+     *
      * @see #lookAtLH(Vector3dc, Vector3dc, Vector3dc, Matrix4x3d)
-     * 
+     *
      * @param eyeX
      *              the x-coordinate of the eye/camera location
      * @param eyeY
@@ -2143,7 +2143,7 @@ public interface Matrix4x3dc {
      * @param which
      *          one of the six possible planes, given as numeric constants
      *          {@link #PLANE_NX}, {@link #PLANE_PX},
-     *          {@link #PLANE_NY}, {@link #PLANE_PY}, 
+     *          {@link #PLANE_NY}, {@link #PLANE_PY},
      *          {@link #PLANE_NZ} and {@link #PLANE_PZ}
      * @param plane
      *          will hold the computed plane equation.
@@ -2155,7 +2155,7 @@ public interface Matrix4x3dc {
     /**
      * Obtain the direction of <code>+Z</code> before the transformation represented by <code>this</code> matrix is applied.
      * <p>
-     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction
      * that is transformed to <code>+Z</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -2166,7 +2166,7 @@ public interface Matrix4x3dc {
      * If <code>this</code> is already an orthogonal matrix, then consider using {@link #normalizedPositiveZ(Vector3d)} instead.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+Z</code>
      * @return dir
@@ -2177,7 +2177,7 @@ public interface Matrix4x3dc {
      * Obtain the direction of <code>+Z</code> before the transformation represented by <code>this</code> <i>orthogonal</i> matrix is applied.
      * This method only produces correct results if <code>this</code> is an <i>orthogonal</i> matrix.
      * <p>
-     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction
      * that is transformed to <code>+Z</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -2187,7 +2187,7 @@ public interface Matrix4x3dc {
      * </pre>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+Z</code>
      * @return dir
@@ -2197,7 +2197,7 @@ public interface Matrix4x3dc {
     /**
      * Obtain the direction of <code>+X</code> before the transformation represented by <code>this</code> matrix is applied.
      * <p>
-     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction
      * that is transformed to <code>+X</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -2208,7 +2208,7 @@ public interface Matrix4x3dc {
      * If <code>this</code> is already an orthogonal matrix, then consider using {@link #normalizedPositiveX(Vector3d)} instead.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+X</code>
      * @return dir
@@ -2219,7 +2219,7 @@ public interface Matrix4x3dc {
      * Obtain the direction of <code>+X</code> before the transformation represented by <code>this</code> <i>orthogonal</i> matrix is applied.
      * This method only produces correct results if <code>this</code> is an <i>orthogonal</i> matrix.
      * <p>
-     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction
      * that is transformed to <code>+X</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -2229,7 +2229,7 @@ public interface Matrix4x3dc {
      * </pre>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+X</code>
      * @return dir
@@ -2239,7 +2239,7 @@ public interface Matrix4x3dc {
     /**
      * Obtain the direction of <code>+Y</code> before the transformation represented by <code>this</code> matrix is applied.
      * <p>
-     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction
      * that is transformed to <code>+Y</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -2250,7 +2250,7 @@ public interface Matrix4x3dc {
      * If <code>this</code> is already an orthogonal matrix, then consider using {@link #normalizedPositiveY(Vector3d)} instead.
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+Y</code>
      * @return dir
@@ -2261,7 +2261,7 @@ public interface Matrix4x3dc {
      * Obtain the direction of <code>+Y</code> before the transformation represented by <code>this</code> <i>orthogonal</i> matrix is applied.
      * This method only produces correct results if <code>this</code> is an <i>orthogonal</i> matrix.
      * <p>
-     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction 
+     * This method uses the rotation component of the left 3x3 submatrix to obtain the direction
      * that is transformed to <code>+Y</code> by <code>this</code> matrix.
      * <p>
      * This method is equivalent to the following code:
@@ -2271,7 +2271,7 @@ public interface Matrix4x3dc {
      * </pre>
      * <p>
      * Reference: <a href="http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/threeD/">http://www.euclideanspace.com</a>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+Y</code>
      * @return dir
@@ -2287,7 +2287,7 @@ public interface Matrix4x3dc {
      * Matrix4x3f inv = new Matrix4x3f(this).invert();
      * inv.transformPosition(origin.set(0, 0, 0));
      * </pre>
-     * 
+     *
      * @param origin
      *          will hold the position transformed to the origin
      * @return origin
@@ -2307,7 +2307,7 @@ public interface Matrix4x3dc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node192.html">ftp.sgi.com</a>
-     * 
+     *
      * @param light
      *          the light's vector
      * @param a
@@ -2337,7 +2337,7 @@ public interface Matrix4x3dc {
      * reflection will be applied first!
      * <p>
      * Reference: <a href="ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node192.html">ftp.sgi.com</a>
-     * 
+     *
      * @param lightX
      *          the x-component of the light's vector
      * @param lightY
@@ -2373,7 +2373,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param light
      *          the light's vector
      * @param planeTransform
@@ -2397,7 +2397,7 @@ public interface Matrix4x3dc {
      * then the new matrix will be <code>M * S</code>. So when transforming a
      * vector <code>v</code> with the new matrix by using <code>M * S * v</code>, the
      * reflection will be applied first!
-     * 
+     *
      * @param lightX
      *          the x-component of the light vector
      * @param lightY
@@ -2418,7 +2418,7 @@ public interface Matrix4x3dc {
      * Apply a picking transformation to this matrix using the given window coordinates <code>(x, y)</code> as the pick center
      * and the given <code>(width, height)</code> as the size of the picking region in window coordinates, and store the result
      * in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x coordinate of the picking region center in window coordinates
      * @param y
@@ -2440,7 +2440,7 @@ public interface Matrix4x3dc {
      * position of the arcball and the specified X and Y rotation angles, and store the result in <code>dest</code>.
      * <p>
      * This method is equivalent to calling: <code>translate(0, 0, -radius).rotateX(angleX).rotateY(angleY).translate(-centerX, -centerY, -centerZ)</code>
-     * 
+     *
      * @param radius
      *          the arcball radius
      * @param centerX
@@ -2464,7 +2464,7 @@ public interface Matrix4x3dc {
      * position of the arcball and the specified X and Y rotation angles, and store the result in <code>dest</code>.
      * <p>
      * This method is equivalent to calling: <code>translate(0, 0, -radius).rotateX(angleX).rotateY(angleY).translate(-center.x, -center.y, -center.z)</code>
-     * 
+     *
      * @param radius
      *          the arcball radius
      * @param center
@@ -2485,7 +2485,7 @@ public interface Matrix4x3dc {
      * and maximum corner stored in <code>outMax</code>.
      * <p>
      * Reference: <a href="http://dev.theomader.com/transform-bounding-boxes/">http://dev.theomader.com</a>
-     * 
+     *
      * @param minX
      *              the x coordinate of the minimum corner of the axis-aligned box
      * @param minY
@@ -2510,7 +2510,7 @@ public interface Matrix4x3dc {
      * Transform the axis-aligned box given as the minimum corner <code>min</code> and maximum corner <code>max</code>
      * by <code>this</code> matrix and compute the axis-aligned box of the result whose minimum corner is stored in <code>outMin</code>
      * and maximum corner stored in <code>outMax</code>.
-     * 
+     *
      * @param min
      *              the minimum corner of the axis-aligned box
      * @param max
@@ -2541,7 +2541,7 @@ public interface Matrix4x3dc {
     Matrix4x3d lerp(Matrix4x3dc other, double t, Matrix4x3d dest);
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the <code>-z</code> axis with <code>dir</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -2551,9 +2551,9 @@ public interface Matrix4x3dc {
      * the lookat transformation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix4x3d().lookAt(new Vector3d(), new Vector3d(dir).negate(), up).invert(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(double, double, double, double, double, double, Matrix4x3d)
-     * 
+     *
      * @param dir
      *              the direction to rotate towards
      * @param up
@@ -2565,7 +2565,7 @@ public interface Matrix4x3dc {
     Matrix4x3d rotateTowards(Vector3dc dir, Vector3dc up, Matrix4x3d dest);
 
     /**
-     * Apply a model transformation to this matrix for a right-handed coordinate system, 
+     * Apply a model transformation to this matrix for a right-handed coordinate system,
      * that aligns the <code>-z</code> axis with <code>(dirX, dirY, dirZ)</code>
      * and store the result in <code>dest</code>.
      * <p>
@@ -2575,9 +2575,9 @@ public interface Matrix4x3dc {
      * the lookat transformation will be applied first!
      * <p>
      * This method is equivalent to calling: <code>mul(new Matrix4x3d().lookAt(0, 0, 0, -dirX, -dirY, -dirZ, upX, upY, upZ).invert(), dest)</code>
-     * 
+     *
      * @see #rotateTowards(Vector3dc, Vector3dc, Matrix4x3d)
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to rotate towards
      * @param dirY
@@ -2613,7 +2613,7 @@ public interface Matrix4x3dc {
      * </pre>
      * <p>
      * Reference: <a href="http://nghiaho.com/?page_id=846">http://nghiaho.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the extracted Euler angles
      * @return dest
@@ -2641,7 +2641,7 @@ public interface Matrix4x3dc {
      * 0 1 b 0
      * 0 0 1 0
      * </pre>
-     * 
+     *
      * @param a
      *            the value for the z factor that applies to x
      * @param b
@@ -2659,7 +2659,7 @@ public interface Matrix4x3dc {
      * Please note that this method is not used by any data structure such as {@link ArrayList} {@link HashSet} or {@link HashMap}
      * and their operations, such as {@link ArrayList#contains(Object)} or {@link HashSet#remove(Object)}, since those
      * data structures only use the {@link Object#equals(Object)} and {@link Object#hashCode()} methods.
-     * 
+     *
      * @param m
      *          the other matrix
      * @param delta

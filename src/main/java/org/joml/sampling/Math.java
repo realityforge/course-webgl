@@ -25,7 +25,7 @@ package org.joml.sampling;
 
 /**
  * Internal Math class used by the sampling package.
- * 
+ *
  * @author Kai Burjack
  */
 class Math extends org.joml.Math {
@@ -43,7 +43,7 @@ class Math extends org.joml.Math {
     /**
      * Reference: <a href=
      * "http://www.java-gaming.org/topics/joml-1-8-0-release/37491/msg/361815/view.html#msg361815">http://www.java-gaming.org/</a>
-     * 
+     *
      * @author roquendm
      */
     static double sin_roquen_9(double v) {

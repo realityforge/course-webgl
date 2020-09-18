@@ -70,7 +70,7 @@ public class Rayd implements Externalizable {
 
     /**
      * Create a new {@link Rayd} as a copy of the given <code>source</code>.
-     * 
+     *
      * @param source
      *          the {@link Rayd} to copy from
      */
@@ -85,7 +85,7 @@ public class Rayd implements Externalizable {
 
     /**
      * Create a new {@link Rayd} with the given <code>origin</code> and <code>direction</code>.
-     * 
+     *
      * @param origin
      *          the origin of the ray
      * @param direction
@@ -102,7 +102,7 @@ public class Rayd implements Externalizable {
 
     /**
      * Create a new {@link Rayd} with the given origin and direction.
-     * 
+     *
      * @param oX
      *          the x coordinate of the ray's origin
      * @param oY
@@ -171,7 +171,7 @@ public class Rayd implements Externalizable {
      * Return a string representation of this ray.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -180,7 +180,7 @@ public class Rayd implements Externalizable {
 
     /**
      * Return a string representation of this ray by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation

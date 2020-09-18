@@ -58,8 +58,8 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Create a new {@link Vector2d} and initialize both of its components with the given value.
-     * 
-     * @param d    
+     *
+     * @param d
      *          the value of both components
      */
     public Vector2d(double d) {
@@ -69,7 +69,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Create a new {@link Vector2d} and initialize its components to the given values.
-     * 
+     *
      * @param x
      *          the x value
      * @param y
@@ -82,7 +82,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Create a new {@link Vector2d} and initialize its components to the one of the given vector.
-     * 
+     *
      * @param v
      *          the {@link Vector2dc} to copy the values from
      */
@@ -93,7 +93,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Create a new {@link Vector2d} and initialize its components to the one of the given vector.
-     * 
+     *
      * @param v
      *          the {@link Vector2fc} to copy the values from
      */
@@ -104,7 +104,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Create a new {@link Vector2d} and initialize its components to the one of the given vector.
-     * 
+     *
      * @param v
      *          the {@link Vector2ic} to copy the values from
      */
@@ -116,7 +116,7 @@ public class Vector2d implements Externalizable, Vector2dc {
     /**
      * Create a new {@link Vector2d} and initialize its two components from the first
      * two elements of the given array.
-     * 
+     *
      * @param xy
      *          the array containing at least three elements
      */
@@ -128,7 +128,7 @@ public class Vector2d implements Externalizable, Vector2dc {
     /**
      * Create a new {@link Vector2d} and initialize its two components from the first
      * two elements of the given array.
-     * 
+     *
      * @param xy
      *          the array containing at least two elements
      */
@@ -161,7 +161,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set the x and y components to the supplied values.
-     * 
+     *
      * @param x
      *          the x value
      * @param y
@@ -176,7 +176,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set this {@link Vector2d} to the values of v.
-     * 
+     *
      * @param v
      *          the vector to copy from
      * @return this
@@ -189,7 +189,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set this {@link Vector2d} to be a clone of <code>v</code>.
-     * 
+     *
      * @param v
      *          the vector to copy from
      * @return this
@@ -202,7 +202,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set this {@link Vector2d} to be a clone of <code>v</code>.
-     * 
+     *
      * @param v
      *          the vector to copy from
      * @return this
@@ -215,7 +215,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set the two components of this vector to the first two elements of the given array.
-     * 
+     *
      * @param xy
      *          the array containing at least three elements
      * @return this
@@ -228,7 +228,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set the two components of this vector to the first two elements of the given array.
-     * 
+     *
      * @param xy
      *          the array containing at least two elements
      * @return this
@@ -298,7 +298,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set this vector to be one of its perpendicular vectors.
-     * 
+     *
      * @return this
      */
     public Vector2d perpendicular() {
@@ -310,7 +310,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Subtract <code>v</code> from this vector.
-     * 
+     *
      * @param v
      *          the vector to subtract
      * @return this
@@ -323,7 +323,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Subtract <code>(x, y)</code> from this vector.
-     * 
+     *
      * @param x
      *          the x component to subtract
      * @param y
@@ -344,7 +344,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Subtract <code>v</code> from this vector.
-     * 
+     *
      * @param v
      *          the vector to subtract
      * @return this
@@ -369,7 +369,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Multiply the components of this vector by the given scalar.
-     * 
+     *
      * @param scalar
      *        the value to multiply this vector's components by
      * @return this
@@ -388,7 +388,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Multiply the components of this Vector2d by the given scalar values and store the result in <code>this</code>.
-     * 
+     *
      * @param x
      *          the x component to multiply this vector by
      * @param y
@@ -409,7 +409,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Multiply this Vector2d component-wise by another Vector2d.
-     * 
+     *
      * @param v
      *          the vector to multiply by
      * @return this
@@ -428,7 +428,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Divide this Vector2d by the given scalar value.
-     * 
+     *
      * @param scalar
      *          the scalar to divide this vector by
      * @return this
@@ -449,7 +449,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Divide the components of this Vector2d by the given scalar values and store the result in <code>this</code>.
-     * 
+     *
      * @param x
      *          the x component to divide this vector by
      * @param y
@@ -470,7 +470,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Divide this Vector2d component-wise by another Vector2dc.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @return this
@@ -483,7 +483,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Divide this Vector3d component-wise by another Vector2fc.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @return this
@@ -602,7 +602,7 @@ public class Vector2d implements Externalizable, Vector2dc {
      * Multiply the given 3x2 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>z</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -627,7 +627,7 @@ public class Vector2d implements Externalizable, Vector2dc {
      * Multiply the given 3x2 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>z</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -770,7 +770,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Normalize this vector.
-     * 
+     *
      * @return this
      */
     public Vector2d normalize() {
@@ -789,7 +789,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Scale this vector to have the given length.
-     * 
+     *
      * @param length
      *          the desired length
      * @return this
@@ -810,7 +810,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Add <code>v</code> to this vector.
-     * 
+     *
      * @param v
      *          the vector to add
      * @return this
@@ -823,7 +823,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Add <code>(x, y)</code> to this vector.
-     * 
+     *
      * @param x
      *          the x component to add
      * @param y
@@ -844,7 +844,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Add <code>v</code> to this vector.
-     * 
+     *
      * @param v
      *          the vector to add
      * @return this
@@ -869,7 +869,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set all components to zero.
-     * 
+     *
      * @return this
      */
     public Vector2d zero() {
@@ -891,7 +891,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Negate this vector.
-     * 
+     *
      * @return this
      */
     public Vector2d negate() {
@@ -912,7 +912,7 @@ public class Vector2d implements Externalizable, Vector2dc {
      * <p>
      * If <code>t</code> is <code>0.0</code> then the result is <code>this</code>. If the interpolation factor is <code>1.0</code>
      * then the result is <code>other</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param t
@@ -983,7 +983,7 @@ public class Vector2d implements Externalizable, Vector2dc {
      * Return a string representation of this vector.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -992,7 +992,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Return a string representation of this vector by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation
@@ -1003,7 +1003,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -1018,7 +1018,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -1159,7 +1159,7 @@ public class Vector2d implements Externalizable, Vector2dc {
 
     /**
      * Set <code>this</code> vector's components to their respective absolute values.
-     * 
+     *
      * @return this
      */
     public Vector2d absolute() {

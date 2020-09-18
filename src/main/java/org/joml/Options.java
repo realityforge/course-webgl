@@ -29,7 +29,7 @@ import java.util.Arrays;
 
 /**
  * Utility class for reading system properties.
- * 
+ *
  * @author Kai Burjack
  */
 final class Options {

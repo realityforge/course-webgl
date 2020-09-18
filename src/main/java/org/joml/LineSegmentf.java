@@ -32,7 +32,7 @@ import java.text.NumberFormat;
 
 /**
  * Represents an undirected line segment between two points.
- * 
+ *
  * @author Kai Burjack
  */
 public class LineSegmentf implements Externalizable {
@@ -70,7 +70,7 @@ public class LineSegmentf implements Externalizable {
 
     /**
      * Create a new {@link LineSegmentf} as a copy of the given <code>source</code>.
-     * 
+     *
      * @param source
      *          the {@link LineSegmentf} to copy from
      */
@@ -85,7 +85,7 @@ public class LineSegmentf implements Externalizable {
 
     /**
      * Create a new {@link LineSegmentf} between the given two points.
-     * 
+     *
      * @param a
      *          the first point
      * @param b
@@ -102,7 +102,7 @@ public class LineSegmentf implements Externalizable {
 
     /**
      * Create a new {@link LineSegmentf} between the two points.
-     * 
+     *
      * @param aX
      *          the x coordinate of the first point
      * @param aY
@@ -165,7 +165,7 @@ public class LineSegmentf implements Externalizable {
      * Return a string representation of this line segment.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -174,7 +174,7 @@ public class LineSegmentf implements Externalizable {
 
     /**
      * Return a string representation of this line segment by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation

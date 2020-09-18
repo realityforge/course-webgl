@@ -31,7 +31,7 @@ import org.joml.Vector3f;
 
 /**
  * Creates samples using the "Best Candidate" algorithm.
- * 
+ *
  * @author Kai Burjack
  */
 public class BestCandidateSampling {
@@ -48,13 +48,13 @@ public class BestCandidateSampling {
      * <li><a href="https://arxiv.org/ftp/cs/papers/0701/0701164.pdf">Indexing the Sphere with the Hierarchical Triangular Mesh</a>
      * <li><a href="http://math.stackexchange.com/questions/1244512/point-in-a-spherical-triangle-test">Point in a spherical triangle test</a>
      * </ul>
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Sphere {
         /**
          * Implementation of a Hierarchical Triangular Mesh structure to index the sample points on the unit sphere for accelerating 1-nearest neighbor searches.
-         * 
+         *
          * @author Kai Burjack
          */
         private static final class Node {
@@ -154,7 +154,7 @@ public class BestCandidateSampling {
                     Node c = children[i];
                     /*
                      * Idea: Test whether ray from origin towards point cuts triangle
-                     * 
+                     *
                      * See: http://math.stackexchange.com/questions/1244512/point-in-a-spherical-triangle-test
                      */
                     if (isPointOnSphericalTriangle(o.x, o.y, o.z, c.v0x, c.v0y, c.v0z, c.v1x, c.v1y, c.v1z, c.v2x, c.v2y, c.v2z, 1E-6f)) {
@@ -294,7 +294,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and store the coordinates of all generated samples into the given <code>xyzs</code> float array.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param xyzs
          *            will hold the x, y and z coordinates of all samples in the order <code>XYZXYZXYZ...</code>.
          *            This array must have a length of at least <code>numSamples</code>
@@ -315,7 +315,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the seed to initialize the pseudo-random number generator with.
-         * 
+         *
          * @param seed
          *          the seed value
          * @return this
@@ -327,7 +327,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of samples to generate.
-         * 
+         *
          * @param numSamples
          *          the number of samples
          * @return this
@@ -339,7 +339,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of candidates to try for each generated sample.
-         * 
+         *
          * @param numCandidates
          *          the number of candidates to try
          * @return this
@@ -353,7 +353,7 @@ public class BestCandidateSampling {
          * Set whether to generate samples on a hemisphere around the <code>+Z</code> axis.
          * <p>
          * The default is <code>false</code>, which will generate samples on the whole unit sphere.
-         * 
+         *
          * @param onHemisphere
          *          whether to generate samples on the hemisphere
          * @return this
@@ -367,7 +367,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample call the given <code>callback</code> for each generated sample.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param callback
          *            will be called with the coordinates of each generated sample position
          * @return this
@@ -380,7 +380,7 @@ public class BestCandidateSampling {
                 for (int c = 0; c < numCandidates; c++) {
                     /*
                      * Random point on sphere
-                     * 
+                     *
                      * Reference: <a href="http://mathworld.wolfram.com/SpherePointPicking.html">http://mathworld.wolfram.com/</a>
                      */
                     float x1, x2;
@@ -412,7 +412,7 @@ public class BestCandidateSampling {
 
     /**
      * Simple quatree that can handle points and 1-nearest neighbor search.
-     * 
+     *
      * @author Kai Burjack
      */
     private static class QuadTree {
@@ -477,7 +477,7 @@ public class BestCandidateSampling {
 
         float nearest(float x, float y, float lowerBound, float upperBound) {
             float ub = upperBound;
-            if (x < minX - upperBound || x > minX + hs * 2 + upperBound || y < minY - upperBound 
+            if (x < minX - upperBound || x > minX + hs * 2 + upperBound || y < minY - upperBound
                     || y > minY + hs * 2 + upperBound)
                 return ub;
             if (children != null) {
@@ -505,7 +505,7 @@ public class BestCandidateSampling {
 
     /**
      * Generates Best Candidate samples on a unit disk.
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Disk {
@@ -520,7 +520,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the seed to initialize the pseudo-random number generator with.
-         * 
+         *
          * @param seed
          *          the seed value
          * @return this
@@ -532,7 +532,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of samples to generate.
-         * 
+         *
          * @param numSamples
          *          the number of samples
          * @return this
@@ -544,7 +544,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of candidates to try for each generated sample.
-         * 
+         *
          * @param numCandidates
          *          the number of candidates to try
          * @return this
@@ -558,7 +558,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and store the coordinates of all generated samples into the given <code>xys</code> float array.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param xys
          *            will hold the x and y coordinates of all samples in the order <code>XYXYXY...</code>.
          *            This array must have a length of at least <code>numSamples</code>
@@ -580,7 +580,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and call the given <code>callback</code> for each generated sample.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param callback
          *            will be called with the coordinates of each generated sample position
          * @return this
@@ -612,7 +612,7 @@ public class BestCandidateSampling {
 
     /**
      * Generates Best Candidate samples on a unit quad.
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Quad {
@@ -627,7 +627,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the seed to initialize the pseudo-random number generator with.
-         * 
+         *
          * @param seed
          *          the seed value
          * @return this
@@ -639,7 +639,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of samples to generate.
-         * 
+         *
          * @param numSamples
          *          the number of samples
          * @return this
@@ -651,7 +651,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of candidates to try for each generated sample.
-         * 
+         *
          * @param numCandidates
          *          the number of candidates to try
          * @return this
@@ -665,7 +665,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and store the coordinates of all generated samples into the given <code>xyzs</code> float array.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param xyzs
          *            will hold the x, y and z coordinates of all samples in the order <code>XYZXYZXYZ...</code>.
          *            This array must have a length of at least <code>numSamples</code>
@@ -687,7 +687,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and call the given <code>callback</code> for each generated sample.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param callback
          *            will be called with the coordinates of each generated sample position
          * @return this
@@ -716,7 +716,7 @@ public class BestCandidateSampling {
 
     /**
      * Simple octree for points and 1-nearest neighbor distance query.
-     * 
+     *
      * @author Kai Burjack
      */
     private static class Octree {
@@ -827,7 +827,7 @@ public class BestCandidateSampling {
 
     /**
      * Generates Best Candidate samples inside a unit cube.
-     * 
+     *
      * @author Kai Burjack
      */
     public static class Cube {
@@ -837,14 +837,14 @@ public class BestCandidateSampling {
 
         /**
          * Create a new instance of {@link Cube} to configure and generate 'best candidate' sample positions
-         * on the unit cube with each sample tried <code>numCandidates</code> number of times, and call the 
+         * on the unit cube with each sample tried <code>numCandidates</code> number of times, and call the
          * given <code>callback</code> for each sample generate.
          */
         public Cube() {}
 
         /**
          * Set the seed to initialize the pseudo-random number generator with.
-         * 
+         *
          * @param seed
          *          the seed value
          * @return this
@@ -856,7 +856,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of samples to generate.
-         * 
+         *
          * @param numSamples
          *          the number of samples
          * @return this
@@ -868,7 +868,7 @@ public class BestCandidateSampling {
 
         /**
          * Set the number of candidates to try for each generated sample.
-         * 
+         *
          * @param numCandidates
          *          the number of candidates to try
          * @return this
@@ -882,7 +882,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and store the coordinates of all generated samples into the given <code>xyzs</code> float array.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param xyzs
          *            will hold the x, y and z coordinates of all samples in the order <code>XYZXYZXYZ...</code>.
          *            This array must have a length of at least <code>numSamples</code>
@@ -905,7 +905,7 @@ public class BestCandidateSampling {
          * Generate 'best candidate' sample positions and call the given <code>callback</code> for each generated sample.
          * <p>
          * <em>This method performs heap allocations, so should be used sparingly.</em>
-         * 
+         *
          * @param callback
          *            will be called with the coordinates of each generated sample position
          * @return this

@@ -75,7 +75,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Create a new {@link Vector3d} with the given component values.
-     * 
+     *
      * @param x
      *          the value of x
      * @param y
@@ -91,7 +91,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Create a new {@link Vector3d} whose values will be copied from the given vector.
-     * 
+     *
      * @param v
      *          provides the initial values for the new vector
      */
@@ -103,7 +103,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Create a new {@link Vector3d} whose values will be copied from the given vector.
-     * 
+     *
      * @param v
      *          provides the initial values for the new vector
      */
@@ -145,7 +145,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Create a new {@link Vector3d} whose values will be copied from the given vector.
-     * 
+     *
      * @param v
      *          provides the initial values for the new vector
      */
@@ -173,7 +173,7 @@ public class Vector3d implements Externalizable, Vector3dc {
     /**
      * Create a new {@link Vector3d} and initialize its three components from the first
      * three elements of the given array.
-     * 
+     *
      * @param xyz
      *          the array containing at least three elements
      */
@@ -186,7 +186,7 @@ public class Vector3d implements Externalizable, Vector3dc {
     /**
      * Create a new {@link Vector3d} and initialize its three components from the first
      * three elements of the given array.
-     * 
+     *
      * @param xyz
      *          the array containing at least three elements
      */
@@ -211,7 +211,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set the x, y and z components to match the supplied vector.
-     * 
+     *
      * @param v
      *          the vector to set this vector's components from
      * @return this
@@ -225,7 +225,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set the x, y and z components to match the supplied vector.
-     * 
+     *
      * @param v
      *          the vector to set this vector's components from
      * @return this
@@ -273,7 +273,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set the x, y and z components to match the supplied vector.
-     * 
+     *
      * @param v
      *          the vector to set this vector's components from
      * @return this
@@ -318,7 +318,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set the x, y and z components to the supplied values.
-     * 
+     *
      * @param x
      *          the x component
      * @param y
@@ -336,7 +336,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set the three components of this vector to the first three elements of the given array.
-     * 
+     *
      * @param xyz
      *          the array containing at least three elements
      * @return this
@@ -350,7 +350,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set the three components of this vector to the first three elements of the given array.
-     * 
+     *
      * @param xyz
      *          the array containing at least three elements
      * @return this
@@ -395,7 +395,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Subtract the supplied vector from this one.
-     * 
+     *
      * @param v
      *          the vector to subtract from this
      * @return this
@@ -416,7 +416,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Subtract the supplied vector from this one.
-     * 
+     *
      * @param v
      *          the vector to subtract from this
      * @return this
@@ -437,7 +437,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Subtract <code>(x, y, z)</code> from this vector.
-     * 
+     *
      * @param x
      *          the x component to subtract
      * @param y
@@ -462,7 +462,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the supplied vector to this one.
-     * 
+     *
      * @param v
      *          the vector to add
      * @return this
@@ -483,7 +483,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the supplied vector to this one.
-     * 
+     *
      * @param v
      *          the vector to add
      * @return this
@@ -504,7 +504,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Increment the components of this vector by the given values.
-     * 
+     *
      * @param x
      *          the x component to add
      * @param y
@@ -529,7 +529,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -545,7 +545,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -561,7 +561,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -584,7 +584,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -628,7 +628,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -644,7 +644,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -681,7 +681,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply this Vector3d component-wise by another Vector3dc.
-     * 
+     *
      * @param v
      *          the vector to multiply by
      * @return this
@@ -695,7 +695,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply this Vector3d component-wise by another Vector3fc.
-     * 
+     *
      * @param v
      *          the vector to multiply by
      * @return this
@@ -723,7 +723,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Divide this Vector3d component-wise by another Vector3dc.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @return this
@@ -737,7 +737,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Divide this Vector3d component-wise by another Vector3fc.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @return this
@@ -789,7 +789,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given matrix <code>mat</code> this Vector3d, perform perspective division.
      * <p>
      * This method uses <code>w=1.0</code> as the fourth vector component.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -820,7 +820,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given matrix <code>mat</code> with this Vector3d, perform perspective division.
      * <p>
      * This method uses <code>w=1.0</code> as the fourth vector component.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -838,7 +838,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply the given matrix <code>mat</code> with this Vector3d.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -855,7 +855,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply the given matrix <code>mat</code> with this Vector3d.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -903,7 +903,7 @@ public class Vector3d implements Externalizable, Vector3dc {
     /**
      * Multiply the given matrix with this Vector3d by assuming a third row in the matrix of <code>(0, 0, 1)</code>
      * and store the result in <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix
      * @return this
@@ -928,7 +928,7 @@ public class Vector3d implements Externalizable, Vector3dc {
     /**
      * Multiply the given matrix with this Vector3d by assuming a third row in the matrix of <code>(0, 0, 1)</code>
      * and store the result in <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix
      * @return this
@@ -952,7 +952,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply the transpose of the given matrix with this Vector3d and store the result in <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix
      * @return this
@@ -979,7 +979,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply the transpose of the given matrix with  this Vector3d and store the result in <code>this</code>.
-     * 
+     *
      * @param mat
      *          the matrix
      * @return this
@@ -1008,7 +1008,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1027,7 +1027,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1046,7 +1046,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x3 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1065,7 +1065,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x3 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1124,7 +1124,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the transpose of the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @return this
@@ -1153,7 +1153,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the transpose of the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @return this
@@ -1183,7 +1183,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * of the resulting 4D vector.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return the <i>w</i> component of the resulting 4D vector after multiplication
@@ -1215,7 +1215,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * of the resulting 4D vector.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return the <i>w</i> component of the resulting 4D vector after multiplication
@@ -1246,7 +1246,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1265,7 +1265,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1284,7 +1284,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x3 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1303,7 +1303,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the given 4x3 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @return this
@@ -1362,7 +1362,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the transpose of the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @return this
@@ -1391,7 +1391,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Multiply the transpose of the given 4x4 matrix <code>mat</code> with <code>this</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @return this
@@ -1418,7 +1418,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply this Vector3d by the given scalar value.
-     * 
+     *
      * @param scalar
      *          the scalar to multiply this vector by
      * @return this
@@ -1439,7 +1439,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Multiply the components of this Vector3d by the given scalar values and store the result in <code>this</code>.
-     * 
+     *
      * @param x
      *          the x component to multiply this vector by
      * @param y
@@ -1464,9 +1464,9 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Rotate this vector by the given quaternion <code>quat</code> and store the result in <code>this</code>.
-     * 
+     *
      * @see Quaterniond#transform(Vector3d)
-     * 
+     *
      * @param quat
      *          the quaternion to rotate this vector
      * @return this
@@ -1489,7 +1489,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Rotate this vector the specified radians around the given rotation axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param x
@@ -1538,7 +1538,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Rotate this vector the specified radians around the X axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @return this
@@ -1564,7 +1564,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Rotate this vector the specified radians around the Y axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @return this
@@ -1590,7 +1590,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Rotate this vector the specified radians around the Z axis.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @return this
@@ -1616,7 +1616,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Divide this Vector3d by the given scalar value.
-     * 
+     *
      * @param scalar
      *          the scalar to divide this vector by
      * @return this
@@ -1639,7 +1639,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Divide the components of this Vector3d by the given scalar values and store the result in <code>this</code>.
-     * 
+     *
      * @param x
      *          the x component to divide this vector by
      * @param y
@@ -1702,7 +1702,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Normalize this vector.
-     * 
+     *
      * @return this
      */
     public Vector3d normalize() {
@@ -1723,7 +1723,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Scale this vector to have the given length.
-     * 
+     *
      * @param length
      *          the desired length
      * @return this
@@ -1746,7 +1746,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set this vector to be the cross product of this and v2.
-     * 
+     *
      * @param v
      *          the other vector
      * @return this
@@ -1763,7 +1763,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set this vector to be the cross product of itself and <code>(x, y, z)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -1957,7 +1957,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set all components to zero.
-     * 
+     *
      * @return this
      */
     public Vector3d zero() {
@@ -1971,7 +1971,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Return a string representation of this vector.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -1980,7 +1980,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Return a string representation of this vector by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation
@@ -2004,7 +2004,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Negate this vector.
-     * 
+     *
      * @return this
      */
     public Vector3d negate() {
@@ -2023,7 +2023,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Set <code>this</code> vector's components to their respective absolute values.
-     * 
+     *
      * @return this
      */
     public Vector3d absolute() {
@@ -2098,7 +2098,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Reflect this vector about the given normal vector.
-     * 
+     *
      * @param normal
      *          the vector to reflect about
      * @return this
@@ -2116,7 +2116,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Reflect this vector about the given normal vector.
-     * 
+     *
      * @param x
      *          the x component of the normal
      * @param y
@@ -2154,7 +2154,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Compute the half vector between this and the other vector.
-     * 
+     *
      * @param other
      *          the other vector
      * @return this
@@ -2165,7 +2165,7 @@ public class Vector3d implements Externalizable, Vector3dc {
 
     /**
      * Compute the half vector between this and the vector <code>(x, y, z)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -2210,7 +2210,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * <p>
      * If <code>t</code> is <code>0.0</code> then the result is <code>this</code>. If the interpolation factor is <code>1.0</code>
      * then the result is <code>other</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param t
@@ -2314,7 +2314,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * Transform <code>this</code> vector so that it is orthogonal to the given vector <code>v</code> and normalize the result.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a>
-     * 
+     *
      * @param v
      *          the reference vector which the result should be orthogonal to
      * @return this
@@ -2333,7 +2333,7 @@ public class Vector3d implements Externalizable, Vector3dc {
      * The vector <code>v</code> is assumed to be a {@link #normalize() unit} vector.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a>
-     * 
+     *
      * @param v
      *          the reference unit vector which the result should be orthogonal to
      * @return this

@@ -124,7 +124,7 @@ public class Vector2i implements Externalizable, Vector2ic {
     /**
      * Create a new {@link Vector2i} and initialize its two components from the first
      * two elements of the given array.
-     * 
+     *
      * @param xy
      *          the array containing at least three elements
      */
@@ -237,7 +237,7 @@ public class Vector2i implements Externalizable, Vector2ic {
 
     /**
      * Set the two components of this vector to the first two elements of the given array.
-     * 
+     *
      * @param xy
      *          the array containing at least two elements
      * @return this
@@ -429,7 +429,7 @@ public class Vector2i implements Externalizable, Vector2ic {
         int dy = y1 - y2;
         return dx * dx + dy * dy;
     }
-    
+
     /**
      * Add <code>v</code> to this vector.
      *
@@ -473,7 +473,7 @@ public class Vector2i implements Externalizable, Vector2ic {
     /**
      * Multiply all components of this {@link Vector2i} by the given scalar
      * value.
-     * 
+     *
      * @param scalar
      *          the scalar to multiply this vector by
      * @return this
@@ -624,7 +624,7 @@ public class Vector2i implements Externalizable, Vector2ic {
 
     /**
      * Set <code>this</code> vector's components to their respective absolute values.
-     * 
+     *
      * @return this
      */
     public Vector2i absolute() {
@@ -679,7 +679,7 @@ public class Vector2i implements Externalizable, Vector2ic {
      * Return a string representation of this vector.
      * <p>
      * This method creates a new {@link DecimalFormat} on every invocation with the format string "<code>0.000E0;-</code>".
-     * 
+     *
      * @return the string representation
      */
     public String toString() {
@@ -688,7 +688,7 @@ public class Vector2i implements Externalizable, Vector2ic {
 
     /**
      * Return a string representation of this vector by formatting the vector components with the given {@link NumberFormat}.
-     * 
+     *
      * @param formatter
      *          the {@link NumberFormat} used to format the vector components with
      * @return the string representation

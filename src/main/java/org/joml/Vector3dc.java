@@ -27,7 +27,7 @@ import java.util.*;
 
 /**
  * Interface to a read-only view of a 3-dimensional vector of double-precision floats.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Vector3dc {
@@ -51,7 +51,7 @@ public interface Vector3dc {
 
     /**
      * Subtract the supplied vector from this one and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to subtract from <code>this</code>
      * @param dest
@@ -62,7 +62,7 @@ public interface Vector3dc {
 
     /**
      * Subtract the supplied vector from this one and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to subtract from <code>this</code>
      * @param dest
@@ -73,7 +73,7 @@ public interface Vector3dc {
 
     /**
      * Subtract <code>(x, y, z)</code> from this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to subtract
      * @param y
@@ -88,7 +88,7 @@ public interface Vector3dc {
 
     /**
      * Add the supplied vector to this one and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to add
      * @param dest
@@ -99,7 +99,7 @@ public interface Vector3dc {
 
     /**
      * Add the supplied vector to this one and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to add
      * @param dest
@@ -110,7 +110,7 @@ public interface Vector3dc {
 
     /**
      * Increment the components of this vector by the given values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to add
      * @param y
@@ -126,7 +126,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -140,7 +140,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -154,7 +154,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -168,7 +168,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -182,7 +182,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>a * b</code> to this vector
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the first multiplicand
      * @param b
@@ -196,7 +196,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>this * a</code> to <code>b</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the multiplicand
      * @param b
@@ -210,7 +210,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>this * a</code> to <code>b</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the multiplicand
      * @param b
@@ -224,7 +224,7 @@ public interface Vector3dc {
     /**
      * Add the component-wise multiplication of <code>this * a</code> to <code>b</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param a
      *          the multiplicand
      * @param b
@@ -237,7 +237,7 @@ public interface Vector3dc {
 
     /**
      * Multiply this Vector3d component-wise by another Vector3f and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to multiply by
      * @param dest
@@ -248,7 +248,7 @@ public interface Vector3dc {
 
     /**
      * Multiply this by <code>v</code> component-wise and store the result into <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to multiply by
      * @param dest
@@ -259,7 +259,7 @@ public interface Vector3dc {
 
     /**
      * Divide this Vector3d component-wise by another Vector3f and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @param dest
@@ -270,7 +270,7 @@ public interface Vector3dc {
 
     /**
      * Divide this by <code>v</code> component-wise and store the result into <code>dest</code>.
-     * 
+     *
      * @param v
      *          the vector to divide by
      * @param dest
@@ -284,7 +284,7 @@ public interface Vector3dc {
      * and store the result in <code>dest</code>.
      * <p>
      * This method uses the given <code>w</code> as the fourth vector component.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param w
@@ -300,7 +300,7 @@ public interface Vector3dc {
      * and store the result in <code>dest</code>.
      * <p>
      * This method uses <code>w=1.0</code> as the fourth vector component.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -314,7 +314,7 @@ public interface Vector3dc {
      * and store the result in <code>dest</code>.
      * <p>
      * This method uses <code>w=1.0</code> as the fourth vector component.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -326,7 +326,7 @@ public interface Vector3dc {
     /**
      * Multiply the given matrix <code>mat</code> with <code>this</code> and store the
      * result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -338,7 +338,7 @@ public interface Vector3dc {
     /**
      * Multiply the given matrix <code>mat</code> with <code>this</code> and store the
      * result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -350,7 +350,7 @@ public interface Vector3dc {
     /**
      * Multiply the given matrix <code>mat</code> with <code>this</code> by assuming a
      * third row in the matrix of <code>(0, 0, 1)</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -362,7 +362,7 @@ public interface Vector3dc {
     /**
      * Multiply the given matrix <code>mat</code> with <code>this</code> by assuming a
      * third row in the matrix of <code>(0, 0, 1)</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -373,7 +373,7 @@ public interface Vector3dc {
 
     /**
      * Multiply the transpose of the given matrix with this Vector3f and store the result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix
      * @param dest
@@ -384,7 +384,7 @@ public interface Vector3dc {
 
     /**
      * Multiply the transpose of the given matrix with this Vector3f and store the result in <code>dest</code>.
-     * 
+     *
      * @param mat
      *          the matrix
      * @param dest
@@ -398,7 +398,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -412,7 +412,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -426,7 +426,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -440,7 +440,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -454,7 +454,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @param dest
@@ -468,7 +468,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @param dest
@@ -482,7 +482,7 @@ public interface Vector3dc {
      * result in <code>dest</code> and return the <i>w</i> component of the resulting 4D vector.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -496,7 +496,7 @@ public interface Vector3dc {
      * result in <code>dest</code> and return the <i>w</i> component of the resulting 4D vector.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>1.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -510,7 +510,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -524,7 +524,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -538,7 +538,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -552,7 +552,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix to multiply this vector by
      * @param dest
@@ -566,7 +566,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @param dest
@@ -580,7 +580,7 @@ public interface Vector3dc {
      * result in <code>dest</code>.
      * <p>
      * This method assumes the <code>w</code> component of <code>this</code> to be <code>0.0</code>.
-     * 
+     *
      * @param mat
      *          the matrix whose transpose to multiply this vector by
      * @param dest
@@ -591,7 +591,7 @@ public interface Vector3dc {
 
     /**
      * Multiply this Vector3d by the given scalar value and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *          the scalar factor
      * @param dest
@@ -602,7 +602,7 @@ public interface Vector3dc {
 
     /**
      * Multiply the components of this Vector3f by the given scalar values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to multiply this vector by
      * @param y
@@ -617,9 +617,9 @@ public interface Vector3dc {
 
     /**
      * Rotate this vector by the given quaternion <code>quat</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @see Quaterniond#transform(Vector3d)
-     * 
+     *
      * @param quat
      *          the quaternion to rotate this vector
      * @param dest
@@ -627,15 +627,15 @@ public interface Vector3dc {
      * @return dest
      */
     Vector3d rotate(Quaterniondc quat, Vector3d dest);
-    
+
     /**
      * Compute the quaternion representing a rotation of <code>this</code> vector to point along <code>toDir</code>
      * and store the result in <code>dest</code>.
      * <p>
      * Because there can be multiple possible rotations, this method chooses the one with the shortest arc.
-     * 
+     *
      * @see Quaterniond#rotationTo(Vector3dc, Vector3dc)
-     * 
+     *
      * @param toDir
      *          the destination direction
      * @param dest
@@ -649,9 +649,9 @@ public interface Vector3dc {
      * and store the result in <code>dest</code>.
      * <p>
      * Because there can be multiple possible rotations, this method chooses the one with the shortest arc.
-     * 
+     *
      * @see Quaterniond#rotationTo(double, double, double, double, double, double)
-     * 
+     *
      * @param toDirX
      *          the x coordinate of the destination direction
      * @param toDirY
@@ -667,7 +667,7 @@ public interface Vector3dc {
     /**
      * Rotate this vector the specified radians around the given rotation axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param aX
@@ -685,7 +685,7 @@ public interface Vector3dc {
     /**
      * Rotate this vector the specified radians around the X axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param dest
@@ -697,7 +697,7 @@ public interface Vector3dc {
     /**
      * Rotate this vector the specified radians around the Y axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param dest
@@ -709,7 +709,7 @@ public interface Vector3dc {
     /**
      * Rotate this vector the specified radians around the Z axis and store the result
      * into <code>dest</code>.
-     * 
+     *
      * @param angle
      *          the angle in radians
      * @param dest
@@ -720,7 +720,7 @@ public interface Vector3dc {
 
     /**
      * Divide this Vector3d by the given scalar value and store the result in <code>dest</code>.
-     * 
+     *
      * @param scalar
      *          the scalar to divide this vector by
      * @param dest
@@ -731,7 +731,7 @@ public interface Vector3dc {
 
     /**
      * Divide the components of this Vector3f by the given scalar values and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component to divide this vector by
      * @param y
@@ -760,7 +760,7 @@ public interface Vector3dc {
 
     /**
      * Normalize this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -769,7 +769,7 @@ public interface Vector3dc {
 
     /**
      * Scale this vector to have the given length and store the result in <code>dest</code>.
-     * 
+     *
      * @param length
      *          the desired length
      * @param dest
@@ -780,7 +780,7 @@ public interface Vector3dc {
 
     /**
      * Calculate the cross product of this and v2 and store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the other vector
      * @param dest
@@ -791,7 +791,7 @@ public interface Vector3dc {
 
     /**
      * Compute the cross product of this vector and <code>(x, y, z)</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -806,7 +806,7 @@ public interface Vector3dc {
 
     /**
      * Return the distance between this vector and <code>v</code>.
-     * 
+     *
      * @param v
      *          the other vector
      * @return the distance
@@ -815,7 +815,7 @@ public interface Vector3dc {
 
     /**
      * Return the distance between <code>this</code> vector and <code>(x, y, z)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -828,7 +828,7 @@ public interface Vector3dc {
 
     /**
      * Return the square of the distance between this vector and <code>v</code>.
-     * 
+     *
      * @param v
      *          the other vector
      * @return the squared of the distance
@@ -837,7 +837,7 @@ public interface Vector3dc {
 
     /**
      * Return the square of the distance between <code>this</code> vector and <code>(x, y, z)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -850,7 +850,7 @@ public interface Vector3dc {
 
     /**
      * Return the dot product of this vector and the supplied vector.
-     * 
+     *
      * @param v
      *          the other vector
      * @return the dot product
@@ -859,7 +859,7 @@ public interface Vector3dc {
 
     /**
      * Return the dot product of this vector and the vector <code>(x, y, z)</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -873,9 +873,9 @@ public interface Vector3dc {
     /**
      * Return the cosine of the angle between <code>this</code> vector and
      * the supplied vector. Use this instead of <code>Math.cos(angle(v))</code>.
-     * 
+     *
      * @see #angle(Vector3dc)
-     * 
+     *
      * @param v
      *          the other vector
      * @return the cosine of the angle
@@ -884,9 +884,9 @@ public interface Vector3dc {
 
     /**
      * Return the angle between this vector and the supplied vector.
-     * 
+     *
      * @see #angleCos(Vector3dc)
-     * 
+     *
      * @param v
      *          the other vector
      * @return the angle, in radians
@@ -896,9 +896,9 @@ public interface Vector3dc {
     /**
      * Return the signed angle between this vector and the supplied vector with
      * respect to the plane with the given normal vector <code>n</code>.
-     * 
+     *
      * @see #angleCos(Vector3dc)
-     * 
+     *
      * @param v
      *          the other vector
      * @param n
@@ -910,7 +910,7 @@ public interface Vector3dc {
     /**
      * Return the signed angle between this vector and the supplied vector with
      * respect to the plane with the given normal vector <code>(nx, ny, nz)</code>.
-     * 
+     *
      * @param x
      *          the x coordinate of the other vector
      * @param y
@@ -951,7 +951,7 @@ public interface Vector3dc {
 
     /**
      * Negate this vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -960,7 +960,7 @@ public interface Vector3dc {
 
     /**
      * Compute the absolute values of the individual components of <code>this</code> and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -969,7 +969,7 @@ public interface Vector3dc {
 
     /**
      * Reflect this vector about the given normal vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param normal
      *          the vector to reflect about
      * @param dest
@@ -980,7 +980,7 @@ public interface Vector3dc {
 
     /**
      * Reflect this vector about the given normal vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component of the normal
      * @param y
@@ -995,7 +995,7 @@ public interface Vector3dc {
 
     /**
      * Compute the half vector between this and the other vector and store the result in <code>dest</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param dest
@@ -1005,9 +1005,9 @@ public interface Vector3dc {
     Vector3d half(Vector3dc other, Vector3d dest);
 
     /**
-     * Compute the half vector between this and the vector <code>(x, y, z)</code> 
+     * Compute the half vector between this and the vector <code>(x, y, z)</code>
      * and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component of the other vector
      * @param y
@@ -1024,7 +1024,7 @@ public interface Vector3dc {
      * Compute a smooth-step (i.e. hermite with zero tangents) interpolation
      * between <code>this</code> vector and the given vector <code>v</code> and
      * store the result in <code>dest</code>.
-     * 
+     *
      * @param v
      *          the other vector
      * @param t
@@ -1040,7 +1040,7 @@ public interface Vector3dc {
      * associated tangent <code>t0</code> and the given vector <code>v</code>
      * with its tangent <code>t1</code> and store the result in
      * <code>dest</code>.
-     * 
+     *
      * @param t0
      *          the tangent of <code>this</code> vector
      * @param v1
@@ -1061,7 +1061,7 @@ public interface Vector3dc {
      * <p>
      * If <code>t</code> is <code>0.0</code> then the result is <code>this</code>. If the interpolation factor is <code>1.0</code>
      * then the result is <code>other</code>.
-     * 
+     *
      * @param other
      *          the other vector
      * @param t
@@ -1074,7 +1074,7 @@ public interface Vector3dc {
 
     /**
      * Get the value of the specified component of this vector.
-     * 
+     *
      * @param component
      *          the component, within <code>[0..2]</code>
      * @return the value
@@ -1096,7 +1096,7 @@ public interface Vector3dc {
 
     /**
      * Set the components of the given vector <code>dest</code> to those of <code>this</code> vector.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -1105,7 +1105,7 @@ public interface Vector3dc {
 
     /**
      * Set the components of the given vector <code>dest</code> to those of <code>this</code> vector.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -1114,14 +1114,14 @@ public interface Vector3dc {
 
     /**
      * Determine the component with the biggest absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..2]</code>
      */
     int maxComponent();
 
     /**
      * Determine the component with the smallest (towards zero) absolute value.
-     * 
+     *
      * @return the component index, within <code>[0..2]</code>
      */
     int minComponent();
@@ -1130,7 +1130,7 @@ public interface Vector3dc {
      * Transform <code>this</code> vector so that it is orthogonal to the given vector <code>v</code>, normalize the result and store it into <code>dest</code>.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a>
-     * 
+     *
      * @param v
      *          the reference vector which the result should be orthogonal to
      * @param dest
@@ -1145,7 +1145,7 @@ public interface Vector3dc {
      * The vector <code>v</code> is assumed to be a {@link #normalize(Vector3d) unit} vector.
      * <p>
      * Reference: <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram–Schmidt process</a>
-     * 
+     *
      * @param v
      *          the reference unit vector which the result should be orthogonal to
      * @param dest
@@ -1206,7 +1206,7 @@ public interface Vector3dc {
      * Please note that this method is not used by any data structure such as {@link ArrayList} {@link HashSet} or {@link HashMap}
      * and their operations, such as {@link ArrayList#contains(Object)} or {@link HashSet#remove(Object)}, since those
      * data structures only use the {@link Object#equals(Object)} and {@link Object#hashCode()} methods.
-     * 
+     *
      * @param v
      *          the other vector
      * @param delta

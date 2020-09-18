@@ -26,7 +26,7 @@ package org.joml;
 
 /**
  * Interface to a read-only view of a quaternion of single-precision floats.
- * 
+ *
  * @author Kai Burjack
  */
 public interface Quaternionfc {
@@ -53,7 +53,7 @@ public interface Quaternionfc {
 
     /**
      * Normalize this quaternion and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -62,7 +62,7 @@ public interface Quaternionfc {
 
     /**
      * Add the quaternion <code>(x, y, z, w)</code> to this quaternion and store the result in <code>dest</code>.
-     * 
+     *
      * @param x
      *          the x component of the vector part
      * @param y
@@ -79,7 +79,7 @@ public interface Quaternionfc {
 
     /**
      * Add <code>q2</code> to this quaternion and store the result in <code>dest</code>.
-     * 
+     *
      * @param q2
      *          the quaternion to add to this
      * @param dest
@@ -92,16 +92,16 @@ public interface Quaternionfc {
      * Return the angle in radians represented by this normalized quaternion rotation.
      * <p>
      * This quaternion must be {@link #normalize(Quaternionf) normalized}.
-     * 
+     *
      * @return the angle in radians
      */
     float angle();
 
     /**
      * Set the given destination matrix to the rotation represented by <code>this</code>.
-     * 
+     *
      * @see Matrix3f#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the matrix to write the rotation into
      * @return the passed in destination
@@ -110,9 +110,9 @@ public interface Quaternionfc {
 
     /**
      * Set the given destination matrix to the rotation represented by <code>this</code>.
-     * 
+     *
      * @see Matrix3d#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the matrix to write the rotation into
      * @return the passed in destination
@@ -121,9 +121,9 @@ public interface Quaternionfc {
 
     /**
      * Set the given destination matrix to the rotation represented by <code>this</code>.
-     * 
+     *
      * @see Matrix4f#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the matrix to write the rotation into
      * @return the passed in destination
@@ -132,9 +132,9 @@ public interface Quaternionfc {
 
     /**
      * Set the given destination matrix to the rotation represented by <code>this</code>.
-     * 
+     *
      * @see Matrix4d#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the matrix to write the rotation into
      * @return the passed in destination
@@ -143,9 +143,9 @@ public interface Quaternionfc {
 
     /**
      * Set the given destination matrix to the rotation represented by <code>this</code>.
-     * 
+     *
      * @see Matrix4x3f#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the matrix to write the rotation into
      * @return the passed in destination
@@ -154,9 +154,9 @@ public interface Quaternionfc {
 
     /**
      * Set the given destination matrix to the rotation represented by <code>this</code>.
-     * 
+     *
      * @see Matrix4x3d#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the matrix to write the rotation into
      * @return the passed in destination
@@ -166,7 +166,7 @@ public interface Quaternionfc {
     /**
      * Set the given {@link AxisAngle4f} to represent the rotation of
      * <code>this</code> quaternion.
-     * 
+     *
      * @param dest
      *            the {@link AxisAngle4f} to set
      * @return the passed in destination
@@ -176,7 +176,7 @@ public interface Quaternionfc {
     /**
      * Set the given {@link AxisAngle4d} to represent the rotation of
      * <code>this</code> quaternion.
-     * 
+     *
      * @param dest
      *            the {@link AxisAngle4d} to set
      * @return the passed in destination
@@ -185,9 +185,9 @@ public interface Quaternionfc {
 
     /**
      * Set the given {@link Quaterniond} to the values of <code>this</code>.
-     * 
+     *
      * @see Quaterniond#set(Quaternionfc)
-     * 
+     *
      * @param dest
      *          the {@link Quaterniond} to set
      * @return the passed in destination
@@ -196,7 +196,7 @@ public interface Quaternionfc {
 
     /**
      * Set the given {@link Quaternionf} to the values of <code>this</code>.
-     * 
+     *
      * @param dest
      *          the {@link Quaternionf} to set
      * @return the passed in destination
@@ -214,7 +214,7 @@ public interface Quaternionfc {
      * <p>
      * So, this method uses post-multiplication like the matrix classes, resulting in a
      * vector to be transformed by <code>Q</code> first, and then by <code>T</code>.
-     * 
+     *
      * @param q
      *            the quaternion to multiply <code>this</code> by
      * @param dest
@@ -233,7 +233,7 @@ public interface Quaternionfc {
      * <p>
      * So, this method uses post-multiplication like the matrix classes, resulting in a
      * vector to be transformed by <code>Q</code> first, and then by <code>T</code>.
-     * 
+     *
      * @param qx
      *          the x component of the quaternion to multiply <code>this</code> by
      * @param qy
@@ -256,7 +256,7 @@ public interface Quaternionfc {
      * <code>R = Q * T</code>
      * <p>
      * So, this method uses pre-multiplication, resulting in a vector to be transformed by <code>T</code> first, and then by <code>Q</code>.
-     * 
+     *
      * @param q
      *            the quaternion to pre-multiply <code>this</code> by
      * @param dest
@@ -273,7 +273,7 @@ public interface Quaternionfc {
      * <code>R = Q * T</code>
      * <p>
      * So, this method uses pre-multiplication, resulting in a vector to be transformed by <code>T</code> first, and then by <code>Q</code>.
-     * 
+     *
      * @param qx
      *          the x component of the quaternion to multiply <code>this</code> by
      * @param qy
@@ -292,7 +292,7 @@ public interface Quaternionfc {
      * Transform the given vector by this quaternion.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -305,7 +305,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -314,7 +314,7 @@ public interface Quaternionfc {
 
     /**
      * Transform the vector <code>(1, 0, 0)</code> by this quaternion.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -325,7 +325,7 @@ public interface Quaternionfc {
      * Transform the vector <code>(1, 0, 0)</code> by this quaternion.
      * <p>
      * Only the first three components of the given 4D vector are modified.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -338,7 +338,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -353,7 +353,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -362,7 +362,7 @@ public interface Quaternionfc {
 
     /**
      * Transform the vector <code>(0, 1, 0)</code> by this quaternion.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -373,7 +373,7 @@ public interface Quaternionfc {
      * Transform the vector <code>(0, 1, 0)</code> by this quaternion.
      * <p>
      * Only the first three components of the given 4D vector are modified.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -386,7 +386,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -401,7 +401,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -410,7 +410,7 @@ public interface Quaternionfc {
 
     /**
      * Transform the vector <code>(0, 0, 1)</code> by this quaternion.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -421,7 +421,7 @@ public interface Quaternionfc {
      * Transform the vector <code>(0, 0, 1)</code> by this quaternion.
      * <p>
      * Only the first three components of the given 4D vector are modified.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -434,7 +434,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -449,7 +449,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -462,7 +462,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and modified.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -475,7 +475,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and modified.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -487,7 +487,7 @@ public interface Quaternionfc {
      * and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -501,7 +501,7 @@ public interface Quaternionfc {
      * and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -515,7 +515,7 @@ public interface Quaternionfc {
      * and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -533,7 +533,7 @@ public interface Quaternionfc {
      * and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -553,7 +553,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -569,7 +569,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -585,7 +585,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -605,7 +605,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -624,7 +624,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and set on the destination.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -639,7 +639,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and set on the destination.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -652,7 +652,7 @@ public interface Quaternionfc {
      * Transform the given vector <code>(x, y, z)</code> by this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -670,7 +670,7 @@ public interface Quaternionfc {
      * this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -691,7 +691,7 @@ public interface Quaternionfc {
      * Only the first three components of the given 4D vector are being used and set on the destination.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -708,7 +708,7 @@ public interface Quaternionfc {
      * Only the first three components of the given 4D vector are being used and set on the destination.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -723,7 +723,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -743,7 +743,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -760,7 +760,7 @@ public interface Quaternionfc {
      * Transform the given vector by this quaternion.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -771,7 +771,7 @@ public interface Quaternionfc {
      * Transform the given vector by the inverse of this quaternion.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -780,7 +780,7 @@ public interface Quaternionfc {
 
     /**
      * Transform the vector <code>(1, 0, 0)</code> by this quaternion.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -791,7 +791,7 @@ public interface Quaternionfc {
      * Transform the vector <code>(1, 0, 0)</code> by this quaternion.
      * <p>
      * Only the first three components of the given 4D vector are modified.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -804,7 +804,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -819,7 +819,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -828,7 +828,7 @@ public interface Quaternionfc {
 
     /**
      * Transform the vector <code>(0, 1, 0)</code> by this quaternion.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -839,7 +839,7 @@ public interface Quaternionfc {
      * Transform the vector <code>(0, 1, 0)</code> by this quaternion.
      * <p>
      * Only the first three components of the given 4D vector are modified.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -852,7 +852,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -867,7 +867,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -876,7 +876,7 @@ public interface Quaternionfc {
 
     /**
      * Transform the vector <code>(0, 0, 1)</code> by this quaternion.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -887,7 +887,7 @@ public interface Quaternionfc {
      * Transform the vector <code>(0, 0, 1)</code> by this quaternion.
      * <p>
      * Only the first three components of the given 4D vector are modified.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -900,7 +900,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -915,7 +915,7 @@ public interface Quaternionfc {
      * This method is only applicable when <code>this</code> is a unit quaternion.
      * <p>
      * Reference: <a href="https://de.mathworks.com/help/aerotbx/ug/quatrotate.html?requestedDomain=true">https://de.mathworks.com/</a>
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -928,7 +928,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and modified.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -941,7 +941,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and modified.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -952,7 +952,7 @@ public interface Quaternionfc {
      * Transform the given vector by this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -965,7 +965,7 @@ public interface Quaternionfc {
      * Transform the given vector by the inverse of this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -978,7 +978,7 @@ public interface Quaternionfc {
      * Transform the given vector <code>(x, y, z)</code> by this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -996,7 +996,7 @@ public interface Quaternionfc {
      * this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1015,7 +1015,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and set on the destination.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -1030,7 +1030,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * Only the first three components of the given 4D vector are being used and set on the destination.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -1043,7 +1043,7 @@ public interface Quaternionfc {
      * Transform the given vector <code>(x, y, z)</code> by this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1061,7 +1061,7 @@ public interface Quaternionfc {
      * this quaternion and store the result in <code>dest</code>.
      * <p>
      * This will apply the rotation described by this quaternion to the given vector.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1082,7 +1082,7 @@ public interface Quaternionfc {
      * Only the first three components of the given 4D vector are being used and modified.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -1097,7 +1097,7 @@ public interface Quaternionfc {
      * Only the first three components of the given 4D vector are being used and modified.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @return vec
@@ -1110,7 +1110,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -1125,7 +1125,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -1140,7 +1140,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1160,7 +1160,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1181,7 +1181,7 @@ public interface Quaternionfc {
      * Only the first three components of the given 4D vector are being used and set on the destination.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -1198,7 +1198,7 @@ public interface Quaternionfc {
      * Only the first three components of the given 4D vector are being used and set on the destination.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param vec
      *          the vector to transform
      * @param dest
@@ -1213,7 +1213,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1233,7 +1233,7 @@ public interface Quaternionfc {
      * This will apply the rotation described by this quaternion to the given vector.
      * <p>
      * This method is only applicable when <code>this</code> is a unit quaternion.
-     * 
+     *
      * @param x
      *          the x coordinate of the vector to transform
      * @param y
@@ -1250,9 +1250,9 @@ public interface Quaternionfc {
      * Invert this quaternion and store the {@link #normalize(Quaternionf) normalized} result in <code>dest</code>.
      * <p>
      * If this quaternion is already normalized, then {@link #conjugate(Quaternionf)} should be used instead.
-     * 
+     *
      * @see #conjugate(Quaternionf)
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -1265,7 +1265,7 @@ public interface Quaternionfc {
      * The division expressed using the inverse is performed in the following way:
      * <p>
      * <code>dest = this * b^-1</code>, where <code>b^-1</code> is the inverse of <code>b</code>.
-     * 
+     *
      * @param b
      *          the {@link Quaternionfc} to divide this by
      * @param dest
@@ -1276,7 +1276,7 @@ public interface Quaternionfc {
 
     /**
      * Conjugate this quaternion and store the result in <code>dest</code>.
-     * 
+     *
      * @param dest
      *          will hold the result
      * @return dest
@@ -1289,11 +1289,11 @@ public interface Quaternionfc {
      * <p>
      * This method is equivalent to calling: <code>rotateX(angleX, dest).rotateY(angleY).rotateZ(angleZ)</code>
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angleX
      *              the angle in radians to rotate about the x axis
      * @param angleY
@@ -1312,11 +1312,11 @@ public interface Quaternionfc {
      * <p>
      * This method is equivalent to calling: <code>rotateZ(angleZ, dest).rotateY(angleY).rotateX(angleX)</code>
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angleZ
      *              the angle in radians to rotate about the z axis
      * @param angleY
@@ -1335,11 +1335,11 @@ public interface Quaternionfc {
      * <p>
      * This method is equivalent to calling: <code>rotateY(angleY, dest).rotateX(angleX).rotateZ(angleZ)</code>
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angleY
      *              the angle in radians to rotate about the y axis
      * @param angleX
@@ -1353,9 +1353,9 @@ public interface Quaternionfc {
     Quaternionf rotateYXZ(float angleY, float angleX, float angleZ, Quaternionf dest);
 
     /**
-     * Get the euler angles in radians in rotation sequence <code>XYZ</code> of this quaternion and store them in the 
+     * Get the euler angles in radians in rotation sequence <code>XYZ</code> of this quaternion and store them in the
      * provided parameter <code>eulerAngles</code>.
-     * 
+     *
      * @param eulerAngles
      *          will hold the euler angles in radians
      * @return the passed in vector
@@ -1364,7 +1364,7 @@ public interface Quaternionfc {
 
     /**
      * Return the square of the length of this quaternion.
-     * 
+     *
      * @return the length
      */
     float lengthSquared();
@@ -1378,7 +1378,7 @@ public interface Quaternionfc {
      * below <code>1E-6f</code>.
      * <p>
      * Reference: <a href="http://fabiensanglard.net/doom3_documentation/37725-293747_293747.pdf">http://fabiensanglard.net</a>
-     * 
+     *
      * @param target
      *          the target of the interpolation, which should be reached with <code>alpha = 1.0</code>
      * @param alpha
@@ -1392,7 +1392,7 @@ public interface Quaternionfc {
     /**
      * Apply scaling to this quaternion, which results in any vector transformed by the quaternion to change
      * its length by the given <code>factor</code>, and store the result in <code>dest</code>.
-     * 
+     *
      * @param factor
      *          the scaling factor
      * @param dest
@@ -1412,7 +1412,7 @@ public interface Quaternionfc {
      * This method is equivalent to calling: <code>rotateLocal(dt * vx, dt * vy, dt * vz, dest)</code>
      * <p>
      * Reference: <a href="http://physicsforgames.blogspot.de/2010/02/quaternions.html">http://physicsforgames.blogspot.de/</a>
-     * 
+     *
      * @param dt
      *          the delta time
      * @param vx
@@ -1432,7 +1432,7 @@ public interface Quaternionfc {
      * and store the result in <code>dest</code>.
      * <p>
      * Reference: <a href="http://fabiensanglard.net/doom3_documentation/37725-293747_293747.pdf">http://fabiensanglard.net</a>
-     * 
+     *
      * @param q
      *          the other quaternion
      * @param factor
@@ -1453,7 +1453,7 @@ public interface Quaternionfc {
      * the absolute dot product of <code>this</code> and <code>q</code> is greater than the given <code>dotThreshold</code> parameter.
      * <p>
      * Thanks to <code>@theagentd</code> at <a href="http://www.java-gaming.org/">http://www.java-gaming.org/</a> for providing the code.
-     * 
+     *
      * @param q
      *          the other quaternion
      * @param alpha
@@ -1471,21 +1471,21 @@ public interface Quaternionfc {
      * Apply a rotation to this quaternion that maps the given direction to the positive Z axis, and store the result in <code>dest</code>.
      * <p>
      * Because there are multiple possibilities for such a rotation, this method will choose the one that ensures the given up direction to remain
-     * parallel to the plane spanned by the <code>up</code> and <code>dir</code> vectors. 
+     * parallel to the plane spanned by the <code>up</code> and <code>dir</code> vectors.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
      * <p>
      * Reference: <a href="http://answers.unity3d.com/questions/467614/what-is-the-source-code-of-quaternionlookrotation.html">http://answers.unity3d.com</a>
-     * 
+     *
      * @see #lookAlong(float, float, float, float, float, float, Quaternionf)
-     * 
+     *
      * @param dir
      *              the direction to map to the positive Z axis
      * @param up
-     *              the vector which will be mapped to a vector parallel to the plane 
+     *              the vector which will be mapped to a vector parallel to the plane
      *              spanned by the given <code>dir</code> and <code>up</code>
      * @param dest
      *              will hold the result
@@ -1497,15 +1497,15 @@ public interface Quaternionfc {
      * Apply a rotation to this quaternion that maps the given direction to the positive Z axis, and store the result in <code>dest</code>.
      * <p>
      * Because there are multiple possibilities for such a rotation, this method will choose the one that ensures the given up direction to remain
-     * parallel to the plane spanned by the <code>up</code> and <code>dir</code> vectors. 
+     * parallel to the plane spanned by the <code>up</code> and <code>dir</code> vectors.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
      * <p>
      * Reference: <a href="http://answers.unity3d.com/questions/467614/what-is-the-source-code-of-quaternionlookrotation.html">http://answers.unity3d.com</a>
-     * 
+     *
      * @param dirX
      *              the x-coordinate of the direction to look along
      * @param dirY
@@ -1530,13 +1530,13 @@ public interface Quaternionfc {
      * <p>
      * Since there can be multiple possible rotations, this method chooses the one with the shortest arc.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
      * <p>
      * Reference: <a href="http://stackoverflow.com/questions/1171849/finding-quaternion-representing-the-rotation-from-one-vector-to-another#answer-1171995">stackoverflow.com</a>
-     * 
+     *
      * @param fromDirX
      *              the x-coordinate of the direction to rotate into the destination direction
      * @param fromDirY
@@ -1561,13 +1561,13 @@ public interface Quaternionfc {
      * <p>
      * Because there can be multiple possible rotations, this method chooses the one with the shortest arc.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @see #rotateTo(float, float, float, float, float, float, Quaternionf)
-     * 
+     *
      * @param fromDir
      *          the starting direction
      * @param toDir
@@ -1582,11 +1582,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the x axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the x axis
      * @param dest
@@ -1599,11 +1599,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the y axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the y axis
      * @param dest
@@ -1616,11 +1616,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the z axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the z axis
      * @param dest
@@ -1633,11 +1633,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the local x axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>R * Q</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>R * Q * v</code>, the
      * rotation represented by <code>this</code> will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the local x axis
      * @param dest
@@ -1650,11 +1650,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the local y axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>R * Q</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>R * Q * v</code>, the
      * rotation represented by <code>this</code> will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the local y axis
      * @param dest
@@ -1667,11 +1667,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the local z axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>R * Q</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>R * Q * v</code>, the
      * rotation represented by <code>this</code> will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the local z axis
      * @param dest
@@ -1684,11 +1684,11 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the specified axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the specified axis
      * @param axisX
@@ -1707,13 +1707,13 @@ public interface Quaternionfc {
      * Apply a rotation to <code>this</code> quaternion rotating the given radians about the specified axis
      * and store the result in <code>dest</code>.
      * <p>
-     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the 
+     * If <code>Q</code> is <code>this</code> quaternion and <code>R</code> the quaternion representing the
      * specified rotation, then the new quaternion will be <code>Q * R</code>. So when transforming a
      * vector <code>v</code> with the new quaternion by using <code>Q * R * v</code>, the
      * rotation added by this method will be applied first!
-     * 
+     *
      * @see #rotateAxis(float, float, float, float, Quaternionf)
-     * 
+     *
      * @param angle
      *              the angle in radians to rotate about the specified axis
      * @param axis
@@ -1735,7 +1735,7 @@ public interface Quaternionfc {
      * <code>T * D = Q</code>
      * <p>
      * It is defined as: <code>D = T^-1 * Q</code>, where <code>T^-1</code> denotes the {@link #invert(Quaternionf) inverse} of <code>T</code>.
-     * 
+     *
      * @param other
      *          the other quaternion
      * @param dest
@@ -1752,7 +1752,7 @@ public interface Quaternionfc {
      * Quaternionf inv = new Quaternionf(this).invert();
      * inv.transform(dir.set(1, 0, 0));
      * </pre>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+X</code>
      * @return dir
@@ -1768,7 +1768,7 @@ public interface Quaternionfc {
      * Quaternionf inv = new Quaternionf(this).conjugate();
      * inv.transform(dir.set(1, 0, 0));
      * </pre>
-     * 
+     *
      * @param dir
      *          will hold the direction of <code>+X</code>
      * @return dir
@@ -1783,7 +1783,7 @@ public interface Quaternionfc {
      * Quaternionf inv = new Quaternionf(this).invert();
      * inv.transform(dir.set(0, 1, 0));
      * </pre>
-     * 
+     *
      * @param dir
      *            will hold the direction of <code>+Y</code>
      * @return dir
@@ -1799,7 +1799,7 @@ public interface Quaternionfc {
      * Quaternionf inv = new Quaternionf(this).conjugate();
      * inv.transform(dir.set(0, 1, 0));
      * </pre>
-     * 
+     *
      * @param dir
      *            will hold the direction of <code>+Y</code>
      * @return dir
@@ -1814,7 +1814,7 @@ public interface Quaternionfc {
      * Quaternionf inv = new Quaternionf(this).invert();
      * inv.transform(dir.set(0, 0, 1));
      * </pre>
-     * 
+     *
      * @param dir
      *            will hold the direction of <code>+Z</code>
      * @return dir
@@ -1830,7 +1830,7 @@ public interface Quaternionfc {
      * Quaternionf inv = new Quaternionf(this).conjugate();
      * inv.transform(dir.set(0, 0, 1));
      * </pre>
-     * 
+     *
      * @param dir
      *            will hold the direction of <code>+Z</code>
      * @return dir
@@ -1840,7 +1840,7 @@ public interface Quaternionfc {
     /**
      * Conjugate <code>this</code> by the given quaternion <code>q</code> by computing <code>q * this * q^-1</code>
      * and store the result into <code>dest</code>.
-     * 
+     *
      * @param q
      *          the {@link Quaternionfc} to conjugate <code>this</code> by
      * @param dest
