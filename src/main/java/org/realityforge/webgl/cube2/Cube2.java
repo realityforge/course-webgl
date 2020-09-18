@@ -1,17 +1,14 @@
 package org.realityforge.webgl.cube2;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
-import elemental3.HTMLElement;
-import elemental3.RenderContextType;
 import elemental3.WebGL2RenderingContext;
-import elemental3.Window;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.joml.Vector3d;
 import org.joml.Vector4d;
+import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Cube2
   implements EntryPoint
@@ -29,9 +26,8 @@ public final class Cube2
   @Override
   public void onModuleLoad()
   {
-    final HTMLCanvasElement canvas = createCanvas();
-    final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
-    assert null != gl;
+    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
+    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
@@ -59,12 +55,7 @@ public final class Cube2
                                 new Vector4d( 0, 1, 0, 1 ),
                                 new Vector4d( 0, 0, 1, 1 ) };
     final Vector3d offsets = new Vector3d( -2, 0, 2 );
-    _mesh.setUniforms( gl,
-                       _modelMatrix,
-                       _viewMatrix,
-                       _projectionMatrix,
-                       colors,
-                       offsets );
+    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, colors, offsets );
 
     _angle += 0.1;
 
@@ -72,19 +63,5 @@ public final class Cube2
     gl.drawArraysInstanced( WebGL2RenderingContext.TRIANGLES, 0, 36, 3 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
-  }
-
-  @Nonnull
-  private HTMLCanvasElement createCanvas()
-  {
-    final Window window = Global.globalThis();
-    final Document document = window.document();
-    final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
-    canvas.width = window.innerWidth();
-    canvas.height = window.innerHeight();
-    final HTMLElement body = document.body;
-    assert null != body;
-    body.appendChild( canvas );
-    return canvas;
   }
 }

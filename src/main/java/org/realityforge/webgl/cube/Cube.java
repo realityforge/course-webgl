@@ -1,15 +1,12 @@
 package org.realityforge.webgl.cube;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
-import elemental3.HTMLElement;
-import elemental3.RenderContextType;
 import elemental3.WebGL2RenderingContext;
-import elemental3.Window;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Cube
   implements EntryPoint
@@ -27,9 +24,8 @@ public final class Cube
   @Override
   public void onModuleLoad()
   {
-    final HTMLCanvasElement canvas = createCanvas();
-    final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
-    assert null != gl;
+    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
+    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
     c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
@@ -60,19 +56,5 @@ public final class Cube
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
-  }
-
-  @Nonnull
-  private HTMLCanvasElement createCanvas()
-  {
-    final Window window = Global.globalThis();
-    final Document document = window.document();
-    final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
-    canvas.width = window.innerWidth();
-    canvas.height = window.innerHeight();
-    final HTMLElement body = document.body;
-    assert null != body;
-    body.appendChild( canvas );
-    return canvas;
   }
 }

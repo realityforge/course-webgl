@@ -2,18 +2,15 @@ package org.realityforge.webgl.hello_triangle;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental2.core.Float32Array;
-import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
-import elemental3.HTMLElement;
-import elemental3.RenderContextType;
 import elemental3.WebGL2RenderingContext;
 import elemental3.WebGLBuffer;
 import elemental3.WebGLProgram;
 import elemental3.WebGLShader;
-import elemental3.Window;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
+import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 
 public class HelloTriangle
@@ -22,9 +19,8 @@ public class HelloTriangle
   @Override
   public void onModuleLoad()
   {
-    final HTMLCanvasElement canvas = createCanvas();
-    final WebGL2RenderingContext gl = (WebGL2RenderingContext) canvas.getContext( RenderContextType.webgl2 );
-    assert null != gl;
+    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
+    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
     // Vertex position data for triangle
     double[] positions = new double[]{
@@ -148,19 +144,5 @@ public class HelloTriangle
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 3 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( gl ) );
-  }
-
-  @Nonnull
-  private HTMLCanvasElement createCanvas()
-  {
-    final Window window = Global.globalThis();
-    final Document document = window.document();
-    final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
-    canvas.width = window.innerWidth();
-    canvas.height = window.innerHeight();
-    final HTMLElement body = document.body;
-    assert null != body;
-    body.appendChild( canvas );
-    return canvas;
   }
 }
