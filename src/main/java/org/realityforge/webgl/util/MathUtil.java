@@ -11,8 +11,8 @@ public final class MathUtil
   }
 
   @Nonnull
-  public static Float32Array toFloat32Array( @Nonnull final Matrix4d matrix )
+  public static Float32Array toFloat32Array( @Nonnull final Matrix4d input )
   {
-    return new Float32Array( matrix.get( new double[ 16 ] ) );
+    return new Float32Array( input.get( new double[ 16 ] ) );
   }
 }
