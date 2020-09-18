@@ -126,13 +126,6 @@ public class Random {
     }
 
     /**
-     * Create a new instance of {@link Random} and initialize it with a random seed.
-     */
-    public Random() {
-        this(newSeed() ^ System.nanoTime());
-    }
-
-    /**
      * Create a new instance of {@link Random} and initialize it with the given <code>seed</code>.
      *
      * @param seed
