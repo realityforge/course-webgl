@@ -3,7 +3,7 @@ package org.realityforge.webgl.rectangle;
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
-import elemental3.WebGL2RenderingContext;
+import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.webgl.util.CanvasUtil;

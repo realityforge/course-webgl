@@ -2,9 +2,9 @@ package org.realityforge.webgl.rectangle;
 
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
-import elemental3.WebGL2RenderingContext;
-import elemental3.WebGLBuffer;
-import elemental3.WebGLVertexArrayObject;
+import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.WebGLBuffer;
+import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.GL;
 

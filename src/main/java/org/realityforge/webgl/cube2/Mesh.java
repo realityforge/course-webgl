@@ -1,6 +1,6 @@
 package org.realityforge.webgl.cube2;
 
-import elemental3.WebGL2RenderingContext;
+import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;

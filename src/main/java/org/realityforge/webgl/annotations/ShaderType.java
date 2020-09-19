@@ -1,6 +1,6 @@
 package org.realityforge.webgl.annotations;
 
-import elemental3.WebGL2RenderingContext;
+import elemental3.gl.WebGL2RenderingContext;
 import org.intellij.lang.annotations.MagicConstant;
 
 // TODO: This should be generated as part of WebGL2RenderingContext

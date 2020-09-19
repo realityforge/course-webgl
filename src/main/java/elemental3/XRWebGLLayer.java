@@ -1,5 +1,8 @@
 package elemental3;
 
+import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.WebGLFramebuffer;
+import elemental3.gl.WebGLRenderingContext;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

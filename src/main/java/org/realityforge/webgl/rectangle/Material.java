@@ -1,9 +1,9 @@
 package org.realityforge.webgl.rectangle;
 
-import elemental3.WebGL2RenderingContext;
-import elemental3.WebGLProgram;
-import elemental3.WebGLShader;
-import elemental3.WebGLUniformLocation;
+import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.WebGLProgram;
+import elemental3.gl.WebGLShader;
+import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.GL;
