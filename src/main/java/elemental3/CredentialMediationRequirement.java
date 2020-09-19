@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class CredentialMediationRequirement {
+@MagicConstant(
+    valuesFromClass = CredentialMediationRequirement.class
+)
+public @interface CredentialMediationRequirement {
   @Nonnull
-  public static final String optional = "optional";
+  String optional = "optional";
 
   @Nonnull
-  public static final String required = "required";
+  String required = "required";
 
   @Nonnull
-  public static final String silent = "silent";
-
-  private CredentialMediationRequirement() {
-  }
+  String silent = "silent";
 }

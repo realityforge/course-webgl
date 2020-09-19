@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCStatsIceCandidatePairState {
+@MagicConstant(
+    valuesFromClass = RTCStatsIceCandidatePairState.class
+)
+public @interface RTCStatsIceCandidatePairState {
   @Nonnull
-  public static final String failed = "failed";
+  String failed = "failed";
 
   @Nonnull
-  public static final String frozen = "frozen";
+  String frozen = "frozen";
 
   @Nonnull
-  public static final String in_progress = "in-progress";
+  String in_progress = "in-progress";
 
   @Nonnull
-  public static final String succeeded = "succeeded";
+  String succeeded = "succeeded";
 
   @Nonnull
-  public static final String waiting = "waiting";
-
-  private RTCStatsIceCandidatePairState() {
-  }
+  String waiting = "waiting";
 }

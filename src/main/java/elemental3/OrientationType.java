@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class OrientationType {
+@MagicConstant(
+    valuesFromClass = OrientationType.class
+)
+public @interface OrientationType {
   @Nonnull
-  public static final String landscape_primary = "landscape-primary";
+  String landscape_primary = "landscape-primary";
 
   @Nonnull
-  public static final String landscape_secondary = "landscape-secondary";
+  String landscape_secondary = "landscape-secondary";
 
   @Nonnull
-  public static final String portrait_primary = "portrait-primary";
+  String portrait_primary = "portrait-primary";
 
   @Nonnull
-  public static final String portrait_secondary = "portrait-secondary";
-
-  private OrientationType() {
-  }
+  String portrait_secondary = "portrait-secondary";
 }

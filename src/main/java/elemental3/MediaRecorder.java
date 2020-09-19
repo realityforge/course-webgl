@@ -8,7 +8,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaRecorder interface of the MediaStream Recording API provides functionality to easily record media. It is created using the MediaRecorder() constructor.
@@ -91,9 +90,7 @@ public class MediaRecorder extends EventTarget {
       name = "audioBitrateMode"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = BitrateMode.class
-  )
+  @BitrateMode
   public native String audioBitrateMode();
 
   /**
@@ -126,9 +123,7 @@ public class MediaRecorder extends EventTarget {
       name = "state"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RecordingState.class
-  )
+  @RecordingState
   public native String state();
 
   /**

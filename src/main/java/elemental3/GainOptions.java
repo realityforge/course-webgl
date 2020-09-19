@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -49,8 +48,7 @@ public interface GainOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default GainOptions channelCountMode(
-      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
+  default GainOptions channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -59,7 +57,7 @@ public interface GainOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default GainOptions channelInterpretation(
-      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
+      @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

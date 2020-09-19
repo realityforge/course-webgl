@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class IDBTransactionDurability {
+@MagicConstant(
+    valuesFromClass = IDBTransactionDurability.class
+)
+public @interface IDBTransactionDurability {
   @Nonnull
-  public static final String default_ = "default";
+  String default_ = "default";
 
   @Nonnull
-  public static final String relaxed = "relaxed";
+  String relaxed = "relaxed";
 
   @Nonnull
-  public static final String strict = "strict";
-
-  private IDBTransactionDurability() {
-  }
+  String strict = "strict";
 }

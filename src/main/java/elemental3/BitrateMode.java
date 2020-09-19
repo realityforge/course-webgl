@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class BitrateMode {
+@MagicConstant(
+    valuesFromClass = BitrateMode.class
+)
+public @interface BitrateMode {
   @Nonnull
-  public static final String cbr = "cbr";
+  String cbr = "cbr";
 
   @Nonnull
-  public static final String vbr = "vbr";
-
-  private BitrateMode() {
-  }
+  String vbr = "vbr";
 }

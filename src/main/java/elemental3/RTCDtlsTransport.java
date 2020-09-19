@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCDtlsTransport interface provides access to information about the Datagram Transport Layer Security (DTLS) transport over which a RTCPeerConnection's RTP and RTCP packets are sent and received by its RTCRtpSender and RTCRtpReceiver objects.
@@ -51,9 +50,7 @@ public class RTCDtlsTransport extends EventTarget {
       name = "state"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCDtlsTransportState.class
-  )
+  @RTCDtlsTransportState
   public native String state();
 
   @Nonnull

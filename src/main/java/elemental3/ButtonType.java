@@ -2,37 +2,38 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * An enumeration describing the behavior of the button.
  */
 @Generated("org.realityforge.webtack")
-public final class ButtonType {
+@MagicConstant(
+    valuesFromClass = ButtonType.class
+)
+public @interface ButtonType {
   /**
    * The button has no default behaviour.
    */
   @Nonnull
-  public static final String button = "button";
+  String button = "button";
 
   /**
    * The button displays a menu.
    * This is an experimental feature.
    */
   @Nonnull
-  public static final String menu = "menu";
+  String menu = "menu";
 
   /**
    * The button resets the form.
    */
   @Nonnull
-  public static final String reset = "reset";
+  String reset = "reset";
 
   /**
    * The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
    */
   @Nonnull
-  public static final String submit = "submit";
-
-  private ButtonType() {
-  }
+  String submit = "submit";
 }

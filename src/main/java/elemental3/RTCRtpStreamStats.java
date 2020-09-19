@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity.
@@ -25,8 +24,7 @@ public interface RTCRtpStreamStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCRtpStreamStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @Nonnull final String kind, final int ssrc) {
+      @RTCStatsType @Nonnull final String type, @Nonnull final String kind, final int ssrc) {
     return Js.<RTCRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
@@ -215,8 +213,7 @@ public interface RTCRtpStreamStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCRtpStreamStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCRtpStreamStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -237,18 +236,15 @@ public interface TouchInit {
   @JsProperty(
       name = "touchType"
   )
-  @MagicConstant(
-      valuesFromClass = TouchType.class
-  )
+  @TouchType
   String touchType();
 
   @JsProperty
-  void setTouchType(@MagicConstant(valuesFromClass = TouchType.class) @Nonnull String touchType);
+  void setTouchType(@TouchType @Nonnull String touchType);
 
   @JsOverlay
   @Nonnull
-  default TouchInit touchType(
-      @MagicConstant(valuesFromClass = TouchType.class) @Nonnull final String touchType) {
+  default TouchInit touchType(@TouchType @Nonnull final String touchType) {
     setTouchType( touchType );
     return this;
   }

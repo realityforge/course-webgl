@@ -9,7 +9,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,7 +20,7 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static MediaKeyMessageEventInit create(@Nonnull final ArrayBuffer message,
-      @MagicConstant(valuesFromClass = MediaKeyMessageType.class) @Nonnull final String messageType) {
+      @MediaKeyMessageType @Nonnull final String messageType) {
     return Js.<MediaKeyMessageEventInit>uncheckedCast( JsPropertyMap.of() ).message( message ).messageType( messageType );
   }
 
@@ -44,20 +43,17 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsProperty(
       name = "messageType"
   )
-  @MagicConstant(
-      valuesFromClass = MediaKeyMessageType.class
-  )
+  @MediaKeyMessageType
   @Nonnull
   String messageType();
 
   @JsProperty
-  void setMessageType(
-      @MagicConstant(valuesFromClass = MediaKeyMessageType.class) @Nonnull String messageType);
+  void setMessageType(@MediaKeyMessageType @Nonnull String messageType);
 
   @JsOverlay
   @Nonnull
   default MediaKeyMessageEventInit messageType(
-      @MagicConstant(valuesFromClass = MediaKeyMessageType.class) @Nonnull final String messageType) {
+      @MediaKeyMessageType @Nonnull final String messageType) {
     setMessageType( messageType );
     return this;
   }

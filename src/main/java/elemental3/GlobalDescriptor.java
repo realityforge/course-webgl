@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,8 +18,7 @@ import org.intellij.lang.annotations.MagicConstant;
 public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
-  static GlobalDescriptor create(
-      @MagicConstant(valuesFromClass = ValueType.class) @Nonnull final String value) {
+  static GlobalDescriptor create(@ValueType @Nonnull final String value) {
     return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
   }
 
@@ -42,19 +40,16 @@ public interface GlobalDescriptor {
   @JsProperty(
       name = "value"
   )
-  @MagicConstant(
-      valuesFromClass = ValueType.class
-  )
+  @ValueType
   @Nonnull
   String value();
 
   @JsProperty
-  void setValue(@MagicConstant(valuesFromClass = ValueType.class) @Nonnull String value);
+  void setValue(@ValueType @Nonnull String value);
 
   @JsOverlay
   @Nonnull
-  default GlobalDescriptor value(
-      @MagicConstant(valuesFromClass = ValueType.class) @Nonnull final String value) {
+  default GlobalDescriptor value(@ValueType @Nonnull final String value) {
     setValue( value );
     return this;
   }

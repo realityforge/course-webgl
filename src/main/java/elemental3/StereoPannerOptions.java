@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -50,7 +49,7 @@ public interface StereoPannerOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default StereoPannerOptions channelCountMode(
-      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
+      @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -59,7 +58,7 @@ public interface StereoPannerOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default StereoPannerOptions channelInterpretation(
-      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
+      @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

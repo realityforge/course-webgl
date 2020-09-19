@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WakeLockSentinel interface of the Screen Wake Lock API provides a handle to the underlying platform wake lock and can be manually released and reacquired. An Object representing the wake lock is returned via the navigator.wakelock.request() method.
@@ -46,9 +45,7 @@ public class WakeLockSentinel extends EventTarget {
       name = "type"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = WakeLockType.class
-  )
+  @WakeLockType
   public native String type();
 
   /**

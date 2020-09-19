@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating button elements.
@@ -31,15 +30,11 @@ public class HTMLButtonElement extends HTMLElement {
   public String formAction;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormEncodingType.class
-  )
+  @FormEncodingType
   public String formEnctype;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormMethodType.class
-  )
+  @FormMethodType
   public String formMethod;
 
   public boolean formNoValidate;
@@ -51,9 +46,7 @@ public class HTMLButtonElement extends HTMLElement {
   public String name;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ButtonType.class
-  )
+  @ButtonType
   public String type;
 
   @Nonnull

@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AudioContextState {
+@MagicConstant(
+    valuesFromClass = AudioContextState.class
+)
+public @interface AudioContextState {
   @Nonnull
-  public static final String closed = "closed";
+  String closed = "closed";
 
   @Nonnull
-  public static final String running = "running";
+  String running = "running";
 
   @Nonnull
-  public static final String suspended = "suspended";
-
-  private AudioContextState() {
-  }
+  String suspended = "suspended";
 }

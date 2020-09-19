@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCSessionDescription interface describes one end of a connection&mdash;or potential connection&mdash;and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session.
@@ -47,9 +46,7 @@ public class RTCSessionDescription {
       name = "type"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCSdpType.class
-  )
+  @RTCSdpType
   public native String type();
 
   /**

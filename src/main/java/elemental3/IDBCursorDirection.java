@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class IDBCursorDirection {
+@MagicConstant(
+    valuesFromClass = IDBCursorDirection.class
+)
+public @interface IDBCursorDirection {
   @Nonnull
-  public static final String next = "next";
+  String next = "next";
 
   @Nonnull
-  public static final String nextunique = "nextunique";
+  String nextunique = "nextunique";
 
   @Nonnull
-  public static final String prev = "prev";
+  String prev = "prev";
 
   @Nonnull
-  public static final String prevunique = "prevunique";
-
-  private IDBCursorDirection() {
-  }
+  String prevunique = "prevunique";
 }

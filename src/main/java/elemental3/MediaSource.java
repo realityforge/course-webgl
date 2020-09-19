@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaSource interface of the Media Source Extensions API represents a source of media data for an HTMLMediaElement object. A MediaSource object can be attached to a HTMLMediaElement to be played in the user agent.
@@ -59,9 +58,7 @@ public class MediaSource extends EventTarget {
       name = "readyState"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReadyState.class
-  )
+  @ReadyState
   public native String readyState();
 
   /**
@@ -102,8 +99,7 @@ public class MediaSource extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/endOfStream">MediaSource.endOfStream - MDN</a>
    */
-  public native void endOfStream(
-      @MagicConstant(valuesFromClass = EndOfStreamError.class) @Nonnull String error);
+  public native void endOfStream(@EndOfStreamError @Nonnull String error);
 
   /**
    * The endOfStream() method of the MediaSource interface signals the end of the stream.

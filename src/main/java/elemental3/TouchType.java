@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class TouchType {
+@MagicConstant(
+    valuesFromClass = TouchType.class
+)
+public @interface TouchType {
   @Nonnull
-  public static final String direct = "direct";
+  String direct = "direct";
 
   @Nonnull
-  public static final String stylus = "stylus";
-
-  private TouchType() {
-  }
+  String stylus = "stylus";
 }

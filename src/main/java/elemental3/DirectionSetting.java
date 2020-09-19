@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class DirectionSetting {
+@MagicConstant(
+    valuesFromClass = DirectionSetting.class
+)
+public @interface DirectionSetting {
   @Nonnull
-  public static final String lr = "lr";
+  String lr = "lr";
 
   @Nonnull
-  public static final String rl = "rl";
-
-  private DirectionSetting() {
-  }
+  String rl = "rl";
 }

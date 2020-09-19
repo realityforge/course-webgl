@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,28 +18,23 @@ import org.intellij.lang.annotations.MagicConstant;
 public interface RTCErrorInit {
   @JsOverlay
   @Nonnull
-  static RTCErrorInit create(
-      @MagicConstant(valuesFromClass = RTCErrorDetailType.class) @Nonnull final String errorDetail) {
+  static RTCErrorInit create(@RTCErrorDetailType @Nonnull final String errorDetail) {
     return Js.<RTCErrorInit>uncheckedCast( JsPropertyMap.of() ).errorDetail( errorDetail );
   }
 
   @JsProperty(
       name = "errorDetail"
   )
-  @MagicConstant(
-      valuesFromClass = RTCErrorDetailType.class
-  )
+  @RTCErrorDetailType
   @Nonnull
   String errorDetail();
 
   @JsProperty
-  void setErrorDetail(
-      @MagicConstant(valuesFromClass = RTCErrorDetailType.class) @Nonnull String errorDetail);
+  void setErrorDetail(@RTCErrorDetailType @Nonnull String errorDetail);
 
   @JsOverlay
   @Nonnull
-  default RTCErrorInit errorDetail(
-      @MagicConstant(valuesFromClass = RTCErrorDetailType.class) @Nonnull final String errorDetail) {
+  default RTCErrorInit errorDetail(@RTCErrorDetailType @Nonnull final String errorDetail) {
     setErrorDetail( errorDetail );
     return this;
   }

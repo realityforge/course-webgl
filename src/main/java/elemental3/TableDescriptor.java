@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,28 +18,23 @@ import org.intellij.lang.annotations.MagicConstant;
 public interface TableDescriptor {
   @JsOverlay
   @Nonnull
-  static TableDescriptor create(
-      @MagicConstant(valuesFromClass = TableKind.class) @Nonnull final String element,
-      final int initial) {
+  static TableDescriptor create(@TableKind @Nonnull final String element, final int initial) {
     return Js.<TableDescriptor>uncheckedCast( JsPropertyMap.of() ).element( element ).initial( initial );
   }
 
   @JsProperty(
       name = "element"
   )
-  @MagicConstant(
-      valuesFromClass = TableKind.class
-  )
+  @TableKind
   @Nonnull
   String element();
 
   @JsProperty
-  void setElement(@MagicConstant(valuesFromClass = TableKind.class) @Nonnull String element);
+  void setElement(@TableKind @Nonnull String element);
 
   @JsOverlay
   @Nonnull
-  default TableDescriptor element(
-      @MagicConstant(valuesFromClass = TableKind.class) @Nonnull final String element) {
+  default TableDescriptor element(@TableKind @Nonnull final String element) {
     setElement( element );
     return this;
   }

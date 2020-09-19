@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class DOMParserSupportedType {
+@MagicConstant(
+    valuesFromClass = DOMParserSupportedType.class
+)
+public @interface DOMParserSupportedType {
   @Nonnull
-  public static final String application_xhtml_xml = "application/xhtml+xml";
+  String application_xhtml_xml = "application/xhtml+xml";
 
   @Nonnull
-  public static final String application_xml = "application/xml";
+  String application_xml = "application/xml";
 
   @Nonnull
-  public static final String image_svg_xml = "image/svg+xml";
+  String image_svg_xml = "image/svg+xml";
 
   @Nonnull
-  public static final String text_html = "text/html";
+  String text_html = "text/html";
 
   @Nonnull
-  public static final String text_xml = "text/xml";
-
-  private DOMParserSupportedType() {
-  }
+  String text_xml = "text/xml";
 }

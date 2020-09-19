@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCCodecType {
+@MagicConstant(
+    valuesFromClass = RTCCodecType.class
+)
+public @interface RTCCodecType {
   @Nonnull
-  public static final String decode = "decode";
+  String decode = "decode";
 
   @Nonnull
-  public static final String encode = "encode";
-
-  private RTCCodecType() {
-  }
+  String encode = "encode";
 }

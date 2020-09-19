@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,9 +19,8 @@ public interface RTCCertificateStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCCertificateStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @Nonnull final String base64Certificate, @Nonnull final String fingerprint,
-      @Nonnull final String fingerprintAlgorithm) {
+      @RTCStatsType @Nonnull final String type, @Nonnull final String base64Certificate,
+      @Nonnull final String fingerprint, @Nonnull final String fingerprintAlgorithm) {
     return Js.<RTCCertificateStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).base64Certificate( base64Certificate ).fingerprint( fingerprint ).fingerprintAlgorithm( fingerprintAlgorithm );
   }
 
@@ -123,8 +121,7 @@ public interface RTCCertificateStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCCertificateStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCCertificateStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

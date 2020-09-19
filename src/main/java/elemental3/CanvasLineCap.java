@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class CanvasLineCap {
+@MagicConstant(
+    valuesFromClass = CanvasLineCap.class
+)
+public @interface CanvasLineCap {
   @Nonnull
-  public static final String butt = "butt";
+  String butt = "butt";
 
   @Nonnull
-  public static final String round = "round";
+  String round = "round";
 
   @Nonnull
-  public static final String square = "square";
-
-  private CanvasLineCap() {
-  }
+  String square = "square";
 }

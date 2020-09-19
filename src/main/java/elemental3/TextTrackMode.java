@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class TextTrackMode {
+@MagicConstant(
+    valuesFromClass = TextTrackMode.class
+)
+public @interface TextTrackMode {
   @Nonnull
-  public static final String disabled = "disabled";
+  String disabled = "disabled";
 
   @Nonnull
-  public static final String hidden = "hidden";
+  String hidden = "hidden";
 
   @Nonnull
-  public static final String showing = "showing";
-
-  private TextTrackMode() {
-  }
+  String showing = "showing";
 }

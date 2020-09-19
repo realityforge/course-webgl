@@ -18,7 +18,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The SubtleCrypto interface of the Web Crypto API provides a number of low-level cryptographic functions. Access to the features of SubtleCrypto is obtained through the subtle property of the Crypto object you get from Window.crypto.
@@ -1266,9 +1265,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey - MDN</a>
    */
   @Nonnull
-  public native Promise<Any> exportKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
-      @Nonnull CryptoKey key);
+  public native Promise<Any> exportKey(@KeyFormat @Nonnull String format, @Nonnull CryptoKey key);
 
   /**
    * Use the generateKey() method of the SubtleCrypto interface to generate a new key (for symmetric algorithms) or key pair (for public-key algorithms).
@@ -1330,8 +1327,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1341,8 +1337,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1352,8 +1347,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1363,8 +1357,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1374,8 +1367,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1385,8 +1377,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1396,8 +1387,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1407,8 +1397,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1418,8 +1407,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull AlgorithmIdentifier algorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
 
@@ -1429,8 +1417,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1440,8 +1427,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1451,8 +1437,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1462,8 +1447,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1473,8 +1457,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1484,8 +1467,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1495,8 +1477,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1506,8 +1487,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1517,8 +1497,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1528,8 +1507,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1539,8 +1517,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1550,8 +1527,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1561,8 +1537,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1572,8 +1547,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1583,8 +1557,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1594,8 +1567,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1605,8 +1577,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1616,8 +1587,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1627,8 +1597,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1638,8 +1607,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1649,8 +1617,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1660,8 +1627,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1671,8 +1637,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1682,8 +1647,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1693,8 +1657,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1704,8 +1667,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1715,8 +1677,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1726,8 +1687,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1737,8 +1697,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1748,8 +1707,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1759,8 +1717,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1770,8 +1727,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1781,8 +1737,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1792,8 +1747,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1803,8 +1757,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1814,8 +1767,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1825,8 +1777,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1836,8 +1787,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1847,8 +1797,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1858,8 +1807,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1869,8 +1817,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1880,8 +1827,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull AlgorithmIdentifier algorithm,
       boolean extractable, @Nonnull String[] keyUsages);
 
@@ -1891,8 +1837,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1902,8 +1847,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1913,8 +1857,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1924,8 +1867,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1935,8 +1877,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1946,8 +1887,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1957,8 +1897,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1968,8 +1907,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1979,8 +1917,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1990,8 +1927,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2001,8 +1937,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2012,8 +1947,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2023,8 +1957,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2034,8 +1967,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2045,8 +1977,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2056,8 +1987,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2067,8 +1997,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2078,8 +2007,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2089,8 +2017,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2100,8 +2027,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2111,8 +2037,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2122,8 +2047,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2133,8 +2057,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2144,8 +2067,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2155,8 +2077,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2166,8 +2087,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2177,8 +2097,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2188,8 +2107,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2199,8 +2117,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2210,8 +2127,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2221,8 +2137,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2232,8 +2147,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2243,8 +2157,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> importKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2605,8 +2518,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2618,8 +2530,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2631,8 +2542,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2644,8 +2554,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2657,8 +2566,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2670,8 +2578,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2683,8 +2590,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2696,8 +2602,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2709,8 +2614,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2722,8 +2626,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2735,8 +2638,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2748,8 +2650,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2761,8 +2662,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2774,8 +2674,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2786,8 +2685,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2798,8 +2696,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2810,8 +2707,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2822,8 +2718,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2834,8 +2729,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2846,8 +2740,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2858,8 +2751,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2870,8 +2762,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2882,8 +2773,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2894,8 +2784,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2906,8 +2795,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2918,8 +2806,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2930,8 +2817,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2942,8 +2828,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2954,8 +2839,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2966,8 +2850,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2978,8 +2861,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2990,8 +2872,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3002,8 +2883,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3014,8 +2894,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3026,8 +2905,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3038,8 +2916,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3050,8 +2927,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3062,8 +2938,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3074,8 +2949,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3086,8 +2960,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3098,8 +2971,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3110,8 +2982,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3122,8 +2993,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3134,8 +3004,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3146,8 +3015,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3158,8 +3026,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3170,8 +3037,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3182,8 +3048,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3194,8 +3059,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3206,8 +3070,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3218,8 +3081,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3230,8 +3092,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3242,8 +3103,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3254,8 +3114,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3266,8 +3125,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3278,8 +3136,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3290,8 +3147,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3302,8 +3158,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3314,8 +3169,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3326,8 +3180,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3338,8 +3191,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3350,8 +3202,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3362,8 +3213,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3374,8 +3224,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3386,8 +3235,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3398,8 +3246,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3410,8 +3257,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3422,8 +3268,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3434,8 +3279,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3446,8 +3290,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3458,8 +3301,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3470,8 +3312,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3482,8 +3323,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3494,8 +3334,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3506,8 +3345,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3518,8 +3356,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3530,8 +3367,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3542,8 +3378,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3554,8 +3389,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3566,8 +3400,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3578,8 +3411,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3590,8 +3422,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3602,8 +3433,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3614,8 +3444,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3626,8 +3455,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3638,8 +3466,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3650,8 +3477,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3662,8 +3488,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3674,8 +3499,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3686,8 +3510,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3698,8 +3521,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3710,8 +3532,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3722,8 +3543,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3734,8 +3554,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3746,8 +3565,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3758,8 +3576,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3770,8 +3587,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3782,8 +3598,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3794,8 +3609,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3806,8 +3620,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3818,8 +3631,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3830,8 +3642,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3842,8 +3653,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3854,8 +3664,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3866,8 +3675,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3878,8 +3686,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3890,8 +3697,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3902,8 +3708,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3914,8 +3719,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3926,8 +3730,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3938,8 +3741,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3950,8 +3752,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3962,8 +3763,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3974,8 +3774,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3986,8 +3785,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3998,8 +3796,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -4010,8 +3807,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -4022,8 +3818,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4035,8 +3830,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4048,8 +3842,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4061,8 +3854,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4074,8 +3866,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4087,8 +3878,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4100,8 +3890,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4113,8 +3902,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4126,8 +3914,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4139,8 +3926,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4152,8 +3938,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4165,8 +3950,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4178,8 +3962,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4191,8 +3974,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4203,8 +3985,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4215,8 +3996,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4227,8 +4007,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4239,8 +4018,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4251,8 +4029,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4263,8 +4040,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4275,8 +4051,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4287,8 +4062,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4299,8 +4073,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4311,8 +4084,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4323,8 +4095,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4335,8 +4106,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4347,8 +4117,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4359,8 +4128,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4371,8 +4139,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4383,8 +4150,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4395,8 +4161,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4407,8 +4172,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4419,8 +4183,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4431,8 +4194,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4443,8 +4205,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4455,8 +4216,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4467,8 +4227,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4479,8 +4238,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4491,8 +4249,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4503,8 +4260,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4515,8 +4271,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4527,8 +4282,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4539,8 +4293,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4551,8 +4304,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4563,8 +4315,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4575,8 +4326,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4587,8 +4337,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4599,8 +4348,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4611,8 +4359,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4623,8 +4370,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4635,8 +4381,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4647,8 +4392,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4659,8 +4403,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4671,8 +4414,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4683,8 +4425,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4695,8 +4436,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4707,8 +4447,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4719,8 +4458,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4731,8 +4469,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4743,8 +4480,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4755,8 +4491,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4767,8 +4502,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4779,8 +4513,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4791,8 +4524,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4803,8 +4535,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4815,8 +4546,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4827,8 +4557,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4839,8 +4568,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4851,8 +4579,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4863,8 +4590,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4875,8 +4601,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4887,8 +4612,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4899,8 +4623,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4911,8 +4634,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4923,8 +4645,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4935,8 +4656,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4947,8 +4667,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4959,8 +4678,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4971,8 +4689,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4983,8 +4700,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4995,8 +4711,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5007,8 +4722,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5019,8 +4733,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5031,8 +4744,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5043,8 +4755,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5055,8 +4766,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5067,8 +4777,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5079,8 +4788,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5091,8 +4799,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5103,8 +4810,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5115,8 +4821,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5127,8 +4832,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5139,8 +4843,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5151,8 +4854,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5163,8 +4865,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5175,8 +4876,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5187,8 +4887,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5199,8 +4898,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5211,8 +4909,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5223,8 +4920,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5235,8 +4931,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5247,8 +4942,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5259,8 +4953,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5271,8 +4964,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5283,8 +4975,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5295,8 +4986,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5307,8 +4997,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5319,8 +5008,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5331,8 +5019,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5343,8 +5030,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5355,8 +5041,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5367,8 +5052,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5379,8 +5063,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5391,8 +5074,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5403,8 +5085,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5415,8 +5096,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5427,8 +5107,7 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
+  public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -10002,10 +9681,8 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<Any> wrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
-      @Nonnull CryptoKey key, @Nonnull CryptoKey wrappingKey,
-      @Nonnull AlgorithmIdentifier wrapAlgorithm);
+  public native Promise<Any> wrapKey(@KeyFormat @Nonnull String format, @Nonnull CryptoKey key,
+      @Nonnull CryptoKey wrappingKey, @Nonnull AlgorithmIdentifier wrapAlgorithm);
 
   /**
    * The wrapKey() method of the SubtleCrypto interface &quot;wraps&quot; a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as inside an otherwise unprotected data store or in transmission over an unprotected network.
@@ -10013,9 +9690,8 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<Any> wrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
-      @Nonnull CryptoKey key, @Nonnull CryptoKey wrappingKey, @Nonnull Object wrapAlgorithm);
+  public native Promise<Any> wrapKey(@KeyFormat @Nonnull String format, @Nonnull CryptoKey key,
+      @Nonnull CryptoKey wrappingKey, @Nonnull Object wrapAlgorithm);
 
   /**
    * The wrapKey() method of the SubtleCrypto interface &quot;wraps&quot; a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as inside an otherwise unprotected data store or in transmission over an unprotected network.
@@ -10023,7 +9699,6 @@ public class SubtleCrypto {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey - MDN</a>
    */
   @Nonnull
-  public native Promise<Any> wrapKey(
-      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
-      @Nonnull CryptoKey key, @Nonnull CryptoKey wrappingKey, @Nonnull String wrapAlgorithm);
+  public native Promise<Any> wrapKey(@KeyFormat @Nonnull String format, @Nonnull CryptoKey key,
+      @Nonnull CryptoKey wrappingKey, @Nonnull String wrapAlgorithm);
 }

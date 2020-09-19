@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,8 +19,8 @@ public interface RTCTransportStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCTransportStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @MagicConstant(valuesFromClass = RTCDtlsTransportState.class) @Nonnull final String dtlsState) {
+      @RTCStatsType @Nonnull final String type,
+      @RTCDtlsTransportState @Nonnull final String dtlsState) {
     return Js.<RTCTransportStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).dtlsState( dtlsState );
   }
 
@@ -73,20 +72,16 @@ public interface RTCTransportStats extends RTCStats {
   @JsProperty(
       name = "dtlsState"
   )
-  @MagicConstant(
-      valuesFromClass = RTCDtlsTransportState.class
-  )
+  @RTCDtlsTransportState
   @Nonnull
   String dtlsState();
 
   @JsProperty
-  void setDtlsState(
-      @MagicConstant(valuesFromClass = RTCDtlsTransportState.class) @Nonnull String dtlsState);
+  void setDtlsState(@RTCDtlsTransportState @Nonnull String dtlsState);
 
   @JsOverlay
   @Nonnull
-  default RTCTransportStats dtlsState(
-      @MagicConstant(valuesFromClass = RTCDtlsTransportState.class) @Nonnull final String dtlsState) {
+  default RTCTransportStats dtlsState(@RTCDtlsTransportState @Nonnull final String dtlsState) {
     setDtlsState( dtlsState );
     return this;
   }
@@ -110,18 +105,15 @@ public interface RTCTransportStats extends RTCStats {
   @JsProperty(
       name = "iceRole"
   )
-  @MagicConstant(
-      valuesFromClass = RTCIceRole.class
-  )
+  @RTCIceRole
   String iceRole();
 
   @JsProperty
-  void setIceRole(@MagicConstant(valuesFromClass = RTCIceRole.class) @Nonnull String iceRole);
+  void setIceRole(@RTCIceRole @Nonnull String iceRole);
 
   @JsOverlay
   @Nonnull
-  default RTCTransportStats iceRole(
-      @MagicConstant(valuesFromClass = RTCIceRole.class) @Nonnull final String iceRole) {
+  default RTCTransportStats iceRole(@RTCIceRole @Nonnull final String iceRole) {
     setIceRole( iceRole );
     return this;
   }
@@ -129,19 +121,15 @@ public interface RTCTransportStats extends RTCStats {
   @JsProperty(
       name = "iceState"
   )
-  @MagicConstant(
-      valuesFromClass = RTCIceTransportState.class
-  )
+  @RTCIceTransportState
   String iceState();
 
   @JsProperty
-  void setIceState(
-      @MagicConstant(valuesFromClass = RTCIceTransportState.class) @Nonnull String iceState);
+  void setIceState(@RTCIceTransportState @Nonnull String iceState);
 
   @JsOverlay
   @Nonnull
-  default RTCTransportStats iceState(
-      @MagicConstant(valuesFromClass = RTCIceTransportState.class) @Nonnull final String iceState) {
+  default RTCTransportStats iceState(@RTCIceTransportState @Nonnull final String iceState) {
     setIceState( iceState );
     return this;
   }
@@ -330,8 +318,7 @@ public interface RTCTransportStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCTransportStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCTransportStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

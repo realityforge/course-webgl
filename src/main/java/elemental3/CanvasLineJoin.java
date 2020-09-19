@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class CanvasLineJoin {
+@MagicConstant(
+    valuesFromClass = CanvasLineJoin.class
+)
+public @interface CanvasLineJoin {
   @Nonnull
-  public static final String bevel = "bevel";
+  String bevel = "bevel";
 
   @Nonnull
-  public static final String miter = "miter";
+  String miter = "miter";
 
   @Nonnull
-  public static final String round = "round";
-
-  private CanvasLineJoin() {
-  }
+  String round = "round";
 }

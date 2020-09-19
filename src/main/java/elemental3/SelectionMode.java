@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class SelectionMode {
+@MagicConstant(
+    valuesFromClass = SelectionMode.class
+)
+public @interface SelectionMode {
   @Nonnull
-  public static final String end = "end";
+  String end = "end";
 
   @Nonnull
-  public static final String preserve = "preserve";
+  String preserve = "preserve";
 
   @Nonnull
-  public static final String select = "select";
+  String select = "select";
 
   @Nonnull
-  public static final String start = "start";
-
-  private SelectionMode() {
-  }
+  String start = "start";
 }

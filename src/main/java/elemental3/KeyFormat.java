@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class KeyFormat {
+@MagicConstant(
+    valuesFromClass = KeyFormat.class
+)
+public @interface KeyFormat {
   @Nonnull
-  public static final String jwk = "jwk";
+  String jwk = "jwk";
 
   @Nonnull
-  public static final String pkcs8 = "pkcs8";
+  String pkcs8 = "pkcs8";
 
   @Nonnull
-  public static final String raw = "raw";
+  String raw = "raw";
 
   @Nonnull
-  public static final String spki = "spki";
-
-  private KeyFormat() {
-  }
+  String spki = "spki";
 }

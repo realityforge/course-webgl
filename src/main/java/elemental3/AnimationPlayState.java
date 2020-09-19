@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AnimationPlayState {
+@MagicConstant(
+    valuesFromClass = AnimationPlayState.class
+)
+public @interface AnimationPlayState {
   @Nonnull
-  public static final String finished = "finished";
+  String finished = "finished";
 
   @Nonnull
-  public static final String idle = "idle";
+  String idle = "idle";
 
   @Nonnull
-  public static final String paused = "paused";
+  String paused = "paused";
 
   @Nonnull
-  public static final String running = "running";
-
-  private AnimationPlayState() {
-  }
+  String running = "running";
 }

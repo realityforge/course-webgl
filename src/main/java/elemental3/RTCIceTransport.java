@@ -9,7 +9,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.
@@ -59,9 +58,7 @@ public class RTCIceTransport extends EventTarget {
       name = "component"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCIceComponent.class
-  )
+  @RTCIceComponent
   public native String component();
 
   /**
@@ -73,9 +70,7 @@ public class RTCIceTransport extends EventTarget {
       name = "gatheringState"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCIceGathererState.class
-  )
+  @RTCIceGathererState
   public native String gatheringState();
 
   /**
@@ -87,9 +82,7 @@ public class RTCIceTransport extends EventTarget {
       name = "role"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCIceRole.class
-  )
+  @RTCIceRole
   public native String role();
 
   /**
@@ -101,9 +94,7 @@ public class RTCIceTransport extends EventTarget {
       name = "state"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCIceTransportState.class
-  )
+  @RTCIceTransportState
   public native String state();
 
   /**

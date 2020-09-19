@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ImageSmoothingQuality {
+@MagicConstant(
+    valuesFromClass = ImageSmoothingQuality.class
+)
+public @interface ImageSmoothingQuality {
   @Nonnull
-  public static final String high = "high";
+  String high = "high";
 
   @Nonnull
-  public static final String low = "low";
+  String low = "low";
 
   @Nonnull
-  public static final String medium = "medium";
-
-  private ImageSmoothingQuality() {
-  }
+  String medium = "medium";
 }

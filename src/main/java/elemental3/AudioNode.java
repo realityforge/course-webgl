@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The AudioNode interface is a generic interface for representing an audio processing module.
@@ -32,9 +31,7 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCountMode">AudioNode.channelCountMode - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ChannelCountMode.class
-  )
+  @ChannelCountMode
   public String channelCountMode;
 
   /**
@@ -43,9 +40,7 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelInterpretation">AudioNode.channelInterpretation - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ChannelInterpretation.class
-  )
+  @ChannelInterpretation
   public String channelInterpretation;
 
   AudioNode() {

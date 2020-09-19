@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCIceGathererState {
+@MagicConstant(
+    valuesFromClass = RTCIceGathererState.class
+)
+public @interface RTCIceGathererState {
   @Nonnull
-  public static final String complete = "complete";
+  String complete = "complete";
 
   @Nonnull
-  public static final String gathering = "gathering";
+  String gathering = "gathering";
 
   @Nonnull
-  public static final String new_ = "new";
-
-  private RTCIceGathererState() {
-  }
+  String new_ = "new";
 }

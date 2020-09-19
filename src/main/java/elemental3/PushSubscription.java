@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The PushSubscription interface of the Push API provides a subcription's URL endpoint and allows unsubscription from a push service.
@@ -64,8 +63,7 @@ public class PushSubscription {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/getKey">PushSubscription.getKey - MDN</a>
    */
   @Nullable
-  public native ArrayBuffer getKey(
-      @MagicConstant(valuesFromClass = PushEncryptionKeyName.class) @Nonnull String name);
+  public native ArrayBuffer getKey(@PushEncryptionKeyName @Nonnull String name);
 
   /**
    * The toJSON() method of the PushSubscription interface is a standard serializer: it returns a JSON representation of the subscription properties, providing a useful shortcut.

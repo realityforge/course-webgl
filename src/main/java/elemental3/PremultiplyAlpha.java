@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class PremultiplyAlpha {
+@MagicConstant(
+    valuesFromClass = PremultiplyAlpha.class
+)
+public @interface PremultiplyAlpha {
   @Nonnull
-  public static final String default_ = "default";
+  String default_ = "default";
 
   @Nonnull
-  public static final String none = "none";
+  String none = "none";
 
   @Nonnull
-  public static final String premultiply = "premultiply";
-
-  private PremultiplyAlpha() {
-  }
+  String premultiply = "premultiply";
 }

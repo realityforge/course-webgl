@@ -2,12 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * An enumerated value to indicate whether to use CORS to fetch resources.
  */
 @Generated("org.realityforge.webtack")
-public final class CrossOriginType {
+@MagicConstant(
+    valuesFromClass = CrossOriginType.class
+)
+public @interface CrossOriginType {
   /**
    * Sends a cross-origin request without a credential. In other words, it sends
    * the <code>Origin:</code> HTTP header without a cookie, X.509 certificate, or performing HTTP
@@ -16,7 +20,7 @@ public final class CrossOriginType {
    * usage restricted.
    */
   @Nonnull
-  public static final String anonymous = "anonymous";
+  String anonymous = "anonymous";
 
   /**
    * Sends a cross-origin request with a credential. In other words, it sends the
@@ -26,8 +30,5 @@ public final class CrossOriginType {
    * image will be tainted and its usage restricted.
    */
   @Nonnull
-  public static final String use_credentials = "use-credentials";
-
-  private CrossOriginType() {
-  }
+  String use_credentials = "use-credentials";
 }

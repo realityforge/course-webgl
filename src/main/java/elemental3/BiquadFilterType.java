@@ -2,33 +2,34 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class BiquadFilterType {
+@MagicConstant(
+    valuesFromClass = BiquadFilterType.class
+)
+public @interface BiquadFilterType {
   @Nonnull
-  public static final String allpass = "allpass";
+  String allpass = "allpass";
 
   @Nonnull
-  public static final String bandpass = "bandpass";
+  String bandpass = "bandpass";
 
   @Nonnull
-  public static final String highpass = "highpass";
+  String highpass = "highpass";
 
   @Nonnull
-  public static final String highshelf = "highshelf";
+  String highshelf = "highshelf";
 
   @Nonnull
-  public static final String lowpass = "lowpass";
+  String lowpass = "lowpass";
 
   @Nonnull
-  public static final String lowshelf = "lowshelf";
+  String lowshelf = "lowshelf";
 
   @Nonnull
-  public static final String notch = "notch";
+  String notch = "notch";
 
   @Nonnull
-  public static final String peaking = "peaking";
-
-  private BiquadFilterType() {
-  }
+  String peaking = "peaking";
 }

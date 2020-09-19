@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class WorkerType {
+@MagicConstant(
+    valuesFromClass = WorkerType.class
+)
+public @interface WorkerType {
   @Nonnull
-  public static final String classic = "classic";
+  String classic = "classic";
 
   @Nonnull
-  public static final String module = "module";
-
-  private WorkerType() {
-  }
+  String module = "module";
 }

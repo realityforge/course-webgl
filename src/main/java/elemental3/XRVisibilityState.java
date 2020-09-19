@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class XRVisibilityState {
+@MagicConstant(
+    valuesFromClass = XRVisibilityState.class
+)
+public @interface XRVisibilityState {
   @Nonnull
-  public static final String hidden = "hidden";
+  String hidden = "hidden";
 
   @Nonnull
-  public static final String visible = "visible";
+  String visible = "visible";
 
   @Nonnull
-  public static final String visible_blurred = "visible-blurred";
-
-  private XRVisibilityState() {
-  }
+  String visible_blurred = "visible-blurred";
 }

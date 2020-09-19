@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for an AudioParam objects.
@@ -31,19 +30,16 @@ public interface AudioParamDescriptor {
   @JsProperty(
       name = "automationRate"
   )
-  @MagicConstant(
-      valuesFromClass = AutomationRate.class
-  )
+  @AutomationRate
   String automationRate();
 
   @JsProperty
-  void setAutomationRate(
-      @MagicConstant(valuesFromClass = AutomationRate.class) @Nonnull String automationRate);
+  void setAutomationRate(@AutomationRate @Nonnull String automationRate);
 
   @JsOverlay
   @Nonnull
   default AudioParamDescriptor automationRate(
-      @MagicConstant(valuesFromClass = AutomationRate.class) @Nonnull final String automationRate) {
+      @AutomationRate @Nonnull final String automationRate) {
     setAutomationRate( automationRate );
     return this;
   }

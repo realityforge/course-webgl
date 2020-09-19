@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
@@ -101,9 +100,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
       name = "type"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = NavigationType.class
-  )
+  @NavigationType
   public native String type();
 
   /**

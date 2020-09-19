@@ -8,7 +8,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of input elements.
@@ -32,9 +31,7 @@ public class HTMLInputElement extends HTMLElement {
   public String alt;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutocompleteType.class
-  )
+  @AutocompleteType
   public String autocomplete;
 
   public boolean checked;
@@ -56,15 +53,11 @@ public class HTMLInputElement extends HTMLElement {
   public String formAction;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormEncodingType.class
-  )
+  @FormEncodingType
   public String formEnctype;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormMethodType.class
-  )
+  @FormMethodType
   public String formMethod;
 
   public boolean formNoValidate;
@@ -124,9 +117,7 @@ public class HTMLInputElement extends HTMLElement {
   public String step;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = InputType.class
-  )
+  @InputType
   public String type;
 
   @Nonnull
@@ -211,7 +202,7 @@ public class HTMLInputElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
    */
   public native void setRangeText(@Nonnull String replacement, int start, int end,
-      @MagicConstant(valuesFromClass = SelectionMode.class) @Nonnull String selectionMode);
+      @SelectionMode @Nonnull String selectionMode);
 
   /**
    * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.

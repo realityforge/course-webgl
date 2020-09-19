@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -41,19 +40,15 @@ public interface OptionalEffectTiming {
   @JsProperty(
       name = "direction"
   )
-  @MagicConstant(
-      valuesFromClass = PlaybackDirection.class
-  )
+  @PlaybackDirection
   String direction();
 
   @JsProperty
-  void setDirection(
-      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull String direction);
+  void setDirection(@PlaybackDirection @Nonnull String direction);
 
   @JsOverlay
   @Nonnull
-  default OptionalEffectTiming direction(
-      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull final String direction) {
+  default OptionalEffectTiming direction(@PlaybackDirection @Nonnull final String direction) {
     setDirection( direction );
     return this;
   }
@@ -123,18 +118,15 @@ public interface OptionalEffectTiming {
   @JsProperty(
       name = "fill"
   )
-  @MagicConstant(
-      valuesFromClass = FillMode.class
-  )
+  @FillMode
   String fill();
 
   @JsProperty
-  void setFill(@MagicConstant(valuesFromClass = FillMode.class) @Nonnull String fill);
+  void setFill(@FillMode @Nonnull String fill);
 
   @JsOverlay
   @Nonnull
-  default OptionalEffectTiming fill(
-      @MagicConstant(valuesFromClass = FillMode.class) @Nonnull final String fill) {
+  default OptionalEffectTiming fill(@FillMode @Nonnull final String fill) {
     setFill( fill );
     return this;
   }

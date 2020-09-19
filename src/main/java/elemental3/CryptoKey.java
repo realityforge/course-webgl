@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The CryptoKey interface of the Web Crypto API represents a cryptographic key obtained from one of the SubtleCrypto methods generateKey(), deriveKey(), importKey(), or unwrapKey().
@@ -37,9 +36,7 @@ public class CryptoKey {
       name = "type"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = KeyType.class
-  )
+  @KeyType
   public native String type();
 
   @JsProperty(

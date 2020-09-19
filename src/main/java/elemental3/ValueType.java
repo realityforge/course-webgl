@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ValueType {
+@MagicConstant(
+    valuesFromClass = ValueType.class
+)
+public @interface ValueType {
   @Nonnull
-  public static final String f32 = "f32";
+  String f32 = "f32";
 
   @Nonnull
-  public static final String f64 = "f64";
+  String f64 = "f64";
 
   @Nonnull
-  public static final String i32 = "i32";
+  String i32 = "i32";
 
   @Nonnull
-  public static final String i64 = "i64";
-
-  private ValueType() {
-  }
+  String i64 = "i64";
 }

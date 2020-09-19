@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ScrollLogicalPosition {
+@MagicConstant(
+    valuesFromClass = ScrollLogicalPosition.class
+)
+public @interface ScrollLogicalPosition {
   @Nonnull
-  public static final String center = "center";
+  String center = "center";
 
   @Nonnull
-  public static final String end = "end";
+  String end = "end";
 
   @Nonnull
-  public static final String nearest = "nearest";
+  String nearest = "nearest";
 
   @Nonnull
-  public static final String start = "start";
-
-  private ScrollLogicalPosition() {
-  }
+  String start = "start";
 }

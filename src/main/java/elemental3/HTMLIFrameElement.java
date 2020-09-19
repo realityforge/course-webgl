@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
@@ -42,9 +41,7 @@ public class HTMLIFrameElement extends HTMLElement {
   public String height;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = LoadingType.class
-  )
+  @LoadingType
   public String loading;
 
   @Nonnull
@@ -65,9 +62,7 @@ public class HTMLIFrameElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy">HTMLIFrameElement.referrerPolicy - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReferrerPolicy.class
-  )
+  @ReferrerPolicy
   public String referrerPolicy;
 
   @Nonnull

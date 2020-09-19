@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -41,8 +40,7 @@ public interface FilePropertyBag extends BlobPropertyBag {
   @JsOverlay
   @Nonnull
   @Override
-  default FilePropertyBag endings(
-      @MagicConstant(valuesFromClass = EndingType.class) @Nonnull final String endings) {
+  default FilePropertyBag endings(@EndingType @Nonnull final String endings) {
     setEndings( endings );
     return this;
   }

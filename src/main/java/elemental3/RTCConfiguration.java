@@ -9,7 +9,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.
@@ -37,9 +36,7 @@ public interface RTCConfiguration {
   @JsProperty(
       name = "bundlePolicy"
   )
-  @MagicConstant(
-      valuesFromClass = RTCBundlePolicy.class
-  )
+  @RTCBundlePolicy
   String bundlePolicy();
 
   /**
@@ -48,8 +45,7 @@ public interface RTCConfiguration {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
    */
   @JsProperty
-  void setBundlePolicy(
-      @MagicConstant(valuesFromClass = RTCBundlePolicy.class) @Nonnull String bundlePolicy);
+  void setBundlePolicy(@RTCBundlePolicy @Nonnull String bundlePolicy);
 
   /**
    * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
@@ -58,8 +54,7 @@ public interface RTCConfiguration {
    */
   @JsOverlay
   @Nonnull
-  default RTCConfiguration bundlePolicy(
-      @MagicConstant(valuesFromClass = RTCBundlePolicy.class) @Nonnull final String bundlePolicy) {
+  default RTCConfiguration bundlePolicy(@RTCBundlePolicy @Nonnull final String bundlePolicy) {
     setBundlePolicy( bundlePolicy );
     return this;
   }
@@ -191,9 +186,7 @@ public interface RTCConfiguration {
   @JsProperty(
       name = "iceTransportPolicy"
   )
-  @MagicConstant(
-      valuesFromClass = RTCIceTransportPolicy.class
-  )
+  @RTCIceTransportPolicy
   String iceTransportPolicy();
 
   /**
@@ -202,8 +195,7 @@ public interface RTCConfiguration {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
    */
   @JsProperty
-  void setIceTransportPolicy(
-      @MagicConstant(valuesFromClass = RTCIceTransportPolicy.class) @Nonnull String iceTransportPolicy);
+  void setIceTransportPolicy(@RTCIceTransportPolicy @Nonnull String iceTransportPolicy);
 
   /**
    * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
@@ -213,7 +205,7 @@ public interface RTCConfiguration {
   @JsOverlay
   @Nonnull
   default RTCConfiguration iceTransportPolicy(
-      @MagicConstant(valuesFromClass = RTCIceTransportPolicy.class) @Nonnull final String iceTransportPolicy) {
+      @RTCIceTransportPolicy @Nonnull final String iceTransportPolicy) {
     setIceTransportPolicy( iceTransportPolicy );
     return this;
   }
@@ -221,19 +213,15 @@ public interface RTCConfiguration {
   @JsProperty(
       name = "rtcpMuxPolicy"
   )
-  @MagicConstant(
-      valuesFromClass = RTCRtcpMuxPolicy.class
-  )
+  @RTCRtcpMuxPolicy
   String rtcpMuxPolicy();
 
   @JsProperty
-  void setRtcpMuxPolicy(
-      @MagicConstant(valuesFromClass = RTCRtcpMuxPolicy.class) @Nonnull String rtcpMuxPolicy);
+  void setRtcpMuxPolicy(@RTCRtcpMuxPolicy @Nonnull String rtcpMuxPolicy);
 
   @JsOverlay
   @Nonnull
-  default RTCConfiguration rtcpMuxPolicy(
-      @MagicConstant(valuesFromClass = RTCRtcpMuxPolicy.class) @Nonnull final String rtcpMuxPolicy) {
+  default RTCConfiguration rtcpMuxPolicy(@RTCRtcpMuxPolicy @Nonnull final String rtcpMuxPolicy) {
     setRtcpMuxPolicy( rtcpMuxPolicy );
     return this;
   }

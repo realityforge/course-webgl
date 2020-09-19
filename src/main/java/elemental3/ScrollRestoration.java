@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ScrollRestoration {
+@MagicConstant(
+    valuesFromClass = ScrollRestoration.class
+)
+public @interface ScrollRestoration {
   @Nonnull
-  public static final String auto = "auto";
+  String auto = "auto";
 
   @Nonnull
-  public static final String manual = "manual";
-
-  private ScrollRestoration() {
-  }
+  String manual = "manual";
 }

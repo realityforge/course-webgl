@@ -2,12 +2,13 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AutoKeyword {
+@MagicConstant(
+    valuesFromClass = AutoKeyword.class
+)
+public @interface AutoKeyword {
   @Nonnull
-  public static final String auto = "auto";
-
-  private AutoKeyword() {
-  }
+  String auto = "auto";
 }

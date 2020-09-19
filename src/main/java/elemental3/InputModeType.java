@@ -2,6 +2,7 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The inputmode enumeration that hints at the type of data that might be entered by the user while editing the element or its contents.
@@ -9,13 +10,16 @@ import javax.annotation.Nonnull;
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode - MDN</a>
  */
 @Generated("org.realityforge.webtack")
-public final class InputModeType {
+@MagicConstant(
+    valuesFromClass = InputModeType.class
+)
+public @interface InputModeType {
   /**
    * Fractional numeric input keyboard containing the digits and decimal separator for the user's locale (typically <code>.</code> or <code>,</code>).
    * Devices may or may not show a minus key (<code>-</code>).
    */
   @Nonnull
-  public static final String decimal = "decimal";
+  String decimal = "decimal";
 
   /**
    * A virtual keyboard optimized for entering email addresses.
@@ -23,19 +27,19 @@ public final class InputModeType {
    * addresses should typically use <code>&lt;input type="email"&gt;</code> instead.
    */
   @Nonnull
-  public static final String email = "email";
+  String email = "email";
 
   /**
    * No virtual keyboard. For when the page implements its own keyboard input control.
    */
   @Nonnull
-  public static final String none = "none";
+  String none = "none";
 
   /**
    * Numeric input keyboard, but only requires the digits 0–9. Devices may or may not show a minus key.
    */
   @Nonnull
-  public static final String numeric = "numeric";
+  String numeric = "numeric";
 
   /**
    * A virtual keyboard optimized for search input.
@@ -43,21 +47,21 @@ public final class InputModeType {
    * Inputs that require a search query should typically use <code>&lt;input type="search"&gt;</code> instead.
    */
   @Nonnull
-  public static final String search = "search";
+  String search = "search";
 
   /**
    * A telephone keypad input, including the digits 0–9, the asterisk (<code>*</code>), and the pound (<code>#</code>) key.
    * Inputs that require a telephone number should typically use <code>&lt;input type="tel"&gt;</code> instead.
    */
   @Nonnull
-  public static final String tel = "tel";
+  String tel = "tel";
 
   /**
    * Standard input keyboard for the user's current locale.
    * This is the default value.
    */
   @Nonnull
-  public static final String text = "text";
+  String text = "text";
 
   /**
    * A keypad optimized for entering URLs.
@@ -65,8 +69,5 @@ public final class InputModeType {
    * access and so on. Inputs that require a URL should typically use <code>&lt;input type="url"&gt;</code> instead.
    */
   @Nonnull
-  public static final String url = "url";
-
-  private InputModeType() {
-  }
+  String url = "url";
 }

@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class UserVerificationRequirement {
+@MagicConstant(
+    valuesFromClass = UserVerificationRequirement.class
+)
+public @interface UserVerificationRequirement {
   @Nonnull
-  public static final String discouraged = "discouraged";
+  String discouraged = "discouraged";
 
   @Nonnull
-  public static final String preferred = "preferred";
+  String preferred = "preferred";
 
   @Nonnull
-  public static final String required = "required";
-
-  private UserVerificationRequirement() {
-  }
+  String required = "required";
 }

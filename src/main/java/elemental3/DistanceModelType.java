@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class DistanceModelType {
+@MagicConstant(
+    valuesFromClass = DistanceModelType.class
+)
+public @interface DistanceModelType {
   @Nonnull
-  public static final String exponential = "exponential";
+  String exponential = "exponential";
 
   @Nonnull
-  public static final String inverse = "inverse";
+  String inverse = "inverse";
 
   @Nonnull
-  public static final String linear = "linear";
-
-  private DistanceModelType() {
-  }
+  String linear = "linear";
 }

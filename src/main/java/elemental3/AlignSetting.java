@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AlignSetting {
+@MagicConstant(
+    valuesFromClass = AlignSetting.class
+)
+public @interface AlignSetting {
   @Nonnull
-  public static final String center = "center";
+  String center = "center";
 
   @Nonnull
-  public static final String end = "end";
+  String end = "end";
 
   @Nonnull
-  public static final String left = "left";
+  String left = "left";
 
   @Nonnull
-  public static final String right = "right";
+  String right = "right";
 
   @Nonnull
-  public static final String start = "start";
-
-  private AlignSetting() {
-  }
+  String start = "start";
 }

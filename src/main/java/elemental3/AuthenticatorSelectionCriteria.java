@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,19 +25,16 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty(
       name = "authenticatorAttachment"
   )
-  @MagicConstant(
-      valuesFromClass = AuthenticatorAttachment.class
-  )
+  @AuthenticatorAttachment
   String authenticatorAttachment();
 
   @JsProperty
-  void setAuthenticatorAttachment(
-      @MagicConstant(valuesFromClass = AuthenticatorAttachment.class) @Nonnull String authenticatorAttachment);
+  void setAuthenticatorAttachment(@AuthenticatorAttachment @Nonnull String authenticatorAttachment);
 
   @JsOverlay
   @Nonnull
   default AuthenticatorSelectionCriteria authenticatorAttachment(
-      @MagicConstant(valuesFromClass = AuthenticatorAttachment.class) @Nonnull final String authenticatorAttachment) {
+      @AuthenticatorAttachment @Nonnull final String authenticatorAttachment) {
     setAuthenticatorAttachment( authenticatorAttachment );
     return this;
   }
@@ -61,19 +57,16 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty(
       name = "userVerification"
   )
-  @MagicConstant(
-      valuesFromClass = UserVerificationRequirement.class
-  )
+  @UserVerificationRequirement
   String userVerification();
 
   @JsProperty
-  void setUserVerification(
-      @MagicConstant(valuesFromClass = UserVerificationRequirement.class) @Nonnull String userVerification);
+  void setUserVerification(@UserVerificationRequirement @Nonnull String userVerification);
 
   @JsOverlay
   @Nonnull
   default AuthenticatorSelectionCriteria userVerification(
-      @MagicConstant(valuesFromClass = UserVerificationRequirement.class) @Nonnull final String userVerification) {
+      @UserVerificationRequirement @Nonnull final String userVerification) {
     setUserVerification( userVerification );
     return this;
   }

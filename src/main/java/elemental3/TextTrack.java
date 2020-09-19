@@ -8,7 +8,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * This interface also inherits properties from EventTarget.
@@ -28,9 +27,7 @@ public class TextTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/mode">TextTrack.mode - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = TextTrackMode.class
-  )
+  @TextTrackMode
   public String mode;
 
   @Nullable
@@ -67,9 +64,7 @@ public class TextTrack extends EventTarget {
       name = "kind"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = TextTrackKind.class
-  )
+  @TextTrackKind
   public native String kind();
 
   @JsProperty(

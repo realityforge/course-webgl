@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -71,19 +70,15 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty(
       name = "distanceModel"
   )
-  @MagicConstant(
-      valuesFromClass = DistanceModelType.class
-  )
+  @DistanceModelType
   String distanceModel();
 
   @JsProperty
-  void setDistanceModel(
-      @MagicConstant(valuesFromClass = DistanceModelType.class) @Nonnull String distanceModel);
+  void setDistanceModel(@DistanceModelType @Nonnull String distanceModel);
 
   @JsOverlay
   @Nonnull
-  default PannerOptions distanceModel(
-      @MagicConstant(valuesFromClass = DistanceModelType.class) @Nonnull final String distanceModel) {
+  default PannerOptions distanceModel(@DistanceModelType @Nonnull final String distanceModel) {
     setDistanceModel( distanceModel );
     return this;
   }
@@ -151,19 +146,15 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty(
       name = "panningModel"
   )
-  @MagicConstant(
-      valuesFromClass = PanningModelType.class
-  )
+  @PanningModelType
   String panningModel();
 
   @JsProperty
-  void setPanningModel(
-      @MagicConstant(valuesFromClass = PanningModelType.class) @Nonnull String panningModel);
+  void setPanningModel(@PanningModelType @Nonnull String panningModel);
 
   @JsOverlay
   @Nonnull
-  default PannerOptions panningModel(
-      @MagicConstant(valuesFromClass = PanningModelType.class) @Nonnull final String panningModel) {
+  default PannerOptions panningModel(@PanningModelType @Nonnull final String panningModel) {
     setPanningModel( panningModel );
     return this;
   }
@@ -254,8 +245,7 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default PannerOptions channelCountMode(
-      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
+  default PannerOptions channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -264,7 +254,7 @@ public interface PannerOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default PannerOptions channelInterpretation(
-      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
+      @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

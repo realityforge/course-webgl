@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCRtpTransceiverDirection {
+@MagicConstant(
+    valuesFromClass = RTCRtpTransceiverDirection.class
+)
+public @interface RTCRtpTransceiverDirection {
   @Nonnull
-  public static final String inactive = "inactive";
+  String inactive = "inactive";
 
   @Nonnull
-  public static final String recvonly = "recvonly";
+  String recvonly = "recvonly";
 
   @Nonnull
-  public static final String sendonly = "sendonly";
+  String sendonly = "sendonly";
 
   @Nonnull
-  public static final String sendrecv = "sendrecv";
+  String sendrecv = "sendrecv";
 
   @Nonnull
-  public static final String stopped = "stopped";
-
-  private RTCRtpTransceiverDirection() {
-  }
+  String stopped = "stopped";
 }

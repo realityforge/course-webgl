@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -41,18 +40,15 @@ public interface RTCLocalSessionDescriptionInit {
   @JsProperty(
       name = "type"
   )
-  @MagicConstant(
-      valuesFromClass = RTCSdpType.class
-  )
+  @RTCSdpType
   String type();
 
   @JsProperty
-  void setType(@MagicConstant(valuesFromClass = RTCSdpType.class) @Nonnull String type);
+  void setType(@RTCSdpType @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default RTCLocalSessionDescriptionInit type(
-      @MagicConstant(valuesFromClass = RTCSdpType.class) @Nonnull final String type) {
+  default RTCLocalSessionDescriptionInit type(@RTCSdpType @Nonnull final String type) {
     setType( type );
     return this;
   }

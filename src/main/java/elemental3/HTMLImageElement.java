@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLImageElement interface represents an HTML img element, providing the properties and methods used to manipulate image elements.
@@ -41,9 +40,7 @@ public class HTMLImageElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
    */
   @Nullable
-  @MagicConstant(
-      valuesFromClass = CrossOriginType.class
-  )
+  @CrossOriginType
   public String crossOrigin;
 
   /**
@@ -76,9 +73,7 @@ public class HTMLImageElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = LoadingType.class
-  )
+  @LoadingType
   public String loading;
 
   @Nonnull
@@ -101,9 +96,7 @@ public class HTMLImageElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy">HTMLImageElement.referrerPolicy - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReferrerPolicy.class
-  )
+  @ReferrerPolicy
   public String referrerPolicy;
 
   /**

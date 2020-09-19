@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCQualityLimitationReason {
+@MagicConstant(
+    valuesFromClass = RTCQualityLimitationReason.class
+)
+public @interface RTCQualityLimitationReason {
   @Nonnull
-  public static final String bandwidth = "bandwidth";
+  String bandwidth = "bandwidth";
 
   @Nonnull
-  public static final String cpu = "cpu";
+  String cpu = "cpu";
 
   @Nonnull
-  public static final String none = "none";
+  String none = "none";
 
   @Nonnull
-  public static final String other = "other";
-
-  private RTCQualityLimitationReason() {
-  }
+  String other = "other";
 }

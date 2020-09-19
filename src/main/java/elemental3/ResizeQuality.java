@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ResizeQuality {
+@MagicConstant(
+    valuesFromClass = ResizeQuality.class
+)
+public @interface ResizeQuality {
   @Nonnull
-  public static final String high = "high";
+  String high = "high";
 
   @Nonnull
-  public static final String low = "low";
+  String low = "low";
 
   @Nonnull
-  public static final String medium = "medium";
+  String medium = "medium";
 
   @Nonnull
-  public static final String pixelated = "pixelated";
-
-  private ResizeQuality() {
-  }
+  String pixelated = "pixelated";
 }

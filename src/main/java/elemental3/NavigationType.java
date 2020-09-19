@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class NavigationType {
+@MagicConstant(
+    valuesFromClass = NavigationType.class
+)
+public @interface NavigationType {
   @Nonnull
-  public static final String back_forward = "back_forward";
+  String back_forward = "back_forward";
 
   @Nonnull
-  public static final String navigate = "navigate";
+  String navigate = "navigate";
 
   @Nonnull
-  public static final String prerender = "prerender";
+  String prerender = "prerender";
 
   @Nonnull
-  public static final String reload = "reload";
-
-  private NavigationType() {
-  }
+  String reload = "reload";
 }

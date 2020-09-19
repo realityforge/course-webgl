@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class MediaDeviceKind {
+@MagicConstant(
+    valuesFromClass = MediaDeviceKind.class
+)
+public @interface MediaDeviceKind {
   @Nonnull
-  public static final String audioinput = "audioinput";
+  String audioinput = "audioinput";
 
   @Nonnull
-  public static final String audiooutput = "audiooutput";
+  String audiooutput = "audiooutput";
 
   @Nonnull
-  public static final String videoinput = "videoinput";
-
-  private MediaDeviceKind() {
-  }
+  String videoinput = "videoinput";
 }

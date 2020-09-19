@@ -4,7 +4,6 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The DOMParser interface provides the ability to parse XML or HTML source code from a string into a DOM Document.
@@ -28,5 +27,5 @@ public class DOMParser {
 
   @Nonnull
   public native Document parseFromString(@Nonnull String string,
-      @MagicConstant(valuesFromClass = DOMParserSupportedType.class) @Nonnull String type);
+      @DOMParserSupportedType @Nonnull String type);
 }

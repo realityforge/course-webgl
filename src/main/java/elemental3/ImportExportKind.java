@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ImportExportKind {
+@MagicConstant(
+    valuesFromClass = ImportExportKind.class
+)
+public @interface ImportExportKind {
   @Nonnull
-  public static final String function = "function";
+  String function = "function";
 
   @Nonnull
-  public static final String global = "global";
+  String global = "global";
 
   @Nonnull
-  public static final String memory = "memory";
+  String memory = "memory";
 
   @Nonnull
-  public static final String table = "table";
-
-  private ImportExportKind() {
-  }
+  String table = "table";
 }

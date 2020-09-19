@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,8 +19,8 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
   @JsOverlay
   @Nonnull
   static RTCAudioSourceStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @Nonnull final String kind, @Nonnull final String trackIdentifier) {
+      @RTCStatsType @Nonnull final String type, @Nonnull final String kind,
+      @Nonnull final String trackIdentifier) {
     return Js.<RTCAudioSourceStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).trackIdentifier( trackIdentifier );
   }
 
@@ -158,8 +157,7 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCAudioSourceStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCAudioSourceStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

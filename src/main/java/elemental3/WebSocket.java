@@ -20,7 +20,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
@@ -52,9 +51,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType">WebSocket.binaryType - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = BinaryType.class
-  )
+  @BinaryType
   public String binaryType;
 
   /**

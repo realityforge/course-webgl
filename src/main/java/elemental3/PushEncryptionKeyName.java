@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class PushEncryptionKeyName {
+@MagicConstant(
+    valuesFromClass = PushEncryptionKeyName.class
+)
+public @interface PushEncryptionKeyName {
   @Nonnull
-  public static final String auth = "auth";
+  String auth = "auth";
 
   @Nonnull
-  public static final String p256dh = "p256dh";
-
-  private PushEncryptionKeyName() {
-  }
+  String p256dh = "p256dh";
 }

@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class FillMode {
+@MagicConstant(
+    valuesFromClass = FillMode.class
+)
+public @interface FillMode {
   @Nonnull
-  public static final String auto = "auto";
+  String auto = "auto";
 
   @Nonnull
-  public static final String backwards = "backwards";
+  String backwards = "backwards";
 
   @Nonnull
-  public static final String both = "both";
+  String both = "both";
 
   @Nonnull
-  public static final String forwards = "forwards";
+  String forwards = "forwards";
 
   @Nonnull
-  public static final String none = "none";
-
-  private FillMode() {
-  }
+  String none = "none";
 }

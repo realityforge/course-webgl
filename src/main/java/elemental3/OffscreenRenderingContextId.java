@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class OffscreenRenderingContextId {
+@MagicConstant(
+    valuesFromClass = OffscreenRenderingContextId.class
+)
+public @interface OffscreenRenderingContextId {
   @Nonnull
-  public static final String _2d = "2d";
+  String _2d = "2d";
 
   @Nonnull
-  public static final String bitmaprenderer = "bitmaprenderer";
+  String bitmaprenderer = "bitmaprenderer";
 
   @Nonnull
-  public static final String webgl = "webgl";
+  String webgl = "webgl";
 
   @Nonnull
-  public static final String webgl2 = "webgl2";
-
-  private OffscreenRenderingContextId() {
-  }
+  String webgl2 = "webgl2";
 }

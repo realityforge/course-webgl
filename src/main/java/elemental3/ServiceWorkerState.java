@@ -2,27 +2,28 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ServiceWorkerState {
+@MagicConstant(
+    valuesFromClass = ServiceWorkerState.class
+)
+public @interface ServiceWorkerState {
   @Nonnull
-  public static final String activated = "activated";
+  String activated = "activated";
 
   @Nonnull
-  public static final String activating = "activating";
+  String activating = "activating";
 
   @Nonnull
-  public static final String installed = "installed";
+  String installed = "installed";
 
   @Nonnull
-  public static final String installing = "installing";
+  String installing = "installing";
 
   @Nonnull
-  public static final String parsed = "parsed";
+  String parsed = "parsed";
 
   @Nonnull
-  public static final String redundant = "redundant";
-
-  private ServiceWorkerState() {
-  }
+  String redundant = "redundant";
 }

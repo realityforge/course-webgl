@@ -9,7 +9,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,8 +19,7 @@ import org.intellij.lang.annotations.MagicConstant;
 public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static BluetoothPermissionDescriptor create(
-      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
+  static BluetoothPermissionDescriptor create(@PermissionName @Nonnull final String name) {
     return Js.<BluetoothPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
@@ -116,8 +114,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   @Override
-  default BluetoothPermissionDescriptor name(
-      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
+  default BluetoothPermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;
   }

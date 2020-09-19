@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class XRSessionMode {
+@MagicConstant(
+    valuesFromClass = XRSessionMode.class
+)
+public @interface XRSessionMode {
   @Nonnull
-  public static final String immersive_vr = "immersive-vr";
+  String immersive_vr = "immersive-vr";
 
   @Nonnull
-  public static final String inline = "inline";
-
-  private XRSessionMode() {
-  }
+  String inline = "inline";
 }

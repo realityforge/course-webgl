@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class DevicePermissionState {
+@MagicConstant(
+    valuesFromClass = DevicePermissionState.class
+)
+public @interface DevicePermissionState {
   @Nonnull
-  public static final String denied = "denied";
+  String denied = "denied";
 
   @Nonnull
-  public static final String granted = "granted";
-
-  private DevicePermissionState() {
-  }
+  String granted = "granted";
 }

@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ColorSpaceConversion {
+@MagicConstant(
+    valuesFromClass = ColorSpaceConversion.class
+)
+public @interface ColorSpaceConversion {
   @Nonnull
-  public static final String default_ = "default";
+  String default_ = "default";
 
   @Nonnull
-  public static final String none = "none";
-
-  private ColorSpaceConversion() {
-  }
+  String none = "none";
 }

@@ -16,7 +16,6 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaKeys interface of EncryptedMediaExtensions API represents a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
@@ -39,8 +38,7 @@ public class MediaKeys {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/createSession">MediaKeys.createSession - MDN</a>
    */
   @Nonnull
-  public native MediaKeySession createSession(
-      @MagicConstant(valuesFromClass = MediaKeySessionType.class) @Nonnull String sessionType);
+  public native MediaKeySession createSession(@MediaKeySessionType @Nonnull String sessionType);
 
   /**
    * The MediaKeys.createSession() method returns a new MediaKeySession object, which represents a context for message exchange with a content decryption module (CDM).

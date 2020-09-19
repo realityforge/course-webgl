@@ -20,7 +20,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
@@ -63,9 +62,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType">XMLHttpRequest.responseType - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = XMLHttpRequestResponseType.class
-  )
+  @XMLHttpRequestResponseType
   public String responseType;
 
   /**

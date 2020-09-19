@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCBundlePolicy {
+@MagicConstant(
+    valuesFromClass = RTCBundlePolicy.class
+)
+public @interface RTCBundlePolicy {
   @Nonnull
-  public static final String balanced = "balanced";
+  String balanced = "balanced";
 
   @Nonnull
-  public static final String max_bundle = "max-bundle";
+  String max_bundle = "max-bundle";
 
   @Nonnull
-  public static final String max_compat = "max-compat";
-
-  private RTCBundlePolicy() {
-  }
+  String max_compat = "max-compat";
 }

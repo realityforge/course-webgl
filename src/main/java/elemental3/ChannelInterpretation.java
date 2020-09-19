@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ChannelInterpretation {
+@MagicConstant(
+    valuesFromClass = ChannelInterpretation.class
+)
+public @interface ChannelInterpretation {
   @Nonnull
-  public static final String discrete = "discrete";
+  String discrete = "discrete";
 
   @Nonnull
-  public static final String speakers = "speakers";
-
-  private ChannelInterpretation() {
-  }
+  String speakers = "speakers";
 }

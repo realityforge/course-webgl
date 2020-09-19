@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.
@@ -106,19 +105,16 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
   @JsProperty(
       name = "networkPriority"
   )
-  @MagicConstant(
-      valuesFromClass = RTCPriorityType.class
-  )
+  @RTCPriorityType
   String networkPriority();
 
   @JsProperty
-  void setNetworkPriority(
-      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull String networkPriority);
+  void setNetworkPriority(@RTCPriorityType @Nonnull String networkPriority);
 
   @JsOverlay
   @Nonnull
   default RTCRtpEncodingParameters networkPriority(
-      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull final String networkPriority) {
+      @RTCPriorityType @Nonnull final String networkPriority) {
     setNetworkPriority( networkPriority );
     return this;
   }
@@ -126,19 +122,15 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
   @JsProperty(
       name = "priority"
   )
-  @MagicConstant(
-      valuesFromClass = RTCPriorityType.class
-  )
+  @RTCPriorityType
   String priority();
 
   @JsProperty
-  void setPriority(
-      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull String priority);
+  void setPriority(@RTCPriorityType @Nonnull String priority);
 
   @JsOverlay
   @Nonnull
-  default RTCRtpEncodingParameters priority(
-      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull final String priority) {
+  default RTCRtpEncodingParameters priority(@RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
     return this;
   }

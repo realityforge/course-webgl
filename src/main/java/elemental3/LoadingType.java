@@ -2,18 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * An enumerated value to indicate how the browser should load the resource.
  */
 @Generated("org.realityforge.webtack")
-public final class LoadingType {
+@MagicConstant(
+    valuesFromClass = LoadingType.class
+)
+public @interface LoadingType {
   /**
    * Load the resource immediately, regardless of whether or not the resource is currently within
    * the visible viewport (this is the default value).
    */
   @Nonnull
-  public static final String eager = "eager";
+  String eager = "eager";
 
   /**
    * Defer loading of the resource until it reaches a calculated distance from the viewport, as defined
@@ -22,8 +26,5 @@ public final class LoadingType {
    * content in most typical use cases.
    */
   @Nonnull
-  public static final String lazy = "lazy";
-
-  private LoadingType() {
-  }
+  String lazy = "lazy";
 }

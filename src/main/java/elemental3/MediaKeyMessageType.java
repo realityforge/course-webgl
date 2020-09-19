@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class MediaKeyMessageType {
+@MagicConstant(
+    valuesFromClass = MediaKeyMessageType.class
+)
+public @interface MediaKeyMessageType {
   @Nonnull
-  public static final String individualization_request = "individualization-request";
+  String individualization_request = "individualization-request";
 
   @Nonnull
-  public static final String license_release = "license-release";
+  String license_release = "license-release";
 
   @Nonnull
-  public static final String license_renewal = "license-renewal";
+  String license_renewal = "license-renewal";
 
   @Nonnull
-  public static final String license_request = "license-request";
-
-  private MediaKeyMessageType() {
-  }
+  String license_request = "license-request";
 }

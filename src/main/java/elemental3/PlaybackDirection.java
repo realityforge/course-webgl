@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class PlaybackDirection {
+@MagicConstant(
+    valuesFromClass = PlaybackDirection.class
+)
+public @interface PlaybackDirection {
   @Nonnull
-  public static final String alternate = "alternate";
+  String alternate = "alternate";
 
   @Nonnull
-  public static final String alternate_reverse = "alternate-reverse";
+  String alternate_reverse = "alternate-reverse";
 
   @Nonnull
-  public static final String normal = "normal";
+  String normal = "normal";
 
   @Nonnull
-  public static final String reverse = "reverse";
-
-  private PlaybackDirection() {
-  }
+  String reverse = "reverse";
 }

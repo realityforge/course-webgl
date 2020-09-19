@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class EndOfStreamError {
+@MagicConstant(
+    valuesFromClass = EndOfStreamError.class
+)
+public @interface EndOfStreamError {
   @Nonnull
-  public static final String decode = "decode";
+  String decode = "decode";
 
   @Nonnull
-  public static final String network = "network";
-
-  private EndOfStreamError() {
-  }
+  String network = "network";
 }

@@ -6,7 +6,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Web Audio API's AudioParam interface represents an audio-related parameter, usually a parameter of an AudioNode (such as GainNode.gain).
@@ -21,9 +20,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public class AudioParam {
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutomationRate.class
-  )
+  @AutomationRate
   public String automationRate;
 
   /**

@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,19 +25,15 @@ public interface WorkletOptions {
   @JsProperty(
       name = "credentials"
   )
-  @MagicConstant(
-      valuesFromClass = RequestCredentials.class
-  )
+  @RequestCredentials
   String credentials();
 
   @JsProperty
-  void setCredentials(
-      @MagicConstant(valuesFromClass = RequestCredentials.class) @Nonnull String credentials);
+  void setCredentials(@RequestCredentials @Nonnull String credentials);
 
   @JsOverlay
   @Nonnull
-  default WorkletOptions credentials(
-      @MagicConstant(valuesFromClass = RequestCredentials.class) @Nonnull final String credentials) {
+  default WorkletOptions credentials(@RequestCredentials @Nonnull final String credentials) {
     setCredentials( credentials );
     return this;
   }

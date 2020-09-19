@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
@@ -139,9 +138,7 @@ public class Animation extends EventTarget {
       name = "playState"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AnimationPlayState.class
-  )
+  @AnimationPlayState
   public native String playState();
 
   /**

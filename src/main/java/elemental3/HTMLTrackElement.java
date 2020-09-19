@@ -7,7 +7,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLTrackElement interface represents an HTML track element within the DOM. This element can be used as a child of either audio or video to specify a text track containing information such as closed captions or subtitles.
@@ -39,9 +38,7 @@ public class HTMLTrackElement extends HTMLElement {
   public boolean default_;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = TrackKind.class
-  )
+  @TrackKind
   public String kind;
 
   @Nonnull

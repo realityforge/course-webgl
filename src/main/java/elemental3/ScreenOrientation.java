@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ScreenOrientation interface of the the Screen Orientation API provides information about the current orientation of the document.
@@ -51,9 +50,7 @@ public class ScreenOrientation extends EventTarget {
       name = "type"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = OrientationType.class
-  )
+  @OrientationType
   public native String type();
 
   /**
@@ -62,8 +59,7 @@ public class ScreenOrientation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/lock">ScreenOrientation.lock - MDN</a>
    */
   @Nonnull
-  public native Promise<Void> lock(
-      @MagicConstant(valuesFromClass = OrientationLockType.class) @Nonnull String orientation);
+  public native Promise<Void> lock(@OrientationLockType @Nonnull String orientation);
 
   /**
    * The unlock() property of the ScreenOrientation interface unlocks the orientation of the containing document from its default orientation.

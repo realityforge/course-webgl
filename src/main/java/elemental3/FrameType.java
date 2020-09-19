@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class FrameType {
+@MagicConstant(
+    valuesFromClass = FrameType.class
+)
+public @interface FrameType {
   @Nonnull
-  public static final String auxiliary = "auxiliary";
+  String auxiliary = "auxiliary";
 
   @Nonnull
-  public static final String nested = "nested";
+  String nested = "nested";
 
   @Nonnull
-  public static final String none = "none";
+  String none = "none";
 
   @Nonnull
-  public static final String top_level = "top-level";
-
-  private FrameType() {
-  }
+  String top_level = "top-level";
 }

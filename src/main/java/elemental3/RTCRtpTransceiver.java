@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state.
@@ -27,9 +26,7 @@ public class RTCRtpTransceiver {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction">RTCRtpTransceiver.direction - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCRtpTransceiverDirection.class
-  )
+  @RTCRtpTransceiverDirection
   public String direction;
 
   RTCRtpTransceiver() {
@@ -44,9 +41,7 @@ public class RTCRtpTransceiver {
       name = "currentDirection"
   )
   @Nullable
-  @MagicConstant(
-      valuesFromClass = RTCRtpTransceiverDirection.class
-  )
+  @RTCRtpTransceiverDirection
   public native String currentDirection();
 
   /**

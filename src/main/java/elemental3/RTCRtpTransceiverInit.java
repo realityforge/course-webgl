@@ -9,7 +9,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.
@@ -32,19 +31,16 @@ public interface RTCRtpTransceiverInit {
   @JsProperty(
       name = "direction"
   )
-  @MagicConstant(
-      valuesFromClass = RTCRtpTransceiverDirection.class
-  )
+  @RTCRtpTransceiverDirection
   String direction();
 
   @JsProperty
-  void setDirection(
-      @MagicConstant(valuesFromClass = RTCRtpTransceiverDirection.class) @Nonnull String direction);
+  void setDirection(@RTCRtpTransceiverDirection @Nonnull String direction);
 
   @JsOverlay
   @Nonnull
   default RTCRtpTransceiverInit direction(
-      @MagicConstant(valuesFromClass = RTCRtpTransceiverDirection.class) @Nonnull final String direction) {
+      @RTCRtpTransceiverDirection @Nonnull final String direction) {
     setDirection( direction );
     return this;
   }

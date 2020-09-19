@@ -9,7 +9,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively.
@@ -91,9 +90,7 @@ public class BaseAudioContext extends EventTarget {
       name = "state"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AudioContextState.class
-  )
+  @AudioContextState
   public native String state();
 
   /**

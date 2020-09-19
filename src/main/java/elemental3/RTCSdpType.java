@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCSdpType {
+@MagicConstant(
+    valuesFromClass = RTCSdpType.class
+)
+public @interface RTCSdpType {
   @Nonnull
-  public static final String answer = "answer";
+  String answer = "answer";
 
   @Nonnull
-  public static final String offer = "offer";
+  String offer = "offer";
 
   @Nonnull
-  public static final String pranswer = "pranswer";
+  String pranswer = "pranswer";
 
   @Nonnull
-  public static final String rollback = "rollback";
-
-  private RTCSdpType() {
-  }
+  String rollback = "rollback";
 }

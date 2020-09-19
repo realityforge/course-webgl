@@ -6,7 +6,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * A WaveShaperNode always has exactly one input and one output.
@@ -34,9 +33,7 @@ public class WaveShaperNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/oversample">WaveShaperNode.oversample - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = OverSampleType.class
-  )
+  @OverSampleType
   public String oversample;
 
   /**

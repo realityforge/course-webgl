@@ -9,7 +9,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video.
@@ -70,9 +69,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/crossOrigin">HTMLMediaElement.crossOrigin - MDN</a>
    */
   @Nullable
-  @MagicConstant(
-      valuesFromClass = CrossOriginType.class
-  )
+  @CrossOriginType
   public String crossOrigin;
 
   /**
@@ -124,9 +121,7 @@ public class HTMLMediaElement extends HTMLElement {
   public double playbackRate;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = MediaPreloadType.class
-  )
+  @MediaPreloadType
   public String preload;
 
   /**
@@ -300,27 +295,21 @@ public class HTMLMediaElement extends HTMLElement {
   public native VideoTrackList videoTracks();
 
   @Nonnull
-  public native TextTrack addTextTrack(
-      @MagicConstant(valuesFromClass = TextTrackKind.class) @Nonnull String kind,
-      @Nonnull String label, @Nonnull String language);
+  public native TextTrack addTextTrack(@TextTrackKind @Nonnull String kind, @Nonnull String label,
+      @Nonnull String language);
 
   @Nonnull
-  public native TextTrack addTextTrack(
-      @MagicConstant(valuesFromClass = TextTrackKind.class) @Nonnull String kind,
-      @Nonnull String label);
+  public native TextTrack addTextTrack(@TextTrackKind @Nonnull String kind, @Nonnull String label);
 
   @Nonnull
-  public native TextTrack addTextTrack(
-      @MagicConstant(valuesFromClass = TextTrackKind.class) @Nonnull String kind);
+  public native TextTrack addTextTrack(@TextTrackKind @Nonnull String kind);
 
   /**
    * The HTMLMediaElement method canPlayType() reports how likely it is that the current browser will be able to play media of a given MIME type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType">HTMLMediaElement.canPlayType - MDN</a>
    */
-  @MagicConstant(
-      valuesFromClass = CanPlayTypeResult.class
-  )
+  @CanPlayTypeResult
   @Nonnull
   public native String canPlayType(@Nonnull String type);
 

@@ -8,7 +8,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
@@ -31,9 +30,7 @@ public class HTMLElement extends Element {
   public String accessKey;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutocapitalizeType.class
-  )
+  @AutocapitalizeType
   public String autocapitalize;
 
   public boolean autofocus;
@@ -52,9 +49,7 @@ public class HTMLElement extends Element {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir">HTMLElement.dir - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = DirType.class
-  )
+  @DirType
   public String dir;
 
   public boolean draggable;
@@ -78,9 +73,7 @@ public class HTMLElement extends Element {
   public String innerText;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = InputModeType.class
-  )
+  @InputModeType
   public String inputMode;
 
   /**

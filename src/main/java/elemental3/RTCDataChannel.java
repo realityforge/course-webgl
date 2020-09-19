@@ -19,7 +19,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
@@ -177,9 +176,7 @@ public class RTCDataChannel extends EventTarget {
       name = "priority"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCPriorityType.class
-  )
+  @RTCPriorityType
   public native String priority();
 
   /**
@@ -202,9 +199,7 @@ public class RTCDataChannel extends EventTarget {
       name = "readyState"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCDataChannelState.class
-  )
+  @RTCDataChannelState
   public native String readyState();
 
   /**

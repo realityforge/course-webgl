@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
@@ -25,9 +24,9 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCIceCandidatePairStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @Nonnull final String localCandidateId, @Nonnull final String remoteCandidateId,
-      @MagicConstant(valuesFromClass = RTCStatsIceCandidatePairState.class) @Nonnull final String state,
+      @RTCStatsType @Nonnull final String type, @Nonnull final String localCandidateId,
+      @Nonnull final String remoteCandidateId,
+      @RTCStatsIceCandidatePairState @Nonnull final String state,
       @Nonnull final String transportId) {
     return Js.<RTCIceCandidatePairStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).localCandidateId( localCandidateId ).remoteCandidateId( remoteCandidateId ).state( state ).transportId( transportId );
   }
@@ -839,9 +838,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsProperty(
       name = "state"
   )
-  @MagicConstant(
-      valuesFromClass = RTCStatsIceCandidatePairState.class
-  )
+  @RTCStatsIceCandidatePairState
   @Nonnull
   String state();
 
@@ -851,8 +848,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
    */
   @JsProperty
-  void setState(
-      @MagicConstant(valuesFromClass = RTCStatsIceCandidatePairState.class) @Nonnull String state);
+  void setState(@RTCStatsIceCandidatePairState @Nonnull String state);
 
   /**
    * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
@@ -862,7 +858,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsOverlay
   @Nonnull
   default RTCIceCandidatePairStats state(
-      @MagicConstant(valuesFromClass = RTCStatsIceCandidatePairState.class) @Nonnull final String state) {
+      @RTCStatsIceCandidatePairState @Nonnull final String state) {
     setState( state );
     return this;
   }
@@ -1007,8 +1003,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCIceCandidatePairStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCIceCandidatePairStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

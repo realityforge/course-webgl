@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AutomationRate {
+@MagicConstant(
+    valuesFromClass = AutomationRate.class
+)
+public @interface AutomationRate {
   @Nonnull
-  public static final String a_rate = "a-rate";
+  String a_rate = "a-rate";
 
   @Nonnull
-  public static final String k_rate = "k-rate";
-
-  private AutomationRate() {
-  }
+  String k_rate = "k-rate";
 }

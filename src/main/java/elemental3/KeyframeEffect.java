@@ -6,7 +6,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the Animation() constructor.
@@ -26,9 +25,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/composite">KeyframeEffect.composite - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CompositeOperation.class
-  )
+  @CompositeOperation
   public String composite;
 
   /**
@@ -37,9 +34,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/iterationComposite">KeyframeEffect.iterationComposite - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = IterationCompositeOperation.class
-  )
+  @IterationCompositeOperation
   public String iterationComposite;
 
   /**

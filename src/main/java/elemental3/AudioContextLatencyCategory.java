@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AudioContextLatencyCategory {
+@MagicConstant(
+    valuesFromClass = AudioContextLatencyCategory.class
+)
+public @interface AudioContextLatencyCategory {
   @Nonnull
-  public static final String balanced = "balanced";
+  String balanced = "balanced";
 
   @Nonnull
-  public static final String interactive = "interactive";
+  String interactive = "interactive";
 
   @Nonnull
-  public static final String playback = "playback";
-
-  private AudioContextLatencyCategory() {
-  }
+  String playback = "playback";
 }

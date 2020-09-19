@@ -9,7 +9,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCIceServer dictionary defines how to connect to a single ICE server (such as a STUN or TURN server). Objects of this type are provided in the configuration of an RTCPeerConnection, in the iceServers array.
@@ -79,9 +78,7 @@ public interface RTCIceServer {
   @JsProperty(
       name = "credentialType"
   )
-  @MagicConstant(
-      valuesFromClass = RTCIceCredentialType.class
-  )
+  @RTCIceCredentialType
   String credentialType();
 
   /**
@@ -90,8 +87,7 @@ public interface RTCIceServer {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/credentialType">RTCIceServer.credentialType - MDN</a>
    */
   @JsProperty
-  void setCredentialType(
-      @MagicConstant(valuesFromClass = RTCIceCredentialType.class) @Nonnull String credentialType);
+  void setCredentialType(@RTCIceCredentialType @Nonnull String credentialType);
 
   /**
    * The RTCIceServer dictionary's credentialType property is a string value from the RTCIceCredentialType enum which indicates what type of credential the RTCIceServer.credential value is. The default is password.
@@ -100,8 +96,7 @@ public interface RTCIceServer {
    */
   @JsOverlay
   @Nonnull
-  default RTCIceServer credentialType(
-      @MagicConstant(valuesFromClass = RTCIceCredentialType.class) @Nonnull final String credentialType) {
+  default RTCIceServer credentialType(@RTCIceCredentialType @Nonnull final String credentialType) {
     setCredentialType( credentialType );
     return this;
   }

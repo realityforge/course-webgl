@@ -2,27 +2,28 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ResponseType {
+@MagicConstant(
+    valuesFromClass = ResponseType.class
+)
+public @interface ResponseType {
   @Nonnull
-  public static final String basic = "basic";
+  String basic = "basic";
 
   @Nonnull
-  public static final String cors = "cors";
+  String cors = "cors";
 
   @Nonnull
-  public static final String default_ = "default";
+  String default_ = "default";
 
   @Nonnull
-  public static final String error = "error";
+  String error = "error";
 
   @Nonnull
-  public static final String opaque = "opaque";
+  String opaque = "opaque";
 
   @Nonnull
-  public static final String opaqueredirect = "opaqueredirect";
-
-  private ResponseType() {
-  }
+  String opaqueredirect = "opaqueredirect";
 }

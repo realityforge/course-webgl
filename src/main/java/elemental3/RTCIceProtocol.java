@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCIceProtocol {
+@MagicConstant(
+    valuesFromClass = RTCIceProtocol.class
+)
+public @interface RTCIceProtocol {
   @Nonnull
-  public static final String tcp = "tcp";
+  String tcp = "tcp";
 
   @Nonnull
-  public static final String udp = "udp";
-
-  private RTCIceProtocol() {
-  }
+  String udp = "udp";
 }

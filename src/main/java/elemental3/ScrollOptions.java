@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,18 +25,15 @@ public interface ScrollOptions {
   @JsProperty(
       name = "behavior"
   )
-  @MagicConstant(
-      valuesFromClass = ScrollBehavior.class
-  )
+  @ScrollBehavior
   String behavior();
 
   @JsProperty
-  void setBehavior(@MagicConstant(valuesFromClass = ScrollBehavior.class) @Nonnull String behavior);
+  void setBehavior(@ScrollBehavior @Nonnull String behavior);
 
   @JsOverlay
   @Nonnull
-  default ScrollOptions behavior(
-      @MagicConstant(valuesFromClass = ScrollBehavior.class) @Nonnull final String behavior) {
+  default ScrollOptions behavior(@ScrollBehavior @Nonnull final String behavior) {
     setBehavior( behavior );
     return this;
   }

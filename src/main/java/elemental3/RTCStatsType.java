@@ -2,72 +2,73 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCStatsType {
+@MagicConstant(
+    valuesFromClass = RTCStatsType.class
+)
+public @interface RTCStatsType {
   @Nonnull
-  public static final String candidate_pair = "candidate-pair";
+  String candidate_pair = "candidate-pair";
 
   @Nonnull
-  public static final String certificate = "certificate";
+  String certificate = "certificate";
 
   @Nonnull
-  public static final String codec = "codec";
+  String codec = "codec";
 
   @Nonnull
-  public static final String csrc = "csrc";
+  String csrc = "csrc";
 
   @Nonnull
-  public static final String data_channel = "data-channel";
+  String data_channel = "data-channel";
 
   @Nonnull
-  public static final String ice_server = "ice-server";
+  String ice_server = "ice-server";
 
   @Nonnull
-  public static final String inbound_rtp = "inbound-rtp";
+  String inbound_rtp = "inbound-rtp";
 
   @Nonnull
-  public static final String local_candidate = "local-candidate";
+  String local_candidate = "local-candidate";
 
   @Nonnull
-  public static final String media_source = "media-source";
+  String media_source = "media-source";
 
   @Nonnull
-  public static final String outbound_rtp = "outbound-rtp";
+  String outbound_rtp = "outbound-rtp";
 
   @Nonnull
-  public static final String peer_connection = "peer-connection";
+  String peer_connection = "peer-connection";
 
   @Nonnull
-  public static final String receiver = "receiver";
+  String receiver = "receiver";
 
   @Nonnull
-  public static final String remote_candidate = "remote-candidate";
+  String remote_candidate = "remote-candidate";
 
   @Nonnull
-  public static final String remote_inbound_rtp = "remote-inbound-rtp";
+  String remote_inbound_rtp = "remote-inbound-rtp";
 
   @Nonnull
-  public static final String remote_outbound_rtp = "remote-outbound-rtp";
+  String remote_outbound_rtp = "remote-outbound-rtp";
 
   @Nonnull
-  public static final String sctp_transport = "sctp-transport";
+  String sctp_transport = "sctp-transport";
 
   @Nonnull
-  public static final String sender = "sender";
+  String sender = "sender";
 
   @Nonnull
-  public static final String stream = "stream";
+  String stream = "stream";
 
   @Nonnull
-  public static final String track = "track";
+  String track = "track";
 
   @Nonnull
-  public static final String transceiver = "transceiver";
+  String transceiver = "transceiver";
 
   @Nonnull
-  public static final String transport = "transport";
-
-  private RTCStatsType() {
-  }
+  String transport = "transport";
 }

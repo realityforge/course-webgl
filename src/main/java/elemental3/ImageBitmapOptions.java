@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,19 +25,16 @@ public interface ImageBitmapOptions {
   @JsProperty(
       name = "colorSpaceConversion"
   )
-  @MagicConstant(
-      valuesFromClass = ColorSpaceConversion.class
-  )
+  @ColorSpaceConversion
   String colorSpaceConversion();
 
   @JsProperty
-  void setColorSpaceConversion(
-      @MagicConstant(valuesFromClass = ColorSpaceConversion.class) @Nonnull String colorSpaceConversion);
+  void setColorSpaceConversion(@ColorSpaceConversion @Nonnull String colorSpaceConversion);
 
   @JsOverlay
   @Nonnull
   default ImageBitmapOptions colorSpaceConversion(
-      @MagicConstant(valuesFromClass = ColorSpaceConversion.class) @Nonnull final String colorSpaceConversion) {
+      @ColorSpaceConversion @Nonnull final String colorSpaceConversion) {
     setColorSpaceConversion( colorSpaceConversion );
     return this;
   }
@@ -46,19 +42,16 @@ public interface ImageBitmapOptions {
   @JsProperty(
       name = "imageOrientation"
   )
-  @MagicConstant(
-      valuesFromClass = ImageOrientation.class
-  )
+  @ImageOrientation
   String imageOrientation();
 
   @JsProperty
-  void setImageOrientation(
-      @MagicConstant(valuesFromClass = ImageOrientation.class) @Nonnull String imageOrientation);
+  void setImageOrientation(@ImageOrientation @Nonnull String imageOrientation);
 
   @JsOverlay
   @Nonnull
   default ImageBitmapOptions imageOrientation(
-      @MagicConstant(valuesFromClass = ImageOrientation.class) @Nonnull final String imageOrientation) {
+      @ImageOrientation @Nonnull final String imageOrientation) {
     setImageOrientation( imageOrientation );
     return this;
   }
@@ -66,19 +59,16 @@ public interface ImageBitmapOptions {
   @JsProperty(
       name = "premultiplyAlpha"
   )
-  @MagicConstant(
-      valuesFromClass = PremultiplyAlpha.class
-  )
+  @PremultiplyAlpha
   String premultiplyAlpha();
 
   @JsProperty
-  void setPremultiplyAlpha(
-      @MagicConstant(valuesFromClass = PremultiplyAlpha.class) @Nonnull String premultiplyAlpha);
+  void setPremultiplyAlpha(@PremultiplyAlpha @Nonnull String premultiplyAlpha);
 
   @JsOverlay
   @Nonnull
   default ImageBitmapOptions premultiplyAlpha(
-      @MagicConstant(valuesFromClass = PremultiplyAlpha.class) @Nonnull final String premultiplyAlpha) {
+      @PremultiplyAlpha @Nonnull final String premultiplyAlpha) {
     setPremultiplyAlpha( premultiplyAlpha );
     return this;
   }
@@ -101,19 +91,15 @@ public interface ImageBitmapOptions {
   @JsProperty(
       name = "resizeQuality"
   )
-  @MagicConstant(
-      valuesFromClass = ResizeQuality.class
-  )
+  @ResizeQuality
   String resizeQuality();
 
   @JsProperty
-  void setResizeQuality(
-      @MagicConstant(valuesFromClass = ResizeQuality.class) @Nonnull String resizeQuality);
+  void setResizeQuality(@ResizeQuality @Nonnull String resizeQuality);
 
   @JsOverlay
   @Nonnull
-  default ImageBitmapOptions resizeQuality(
-      @MagicConstant(valuesFromClass = ResizeQuality.class) @Nonnull final String resizeQuality) {
+  default ImageBitmapOptions resizeQuality(@ResizeQuality @Nonnull final String resizeQuality) {
     setResizeQuality( resizeQuality );
     return this;
   }

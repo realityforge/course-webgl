@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RequestRedirect {
+@MagicConstant(
+    valuesFromClass = RequestRedirect.class
+)
+public @interface RequestRedirect {
   @Nonnull
-  public static final String error = "error";
+  String error = "error";
 
   @Nonnull
-  public static final String follow = "follow";
+  String follow = "follow";
 
   @Nonnull
-  public static final String manual = "manual";
-
-  private RequestRedirect() {
-  }
+  String manual = "manual";
 }

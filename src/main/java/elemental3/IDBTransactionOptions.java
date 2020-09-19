@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,19 +25,16 @@ public interface IDBTransactionOptions {
   @JsProperty(
       name = "durability"
   )
-  @MagicConstant(
-      valuesFromClass = IDBTransactionDurability.class
-  )
+  @IDBTransactionDurability
   String durability();
 
   @JsProperty
-  void setDurability(
-      @MagicConstant(valuesFromClass = IDBTransactionDurability.class) @Nonnull String durability);
+  void setDurability(@IDBTransactionDurability @Nonnull String durability);
 
   @JsOverlay
   @Nonnull
   default IDBTransactionOptions durability(
-      @MagicConstant(valuesFromClass = IDBTransactionDurability.class) @Nonnull final String durability) {
+      @IDBTransactionDurability @Nonnull final String durability) {
     setDurability( durability );
     return this;
   }

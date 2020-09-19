@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,8 +19,7 @@ public interface RTCDataChannelStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCDataChannelStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @MagicConstant(valuesFromClass = RTCDataChannelState.class) @Nonnull final String state,
+      @RTCStatsType @Nonnull final String type, @RTCDataChannelState @Nonnull final String state,
       @Nonnull final String transportId) {
     return Js.<RTCDataChannelStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).state( state ).transportId( transportId );
   }
@@ -134,19 +132,16 @@ public interface RTCDataChannelStats extends RTCStats {
   @JsProperty(
       name = "state"
   )
-  @MagicConstant(
-      valuesFromClass = RTCDataChannelState.class
-  )
+  @RTCDataChannelState
   @Nonnull
   String state();
 
   @JsProperty
-  void setState(@MagicConstant(valuesFromClass = RTCDataChannelState.class) @Nonnull String state);
+  void setState(@RTCDataChannelState @Nonnull String state);
 
   @JsOverlay
   @Nonnull
-  default RTCDataChannelStats state(
-      @MagicConstant(valuesFromClass = RTCDataChannelState.class) @Nonnull final String state) {
+  default RTCDataChannelStats state(@RTCDataChannelState @Nonnull final String state) {
     setState( state );
     return this;
   }
@@ -201,8 +196,7 @@ public interface RTCDataChannelStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCDataChannelStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCDataChannelStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

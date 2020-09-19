@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class SecurityPolicyViolationEventDisposition {
+@MagicConstant(
+    valuesFromClass = SecurityPolicyViolationEventDisposition.class
+)
+public @interface SecurityPolicyViolationEventDisposition {
   @Nonnull
-  public static final String enforce = "enforce";
+  String enforce = "enforce";
 
   @Nonnull
-  public static final String report = "report";
-
-  private SecurityPolicyViolationEventDisposition() {
-  }
+  String report = "report";
 }

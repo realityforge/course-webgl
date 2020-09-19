@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,19 +25,16 @@ public interface MediaRecorderOptions {
   @JsProperty(
       name = "audioBitrateMode"
   )
-  @MagicConstant(
-      valuesFromClass = BitrateMode.class
-  )
+  @BitrateMode
   String audioBitrateMode();
 
   @JsProperty
-  void setAudioBitrateMode(
-      @MagicConstant(valuesFromClass = BitrateMode.class) @Nonnull String audioBitrateMode);
+  void setAudioBitrateMode(@BitrateMode @Nonnull String audioBitrateMode);
 
   @JsOverlay
   @Nonnull
   default MediaRecorderOptions audioBitrateMode(
-      @MagicConstant(valuesFromClass = BitrateMode.class) @Nonnull final String audioBitrateMode) {
+      @BitrateMode @Nonnull final String audioBitrateMode) {
     setAudioBitrateMode( audioBitrateMode );
     return this;
   }

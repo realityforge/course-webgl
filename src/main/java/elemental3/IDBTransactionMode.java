@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class IDBTransactionMode {
+@MagicConstant(
+    valuesFromClass = IDBTransactionMode.class
+)
+public @interface IDBTransactionMode {
   @Nonnull
-  public static final String readonly = "readonly";
+  String readonly = "readonly";
 
   @Nonnull
-  public static final String readwrite = "readwrite";
+  String readwrite = "readwrite";
 
   @Nonnull
-  public static final String versionchange = "versionchange";
-
-  private IDBTransactionMode() {
-  }
+  String versionchange = "versionchange";
 }

@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class DisplayCaptureSurfaceType {
+@MagicConstant(
+    valuesFromClass = DisplayCaptureSurfaceType.class
+)
+public @interface DisplayCaptureSurfaceType {
   @Nonnull
-  public static final String application = "application";
+  String application = "application";
 
   @Nonnull
-  public static final String browser = "browser";
+  String browser = "browser";
 
   @Nonnull
-  public static final String monitor = "monitor";
+  String monitor = "monitor";
 
   @Nonnull
-  public static final String window = "window";
-
-  private DisplayCaptureSurfaceType() {
-  }
+  String window = "window";
 }

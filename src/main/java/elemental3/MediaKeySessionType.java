@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class MediaKeySessionType {
+@MagicConstant(
+    valuesFromClass = MediaKeySessionType.class
+)
+public @interface MediaKeySessionType {
   @Nonnull
-  public static final String persistent_license = "persistent-license";
+  String persistent_license = "persistent-license";
 
   @Nonnull
-  public static final String temporary = "temporary";
-
-  private MediaKeySessionType() {
-  }
+  String temporary = "temporary";
 }

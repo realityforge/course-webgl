@@ -8,7 +8,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
@@ -39,8 +38,7 @@ public class XR extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported">XR.isSessionSupported - MDN</a>
    */
   @Nonnull
-  public native Promise<Boolean> isSessionSupported(
-      @MagicConstant(valuesFromClass = XRSessionMode.class) @Nonnull String mode);
+  public native Promise<Boolean> isSessionSupported(@XRSessionMode @Nonnull String mode);
 
   /**
    * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
@@ -48,8 +46,7 @@ public class XR extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession">XR.requestSession - MDN</a>
    */
   @Nonnull
-  public native Promise<XRSession> requestSession(
-      @MagicConstant(valuesFromClass = XRSessionMode.class) @Nonnull String mode,
+  public native Promise<XRSession> requestSession(@XRSessionMode @Nonnull String mode,
       @Nonnull XRSessionInit options);
 
   /**
@@ -58,8 +55,7 @@ public class XR extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession">XR.requestSession - MDN</a>
    */
   @Nonnull
-  public native Promise<XRSession> requestSession(
-      @MagicConstant(valuesFromClass = XRSessionMode.class) @Nonnull String mode);
+  public native Promise<XRSession> requestSession(@XRSessionMode @Nonnull String mode);
 
   @JsOverlay
   public final void addDevicechangeListener(@Nonnull final EventListener callback,

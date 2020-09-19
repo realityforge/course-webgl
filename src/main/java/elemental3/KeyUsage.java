@@ -2,33 +2,34 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class KeyUsage {
+@MagicConstant(
+    valuesFromClass = KeyUsage.class
+)
+public @interface KeyUsage {
   @Nonnull
-  public static final String decrypt = "decrypt";
+  String decrypt = "decrypt";
 
   @Nonnull
-  public static final String deriveBits = "deriveBits";
+  String deriveBits = "deriveBits";
 
   @Nonnull
-  public static final String deriveKey = "deriveKey";
+  String deriveKey = "deriveKey";
 
   @Nonnull
-  public static final String encrypt = "encrypt";
+  String encrypt = "encrypt";
 
   @Nonnull
-  public static final String sign = "sign";
+  String sign = "sign";
 
   @Nonnull
-  public static final String unwrapKey = "unwrapKey";
+  String unwrapKey = "unwrapKey";
 
   @Nonnull
-  public static final String verify = "verify";
+  String verify = "verify";
 
   @Nonnull
-  public static final String wrapKey = "wrapKey";
-
-  private KeyUsage() {
-  }
+  String wrapKey = "wrapKey";
 }

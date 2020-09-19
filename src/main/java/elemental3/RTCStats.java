@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCStats dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.
@@ -25,7 +24,7 @@ public interface RTCStats {
   @JsOverlay
   @Nonnull
   static RTCStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+      @RTCStatsType @Nonnull final String type) {
     return Js.<RTCStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
   }
 
@@ -98,9 +97,7 @@ public interface RTCStats {
   @JsProperty(
       name = "type"
   )
-  @MagicConstant(
-      valuesFromClass = RTCStatsType.class
-  )
+  @RTCStatsType
   @Nonnull
   String type();
 
@@ -110,7 +107,7 @@ public interface RTCStats {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
    */
   @JsProperty
-  void setType(@MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull String type);
+  void setType(@RTCStatsType @Nonnull String type);
 
   /**
    * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
@@ -119,8 +116,7 @@ public interface RTCStats {
    */
   @JsOverlay
   @Nonnull
-  default RTCStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

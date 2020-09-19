@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCIceTcpCandidateType {
+@MagicConstant(
+    valuesFromClass = RTCIceTcpCandidateType.class
+)
+public @interface RTCIceTcpCandidateType {
   @Nonnull
-  public static final String active = "active";
+  String active = "active";
 
   @Nonnull
-  public static final String passive = "passive";
+  String passive = "passive";
 
   @Nonnull
-  public static final String so = "so";
-
-  private RTCIceTcpCandidateType() {
-  }
+  String so = "so";
 }

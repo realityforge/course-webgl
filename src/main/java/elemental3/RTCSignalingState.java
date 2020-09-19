@@ -2,27 +2,28 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCSignalingState {
+@MagicConstant(
+    valuesFromClass = RTCSignalingState.class
+)
+public @interface RTCSignalingState {
   @Nonnull
-  public static final String closed = "closed";
+  String closed = "closed";
 
   @Nonnull
-  public static final String have_local_offer = "have-local-offer";
+  String have_local_offer = "have-local-offer";
 
   @Nonnull
-  public static final String have_local_pranswer = "have-local-pranswer";
+  String have_local_pranswer = "have-local-pranswer";
 
   @Nonnull
-  public static final String have_remote_offer = "have-remote-offer";
+  String have_remote_offer = "have-remote-offer";
 
   @Nonnull
-  public static final String have_remote_pranswer = "have-remote-pranswer";
+  String have_remote_pranswer = "have-remote-pranswer";
 
   @Nonnull
-  public static final String stable = "stable";
-
-  private RTCSignalingState() {
-  }
+  String stable = "stable";
 }

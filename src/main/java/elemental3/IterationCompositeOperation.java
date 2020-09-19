@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class IterationCompositeOperation {
+@MagicConstant(
+    valuesFromClass = IterationCompositeOperation.class
+)
+public @interface IterationCompositeOperation {
   @Nonnull
-  public static final String accumulate = "accumulate";
+  String accumulate = "accumulate";
 
   @Nonnull
-  public static final String replace = "replace";
-
-  private IterationCompositeOperation() {
-  }
+  String replace = "replace";
 }

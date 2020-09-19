@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ClientType {
+@MagicConstant(
+    valuesFromClass = ClientType.class
+)
+public @interface ClientType {
   @Nonnull
-  public static final String all = "all";
+  String all = "all";
 
   @Nonnull
-  public static final String sharedworker = "sharedworker";
+  String sharedworker = "sharedworker";
 
   @Nonnull
-  public static final String window = "window";
+  String window = "window";
 
   @Nonnull
-  public static final String worker = "worker";
-
-  private ClientType() {
-  }
+  String worker = "worker";
 }

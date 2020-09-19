@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * This interface also inherits properties from TextTrackCue.
@@ -20,27 +19,21 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public class VTTCue extends TextTrackCue {
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AlignSetting.class
-  )
+  @AlignSetting
   public String align;
 
   @Nonnull
   public LineAndPositionSetting line;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = LineAlignSetting.class
-  )
+  @LineAlignSetting
   public String lineAlign;
 
   @Nonnull
   public LineAndPositionSetting position;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = PositionAlignSetting.class
-  )
+  @PositionAlignSetting
   public String positionAlign;
 
   @Nullable
@@ -54,9 +47,7 @@ public class VTTCue extends TextTrackCue {
   public String text;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = DirectionSetting.class
-  )
+  @DirectionSetting
   public String vertical;
 
   /**

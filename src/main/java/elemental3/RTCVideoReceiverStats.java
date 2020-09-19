@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,8 +19,7 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
   @JsOverlay
   @Nonnull
   static RTCVideoReceiverStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @Nonnull final String kind) {
+      @RTCStatsType @Nonnull final String type, @Nonnull final String kind) {
     return Js.<RTCVideoReceiverStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
@@ -211,8 +209,7 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCVideoReceiverStats priority(
-      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull final String priority) {
+  default RTCVideoReceiverStats priority(@RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
     return this;
   }
@@ -259,8 +256,7 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCVideoReceiverStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCVideoReceiverStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

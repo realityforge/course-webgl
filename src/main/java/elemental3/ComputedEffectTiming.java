@@ -9,7 +9,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -123,8 +122,7 @@ public interface ComputedEffectTiming extends EffectTiming {
   @JsOverlay
   @Nonnull
   @Override
-  default ComputedEffectTiming direction(
-      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull final String direction) {
+  default ComputedEffectTiming direction(@PlaybackDirection @Nonnull final String direction) {
     setDirection( direction );
     return this;
   }
@@ -189,8 +187,7 @@ public interface ComputedEffectTiming extends EffectTiming {
   @JsOverlay
   @Nonnull
   @Override
-  default ComputedEffectTiming fill(
-      @MagicConstant(valuesFromClass = FillMode.class) @Nonnull final String fill) {
+  default ComputedEffectTiming fill(@FillMode @Nonnull final String fill) {
     setFill( fill );
     return this;
   }

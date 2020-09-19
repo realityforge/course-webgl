@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -103,9 +102,7 @@ public class ServiceWorkerRegistration extends EventTarget {
       name = "updateViaCache"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ServiceWorkerUpdateViaCache.class
-  )
+  @ServiceWorkerUpdateViaCache
   public native String updateViaCache();
 
   /**

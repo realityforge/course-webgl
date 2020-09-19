@@ -2,27 +2,28 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class CanvasTextBaseline {
+@MagicConstant(
+    valuesFromClass = CanvasTextBaseline.class
+)
+public @interface CanvasTextBaseline {
   @Nonnull
-  public static final String alphabetic = "alphabetic";
+  String alphabetic = "alphabetic";
 
   @Nonnull
-  public static final String bottom = "bottom";
+  String bottom = "bottom";
 
   @Nonnull
-  public static final String hanging = "hanging";
+  String hanging = "hanging";
 
   @Nonnull
-  public static final String ideographic = "ideographic";
+  String ideographic = "ideographic";
 
   @Nonnull
-  public static final String middle = "middle";
+  String middle = "middle";
 
   @Nonnull
-  public static final String top = "top";
-
-  private CanvasTextBaseline() {
-  }
+  String top = "top";
 }

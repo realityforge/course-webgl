@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class CursorCaptureConstraint {
+@MagicConstant(
+    valuesFromClass = CursorCaptureConstraint.class
+)
+public @interface CursorCaptureConstraint {
   @Nonnull
-  public static final String always = "always";
+  String always = "always";
 
   @Nonnull
-  public static final String motion = "motion";
+  String motion = "motion";
 
   @Nonnull
-  public static final String never = "never";
-
-  private CursorCaptureConstraint() {
-  }
+  String never = "never";
 }

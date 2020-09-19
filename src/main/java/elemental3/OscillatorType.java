@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class OscillatorType {
+@MagicConstant(
+    valuesFromClass = OscillatorType.class
+)
+public @interface OscillatorType {
   @Nonnull
-  public static final String custom = "custom";
+  String custom = "custom";
 
   @Nonnull
-  public static final String sawtooth = "sawtooth";
+  String sawtooth = "sawtooth";
 
   @Nonnull
-  public static final String sine = "sine";
+  String sine = "sine";
 
   @Nonnull
-  public static final String square = "square";
+  String square = "square";
 
   @Nonnull
-  public static final String triangle = "triangle";
-
-  private OscillatorType() {
-  }
+  String triangle = "triangle";
 }

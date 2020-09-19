@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class NotificationPermission {
+@MagicConstant(
+    valuesFromClass = NotificationPermission.class
+)
+public @interface NotificationPermission {
   @Nonnull
-  public static final String default_ = "default";
+  String default_ = "default";
 
   @Nonnull
-  public static final String denied = "denied";
+  String denied = "denied";
 
   @Nonnull
-  public static final String granted = "granted";
-
-  private NotificationPermission() {
-  }
+  String granted = "granted";
 }

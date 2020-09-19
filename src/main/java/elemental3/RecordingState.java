@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RecordingState {
+@MagicConstant(
+    valuesFromClass = RecordingState.class
+)
+public @interface RecordingState {
   @Nonnull
-  public static final String inactive = "inactive";
+  String inactive = "inactive";
 
   @Nonnull
-  public static final String paused = "paused";
+  String paused = "paused";
 
   @Nonnull
-  public static final String recording = "recording";
-
-  private RecordingState() {
-  }
+  String recording = "recording";
 }

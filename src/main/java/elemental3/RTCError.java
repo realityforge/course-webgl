@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCError interface describes an error which has occurred while handling WebRTC operations. It's based upon the standard DOMException interface that describes general DOM errors.
@@ -30,9 +29,7 @@ public class RTCError extends DOMException {
       name = "errorDetail"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RTCErrorDetailType.class
-  )
+  @RTCErrorDetailType
   public native String errorDetail();
 
   @JsProperty(

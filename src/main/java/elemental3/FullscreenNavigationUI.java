@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class FullscreenNavigationUI {
+@MagicConstant(
+    valuesFromClass = FullscreenNavigationUI.class
+)
+public @interface FullscreenNavigationUI {
   @Nonnull
-  public static final String auto = "auto";
+  String auto = "auto";
 
   @Nonnull
-  public static final String hide = "hide";
+  String hide = "hide";
 
   @Nonnull
-  public static final String show = "show";
-
-  private FullscreenNavigationUI() {
-  }
+  String show = "show";
 }

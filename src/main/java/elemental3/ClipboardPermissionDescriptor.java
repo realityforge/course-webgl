@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,8 +18,7 @@ import org.intellij.lang.annotations.MagicConstant;
 public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static ClipboardPermissionDescriptor create(
-      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
+  static ClipboardPermissionDescriptor create(@PermissionName @Nonnull final String name) {
     return Js.<ClipboardPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
@@ -42,8 +40,7 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   @Override
-  default ClipboardPermissionDescriptor name(
-      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
+  default ClipboardPermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;
   }

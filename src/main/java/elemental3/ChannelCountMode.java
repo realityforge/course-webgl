@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ChannelCountMode {
+@MagicConstant(
+    valuesFromClass = ChannelCountMode.class
+)
+public @interface ChannelCountMode {
   @Nonnull
-  public static final String clamped_max = "clamped-max";
+  String clamped_max = "clamped-max";
 
   @Nonnull
-  public static final String explicit = "explicit";
+  String explicit = "explicit";
 
   @Nonnull
-  public static final String max = "max";
-
-  private ChannelCountMode() {
-  }
+  String max = "max";
 }

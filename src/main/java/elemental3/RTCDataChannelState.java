@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCDataChannelState {
+@MagicConstant(
+    valuesFromClass = RTCDataChannelState.class
+)
+public @interface RTCDataChannelState {
   @Nonnull
-  public static final String closed = "closed";
+  String closed = "closed";
 
   @Nonnull
-  public static final String closing = "closing";
+  String closing = "closing";
 
   @Nonnull
-  public static final String connecting = "connecting";
+  String connecting = "connecting";
 
   @Nonnull
-  public static final String open = "open";
-
-  private RTCDataChannelState() {
-  }
+  String open = "open";
 }

@@ -2,12 +2,13 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class GamepadHapticActuatorType {
+@MagicConstant(
+    valuesFromClass = GamepadHapticActuatorType.class
+)
+public @interface GamepadHapticActuatorType {
   @Nonnull
-  public static final String vibration = "vibration";
-
-  private GamepadHapticActuatorType() {
-  }
+  String vibration = "vibration";
 }

@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RequestMode {
+@MagicConstant(
+    valuesFromClass = RequestMode.class
+)
+public @interface RequestMode {
   @Nonnull
-  public static final String cors = "cors";
+  String cors = "cors";
 
   @Nonnull
-  public static final String navigate = "navigate";
+  String navigate = "navigate";
 
   @Nonnull
-  public static final String no_cors = "no-cors";
+  String no_cors = "no-cors";
 
   @Nonnull
-  public static final String same_origin = "same-origin";
-
-  private RequestMode() {
-  }
+  String same_origin = "same-origin";
 }

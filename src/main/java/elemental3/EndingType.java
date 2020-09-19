@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class EndingType {
+@MagicConstant(
+    valuesFromClass = EndingType.class
+)
+public @interface EndingType {
   @Nonnull
-  public static final String native_ = "native";
+  String native_ = "native";
 
   @Nonnull
-  public static final String transparent = "transparent";
-
-  private EndingType() {
-  }
+  String transparent = "transparent";
 }

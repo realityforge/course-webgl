@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments.
@@ -51,9 +50,7 @@ public class SourceBuffer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode">SourceBuffer.mode - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AppendMode.class
-  )
+  @AppendMode
   public String mode;
 
   @Nullable

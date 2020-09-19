@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * A PannerNode always has exactly one input and one output: the input can be mono or stereo but the output is always stereo (2 channels); you can't have panning effects without at least two audio channels!
@@ -46,9 +45,7 @@ public class PannerNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/distanceModel">PannerNode.distanceModel - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = DistanceModelType.class
-  )
+  @DistanceModelType
   public String distanceModel;
 
   /**
@@ -64,9 +61,7 @@ public class PannerNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/panningModel">PannerNode.panningModel - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = PanningModelType.class
-  )
+  @PanningModelType
   public String panningModel;
 
   /**

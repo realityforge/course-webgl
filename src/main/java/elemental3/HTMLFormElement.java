@@ -8,7 +8,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLFormElement interface represents a form element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
@@ -39,9 +38,7 @@ public class HTMLFormElement extends HTMLElement {
   public String action;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormAutocompleteType.class
-  )
+  @FormAutocompleteType
   public String autocomplete;
 
   /**
@@ -58,9 +55,7 @@ public class HTMLFormElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormEncodingType.class
-  )
+  @FormEncodingType
   public String enctype;
 
   /**
@@ -69,9 +64,7 @@ public class HTMLFormElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = FormMethodType.class
-  )
+  @FormMethodType
   public String method;
 
   /**

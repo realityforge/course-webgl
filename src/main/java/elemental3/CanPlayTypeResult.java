@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class CanPlayTypeResult {
+@MagicConstant(
+    valuesFromClass = CanPlayTypeResult.class
+)
+public @interface CanPlayTypeResult {
   @Nonnull
-  public static final String maybe = "maybe";
+  String maybe = "maybe";
 
   @Nonnull
-  public static final String probably = "probably";
-
-  private CanPlayTypeResult() {
-  }
+  String probably = "probably";
 }

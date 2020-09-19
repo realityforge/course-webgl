@@ -8,7 +8,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
@@ -218,7 +217,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openCursor(@Nullable Any query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate record, based on the specified direction.
@@ -227,7 +226,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate record, based on the specified direction.
@@ -260,7 +259,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@Nullable Any query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate key, based on the specified direction.
@@ -269,7 +268,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate key, based on the specified direction.

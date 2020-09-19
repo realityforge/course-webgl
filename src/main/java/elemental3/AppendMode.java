@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AppendMode {
+@MagicConstant(
+    valuesFromClass = AppendMode.class
+)
+public @interface AppendMode {
   @Nonnull
-  public static final String segments = "segments";
+  String segments = "segments";
 
   @Nonnull
-  public static final String sequence = "sequence";
-
-  private AppendMode() {
-  }
+  String sequence = "sequence";
 }

@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class IDBRequestReadyState {
+@MagicConstant(
+    valuesFromClass = IDBRequestReadyState.class
+)
+public @interface IDBRequestReadyState {
   @Nonnull
-  public static final String done = "done";
+  String done = "done";
 
   @Nonnull
-  public static final String pending = "pending";
-
-  private IDBRequestReadyState() {
-  }
+  String pending = "pending";
 }

@@ -2,27 +2,28 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RequestCache {
+@MagicConstant(
+    valuesFromClass = RequestCache.class
+)
+public @interface RequestCache {
   @Nonnull
-  public static final String default_ = "default";
+  String default_ = "default";
 
   @Nonnull
-  public static final String force_cache = "force-cache";
+  String force_cache = "force-cache";
 
   @Nonnull
-  public static final String no_cache = "no-cache";
+  String no_cache = "no-cache";
 
   @Nonnull
-  public static final String no_store = "no-store";
+  String no_store = "no-store";
 
   @Nonnull
-  public static final String only_if_cached = "only-if-cached";
+  String only_if_cached = "only-if-cached";
 
   @Nonnull
-  public static final String reload = "reload";
-
-  private RequestCache() {
-  }
+  String reload = "reload";
 }

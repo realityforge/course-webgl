@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -41,8 +40,7 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default KeyframeAnimationOptions composite(
-      @MagicConstant(valuesFromClass = CompositeOperation.class) @Nonnull final String composite) {
+  default KeyframeAnimationOptions composite(@CompositeOperation @Nonnull final String composite) {
     setComposite( composite );
     return this;
   }
@@ -51,7 +49,7 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @Nonnull
   @Override
   default KeyframeAnimationOptions iterationComposite(
-      @MagicConstant(valuesFromClass = IterationCompositeOperation.class) @Nonnull final String iterationComposite) {
+      @IterationCompositeOperation @Nonnull final String iterationComposite) {
     setIterationComposite( iterationComposite );
     return this;
   }
@@ -77,8 +75,7 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default KeyframeAnimationOptions direction(
-      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull final String direction) {
+  default KeyframeAnimationOptions direction(@PlaybackDirection @Nonnull final String direction) {
     setDirection( direction );
     return this;
   }
@@ -143,8 +140,7 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default KeyframeAnimationOptions fill(
-      @MagicConstant(valuesFromClass = FillMode.class) @Nonnull final String fill) {
+  default KeyframeAnimationOptions fill(@FillMode @Nonnull final String fill) {
     setFill( fill );
     return this;
   }

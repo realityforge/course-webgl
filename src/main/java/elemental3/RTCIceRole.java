@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCIceRole {
+@MagicConstant(
+    valuesFromClass = RTCIceRole.class
+)
+public @interface RTCIceRole {
   @Nonnull
-  public static final String controlled = "controlled";
+  String controlled = "controlled";
 
   @Nonnull
-  public static final String controlling = "controlling";
+  String controlling = "controlling";
 
   @Nonnull
-  public static final String unknown = "unknown";
-
-  private RTCIceRole() {
-  }
+  String unknown = "unknown";
 }

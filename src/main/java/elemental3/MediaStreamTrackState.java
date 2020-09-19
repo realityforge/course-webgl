@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class MediaStreamTrackState {
+@MagicConstant(
+    valuesFromClass = MediaStreamTrackState.class
+)
+public @interface MediaStreamTrackState {
   @Nonnull
-  public static final String ended = "ended";
+  String ended = "ended";
 
   @Nonnull
-  public static final String live = "live";
-
-  private MediaStreamTrackState() {
-  }
+  String live = "live";
 }

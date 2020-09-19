@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * HTML script elements expose the HTMLScriptElement interface, which provides special properties and methods for manipulating the behavior and execution of script elements (beyond the inherited HTMLElement interface).
@@ -25,9 +24,7 @@ public class HTMLScriptElement extends HTMLElement {
   public String charset;
 
   @Nullable
-  @MagicConstant(
-      valuesFromClass = CrossOriginType.class
-  )
+  @CrossOriginType
   public String crossOrigin;
 
   public boolean defer;
@@ -49,9 +46,7 @@ public class HTMLScriptElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy">HTMLScriptElement.referrerPolicy - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReferrerPolicy.class
-  )
+  @ReferrerPolicy
   public String referrerPolicy;
 
   @Nonnull

@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class ShadowRootMode {
+@MagicConstant(
+    valuesFromClass = ShadowRootMode.class
+)
+public @interface ShadowRootMode {
   @Nonnull
-  public static final String closed = "closed";
+  String closed = "closed";
 
   @Nonnull
-  public static final String open = "open";
-
-  private ShadowRootMode() {
-  }
+  String open = "open";
 }

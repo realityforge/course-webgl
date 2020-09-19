@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCIceCandidateType {
+@MagicConstant(
+    valuesFromClass = RTCIceCandidateType.class
+)
+public @interface RTCIceCandidateType {
   @Nonnull
-  public static final String host = "host";
+  String host = "host";
 
   @Nonnull
-  public static final String prflx = "prflx";
+  String prflx = "prflx";
 
   @Nonnull
-  public static final String relay = "relay";
+  String relay = "relay";
 
   @Nonnull
-  public static final String srflx = "srflx";
-
-  private RTCIceCandidateType() {
-  }
+  String srflx = "srflx";
 }

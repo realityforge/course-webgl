@@ -10,7 +10,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Request interface of the Fetch API represents a resource request.
@@ -102,9 +101,7 @@ public class Request {
       name = "cache"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RequestCache.class
-  )
+  @RequestCache
   public native String cache();
 
   /**
@@ -116,9 +113,7 @@ public class Request {
       name = "credentials"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RequestCredentials.class
-  )
+  @RequestCredentials
   public native String credentials();
 
   /**
@@ -130,9 +125,7 @@ public class Request {
       name = "destination"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RequestDestination.class
-  )
+  @RequestDestination
   public native String destination();
 
   /**
@@ -192,9 +185,7 @@ public class Request {
       name = "mode"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RequestMode.class
-  )
+  @RequestMode
   public native String mode();
 
   /**
@@ -206,9 +197,7 @@ public class Request {
       name = "redirect"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = RequestRedirect.class
-  )
+  @RequestRedirect
   public native String redirect();
 
   /**
@@ -231,9 +220,7 @@ public class Request {
       name = "referrerPolicy"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ReferrerPolicy.class
-  )
+  @ReferrerPolicy
   public native String referrerPolicy();
 
   @JsProperty(

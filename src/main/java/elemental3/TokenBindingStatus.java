@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class TokenBindingStatus {
+@MagicConstant(
+    valuesFromClass = TokenBindingStatus.class
+)
+public @interface TokenBindingStatus {
   @Nonnull
-  public static final String present = "present";
+  String present = "present";
 
   @Nonnull
-  public static final String supported = "supported";
-
-  private TokenBindingStatus() {
-  }
+  String supported = "supported";
 }

@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,8 +18,7 @@ import org.intellij.lang.annotations.MagicConstant;
 public interface ModuleExportDescriptor {
   @JsOverlay
   @Nonnull
-  static ModuleExportDescriptor create(
-      @MagicConstant(valuesFromClass = ImportExportKind.class) @Nonnull final String kind,
+  static ModuleExportDescriptor create(@ImportExportKind @Nonnull final String kind,
       @Nonnull final String name) {
     return Js.<ModuleExportDescriptor>uncheckedCast( JsPropertyMap.of() ).kind( kind ).name( name );
   }
@@ -28,19 +26,16 @@ public interface ModuleExportDescriptor {
   @JsProperty(
       name = "kind"
   )
-  @MagicConstant(
-      valuesFromClass = ImportExportKind.class
-  )
+  @ImportExportKind
   @Nonnull
   String kind();
 
   @JsProperty
-  void setKind(@MagicConstant(valuesFromClass = ImportExportKind.class) @Nonnull String kind);
+  void setKind(@ImportExportKind @Nonnull String kind);
 
   @JsOverlay
   @Nonnull
-  default ModuleExportDescriptor kind(
-      @MagicConstant(valuesFromClass = ImportExportKind.class) @Nonnull final String kind) {
+  default ModuleExportDescriptor kind(@ImportExportKind @Nonnull final String kind) {
     setKind( kind );
     return this;
   }

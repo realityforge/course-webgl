@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class XREye {
+@MagicConstant(
+    valuesFromClass = XREye.class
+)
+public @interface XREye {
   @Nonnull
-  public static final String left = "left";
+  String left = "left";
 
   @Nonnull
-  public static final String none = "none";
+  String none = "none";
 
   @Nonnull
-  public static final String right = "right";
-
-  private XREye() {
-  }
+  String right = "right";
 }

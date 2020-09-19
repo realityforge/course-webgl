@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class PresentationStyle {
+@MagicConstant(
+    valuesFromClass = PresentationStyle.class
+)
+public @interface PresentationStyle {
   @Nonnull
-  public static final String attachment = "attachment";
+  String attachment = "attachment";
 
   @Nonnull
-  public static final String inline = "inline";
+  String inline = "inline";
 
   @Nonnull
-  public static final String unspecified = "unspecified";
-
-  private PresentationStyle() {
-  }
+  String unspecified = "unspecified";
 }

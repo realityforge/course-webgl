@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebXR Device API's XRSession interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the XRSystem interface's requestSession() method.
@@ -73,9 +72,7 @@ public class XRSession extends EventTarget {
       name = "visibilityState"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = XRVisibilityState.class
-  )
+  @XRVisibilityState
   public native String visibilityState();
 
   /**
@@ -107,7 +104,7 @@ public class XRSession extends EventTarget {
    */
   @Nonnull
   public native Promise<XRReferenceSpace> requestReferenceSpace(
-      @MagicConstant(valuesFromClass = XRReferenceSpaceType.class) @Nonnull String type);
+      @XRReferenceSpaceType @Nonnull String type);
 
   /**
    * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.

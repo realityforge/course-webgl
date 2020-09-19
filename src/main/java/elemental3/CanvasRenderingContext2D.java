@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a canvas element. It is used for drawing shapes, text, images, and other objects.
@@ -27,9 +26,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/direction">CanvasRenderingContext2D.direction - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasDirection.class
-  )
+  @CanvasDirection
   public String direction;
 
   /**
@@ -84,9 +81,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality">CanvasRenderingContext2D.imageSmoothingQuality - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ImageSmoothingQuality.class
-  )
+  @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
   /**
@@ -95,9 +90,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap">CanvasRenderingContext2D.lineCap - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasLineCap.class
-  )
+  @CanvasLineCap
   public String lineCap;
 
   /**
@@ -113,9 +106,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin">CanvasRenderingContext2D.lineJoin - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasLineJoin.class
-  )
+  @CanvasLineJoin
   public String lineJoin;
 
   /**
@@ -175,9 +166,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign">CanvasRenderingContext2D.textAlign - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasTextAlign.class
-  )
+  @CanvasTextAlign
   public String textAlign;
 
   /**
@@ -186,9 +175,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline">CanvasRenderingContext2D.textBaseline - MDN</a>
    */
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasTextBaseline.class
-  )
+  @CanvasTextBaseline
   public String textBaseline;
 
   CanvasRenderingContext2D() {
@@ -797,8 +784,7 @@ public class CanvasRenderingContext2D {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clip">CanvasRenderingContext2D.clip - MDN</a>
    */
-  public native void clip(
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void clip(@CanvasFillRule @Nonnull String fillRule);
 
   /**
    * The CanvasRenderingContext2D.clip() method of the Canvas 2D API turns the current or given path into the current clipping region. The previous clipping region, if any, is intersected with the current or given path to create the new clipping region.
@@ -812,8 +798,7 @@ public class CanvasRenderingContext2D {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clip">CanvasRenderingContext2D.clip - MDN</a>
    */
-  public native void clip(@Nonnull Path2D path,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void clip(@Nonnull Path2D path, @CanvasFillRule @Nonnull String fillRule);
 
   /**
    * The CanvasRenderingContext2D.clip() method of the Canvas 2D API turns the current or given path into the current clipping region. The previous clipping region, if any, is intersected with the current or given path to create the new clipping region.
@@ -827,8 +812,7 @@ public class CanvasRenderingContext2D {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fill">CanvasRenderingContext2D.fill - MDN</a>
    */
-  public native void fill(
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void fill(@CanvasFillRule @Nonnull String fillRule);
 
   /**
    * The CanvasRenderingContext2D.fill() method of the Canvas 2D API fills the current or given path with the current fillStyle.
@@ -842,8 +826,7 @@ public class CanvasRenderingContext2D {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fill">CanvasRenderingContext2D.fill - MDN</a>
    */
-  public native void fill(@Nonnull Path2D path,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void fill(@Nonnull Path2D path, @CanvasFillRule @Nonnull String fillRule);
 
   /**
    * The CanvasRenderingContext2D.fill() method of the Canvas 2D API fills the current or given path with the current fillStyle.
@@ -857,8 +840,7 @@ public class CanvasRenderingContext2D {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">CanvasRenderingContext2D.isPointInPath - MDN</a>
    */
-  public native boolean isPointInPath(double x, double y,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native boolean isPointInPath(double x, double y, @CanvasFillRule @Nonnull String fillRule);
 
   /**
    * The CanvasRenderingContext2D.isPointInPath() method of the Canvas 2D API reports whether or not the specified point is contained in the current path.
@@ -873,7 +855,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">CanvasRenderingContext2D.isPointInPath - MDN</a>
    */
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+      @CanvasFillRule @Nonnull String fillRule);
 
   /**
    * The CanvasRenderingContext2D.isPointInPath() method of the Canvas 2D API reports whether or not the specified point is contained in the current path.

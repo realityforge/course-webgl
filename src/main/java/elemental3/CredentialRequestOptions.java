@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,19 +25,16 @@ public interface CredentialRequestOptions {
   @JsProperty(
       name = "mediation"
   )
-  @MagicConstant(
-      valuesFromClass = CredentialMediationRequirement.class
-  )
+  @CredentialMediationRequirement
   String mediation();
 
   @JsProperty
-  void setMediation(
-      @MagicConstant(valuesFromClass = CredentialMediationRequirement.class) @Nonnull String mediation);
+  void setMediation(@CredentialMediationRequirement @Nonnull String mediation);
 
   @JsOverlay
   @Nonnull
   default CredentialRequestOptions mediation(
-      @MagicConstant(valuesFromClass = CredentialMediationRequirement.class) @Nonnull final String mediation) {
+      @CredentialMediationRequirement @Nonnull final String mediation) {
     setMediation( mediation );
     return this;
   }

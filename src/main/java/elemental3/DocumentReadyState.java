@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class DocumentReadyState {
+@MagicConstant(
+    valuesFromClass = DocumentReadyState.class
+)
+public @interface DocumentReadyState {
   @Nonnull
-  public static final String complete = "complete";
+  String complete = "complete";
 
   @Nonnull
-  public static final String interactive = "interactive";
+  String interactive = "interactive";
 
   @Nonnull
-  public static final String loading = "loading";
-
-  private DocumentReadyState() {
-  }
+  String loading = "loading";
 }

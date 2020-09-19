@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class VisibilityState {
+@MagicConstant(
+    valuesFromClass = VisibilityState.class
+)
+public @interface VisibilityState {
   @Nonnull
-  public static final String hidden = "hidden";
+  String hidden = "hidden";
 
   @Nonnull
-  public static final String visible = "visible";
-
-  private VisibilityState() {
-  }
+  String visible = "visible";
 }

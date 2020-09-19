@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * Attributes that control the characteristics of the {@link WebGLRenderingContext} or {@link WebGL2RenderingContext} created.
@@ -187,9 +186,7 @@ public interface WebGLContextAttributes {
   @JsProperty(
       name = "powerPreference"
   )
-  @MagicConstant(
-      valuesFromClass = WebGLPowerPreference.class
-  )
+  @WebGLPowerPreference
   String powerPreference();
 
   /**
@@ -198,8 +195,7 @@ public interface WebGLContextAttributes {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">WebGLContextAttributes.powerPreference - MDN</a>
    */
   @JsProperty
-  void setPowerPreference(
-      @MagicConstant(valuesFromClass = WebGLPowerPreference.class) @Nonnull String powerPreference);
+  void setPowerPreference(@WebGLPowerPreference @Nonnull String powerPreference);
 
   /**
    * A hint to the user agent indicating what configuration of GPU is suitable for the WebGL context.
@@ -209,7 +205,7 @@ public interface WebGLContextAttributes {
   @JsOverlay
   @Nonnull
   default WebGLContextAttributes powerPreference(
-      @MagicConstant(valuesFromClass = WebGLPowerPreference.class) @Nonnull final String powerPreference) {
+      @WebGLPowerPreference @Nonnull final String powerPreference) {
     setPowerPreference( powerPreference );
     return this;
   }

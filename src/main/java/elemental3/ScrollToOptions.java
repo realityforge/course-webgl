@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.
@@ -91,8 +90,7 @@ public interface ScrollToOptions extends ScrollOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default ScrollToOptions behavior(
-      @MagicConstant(valuesFromClass = ScrollBehavior.class) @Nonnull final String behavior) {
+  default ScrollToOptions behavior(@ScrollBehavior @Nonnull final String behavior) {
     setBehavior( behavior );
     return this;
   }

@@ -7,7 +7,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,8 +18,7 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
   @JsOverlay
   @Nonnull
   static RTCSenderAudioTrackAttachmentStats create(@Nonnull final String id, final double timestamp,
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
-      @Nonnull final String kind) {
+      @RTCStatsType @Nonnull final String type, @Nonnull final String kind) {
     return Js.<RTCSenderAudioTrackAttachmentStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
@@ -119,7 +117,7 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
   @Nonnull
   @Override
   default RTCSenderAudioTrackAttachmentStats priority(
-      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull final String priority) {
+      @RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
     return this;
   }
@@ -166,8 +164,7 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
   @JsOverlay
   @Nonnull
   @Override
-  default RTCSenderAudioTrackAttachmentStats type(
-      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
+  default RTCSenderAudioTrackAttachmentStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;
   }

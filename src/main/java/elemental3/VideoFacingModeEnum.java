@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class VideoFacingModeEnum {
+@MagicConstant(
+    valuesFromClass = VideoFacingModeEnum.class
+)
+public @interface VideoFacingModeEnum {
   @Nonnull
-  public static final String environment = "environment";
+  String environment = "environment";
 
   @Nonnull
-  public static final String left = "left";
+  String left = "left";
 
   @Nonnull
-  public static final String right = "right";
+  String right = "right";
 
   @Nonnull
-  public static final String user = "user";
-
-  private VideoFacingModeEnum() {
-  }
+  String user = "user";
 }

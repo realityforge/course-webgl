@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of textarea elements.
@@ -21,9 +20,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public class HTMLTextAreaElement extends HTMLElement {
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutocompleteType.class
-  )
+  @AutocompleteType
   public String autocomplete;
 
   public int cols;
@@ -124,7 +121,7 @@ public class HTMLTextAreaElement extends HTMLElement {
   public native void setRangeText(@Nonnull String replacement);
 
   public native void setRangeText(@Nonnull String replacement, int start, int end,
-      @MagicConstant(valuesFromClass = SelectionMode.class) @Nonnull String selectionMode);
+      @SelectionMode @Nonnull String selectionMode);
 
   public native void setRangeText(@Nonnull String replacement, int start, int end);
 

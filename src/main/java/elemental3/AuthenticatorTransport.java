@@ -2,21 +2,22 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AuthenticatorTransport {
+@MagicConstant(
+    valuesFromClass = AuthenticatorTransport.class
+)
+public @interface AuthenticatorTransport {
   @Nonnull
-  public static final String ble = "ble";
+  String ble = "ble";
 
   @Nonnull
-  public static final String internal = "internal";
+  String internal = "internal";
 
   @Nonnull
-  public static final String nfc = "nfc";
+  String nfc = "nfc";
 
   @Nonnull
-  public static final String usb = "usb";
-
-  private AuthenticatorTransport() {
-  }
+  String usb = "usb";
 }

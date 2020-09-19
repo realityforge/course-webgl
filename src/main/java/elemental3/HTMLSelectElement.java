@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
@@ -21,9 +20,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public class HTMLSelectElement extends HTMLElement {
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = AutocompleteType.class
-  )
+  @AutocompleteType
   public String autocomplete;
 
   /**

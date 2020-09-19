@@ -2,24 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCDtlsTransportState {
+@MagicConstant(
+    valuesFromClass = RTCDtlsTransportState.class
+)
+public @interface RTCDtlsTransportState {
   @Nonnull
-  public static final String closed = "closed";
+  String closed = "closed";
 
   @Nonnull
-  public static final String connected = "connected";
+  String connected = "connected";
 
   @Nonnull
-  public static final String connecting = "connecting";
+  String connecting = "connecting";
 
   @Nonnull
-  public static final String failed = "failed";
+  String failed = "failed";
 
   @Nonnull
-  public static final String new_ = "new";
-
-  private RTCDtlsTransportState() {
-  }
+  String new_ = "new";
 }

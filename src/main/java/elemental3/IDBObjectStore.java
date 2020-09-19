@@ -9,7 +9,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our To-do Notifications app (view example live.)
@@ -359,7 +358,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openCursor(@Nullable Any query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.
@@ -368,7 +367,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.
@@ -401,7 +400,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@Nullable Any query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.
@@ -410,7 +409,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query,
-      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
+      @IDBCursorDirection @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.

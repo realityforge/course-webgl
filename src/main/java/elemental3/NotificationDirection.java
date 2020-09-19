@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class NotificationDirection {
+@MagicConstant(
+    valuesFromClass = NotificationDirection.class
+)
+public @interface NotificationDirection {
   @Nonnull
-  public static final String auto = "auto";
+  String auto = "auto";
 
   @Nonnull
-  public static final String ltr = "ltr";
+  String ltr = "ltr";
 
   @Nonnull
-  public static final String rtl = "rtl";
-
-  private NotificationDirection() {
-  }
+  String rtl = "rtl";
 }

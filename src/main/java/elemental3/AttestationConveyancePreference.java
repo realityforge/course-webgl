@@ -2,18 +2,19 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AttestationConveyancePreference {
+@MagicConstant(
+    valuesFromClass = AttestationConveyancePreference.class
+)
+public @interface AttestationConveyancePreference {
   @Nonnull
-  public static final String direct = "direct";
+  String direct = "direct";
 
   @Nonnull
-  public static final String indirect = "indirect";
+  String indirect = "indirect";
 
   @Nonnull
-  public static final String none = "none";
-
-  private AttestationConveyancePreference() {
-  }
+  String none = "none";
 }

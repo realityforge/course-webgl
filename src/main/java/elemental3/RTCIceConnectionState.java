@@ -2,30 +2,31 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class RTCIceConnectionState {
+@MagicConstant(
+    valuesFromClass = RTCIceConnectionState.class
+)
+public @interface RTCIceConnectionState {
   @Nonnull
-  public static final String checking = "checking";
+  String checking = "checking";
 
   @Nonnull
-  public static final String closed = "closed";
+  String closed = "closed";
 
   @Nonnull
-  public static final String completed = "completed";
+  String completed = "completed";
 
   @Nonnull
-  public static final String connected = "connected";
+  String connected = "connected";
 
   @Nonnull
-  public static final String disconnected = "disconnected";
+  String disconnected = "disconnected";
 
   @Nonnull
-  public static final String failed = "failed";
+  String failed = "failed";
 
   @Nonnull
-  public static final String new_ = "new";
-
-  private RTCIceConnectionState() {
-  }
+  String new_ = "new";
 }
