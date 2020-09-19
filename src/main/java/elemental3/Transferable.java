@@ -6,9 +6,9 @@ import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
 @JsType(
-  isNative = true,
-  namespace = JsPackage.GLOBAL,
-  name = "*"
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "*"
 )
 public interface Transferable {
 }

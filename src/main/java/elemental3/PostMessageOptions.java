@@ -26,26 +26,26 @@ public interface PostMessageOptions {
   @JsProperty(
       name = "transfer"
   )
-  JsArray<Object> transfer();
+  JsArray<Transferable> transfer();
 
   @JsProperty
-  void setTransfer(@Nonnull JsArray<Object> transfer);
+  void setTransfer(@Nonnull JsArray<Transferable> transfer);
 
   @JsOverlay
   @Nonnull
-  default PostMessageOptions transfer(@Nonnull final JsArray<Object> transfer) {
+  default PostMessageOptions transfer(@Nonnull final JsArray<Transferable> transfer) {
     setTransfer( transfer );
     return this;
   }
 
   @JsOverlay
-  default void setTransfer(@Nonnull final Object... transfer) {
-    setTransfer( Js.<JsArray<Object>>uncheckedCast( transfer ) );
+  default void setTransfer(@Nonnull final Transferable... transfer) {
+    setTransfer( Js.<JsArray<Transferable>>uncheckedCast( transfer ) );
   }
 
   @JsOverlay
   @Nonnull
-  default PostMessageOptions transfer(@Nonnull final Object... transfer) {
+  default PostMessageOptions transfer(@Nonnull final Transferable... transfer) {
     setTransfer( transfer );
     return this;
   }

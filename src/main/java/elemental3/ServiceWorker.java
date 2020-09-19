@@ -67,15 +67,15 @@ public class ServiceWorker extends EventTarget {
   )
   public native String state();
 
-  public native void postMessage(@Nullable Any message, @Nonnull JsArray<Object> transfer);
+  public native void postMessage(@Nullable Any message, @Nonnull JsArray<Transferable> transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull JsArray<Object> transfer);
+      @Nonnull JsArray<Transferable> transfer);
 
-  public native void postMessage(@Nullable Any message, @Nonnull Object[] transfer);
+  public native void postMessage(@Nullable Any message, @Nonnull Transferable[] transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull Object[] transfer);
+      @Nonnull Transferable[] transfer);
 
   public native void postMessage(@Nullable Any message, @Nonnull PostMessageOptions options);
 
