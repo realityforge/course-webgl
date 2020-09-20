@@ -11,4 +11,7 @@
 	<set-property name="joml.debug" value="false" />
 	<set-property name="joml.fastmath" value="false" />
 	<set-property name="joml.sinLookup" value="false" />
+
+	<!-- JOML Patched here to add dependency that exists but is undeclared -->
+	<inherits name='com.google.gwt.typedarrays.TypedArrays'/>
 </module>
