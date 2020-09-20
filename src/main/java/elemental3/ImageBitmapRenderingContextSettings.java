@@ -10,7 +10,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * Attributes that control the characteristics of the {@link ImageBitmapRenderingContext} created.
+ * Attributes that control the characteristics of the {@link elemental3.ImageBitmapRenderingContext} created.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">ImageBitmapRenderingContextSettings - MDN</a>
  */

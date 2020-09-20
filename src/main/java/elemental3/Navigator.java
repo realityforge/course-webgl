@@ -14,6 +14,7 @@ import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import elemental3.bluetooth.Bluetooth;
+import elemental3.xr.XR;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -107,6 +108,11 @@ public class Navigator {
   @Nonnull
   public native CredentialsContainer credentials();
 
+  /**
+   * The Navigator.geolocation read-only property returns a Geolocation object that gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation">Navigator.geolocation - MDN</a>
+   */
   @JsProperty(
       name = "geolocation"
   )
@@ -126,7 +132,7 @@ public class Navigator {
   /**
    * The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language">NavigatorLanguage.language - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language">Navigator.language - MDN</a>
    */
   @JsProperty(
       name = "language"
@@ -137,7 +143,7 @@ public class Navigator {
   /**
    * The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages">NavigatorLanguage.languages - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/languages">Navigator.languages - MDN</a>
    */
   @JsProperty(
       name = "languages"
@@ -145,6 +151,11 @@ public class Navigator {
   @Nonnull
   public native JsArray<String> languages();
 
+  /**
+   * The maxTouchPoints read-only property of the Navigator interface returns the maximum number of simultaneous touch contact points are supported by the current device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/maxTouchPoints">Navigator.maxTouchPoints - MDN</a>
+   */
   @JsProperty(
       name = "maxTouchPoints"
   )
@@ -175,7 +186,7 @@ public class Navigator {
   /**
    * Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine">NavigatorOnLine.onLine - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine">Navigator.onLine - MDN</a>
    */
   @JsProperty(
       name = "onLine"
@@ -193,6 +204,11 @@ public class Navigator {
   @Nonnull
   public native String oscpu();
 
+  /**
+   * The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions">Navigator.permissions - MDN</a>
+   */
   @JsProperty(
       name = "permissions"
   )
@@ -202,7 +218,7 @@ public class Navigator {
   /**
    * Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/platform">NavigatorID.platform - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform">Navigator.platform - MDN</a>
    */
   @JsProperty(
       name = "platform"
@@ -224,7 +240,7 @@ public class Navigator {
   /**
    * The value of the NavigatorID.product property is always &quot;Gecko&quot;, in any browser. This property is kept only for compatibility purposes.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/product">NavigatorID.product - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/product">Navigator.product - MDN</a>
    */
   @JsProperty(
       name = "product"
@@ -243,6 +259,11 @@ public class Navigator {
   @Nonnull
   public native String productSub();
 
+  /**
+   * The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/serviceWorker">Navigator.serviceWorker - MDN</a>
+   */
   @JsProperty(
       name = "serviceWorker"
   )
@@ -263,7 +284,7 @@ public class Navigator {
   /**
    * The NavigatorID.userAgent read-only property returns the user agent string for the current browser.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent">NavigatorID.userAgent - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent">Navigator.userAgent - MDN</a>
    */
   @JsProperty(
       name = "userAgent"
@@ -272,7 +293,7 @@ public class Navigator {
   public native String userAgent();
 
   /**
-   * The value of the Navigator vendor property is always either "Google Inc.", "Apple Computer, Inc.", or (in Firefox) the empty string.
+   * The value of the Navigator vendor property is always either &quot;Google Inc.&quot;, &quot;Apple Computer, Inc.&quot;, or (in Firefox) the empty string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor">Navigator.vendor - MDN</a>
    */
@@ -304,11 +325,21 @@ public class Navigator {
   @Nonnull
   public native WakeLock wakeLock();
 
+  /**
+   * The webdriver read-only property of the navigator interface indicates whether the user agent is controlled by automation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver">Navigator.webdriver - MDN</a>
+   */
   @JsProperty(
       name = "webdriver"
   )
   public native boolean webdriver();
 
+  /**
+   * The read-only xr property provided by the Navigator or WorkerNavigator interface returns an XR object which can be used to access the WebXR Device API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/xr">Navigator.xr - MDN</a>
+   */
   @JsProperty(
       name = "xr"
   )
@@ -480,6 +511,11 @@ public class Navigator {
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
       @Nonnull MediaKeySystemConfiguration[] supportedConfigurations);
 
+  /**
+   * The Navigator.getGamepads() method returns an array of Gamepad objects, one for each gamepad connected to the device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads">Navigator.getGamepads - MDN</a>
+   */
   @Nonnull
   public native JsArray<Gamepad> getGamepads();
 
@@ -539,7 +575,7 @@ public class Navigator {
   /**
    * The NavigatorID.taintEnabled() method always returns false.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/taintEnabled">NavigatorID.taintEnabled - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/taintEnabled">Navigator.taintEnabled - MDN</a>
    */
   public native boolean taintEnabled();
 

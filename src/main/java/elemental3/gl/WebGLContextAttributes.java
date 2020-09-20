@@ -10,7 +10,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * Attributes that control the characteristics of the {@link WebGLRenderingContext} or {@link WebGL2RenderingContext} created.
+ * Attributes that control the characteristics of the {@link elemental3.gl.WebGLRenderingContext} or {@link elemental3.gl.WebGL2RenderingContext} created.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">WebGLContextAttributes - MDN</a>
  */
