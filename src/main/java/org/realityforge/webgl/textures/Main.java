@@ -11,8 +11,6 @@ import org.realityforge.webgl.util.CanvasUtil;
 public final class Main
   implements EntryPoint
 {
-  // Cube rotation angle
-  private static double c_angle;
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
@@ -20,6 +18,8 @@ public final class Main
   @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private Mesh _mesh;
+  // Cube rotation angle
+  private double _angle;
 
   @Override
   public void onModuleLoad()
@@ -50,13 +50,13 @@ public final class Main
 
     _modelMatrix.identity();
     _modelMatrix.translate( 0, 0, -7 );
-    _modelMatrix.rotateY( c_angle );
+    _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
     _viewMatrix.identity();
 
     _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
-    c_angle += 0.1;
+    _angle += 0.01;
   }
 }
