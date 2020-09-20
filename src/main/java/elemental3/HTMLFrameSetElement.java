@@ -132,6 +132,6 @@ public class HTMLFrameSetElement extends HTMLElement {
   @Nonnull
   public String rows;
 
-  public HTMLFrameSetElement() {
+  protected HTMLFrameSetElement() {
   }
 }

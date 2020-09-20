@@ -22,7 +22,7 @@ public class HTMLLegendElement extends HTMLElement {
   @Nonnull
   public String align;
 
-  public HTMLLegendElement() {
+  protected HTMLLegendElement() {
   }
 
   @JsProperty(

@@ -33,7 +33,7 @@ public class HTMLTableRowElement extends HTMLElement {
   @Nonnull
   public String vAlign;
 
-  public HTMLTableRowElement() {
+  protected HTMLTableRowElement() {
   }
 
   @JsProperty(

@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLDataListElement"
 )
 public class HTMLDataListElement extends HTMLElement {
-  public HTMLDataListElement() {
+  protected HTMLDataListElement() {
   }
 
   @JsProperty(

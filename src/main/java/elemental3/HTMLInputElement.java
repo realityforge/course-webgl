@@ -133,7 +133,7 @@ public class HTMLInputElement extends HTMLElement {
 
   public int width;
 
-  public HTMLInputElement() {
+  protected HTMLInputElement() {
   }
 
   @JsProperty(

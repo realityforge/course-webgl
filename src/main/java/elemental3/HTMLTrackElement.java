@@ -55,7 +55,7 @@ public class HTMLTrackElement extends HTMLElement {
   @Nonnull
   public String srclang;
 
-  public HTMLTrackElement() {
+  protected HTMLTrackElement() {
   }
 
   @JsProperty(

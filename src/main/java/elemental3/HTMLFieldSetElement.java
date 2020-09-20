@@ -24,7 +24,7 @@ public class HTMLFieldSetElement extends HTMLElement {
   @Nonnull
   public String name;
 
-  public HTMLFieldSetElement() {
+  protected HTMLFieldSetElement() {
   }
 
   @JsProperty(

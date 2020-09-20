@@ -31,6 +31,6 @@ public class HTMLHRElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLHRElement() {
+  protected HTMLHRElement() {
   }
 }

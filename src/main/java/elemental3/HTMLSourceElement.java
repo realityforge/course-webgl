@@ -32,6 +32,6 @@ public class HTMLSourceElement extends HTMLElement {
   @Nonnull
   public String type;
 
-  public HTMLSourceElement() {
+  protected HTMLSourceElement() {
   }
 }

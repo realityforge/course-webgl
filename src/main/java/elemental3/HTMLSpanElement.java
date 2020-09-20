@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLSpanElement"
 )
 public class HTMLSpanElement extends HTMLElement {
-  public HTMLSpanElement() {
+  protected HTMLSpanElement() {
   }
 }

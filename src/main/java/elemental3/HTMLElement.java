@@ -763,7 +763,7 @@ public class HTMLElement extends Element {
 
   public boolean translate;
 
-  public HTMLElement() {
+  protected HTMLElement() {
   }
 
   /**

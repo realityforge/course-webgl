@@ -23,6 +23,6 @@ public class HTMLBaseElement extends HTMLElement {
   @Nonnull
   public String target;
 
-  public HTMLBaseElement() {
+  protected HTMLBaseElement() {
   }
 }

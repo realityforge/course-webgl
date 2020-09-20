@@ -25,6 +25,6 @@ public class HTMLDataElement extends HTMLElement {
   @Nonnull
   public String value;
 
-  public HTMLDataElement() {
+  protected HTMLDataElement() {
   }
 }

@@ -28,7 +28,7 @@ public class HTMLSlotElement extends HTMLElement {
   @Nonnull
   public String name;
 
-  public HTMLSlotElement() {
+  protected HTMLSlotElement() {
   }
 
   /**

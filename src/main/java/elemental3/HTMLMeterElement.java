@@ -30,7 +30,7 @@ public class HTMLMeterElement extends HTMLElement {
 
   public double value;
 
-  public HTMLMeterElement() {
+  protected HTMLMeterElement() {
   }
 
   /**

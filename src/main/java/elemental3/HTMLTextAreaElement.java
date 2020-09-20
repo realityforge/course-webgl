@@ -62,7 +62,7 @@ public class HTMLTextAreaElement extends HTMLElement {
   @Nonnull
   public String wrap;
 
-  public HTMLTextAreaElement() {
+  protected HTMLTextAreaElement() {
   }
 
   @JsProperty(

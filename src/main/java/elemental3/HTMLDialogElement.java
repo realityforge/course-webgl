@@ -34,7 +34,7 @@ public class HTMLDialogElement extends HTMLElement {
   @Nonnull
   public String returnValue;
 
-  public HTMLDialogElement() {
+  protected HTMLDialogElement() {
   }
 
   /**

@@ -58,7 +58,7 @@ public class HTMLTableCellElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLTableCellElement() {
+  protected HTMLTableCellElement() {
   }
 
   @JsProperty(

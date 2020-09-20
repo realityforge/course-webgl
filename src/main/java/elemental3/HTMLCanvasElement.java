@@ -38,7 +38,7 @@ public class HTMLCanvasElement extends HTMLElement {
    */
   public int width;
 
-  public HTMLCanvasElement() {
+  protected HTMLCanvasElement() {
   }
 
   /**

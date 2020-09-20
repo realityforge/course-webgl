@@ -25,6 +25,6 @@ public class HTMLHtmlElement extends HTMLElement {
   @Nonnull
   public String version;
 
-  public HTMLHtmlElement() {
+  protected HTMLHtmlElement() {
   }
 }

@@ -29,6 +29,6 @@ public class HTMLMetaElement extends HTMLElement {
   @Nonnull
   public String scheme;
 
-  public HTMLMetaElement() {
+  protected HTMLMetaElement() {
   }
 }

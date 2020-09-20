@@ -29,6 +29,6 @@ public class HTMLParamElement extends HTMLElement {
   @Nonnull
   public String valueType;
 
-  public HTMLParamElement() {
+  protected HTMLParamElement() {
   }
 }

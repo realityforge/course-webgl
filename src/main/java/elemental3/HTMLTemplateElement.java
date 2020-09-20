@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLTemplateElement"
 )
 public class HTMLTemplateElement extends HTMLElement {
-  public HTMLTemplateElement() {
+  protected HTMLTemplateElement() {
   }
 
   /**

@@ -110,7 +110,7 @@ public class HTMLTableElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLTableElement() {
+  protected HTMLTableElement() {
   }
 
   /**

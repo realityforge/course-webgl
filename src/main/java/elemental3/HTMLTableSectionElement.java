@@ -30,7 +30,7 @@ public class HTMLTableSectionElement extends HTMLElement {
   @Nonnull
   public String vAlign;
 
-  public HTMLTableSectionElement() {
+  protected HTMLTableSectionElement() {
   }
 
   @JsProperty(

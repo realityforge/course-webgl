@@ -22,6 +22,6 @@ public class HTMLLIElement extends HTMLElement {
 
   public int value;
 
-  public HTMLLIElement() {
+  protected HTMLLIElement() {
   }
 }

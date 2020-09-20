@@ -20,6 +20,6 @@ public class HTMLHeadingElement extends HTMLElement {
   @Nonnull
   public String align;
 
-  public HTMLHeadingElement() {
+  protected HTMLHeadingElement() {
   }
 }

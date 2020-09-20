@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLHeadElement"
 )
 public class HTMLHeadElement extends HTMLElement {
-  public HTMLHeadElement() {
+  protected HTMLHeadElement() {
   }
 }

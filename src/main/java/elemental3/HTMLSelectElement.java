@@ -51,7 +51,7 @@ public class HTMLSelectElement extends HTMLElement {
   @Nonnull
   public String value;
 
-  public HTMLSelectElement() {
+  protected HTMLSelectElement() {
   }
 
   /**

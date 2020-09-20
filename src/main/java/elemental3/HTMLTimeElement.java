@@ -25,6 +25,6 @@ public class HTMLTimeElement extends HTMLElement {
   @Nonnull
   public String dateTime;
 
-  public HTMLTimeElement() {
+  protected HTMLTimeElement() {
   }
 }

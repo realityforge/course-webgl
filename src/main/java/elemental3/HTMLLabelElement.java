@@ -27,7 +27,7 @@ public class HTMLLabelElement extends HTMLElement {
   @Nonnull
   public String htmlFor;
 
-  public HTMLLabelElement() {
+  protected HTMLLabelElement() {
   }
 
   /**

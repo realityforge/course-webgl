@@ -80,7 +80,7 @@ public class HTMLLinkElement extends HTMLElement {
   @Nonnull
   public String type;
 
-  public HTMLLinkElement() {
+  protected HTMLLinkElement() {
   }
 
   /**

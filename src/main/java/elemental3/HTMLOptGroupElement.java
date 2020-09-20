@@ -22,6 +22,6 @@ public class HTMLOptGroupElement extends HTMLElement {
   @Nonnull
   public String label;
 
-  public HTMLOptGroupElement() {
+  protected HTMLOptGroupElement() {
   }
 }

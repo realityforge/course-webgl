@@ -34,6 +34,6 @@ public class HTMLTableColElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLTableColElement() {
+  protected HTMLTableColElement() {
   }
 }

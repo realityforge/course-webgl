@@ -37,7 +37,7 @@ public class HTMLFrameElement extends HTMLElement {
   @Nonnull
   public String src;
 
-  public HTMLFrameElement() {
+  protected HTMLFrameElement() {
   }
 
   @JsProperty(

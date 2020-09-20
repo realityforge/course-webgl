@@ -36,7 +36,7 @@ public class HTMLEmbedElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLEmbedElement() {
+  protected HTMLEmbedElement() {
   }
 
   @Nullable

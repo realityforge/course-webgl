@@ -94,7 +94,7 @@ public class HTMLObjectElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLObjectElement() {
+  protected HTMLObjectElement() {
   }
 
   /**

@@ -21,7 +21,7 @@ import jsinterop.base.Js;
 public class HTMLDetailsElement extends HTMLElement {
   public boolean open;
 
-  public HTMLDetailsElement() {
+  protected HTMLDetailsElement() {
   }
 
   @JsOverlay

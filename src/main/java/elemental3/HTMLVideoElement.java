@@ -27,7 +27,7 @@ public class HTMLVideoElement extends HTMLMediaElement {
 
   public int width;
 
-  public HTMLVideoElement() {
+  protected HTMLVideoElement() {
   }
 
   /**

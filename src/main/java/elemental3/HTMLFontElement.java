@@ -41,6 +41,6 @@ public class HTMLFontElement extends HTMLElement {
   @Nonnull
   public String size;
 
-  public HTMLFontElement() {
+  protected HTMLFontElement() {
   }
 }

@@ -87,7 +87,7 @@ public class HTMLIFrameElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLIFrameElement() {
+  protected HTMLIFrameElement() {
   }
 
   /**

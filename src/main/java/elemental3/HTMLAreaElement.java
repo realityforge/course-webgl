@@ -135,7 +135,7 @@ public class HTMLAreaElement extends HTMLElement {
   @Nonnull
   public String username;
 
-  public HTMLAreaElement() {
+  protected HTMLAreaElement() {
   }
 
   /**

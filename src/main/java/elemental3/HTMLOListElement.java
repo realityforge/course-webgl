@@ -26,6 +26,6 @@ public class HTMLOListElement extends HTMLElement {
   @Nonnull
   public String type;
 
-  public HTMLOListElement() {
+  protected HTMLOListElement() {
   }
 }

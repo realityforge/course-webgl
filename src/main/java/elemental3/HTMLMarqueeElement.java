@@ -54,7 +54,7 @@ public class HTMLMarqueeElement extends HTMLElement {
   @Nonnull
   public String width;
 
-  public HTMLMarqueeElement() {
+  protected HTMLMarqueeElement() {
   }
 
   public native void start();

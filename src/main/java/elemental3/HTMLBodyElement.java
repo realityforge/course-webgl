@@ -147,6 +147,6 @@ public class HTMLBodyElement extends HTMLElement {
   @Nonnull
   public String vLink;
 
-  public HTMLBodyElement() {
+  protected HTMLBodyElement() {
   }
 }

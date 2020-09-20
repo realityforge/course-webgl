@@ -21,7 +21,7 @@ public class HTMLMapElement extends HTMLElement {
   @Nonnull
   public String name;
 
-  public HTMLMapElement() {
+  protected HTMLMapElement() {
   }
 
   @JsProperty(

@@ -20,6 +20,6 @@ public class HTMLParagraphElement extends HTMLElement {
   @Nonnull
   public String align;
 
-  public HTMLParagraphElement() {
+  protected HTMLParagraphElement() {
   }
 }

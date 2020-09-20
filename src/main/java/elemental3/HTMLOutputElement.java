@@ -28,7 +28,7 @@ public class HTMLOutputElement extends HTMLElement {
   @Nonnull
   public String value;
 
-  public HTMLOutputElement() {
+  protected HTMLOutputElement() {
   }
 
   @JsProperty(

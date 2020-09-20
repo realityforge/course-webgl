@@ -58,6 +58,6 @@ public class HTMLScriptElement extends HTMLElement {
   @Nonnull
   public String type;
 
-  public HTMLScriptElement() {
+  protected HTMLScriptElement() {
   }
 }

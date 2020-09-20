@@ -20,6 +20,6 @@ public class HTMLTitleElement extends HTMLElement {
   @Nonnull
   public String text;
 
-  public HTMLTitleElement() {
+  protected HTMLTitleElement() {
   }
 }

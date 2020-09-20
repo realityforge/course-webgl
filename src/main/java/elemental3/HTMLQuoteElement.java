@@ -20,6 +20,6 @@ public class HTMLQuoteElement extends HTMLElement {
   @Nonnull
   public String cite;
 
-  public HTMLQuoteElement() {
+  protected HTMLQuoteElement() {
   }
 }

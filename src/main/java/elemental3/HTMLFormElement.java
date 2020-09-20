@@ -88,7 +88,7 @@ public class HTMLFormElement extends HTMLElement {
   @Nonnull
   public String target;
 
-  public HTMLFormElement() {
+  protected HTMLFormElement() {
   }
 
   /**

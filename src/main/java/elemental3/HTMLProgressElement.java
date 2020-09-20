@@ -22,7 +22,7 @@ public class HTMLProgressElement extends HTMLElement {
 
   public double value;
 
-  public HTMLProgressElement() {
+  protected HTMLProgressElement() {
   }
 
   /**

@@ -20,6 +20,6 @@ public class HTMLTableCaptionElement extends HTMLElement {
   @Nonnull
   public String align;
 
-  public HTMLTableCaptionElement() {
+  protected HTMLTableCaptionElement() {
   }
 }

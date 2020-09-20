@@ -35,7 +35,7 @@ public class HTMLStyleElement extends HTMLElement {
   @Nonnull
   public String type;
 
-  public HTMLStyleElement() {
+  protected HTMLStyleElement() {
   }
 
   @JsProperty(

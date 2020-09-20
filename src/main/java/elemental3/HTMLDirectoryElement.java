@@ -13,6 +13,6 @@ import jsinterop.annotations.JsType;
 public class HTMLDirectoryElement extends HTMLElement {
   public boolean compact;
 
-  public HTMLDirectoryElement() {
+  protected HTMLDirectoryElement() {
   }
 }

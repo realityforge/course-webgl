@@ -22,6 +22,6 @@ public class HTMLUListElement extends HTMLElement {
   @Nonnull
   public String type;
 
-  public HTMLUListElement() {
+  protected HTMLUListElement() {
   }
 }

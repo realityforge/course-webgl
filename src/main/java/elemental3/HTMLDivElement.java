@@ -20,6 +20,6 @@ public class HTMLDivElement extends HTMLElement {
   @Nonnull
   public String align;
 
-  public HTMLDivElement() {
+  protected HTMLDivElement() {
   }
 }

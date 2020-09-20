@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLPictureElement"
 )
 public class HTMLPictureElement extends HTMLElement {
-  public HTMLPictureElement() {
+  protected HTMLPictureElement() {
   }
 }

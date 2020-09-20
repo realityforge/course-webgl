@@ -52,7 +52,7 @@ public class HTMLButtonElement extends HTMLElement {
   @Nonnull
   public String value;
 
-  public HTMLButtonElement() {
+  protected HTMLButtonElement() {
   }
 
   @JsProperty(

@@ -20,6 +20,6 @@ public class HTMLBRElement extends HTMLElement {
   @Nonnull
   public String clear;
 
-  public HTMLBRElement() {
+  protected HTMLBRElement() {
   }
 }

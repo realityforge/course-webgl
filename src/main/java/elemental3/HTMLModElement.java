@@ -23,6 +23,6 @@ public class HTMLModElement extends HTMLElement {
   @Nonnull
   public String dateTime;
 
-  public HTMLModElement() {
+  protected HTMLModElement() {
   }
 }

@@ -153,7 +153,7 @@ public class HTMLAnchorElement extends HTMLElement {
   @Nonnull
   public String username;
 
-  public HTMLAnchorElement() {
+  protected HTMLAnchorElement() {
   }
 
   /**

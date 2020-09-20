@@ -18,6 +18,6 @@ import jsinterop.annotations.JsType;
 public class HTMLMenuElement extends HTMLElement {
   public boolean compact;
 
-  public HTMLMenuElement() {
+  protected HTMLMenuElement() {
   }
 }
