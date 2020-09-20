@@ -33,6 +33,8 @@ final class Mesh
   private final WebGLUniformLocation _viewMatrixLocation;
   @Nonnull
   private final WebGLUniformLocation _projectionMatrixLocation;
+  @Nonnull
+  private final WebGLUniformLocation _textureData0Location;
   private final int _positionIndex;
   private final int _colorIndex;
   private final int _textureCoordinateIndex;
@@ -97,6 +99,7 @@ final class Mesh
     _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
     _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
     _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
+    _textureData0Location = getUniformLocation( gl, _program, "textureData0" );
 
     _positionIndex = gl.getAttribLocation( _program, "position" );
     _colorIndex = gl.getAttribLocation( _program, "color" );
@@ -117,6 +120,11 @@ final class Mesh
     gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( projectionMatrix ) );
+
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
+    gl.uniform1i( _textureData0Location, 0 );
+
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
 
