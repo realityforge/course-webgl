@@ -14,11 +14,11 @@ public final class Main
   // Cube rotation angle
   private static double c_angle;
   @Nonnull
-  private final Matrix4d c_modelMatrix = new Matrix4d();
+  private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
-  private final Matrix4d c_viewMatrix = new Matrix4d();
+  private final Matrix4d _viewMatrix = new Matrix4d();
   @Nonnull
-  private final Matrix4d c_projectionMatrix = new Matrix4d();
+  private final Matrix4d _projectionMatrix = new Matrix4d();
   private Mesh _mesh;
 
   @Override
@@ -27,7 +27,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    c_projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
+    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
     _mesh.sendToGpu( gl );
@@ -43,19 +43,16 @@ public final class Main
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    c_modelMatrix.identity();
-    c_modelMatrix.translate( 0, 0, -7 );
-    c_modelMatrix.rotateY( c_angle );
-    c_modelMatrix.rotateX( 0.25 );
+    _modelMatrix.identity();
+    _modelMatrix.translate( 0, 0, -7 );
+    _modelMatrix.rotateY( c_angle );
+    _modelMatrix.rotateX( 0.25 );
 
-    c_viewMatrix.identity();
+    _viewMatrix.identity();
 
-    gl.useProgram( _mesh.getMaterial().getProgram() );
-    _mesh.setUniforms( gl, this.c_modelMatrix, this.c_viewMatrix, this.c_projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     c_angle += 0.1;
-
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }

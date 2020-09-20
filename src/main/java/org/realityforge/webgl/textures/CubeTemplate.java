@@ -97,6 +97,50 @@ final class CubeTemplate
       0.0, 1.0, 1.0, 1.0, // Left face
       0.0, 1.0, 1.0, 1.0 // Left face
     };
+  private static final double[] TEXTURE_COORDINATES = new double[]
+    {
+      0.0, 0.0,
+      1.0, 0.0,
+      1.0, 1.0,
+      1.0, 1.0,
+      0.0, 1.0,
+      0.0, 0.0,
+
+      0.0, 0.0,
+      1.0, 0.0,
+      1.0, 1.0,
+      1.0, 1.0,
+      0.0, 1.0,
+      0.0, 0.0,
+
+      1.0, 0.0,
+      1.0, 1.0,
+      0.0, 1.0,
+      0.0, 1.0,
+      0.0, 0.0,
+      1.0, 0.0,
+
+      1.0, 0.0,
+      1.0, 1.0,
+      0.0, 1.0,
+      0.0, 1.0,
+      0.0, 0.0,
+      1.0, 0.0,
+
+      0.0, 1.0,
+      1.0, 1.0,
+      1.0, 0.0,
+      1.0, 0.0,
+      0.0, 0.0,
+      0.0, 1.0,
+
+      0.0, 1.0,
+      1.0, 1.0,
+      1.0, 0.0,
+      1.0, 0.0,
+      0.0, 0.0,
+      0.0, 1.0
+    };
   // The vertex shader that will be run for every vertex
   @GLSL
   @Nonnull
@@ -150,7 +194,10 @@ final class CubeTemplate
   @Nonnull
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
-    return new Mesh( new Geometry( gl, new Float32Array( POSITIONS ), new Float32Array( COLORS ) ),
-                     new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
+    return new Mesh( gl,
+                     new Float32Array( POSITIONS ),
+                     new Float32Array( COLORS ),
+                     VERTEX_SHADER_SOURCE,
+                     FRAGMENT_SHADER_SOURCE );
   }
 }
