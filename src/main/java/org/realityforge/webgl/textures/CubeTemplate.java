@@ -152,8 +152,12 @@ final class CubeTemplate
     "in vec3 position;\n" +
     // The incoming vertex color
     "in vec4 color;\n" +
+    // The incoming texture coordinate
+    "in vec2 textureCoordinate;\n" +
     // The output vertex color that will be fed to the next shader
     "out vec4 fcolor;\n" +
+    // The outgoing texture coordinate
+    "out vec2 fTextureCoordinate;\n" +
     "\n" +
     // The following are the unions (aka constant across multiple vertices)
     "uniform mat4 modelMatrix;\n" +
@@ -167,6 +171,8 @@ final class CubeTemplate
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
     // Copy color from input to output
     "  fcolor = color;" +
+    // Copy textureCoordinate from input to output
+    "  fTextureCoordinate = textureCoordinate;" +
     "}\n";
   // The fragment shader that will be run for every pixel
   @GLSL
@@ -177,6 +183,10 @@ final class CubeTemplate
     "precision mediump float;\n" +
     // The incoming fragment color
     "in vec4 fcolor;\n" +
+    // The incoming fragment texture coordinate
+    "in vec2 fTextureCoordinate;\n" +
+    // The uniform for texture data
+    "uniform sampler2D textureData0;\n" +
     // The output fragment color
     "out vec4 finalColor;\n" +
     "" +
@@ -184,7 +194,7 @@ final class CubeTemplate
     "void main()\n" +
     "{\n" +
     // Copy color from input to output
-    "  finalColor = fcolor;" +
+    "  finalColor = texture( textureData0, fTextureCoordinate ) * fcolor;" +
     "}\n";
 
   private CubeTemplate()
@@ -197,6 +207,7 @@ final class CubeTemplate
     return new Mesh( gl,
                      new Float32Array( POSITIONS ),
                      new Float32Array( COLORS ),
+                     new Float32Array( TEXTURE_COORDINATES ),
                      VERTEX_SHADER_SOURCE,
                      FRAGMENT_SHADER_SOURCE );
   }
