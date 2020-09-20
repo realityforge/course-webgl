@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLAudioElement"
 )
 public class HTMLAudioElement extends HTMLMediaElement {
-  public HTMLAudioElement() {
+  protected HTMLAudioElement() {
   }
 }

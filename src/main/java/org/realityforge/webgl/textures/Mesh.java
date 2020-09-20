@@ -1,8 +1,8 @@
 package org.realityforge.webgl.textures;
 
 import elemental2.core.Float32Array;
-import elemental3.Global;
 import elemental3.HTMLImageElement;
+import elemental3.Image;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
@@ -60,9 +60,7 @@ final class Mesh
     final WebGLTexture texture1 = gl.createTexture();
     assert null != texture1;
     _texture1 = texture1;
-    // TODO: Figure out a way to enable `new HTMLImageElement()` if possible. It is actually
-    //  represented as new Image() via extended attribute `LegacyFactoryFunction=Image( optional unsigned long width, optional unsigned long height )`
-    final HTMLImageElement image = (HTMLImageElement) Global.globalThis().document().createElement( "img" );
+    final HTMLImageElement image = new Image();
     image.src = "img/webgl-logo-256.jpg";
     image.onload = e -> {
       // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across

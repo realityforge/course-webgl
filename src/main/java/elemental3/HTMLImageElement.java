@@ -140,7 +140,7 @@ public class HTMLImageElement extends HTMLElement {
    */
   public int width;
 
-  public HTMLImageElement() {
+  protected HTMLImageElement() {
   }
 
   /**

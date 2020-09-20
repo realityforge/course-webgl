@@ -34,7 +34,7 @@ public class HTMLOptionElement extends HTMLElement {
   @Nonnull
   public String value;
 
-  public HTMLOptionElement() {
+  protected HTMLOptionElement() {
   }
 
   @JsProperty(
