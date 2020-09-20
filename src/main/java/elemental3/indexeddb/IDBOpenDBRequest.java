@@ -1,5 +1,9 @@
-package elemental3;
+package elemental3.indexeddb;
 
+import elemental3.AddEventListenerOptions;
+import elemental3.EventHandler;
+import elemental3.EventListener;
+import elemental3.EventListenerOptions;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import elemental3.indexeddb.IDBFactory;
 import elemental3.speech.SpeechSynthesis;
 import elemental3.svg.SVGImageElement;
 import javaemul.internal.annotations.DoNotAutobox;

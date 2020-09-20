@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.indexeddb;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -13,22 +13,16 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface IDBObjectStoreOrIDBIndexOrIDBCursorUnion {
+public interface IDBObjectStoreOrIDBIndexUnion {
   @JsOverlay
   @Nonnull
-  static IDBObjectStoreOrIDBIndexOrIDBCursorUnion of(@Nonnull final IDBObjectStore value) {
+  static IDBObjectStoreOrIDBIndexUnion of(@Nonnull final IDBObjectStore value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static IDBObjectStoreOrIDBIndexOrIDBCursorUnion of(@Nonnull final IDBIndex value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static IDBObjectStoreOrIDBIndexOrIDBCursorUnion of(@Nonnull final IDBCursor value) {
+  static IDBObjectStoreOrIDBIndexUnion of(@Nonnull final IDBIndex value) {
     return Js.cast( value );
   }
 }

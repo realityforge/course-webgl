@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.indexeddb;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -15,40 +15,40 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface IDBIndexParameters {
+public interface IDBDatabaseInfo {
   @JsOverlay
   @Nonnull
-  static IDBIndexParameters create() {
+  static IDBDatabaseInfo create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
   @JsProperty(
-      name = "multiEntry"
+      name = "name"
   )
-  boolean multiEntry();
+  String name();
 
   @JsProperty
-  void setMultiEntry(boolean multiEntry);
+  void setName(@Nonnull String name);
 
   @JsOverlay
   @Nonnull
-  default IDBIndexParameters multiEntry(final boolean multiEntry) {
-    setMultiEntry( multiEntry );
+  default IDBDatabaseInfo name(@Nonnull final String name) {
+    setName( name );
     return this;
   }
 
   @JsProperty(
-      name = "unique"
+      name = "version"
   )
-  boolean unique();
+  int version();
 
   @JsProperty
-  void setUnique(boolean unique);
+  void setVersion(int version);
 
   @JsOverlay
   @Nonnull
-  default IDBIndexParameters unique(final boolean unique) {
-    setUnique( unique );
+  default IDBDatabaseInfo version(final int version) {
+    setVersion( version );
     return this;
   }
 }

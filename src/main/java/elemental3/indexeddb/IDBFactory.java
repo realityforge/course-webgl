@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.indexeddb;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;

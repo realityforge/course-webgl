@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.indexeddb;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
