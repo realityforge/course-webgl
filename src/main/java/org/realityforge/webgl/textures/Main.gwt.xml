@@ -1,0 +1,10 @@
+<module rename-to='example'>
+  <inherits name='org.realityforge.webgl.Webgl'/>
+  <inherits name='com.google.gwt.typedarrays.TypedArrays'/>
+  <!-- TODO: Why does JOML not inherit TypedArrays? -->
+  <inherits name='org.joml.JOML'/>
+
+  <entry-point class='org.realityforge.webgl.textures.Main'/>
+
+  <source path=''/>
+</module>
