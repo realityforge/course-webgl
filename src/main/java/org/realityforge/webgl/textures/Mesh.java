@@ -26,6 +26,8 @@ final class Mesh
   @Nonnull
   private final WebGLTexture _texture1;
   @Nonnull
+  private final WebGLTexture _texture2;
+  @Nonnull
   private final WebGLProgram _program;
   @Nonnull
   private final WebGLUniformLocation _modelMatrixLocation;
@@ -35,6 +37,8 @@ final class Mesh
   private final WebGLUniformLocation _projectionMatrixLocation;
   @Nonnull
   private final WebGLUniformLocation _textureData0Location;
+  @Nonnull
+  private final WebGLUniformLocation _textureData1Location;
   private final int _positionIndex;
   private final int _colorIndex;
   private final int _textureCoordinateIndex;
@@ -63,9 +67,9 @@ final class Mesh
     final WebGLTexture texture1 = gl.createTexture();
     assert null != texture1;
     _texture1 = texture1;
-    final HTMLImageElement image = new Image();
-    image.src = "img/webgl-logo-256.jpg";
-    image.onload = e -> {
+    final HTMLImageElement image1 = new Image();
+    image1.src = "img/webgl-logo-256.jpg";
+    image1.onload = e -> {
       // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
       gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
       gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
@@ -73,7 +77,35 @@ final class Mesh
                      WebGL2RenderingContext.RGB,
                      WebGL2RenderingContext.RGB,
                      WebGL2RenderingContext.UNSIGNED_BYTE,
-                     image );
+                     image1 );
+
+      // Make sure we specify how perform interpolation between texture coordinates
+
+      // TODO: These methods should have integer enums defined for their target,
+      //  parameters and potentially param values
+      gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
+                        WebGL2RenderingContext.TEXTURE_MAG_FILTER,
+                        WebGL2RenderingContext.LINEAR );
+      gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
+                        WebGL2RenderingContext.TEXTURE_MIN_FILTER,
+                        WebGL2RenderingContext.LINEAR );
+      _texturesLoaded++;
+    };
+
+    final WebGLTexture texture2 = gl.createTexture();
+    assert null != texture2;
+    _texture2 = texture2;
+    final HTMLImageElement image2 = new Image();
+    image2.src = "img/StoreLogo.png";
+    image2.onload = e -> {
+      // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
+      gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
+      gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
+                     0,
+                     WebGL2RenderingContext.RGB,
+                     WebGL2RenderingContext.RGB,
+                     WebGL2RenderingContext.UNSIGNED_BYTE,
+                     image2 );
 
       // Make sure we specify how perform interpolation between texture coordinates
 
@@ -100,6 +132,7 @@ final class Mesh
     _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
     _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
     _textureData0Location = getUniformLocation( gl, _program, "textureData0" );
+    _textureData1Location = getUniformLocation( gl, _program, "textureData1" );
 
     _positionIndex = gl.getAttribLocation( _program, "position" );
     _colorIndex = gl.getAttribLocation( _program, "color" );
@@ -108,7 +141,7 @@ final class Mesh
 
   boolean areTexturesLoaded()
   {
-    return 1 == _texturesLoaded;
+    return 2 == _texturesLoaded;
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,
@@ -121,9 +154,6 @@ final class Mesh
     gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( projectionMatrix ) );
 
-    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
-    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
-    gl.uniform1i( _textureData0Location, 0 );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
@@ -158,6 +188,15 @@ final class Mesh
                            WebGL2RenderingContext.FLOAT,
                            0,
                            0 );
+    gl.useProgram( _program );
+
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
+    gl.uniform1i( _textureData0Location, 0 );
+
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE1 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
+    gl.uniform1i( _textureData1Location, 1 );
   }
 
   @Nonnull

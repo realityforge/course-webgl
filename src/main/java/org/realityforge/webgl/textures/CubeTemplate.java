@@ -187,6 +187,8 @@ final class CubeTemplate
     "in vec2 fTextureCoordinate;\n" +
     // The uniform for texture data
     "uniform sampler2D textureData0;\n" +
+    // The uniform for other texture data
+    "uniform sampler2D textureData1;\n" +
     // The output fragment color
     "out vec4 finalColor;\n" +
     "" +
@@ -194,7 +196,7 @@ final class CubeTemplate
     "void main()\n" +
     "{\n" +
     // Copy color from input to output
-    "  finalColor = texture( textureData0, fTextureCoordinate ) * fcolor;" +
+    "  finalColor = mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
     "}\n";
 
   private CubeTemplate()
