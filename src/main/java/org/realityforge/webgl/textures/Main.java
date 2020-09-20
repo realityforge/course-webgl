@@ -38,6 +38,11 @@ public final class Main
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
     CanvasUtil.resize( gl, canvas );
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    if ( !_mesh.areTexturesLoaded() )
+    {
+      return;
+    }
 
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
@@ -53,7 +58,5 @@ public final class Main
     _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     c_angle += 0.1;
-
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 }

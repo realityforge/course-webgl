@@ -36,6 +36,7 @@ final class Mesh
   private final int _positionIndex;
   private final int _colorIndex;
   private final int _textureCoordinateIndex;
+  private int _texturesLoaded;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32Array positionData,
@@ -82,6 +83,7 @@ final class Mesh
       gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
                         WebGL2RenderingContext.TEXTURE_MIN_FILTER,
                         WebGL2RenderingContext.LINEAR );
+      _texturesLoaded++;
     };
 
     final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
@@ -99,6 +101,11 @@ final class Mesh
     _positionIndex = gl.getAttribLocation( _program, "position" );
     _colorIndex = gl.getAttribLocation( _program, "color" );
     _textureCoordinateIndex = gl.getAttribLocation( _program, "textureCoordinate" );
+  }
+
+  boolean areTexturesLoaded()
+  {
+    return 1 == _texturesLoaded;
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,
