@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "SVGFEFuncAElement"
 )
 public class SVGFEFuncAElement extends SVGComponentTransferFunctionElement {
-  SVGFEFuncAElement() {
+  protected SVGFEFuncAElement() {
   }
 }

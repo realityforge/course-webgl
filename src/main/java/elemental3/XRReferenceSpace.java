@@ -28,7 +28,7 @@ public class XRReferenceSpace extends XRSpace {
   @Nullable
   public XRReferenceSpaceEventHandler onreset;
 
-  XRReferenceSpace() {
+  protected XRReferenceSpace() {
   }
 
   /**

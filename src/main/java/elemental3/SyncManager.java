@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "SyncManager"
 )
 public class SyncManager {
-  SyncManager() {
+  protected SyncManager() {
   }
 
   /**

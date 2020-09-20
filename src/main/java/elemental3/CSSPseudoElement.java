@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "CSSPseudoElement"
 )
 public class CSSPseudoElement extends EventTarget {
-  CSSPseudoElement() {
+  protected CSSPseudoElement() {
   }
 
   /**

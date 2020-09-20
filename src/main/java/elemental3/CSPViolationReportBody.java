@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "CSPViolationReportBody"
 )
 public class CSPViolationReportBody extends ReportBody {
-  CSPViolationReportBody() {
+  protected CSPViolationReportBody() {
   }
 
   @JsProperty(

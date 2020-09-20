@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "XRRenderState"
 )
 public class XRRenderState {
-  XRRenderState() {
+  protected XRRenderState() {
   }
 
   /**

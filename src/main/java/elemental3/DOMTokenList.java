@@ -27,7 +27,7 @@ public class DOMTokenList {
   @Nonnull
   public String value;
 
-  DOMTokenList() {
+  protected DOMTokenList() {
   }
 
   /**

@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental3.gl.WebGLContextAttributes;
+import elemental3.gl.WebGLContextEventListener;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

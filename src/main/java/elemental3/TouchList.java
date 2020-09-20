@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "TouchList"
 )
 public class TouchList {
-  TouchList() {
+  protected TouchList() {
   }
 
   /**

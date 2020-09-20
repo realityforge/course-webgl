@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "DOMStringMap"
 )
 public class DOMStringMap {
-  DOMStringMap() {
+  protected DOMStringMap() {
   }
 }

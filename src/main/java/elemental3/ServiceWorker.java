@@ -38,7 +38,7 @@ public class ServiceWorker extends EventTarget {
   @Nullable
   public EventHandler onstatechange;
 
-  ServiceWorker() {
+  protected ServiceWorker() {
   }
 
   /**

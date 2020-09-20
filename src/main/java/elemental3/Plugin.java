@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "Plugin"
 )
 public class Plugin {
-  Plugin() {
+  protected Plugin() {
   }
 
   @JsProperty(

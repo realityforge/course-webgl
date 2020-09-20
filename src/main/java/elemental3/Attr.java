@@ -22,7 +22,7 @@ public class Attr extends Node {
   @Nonnull
   public String value;
 
-  Attr() {
+  protected Attr() {
   }
 
   /**

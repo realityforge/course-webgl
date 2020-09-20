@@ -23,6 +23,6 @@ public class EXT_blend_minmax {
   @JsOverlay
   public static final int MIN_EXT = 0x8007;
 
-  EXT_blend_minmax() {
+  protected EXT_blend_minmax() {
   }
 }

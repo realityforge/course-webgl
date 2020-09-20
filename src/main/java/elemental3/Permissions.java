@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "Permissions"
 )
 public class Permissions {
-  Permissions() {
+  protected Permissions() {
   }
 
   /**

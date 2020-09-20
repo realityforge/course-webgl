@@ -36,6 +36,6 @@ public class VTTRegion {
 
   public double width;
 
-  VTTRegion() {
+  protected VTTRegion() {
   }
 }

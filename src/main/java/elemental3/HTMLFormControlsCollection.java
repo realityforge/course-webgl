@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLFormControlsCollection"
 )
 public class HTMLFormControlsCollection {
-  HTMLFormControlsCollection() {
+  protected HTMLFormControlsCollection() {
   }
 
   @JsProperty(

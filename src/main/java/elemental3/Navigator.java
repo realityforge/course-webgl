@@ -13,6 +13,7 @@ import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
+import elemental3.bluetooth.Bluetooth;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ import jsinterop.annotations.JsType;
     name = "Navigator"
 )
 public class Navigator {
-  Navigator() {
+  protected Navigator() {
   }
 
   /**

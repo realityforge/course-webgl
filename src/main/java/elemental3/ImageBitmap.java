@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "ImageBitmap"
 )
 public class ImageBitmap implements Transferable {
-  ImageBitmap() {
+  protected ImageBitmap() {
   }
 
   /**

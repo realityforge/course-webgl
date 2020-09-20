@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "GamepadHapticActuator"
 )
 public class GamepadHapticActuator {
-  GamepadHapticActuator() {
+  protected GamepadHapticActuator() {
   }
 
   /**

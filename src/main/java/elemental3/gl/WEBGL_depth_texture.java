@@ -20,6 +20,6 @@ public class WEBGL_depth_texture {
   @JsOverlay
   public static final int UNSIGNED_INT_24_8_WEBGL = 0x84FA;
 
-  WEBGL_depth_texture() {
+  protected WEBGL_depth_texture() {
   }
 }

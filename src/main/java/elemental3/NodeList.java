@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "NodeList"
 )
 public class NodeList {
-  NodeList() {
+  protected NodeList() {
   }
 
   /**

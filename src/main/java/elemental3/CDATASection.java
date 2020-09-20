@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "CDATASection"
 )
 public class CDATASection extends Text {
-  CDATASection() {
+  protected CDATASection() {
   }
 }

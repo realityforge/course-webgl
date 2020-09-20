@@ -35,7 +35,7 @@ public class MediaSource extends EventTarget {
   @Nullable
   public EventHandler onsourceopen;
 
-  MediaSource() {
+  protected MediaSource() {
   }
 
   /**

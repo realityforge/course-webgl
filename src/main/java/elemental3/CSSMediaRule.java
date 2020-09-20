@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CSSMediaRule"
 )
 public class CSSMediaRule extends CSSConditionRule {
-  CSSMediaRule() {
+  protected CSSMediaRule() {
   }
 
   @JsProperty(

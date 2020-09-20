@@ -45,7 +45,7 @@ public class VideoTrackList extends EventTarget {
   @Nullable
   public TrackEventHandler onremovetrack;
 
-  VideoTrackList() {
+  protected VideoTrackList() {
   }
 
   /**

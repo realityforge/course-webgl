@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "ValidityState"
 )
 public class ValidityState {
-  ValidityState() {
+  protected ValidityState() {
   }
 
   /**

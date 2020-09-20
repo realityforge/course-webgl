@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "FileList"
 )
 public class FileList {
-  FileList() {
+  protected FileList() {
   }
 
   @JsProperty(

@@ -1,5 +1,7 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedString;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "SVGFEMergeNodeElement"
 )
 public class SVGFEMergeNodeElement extends SVGElement {
-  SVGFEMergeNodeElement() {
+  protected SVGFEMergeNodeElement() {
   }
 
   @JsProperty(

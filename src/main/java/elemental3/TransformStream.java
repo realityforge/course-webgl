@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class TransformStream {
-  TransformStream() {
+  protected TransformStream() {
   }
 }

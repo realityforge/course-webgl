@@ -26,7 +26,7 @@ public class CSSStyleRule extends CSSRule {
   @Nonnull
   public String selectorText;
 
-  CSSStyleRule() {
+  protected CSSStyleRule() {
   }
 
   /**

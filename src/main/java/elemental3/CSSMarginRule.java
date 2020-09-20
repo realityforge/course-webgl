@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "CSSMarginRule"
 )
 public class CSSMarginRule extends CSSRule {
-  CSSMarginRule() {
+  protected CSSMarginRule() {
   }
 
   @JsProperty(

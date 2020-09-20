@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "StyleSheetList"
 )
 public class StyleSheetList {
-  StyleSheetList() {
+  protected StyleSheetList() {
   }
 
   @JsProperty(

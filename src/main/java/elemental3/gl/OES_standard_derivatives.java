@@ -20,6 +20,6 @@ public class OES_standard_derivatives {
   @JsOverlay
   public static final int FRAGMENT_SHADER_DERIVATIVE_HINT_OES = 0x8B8B;
 
-  OES_standard_derivatives() {
+  protected OES_standard_derivatives() {
   }
 }

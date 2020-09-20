@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "ProcessingInstruction"
 )
 public class ProcessingInstruction extends CharacterData {
-  ProcessingInstruction() {
+  protected ProcessingInstruction() {
   }
 
   @JsProperty(

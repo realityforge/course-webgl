@@ -27,7 +27,7 @@ public class MediaList {
   @Nonnull
   public String mediaText;
 
-  MediaList() {
+  protected MediaList() {
   }
 
   @JsProperty(

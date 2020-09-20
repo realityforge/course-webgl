@@ -15,15 +15,12 @@ import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
-import elemental3.Float32List;
 import elemental3.HTMLCanvasElement;
 import elemental3.HTMLImageElement;
 import elemental3.HTMLVideoElement;
 import elemental3.ImageBitmap;
 import elemental3.ImageData;
-import elemental3.Int32List;
 import elemental3.OffscreenCanvas;
-import elemental3.TexImageSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -933,7 +930,7 @@ public class WebGLRenderingContext {
   @JsOverlay
   public static final int ZERO = 0;
 
-  WebGLRenderingContext() {
+  protected WebGLRenderingContext() {
   }
 
   /**

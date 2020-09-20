@@ -20,7 +20,7 @@ import jsinterop.base.Any;
     name = "CustomElementRegistry"
 )
 public class CustomElementRegistry {
-  CustomElementRegistry() {
+  protected CustomElementRegistry() {
   }
 
   /**

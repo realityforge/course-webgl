@@ -22,7 +22,7 @@ public class CharacterData extends Node {
   @Nonnull
   public String data;
 
-  CharacterData() {
+  protected CharacterData() {
   }
 
   @JsProperty(

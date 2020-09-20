@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class EXT_frag_depth {
-  EXT_frag_depth() {
+  protected EXT_frag_depth() {
   }
 }

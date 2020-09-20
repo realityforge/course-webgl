@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class OES_texture_half_float_linear {
-  OES_texture_half_float_linear() {
+  protected OES_texture_half_float_linear() {
   }
 }

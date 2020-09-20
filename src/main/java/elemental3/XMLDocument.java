@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "XMLDocument"
 )
 public class XMLDocument extends Document {
-  XMLDocument() {
+  protected XMLDocument() {
   }
 }

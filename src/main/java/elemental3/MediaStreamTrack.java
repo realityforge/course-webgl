@@ -57,7 +57,7 @@ public class MediaStreamTrack extends EventTarget {
   @Nullable
   public EventHandler onunmute;
 
-  MediaStreamTrack() {
+  protected MediaStreamTrack() {
   }
 
   /**

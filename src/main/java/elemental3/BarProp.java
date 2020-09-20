@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "BarProp"
 )
 public class BarProp {
-  BarProp() {
+  protected BarProp() {
   }
 
   @JsProperty(

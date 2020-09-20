@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "XRFrame"
 )
 public class XRFrame {
-  XRFrame() {
+  protected XRFrame() {
   }
 
   /**

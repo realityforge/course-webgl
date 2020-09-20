@@ -37,7 +37,7 @@ public class VisualViewport extends EventTarget {
   @Nullable
   public EventHandler onscroll;
 
-  VisualViewport() {
+  protected VisualViewport() {
   }
 
   /**

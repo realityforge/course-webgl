@@ -21,7 +21,7 @@ public class CSSPageRule extends CSSGroupingRule {
   @Nonnull
   public String selectorText;
 
-  CSSPageRule() {
+  protected CSSPageRule() {
   }
 
   @JsProperty(

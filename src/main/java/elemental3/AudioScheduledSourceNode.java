@@ -28,7 +28,7 @@ public class AudioScheduledSourceNode extends AudioNode {
   @Nullable
   public EventHandler onended;
 
-  AudioScheduledSourceNode() {
+  protected AudioScheduledSourceNode() {
   }
 
   /**

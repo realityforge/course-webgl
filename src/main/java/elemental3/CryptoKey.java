@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CryptoKey"
 )
 public class CryptoKey {
-  CryptoKey() {
+  protected CryptoKey() {
   }
 
   @JsProperty(

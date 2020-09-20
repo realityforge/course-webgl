@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLUnknownElement"
 )
 public class HTMLUnknownElement extends HTMLElement {
-  HTMLUnknownElement() {
+  protected HTMLUnknownElement() {
   }
 }

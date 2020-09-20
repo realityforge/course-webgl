@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLProgram"
 )
 public class WebGLProgram extends WebGLObject {
-  WebGLProgram() {
+  protected WebGLProgram() {
   }
 }

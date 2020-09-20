@@ -30,7 +30,7 @@ public class History {
   @ScrollRestoration
   public String scrollRestoration;
 
-  History() {
+  protected History() {
   }
 
   /**

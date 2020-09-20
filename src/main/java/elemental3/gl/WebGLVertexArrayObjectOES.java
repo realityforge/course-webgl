@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class WebGLVertexArrayObjectOES extends WebGLObject {
-  WebGLVertexArrayObjectOES() {
+  protected WebGLVertexArrayObjectOES() {
   }
 }

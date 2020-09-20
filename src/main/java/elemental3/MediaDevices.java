@@ -28,7 +28,7 @@ public class MediaDevices extends EventTarget {
   @Nullable
   public EventHandler ondevicechange;
 
-  MediaDevices() {
+  protected MediaDevices() {
   }
 
   /**

@@ -63,6 +63,6 @@ public class XMLHttpRequestEventTarget extends EventTarget {
   @Nullable
   public EventHandler ontimeout;
 
-  XMLHttpRequestEventTarget() {
+  protected XMLHttpRequestEventTarget() {
   }
 }

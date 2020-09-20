@@ -22,7 +22,7 @@ public class CSSKeyframesRule extends CSSRule {
   @Nonnull
   public String name;
 
-  CSSKeyframesRule() {
+  protected CSSKeyframesRule() {
   }
 
   @JsProperty(

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLCollection"
 )
 public class HTMLCollection {
-  HTMLCollection() {
+  protected HTMLCollection() {
   }
 
   @JsProperty(

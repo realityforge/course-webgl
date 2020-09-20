@@ -29,7 +29,7 @@ public class ScriptProcessorNode extends AudioNode {
   @Nullable
   public AudioProcessingEventHandler onaudioprocess;
 
-  ScriptProcessorNode() {
+  protected ScriptProcessorNode() {
   }
 
   /**

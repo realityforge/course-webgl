@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLTransformFeedback"
 )
 public class WebGLTransformFeedback extends WebGLObject {
-  WebGLTransformFeedback() {
+  protected WebGLTransformFeedback() {
   }
 }

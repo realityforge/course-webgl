@@ -50,7 +50,7 @@ public class XPathResult {
   @JsOverlay
   public static final int UNORDERED_NODE_SNAPSHOT_TYPE = 6;
 
-  XPathResult() {
+  protected XPathResult() {
   }
 
   /**

@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CredentialsContainer"
 )
 public class CredentialsContainer {
-  CredentialsContainer() {
+  protected CredentialsContainer() {
   }
 
   /**

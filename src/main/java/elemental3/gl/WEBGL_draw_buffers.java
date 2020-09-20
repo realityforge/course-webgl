@@ -121,7 +121,7 @@ public class WEBGL_draw_buffers {
   @JsOverlay
   public static final int MAX_DRAW_BUFFERS_WEBGL = 0x8824;
 
-  WEBGL_draw_buffers() {
+  protected WEBGL_draw_buffers() {
   }
 
   /**

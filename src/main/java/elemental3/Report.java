@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "Report"
 )
 public class Report {
-  Report() {
+  protected Report() {
   }
 
   /**

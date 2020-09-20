@@ -39,7 +39,7 @@ public class MessagePort extends EventTarget implements Transferable {
   @Nullable
   public MessageEventHandler onmessageerror;
 
-  MessagePort() {
+  protected MessagePort() {
   }
 
   /**

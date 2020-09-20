@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class EXT_shader_texture_lod {
-  EXT_shader_texture_lod() {
+  protected EXT_shader_texture_lod() {
   }
 }

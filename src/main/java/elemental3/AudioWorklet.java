@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "AudioWorklet"
 )
 public class AudioWorklet extends Worklet {
-  AudioWorklet() {
+  protected AudioWorklet() {
   }
 }

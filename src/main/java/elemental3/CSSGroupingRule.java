@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CSSGroupingRule"
 )
 public class CSSGroupingRule extends CSSRule {
-  CSSGroupingRule() {
+  protected CSSGroupingRule() {
   }
 
   @JsProperty(

@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "XMLHttpRequestUpload"
 )
 public class XMLHttpRequestUpload extends XMLHttpRequestEventTarget {
-  XMLHttpRequestUpload() {
+  protected XMLHttpRequestUpload() {
   }
 }

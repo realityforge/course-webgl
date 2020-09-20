@@ -25,7 +25,7 @@ public class CSSStyleDeclaration {
   @Nonnull
   public String cssText;
 
-  CSSStyleDeclaration() {
+  protected CSSStyleDeclaration() {
   }
 
   /**

@@ -27,7 +27,7 @@ public class PermissionStatus extends EventTarget {
   @Nullable
   public EventHandler onchange;
 
-  PermissionStatus() {
+  protected PermissionStatus() {
   }
 
   /**

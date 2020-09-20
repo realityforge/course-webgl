@@ -29,7 +29,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   @Nullable
   public EventHandler onupdatefound;
 
-  ServiceWorkerRegistration() {
+  protected ServiceWorkerRegistration() {
   }
 
   /**

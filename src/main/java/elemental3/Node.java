@@ -90,7 +90,7 @@ public class Node extends EventTarget {
   @Nullable
   public String textContent;
 
-  Node() {
+  protected Node() {
   }
 
   /**

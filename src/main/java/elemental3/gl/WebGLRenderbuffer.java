@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLRenderbuffer"
 )
 public class WebGLRenderbuffer extends WebGLObject {
-  WebGLRenderbuffer() {
+  protected WebGLRenderbuffer() {
   }
 }

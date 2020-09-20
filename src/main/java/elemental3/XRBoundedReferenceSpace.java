@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "XRBoundedReferenceSpace"
 )
 public class XRBoundedReferenceSpace extends XRReferenceSpace {
-  XRBoundedReferenceSpace() {
+  protected XRBoundedReferenceSpace() {
   }
 
   /**

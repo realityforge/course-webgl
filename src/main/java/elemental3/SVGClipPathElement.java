@@ -1,5 +1,8 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedEnumeration;
+import elemental3.svg.SVGAnimatedTransformList;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +21,7 @@ import jsinterop.annotations.JsType;
     name = "SVGClipPathElement"
 )
 public class SVGClipPathElement extends SVGElement {
-  SVGClipPathElement() {
+  protected SVGClipPathElement() {
   }
 
   @JsProperty(

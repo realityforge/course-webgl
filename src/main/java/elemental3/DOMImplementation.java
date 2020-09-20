@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "DOMImplementation"
 )
 public class DOMImplementation {
-  DOMImplementation() {
+  protected DOMImplementation() {
   }
 
   /**

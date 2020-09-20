@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "Clipboard"
 )
 public class Clipboard extends EventTarget {
-  Clipboard() {
+  protected Clipboard() {
   }
 
   /**

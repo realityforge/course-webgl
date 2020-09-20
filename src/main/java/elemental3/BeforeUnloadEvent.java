@@ -20,7 +20,7 @@ public class BeforeUnloadEvent extends Event {
   @Nonnull
   public String returnValue;
 
-  BeforeUnloadEvent() {
+  protected BeforeUnloadEvent() {
     super( null );
   }
 }

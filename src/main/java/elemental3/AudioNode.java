@@ -43,7 +43,7 @@ public class AudioNode extends EventTarget {
   @ChannelInterpretation
   public String channelInterpretation;
 
-  AudioNode() {
+  protected AudioNode() {
   }
 
   /**

@@ -45,7 +45,7 @@ public class AudioTrackList extends EventTarget {
   @Nullable
   public TrackEventHandler onremovetrack;
 
-  AudioTrackList() {
+  protected AudioTrackList() {
   }
 
   /**

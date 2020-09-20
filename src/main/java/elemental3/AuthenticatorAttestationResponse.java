@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "AuthenticatorAttestationResponse"
 )
 public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
-  AuthenticatorAttestationResponse() {
+  protected AuthenticatorAttestationResponse() {
   }
 
   /**

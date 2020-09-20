@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "AudioListener"
 )
 public class AudioListener {
-  AudioListener() {
+  protected AudioListener() {
   }
 
   /**

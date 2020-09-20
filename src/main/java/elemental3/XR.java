@@ -29,7 +29,7 @@ public class XR extends EventTarget {
   @Nullable
   public EventHandler ondevicechange;
 
-  XR() {
+  protected XR() {
   }
 
   /**

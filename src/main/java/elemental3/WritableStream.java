@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class WritableStream {
-  WritableStream() {
+  protected WritableStream() {
   }
 }

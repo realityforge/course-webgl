@@ -23,7 +23,7 @@ import jsinterop.base.Js;
     name = "AudioParamMap"
 )
 public class AudioParamMap {
-  AudioParamMap() {
+  protected AudioParamMap() {
   }
 
   @JsProperty(

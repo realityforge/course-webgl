@@ -23,7 +23,7 @@ public class WakeLockSentinel extends EventTarget {
   @Nullable
   public EventHandler onrelease;
 
-  WakeLockSentinel() {
+  protected WakeLockSentinel() {
   }
 
   /**

@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "CSSSupportsRule"
 )
 public class CSSSupportsRule extends CSSConditionRule {
-  CSSSupportsRule() {
+  protected CSSSupportsRule() {
   }
 }

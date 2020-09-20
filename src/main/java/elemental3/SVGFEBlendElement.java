@@ -1,5 +1,9 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedEnumeration;
+import elemental3.svg.SVGAnimatedLength;
+import elemental3.svg.SVGAnimatedString;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -70,7 +74,7 @@ public class SVGFEBlendElement extends SVGElement {
   @JsOverlay
   public static final int SVG_FEBLEND_MODE_UNKNOWN = 0;
 
-  SVGFEBlendElement() {
+  protected SVGFEBlendElement() {
   }
 
   @JsProperty(

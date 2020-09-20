@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class Geolocation {
-  Geolocation() {
+  protected Geolocation() {
   }
 
   /**

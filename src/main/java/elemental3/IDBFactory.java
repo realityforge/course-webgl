@@ -22,7 +22,7 @@ import jsinterop.base.Any;
     name = "IDBFactory"
 )
 public class IDBFactory {
-  IDBFactory() {
+  protected IDBFactory() {
   }
 
   /**

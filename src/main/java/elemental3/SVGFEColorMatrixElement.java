@@ -1,5 +1,10 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedEnumeration;
+import elemental3.svg.SVGAnimatedLength;
+import elemental3.svg.SVGAnimatedNumberList;
+import elemental3.svg.SVGAnimatedString;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -34,7 +39,7 @@ public class SVGFEColorMatrixElement extends SVGElement {
   @JsOverlay
   public static final int SVG_FECOLORMATRIX_TYPE_UNKNOWN = 0;
 
-  SVGFEColorMatrixElement() {
+  protected SVGFEColorMatrixElement() {
   }
 
   @JsProperty(

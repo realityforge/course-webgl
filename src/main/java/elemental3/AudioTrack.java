@@ -26,7 +26,7 @@ public class AudioTrack {
    */
   public boolean enabled;
 
-  AudioTrack() {
+  protected AudioTrack() {
   }
 
   /**

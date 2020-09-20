@@ -20,7 +20,7 @@ import jsinterop.base.Any;
     name = "Cache"
 )
 public class Cache {
-  Cache() {
+  protected Cache() {
   }
 
   /**

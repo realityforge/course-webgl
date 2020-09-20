@@ -29,7 +29,7 @@ public class IDBIndex {
   @Nonnull
   public String name;
 
-  IDBIndex() {
+  protected IDBIndex() {
   }
 
   /**

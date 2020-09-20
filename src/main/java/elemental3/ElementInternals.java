@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "ElementInternals"
 )
 public class ElementInternals {
-  ElementInternals() {
+  protected ElementInternals() {
   }
 
   @JsProperty(

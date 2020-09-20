@@ -54,7 +54,7 @@ public class IDBDatabase extends EventTarget {
   @Nullable
   public EventHandler onversionchange;
 
-  IDBDatabase() {
+  protected IDBDatabase() {
   }
 
   /**

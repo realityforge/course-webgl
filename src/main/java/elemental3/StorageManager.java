@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "StorageManager"
 )
 public class StorageManager {
-  StorageManager() {
+  protected StorageManager() {
   }
 
   /**

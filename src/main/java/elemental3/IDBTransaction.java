@@ -45,7 +45,7 @@ public class IDBTransaction extends EventTarget {
   @Nullable
   public EventHandler onerror;
 
-  IDBTransaction() {
+  protected IDBTransaction() {
   }
 
   /**

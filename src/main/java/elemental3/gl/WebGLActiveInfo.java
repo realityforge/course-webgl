@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "WebGLActiveInfo"
 )
 public class WebGLActiveInfo {
-  WebGLActiveInfo() {
+  protected WebGLActiveInfo() {
   }
 
   /**

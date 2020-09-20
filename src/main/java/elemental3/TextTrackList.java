@@ -45,7 +45,7 @@ public class TextTrackList extends EventTarget {
   @Nullable
   public EventHandler onremovetrack;
 
-  TextTrackList() {
+  protected TextTrackList() {
   }
 
   /**

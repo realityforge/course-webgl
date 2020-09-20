@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "PerformanceEntry"
 )
 public class PerformanceEntry {
-  PerformanceEntry() {
+  protected PerformanceEntry() {
   }
 
   /**

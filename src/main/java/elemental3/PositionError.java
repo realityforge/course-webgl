@@ -28,7 +28,7 @@ public class PositionError {
   @JsOverlay
   public static final int TIMEOUT = 3;
 
-  PositionError() {
+  protected PositionError() {
   }
 
   /**

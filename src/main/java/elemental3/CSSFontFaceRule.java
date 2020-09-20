@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "CSSFontFaceRule"
 )
 public class CSSFontFaceRule extends CSSRule {
-  CSSFontFaceRule() {
+  protected CSSFontFaceRule() {
   }
 
   @JsProperty(

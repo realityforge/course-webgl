@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "CanvasGradient"
 )
 public class CanvasGradient {
-  CanvasGradient() {
+  protected CanvasGradient() {
   }
 
   /**

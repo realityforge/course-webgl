@@ -29,6 +29,6 @@ public class EXT_sRGB {
   @JsOverlay
   public static final int SRGB_EXT = 0x8C40;
 
-  EXT_sRGB() {
+  protected EXT_sRGB() {
   }
 }

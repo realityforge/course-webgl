@@ -23,6 +23,6 @@ public class WEBGL_debug_renderer_info {
   @JsOverlay
   public static final int UNMASKED_VENDOR_WEBGL = 0x9245;
 
-  WEBGL_debug_renderer_info() {
+  protected WEBGL_debug_renderer_info() {
   }
 }

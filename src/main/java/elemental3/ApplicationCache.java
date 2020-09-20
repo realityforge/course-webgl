@@ -56,7 +56,7 @@ public class ApplicationCache extends EventTarget {
   @Nullable
   public EventHandler onupdateready;
 
-  ApplicationCache() {
+  protected ApplicationCache() {
   }
 
   @JsProperty(

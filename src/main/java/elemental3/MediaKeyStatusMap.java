@@ -31,7 +31,7 @@ import jsinterop.base.Any;
     name = "MediaKeyStatusMap"
 )
 public class MediaKeyStatusMap {
-  MediaKeyStatusMap() {
+  protected MediaKeyStatusMap() {
   }
 
   /**

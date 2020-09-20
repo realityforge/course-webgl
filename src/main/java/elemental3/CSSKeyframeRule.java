@@ -21,7 +21,7 @@ public class CSSKeyframeRule extends CSSRule {
   @Nonnull
   public String keyText;
 
-  CSSKeyframeRule() {
+  protected CSSKeyframeRule() {
   }
 
   @JsProperty(

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "DOMStringList"
 )
 public class DOMStringList {
-  DOMStringList() {
+  protected DOMStringList() {
   }
 
   @JsProperty(

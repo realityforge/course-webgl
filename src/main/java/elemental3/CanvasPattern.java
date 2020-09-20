@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "CanvasPattern"
 )
 public class CanvasPattern {
-  CanvasPattern() {
+  protected CanvasPattern() {
   }
 
   /**

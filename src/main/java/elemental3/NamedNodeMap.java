@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "NamedNodeMap"
 )
 public class NamedNodeMap {
-  NamedNodeMap() {
+  protected NamedNodeMap() {
   }
 
   @JsProperty(

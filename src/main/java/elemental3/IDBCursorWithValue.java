@@ -19,7 +19,7 @@ import jsinterop.base.Any;
     name = "IDBCursorWithValue"
 )
 public class IDBCursorWithValue extends IDBCursor {
-  IDBCursorWithValue() {
+  protected IDBCursorWithValue() {
   }
 
   /**

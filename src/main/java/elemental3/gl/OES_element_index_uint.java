@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class OES_element_index_uint {
-  OES_element_index_uint() {
+  protected OES_element_index_uint() {
   }
 }

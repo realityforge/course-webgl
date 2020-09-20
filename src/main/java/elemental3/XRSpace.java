@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "XRSpace"
 )
 public class XRSpace extends EventTarget {
-  XRSpace() {
+  protected XRSpace() {
   }
 }

@@ -29,6 +29,6 @@ public class WEBGL_compressed_texture_s3tc_srgb {
   @JsOverlay
   public static final int COMPRESSED_SRGB_S3TC_DXT1_EXT = 0x8C4C;
 
-  WEBGL_compressed_texture_s3tc_srgb() {
+  protected WEBGL_compressed_texture_s3tc_srgb() {
   }
 }

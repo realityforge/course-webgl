@@ -38,7 +38,7 @@ public class XRSession extends EventTarget {
   @Nullable
   public EventHandler onvisibilitychange;
 
-  XRSession() {
+  protected XRSession() {
   }
 
   /**

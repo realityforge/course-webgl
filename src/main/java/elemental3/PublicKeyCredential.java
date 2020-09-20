@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "PublicKeyCredential"
 )
 public class PublicKeyCredential extends Credential {
-  PublicKeyCredential() {
+  protected PublicKeyCredential() {
   }
 
   /**

@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "XRPose"
 )
 public class XRPose {
-  XRPose() {
+  protected XRPose() {
   }
 
   /**

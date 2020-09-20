@@ -24,7 +24,7 @@ public class SourceBufferList extends EventTarget {
   @Nullable
   public EventHandler onremovesourcebuffer;
 
-  SourceBufferList() {
+  protected SourceBufferList() {
   }
 
   /**

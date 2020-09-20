@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "InputDeviceInfo"
 )
 public class InputDeviceInfo extends MediaDeviceInfo {
-  InputDeviceInfo() {
+  protected InputDeviceInfo() {
   }
 
   @Nonnull

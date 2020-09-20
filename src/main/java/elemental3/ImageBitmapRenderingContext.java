@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "ImageBitmapRenderingContext"
 )
 public class ImageBitmapRenderingContext {
-  ImageBitmapRenderingContext() {
+  protected ImageBitmapRenderingContext() {
   }
 
   @JsProperty(

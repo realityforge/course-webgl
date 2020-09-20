@@ -30,7 +30,7 @@ public class IDBObjectStore {
   @Nonnull
   public String name;
 
-  IDBObjectStore() {
+  protected IDBObjectStore() {
   }
 
   /**

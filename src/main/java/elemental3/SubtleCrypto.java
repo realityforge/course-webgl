@@ -31,7 +31,7 @@ import jsinterop.base.Any;
     name = "SubtleCrypto"
 )
 public class SubtleCrypto {
-  SubtleCrypto() {
+  protected SubtleCrypto() {
   }
 
   /**

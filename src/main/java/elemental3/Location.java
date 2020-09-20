@@ -82,7 +82,7 @@ public class Location {
   @Nonnull
   public String search;
 
-  Location() {
+  protected Location() {
   }
 
   /**

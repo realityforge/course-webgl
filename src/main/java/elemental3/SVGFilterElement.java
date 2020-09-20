@@ -1,5 +1,9 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedEnumeration;
+import elemental3.svg.SVGAnimatedLength;
+import elemental3.svg.SVGAnimatedString;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +22,7 @@ import jsinterop.annotations.JsType;
     name = "SVGFilterElement"
 )
 public class SVGFilterElement extends SVGElement {
-  SVGFilterElement() {
+  protected SVGFilterElement() {
   }
 
   @JsProperty(

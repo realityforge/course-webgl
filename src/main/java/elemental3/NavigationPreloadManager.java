@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "NavigationPreloadManager"
 )
 public class NavigationPreloadManager {
-  NavigationPreloadManager() {
+  protected NavigationPreloadManager() {
   }
 
   @Nonnull

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "CaretPosition"
 )
 public class CaretPosition {
-  CaretPosition() {
+  protected CaretPosition() {
   }
 
   @JsProperty(

@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "XRInputSource"
 )
 public class XRInputSource {
-  XRInputSource() {
+  protected XRInputSource() {
   }
 
   /**

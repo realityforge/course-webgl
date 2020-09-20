@@ -75,7 +75,7 @@ public class SourceBuffer extends EventTarget {
    */
   public double timestampOffset;
 
-  SourceBuffer() {
+  protected SourceBuffer() {
   }
 
   /**

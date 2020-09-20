@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLSampler"
 )
 public class WebGLSampler extends WebGLObject {
-  WebGLSampler() {
+  protected WebGLSampler() {
   }
 }

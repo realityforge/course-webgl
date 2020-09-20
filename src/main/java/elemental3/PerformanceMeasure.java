@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "PerformanceMeasure"
 )
 public class PerformanceMeasure extends PerformanceEntry {
-  PerformanceMeasure() {
+  protected PerformanceMeasure() {
   }
 }

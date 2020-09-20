@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "Screen"
 )
 public class Screen {
-  Screen() {
+  protected Screen() {
   }
 
   /**

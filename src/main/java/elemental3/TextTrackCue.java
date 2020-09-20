@@ -34,7 +34,7 @@ public class TextTrackCue extends EventTarget {
 
   public double startTime;
 
-  TextTrackCue() {
+  protected TextTrackCue() {
   }
 
   @JsProperty(

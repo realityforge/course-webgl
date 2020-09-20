@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class OES_texture_float {
-  OES_texture_float() {
+  protected OES_texture_float() {
   }
 }

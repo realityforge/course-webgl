@@ -26,7 +26,7 @@ public class VideoTrack {
    */
   public boolean selected;
 
-  VideoTrack() {
+  protected VideoTrack() {
   }
 
   /**

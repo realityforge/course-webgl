@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "AnimationTimeline"
 )
 public class AnimationTimeline {
-  AnimationTimeline() {
+  protected AnimationTimeline() {
   }
 
   /**

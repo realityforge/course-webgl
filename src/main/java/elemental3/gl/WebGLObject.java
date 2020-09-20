@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLObject"
 )
 public class WebGLObject {
-  WebGLObject() {
+  protected WebGLObject() {
   }
 }

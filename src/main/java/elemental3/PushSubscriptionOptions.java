@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "PushSubscriptionOptions"
 )
 public class PushSubscriptionOptions {
-  PushSubscriptionOptions() {
+  protected PushSubscriptionOptions() {
   }
 
   @JsProperty(

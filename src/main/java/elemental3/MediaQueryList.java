@@ -27,7 +27,7 @@ public class MediaQueryList extends EventTarget {
   @Nullable
   public EventHandler onchange;
 
-  MediaQueryList() {
+  protected MediaQueryList() {
   }
 
   /**

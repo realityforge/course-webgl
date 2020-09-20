@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "MediaKeySystemAccess"
 )
 public class MediaKeySystemAccess {
-  MediaKeySystemAccess() {
+  protected MediaKeySystemAccess() {
   }
 
   /**

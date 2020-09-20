@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "TextMetrics"
 )
 public class TextMetrics {
-  TextMetrics() {
+  protected TextMetrics() {
   }
 
   /**

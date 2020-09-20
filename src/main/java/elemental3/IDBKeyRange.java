@@ -21,7 +21,7 @@ import jsinterop.base.Any;
     name = "IDBKeyRange"
 )
 public class IDBKeyRange {
-  IDBKeyRange() {
+  protected IDBKeyRange() {
   }
 
   /**

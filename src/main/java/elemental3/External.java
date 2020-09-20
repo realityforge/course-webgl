@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
     name = "External"
 )
 public class External {
-  External() {
+  protected External() {
   }
 
   public native void AddSearchProvider();

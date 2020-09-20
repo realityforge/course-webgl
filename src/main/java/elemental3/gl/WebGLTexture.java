@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLTexture"
 )
 public class WebGLTexture extends WebGLObject {
-  WebGLTexture() {
+  protected WebGLTexture() {
   }
 }

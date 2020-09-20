@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "CSSImportRule"
 )
 public class CSSImportRule extends CSSRule {
-  CSSImportRule() {
+  protected CSSImportRule() {
   }
 
   @JsProperty(

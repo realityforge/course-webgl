@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "XRViewport"
 )
 public class XRViewport {
-  XRViewport() {
+  protected XRViewport() {
   }
 
   /**

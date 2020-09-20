@@ -93,7 +93,7 @@ public class Element extends Node {
   @Nonnull
   public String slot;
 
-  Element() {
+  protected Element() {
   }
 
   /**

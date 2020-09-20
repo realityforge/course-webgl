@@ -33,7 +33,7 @@ public class TextTrack extends EventTarget {
   @Nullable
   public EventHandler oncuechange;
 
-  TextTrack() {
+  protected TextTrack() {
   }
 
   @JsProperty(

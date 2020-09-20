@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class WEBGL_debug_shaders {
-  WEBGL_debug_shaders() {
+  protected WEBGL_debug_shaders() {
   }
 
   /**

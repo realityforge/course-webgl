@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "XRViewerPose"
 )
 public class XRViewerPose extends XRPose {
-  XRViewerPose() {
+  protected XRViewerPose() {
   }
 
   /**

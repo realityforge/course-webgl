@@ -20,6 +20,6 @@ public class CSSConditionRule extends CSSGroupingRule {
   @Nonnull
   public String conditionText;
 
-  CSSConditionRule() {
+  protected CSSConditionRule() {
   }
 }

@@ -36,7 +36,7 @@ public class IDBOpenDBRequest extends IDBRequest {
   @Nullable
   public EventHandler onupgradeneeded;
 
-  IDBOpenDBRequest() {
+  protected IDBOpenDBRequest() {
   }
 
   @JsOverlay

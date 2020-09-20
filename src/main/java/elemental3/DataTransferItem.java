@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "DataTransferItem"
 )
 public class DataTransferItem {
-  DataTransferItem() {
+  protected DataTransferItem() {
   }
 
   /**

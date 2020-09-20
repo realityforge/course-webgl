@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "Selection"
 )
 public class Selection {
-  Selection() {
+  protected Selection() {
   }
 
   /**

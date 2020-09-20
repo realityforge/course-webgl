@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "MimeTypeArray"
 )
 public class MimeTypeArray {
-  MimeTypeArray() {
+  protected MimeTypeArray() {
   }
 
   @JsProperty(

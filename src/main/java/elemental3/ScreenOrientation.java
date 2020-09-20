@@ -28,7 +28,7 @@ public class ScreenOrientation extends EventTarget {
   @Nullable
   public EventHandler onchange;
 
-  ScreenOrientation() {
+  protected ScreenOrientation() {
   }
 
   /**

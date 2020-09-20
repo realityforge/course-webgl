@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "VideoPlaybackQuality"
 )
 public class VideoPlaybackQuality {
-  VideoPlaybackQuality() {
+  protected VideoPlaybackQuality() {
   }
 
   /**

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "GamepadPose"
 )
 public class GamepadPose {
-  GamepadPose() {
+  protected GamepadPose() {
   }
 
   /**

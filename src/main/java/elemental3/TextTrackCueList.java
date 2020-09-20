@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "TextTrackCueList"
 )
 public class TextTrackCueList {
-  TextTrackCueList() {
+  protected TextTrackCueList() {
   }
 
   @JsProperty(

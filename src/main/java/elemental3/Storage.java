@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "Storage"
 )
 public class Storage {
-  Storage() {
+  protected Storage() {
   }
 
   /**

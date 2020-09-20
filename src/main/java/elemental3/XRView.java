@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "XRView"
 )
 public class XRView {
-  XRView() {
+  protected XRView() {
   }
 
   /**

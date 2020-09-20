@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "CSSStyleSheet"
 )
 public class CSSStyleSheet extends StyleSheet {
-  CSSStyleSheet() {
+  protected CSSStyleSheet() {
   }
 
   /**

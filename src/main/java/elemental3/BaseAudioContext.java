@@ -25,7 +25,7 @@ public class BaseAudioContext extends EventTarget {
   @Nullable
   public EventHandler onstatechange;
 
-  BaseAudioContext() {
+  protected BaseAudioContext() {
   }
 
   /**

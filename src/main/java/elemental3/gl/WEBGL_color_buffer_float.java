@@ -26,6 +26,6 @@ public class WEBGL_color_buffer_float {
   @JsOverlay
   public static final int UNSIGNED_NORMALIZED_EXT = 0x8C17;
 
-  WEBGL_color_buffer_float() {
+  protected WEBGL_color_buffer_float() {
   }
 }

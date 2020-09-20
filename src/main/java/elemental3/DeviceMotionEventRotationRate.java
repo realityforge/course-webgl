@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "DeviceMotionEventRotationRate"
 )
 public class DeviceMotionEventRotationRate {
-  DeviceMotionEventRotationRate() {
+  protected DeviceMotionEventRotationRate() {
   }
 
   /**

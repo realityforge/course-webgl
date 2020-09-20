@@ -31,7 +31,7 @@ public class PerformanceNavigation {
   @JsOverlay
   public static final int TYPE_RESERVED = 255;
 
-  PerformanceNavigation() {
+  protected PerformanceNavigation() {
   }
 
   /**

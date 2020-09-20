@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "PushManager"
 )
 public class PushManager {
-  PushManager() {
+  protected PushManager() {
   }
 
   /**

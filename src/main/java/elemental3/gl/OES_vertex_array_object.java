@@ -21,7 +21,7 @@ public class OES_vertex_array_object {
   @JsOverlay
   public static final int VERTEX_ARRAY_BINDING_OES = 0x85B5;
 
-  OES_vertex_array_object() {
+  protected OES_vertex_array_object() {
   }
 
   /**

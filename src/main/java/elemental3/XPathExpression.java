@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "XPathExpression"
 )
 public class XPathExpression {
-  XPathExpression() {
+  protected XPathExpression() {
   }
 
   /**

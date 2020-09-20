@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CSSRuleList"
 )
 public class CSSRuleList {
-  CSSRuleList() {
+  protected CSSRuleList() {
   }
 
   @JsProperty(

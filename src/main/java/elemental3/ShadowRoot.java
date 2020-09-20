@@ -30,7 +30,7 @@ public class ShadowRoot extends DocumentFragment {
   @Nullable
   public EventHandler onslotchange;
 
-  ShadowRoot() {
+  protected ShadowRoot() {
   }
 
   /**

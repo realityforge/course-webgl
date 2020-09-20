@@ -31,7 +31,7 @@ public class MediaError {
   @JsOverlay
   public static final int MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
 
-  MediaError() {
+  protected MediaError() {
   }
 
   /**

@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "MimeType"
 )
 public class MimeType {
-  MimeType() {
+  protected MimeType() {
   }
 
   @JsProperty(

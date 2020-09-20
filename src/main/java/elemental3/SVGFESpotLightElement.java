@@ -1,5 +1,7 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedNumber;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "SVGFESpotLightElement"
 )
 public class SVGFESpotLightElement extends SVGElement {
-  SVGFESpotLightElement() {
+  protected SVGFESpotLightElement() {
   }
 
   @JsProperty(

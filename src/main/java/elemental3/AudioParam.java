@@ -30,7 +30,7 @@ public class AudioParam {
    */
   public float value;
 
-  AudioParam() {
+  protected AudioParam() {
   }
 
   /**

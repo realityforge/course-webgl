@@ -43,7 +43,7 @@ public class ServiceWorkerContainer extends EventTarget {
   @Nullable
   public EventHandler onmessageerror;
 
-  ServiceWorkerContainer() {
+  protected ServiceWorkerContainer() {
   }
 
   /**

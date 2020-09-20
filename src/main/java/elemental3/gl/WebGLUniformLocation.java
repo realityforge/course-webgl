@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLUniformLocation"
 )
 public class WebGLUniformLocation {
-  WebGLUniformLocation() {
+  protected WebGLUniformLocation() {
   }
 }

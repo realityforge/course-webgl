@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
     name = "MediaKeys"
 )
 public class MediaKeys {
-  MediaKeys() {
+  protected MediaKeys() {
   }
 
   /**

@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLSync"
 )
 public class WebGLSync extends WebGLObject {
-  WebGLSync() {
+  protected WebGLSync() {
   }
 }

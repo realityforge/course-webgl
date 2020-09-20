@@ -27,7 +27,7 @@ public class TreeWalker {
   @Nonnull
   public Node currentNode;
 
-  TreeWalker() {
+  protected TreeWalker() {
   }
 
   /**

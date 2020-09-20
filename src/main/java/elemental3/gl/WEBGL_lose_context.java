@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class WEBGL_lose_context {
-  WEBGL_lose_context() {
+  protected WEBGL_lose_context() {
   }
 
   /**

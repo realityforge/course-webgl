@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "WebGLShaderPrecisionFormat"
 )
 public class WebGLShaderPrecisionFormat {
-  WebGLShaderPrecisionFormat() {
+  protected WebGLShaderPrecisionFormat() {
   }
 
   /**

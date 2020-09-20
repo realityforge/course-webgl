@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "PerformanceTiming"
 )
 public class PerformanceTiming {
-  PerformanceTiming() {
+  protected PerformanceTiming() {
   }
 
   /**

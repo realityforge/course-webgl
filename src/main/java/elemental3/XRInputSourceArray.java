@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "XRInputSourceArray"
 )
 public class XRInputSourceArray {
-  XRInputSourceArray() {
+  protected XRInputSourceArray() {
   }
 
   /**

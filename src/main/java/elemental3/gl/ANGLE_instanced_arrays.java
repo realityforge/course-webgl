@@ -20,7 +20,7 @@ public class ANGLE_instanced_arrays {
   @JsOverlay
   public static final int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE = 0x88FE;
 
-  ANGLE_instanced_arrays() {
+  protected ANGLE_instanced_arrays() {
   }
 
   /**

@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class Position {
-  Position() {
+  protected Position() {
   }
 
   /**

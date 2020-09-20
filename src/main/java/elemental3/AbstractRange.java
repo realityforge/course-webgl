@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "AbstractRange"
 )
 public class AbstractRange {
-  AbstractRange() {
+  protected AbstractRange() {
   }
 
   /**

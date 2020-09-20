@@ -22,7 +22,7 @@ import jsinterop.base.Any;
     name = "IDBCursor"
 )
 public class IDBCursor {
-  IDBCursor() {
+  protected IDBCursor() {
   }
 
   /**

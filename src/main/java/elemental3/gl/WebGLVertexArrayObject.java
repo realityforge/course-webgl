@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLVertexArrayObject"
 )
 public class WebGLVertexArrayObject extends WebGLObject {
-  WebGLVertexArrayObject() {
+  protected WebGLVertexArrayObject() {
   }
 }

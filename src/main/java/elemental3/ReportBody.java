@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "ReportBody"
 )
 public class ReportBody {
-  ReportBody() {
+  protected ReportBody() {
   }
 
   @Nonnull

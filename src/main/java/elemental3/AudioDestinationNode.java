@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "AudioDestinationNode"
 )
 public class AudioDestinationNode extends AudioNode {
-  AudioDestinationNode() {
+  protected AudioDestinationNode() {
   }
 
   /**

@@ -38,7 +38,7 @@ public class IDBRequest extends EventTarget {
   @Nullable
   public EventHandler onsuccess;
 
-  IDBRequest() {
+  protected IDBRequest() {
   }
 
   /**

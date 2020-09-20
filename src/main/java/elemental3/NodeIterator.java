@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "NodeIterator"
 )
 public class NodeIterator {
-  NodeIterator() {
+  protected NodeIterator() {
   }
 
   /**

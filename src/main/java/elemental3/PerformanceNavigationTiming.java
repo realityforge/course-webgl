@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "PerformanceNavigationTiming"
 )
 public class PerformanceNavigationTiming extends PerformanceResourceTiming {
-  PerformanceNavigationTiming() {
+  protected PerformanceNavigationTiming() {
   }
 
   /**

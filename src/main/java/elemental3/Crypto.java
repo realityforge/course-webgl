@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
     name = "Crypto"
 )
 public class Crypto {
-  Crypto() {
+  protected Crypto() {
   }
 
   /**

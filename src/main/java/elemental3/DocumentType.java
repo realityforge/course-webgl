@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "DocumentType"
 )
 public class DocumentType extends Node {
-  DocumentType() {
+  protected DocumentType() {
   }
 
   @JsProperty(

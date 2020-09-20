@@ -61,7 +61,7 @@ public class CSSRule {
   @Nonnull
   public String cssText;
 
-  CSSRule() {
+  protected CSSRule() {
   }
 
   @JsProperty(

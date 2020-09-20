@@ -25,6 +25,6 @@ public class RadioNodeList extends NodeList {
   @Nonnull
   public String value;
 
-  RadioNodeList() {
+  protected RadioNodeList() {
   }
 }

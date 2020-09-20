@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import elemental3.svg.SVGImageElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -178,7 +179,7 @@ public class CanvasRenderingContext2D {
   @CanvasTextBaseline
   public String textBaseline;
 
-  CanvasRenderingContext2D() {
+  protected CanvasRenderingContext2D() {
   }
 
   /**

@@ -21,7 +21,7 @@ public class HTMLOptionsCollection extends HTMLCollection {
 
   public int selectedIndex;
 
-  HTMLOptionsCollection() {
+  protected HTMLOptionsCollection() {
   }
 
   public native void add(@Nonnull HTMLOptionElement element, @Nonnull HTMLElement before);

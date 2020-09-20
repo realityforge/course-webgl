@@ -147,7 +147,7 @@ public class HTMLMediaElement extends HTMLElement {
    */
   public double volume;
 
-  HTMLMediaElement() {
+  protected HTMLMediaElement() {
   }
 
   /**

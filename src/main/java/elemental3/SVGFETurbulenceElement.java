@@ -1,5 +1,11 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedEnumeration;
+import elemental3.svg.SVGAnimatedInteger;
+import elemental3.svg.SVGAnimatedLength;
+import elemental3.svg.SVGAnimatedNumber;
+import elemental3.svg.SVGAnimatedString;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -37,7 +43,7 @@ public class SVGFETurbulenceElement extends SVGElement {
   @JsOverlay
   public static final int SVG_TURBULENCE_TYPE_UNKNOWN = 0;
 
-  SVGFETurbulenceElement() {
+  protected SVGFETurbulenceElement() {
   }
 
   @JsProperty(

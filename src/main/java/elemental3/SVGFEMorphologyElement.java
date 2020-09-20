@@ -1,5 +1,10 @@
 package elemental3;
 
+import elemental3.svg.SVGAnimatedEnumeration;
+import elemental3.svg.SVGAnimatedLength;
+import elemental3.svg.SVGAnimatedNumber;
+import elemental3.svg.SVGAnimatedString;
+import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -28,7 +33,7 @@ public class SVGFEMorphologyElement extends SVGElement {
   @JsOverlay
   public static final int SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
 
-  SVGFEMorphologyElement() {
+  protected SVGFEMorphologyElement() {
   }
 
   @JsProperty(

@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "PerformanceMark"
 )
 public class PerformanceMark extends PerformanceEntry {
-  PerformanceMark() {
+  protected PerformanceMark() {
   }
 }

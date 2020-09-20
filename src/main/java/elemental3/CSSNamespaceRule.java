@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CSSNamespaceRule"
 )
 public class CSSNamespaceRule extends CSSRule {
-  CSSNamespaceRule() {
+  protected CSSNamespaceRule() {
   }
 
   /**

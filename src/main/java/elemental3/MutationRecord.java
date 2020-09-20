@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "MutationRecord"
 )
 public class MutationRecord {
-  MutationRecord() {
+  protected MutationRecord() {
   }
 
   @JsProperty(

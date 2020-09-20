@@ -37,7 +37,7 @@ public class MediaKeySession extends EventTarget {
   @Nullable
   public EventHandler onmessage;
 
-  MediaKeySession() {
+  protected MediaKeySession() {
   }
 
   /**

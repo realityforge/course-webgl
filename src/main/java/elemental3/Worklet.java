@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "Worklet"
 )
 public class Worklet {
-  Worklet() {
+  protected Worklet() {
   }
 
   /**

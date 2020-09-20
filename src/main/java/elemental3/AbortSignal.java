@@ -29,7 +29,7 @@ public class AbortSignal extends EventTarget {
   @Nullable
   public EventHandler onabort;
 
-  AbortSignal() {
+  protected AbortSignal() {
   }
 
   /**

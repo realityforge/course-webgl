@@ -30,7 +30,7 @@ public class Performance extends EventTarget {
   @Nullable
   public EventHandler onresourcetimingbufferfull;
 
-  Performance() {
+  protected Performance() {
   }
 
   /**

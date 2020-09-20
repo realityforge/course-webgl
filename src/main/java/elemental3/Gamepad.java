@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "Gamepad"
 )
 public class Gamepad {
-  Gamepad() {
+  protected Gamepad() {
   }
 
   /**

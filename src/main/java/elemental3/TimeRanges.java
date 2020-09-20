@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "TimeRanges"
 )
 public class TimeRanges {
-  TimeRanges() {
+  protected TimeRanges() {
   }
 
   /**

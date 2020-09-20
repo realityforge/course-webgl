@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class Coordinates {
-  Coordinates() {
+  protected Coordinates() {
   }
 
   /**

@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     name = "PushSubscription"
 )
 public class PushSubscription {
-  PushSubscription() {
+  protected PushSubscription() {
   }
 
   /**

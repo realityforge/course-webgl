@@ -26,7 +26,7 @@ public class StyleSheet {
    */
   public boolean disabled;
 
-  StyleSheet() {
+  protected StyleSheet() {
   }
 
   /**

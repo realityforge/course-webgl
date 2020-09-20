@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "DOMRectList"
 )
 public class DOMRectList {
-  DOMRectList() {
+  protected DOMRectList() {
   }
 
   @JsProperty(

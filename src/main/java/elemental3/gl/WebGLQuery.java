@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLQuery"
 )
 public class WebGLQuery extends WebGLObject {
-  WebGLQuery() {
+  protected WebGLQuery() {
   }
 }

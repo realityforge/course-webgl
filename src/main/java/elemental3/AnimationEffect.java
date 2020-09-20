@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "AnimationEffect"
 )
 public class AnimationEffect {
-  AnimationEffect() {
+  protected AnimationEffect() {
   }
 
   /**

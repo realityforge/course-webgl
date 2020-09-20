@@ -16,6 +16,6 @@ import jsinterop.annotations.JsType;
     name = "WebGLShader"
 )
 public class WebGLShader extends WebGLObject {
-  WebGLShader() {
+  protected WebGLShader() {
   }
 }

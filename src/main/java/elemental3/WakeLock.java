@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "WakeLock"
 )
 public class WakeLock {
-  WakeLock() {
+  protected WakeLock() {
   }
 
   @Nonnull
