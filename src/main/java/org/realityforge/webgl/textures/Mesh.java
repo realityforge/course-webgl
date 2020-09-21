@@ -72,6 +72,8 @@ final class Mesh
     image1.onload = e -> {
       // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
       gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
+
+      // This is the call that pushes data across to GPU so will be "slow"
       gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
                      0,
                      WebGL2RenderingContext.RGB,
