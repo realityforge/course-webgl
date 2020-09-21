@@ -1,6 +1,7 @@
-package elemental3;
+package elemental3.notifications;
 
 import elemental2.core.JsArray;
+import elemental3.VibratePattern;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

@@ -1,5 +1,6 @@
-package elemental3;
+package elemental3.notifications;
 
+import elemental3.ExtendableEventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

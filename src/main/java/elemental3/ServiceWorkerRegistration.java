@@ -2,6 +2,9 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import elemental3.notifications.GetNotificationOptions;
+import elemental3.notifications.Notification;
+import elemental3.notifications.NotificationOptions;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
