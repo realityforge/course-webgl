@@ -14,6 +14,7 @@ import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import elemental3.bluetooth.Bluetooth;
+import elemental3.media.MediaDevices;
 import elemental3.xr.XR;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

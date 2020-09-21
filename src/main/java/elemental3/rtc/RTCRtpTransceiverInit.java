@@ -1,7 +1,7 @@
 package elemental3.rtc;
 
 import elemental2.core.JsArray;
-import elemental3.MediaStream;
+import elemental3.media.MediaStream;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

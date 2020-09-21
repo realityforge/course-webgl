@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.media.SourceBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
