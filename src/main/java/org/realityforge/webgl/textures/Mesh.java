@@ -1,6 +1,7 @@
 package org.realityforge.webgl.textures;
 
 import elemental2.core.Float32Array;
+import elemental2.promise.Promise;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
 import elemental3.gl.WebGL2RenderingContext;
@@ -40,7 +41,6 @@ final class Mesh
   private final int _positionIndex;
   private final int _colorIndex;
   private final int _textureCoordinateIndex;
-  private int _texturesLoaded;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32Array positionData,
@@ -62,29 +62,15 @@ final class Mesh
                                                   WebGL2RenderingContext.STATIC_DRAW,
                                                   textureCoordinatesData );
 
-    final HTMLImageElement image1 = new Image();
-    image1.src = "img/webgl-logo-256.jpg";
-    image1.onload = e -> {
-      _texture1 = GL.prepareTexture( gl,
-                                     image1,
-                                     WebGL2RenderingContext.LINEAR,
-                                     WebGL2RenderingContext.LINEAR,
-                                     WebGL2RenderingContext.CLAMP_TO_EDGE,
-                                     WebGL2RenderingContext.CLAMP_TO_EDGE );
-      _texturesLoaded++;
-    };
+    loadTexture( gl, "img/webgl-logo-256.jpg" ).then( texture -> {
+      _texture1 = texture;
+      return null;
+    } );
 
-    final HTMLImageElement image2 = new Image();
-    image2.src = "img/StoreLogo.png";
-    image2.onload = e -> {
-      _texture2 = GL.prepareTexture( gl,
-                                     image2,
-                                     WebGL2RenderingContext.LINEAR,
-                                     WebGL2RenderingContext.LINEAR,
-                                     WebGL2RenderingContext.CLAMP_TO_EDGE,
-                                     WebGL2RenderingContext.CLAMP_TO_EDGE );
-      _texturesLoaded++;
-    };
+    loadTexture( gl, "img/StoreLogo.png" ).then( texture -> {
+      _texture2 = texture;
+      return null;
+    } );
 
     final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     final WebGLShader fragmentShader =
@@ -105,9 +91,26 @@ final class Mesh
     _textureCoordinateIndex = gl.getAttribLocation( _program, "textureCoordinate" );
   }
 
+  @Nonnull
+  private Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
+                                             @Nonnull final String src )
+  {
+    return new Promise<>( ( resolveFn, rejectFn ) -> {
+      final HTMLImageElement image = new Image();
+      image.src = src;
+      image.onload = e -> resolveFn.onInvoke( GL.prepareTexture( gl,
+                                                                 image,
+                                                                 WebGL2RenderingContext.LINEAR,
+                                                                 WebGL2RenderingContext.LINEAR,
+                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE ) );
+      image.onerror = ( e, s, l, c, o ) -> rejectFn.onInvoke( e );
+    } );
+  }
+
   boolean areTexturesLoaded()
   {
-    return 2 == _texturesLoaded;
+    return null != _texture1 && null != _texture2;
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,
