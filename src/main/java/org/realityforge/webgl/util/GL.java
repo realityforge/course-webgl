@@ -15,6 +15,9 @@ import javax.annotation.Nullable;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.annotations.ShaderType;
 
+// TODO: All of these methods should take a onError handler that is invoked when unexpected error
+//  occurs. We should then follow this up with throwing a runtime error to rollback state. Both of
+//  these actions should be done after we cleanup any allocated resources.
 public final class GL
 {
   private GL()
