@@ -23,10 +23,8 @@ final class Mesh
   private final WebGLBuffer _colorBuffer;
   @Nonnull
   private final WebGLBuffer _textureCoordinatesBuffer;
-  @Nonnull
-  private final WebGLTexture _texture1;
-  @Nonnull
-  private final WebGLTexture _texture2;
+  private WebGLTexture _texture1;
+  private WebGLTexture _texture2;
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
@@ -64,61 +62,27 @@ final class Mesh
                                                   WebGL2RenderingContext.STATIC_DRAW,
                                                   textureCoordinatesData );
 
-    final WebGLTexture texture1 = gl.createTexture();
-    assert null != texture1;
-    _texture1 = texture1;
     final HTMLImageElement image1 = new Image();
     image1.src = "img/webgl-logo-256.jpg";
     image1.onload = e -> {
-      // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
-      gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
-
-      // This is the call that pushes data across to GPU so will be "slow"
-      gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
-                     0,
-                     WebGL2RenderingContext.RGB,
-                     WebGL2RenderingContext.RGB,
-                     WebGL2RenderingContext.UNSIGNED_BYTE,
-                     image1 );
-
-      // Make sure we specify how perform interpolation between texture coordinates
-
-      // TODO: These methods should have integer enums defined for their target,
-      //  parameters and potentially param values
-      gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
-                        WebGL2RenderingContext.TEXTURE_MAG_FILTER,
-                        WebGL2RenderingContext.LINEAR );
-      gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
-                        WebGL2RenderingContext.TEXTURE_MIN_FILTER,
-                        WebGL2RenderingContext.LINEAR );
+      _texture1 = GL.prepareTexture( gl,
+                                     image1,
+                                     WebGL2RenderingContext.LINEAR,
+                                     WebGL2RenderingContext.LINEAR,
+                                     WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                     WebGL2RenderingContext.CLAMP_TO_EDGE );
       _texturesLoaded++;
     };
 
-    final WebGLTexture texture2 = gl.createTexture();
-    assert null != texture2;
-    _texture2 = texture2;
     final HTMLImageElement image2 = new Image();
     image2.src = "img/StoreLogo.png";
     image2.onload = e -> {
-      // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
-      gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
-      gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
-                     0,
-                     WebGL2RenderingContext.RGB,
-                     WebGL2RenderingContext.RGB,
-                     WebGL2RenderingContext.UNSIGNED_BYTE,
-                     image2 );
-
-      // Make sure we specify how perform interpolation between texture coordinates
-
-      // TODO: These methods should have integer enums defined for their target,
-      //  parameters and potentially param values
-      gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
-                        WebGL2RenderingContext.TEXTURE_MAG_FILTER,
-                        WebGL2RenderingContext.LINEAR );
-      gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
-                        WebGL2RenderingContext.TEXTURE_MIN_FILTER,
-                        WebGL2RenderingContext.LINEAR );
+      _texture2 = GL.prepareTexture( gl,
+                                     image2,
+                                     WebGL2RenderingContext.LINEAR,
+                                     WebGL2RenderingContext.LINEAR,
+                                     WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                     WebGL2RenderingContext.CLAMP_TO_EDGE );
       _texturesLoaded++;
     };
 
