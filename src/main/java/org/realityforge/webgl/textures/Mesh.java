@@ -156,7 +156,6 @@ final class Mesh
     gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( projectionMatrix ) );
 
-
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
 
