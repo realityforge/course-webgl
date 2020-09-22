@@ -7,7 +7,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 /**
  * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
@@ -58,15 +57,6 @@ public class OffscreenCanvas extends EventTarget implements Transferable {
    */
   @Nonnull
   public native Promise<Blob> convertToBlob();
-
-  /**
-   * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext">OffscreenCanvas.getContext - MDN</a>
-   */
-  @Nullable
-  public native OffscreenRenderingContext getContext(
-      @OffscreenRenderingContextId @Nonnull String contextId, @Nullable Any options);
 
   /**
    * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.

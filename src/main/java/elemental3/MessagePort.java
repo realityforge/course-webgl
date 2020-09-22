@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 /**
@@ -54,22 +53,8 @@ public class MessagePort extends EventTarget implements Transferable {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable Any message, @Nonnull JsArray<Transferable> transfer);
-
-  /**
-   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
-   */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull JsArray<Transferable> transfer);
-
-  /**
-   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
-   */
-  public native void postMessage(@Nullable Any message, @Nonnull Transferable[] transfer);
 
   /**
    * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
@@ -84,22 +69,8 @@ public class MessagePort extends EventTarget implements Transferable {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable Any message, @Nonnull PostMessageOptions options);
-
-  /**
-   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
-   */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull PostMessageOptions options);
-
-  /**
-   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
-   */
-  public native void postMessage(@Nullable Any message);
 
   /**
    * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.

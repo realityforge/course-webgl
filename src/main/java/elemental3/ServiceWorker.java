@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 /**
  * The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
@@ -64,22 +63,14 @@ public class ServiceWorker extends EventTarget {
   @ServiceWorkerState
   public native String state();
 
-  public native void postMessage(@Nullable Any message, @Nonnull JsArray<Transferable> transfer);
-
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull JsArray<Transferable> transfer);
-
-  public native void postMessage(@Nullable Any message, @Nonnull Transferable[] transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull Transferable[] transfer);
 
-  public native void postMessage(@Nullable Any message, @Nonnull PostMessageOptions options);
-
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull PostMessageOptions options);
-
-  public native void postMessage(@Nullable Any message);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message);
 }

@@ -1417,24 +1417,8 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
-      @Nonnull JsArray<Transferable> transfer);
-
-  /**
-   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
-
-  /**
-   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   */
-  public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
-      @Nonnull Transferable[] transfer);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
@@ -1449,13 +1433,6 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin);
-
-  /**
-   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin);
 
@@ -1464,22 +1441,8 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable Any message, @Nonnull WindowPostMessageOptions options);
-
-  /**
-   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull WindowPostMessageOptions options);
-
-  /**
-   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   */
-  public native void postMessage(@Nullable Any message);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
@@ -2106,28 +2069,6 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout,
-      @Nullable Any... arguments);
-
-  /**
-   * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   */
-  public native int setInterval(@Nonnull String handler, int timeout, @Nullable Any... arguments);
-
-  /**
-   * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   */
-  public native int setInterval(@Nonnull Function handler, int timeout, @Nullable Any... arguments);
-
-  /**
-   * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   */
-  public native int setInterval(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
 
   /**
@@ -2166,28 +2107,6 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout);
-
-  /**
-   * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   */
-  public native int setTimeout(@Nonnull TimerHandler handler, int timeout,
-      @Nullable Any... arguments);
-
-  /**
-   * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   */
-  public native int setTimeout(@Nonnull String handler, int timeout, @Nullable Any... arguments);
-
-  /**
-   * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   */
-  public native int setTimeout(@Nonnull Function handler, int timeout, @Nullable Any... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.

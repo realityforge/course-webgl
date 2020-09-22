@@ -500,13 +500,6 @@ public interface RequestInit {
   void setWindow(@Nullable Any window);
 
   @JsOverlay
-  @Nonnull
-  default RequestInit window(@Nullable final Any window) {
-    setWindow( window );
-    return this;
-  }
-
-  @JsOverlay
   default void setWindow(@DoNotAutobox @Nullable final Object window) {
     setWindow( Js.asAny( window ) );
   }

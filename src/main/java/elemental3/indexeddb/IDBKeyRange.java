@@ -72,62 +72,8 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @Nullable Any upper,
-      boolean lowerOpen, boolean upperOpen);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower, @Nullable Any upper,
-      boolean lowerOpen, boolean upperOpen);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @DoNotAutobox @Nullable Object upper,
-      boolean lowerOpen, boolean upperOpen);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
   public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
       @DoNotAutobox @Nullable Object upper, boolean lowerOpen, boolean upperOpen);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @Nullable Any upper,
-      boolean lowerOpen);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower, @Nullable Any upper,
-      boolean lowerOpen);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @DoNotAutobox @Nullable Object upper,
-      boolean lowerOpen);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -144,40 +90,8 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @Nullable Any upper);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower, @Nullable Any upper);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @DoNotAutobox @Nullable Object upper);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
-   */
-  @Nonnull
   public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
       @DoNotAutobox @Nullable Object upper);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange lowerBound(@Nullable Any lower, boolean open);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -193,23 +107,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange lowerBound(@Nullable Any lower);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
-   */
-  @Nonnull
   public static native IDBKeyRange lowerBound(@DoNotAutobox @Nullable Object lower);
-
-  /**
-   * value is the value for the new key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/only">IDBKeyRange.only - MDN</a>
-   */
-  @Nonnull
-  public static native IDBKeyRange only(@Nullable Any value);
 
   /**
    * value is the value for the new key range.
@@ -225,14 +123,6 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange upperBound(@Nullable Any upper, boolean open);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
-   */
-  @Nonnull
   public static native IDBKeyRange upperBound(@DoNotAutobox @Nullable Object upper, boolean open);
 
   /**
@@ -241,22 +131,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange upperBound(@Nullable Any upper);
-
-  /**
-   * IDBKeyRange: The newly created key range.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
-   */
-  @Nonnull
   public static native IDBKeyRange upperBound(@DoNotAutobox @Nullable Object upper);
-
-  /**
-   * key The key you want to check for in your key range. This can be any type.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/includes">IDBKeyRange.includes - MDN</a>
-   */
-  public native boolean includes(@Nullable Any key);
 
   /**
    * key The key you want to check for in your key range. This can be any type.

@@ -9,7 +9,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 /**
@@ -47,14 +46,6 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob">HTMLCanvasElement.toBlob - MDN</a>
    */
   public native void toBlob(@Nonnull BlobCallback _callback, @Nonnull String type,
-      @Nullable Any quality);
-
-  /**
-   * The HTMLCanvasElement.toBlob() method creates a Blob object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent. If type is not specified, the image type is image/png. The created image is in a resolution of 96dpi.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob">HTMLCanvasElement.toBlob - MDN</a>
-   */
-  public native void toBlob(@Nonnull BlobCallback _callback, @Nonnull String type,
       @DoNotAutobox @Nullable Object quality);
 
   /**
@@ -70,14 +61,6 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob">HTMLCanvasElement.toBlob - MDN</a>
    */
   public native void toBlob(@Nonnull BlobCallback _callback);
-
-  /**
-   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL - MDN</a>
-   */
-  @Nonnull
-  public native String toDataURL(@Nonnull String type, @Nullable Any quality);
 
   /**
    * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.

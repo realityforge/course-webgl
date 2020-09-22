@@ -8,7 +8,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 /**
  * In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our To-do Notifications app (view example live.)
@@ -24,27 +23,6 @@ import jsinterop.base.Any;
 public class IDBFactory {
   protected IDBFactory() {
   }
-
-  /**
-   * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
-   */
-  public native short cmp(@Nullable Any first, @Nullable Any second);
-
-  /**
-   * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
-   */
-  public native short cmp(@DoNotAutobox @Nullable Object first, @Nullable Any second);
-
-  /**
-   * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
-   */
-  public native short cmp(@Nullable Any first, @DoNotAutobox @Nullable Object second);
 
   /**
    * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:

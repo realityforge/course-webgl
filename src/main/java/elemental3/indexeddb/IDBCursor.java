@@ -91,40 +91,12 @@ public class IDBCursor {
   @JsMethod(
       name = "continue"
   )
-  public native void continue_(@Nullable Any key);
-
-  @JsMethod(
-      name = "continue"
-  )
   public native void continue_(@DoNotAutobox @Nullable Object key);
 
   @JsMethod(
       name = "continue"
   )
   public native void continue_();
-
-  /**
-   * The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
-   */
-  public native void continuePrimaryKey(@Nullable Any key, @Nullable Any primaryKey);
-
-  /**
-   * The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
-   */
-  public native void continuePrimaryKey(@DoNotAutobox @Nullable Object key,
-      @Nullable Any primaryKey);
-
-  /**
-   * The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
-   */
-  public native void continuePrimaryKey(@Nullable Any key,
-      @DoNotAutobox @Nullable Object primaryKey);
 
   /**
    * The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.
@@ -141,14 +113,6 @@ public class IDBCursor {
    */
   @Nonnull
   public native IDBRequest delete();
-
-  /**
-   * The update() method of the IDBCursor interface returns an IDBRequest object, and, in a separate thread, updates the value at the current position of the cursor in the object store. If the cursor points to a record that has just been deleted, a new record is created.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/update">IDBCursor.update - MDN</a>
-   */
-  @Nonnull
-  public native IDBRequest update(@Nullable Any value);
 
   /**
    * The update() method of the IDBCursor interface returns an IDBRequest object, and, in a separate thread, updates the value at the current position of the cursor in the object store. If the cursor points to a record that has just been deleted, a new record is created.
