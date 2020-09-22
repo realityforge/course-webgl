@@ -33,12 +33,7 @@ public interface ValueEventInit extends EventInit {
   Any value();
 
   @JsProperty
-  void setValue(@Nullable Any value);
-
-  @JsOverlay
-  default void setValue(@DoNotAutobox @Nullable final Object value) {
-    setValue( Js.asAny( value ) );
-  }
+  void setValue(@DoNotAutobox @Nullable Object value);
 
   @JsOverlay
   @Nonnull

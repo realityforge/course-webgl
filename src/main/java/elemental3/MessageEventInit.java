@@ -33,12 +33,7 @@ public interface MessageEventInit extends EventInit {
   Any data();
 
   @JsProperty
-  void setData(@Nullable Any data);
-
-  @JsOverlay
-  default void setData(@DoNotAutobox @Nullable final Object data) {
-    setData( Js.asAny( data ) );
-  }
+  void setData(@DoNotAutobox @Nullable Object data);
 
   @JsOverlay
   @Nonnull

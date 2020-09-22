@@ -32,12 +32,7 @@ public interface PopStateEventInit extends EventInit {
   Any state();
 
   @JsProperty
-  void setState(@Nullable Any state);
-
-  @JsOverlay
-  default void setState(@DoNotAutobox @Nullable final Object state) {
-    setState( Js.asAny( state ) );
-  }
+  void setState(@DoNotAutobox @Nullable Object state);
 
   @JsOverlay
   @Nonnull
