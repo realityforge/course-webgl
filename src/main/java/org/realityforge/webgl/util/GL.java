@@ -3,10 +3,12 @@ package org.realityforge.webgl.util;
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
 import elemental3.Global;
+import elemental3.HTMLImageElement;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
+import elemental3.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -105,6 +107,46 @@ public final class GL
     {
       return shader;
     }
+  }
+
+  @Nonnull
+  public static WebGLTexture prepareTexture( @Nonnull final WebGL2RenderingContext gl,
+                                             @Nonnull final HTMLImageElement image,
+                                             final int magFilter,
+                                             final int minFilter,
+                                             final int wrapS,
+                                             final int wrapT )
+  {
+    // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
+    final WebGLTexture texture = gl.createTexture();
+    assert null != texture;
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
+
+    // This is the call that pushes data across to GPU so will be "slow"
+    gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
+                   0,
+                   WebGL2RenderingContext.RGB,
+                   WebGL2RenderingContext.RGB,
+                   WebGL2RenderingContext.UNSIGNED_BYTE,
+                   image );
+
+    // Make sure we specify how perform interpolation between texture coordinates
+
+    // TODO: These methods should have integer enums defined for their target,
+    //  parameters and potentially param values
+    gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
+                      WebGL2RenderingContext.TEXTURE_MAG_FILTER,
+                      magFilter );
+    gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
+                      WebGL2RenderingContext.TEXTURE_MIN_FILTER,
+                      minFilter );
+    gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
+                      WebGL2RenderingContext.TEXTURE_WRAP_S,
+                      wrapS );
+    gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
+                      WebGL2RenderingContext.TEXTURE_WRAP_T,
+                      wrapT );
+    return texture;
   }
 
   @Nonnull
