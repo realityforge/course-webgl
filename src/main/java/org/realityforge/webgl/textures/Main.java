@@ -18,7 +18,6 @@ public final class Main
   @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private Mesh _mesh;
-  // Cube rotation angle
   private double _angle;
 
   @Override
