@@ -119,12 +119,7 @@ final class Mesh
 
     gl.useProgram( _program );
 
-    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
-    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
-    gl.uniform1i( _textureData0.getLocation(), 0 );
-
-    gl.activeTexture( WebGL2RenderingContext.TEXTURE1 );
-    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
-    gl.uniform1i( _textureData1.getLocation(), 1 );
+    GL.sendTextureToGpu( gl, _textureData0, _texture1, 0 );
+    GL.sendTextureToGpu( gl, _textureData1, _texture2, 1 );
   }
 }

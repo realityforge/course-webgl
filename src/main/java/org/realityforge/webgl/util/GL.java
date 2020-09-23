@@ -200,6 +200,16 @@ public final class GL
     return texture;
   }
 
+  public static void sendTextureToGpu( @Nonnull final WebGL2RenderingContext gl,
+                                       @Nonnull final UniformBinding binding,
+                                       @Nonnull final WebGLTexture texture,
+                                       final int index )
+  {
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + index );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
+    gl.uniform1i( binding.getLocation(), index );
+  }
+
   @Nonnull
   private static <T> T requireNonNull( final T object )
   {
