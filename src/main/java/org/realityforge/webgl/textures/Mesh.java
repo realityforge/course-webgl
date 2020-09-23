@@ -1,29 +1,29 @@
 package org.realityforge.webgl.textures;
 
-import elemental2.core.Float32Array;
 import elemental2.promise.Promise;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
 import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
+import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.webgl.annotations.GLSL;
+import org.realityforge.webgl.util.Float32BufferAttribute;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 
 final class Mesh
 {
   @Nonnull
-  private final WebGLBuffer _positionBuffer;
+  private final Float32BufferAttribute _positionAttribute;
   @Nonnull
-  private final WebGLBuffer _colorBuffer;
+  private final Float32BufferAttribute _colorAttribute;
   @Nonnull
-  private final WebGLBuffer _textureCoordinatesBuffer;
+  private final Float32BufferAttribute _textureCoordinatesAttribute;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -43,24 +43,15 @@ final class Mesh
   private final int _textureCoordinateIndex;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Float32Array positionData,
-        @Nonnull final Float32Array colorData,
-        @Nonnull final Float32Array textureCoordinatesData,
+        @Nonnull final Float32BufferAttribute positionAttribute,
+        @Nonnull final Float32BufferAttribute colorAttribute,
+        @Nonnull final Float32BufferAttribute textureCoordinatesAttribute,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
-    _positionBuffer = GL.prepareBuffer( gl,
-                                        WebGL2RenderingContext.ARRAY_BUFFER,
-                                        WebGL2RenderingContext.STATIC_DRAW,
-                                        positionData );
-    _colorBuffer = GL.prepareBuffer( gl,
-                                     WebGL2RenderingContext.ARRAY_BUFFER,
-                                     WebGL2RenderingContext.STATIC_DRAW,
-                                     colorData );
-    _textureCoordinatesBuffer = GL.prepareBuffer( gl,
-                                                  WebGL2RenderingContext.ARRAY_BUFFER,
-                                                  WebGL2RenderingContext.STATIC_DRAW,
-                                                  textureCoordinatesData );
+    _positionAttribute = Objects.requireNonNull(positionAttribute);
+    _colorAttribute = Objects.requireNonNull(colorAttribute);
+    _textureCoordinatesAttribute = Objects.requireNonNull(textureCoordinatesAttribute);
 
     loadTexture( gl, "img/webgl-logo-256.jpg" ).then( texture -> {
       _texture1 = texture;
@@ -129,33 +120,10 @@ final class Mesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     // Tell GPU to load position data into program from out buffer
-    GL.linkBufferResource( gl,
-                           _positionBuffer,
-                           _positionIndex,
-                           WebGL2RenderingContext.ARRAY_BUFFER,
-                           3,
-                           WebGL2RenderingContext.FLOAT,
-                           0,
-                           0 );
+    GL.linkBufferResource( gl, _positionAttribute, _positionIndex );
+    GL.linkBufferResource( gl, _colorAttribute, _colorIndex );
+    GL.linkBufferResource( gl, _textureCoordinatesAttribute, _textureCoordinateIndex );
 
-    // Tell GPU to load color data into program from out buffer
-    GL.linkBufferResource( gl,
-                           _colorBuffer,
-                           _colorIndex,
-                           WebGL2RenderingContext.ARRAY_BUFFER,
-                           4,
-                           WebGL2RenderingContext.FLOAT,
-                           0,
-                           0 );
-    // Tell GPU to load uv texture coordinates into program from the buffer
-    GL.linkBufferResource( gl,
-                           _textureCoordinatesBuffer,
-                           _textureCoordinateIndex,
-                           WebGL2RenderingContext.ARRAY_BUFFER,
-                           2,
-                           WebGL2RenderingContext.FLOAT,
-                           0,
-                           0 );
     gl.useProgram( _program );
 
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );

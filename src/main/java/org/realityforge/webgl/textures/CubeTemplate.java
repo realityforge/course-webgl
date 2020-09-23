@@ -4,6 +4,7 @@ import elemental2.core.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
+import org.realityforge.webgl.util.Float32BufferAttribute;
 
 final class CubeTemplate
 {
@@ -99,34 +100,6 @@ final class CubeTemplate
     };
   private static final double[] TEXTURE_COORDINATES = new double[]
     {
-      0.0, 0.0,
-      1.0, 0.0,
-      1.0, 1.0,
-      1.0, 1.0,
-      0.0, 1.0,
-      0.0, 0.0,
-
-      0.0, 0.0,
-      1.0, 0.0,
-      1.0, 1.0,
-      1.0, 1.0,
-      0.0, 1.0,
-      0.0, 0.0,
-
-      1.0, 0.0,
-      1.0, 1.0,
-      0.0, 1.0,
-      0.0, 1.0,
-      0.0, 0.0,
-      1.0, 0.0,
-
-      1.0, 0.0,
-      1.0, 1.0,
-      0.0, 1.0,
-      0.0, 1.0,
-      0.0, 0.0,
-      1.0, 0.0,
-
       0.0, 1.0,
       1.0, 1.0,
       1.0, 0.0,
@@ -139,7 +112,35 @@ final class CubeTemplate
       1.0, 0.0,
       1.0, 0.0,
       0.0, 0.0,
-      0.0, 1.0
+      0.0, 1.0,
+
+      1.0, 1.0,
+      1.0, 0.0,
+      0.0, 0.0,
+      0.0, 0.0,
+      0.0, 1.0,
+      1.0, 1.0,
+
+      1.0, 1.0,
+      1.0, 0.0,
+      0.0, 0.0,
+      0.0, 0.0,
+      0.0, 1.0,
+      1.0, 1.0,
+
+      0.0, 0.0,
+      1.0, 0.0,
+      1.0, 1.0,
+      1.0, 1.0,
+      0.0, 1.0,
+      0.0, 0.0,
+
+      0.0, 0.0,
+      1.0, 0.0,
+      1.0, 1.0,
+      1.0, 1.0,
+      0.0, 1.0,
+      0.0, 0.0
     };
   // The vertex shader that will be run for every vertex
   @GLSL
@@ -207,9 +208,9 @@ final class CubeTemplate
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
     return new Mesh( gl,
-                     new Float32Array( POSITIONS ),
-                     new Float32Array( COLORS ),
-                     new Float32Array( TEXTURE_COORDINATES ),
+                     new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
+                     new Float32BufferAttribute( gl, new Float32Array( COLORS ), 4 ),
+                     new Float32BufferAttribute( gl, new Float32Array( TEXTURE_COORDINATES ), 2 ),
                      VERTEX_SHADER_SOURCE,
                      FRAGMENT_SHADER_SOURCE );
   }
