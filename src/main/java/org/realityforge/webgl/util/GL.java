@@ -2,6 +2,7 @@ package org.realityforge.webgl.util;
 
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
+import elemental3.ArrayBufferView;
 import elemental3.Global;
 import elemental3.HTMLImageElement;
 import elemental3.gl.WebGL2RenderingContext;
@@ -14,6 +15,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.annotations.ShaderType;
+import org.realityforge.webgl.annotations.TargetType;
+import org.realityforge.webgl.annotations.Usage;
 
 // TODO: All of these methods should take a onError handler that is invoked when unexpected error
 //  occurs. We should then follow this up with throwing a runtime error to rollback state. Both of
@@ -28,7 +31,7 @@ public final class GL
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
                                            final int target,
-                                           final int usage,
+                                           @Usage final int usage,
                                            @Nonnull final Uint16Array data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
@@ -41,8 +44,22 @@ public final class GL
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                           final int target,
-                                           final int usage,
+                                           @TargetType final int target,
+                                           @Usage final int usage,
+                                           @Nonnull final ArrayBufferView data )
+  {
+    final WebGLBuffer buffer = gl.createBuffer();
+    assert null != buffer;
+    gl.bindBuffer( target, buffer );
+    gl.bufferData( target, data, usage );
+    return buffer;
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
+                                           @TargetType final int target,
+                                           @Usage final int usage,
                                            @Nonnull final Float32Array data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
@@ -54,9 +71,24 @@ public final class GL
 
   @SuppressWarnings( "SameParameterValue" )
   public static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
+                                         @Nonnull final Float32BufferAttribute attribute,
+                                         final int index )
+  {
+    gl.enableVertexAttribArray( index );
+    gl.bindBuffer( attribute.getTarget(), attribute.getBuffer() );
+    gl.vertexAttribPointer( index,
+                            attribute.getDimension(),
+                            attribute.getType(),
+                            false,
+                            attribute.getStride(),
+                            attribute.getOffset() );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  public static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
                                          @Nonnull final WebGLBuffer buffer,
                                          final int index,
-                                         final int target,
+                                         @TargetType final int target,
                                          final int dimension,
                                          final int type,
                                          final int stride,
