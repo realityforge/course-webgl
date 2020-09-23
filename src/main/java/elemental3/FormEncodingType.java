@@ -16,7 +16,7 @@ public @interface FormEncodingType {
    * The default value.
    */
   @Nonnull
-  String application_x_www_form_urlencoded = "application/x-www-form-urlencoded";
+  String urlencoded = "application/x-www-form-urlencoded";
 
   /**
    * Use this if the form contains <code>&lt;input&gt;</code> elements with type=file.
