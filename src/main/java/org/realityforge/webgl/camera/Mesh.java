@@ -7,7 +7,6 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
-import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.webgl.annotations.GLSL;
@@ -15,6 +14,7 @@ import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32BufferAttribute;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.UniformBinding;
 
 final class Mesh
 {
@@ -29,15 +29,15 @@ final class Mesh
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
-  private final WebGLUniformLocation _modelMatrixLocation;
+  private final UniformBinding _modelMatrix;
   @Nonnull
-  private final WebGLUniformLocation _viewMatrixLocation;
+  private final UniformBinding _viewMatrix;
   @Nonnull
-  private final WebGLUniformLocation _projectionMatrixLocation;
+  private final UniformBinding _projectionMatrix;
   @Nonnull
-  private final WebGLUniformLocation _textureData0Location;
+  private final UniformBinding _textureData0;
   @Nonnull
-  private final WebGLUniformLocation _textureData1Location;
+  private final UniformBinding _textureData1;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32BufferAttribute positionAttribute,
@@ -64,11 +64,11 @@ final class Mesh
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
-    _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
-    _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
-    _textureData0Location = getUniformLocation( gl, _program, "textureData0" );
-    _textureData1Location = getUniformLocation( gl, _program, "textureData1" );
+    _modelMatrix = new UniformBinding( gl, program, "modelMatrix" );
+    _viewMatrix = new UniformBinding( gl, program, "viewMatrix" );
+    _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
+    _textureData0 = new UniformBinding( gl, program, "textureData0" );
+    _textureData1 = new UniformBinding( gl, program, "textureData1" );
 
     _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
     _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
@@ -103,9 +103,9 @@ final class Mesh
                @Nonnull final Matrix4d projectionMatrix )
   {
     gl.useProgram( _program );
-    gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
+    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
+    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
@@ -121,20 +121,10 @@ final class Mesh
 
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
-    gl.uniform1i( _textureData0Location, 0 );
+    gl.uniform1i( _textureData0.getLocation(), 0 );
 
     gl.activeTexture( WebGL2RenderingContext.TEXTURE1 );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
-    gl.uniform1i( _textureData1Location, 1 );
-  }
-
-  @Nonnull
-  private WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                   @Nonnull final WebGLProgram program,
-                                                   @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
+    gl.uniform1i( _textureData1.getLocation(), 1 );
   }
 }
