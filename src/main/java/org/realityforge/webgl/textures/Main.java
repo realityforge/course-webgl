@@ -19,6 +19,7 @@ public final class Main
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private Mesh _mesh;
   private double _angle;
+  private boolean _sentToGpu;
 
   @Override
   public void onModuleLoad()
@@ -29,7 +30,6 @@ public final class Main
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
-    _mesh.sendToGpu( gl );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
@@ -41,6 +41,12 @@ public final class Main
     if ( !_mesh.areTexturesLoaded() )
     {
       return;
+    }
+    else if ( !_sentToGpu )
+    {
+      // Have to send to GPU here as otherwise texture data has not loaded
+      _mesh.sendToGpu( gl );
+      _sentToGpu = true;
     }
 
     gl.clearColor( 0, 0, 0, 1 );
