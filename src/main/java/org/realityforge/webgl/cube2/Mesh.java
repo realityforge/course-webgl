@@ -47,13 +47,13 @@ final class Mesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     // Tell GPU to load position data into program from out buffer
-    GL.linkBufferResource( gl,
-                           _geometry.getPositionBuffer(),
-                           _material.getPositionIndex(),
-                           WebGL2RenderingContext.ARRAY_BUFFER,
-                           3,
-                           WebGL2RenderingContext.FLOAT,
-                           0,
-                           0 );
+    GL.sendToGpu( gl,
+                  _geometry.getPositionBuffer(),
+                  _material.getPositionIndex(),
+                  WebGL2RenderingContext.ARRAY_BUFFER,
+                  3,
+                  WebGL2RenderingContext.FLOAT,
+                  0,
+                  0 );
   }
 }

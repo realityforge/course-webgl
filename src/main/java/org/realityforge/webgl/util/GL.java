@@ -70,8 +70,8 @@ public final class GL
   }
 
   @SuppressWarnings( "SameParameterValue" )
-  public static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
-                                         @Nonnull final BufferAttributeBinding binding )
+  public static void sendToGpu( @Nonnull final WebGL2RenderingContext gl,
+                                @Nonnull final BufferAttributeBinding binding )
   {
     final BufferAttribute<?> attribute = binding.getAttribute();
     final int location = binding.getLocation();
@@ -86,9 +86,9 @@ public final class GL
   }
 
   @SuppressWarnings( "SameParameterValue" )
-  public static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
-                                         @Nonnull final Float32BufferAttribute attribute,
-                                         final int index )
+  public static void sendToGpu( @Nonnull final WebGL2RenderingContext gl,
+                                @Nonnull final Float32BufferAttribute attribute,
+                                final int index )
   {
     gl.enableVertexAttribArray( index );
     gl.bindBuffer( attribute.getTarget(), attribute.getBuffer() );
@@ -101,14 +101,14 @@ public final class GL
   }
 
   @SuppressWarnings( "SameParameterValue" )
-  public static void linkBufferResource( @Nonnull final WebGL2RenderingContext gl,
-                                         @Nonnull final WebGLBuffer buffer,
-                                         final int index,
-                                         @TargetType final int target,
-                                         final int dimension,
-                                         final int type,
-                                         final int stride,
-                                         final int offset )
+  public static void sendToGpu( @Nonnull final WebGL2RenderingContext gl,
+                                @Nonnull final WebGLBuffer buffer,
+                                final int index,
+                                @TargetType final int target,
+                                final int dimension,
+                                final int type,
+                                final int stride,
+                                final int offset )
   {
     gl.enableVertexAttribArray( index );
     gl.bindBuffer( target, buffer );
