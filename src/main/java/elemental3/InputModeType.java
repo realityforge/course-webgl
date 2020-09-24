@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -10,6 +11,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode - MDN</a>
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = InputModeType.class
 )

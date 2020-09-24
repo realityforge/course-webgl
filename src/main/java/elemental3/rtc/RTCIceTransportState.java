@@ -1,10 +1,12 @@
 package elemental3.rtc;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = RTCIceTransportState.class
 )
@@ -28,5 +30,5 @@ public @interface RTCIceTransportState {
   String failed = "failed";
 
   @Nonnull
-  String new_ = "new";
+  String new_ = "new_";
 }

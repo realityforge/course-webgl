@@ -1,10 +1,12 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = PermissionName.class
 )
@@ -13,10 +15,10 @@ public @interface PermissionName {
   String accelerometer = "accelerometer";
 
   @Nonnull
-  String ambient_light_sensor = "ambient-light-sensor";
+  String ambient_light_sensor = "ambient_light_sensor";
 
   @Nonnull
-  String background_sync = "background-sync";
+  String background_sync = "background_sync";
 
   @Nonnull
   String bluetooth = "bluetooth";
@@ -28,7 +30,7 @@ public @interface PermissionName {
   String clipboard = "clipboard";
 
   @Nonnull
-  String device_info = "device-info";
+  String device_info = "device_info";
 
   @Nonnull
   String geolocation = "geolocation";
@@ -49,7 +51,7 @@ public @interface PermissionName {
   String notifications = "notifications";
 
   @Nonnull
-  String persistent_storage = "persistent-storage";
+  String persistent_storage = "persistent_storage";
 
   @Nonnull
   String push = "push";

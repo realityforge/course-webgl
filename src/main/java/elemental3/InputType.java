@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -10,6 +11,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#%3Cinput%3E_types"><code>&lt;input&gt;</code> type - MDN</a>
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = InputType.class
 )
@@ -42,7 +44,7 @@ public @interface InputType {
    * A control for entering a date and time, with no time zone. Opens a date picker or numeric wheels for date- and time-components when active in supporting browsers.
    */
   @Nonnull
-  String datetime_local = "datetime-local";
+  String datetime_local = "datetime_local";
 
   /**
    * A field for editing an email address. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.

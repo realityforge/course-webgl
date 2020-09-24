@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -8,6 +9,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * An enumerated value to indicate how the text track is meant to be used.
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = TrackKind.class
 )

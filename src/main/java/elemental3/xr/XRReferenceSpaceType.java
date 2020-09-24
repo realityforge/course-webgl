@@ -1,22 +1,24 @@
 package elemental3.xr;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = XRReferenceSpaceType.class
 )
 public @interface XRReferenceSpaceType {
   @Nonnull
-  String bounded_floor = "bounded-floor";
+  String bounded_floor = "bounded_floor";
 
   @Nonnull
   String local = "local";
 
   @Nonnull
-  String local_floor = "local-floor";
+  String local_floor = "local_floor";
 
   @Nonnull
   String unbounded = "unbounded";

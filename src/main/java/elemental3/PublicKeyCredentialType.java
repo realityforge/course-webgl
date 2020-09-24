@@ -1,14 +1,16 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = PublicKeyCredentialType.class
 )
 public @interface PublicKeyCredentialType {
   @Nonnull
-  String public_key = "public-key";
+  String public_key = "public_key";
 }

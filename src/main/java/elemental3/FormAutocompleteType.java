@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -8,6 +9,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * An enumeration describing the whether elements can have their values automatically completed by the browser.
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = FormAutocompleteType.class
 )

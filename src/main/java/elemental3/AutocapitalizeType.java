@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -8,6 +9,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = AutocapitalizeType.class
 )

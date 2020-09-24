@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -8,6 +9,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * An enumerated value to indicate whether to use CORS to fetch resources.
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = CrossOriginType.class
 )
@@ -30,5 +32,5 @@ public @interface CrossOriginType {
    * image will be tainted and its usage restricted.
    */
   @Nonnull
-  String use_credentials = "use-credentials";
+  String use_credentials = "use_credentials";
 }

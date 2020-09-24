@@ -1,5 +1,6 @@
 package elemental3;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -8,6 +9,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * An enumerated value to indicate how the control wraps text.
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = RenderContextType.class
 )
@@ -16,7 +18,7 @@ public @interface RenderContextType {
    * The context type designates a {@link elemental3.CanvasRenderingContext2D}, a two-dimensional rendering context.
    */
   @Nonnull
-  String _2d = "2d";
+  String _2d = "_2d";
 
   /**
    * The context type designates a {@link elemental3.ImageBitmapRenderingContext}.
