@@ -15,10 +15,10 @@ public @interface PermissionName {
   String accelerometer = "accelerometer";
 
   @Nonnull
-  String ambient_light_sensor = "ambient_light_sensor";
+  String ambient_light_sensor = "ambient-light-sensor";
 
   @Nonnull
-  String background_sync = "background_sync";
+  String background_sync = "background-sync";
 
   @Nonnull
   String bluetooth = "bluetooth";
@@ -30,7 +30,7 @@ public @interface PermissionName {
   String clipboard = "clipboard";
 
   @Nonnull
-  String device_info = "device_info";
+  String device_info = "device-info";
 
   @Nonnull
   String geolocation = "geolocation";
@@ -51,7 +51,7 @@ public @interface PermissionName {
   String notifications = "notifications";
 
   @Nonnull
-  String persistent_storage = "persistent_storage";
+  String persistent_storage = "persistent-storage";
 
   @Nonnull
   String push = "push";

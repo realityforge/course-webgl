@@ -18,7 +18,7 @@ public @interface RenderContextType {
    * The context type designates a {@link elemental3.CanvasRenderingContext2D}, a two-dimensional rendering context.
    */
   @Nonnull
-  String _2d = "_2d";
+  String _2d = "2d";
 
   /**
    * The context type designates a {@link elemental3.ImageBitmapRenderingContext}.

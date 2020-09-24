@@ -15,7 +15,7 @@ public @interface PlaybackDirection {
   String alternate = "alternate";
 
   @Nonnull
-  String alternate_reverse = "alternate_reverse";
+  String alternate_reverse = "alternate-reverse";
 
   @Nonnull
   String normal = "normal";

@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface RequestDestination {
   @Nonnull
-  String other = "other";
+  String other = "";
 
   @Nonnull
   String audio = "audio";

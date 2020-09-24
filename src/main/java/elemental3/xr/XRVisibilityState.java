@@ -18,5 +18,5 @@ public @interface XRVisibilityState {
   String visible = "visible";
 
   @Nonnull
-  String visible_blurred = "visible_blurred";
+  String visible_blurred = "visible-blurred";
 }

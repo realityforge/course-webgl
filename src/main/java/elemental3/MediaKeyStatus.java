@@ -15,19 +15,19 @@ public @interface MediaKeyStatus {
   String expired = "expired";
 
   @Nonnull
-  String internal_error = "internal_error";
+  String internal_error = "internal-error";
 
   @Nonnull
-  String output_downscaled = "output_downscaled";
+  String output_downscaled = "output-downscaled";
 
   @Nonnull
-  String output_restricted = "output_restricted";
+  String output_restricted = "output-restricted";
 
   @Nonnull
   String released = "released";
 
   @Nonnull
-  String status_pending = "status_pending";
+  String status_pending = "status-pending";
 
   @Nonnull
   String usable = "usable";

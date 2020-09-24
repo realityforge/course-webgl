@@ -44,7 +44,7 @@ public @interface InputType {
    * A control for entering a date and time, with no time zone. Opens a date picker or numeric wheels for date- and time-components when active in supporting browsers.
    */
   @Nonnull
-  String datetime_local = "datetime_local";
+  String datetime_local = "datetime-local";
 
   /**
    * A field for editing an email address. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.

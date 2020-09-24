@@ -12,8 +12,8 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface AutomationRate {
   @Nonnull
-  String a_rate = "a_rate";
+  String a_rate = "a-rate";
 
   @Nonnull
-  String k_rate = "k_rate";
+  String k_rate = "k-rate";
 }

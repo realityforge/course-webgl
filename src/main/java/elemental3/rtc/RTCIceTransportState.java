@@ -30,5 +30,5 @@ public @interface RTCIceTransportState {
   String failed = "failed";
 
   @Nonnull
-  String new_ = "new_";
+  String new_ = "new";
 }

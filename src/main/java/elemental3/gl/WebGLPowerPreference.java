@@ -12,11 +12,11 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface WebGLPowerPreference {
   @Nonnull
-  String default_ = "default_";
+  String default_ = "default";
 
   @Nonnull
-  String high_performance = "high_performance";
+  String high_performance = "high-performance";
 
   @Nonnull
-  String low_power = "low_power";
+  String low_power = "low-power";
 }

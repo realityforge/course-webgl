@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface MediaKeysRequirement {
   @Nonnull
-  String not_allowed = "not_allowed";
+  String not_allowed = "not-allowed";
 
   @Nonnull
   String optional = "optional";

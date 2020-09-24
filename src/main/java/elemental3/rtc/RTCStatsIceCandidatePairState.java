@@ -18,7 +18,7 @@ public @interface RTCStatsIceCandidatePairState {
   String frozen = "frozen";
 
   @Nonnull
-  String in_progress = "in_progress";
+  String in_progress = "in-progress";
 
   @Nonnull
   String succeeded = "succeeded";

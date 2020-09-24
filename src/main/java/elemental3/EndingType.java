@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface EndingType {
   @Nonnull
-  String native_ = "native_";
+  String native_ = "native";
 
   @Nonnull
   String transparent = "transparent";

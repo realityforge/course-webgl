@@ -18,8 +18,8 @@ public @interface PositionAlignSetting {
   String center = "center";
 
   @Nonnull
-  String line_left = "line_left";
+  String line_left = "line-left";
 
   @Nonnull
-  String line_right = "line_right";
+  String line_right = "line-right";
 }

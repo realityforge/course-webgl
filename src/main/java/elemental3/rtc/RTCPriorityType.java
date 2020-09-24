@@ -21,5 +21,5 @@ public @interface RTCPriorityType {
   String medium = "medium";
 
   @Nonnull
-  String very_low = "very_low";
+  String very_low = "very-low";
 }

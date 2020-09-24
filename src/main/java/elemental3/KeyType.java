@@ -12,10 +12,10 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface KeyType {
   @Nonnull
-  String private_ = "private_";
+  String private_ = "private";
 
   @Nonnull
-  String public_ = "public_";
+  String public_ = "public";
 
   @Nonnull
   String secret = "secret";

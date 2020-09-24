@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface AuthenticatorAttachment {
   @Nonnull
-  String cross_platform = "cross_platform";
+  String cross_platform = "cross-platform";
 
   @Nonnull
   String platform = "platform";

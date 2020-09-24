@@ -15,23 +15,23 @@ public @interface SpeechRecognitionErrorCode {
   String aborted = "aborted";
 
   @Nonnull
-  String audio_capture = "audio_capture";
+  String audio_capture = "audio-capture";
 
   @Nonnull
-  String bad_grammar = "bad_grammar";
+  String bad_grammar = "bad-grammar";
 
   @Nonnull
-  String language_not_supported = "language_not_supported";
+  String language_not_supported = "language-not-supported";
 
   @Nonnull
   String network = "network";
 
   @Nonnull
-  String no_speech = "no_speech";
+  String no_speech = "no-speech";
 
   @Nonnull
-  String not_allowed = "not_allowed";
+  String not_allowed = "not-allowed";
 
   @Nonnull
-  String service_not_allowed = "service_not_allowed";
+  String service_not_allowed = "service-not-allowed";
 }

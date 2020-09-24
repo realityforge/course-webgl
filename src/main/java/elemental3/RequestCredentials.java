@@ -18,5 +18,5 @@ public @interface RequestCredentials {
   String omit = "omit";
 
   @Nonnull
-  String same_origin = "same_origin";
+  String same_origin = "same-origin";
 }

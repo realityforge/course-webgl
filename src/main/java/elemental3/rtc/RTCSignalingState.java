@@ -15,16 +15,16 @@ public @interface RTCSignalingState {
   String closed = "closed";
 
   @Nonnull
-  String have_local_offer = "have_local_offer";
+  String have_local_offer = "have-local-offer";
 
   @Nonnull
-  String have_local_pranswer = "have_local_pranswer";
+  String have_local_pranswer = "have-local-pranswer";
 
   @Nonnull
-  String have_remote_offer = "have_remote_offer";
+  String have_remote_offer = "have-remote-offer";
 
   @Nonnull
-  String have_remote_pranswer = "have_remote_pranswer";
+  String have_remote_pranswer = "have-remote-pranswer";
 
   @Nonnull
   String stable = "stable";

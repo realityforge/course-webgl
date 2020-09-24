@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface MediaKeySessionType {
   @Nonnull
-  String persistent_license = "persistent_license";
+  String persistent_license = "persistent-license";
 
   @Nonnull
   String temporary = "temporary";

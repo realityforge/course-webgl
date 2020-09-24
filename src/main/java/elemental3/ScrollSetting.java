@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface ScrollSetting {
   @Nonnull
-  String none = "none";
+  String none = "";
 
   @Nonnull
   String up = "up";

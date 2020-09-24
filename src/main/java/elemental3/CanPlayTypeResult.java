@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface CanPlayTypeResult {
   @Nonnull
-  String negative = "negative";
+  String negative = "";
 
   @Nonnull
   String maybe = "maybe";

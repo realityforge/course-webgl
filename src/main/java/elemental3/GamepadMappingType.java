@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface GamepadMappingType {
   @Nonnull
-  String unknown = "unknown";
+  String unknown = "";
 
   @Nonnull
   String standard = "standard";

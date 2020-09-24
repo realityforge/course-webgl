@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface VideoResizeModeEnum {
   @Nonnull
-  String crop_and_scale = "crop_and_scale";
+  String crop_and_scale = "crop-and-scale";
 
   @Nonnull
   String none = "none";

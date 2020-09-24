@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface GamepadHand {
   @Nonnull
-  String other = "other";
+  String other = "";
 
   @Nonnull
   String left = "left";

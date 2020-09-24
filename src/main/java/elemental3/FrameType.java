@@ -21,5 +21,5 @@ public @interface FrameType {
   String none = "none";
 
   @Nonnull
-  String top_level = "top_level";
+  String top_level = "top-level";
 }

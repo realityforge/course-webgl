@@ -12,5 +12,5 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface PublicKeyCredentialType {
   @Nonnull
-  String public_key = "public_key";
+  String public_key = "public-key";
 }

@@ -12,10 +12,10 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface SpeechSynthesisErrorCode {
   @Nonnull
-  String audio_busy = "audio_busy";
+  String audio_busy = "audio-busy";
 
   @Nonnull
-  String audio_hardware = "audio_hardware";
+  String audio_hardware = "audio-hardware";
 
   @Nonnull
   String canceled = "canceled";
@@ -24,26 +24,26 @@ public @interface SpeechSynthesisErrorCode {
   String interrupted = "interrupted";
 
   @Nonnull
-  String invalid_argument = "invalid_argument";
+  String invalid_argument = "invalid-argument";
 
   @Nonnull
-  String language_unavailable = "language_unavailable";
+  String language_unavailable = "language-unavailable";
 
   @Nonnull
   String network = "network";
 
   @Nonnull
-  String not_allowed = "not_allowed";
+  String not_allowed = "not-allowed";
 
   @Nonnull
-  String synthesis_failed = "synthesis_failed";
+  String synthesis_failed = "synthesis-failed";
 
   @Nonnull
-  String synthesis_unavailable = "synthesis_unavailable";
+  String synthesis_unavailable = "synthesis-unavailable";
 
   @Nonnull
-  String text_too_long = "text_too_long";
+  String text_too_long = "text-too-long";
 
   @Nonnull
-  String voice_unavailable = "voice_unavailable";
+  String voice_unavailable = "voice-unavailable";
 }

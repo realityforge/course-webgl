@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface NotificationPermission {
   @Nonnull
-  String default_ = "default_";
+  String default_ = "default";
 
   @Nonnull
   String denied = "denied";

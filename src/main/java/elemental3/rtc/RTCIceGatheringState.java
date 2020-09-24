@@ -18,5 +18,5 @@ public @interface RTCIceGatheringState {
   String gathering = "gathering";
 
   @Nonnull
-  String new_ = "new_";
+  String new_ = "new";
 }

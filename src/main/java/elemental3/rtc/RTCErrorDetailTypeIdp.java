@@ -12,26 +12,26 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface RTCErrorDetailTypeIdp {
   @Nonnull
-  String idp_bad_script_failure = "idp_bad_script_failure";
+  String idp_bad_script_failure = "idp-bad-script-failure";
 
   @Nonnull
-  String idp_execution_failure = "idp_execution_failure";
+  String idp_execution_failure = "idp-execution-failure";
 
   @Nonnull
-  String idp_load_failure = "idp_load_failure";
+  String idp_load_failure = "idp-load-failure";
 
   @Nonnull
-  String idp_need_login = "idp_need_login";
+  String idp_need_login = "idp-need-login";
 
   @Nonnull
-  String idp_timeout = "idp_timeout";
+  String idp_timeout = "idp-timeout";
 
   @Nonnull
-  String idp_tls_failure = "idp_tls_failure";
+  String idp_tls_failure = "idp-tls-failure";
 
   @Nonnull
-  String idp_token_expired = "idp_token_expired";
+  String idp_token_expired = "idp-token-expired";
 
   @Nonnull
-  String idp_token_invalid = "idp_token_invalid";
+  String idp_token_invalid = "idp-token-invalid";
 }

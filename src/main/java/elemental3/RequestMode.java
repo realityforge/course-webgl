@@ -18,8 +18,8 @@ public @interface RequestMode {
   String navigate = "navigate";
 
   @Nonnull
-  String no_cors = "no_cors";
+  String no_cors = "no-cors";
 
   @Nonnull
-  String same_origin = "same_origin";
+  String same_origin = "same-origin";
 }

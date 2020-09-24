@@ -18,17 +18,17 @@ public @interface FormEncodingType {
    * The default value.
    */
   @Nonnull
-  String urlencoded = "urlencoded";
+  String urlencoded = "application/x-www-form-urlencoded";
 
   /**
    * Use this if the form contains <code>&lt;input&gt;</code> elements with type=file.
    */
   @Nonnull
-  String multipart_form_data = "multipart_form_data";
+  String multipart_form_data = "multipart/form-data";
 
   /**
    * Introduced by HTML5 for debugging purposes.
    */
   @Nonnull
-  String text_plain = "text_plain";
+  String text_plain = "text/plain";
 }

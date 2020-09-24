@@ -18,5 +18,5 @@ public @interface XRTargetRayMode {
   String screen = "screen";
 
   @Nonnull
-  String tracked_pointer = "tracked_pointer";
+  String tracked_pointer = "tracked-pointer";
 }

@@ -15,8 +15,8 @@ public @interface RTCBundlePolicy {
   String balanced = "balanced";
 
   @Nonnull
-  String max_bundle = "max_bundle";
+  String max_bundle = "max-bundle";
 
   @Nonnull
-  String max_compat = "max_compat";
+  String max_compat = "max-compat";
 }

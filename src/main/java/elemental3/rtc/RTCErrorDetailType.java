@@ -12,23 +12,23 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface RTCErrorDetailType {
   @Nonnull
-  String data_channel_failure = "data_channel_failure";
+  String data_channel_failure = "data-channel-failure";
 
   @Nonnull
-  String dtls_failure = "dtls_failure";
+  String dtls_failure = "dtls-failure";
 
   @Nonnull
-  String fingerprint_failure = "fingerprint_failure";
+  String fingerprint_failure = "fingerprint-failure";
 
   @Nonnull
-  String hardware_encoder_error = "hardware_encoder_error";
+  String hardware_encoder_error = "hardware-encoder-error";
 
   @Nonnull
-  String hardware_encoder_not_available = "hardware_encoder_not_available";
+  String hardware_encoder_not_available = "hardware-encoder-not-available";
 
   @Nonnull
-  String sctp_failure = "sctp_failure";
+  String sctp_failure = "sctp-failure";
 
   @Nonnull
-  String sdp_syntax_error = "sdp_syntax_error";
+  String sdp_syntax_error = "sdp-syntax-error";
 }

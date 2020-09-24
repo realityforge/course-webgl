@@ -24,5 +24,5 @@ public @interface RTCDtlsTransportState {
   String failed = "failed";
 
   @Nonnull
-  String new_ = "new_";
+  String new_ = "new";
 }

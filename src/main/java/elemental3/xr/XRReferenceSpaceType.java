@@ -12,13 +12,13 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface XRReferenceSpaceType {
   @Nonnull
-  String bounded_floor = "bounded_floor";
+  String bounded_floor = "bounded-floor";
 
   @Nonnull
   String local = "local";
 
   @Nonnull
-  String local_floor = "local_floor";
+  String local_floor = "local-floor";
 
   @Nonnull
   String unbounded = "unbounded";

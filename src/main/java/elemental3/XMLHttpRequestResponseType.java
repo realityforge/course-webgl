@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface XMLHttpRequestResponseType {
   @Nonnull
-  String default_text = "default_text";
+  String default_text = "";
 
   @Nonnull
   String arraybuffer = "arraybuffer";

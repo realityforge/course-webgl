@@ -12,14 +12,14 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface MediaKeyMessageType {
   @Nonnull
-  String individualization_request = "individualization_request";
+  String individualization_request = "individualization-request";
 
   @Nonnull
-  String license_release = "license_release";
+  String license_release = "license-release";
 
   @Nonnull
-  String license_renewal = "license_renewal";
+  String license_renewal = "license-renewal";
 
   @Nonnull
-  String license_request = "license_request";
+  String license_request = "license-request";
 }

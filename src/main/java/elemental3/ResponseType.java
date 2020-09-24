@@ -18,7 +18,7 @@ public @interface ResponseType {
   String cors = "cors";
 
   @Nonnull
-  String default_ = "default_";
+  String default_ = "default";
 
   @Nonnull
   String error = "error";

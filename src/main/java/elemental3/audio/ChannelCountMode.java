@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface ChannelCountMode {
   @Nonnull
-  String clamped_max = "clamped_max";
+  String clamped_max = "clamped-max";
 
   @Nonnull
   String explicit = "explicit";

@@ -12,7 +12,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface OffscreenRenderingContextId {
   @Nonnull
-  String _2d = "_2d";
+  String _2d = "2d";
 
   @Nonnull
   String bitmaprenderer = "bitmaprenderer";

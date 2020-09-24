@@ -12,14 +12,14 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface OrientationType {
   @Nonnull
-  String landscape_primary = "landscape_primary";
+  String landscape_primary = "landscape-primary";
 
   @Nonnull
-  String landscape_secondary = "landscape_secondary";
+  String landscape_secondary = "landscape-secondary";
 
   @Nonnull
-  String portrait_primary = "portrait_primary";
+  String portrait_primary = "portrait-primary";
 
   @Nonnull
-  String portrait_secondary = "portrait_secondary";
+  String portrait_secondary = "portrait-secondary";
 }

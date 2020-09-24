@@ -12,19 +12,19 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface RequestCache {
   @Nonnull
-  String default_ = "default_";
+  String default_ = "default";
 
   @Nonnull
-  String force_cache = "force_cache";
+  String force_cache = "force-cache";
 
   @Nonnull
-  String no_cache = "no_cache";
+  String no_cache = "no-cache";
 
   @Nonnull
-  String no_store = "no_store";
+  String no_store = "no-store";
 
   @Nonnull
-  String only_if_cached = "only_if_cached";
+  String only_if_cached = "only-if-cached";
 
   @Nonnull
   String reload = "reload";

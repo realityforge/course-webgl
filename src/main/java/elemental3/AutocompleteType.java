@@ -21,49 +21,49 @@ public @interface AutocompleteType {
    * The middle name.
    */
   @Nonnull
-  String additional_name = "additional_name";
+  String additional_name = "additional-name";
 
   /**
    * The first administrative level in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
    */
   @Nonnull
-  String address_level1 = "address_level1";
+  String address_level1 = "address-level1";
 
   /**
    * The second administrative level, in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
    */
   @Nonnull
-  String address_level2 = "address_level2";
+  String address_level2 = "address-level2";
 
   /**
    * The third administrative level, in addresses with at least three administrative levels.
    */
   @Nonnull
-  String address_level3 = "address_level3";
+  String address_level3 = "address-level3";
 
   /**
    * The finest-grained administrative level, in addresses which have four levels.
    */
   @Nonnull
-  String address_level4 = "address_level4";
+  String address_level4 = "address-level4";
 
   /**
    * Each individual line of the street address. These should only be present if the "street-address" is not present.
    */
   @Nonnull
-  String address_line1 = "address_line1";
+  String address_line1 = "address-line1";
 
   /**
    * Each individual line of the street address. These should only be present if the "street-address" is not present.
    */
   @Nonnull
-  String address_line2 = "address_line2";
+  String address_line2 = "address-line2";
 
   /**
    * Each individual line of the street address. These should only be present if the "street-address" is not present.
    */
   @Nonnull
-  String address_line3 = "address_line3";
+  String address_line3 = "address-line3";
 
   /**
    * A birth date, as a full date.
@@ -75,79 +75,79 @@ public @interface AutocompleteType {
    * The day of the month of a birth date.
    */
   @Nonnull
-  String bday_day = "bday_day";
+  String bday_day = "bday-day";
 
   /**
    * The month of the year of a birth date.
    */
   @Nonnull
-  String bday_month = "bday_month";
+  String bday_month = "bday-month";
 
   /**
    * The year of a birth date.
    */
   @Nonnull
-  String bday_year = "bday_year";
+  String bday_year = "bday-year";
 
   /**
    * A middle name as given on a payment instrument or credit card.
    */
   @Nonnull
-  String cc_additional_name = "cc_additional_name";
+  String cc_additional_name = "cc-additional-name";
 
   /**
    * The security code for the payment instrument; on credit cards, this is the 3-digit verification number on the back of the card.
    */
   @Nonnull
-  String cc_csc = "cc_csc";
+  String cc_csc = "cc-csc";
 
   /**
    * A payment method expiration date, typically in the form "MM/YY" or "MM/YYYY".
    */
   @Nonnull
-  String cc_exp = "cc_exp";
+  String cc_exp = "cc-exp";
 
   /**
    * The month in which the payment method expires.
    */
   @Nonnull
-  String cc_exp_month = "cc_exp_month";
+  String cc_exp_month = "cc-exp-month";
 
   /**
    * The year in which the payment method expires.
    */
   @Nonnull
-  String cc_exp_year = "cc_exp_year";
+  String cc_exp_year = "cc-exp-year";
 
   /**
    * A family name, as given on a credit card.
    */
   @Nonnull
-  String cc_family_name = "cc_family_name";
+  String cc_family_name = "cc-family-name";
 
   /**
    * A given (first) name as given on a payment instrument like a credit card.
    */
   @Nonnull
-  String cc_given_name = "cc_given_name";
+  String cc_given_name = "cc-given-name";
 
   /**
    * The full name as printed on or associated with a payment instrument such as a credit card. Using a full name field is preferred, typically, over breaking the name into pieces.
    */
   @Nonnull
-  String cc_name = "cc_name";
+  String cc_name = "cc-name";
 
   /**
    * A credit card number or other number identifying a payment method, such as an account number.
    */
   @Nonnull
-  String cc_number = "cc_number";
+  String cc_number = "cc-number";
 
   /**
    * The type of payment instrument (such as "Visa" or "Master Card").
    */
   @Nonnull
-  String cc_type = "cc_type";
+  String cc_type = "cc-type";
 
   /**
    * A country or territory code.
@@ -159,13 +159,13 @@ public @interface AutocompleteType {
    * A country or territory name.
    */
   @Nonnull
-  String country_name = "country_name";
+  String country_name = "country-name";
 
   /**
    * The user's current password.
    */
   @Nonnull
-  String current_password = "current_password";
+  String current_password = "current-password";
 
   /**
    * An email address.
@@ -177,7 +177,7 @@ public @interface AutocompleteType {
    * The family (or "last") name.
    */
   @Nonnull
-  String family_name = "family_name";
+  String family_name = "family-name";
 
   /**
    * The value describes a fax machine's contact details.
@@ -189,7 +189,7 @@ public @interface AutocompleteType {
    * The given (or "first") name.
    */
   @Nonnull
-  String given_name = "given_name";
+  String given_name = "given-name";
 
   /**
    * The value is for contacting someone at their residence.
@@ -201,13 +201,13 @@ public @interface AutocompleteType {
    * The prefix or title, such as "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", or "Mlle.".
    */
   @Nonnull
-  String honorific_prefix = "honorific_prefix";
+  String honorific_prefix = "honorific-prefix";
 
   /**
    * The suffix, such as "Jr.", "B.Sc.", "PhD.", "MBASW", or "IV".
    */
   @Nonnull
-  String honorific_suffix = "honorific_suffix";
+  String honorific_suffix = "honorific-suffix";
 
   /**
    * A URL for an instant messaging protocol endpoint, such as "xmpp:username@example.net".
@@ -237,7 +237,7 @@ public @interface AutocompleteType {
    * A new password. When creating a new account or changing passwords, this should be used for an "Enter your new password" or "Confirm new password" field, as opposed to a general "Enter your current password" field that might be present. This may be used by the browser both to avoid accidentally filling in an existing password and to offer assistance in creating a secure password.
    */
   @Nonnull
-  String new_password = "new_password";
+  String new_password = "new-password";
 
   /**
    * A nickname or handle.
@@ -263,7 +263,7 @@ public @interface AutocompleteType {
    * A one-time code used for verifying user identity.
    */
   @Nonnull
-  String one_time_code = "one_time_code";
+  String one_time_code = "one-time-code";
 
   /**
    * A company or organization name, such as "Acme Widget Company" or "Girl Scouts of America".
@@ -275,7 +275,7 @@ public @interface AutocompleteType {
    * A job title, or the title a person has within an organization, such as "Senior Technical Writer", "President", or "Assistant Troop Leader".
    */
   @Nonnull
-  String organization_title = "organization_title";
+  String organization_title = "organization-title";
 
   /**
    * The value describes a pager's or beeper's contact details.
@@ -293,7 +293,7 @@ public @interface AutocompleteType {
    * A postal code (in the United States, this is the ZIP code).
    */
   @Nonnull
-  String postal_code = "postal_code";
+  String postal_code = "postal-code";
 
   /**
    * A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.
@@ -305,7 +305,7 @@ public @interface AutocompleteType {
    * A street address. This can be multiple lines of text, and should fully identify the location of the address within its second administrative level (typically a city or town), but should not include the city name, ZIP or postal code, or country name.
    */
   @Nonnull
-  String street_address = "street_address";
+  String street_address = "street-address";
 
   /**
    * A full telephone number, including the country code.
@@ -317,43 +317,43 @@ public @interface AutocompleteType {
    * The area code, with any country-internal prefix applied if appropriate.
    */
   @Nonnull
-  String tel_area_code = "tel_area_code";
+  String tel_area_code = "tel-area-code";
 
   /**
    * The country code, such as "1" for the United States, Canada, and other areas in North America and parts of the Caribbean.
    */
   @Nonnull
-  String tel_country_code = "tel_country_code";
+  String tel_country_code = "tel-country-code";
 
   /**
    * A telephone extension code within the phone number, such as a room or suite number in a hotel or an office extension in a company.
    */
   @Nonnull
-  String tel_extension = "tel_extension";
+  String tel_extension = "tel-extension";
 
   /**
    * The phone number without the country or area code. This can be split further into two parts, for phone numbers which have an exchange number and then a number within the exchange. For the phone number "555-6502", use "tel-local-prefix" for "555" and "tel-local-suffix" for "6502".
    */
   @Nonnull
-  String tel_local = "tel_local";
+  String tel_local = "tel-local";
 
   /**
    * The entire phone number without the country code component, including a country-internal prefix. For the phone number "1-855-555-6502", this field's value would be "855-555-6502".
    */
   @Nonnull
-  String tel_national = "tel_national";
+  String tel_national = "tel-national";
 
   /**
    * The amount, given in the currency specified by "transaction-currency", of the transaction, for a payment form.
    */
   @Nonnull
-  String transaction_amount = "transaction_amount";
+  String transaction_amount = "transaction-amount";
 
   /**
    * The currency in which the transaction is to take place.
    */
   @Nonnull
-  String transaction_currency = "transaction_currency";
+  String transaction_currency = "transaction-currency";
 
   /**
    * A URL, such as a home page or company web site address as appropriate given the context of the other fields in the form.

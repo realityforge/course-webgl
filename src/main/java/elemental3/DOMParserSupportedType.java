@@ -12,17 +12,17 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface DOMParserSupportedType {
   @Nonnull
-  String application_xhtml_xml = "application_xhtml_xml";
+  String application_xhtml_xml = "application/xhtml+xml";
 
   @Nonnull
-  String application_xml = "application_xml";
+  String application_xml = "application/xml";
 
   @Nonnull
-  String image_svg_xml = "image_svg_xml";
+  String image_svg_xml = "image/svg+xml";
 
   @Nonnull
-  String text_html = "text_html";
+  String text_html = "text/html";
 
   @Nonnull
-  String text_xml = "text_xml";
+  String text_xml = "text/xml";
 }

@@ -32,5 +32,5 @@ public @interface CrossOriginType {
    * image will be tainted and its usage restricted.
    */
   @Nonnull
-  String use_credentials = "use_credentials";
+  String use_credentials = "use-credentials";
 }
