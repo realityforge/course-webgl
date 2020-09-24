@@ -182,19 +182,21 @@ public final class Main
     final Vector3d position = _camera.getPosition();
     if ( _forwardPressed )
     {
-      position.z -= .1;
+      position.add( new Vector3d( direction ).mul( 0.1 ) );
     }
     if ( _backwardPressed )
     {
-      position.z += .1;
+      position.add( new Vector3d( direction ).mul( -0.1 ) );
     }
     if ( _leftPressed )
     {
-      position.x -= .1;
+      // Calculate the "right" vector (We assume our view has no roll and thus can just use yaw) and
+      // after right vecor is calculated then use direction to calculate movement
+      position.add( new Vector3d( -1 * Math.sin( _camera.getYaw() ), 0.0, Math.cos( _camera.getYaw() ) ).mul( -0.1 ) );
     }
     if ( _rightPressed )
     {
-      position.x += .1;
+      position.add( new Vector3d( -1 * Math.sin( _camera.getYaw() ), 0.0, Math.cos( _camera.getYaw() ) ).mul( 0.1 ) );
     }
     if ( _pitchUpPressed )
     {
