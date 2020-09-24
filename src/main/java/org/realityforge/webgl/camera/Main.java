@@ -14,6 +14,10 @@ import org.realityforge.webgl.util.CanvasUtil;
 public final class Main
   implements EntryPoint
 {
+  public static final int KEY_UP = 38;
+  public static final int KEY_DOWN = 40;
+  public static final int KEY_LEFT = 37;
+  public static final int KEY_RIGHT = 39;
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
@@ -29,6 +33,10 @@ public final class Main
   private boolean _backwardPressed;
   private boolean _leftPressed;
   private boolean _rightPressed;
+  private boolean _pitchUpPressed;
+  private boolean _pitchDownPressed;
+  private boolean _yawLeftPressed;
+  private boolean _yawRightPressed;
 
   @Override
   public void onModuleLoad()
@@ -51,44 +59,76 @@ public final class Main
   private void onKeyDown( @Nonnull final KeyboardEvent event )
   {
     final String key = event.key();
-    //noinspection IfCanBeSwitch
-    if ( "w".equals( key ) )
+    final int keyCode = event.keyCode();
+    if ( "w".equals( key ) || KEY_UP == keyCode )
     {
       _forwardPressed = true;
     }
-    else if ( "s".equals( key ) )
+    else if ( "s".equals( key ) || KEY_DOWN == keyCode )
     {
       _backwardPressed = true;
     }
-    else if ( "a".equals( key ) )
+    else if ( "a".equals( key ) || KEY_LEFT == keyCode )
     {
       _leftPressed = true;
     }
-    else if ( "d".equals( key ) )
+    else if ( "d".equals( key ) || KEY_RIGHT == keyCode )
     {
       _rightPressed = true;
+    }
+    else if ( "y".equals( key ) )
+    {
+      _pitchUpPressed = true;
+    }
+    else if ( "h".equals( key ) )
+    {
+      _pitchDownPressed = true;
+    }
+    else if ( "g".equals( key ) )
+    {
+      _yawLeftPressed = true;
+    }
+    else if ( "j".equals( key ) )
+    {
+      _yawRightPressed = true;
     }
   }
 
   private void onKeyUp( @Nonnull final KeyboardEvent event )
   {
     final String key = event.key();
-    //noinspection IfCanBeSwitch
-    if ( "w".equals( key ) )
+    final int keyCode = event.keyCode();
+    if ( "w".equals( key ) || KEY_UP == keyCode )
     {
       _forwardPressed = false;
     }
-    else if ( "s".equals( key ) )
+    else if ( "s".equals( key ) || KEY_DOWN == keyCode )
     {
       _backwardPressed = false;
     }
-    else if ( "a".equals( key ) )
+    else if ( "a".equals( key ) || KEY_LEFT == keyCode )
     {
       _leftPressed = false;
     }
-    else if ( "d".equals( key ) )
+    else if ( "d".equals( key ) || KEY_RIGHT == keyCode )
     {
       _rightPressed = false;
+    }
+    else if ( "y".equals( key ) )
+    {
+      _pitchUpPressed = false;
+    }
+    else if ( "h".equals( key ) )
+    {
+      _pitchDownPressed = false;
+    }
+    else if ( "g".equals( key ) )
+    {
+      _yawLeftPressed = false;
+    }
+    else if ( "j".equals( key ) )
+    {
+      _yawRightPressed = false;
     }
   }
 
@@ -122,7 +162,10 @@ public final class Main
     updateCamera();
 
     _viewMatrix.identity();
-    _viewMatrix.lookAt( _camera.getPosition(), _camera.getTarget(), _camera.getUp() );
+    final Vector3d target = new Vector3d( _camera.getPosition() ).add( _camera.getDirection() );
+    // TODO: It would be really nice if instead we could do
+    //final Vector3d target = _camera.getPosition().dup().add( _camera.getDirection() );
+    _viewMatrix.lookAt( _camera.getPosition(), target, _camera.getUp() );
 
     _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
@@ -131,6 +174,11 @@ public final class Main
 
   private void updateCamera()
   {
+    final Vector3d direction = _camera.getDirection();
+    direction.x = Math.cos( _camera.getPitch() ) * Math.cos( _camera.getYaw() );
+    direction.y = Math.sin( _camera.getPitch() );
+    direction.z = Math.cos( _camera.getPitch() ) * Math.sin( _camera.getYaw() );
+
     final Vector3d position = _camera.getPosition();
     if ( _forwardPressed )
     {
@@ -147,6 +195,22 @@ public final class Main
     if ( _rightPressed )
     {
       position.x += .1;
+    }
+    if ( _pitchUpPressed )
+    {
+      _camera.setPitch( _camera.getPitch() + 0.02 );
+    }
+    if ( _pitchDownPressed )
+    {
+      _camera.setPitch( _camera.getPitch() - 0.02 );
+    }
+    if ( _yawLeftPressed )
+    {
+      _camera.setYaw( _camera.getYaw() - 0.02 );
+    }
+    if ( _yawRightPressed )
+    {
+      _camera.setYaw( _camera.getYaw() + 0.02 );
     }
   }
 }
