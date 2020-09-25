@@ -283,6 +283,7 @@ final class CubeTemplate
     // The specular intensity is based on the angle the eye and the reflected light beam
     "  float baseSpecularIntensity = max(dot(reflectedLightDirection, viewDirection), 0.0);\n" +
     // However the drop off is fast so we simulate this via pow function
+    // as dot product is cosine which is less than 1 and pow will thus  increase drop off
     "  float specularIntensity = pow(baseSpecularIntensity, 128.0);\n" +
     "  vec4 specularComponent = vec4(specularIntensity * vec3(1,1,1),1);\n"+
 
