@@ -190,14 +190,18 @@ final class CubeTemplate
     "uniform sampler2D textureData0;\n" +
     // The uniform for other texture data
     "uniform sampler2D textureData1;\n" +
+    // Ambient light color
+    "uniform vec3 lightColor;\n" +
     // The output fragment color
     "out vec4 finalColor;\n" +
     "" +
     // The main program/kernel
     "void main()\n" +
     "{\n" +
-    // Copy color from input to output
-    "  finalColor = mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
+    // Calculate the ambient component of the light
+    "  float ambientIntensity = 0.2;\n" +
+    "  vec4 ambientComponent = vec4((ambientIntensity * lightColor), 1);\n" +
+    "  finalColor = ambientComponent * mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
     "}\n";
 
   private CubeTemplate()

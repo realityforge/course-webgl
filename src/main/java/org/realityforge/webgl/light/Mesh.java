@@ -9,6 +9,7 @@ import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.joml.Vector3f;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32BufferAttribute;
@@ -38,6 +39,8 @@ final class Mesh
   private final UniformBinding _textureData0;
   @Nonnull
   private final UniformBinding _textureData1;
+  @Nonnull
+  private final UniformBinding _lightColor;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32BufferAttribute positionAttribute,
@@ -69,6 +72,7 @@ final class Mesh
     _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
     _textureData0 = new UniformBinding( gl, program, "textureData0" );
     _textureData1 = new UniformBinding( gl, program, "textureData1" );
+    _lightColor = new UniformBinding( gl, program, "lightColor" );
 
     _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
     _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
@@ -107,6 +111,8 @@ final class Mesh
     gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    final Vector3f color = light.getColor();
+    gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
