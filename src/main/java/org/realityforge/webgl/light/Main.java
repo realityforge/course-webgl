@@ -46,7 +46,7 @@ public final class Main
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _mesh = CubeTemplate.create( gl, 3 );
+    _mesh = CubeTemplate.create( gl );
 
     final Global global = Global.globalThis();
     final Document document = global.document();

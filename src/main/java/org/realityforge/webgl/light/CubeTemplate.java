@@ -205,7 +205,7 @@ final class CubeTemplate
   }
 
   @Nonnull
-  public static Mesh create( @Nonnull final WebGL2RenderingContext gl, final int count )
+  public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
     return new Mesh( gl,
                      new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
