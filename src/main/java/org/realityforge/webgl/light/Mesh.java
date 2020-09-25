@@ -22,6 +22,8 @@ final class Mesh
   @Nonnull
   private final BufferAttributeBinding _position;
   @Nonnull
+  private final BufferAttributeBinding _normals;
+  @Nonnull
   private final BufferAttributeBinding _color;
   @Nonnull
   private final BufferAttributeBinding _textureCoordinate;
@@ -41,9 +43,12 @@ final class Mesh
   private final UniformBinding _textureData1;
   @Nonnull
   private final UniformBinding _lightColor;
+  @Nonnull
+  private final UniformBinding _lightPosition;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32BufferAttribute positionAttribute,
+        @Nonnull final Float32BufferAttribute normalsAttribute,
         @Nonnull final Float32BufferAttribute colorAttribute,
         @Nonnull final Float32BufferAttribute textureCoordinatesAttribute,
         @GLSL @Nonnull final String vertexShaderSource,
@@ -73,8 +78,10 @@ final class Mesh
     _textureData0 = new UniformBinding( gl, program, "textureData0" );
     _textureData1 = new UniformBinding( gl, program, "textureData1" );
     _lightColor = new UniformBinding( gl, program, "lightColor" );
+    _lightPosition = new UniformBinding( gl, program, "lightPosition" );
 
     _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
+    _normals = new BufferAttributeBinding( gl, program, "normals", normalsAttribute );
     _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
     _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
   }
@@ -118,6 +125,8 @@ final class Mesh
     gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
     final Vector3f color = light.getColor();
     gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
+    final Vector3f position = light.getPosition();
+    gl.uniform3f( _lightPosition.getLocation(), position.x, position.y, position.z );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
@@ -125,6 +134,7 @@ final class Mesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     GL.sendToGpu( gl, _position );
+    GL.sendToGpu( gl, _normals );
     GL.sendToGpu( gl, _color );
     GL.sendToGpu( gl, _textureCoordinate );
 

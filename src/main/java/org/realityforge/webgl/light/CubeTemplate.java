@@ -98,6 +98,50 @@ final class CubeTemplate
       0.0, 1.0, 1.0, 1.0, // Left face
       0.0, 1.0, 1.0, 1.0 // Left face
     };
+  private static final double[] VERTEX_NORMALS = new double[]
+    {
+      0.0, 0.0, -1.0,
+      0.0, 0.0, -1.0,
+      0.0, 0.0, -1.0,
+      0.0, 0.0, -1.0,
+      0.0, 0.0, -1.0,
+      0.0, 0.0, -1.0,
+
+      0.0, 0.0, 1.0,
+      0.0, 0.0, 1.0,
+      0.0, 0.0, 1.0,
+      0.0, 0.0, 1.0,
+      0.0, 0.0, 1.0,
+      0.0, 0.0, 1.0,
+
+      -1.0, 0.0, 0.0,
+      -1.0, 0.0, 0.0,
+      -1.0, 0.0, 0.0,
+      -1.0, 0.0, 0.0,
+      -1.0, 0.0, 0.0,
+      -1.0, 0.0, 0.0,
+
+      1.0, 0.0, 0.0,
+      1.0, 0.0, 0.0,
+      1.0, 0.0, 0.0,
+      1.0, 0.0, 0.0,
+      1.0, 0.0, 0.0,
+      1.0, 0.0, 0.0,
+
+      0.0, -1.0, 0.0,
+      0.0, -1.0, 0.0,
+      0.0, -1.0, 0.0,
+      0.0, -1.0, 0.0,
+      0.0, -1.0, 0.0,
+      0.0, -1.0, 0.0,
+
+      0.0, 1.0, 0.0,
+      0.0, 1.0, 0.0,
+      0.0, 1.0, 0.0,
+      0.0, 1.0, 0.0,
+      0.0, 1.0, 0.0,
+      0.0, 1.0, 0.0
+    };
   private static final double[] TEXTURE_COORDINATES = new double[]
     {
       0.0, 1.0,
@@ -155,10 +199,14 @@ final class CubeTemplate
     "in vec4 color;\n" +
     // The incoming texture coordinate
     "in vec2 textureCoordinate;\n" +
+    // The incoming normal of vertex
+    "in vec3 normal;\n" +
     // The output vertex color that will be fed to the next shader
     "out vec4 fcolor;\n" +
     // The outgoing texture coordinate
     "out vec2 fTextureCoordinate;\n" +
+    "out vec4 vertexWorldPosition;\n" +
+    "out vec3 vertexNormal;\n" +
     "\n" +
     // The following are the unions (aka constant across multiple vertices)
     "uniform mat4 modelMatrix;\n" +
@@ -167,13 +215,15 @@ final class CubeTemplate
     // The main program/kernel
     "void main()\n" +
     "{\n" +
+    "  vertexWorldPosition = modelMatrix * vec4(position, 1);\n" +
     // Copy position from input to output, converting to vec4 by adding using 1 for 4th dimension
     // and transforming via model/view/project matrices
-    "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
+    "  gl_Position = projectionMatrix * viewMatrix * vertexWorldPosition;" +
     // Copy color from input to output
     "  fcolor = color;" +
     // Copy textureCoordinate from input to output
     "  fTextureCoordinate = textureCoordinate;" +
+    "  vertexNormal = mat3(inverse(transpose(modelMatrix)))*normal;" +
     "}\n";
   // The fragment shader that will be run for every pixel
   @GLSL
@@ -186,12 +236,18 @@ final class CubeTemplate
     "in vec4 fcolor;\n" +
     // The incoming fragment texture coordinate
     "in vec2 fTextureCoordinate;\n" +
+    // The incoming interpolated vertex normal
+    "in vec3 vertexNormal;\n" +
+    // The position
+    "in vec4 vertexWorldPosition;\n" +
     // The uniform for texture data
     "uniform sampler2D textureData0;\n" +
     // The uniform for other texture data
     "uniform sampler2D textureData1;\n" +
     // Ambient light color
     "uniform vec3 lightColor;\n" +
+    // Position of the light giving the directional light
+    "uniform vec3 lightPosition;\n" +
     // The output fragment color
     "out vec4 finalColor;\n" +
     "" +
@@ -200,8 +256,17 @@ final class CubeTemplate
     "{\n" +
     // Calculate the ambient component of the light
     "  float ambientIntensity = 0.2;\n" +
-    "  vec4 ambientComponent = vec4((ambientIntensity * lightColor), 1);\n" +
-    "  finalColor = ambientComponent * mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
+    "  vec4 ambientComponent = vec4((ambientIntensity * lightColor), 1.0);\n" +
+    // Due to interpolation this normal is no longer normalized
+    "  vec3 normalizedNormal = normalize(vertexNormal);\n" +
+
+    // Calculate diffuse contribution based on normal on surface and  position of light
+    "  vec3 lightDirection = normalize(lightPosition - vec3(vertexWorldPosition));\n" +
+    "  float diffuseFactor = 0.9;\n" +
+    "  float diffuseIntensity = max(dot(normalizedNormal, lightDirection), 0.0);\n" +
+    "  vec4 diffuseComponent = diffuseFactor * vec4(diffuseIntensity * lightColor, 1.0);\n" +
+
+    "  finalColor = (ambientComponent + diffuseComponent) * mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
     "}\n";
   // The vertex shader for the "light" cube
   @GLSL
@@ -247,6 +312,7 @@ final class CubeTemplate
   {
     return new Mesh( gl,
                      new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
+                     new Float32BufferAttribute( gl, new Float32Array( VERTEX_NORMALS ), 3 ),
                      new Float32BufferAttribute( gl, new Float32Array( COLORS ), 4 ),
                      new Float32BufferAttribute( gl, new Float32Array( TEXTURE_COORDINATES ), 2 ),
                      VERTEX_SHADER_SOURCE,
