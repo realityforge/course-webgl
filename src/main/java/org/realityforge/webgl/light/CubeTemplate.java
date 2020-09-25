@@ -254,6 +254,8 @@ final class CubeTemplate
     "uniform vec3 lightColor;\n" +
     // Position of the light giving the directional light
     "uniform vec3 lightPosition;\n" +
+    // Position of the eye/camera
+    "uniform vec3 cameraPosition;\n" +
     // The output fragment color
     "out vec4 finalColor;\n" +
     "" +
@@ -267,13 +269,24 @@ final class CubeTemplate
     "  vec3 normalizedNormal = normalize(vertexNormal);\n" +
     // Calculate the light direction in in world-space coordinates
     "  vec3 lightDirection = normalize(lightPosition - vec3(vertexWorldPosition));\n" +
+    // Calculate the view direction in in world-space coordinates
+    "  vec3 viewDirection = normalize(cameraPosition - vec3(vertexWorldPosition));\n" +
+
     // Calculate diffuse contribution based on normal on surface and position of light
     "  float diffuseFactor = 0.9;\n" +
     // max(x, 0) avoids the scenario where a fragment is lit from behind
     "  float diffuseIntensity = max(dot(normalizedNormal, lightDirection), 0.0);\n" +
     "  vec4 diffuseComponent = diffuseFactor * vec4(diffuseIntensity * lightColor, 1.0);\n" +
 
-    "  finalColor = (ambientComponent + diffuseComponent) * mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
+    // Calculate specular contribution based on position of light and position of eye.
+    "  vec3 reflectedLightDirection = reflect(-lightDirection, normalizedNormal);\n" +
+    // The specular intensity is based on the angle the eye and the reflected light beam
+    "  float baseSpecularIntensity = max(dot(reflectedLightDirection, viewDirection), 0.0);\n" +
+    // However the drop off is fast so we simulate this via pow function
+    "  float specularIntensity = pow(baseSpecularIntensity, 128.0);\n" +
+    "  vec4 specularComponent = vec4(specularIntensity * vec3(1,1,1),1);\n"+
+
+    "  finalColor = (ambientComponent + diffuseComponent + specularComponent) * mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
     "}\n";
   // The vertex shader for the "light" cube
   @GLSL

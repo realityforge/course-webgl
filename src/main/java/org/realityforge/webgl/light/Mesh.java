@@ -9,6 +9,7 @@ import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.joml.Vector3d;
 import org.joml.Vector3f;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
@@ -45,6 +46,8 @@ final class Mesh
   private final UniformBinding _lightColor;
   @Nonnull
   private final UniformBinding _lightPosition;
+  @Nonnull
+  private final UniformBinding _cameraPosition;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32BufferAttribute positionAttribute,
@@ -79,6 +82,7 @@ final class Mesh
     _textureData1 = new UniformBinding( gl, program, "textureData1" );
     _lightColor = new UniformBinding( gl, program, "lightColor" );
     _lightPosition = new UniformBinding( gl, program, "lightPosition" );
+    _cameraPosition = new UniformBinding( gl, program, "cameraPosition" );
 
     _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
     _normal = new BufferAttributeBinding( gl, program, "normal", normalsAttribute );
@@ -118,15 +122,22 @@ final class Mesh
                @Nonnull final Matrix4d modelMatrix,
                @Nonnull final Matrix4d viewMatrix,
                @Nonnull final Matrix4d projectionMatrix,
-               @Nonnull final Light light )
+               @Nonnull final Light light,
+               @Nonnull final Camera camera )
   {
     gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
     final Vector3f color = light.getColor();
     gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
-    final Vector3f position = light.getPosition();
-    gl.uniform3f( _lightPosition.getLocation(), position.x, position.y, position.z );
+    final Vector3f lightPosition = light.getPosition();
+    gl.uniform3f( _lightPosition.getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
+
+    final Vector3d cameraPosition = camera.getPosition();
+    gl.uniform3f( _cameraPosition.getLocation(),
+                  (float) cameraPosition.x,
+                  (float) cameraPosition.y,
+                  (float) cameraPosition.z );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }
