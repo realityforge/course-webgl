@@ -3,35 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <title>Ahmed Fathy webgl course</title>
-    <link href="css/default.css" rel="stylesheet" />
     <script src="js/glMatrix-0.9.5.max.js"></script>
 </head>
 <body>
     <canvas id="renderCanvas" width="1400" height="800"></canvas>
-    <script src="js/instancedCubes.js"></script>
+    <script src="js/textures.js"></script>
     <script id="vertexShader" type="vertexShader">
         #version 300 es
         in vec3 position;
+        in vec4 color;
+        in vec2 textureCoordinate;
+        
         out vec4 fcolor;
-
-        uniform vec4 colorsUniformArray[3];
-
-        uniform vec3 offsets;
+        out vec2 ftextureCoordinate;
 
         uniform mat4 modelMatrix;
         uniform mat4 viewMatrix;
         uniform mat4 projectionMatrix;
 
-        uniform float time;
         void main()
         {
-        gl_Position =  projectionMatrix * viewMatrix * modelMatrix * vec4(position.x + offsets[gl_InstanceID],position.yz, 1) ;
-        fcolor = 
-        vec4(
-        sin(time)*colorsUniformArray[(gl_InstanceID+gl_VertexID)%3].r,
-        cos(time)*colorsUniformArray[(gl_InstanceID+gl_VertexID)%3].g,
-        cos(2.0*time)*sin(time)*colorsUniformArray[(gl_InstanceID+gl_VertexID)%3].b
-        ,1);
+        gl_Position =  projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1) ;
+        fcolor = color;
+        ftextureCoordinate = textureCoordinate;
         }
     </script>
 
@@ -39,10 +33,13 @@
         #version 300 es
         precision mediump float;
         in vec4 fcolor;
+        in vec2 ftextureCoordinate;
+        uniform sampler2D sampler0;
+        uniform sampler2D sampler1;
         out vec4 finalColor;
         void main()
         {
-        finalColor = fcolor;
+           finalColor = mix(texture(sampler0, ftextureCoordinate),texture(sampler1, ftextureCoordinate),.9) *fcolor   ;
         }
     </script>
 </body>

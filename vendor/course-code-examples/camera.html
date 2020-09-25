@@ -3,18 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Ahmed Fathy webgl course</title>
-    <link href="css/default.css" rel="stylesheet" />
     <script src="js/glMatrix-0.9.5.max.js"></script>
 </head>
 <body>
     <canvas id="renderCanvas" width="1400" height="800"></canvas>
-    <script src="js/textures.js"></script>
+    <script src="js/camera.js"></script>
     <script id="vertexShader" type="vertexShader">
         #version 300 es
         in vec3 position;
         in vec4 color;
         in vec2 textureCoordinate;
-        
+
         out vec4 fcolor;
         out vec2 ftextureCoordinate;
 
@@ -40,7 +39,7 @@
         out vec4 finalColor;
         void main()
         {
-           finalColor = mix(texture(sampler0, ftextureCoordinate),texture(sampler1, ftextureCoordinate),.9) *fcolor   ;
+        finalColor = mix(texture(sampler0, ftextureCoordinate), texture(sampler1, ftextureCoordinate), 0.8) * fcolor  ;
         }
     </script>
 </body>
