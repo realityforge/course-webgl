@@ -138,7 +138,7 @@ public final class Main
   {
     CanvasUtil.resize( gl, canvas );
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    if ( _mesh.areTexturesLoaded() )
+    if ( !_mesh.areTexturesLoaded() )
     {
       return;
     }
