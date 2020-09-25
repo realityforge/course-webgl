@@ -148,6 +148,7 @@ public final class Main
     {
       // Have to send to GPU here as otherwise texture data has not loaded
       _mesh.sendToGpu( gl );
+      _lightMesh.sendToGpu( gl );
       _sentToGpu = true;
     }
 
