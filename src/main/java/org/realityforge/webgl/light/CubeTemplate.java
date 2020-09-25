@@ -223,6 +223,12 @@ final class CubeTemplate
     "  fcolor = color;" +
     // Copy textureCoordinate from input to output
     "  fTextureCoordinate = textureCoordinate;" +
+    // inverse(transpose(MM)) is required when we have a non-uniform scale.
+    // In a uniform scale, the transpose of the identity is identity and the
+    // inverse of an identity is identity and thus we could just use normal here
+    // In a performant application, the calculation of normal matrix should be
+    // done on the CPU so it is done once per-modelMatrix rather than once per
+    // vertex
     "  vertexNormal = mat3(inverse(transpose(modelMatrix)))*normal;" +
     "}\n";
   // The fragment shader that will be run for every pixel
