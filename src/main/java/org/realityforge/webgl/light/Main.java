@@ -29,6 +29,7 @@ public final class Main
   @Nonnull
   private final Light _light = new Light();
   private Mesh _mesh;
+  private LightMesh _lightMesh;
   private double _angle;
   private boolean _sentToGpu;
   private boolean _forwardPressed;
@@ -49,6 +50,7 @@ public final class Main
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
+    _lightMesh = CubeTemplate.createLightCube( gl );
 
     final Global global = Global.globalThis();
     final Document document = global.document();
@@ -186,6 +188,14 @@ public final class Main
     _modelMatrix.rotateX( 0.25 );
 
     _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
+
+    gl.useProgram( _lightMesh.getProgram() );
+
+    _modelMatrix.identity();
+    _modelMatrix.translate( 8, 4, -9 );
+    _modelMatrix.scale( 0.2 );
+
+    _lightMesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
 
     _angle += 0.01;
   }

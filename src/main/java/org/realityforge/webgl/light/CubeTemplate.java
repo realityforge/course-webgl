@@ -203,9 +203,43 @@ final class CubeTemplate
     "  vec4 ambientComponent = vec4((ambientIntensity * lightColor), 1);\n" +
     "  finalColor = ambientComponent * mix( texture( textureData0, fTextureCoordinate ), texture( textureData1, fTextureCoordinate ), 0.5) * fcolor;" +
     "}\n";
+  // The vertex shader for the "light" cube
+  @GLSL
+  @Nonnull
+  private static final String LIGHT_VERTEX_SHADER_SOURCE =
+    "#version 300 es\n" +
+    "in vec3 position;\n" +
+    "uniform mat4 modelMatrix;\n" +
+    "uniform mat4 viewMatrix;\n" +
+    "uniform mat4 projectionMatrix;\n" +
+    "void main()\n" +
+    "{\n" +
+    "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
+    "}\n";
+  // The fragment shader that will be run for every pixel
+  @GLSL
+  @Nonnull
+  private static final String LIGHT_FRAGMENT_SHADER_SOURCE =
+    "#version 300 es\n" +
+    "precision lowp float;\n" +
+    "uniform vec3 color;\n" +
+    "out vec4 finalColor;\n" +
+    "void main()\n" +
+    "{\n" +
+    "  finalColor = vec4(color,1);" +
+    "}\n";
 
   private CubeTemplate()
   {
+  }
+
+  @Nonnull
+  public static LightMesh createLightCube( @Nonnull final WebGL2RenderingContext gl )
+  {
+    return new LightMesh( gl,
+                          new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
+                          LIGHT_VERTEX_SHADER_SOURCE,
+                          LIGHT_FRAGMENT_SHADER_SOURCE );
   }
 
   @Nonnull
