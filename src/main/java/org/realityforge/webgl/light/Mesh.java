@@ -54,7 +54,7 @@ final class Mesh
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
-    loadTexture( gl, "img/webgl-logo-256.jpg" ).then( texture -> {
+    loadTexture( gl, "img/wood.jpg" ).then( texture -> {
       _texture1 = texture;
       return null;
     } );
