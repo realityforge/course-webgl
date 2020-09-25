@@ -14,9 +14,8 @@ final class Camera
   // The up vector
   @Nonnull
   private final Vector3d _up = new Vector3d( 0.0, 1.0, 0.0 );
-
   private double _pitch = 0.0;
-  private double _yaw = - Math.PI / 2.0;
+  private double _yaw = -Math.PI / 2.0;
 
   @Nonnull
   Vector3d getPosition()
@@ -54,5 +53,12 @@ final class Camera
   public void setYaw( final double yaw )
   {
     _yaw = yaw;
+  }
+
+  void computeDirection()
+  {
+    _direction.x = Math.cos( _pitch ) * Math.cos( _yaw );
+    _direction.y = Math.sin( _pitch );
+    _direction.z = Math.cos( _pitch ) * Math.sin( _yaw );
   }
 }

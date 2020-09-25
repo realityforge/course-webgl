@@ -174,11 +174,8 @@ public final class Main
 
   private void updateCamera()
   {
+    _camera.computeDirection();
     final Vector3d direction = _camera.getDirection();
-    direction.x = Math.cos( _camera.getPitch() ) * Math.cos( _camera.getYaw() );
-    direction.y = Math.sin( _camera.getPitch() );
-    direction.z = Math.cos( _camera.getPitch() ) * Math.sin( _camera.getYaw() );
-
     final Vector3d position = _camera.getPosition();
     if ( _forwardPressed )
     {
