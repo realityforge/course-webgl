@@ -8,7 +8,7 @@ final class Light
   @Nonnull
   private final Vector3f _color = new Vector3f( 1.0F, 1.0F, 1.0F );
   @Nonnull
-  private final Vector3f _position = new Vector3f( 5.0F, 0.0F, -7.0F );
+  private final Vector3f _position = new Vector3f( 5.0F, 0.0F, -5.0F );
 
   @Nonnull
   Vector3f getColor()
