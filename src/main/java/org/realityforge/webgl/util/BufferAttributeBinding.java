@@ -44,4 +44,16 @@ public final class BufferAttributeBinding
   {
     return _location;
   }
+
+  public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
+  {
+    gl.enableVertexAttribArray( _location );
+    gl.bindBuffer( _attribute.getTarget(), _attribute.getBuffer() );
+    gl.vertexAttribPointer( _location,
+                            _attribute.getDimension(),
+                            _attribute.getType(),
+                            false,
+                            _attribute.getStride(),
+                            _attribute.getOffset() );
+  }
 }

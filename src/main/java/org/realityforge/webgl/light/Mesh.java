@@ -144,10 +144,10 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    GL.sendToGpu( gl, _position );
-    GL.sendToGpu( gl, _normal );
-    GL.sendToGpu( gl, _color );
-    GL.sendToGpu( gl, _textureCoordinate );
+    _position.sendToGpu( gl );
+    _normal.sendToGpu( gl );
+    _color.sendToGpu( gl );
+    _textureCoordinate.sendToGpu( gl );
 
     gl.useProgram( _program );
 
