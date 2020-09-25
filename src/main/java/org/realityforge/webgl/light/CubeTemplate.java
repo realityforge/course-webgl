@@ -205,22 +205,13 @@ final class CubeTemplate
   }
 
   @Nonnull
-  public static Mesh[] create( @Nonnull final WebGL2RenderingContext gl, final int count )
+  public static Mesh create( @Nonnull final WebGL2RenderingContext gl, final int count )
   {
-    final Float32BufferAttribute positionAttribute = new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 );
-    final Float32BufferAttribute colorAttribute = new Float32BufferAttribute( gl, new Float32Array( COLORS ), 4 );
-    final Float32BufferAttribute textureCoordinatesAttribute =
-      new Float32BufferAttribute( gl, new Float32Array( TEXTURE_COORDINATES ), 2 );
-    final Mesh[] meshes = new Mesh[ count ];
-    for ( int i = 0; i < meshes.length; i++ )
-    {
-      meshes[ i ] = new Mesh( gl,
-                              positionAttribute,
-                              colorAttribute,
-                              textureCoordinatesAttribute,
-                              VERTEX_SHADER_SOURCE,
-                              FRAGMENT_SHADER_SOURCE );
-    }
-    return meshes;
+    return new Mesh( gl,
+                     new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
+                     new Float32BufferAttribute( gl, new Float32Array( COLORS ), 4 ),
+                     new Float32BufferAttribute( gl, new Float32Array( TEXTURE_COORDINATES ), 2 ),
+                     VERTEX_SHADER_SOURCE,
+                     FRAGMENT_SHADER_SOURCE );
   }
 }

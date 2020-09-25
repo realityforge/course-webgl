@@ -26,7 +26,7 @@ public final class Main
   private final Matrix4d _projectionMatrix = new Matrix4d();
   @Nonnull
   private final Camera _camera = new Camera();
-  private Mesh[] _meshes;
+  private Mesh _mesh;
   private double _angle;
   private boolean _sentToGpu;
   private boolean _forwardPressed;
@@ -46,7 +46,7 @@ public final class Main
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _meshes = CubeTemplate.create( gl, 3 );
+    _mesh = CubeTemplate.create( gl, 3 );
 
     final Global global = Global.globalThis();
     final Document document = global.document();
@@ -136,18 +136,14 @@ public final class Main
   {
     CanvasUtil.resize( gl, canvas );
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    if ( !_meshes[ 0 ].areTexturesLoaded() ||
-         !_meshes[ 1 ].areTexturesLoaded() ||
-         !_meshes[ 2 ].areTexturesLoaded() )
+    if ( _mesh.areTexturesLoaded() )
     {
       return;
     }
     else if ( !_sentToGpu )
     {
       // Have to send to GPU here as otherwise texture data has not loaded
-      _meshes[ 0 ].sendToGpu( gl );
-      _meshes[ 1 ].sendToGpu( gl );
-      _meshes[ 2 ].sendToGpu( gl );
+      _mesh.sendToGpu( gl );
       _sentToGpu = true;
     }
 
@@ -171,21 +167,21 @@ public final class Main
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _meshes[ 0 ].render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     _modelMatrix.identity();
     _modelMatrix.translate( 3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _meshes[ 1 ].render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     _modelMatrix.identity();
     _modelMatrix.translate( -3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _meshes[ 2 ].render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     _angle += 0.01;
   }
