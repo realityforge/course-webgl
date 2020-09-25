@@ -22,7 +22,7 @@ final class Mesh
   @Nonnull
   private final BufferAttributeBinding _position;
   @Nonnull
-  private final BufferAttributeBinding _normals;
+  private final BufferAttributeBinding _normal;
   @Nonnull
   private final BufferAttributeBinding _color;
   @Nonnull
@@ -81,7 +81,7 @@ final class Mesh
     _lightPosition = new UniformBinding( gl, program, "lightPosition" );
 
     _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
-    _normals = new BufferAttributeBinding( gl, program, "normals", normalsAttribute );
+    _normal = new BufferAttributeBinding( gl, program, "normal", normalsAttribute );
     _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
     _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
   }
@@ -134,7 +134,7 @@ final class Mesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     GL.sendToGpu( gl, _position );
-    GL.sendToGpu( gl, _normals );
+    GL.sendToGpu( gl, _normal );
     GL.sendToGpu( gl, _color );
     GL.sendToGpu( gl, _textureCoordinate );
 
