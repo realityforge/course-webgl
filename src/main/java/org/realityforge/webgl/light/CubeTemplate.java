@@ -265,11 +265,9 @@ final class CubeTemplate
     "  vec4 ambientComponent = vec4((ambientIntensity * lightColor), 1.0);\n" +
     // Due to interpolation this normal is no longer normalized
     "  vec3 normalizedNormal = normalize(vertexNormal);\n" +
-
-    // Calculate diffuse contribution based on normal on surface and  position of light
-
     // Calculate the light direction in in world-space coordinates
     "  vec3 lightDirection = normalize(lightPosition - vec3(vertexWorldPosition));\n" +
+    // Calculate diffuse contribution based on normal on surface and position of light
     "  float diffuseFactor = 0.9;\n" +
     // max(x, 0) avoids the scenario where a fragment is lit from behind
     "  float diffuseIntensity = max(dot(normalizedNormal, lightDirection), 0.0);\n" +
