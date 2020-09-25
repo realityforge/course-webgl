@@ -26,7 +26,7 @@ public final class Main
   private final Matrix4d _projectionMatrix = new Matrix4d();
   @Nonnull
   private final Camera _camera = new Camera();
-  private Mesh _mesh;
+  private Mesh[] _meshes;
   private double _angle;
   private boolean _sentToGpu;
   private boolean _forwardPressed;
@@ -46,7 +46,7 @@ public final class Main
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _mesh = CubeTemplate.create( gl );
+    _meshes = CubeTemplate.create( gl, 3 );
 
     final Global global = Global.globalThis();
     final Document document = global.document();
@@ -136,27 +136,24 @@ public final class Main
   {
     CanvasUtil.resize( gl, canvas );
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    if ( !_mesh.areTexturesLoaded() )
+    if ( !_meshes[ 0 ].areTexturesLoaded() ||
+         !_meshes[ 1 ].areTexturesLoaded() ||
+         !_meshes[ 2 ].areTexturesLoaded() )
     {
       return;
     }
     else if ( !_sentToGpu )
     {
       // Have to send to GPU here as otherwise texture data has not loaded
-      _mesh.sendToGpu( gl );
+      _meshes[ 0 ].sendToGpu( gl );
+      _meshes[ 1 ].sendToGpu( gl );
+      _meshes[ 2 ].sendToGpu( gl );
       _sentToGpu = true;
     }
 
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
-
-    // ModelMatrix should be calculated in the simulation loop rather than render loop
-    // but they are effectively the same in out app so we can just recalculate in render loop
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
-    _modelMatrix.rotateY( _angle );
-    _modelMatrix.rotateX( 0.25 );
 
     // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
     updateCamera();
@@ -167,7 +164,28 @@ public final class Main
     //final Vector3d target = _camera.getPosition().dup().add( _camera.getDirection() );
     _viewMatrix.lookAt( _camera.getPosition(), target, _camera.getUp() );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    // ModelMatrix should be calculated in the simulation loop rather than render loop
+    // but they are effectively the same in out app so we can just recalculate in render loop
+    _modelMatrix.identity();
+    _modelMatrix.translate( 0, 0, -7 );
+    _modelMatrix.rotateY( _angle );
+    _modelMatrix.rotateX( 0.25 );
+
+    _meshes[ 0 ].render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+
+    _modelMatrix.identity();
+    _modelMatrix.translate( 3, 0, -7 );
+    _modelMatrix.rotateY( _angle );
+    _modelMatrix.rotateX( 0.25 );
+
+    _meshes[ 1 ].render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+
+    _modelMatrix.identity();
+    _modelMatrix.translate( -3, 0, -7 );
+    _modelMatrix.rotateY( _angle );
+    _modelMatrix.rotateX( 0.25 );
+
+    _meshes[ 2 ].render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     _angle += 0.01;
   }
