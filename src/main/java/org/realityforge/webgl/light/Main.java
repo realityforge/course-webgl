@@ -26,6 +26,8 @@ public final class Main
   private final Matrix4d _projectionMatrix = new Matrix4d();
   @Nonnull
   private final Camera _camera = new Camera();
+  @Nonnull
+  private final Light _light = new Light();
   private Mesh _mesh;
   private double _angle;
   private boolean _sentToGpu;
