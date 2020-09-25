@@ -100,7 +100,8 @@ final class Mesh
   void render( @Nonnull final WebGL2RenderingContext gl,
                @Nonnull final Matrix4d modelMatrix,
                @Nonnull final Matrix4d viewMatrix,
-               @Nonnull final Matrix4d projectionMatrix )
+               @Nonnull final Matrix4d projectionMatrix,
+               @Nonnull final Light light )
   {
     gl.useProgram( _program );
     gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );

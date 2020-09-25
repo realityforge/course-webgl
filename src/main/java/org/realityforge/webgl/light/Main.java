@@ -169,21 +169,21 @@ public final class Main
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
 
     _modelMatrix.identity();
     _modelMatrix.translate( 3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
 
     _modelMatrix.identity();
     _modelMatrix.translate( -3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
 
     _angle += 0.01;
   }
