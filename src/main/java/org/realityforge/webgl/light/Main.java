@@ -9,6 +9,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.joml.Vector3d;
+import org.joml.Vector3f;
 import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Main
@@ -40,6 +41,7 @@ public final class Main
   private boolean _pitchDownPressed;
   private boolean _yawLeftPressed;
   private boolean _yawRightPressed;
+  private float _time;
 
   @Override
   public void onModuleLoad()
@@ -159,6 +161,9 @@ public final class Main
     // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
     updateCamera();
 
+    final Vector3f position = _light.getPosition();
+    position.y = (float) ( 2 * Math.sin( 0.1 * ( _time + position.y ) ) );
+    position.x = (float) ( -2 * Math.sin( 0.1 * ( _time + position.x ) ) );
     _viewMatrix.identity();
     final Vector3d target = new Vector3d( _camera.getPosition() ).add( _camera.getDirection() );
     // TODO: It would be really nice if instead we could do
@@ -199,6 +204,7 @@ public final class Main
     _lightMesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
 
     _angle += 0.01;
+    _time += 0.1;
   }
 
   private void updateCamera()
