@@ -35,22 +35,22 @@ final class Camera
     return _up;
   }
 
-  public double getPitch()
+  double getPitch()
   {
     return _pitch;
   }
 
-  public void setPitch( final double pitch )
+  void setPitch( final double pitch )
   {
     _pitch = pitch;
   }
 
-  public double getYaw()
+  double getYaw()
   {
     return _yaw;
   }
 
-  public void setYaw( final double yaw )
+  void setYaw( final double yaw )
   {
     _yaw = yaw;
   }
