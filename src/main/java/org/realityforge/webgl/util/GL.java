@@ -2,9 +2,11 @@ package org.realityforge.webgl.util;
 
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
+import elemental2.promise.Promise;
 import elemental3.ArrayBufferView;
 import elemental3.Global;
 import elemental3.HTMLImageElement;
+import elemental3.Image;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
@@ -192,6 +194,23 @@ public final class GL
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + index );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
     gl.uniform1i( binding.getLocation(), index );
+  }
+
+  @Nonnull
+  public static Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
+                                                   @Nonnull final String src )
+  {
+    return new Promise<>( ( resolveFn, rejectFn ) -> {
+      final HTMLImageElement image = new Image();
+      image.src = src;
+      image.onload = e -> resolveFn.onInvoke( GL.prepareTexture( gl,
+                                                                 image,
+                                                                 WebGL2RenderingContext.LINEAR,
+                                                                 WebGL2RenderingContext.LINEAR,
+                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE ) );
+      image.onerror = ( e, s, l, c, o ) -> rejectFn.onInvoke( e );
+    } );
   }
 
   @Nonnull

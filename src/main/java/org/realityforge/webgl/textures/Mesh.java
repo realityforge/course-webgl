@@ -1,8 +1,5 @@
 package org.realityforge.webgl.textures;
 
-import elemental2.promise.Promise;
-import elemental3.HTMLImageElement;
-import elemental3.Image;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
@@ -46,12 +43,12 @@ final class Mesh
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
-    loadTexture( gl, "img/webgl-logo-256.jpg" ).then( texture -> {
+    GL.loadTexture( gl, "img/webgl-logo-256.jpg" ).then( texture -> {
       _texture1 = texture;
       return null;
     } );
 
-    loadTexture( gl, "img/StoreLogo.png" ).then( texture -> {
+    GL.loadTexture( gl, "img/StoreLogo.png" ).then( texture -> {
       _texture2 = texture;
       return null;
     } );
@@ -73,23 +70,6 @@ final class Mesh
     _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
     _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
     _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
-  }
-
-  @Nonnull
-  private Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
-                                             @Nonnull final String src )
-  {
-    return new Promise<>( ( resolveFn, rejectFn ) -> {
-      final HTMLImageElement image = new Image();
-      image.src = src;
-      image.onload = e -> resolveFn.onInvoke( GL.prepareTexture( gl,
-                                                                 image,
-                                                                 WebGL2RenderingContext.LINEAR,
-                                                                 WebGL2RenderingContext.LINEAR,
-                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE,
-                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE ) );
-      image.onerror = ( e, s, l, c, o ) -> rejectFn.onInvoke( e );
-    } );
   }
 
   boolean areTexturesLoaded()
