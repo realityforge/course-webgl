@@ -2,7 +2,7 @@ require 'buildr/git_auto_version'
 require 'buildr/gwt'
 require 'reality/naming'
 
-GWT_MODULES = %w(Camera Cube Cube2 Rectangle HelloTriangle Light Textures)
+GWT_MODULES = %w(Camera Cube Cube2 Rectangle HelloTriangle ImageProcessing Light Textures)
 
 desc 'The Extensive WebGL Series coursework'
 define 'course-webgl' do
