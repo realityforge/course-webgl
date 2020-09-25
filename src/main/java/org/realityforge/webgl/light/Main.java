@@ -193,7 +193,7 @@ public final class Main
     gl.useProgram( _lightMesh.getProgram() );
 
     _modelMatrix.identity();
-    _modelMatrix.translate( 8, 4, -9 );
+    _modelMatrix.translate( position.x, position.y, position.z );
     _modelMatrix.scale( 0.2 );
 
     _lightMesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
