@@ -25,7 +25,7 @@ public final class BufferAttributeBinding
     _attribute = Objects.requireNonNull( attribute );
     _location = gl.getAttribLocation( program, name );
     //TODO: We should improve the handling of this error
-    assert WebGL2RenderingContext.INVALID_ENUM != _location;
+    assert WebGL2RenderingContext.INVALID_INDEX != _location;
   }
 
   @Nonnull
