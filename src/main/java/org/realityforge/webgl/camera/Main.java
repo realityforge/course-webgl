@@ -188,7 +188,7 @@ public final class Main
     if ( _leftPressed )
     {
       // Calculate the "right" vector (We assume our view has no roll and thus can just use yaw) and
-      // after right vecor is calculated then use direction to calculate movement
+      // after right vector is calculated then use direction to calculate movement
       position.add( new Vector3d( -1 * Math.sin( _camera.getYaw() ), 0.0, Math.cos( _camera.getYaw() ) ).mul( -0.1 ) );
     }
     if ( _rightPressed )
