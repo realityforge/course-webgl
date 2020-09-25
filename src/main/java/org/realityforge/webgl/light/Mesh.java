@@ -80,6 +80,12 @@ final class Mesh
   }
 
   @Nonnull
+  WebGLProgram getProgram()
+  {
+    return _program;
+  }
+
+  @Nonnull
   private Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
                                              @Nonnull final String src )
   {
@@ -107,7 +113,6 @@ final class Mesh
                @Nonnull final Matrix4d projectionMatrix,
                @Nonnull final Light light )
   {
-    gl.useProgram( _program );
     gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );

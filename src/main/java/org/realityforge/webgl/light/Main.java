@@ -162,6 +162,8 @@ public final class Main
     //final Vector3d target = _camera.getPosition().dup().add( _camera.getDirection() );
     _viewMatrix.lookAt( _camera.getPosition(), target, _camera.getUp() );
 
+    gl.useProgram( _mesh.getProgram() );
+
     // ModelMatrix should be calculated in the simulation loop rather than render loop
     // but they are effectively the same in out app so we can just recalculate in render loop
     _modelMatrix.identity();
