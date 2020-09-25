@@ -124,7 +124,6 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    // Tell GPU to load position data into program from out buffer
     GL.sendToGpu( gl, _position );
     GL.sendToGpu( gl, _color );
     GL.sendToGpu( gl, _textureCoordinate );
