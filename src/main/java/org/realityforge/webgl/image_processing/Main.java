@@ -19,9 +19,7 @@ import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32BufferAttribute;
 import org.realityforge.webgl.util.FloatUniformBinding;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.ImageTexture;
 import org.realityforge.webgl.util.TextureUniformBinding;
-import org.realityforge.webgl.util.Vec2fUniformBinding;
 import org.realityforge.webgl.util.VecfUniformBinding;
 
 public final class Main
@@ -29,7 +27,6 @@ public final class Main
 {
   private TextureUniformBinding u_image;
   private TextureUniformBinding u_colorPalette;
-  private Vec2fUniformBinding u_textureSize;
   private BoolUniformBinding u_isGrayscale;
   private BoolUniformBinding u_isColorPalette;
   private BoolUniformBinding u_isKernel;
@@ -94,7 +91,6 @@ public final class Main
       "in vec2 v_textureCoordinate;\n" +
       "out vec4 color;\n" +
       "uniform sampler2D u_image;\n" +
-      "uniform vec2 u_textureSize;\n" +
       "uniform sampler2D u_colorPalette;\n" +
       "uniform float u_kernel[9];\n" +
       "uniform float u_kernelWeight;\n" +
@@ -108,7 +104,8 @@ public final class Main
 
       "vec4 applyKernel() {\n" +
       // compute 1 pixel in texture coordinates.
-      "  vec2 onePixel = vec2(1.0, 1.0) / u_textureSize;" +
+      "  ivec2 dims = textureSize(u_image, 0);\n" +
+      "  vec2 onePixel = 1.0 / vec2(dims);\n "+
       // Compute the unweighted value based on the kernel
       "  vec4 values =\n" +
       "    texture(u_image, v_textureCoordinate + onePixel * vec2(-1, -1)) * u_kernel[0] +\n" +
@@ -167,7 +164,6 @@ public final class Main
 
     u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
     u_colorPalette = new TextureUniformBinding( _gl, program, "u_colorPalette", "img/ColorPalette.jpg", 1 );
-    u_textureSize = new Vec2fUniformBinding( _gl, program, "u_textureSize", 0, 0 );
     u_isGrayscale = new BoolUniformBinding( _gl, program, "u_isGrayscale", false );
     u_isInverse = new BoolUniformBinding( _gl, program, "u_isInverse", false );
     u_isKernel = new BoolUniformBinding( _gl, program, "u_isKernel", false );
@@ -220,10 +216,6 @@ public final class Main
     {
       u_image.sendToGpu( _gl );
       u_colorPalette.sendToGpu( _gl );
-      final ImageTexture imageTexture = u_image.getImageTexture();
-      u_textureSize.setX( imageTexture.getWidth() );
-      u_textureSize.setY( imageTexture.getHeight() );
-      u_textureSize.sendToGpu( _gl );
     }
     CanvasUtil.resize( _gl, canvas );
 
