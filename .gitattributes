@@ -3,8 +3,10 @@
 *.css text
 *.html text
 *.java text
+*.jpg binary
 *.json text
 *.md text
+*.png binary
 *.rake text
 *.xml text
 *.yaml text
