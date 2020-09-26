@@ -55,12 +55,12 @@ final class Mesh
         @GLSL @Nonnull final String fragmentShaderSource )
   {
     GL.loadTexture( gl, "img/wood.jpg" ).then( texture -> {
-      _texture1 = texture;
+      _texture1 = texture.getTexture();
       return null;
     } );
 
     GL.loadTexture( gl, "img/StoreLogo.png" ).then( texture -> {
-      _texture2 = texture;
+      _texture2 = texture.getTexture();
       return null;
     } );
 

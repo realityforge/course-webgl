@@ -197,18 +197,20 @@ public final class GL
   }
 
   @Nonnull
-  public static Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
+  public static Promise<ImageTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
                                                    @Nonnull final String src )
   {
     return new Promise<>( ( resolveFn, rejectFn ) -> {
       final HTMLImageElement image = new Image();
       image.src = src;
-      image.onload = e -> resolveFn.onInvoke( GL.prepareTexture( gl,
-                                                                 image,
-                                                                 WebGL2RenderingContext.LINEAR,
-                                                                 WebGL2RenderingContext.LINEAR,
-                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE,
-                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE ) );
+      image.onload = e -> resolveFn.onInvoke( new ImageTexture( GL.prepareTexture( gl,
+                                                                                   image,
+                                                                                   WebGL2RenderingContext.LINEAR,
+                                                                                   WebGL2RenderingContext.LINEAR,
+                                                                                   WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                                                                   WebGL2RenderingContext.CLAMP_TO_EDGE ),
+                                                                image.width,
+                                                                image.height ) );
       image.onerror = ( e, s, l, c, o ) -> rejectFn.onInvoke( e );
     } );
   }
