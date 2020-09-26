@@ -2,149 +2,249 @@ package org.realityforge.webgl.image_processing;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental2.core.Float32Array;
+import elemental3.Document;
 import elemental3.Global;
+import elemental3.HTMLButtonElement;
 import elemental3.HTMLCanvasElement;
+import elemental3.HTMLElement;
+import elemental3.Window;
 import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
+import org.realityforge.webgl.util.BoolUniformBinding;
+import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.CanvasUtil;
+import org.realityforge.webgl.util.Float32BufferAttribute;
+import org.realityforge.webgl.util.FloatUniformBinding;
 import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.ImageTexture;
+import org.realityforge.webgl.util.TextureUniformBinding;
+import org.realityforge.webgl.util.Vec2fUniformBinding;
+import org.realityforge.webgl.util.VecfUniformBinding;
 
-public class Main
+public final class Main
   implements EntryPoint
 {
+  private TextureUniformBinding u_image;
+  private TextureUniformBinding u_colorPalette;
+  private Vec2fUniformBinding u_textureSize;
+  private BoolUniformBinding u_isGrayscale;
+  private BoolUniformBinding u_isColorPalette;
+  private BoolUniformBinding u_isKernel;
+  private BoolUniformBinding u_isInverse;
+  private WebGL2RenderingContext _gl;
+
   @Override
   public void onModuleLoad()
   {
+    final Window window = Global.globalThis();
+    final Document document = window.document();
+    final HTMLElement body = document.body;
+    assert null != body;
+    final HTMLButtonElement button1 = (HTMLButtonElement) document.createElement( "button" );
+    button1.textContent = "Greyscale";
+    button1.onclick = e -> updateMode( true, false, false, false );
+    body.appendChild( button1 );
+
+    final HTMLButtonElement button2 = (HTMLButtonElement) document.createElement( "button" );
+    button2.textContent = "Inverse";
+    button2.onclick = e -> updateMode( false, true, false, false );
+    body.appendChild( button2 );
+
+    final HTMLButtonElement button3 = (HTMLButtonElement) document.createElement( "button" );
+    button3.textContent = "Apply Image Kernel";
+    button3.onclick = e -> updateMode( false, false, true, false );
+    body.appendChild( button3 );
+
+    final HTMLButtonElement button4 = (HTMLButtonElement) document.createElement( "button" );
+    button4.textContent = "Apply Color Palette";
+    button4.onclick = e -> updateMode( false, false, false, true );
+    body.appendChild( button4 );
+
+    final HTMLButtonElement button5 = (HTMLButtonElement) document.createElement( "button" );
+    button5.textContent = "Reset";
+    button5.onclick = e -> updateMode( false, false, false, false );
+    body.appendChild( button5 );
+
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
-    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
+    _gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    // Vertex position data for triangle
-    double[] positions = new double[]{
-      // Vertex 1
-      1.0, -1.0, 0.0,
-      // Vertex 2
-      0.0, 1.0, 0.0,
-      // Vertex 3
-      -1.0, -1.0, 0.0
-    };
+    final double[] positions = prepareRectVec2( -1.0, -1.0, 1.0, 1.0 );
+    final double[] textureCoordinates = prepareRectVec2( 0.0, 0.0, 1.0, 1.0 );
 
-    // Vertex color data for triangle in RGBA form
-    double[] colors = new double[]{
-      // Red
-      1.0, 0.0, 0.0, 1.0,
-      // Green
-      0.0, 1.0, 0.0, 1.0,
-      // Blue
-      0.0, 0.0, 1.0, 1.0
-    };
-
-    // The vertex shader that will be run for every vertex
     @GLSL
     final String vertexShaderSource =
-      // The shader language is OpenGL 3 (i.e. 300) ES and this version pragma must
-      // be the first thing present in the shader source
       "#version 300 es\n" +
-      // The incoming vertex position
-      "in vec3 position;\n" +
-      // The incoming vertex color
-      "in vec4 color;\n" +
-      // The output vertex color that will be fed to the next shader
-      "out vec4 fcolor;\n" +
-      "" +
-      // The main program/kernel
-      "void main()\n" +
-      "{\n" +
-      // Copy position from input to output, converting to vec4 by adding using 1 for 4th dimension
-      "  gl_Position = vec4(position, 1);" +
-      // Copy color from input to output
-      "  fcolor = color;" +
+      "precision mediump float;\n" +
+      "in vec2 a_position;\n" +
+      "in vec2 a_textureCoordinate;\n" +
+      "out vec2 v_textureCoordinate;\n" +
+      "void main () {\n" +
+      "  gl_Position = vec4(a_position.x, a_position.y * -1.0, 0.0, 1.0);\n" +
+      "  v_textureCoordinate = a_textureCoordinate;\n" +
       "}\n";
 
     // The fragment shader that will be run for every pixel
     @GLSL
     final String fragmentShaderSource =
-      // The version of language in use
       "#version 300 es\n" +
-      // There is no default precision for floats in fragment shaders so specify it
       "precision mediump float;\n" +
-      // The incoming fragment color
-      "in vec4 fcolor;\n" +
-      // The output fragment color
-      "out vec4 finalColor;\n" +
-      "" +
-      // The main program/kernel
+      "in vec2 v_textureCoordinate;\n" +
+      "out vec4 color;\n" +
+      "uniform sampler2D u_image;\n" +
+      "uniform vec2 u_textureSize;\n" +
+      "uniform sampler2D u_colorPalette;\n" +
+      "uniform float u_kernel[9];\n" +
+      "uniform float u_kernelWeight;\n" +
+
+      // Arbitrary flags for applying some processing
+      // Should only have one boolen set to true ... worst design ever
+      "uniform bool u_isGrayscale;\n" +
+      "uniform bool u_isInverse;\n" +
+      "uniform bool u_isKernel;\n" +
+      "uniform bool u_isColorPalette;\n" +
+
+      "vec4 applyKernel() {\n" +
+      // compute 1 pixel in texture coordinates.
+      "  vec2 onePixel = vec2(1.0, 1.0) / u_textureSize;" +
+      // Compute the unweighted value based on the kernel
+      "  vec4 values =\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(-1, -1)) * u_kernel[0] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(0, -1)) * u_kernel[1] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(1, -1)) * u_kernel[2] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(-1, 0)) * u_kernel[3] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(0, 0)) * u_kernel[4] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(1, 0)) * u_kernel[5] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(-1, 1)) * u_kernel[6] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(0, 1)) * u_kernel[7] +\n" +
+      "    texture(u_image, v_textureCoordinate + onePixel * vec2(1, 1)) * u_kernel[8];\n" +
+      "\n" +
+      "  return vec4(vec3((values/u_kernelWeight).rgb), 1.0);\n" +
+      "}\n" +
       "void main()\n" +
       "{\n" +
-      // Copy color from input to output
-      "  finalColor = fcolor;" +
+      "  if (u_isGrayscale) {\n" +
+      "    vec4 tex = texture(u_image, v_textureCoordinate);\n" +
+      "    float newPixelVal = tex.r * 0.59 +  tex.g * 0.30 +  tex.b * 0.11;\n" +
+      "    color = vec4(vec3(newPixelVal), 1.0);\n" +
+      "  } else if (u_isInverse) {\n" +
+      "    vec4 tex = texture(u_image, v_textureCoordinate);\n" +
+      "    color = vec4(1.0 - tex.rgb, 1.0);\n" +
+      "  } else if (u_isKernel) {\n" +
+      "        color = applyKernel();\n" +
+      "  } else if (u_isColorPalette) {\n" +
+      "    vec4 tex = texture(u_image, v_textureCoordinate);\n" +
+      "    color = texture(u_colorPalette, vec2(1.0 - tex.r, 0.0));\n" +
+      "  } else {\n" +
+      "    color = texture(u_image, v_textureCoordinate);\n" +
+      "  }\n" +
       "}\n";
 
-    // Create a GPU resource for position data
-    final WebGLBuffer positionBuffer = gl.createBuffer();
-    // Bind a gate between CPU and GPU
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
-
-    // Send data via ARRAY_BUFFER gate and whatever it is bound to which is a buffer in this case
-    // The last parameter is a hint indicating that this data is static and the CPU will not update it often
-    // which means that the GPU can store it close to where it is used without worrying about latency to update
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER,
-                   new Float32Array( positions ),
-                   WebGL2RenderingContext.STATIC_DRAW );
-
-    final WebGLBuffer colorBuffer = gl.createBuffer();
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER,
-                   new Float32Array( colors ),
-                   WebGL2RenderingContext.STATIC_DRAW );
-
     // Build and compile the vertex shader
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
+    final WebGLShader vertexShader = GL.createShader( _gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     assert null != vertexShader;
 
     final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
+      GL.createShader( _gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
     assert null != fragmentShader;
 
     // Combine the shaders into a program
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
+    final BufferAttributeBinding a_position =
+      new BufferAttributeBinding( _gl,
+                                  program,
+                                  "a_position",
+                                  new Float32BufferAttribute( _gl, new Float32Array( positions ), 2 ) );
+    final BufferAttributeBinding a_textureCoordinate =
+      new BufferAttributeBinding( _gl,
+                                  program,
+                                  "a_textureCoordinate",
+                                  new Float32BufferAttribute( _gl, new Float32Array( textureCoordinates ), 2 ) );
+
+    u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
+    u_colorPalette = new TextureUniformBinding( _gl, program, "u_colorPalette", "img/ColorPalette.jpg", 1 );
+    u_textureSize = new Vec2fUniformBinding( _gl, program, "u_textureSize", 0, 0 );
+    u_isGrayscale = new BoolUniformBinding( _gl, program, "u_isGrayscale", false );
+    u_isInverse = new BoolUniformBinding( _gl, program, "u_isInverse", false );
+    u_isKernel = new BoolUniformBinding( _gl, program, "u_isKernel", false );
+    u_isColorPalette = new BoolUniformBinding( _gl, program, "u_isColorPalette", false );
+
+    // Kernel Weight = su of each kernel element
+    final FloatUniformBinding u_kernelWeight = new FloatUniformBinding( _gl, program, "u_kernelWeight", 2 );
+    final double[] sharpenKernel = new double[]{ -1, -1, -1, -1, 10, -1, -1, -1, -1 };
+    final VecfUniformBinding u_kernel =
+      new VecfUniformBinding( _gl, program, "u_kernel", new Float32Array( sharpenKernel ) );
+
     // Start using the program for all vertexes pass through gl until the program is changed
-    gl.useProgram( program );
+    _gl.useProgram( program );
 
-    // Tell GPU to load position data into program from out buffer
-    final int positionAttribLocation = gl.getAttribLocation( program, "position" );
-    gl.enableVertexAttribArray( positionAttribLocation );
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
-    gl.vertexAttribPointer( positionAttribLocation,
-      /* the number of values to take for each vertex*/3,
-      /* Each value is a float */ WebGL2RenderingContext.FLOAT,
-      /* Not normalized */ false,
-      /* 0 stride is a special signal to gl to indicate that the next value immediately follows */ 0,
-      /* no offset so start at the start of the buffer */ 0 );
+    a_position.sendToGpu( _gl );
+    a_textureCoordinate.sendToGpu( _gl );
+    u_isGrayscale.sendToGpu( _gl );
+    u_isInverse.sendToGpu( _gl );
+    u_isKernel.sendToGpu( _gl );
+    u_isColorPalette.sendToGpu( _gl );
+    u_kernelWeight.sendToGpu( _gl );
+    u_kernel.sendToGpu( _gl );
 
-    // Tell GPU to load color data into program from out buffer
-    final int colorAttribLocation = gl.getAttribLocation( program, "color" );
-    gl.enableVertexAttribArray( colorAttribLocation );
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
-    gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );
-
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
+  private void updateMode( final boolean greyScale,
+                           final boolean inverse,
+                           final boolean imageKernel,
+                           final boolean colorPalette )
   {
-    CanvasUtil.resize( gl, canvas );
+    u_isGrayscale.setValue( greyScale );
+    u_isInverse.setValue( inverse );
+    u_isKernel.setValue( imageKernel );
+    u_isColorPalette.setValue( colorPalette );
+    u_isGrayscale.sendToGpu( _gl );
+    u_isInverse.sendToGpu( _gl );
+    u_isKernel.sendToGpu( _gl );
+    u_isColorPalette.sendToGpu( _gl );
+  }
 
-    gl.clearColor( 0, 0, 0, 1 );
-    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
+  private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
+  {
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
+    if ( !u_image.isReady() || !u_colorPalette.isReady() )
+    {
+      return;
+    }
+    else
+    {
+      u_image.sendToGpu( _gl );
+      u_colorPalette.sendToGpu( _gl );
+      final ImageTexture imageTexture = u_image.getImageTexture();
+      u_textureSize.setX( imageTexture.getWidth() );
+      u_textureSize.setY( imageTexture.getHeight() );
+      u_textureSize.sendToGpu( _gl );
+    }
+    CanvasUtil.resize( _gl, canvas );
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 3 );
+    _gl.clearColor( 0, 0, 0, 1 );
+    _gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    _gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 6 );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  private double[] prepareRectVec2( final double startX, final double startY, final double endX, final double endY )
+  {
+    return new double[]
+      {
+        startX, startY,
+        endX, startY,
+        startX, endY,
+        startX, endY,
+        endX, endY,
+        endX, startY
+      };
   }
 }
