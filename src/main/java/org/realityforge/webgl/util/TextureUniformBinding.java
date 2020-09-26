@@ -11,7 +11,7 @@ public final class TextureUniformBinding
 {
   private final int _textureUnitIndex;
   @Nullable
-  private ImageTexture _imageTexture;
+  private WebGLTexture _texture;
 
   public TextureUniformBinding( @Nonnull final WebGL2RenderingContext gl,
                                 @Nonnull final WebGLProgram program,
@@ -22,35 +22,29 @@ public final class TextureUniformBinding
     super( gl, program, name );
     _textureUnitIndex = textureUnitIndex;
     GL.loadTexture( gl, src ).then( texture -> {
-      _imageTexture = texture;
+      _texture = texture;
       return null;
     } );
   }
 
   public boolean isReady()
   {
-    return null != _imageTexture;
-  }
-
-  @Nonnull
-  public ImageTexture getImageTexture()
-  {
-    // This should be only invoked after we know it is ready
-    assert null != _imageTexture;
-    return _imageTexture;
+    return null != _texture;
   }
 
   @Nonnull
   public WebGLTexture getTexture()
   {
-    return getImageTexture().getTexture();
+    // This should be only invoked after we know it is ready
+    assert null != _texture;
+    return _texture;
   }
 
   public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    assert null != _imageTexture;
+    assert null != _texture;
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + _textureUnitIndex );
-    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _imageTexture.getTexture() );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture );
     gl.uniform1i( getLocation(), _textureUnitIndex );
   }
 }
