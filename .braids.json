@@ -1,6 +1,11 @@
 {
   "config_version": 1,
   "mirrors": {
+    "vendor/GLSLfromScratch": {
+      "url": "https://github.com/NikLever/GLSLfromScratch.git",
+      "branch": "master",
+      "revision": "68be1e19b1550adf67b570b8f0845ee44cdcf65f"
+    },
     "vendor/webglinternals": {
       "url": "https://github.com/subhasishdash/webglinternals.git",
       "branch": "master",
