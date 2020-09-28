@@ -177,6 +177,19 @@ public class Promise<T>
   public native <V> Promise<V> then( @Nonnull OnFulfilledCallback<? super T, ? extends V> onFulfilled );
 
   /**
+   * Appends the fulfillment handler to the promise, and returns a new promise resolving to a void value.
+   * This is an affordance added to simplify integration with a java-esque library and is equivalent to a
+   * javascript then method that returns undefined.
+   *
+   * @param onAccept the callback function called when the promise is fulfilled.
+   * @return a promise with the fulfillment handler set to the specified callback.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">MDN - Promise.then</a>
+   */
+  @JsMethod( name = "then" )
+  @Nonnull
+  public native Promise<Void> thenAccept( @Nonnull AcceptCallback<? super T> onAccept );
+
+  /**
    * Appends a rejection handler callback to the promise, and returns a new promise resolving to the
    * return value of the callback if it is called, or to its original fulfillment value if the promise
    * is instead fulfilled.
