@@ -203,13 +203,13 @@ public final class GL
     return new Promise<>( ( resolveFn, rejectFn ) -> {
       final HTMLImageElement image = new Image();
       image.src = src;
-      image.onload = e -> resolveFn.onInvoke( GL.prepareTexture( gl,
-                                                                 image,
-                                                                 WebGL2RenderingContext.LINEAR,
-                                                                 WebGL2RenderingContext.LINEAR,
-                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE,
-                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE ) );
-      image.onerror = ( e, s, l, c, o ) -> rejectFn.onInvoke( e );
+      image.onload = e -> resolveFn.resolve( GL.prepareTexture( gl,
+                                                                image,
+                                                                WebGL2RenderingContext.LINEAR,
+                                                                WebGL2RenderingContext.LINEAR,
+                                                                WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                                                WebGL2RenderingContext.CLAMP_TO_EDGE ) );
+      image.onerror = ( e, s, l, c, o ) -> rejectFn.reject( e );
     } );
   }
 

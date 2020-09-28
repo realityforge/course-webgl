@@ -17,7 +17,6 @@ define 'course-webgl' do
                :jetbrains_annotations,
                :jsinterop_base,
                :jsinterop_annotations,
-               :elemental2_promise,
                :elemental2_core,
                :braincheck,
                :gwt_user
