@@ -14,6 +14,11 @@ public final class BufferAttributeBinding
   private final String _name;
   @Nonnull
   private final Buffer<?> _buffer;
+  /**
+   * The location/index of attribute in the program. This can either be specified in
+   * the shader definition or looked up at runtime. Specifying the value in the shader source
+   * is more efficient but more complex when authoring shaders.
+   */
   private final int _location;
 
   public BufferAttributeBinding( @Nonnull final WebGL2RenderingContext gl,
