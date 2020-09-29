@@ -124,7 +124,7 @@ final class Mesh
 
     gl.useProgram( _program );
 
-    GL.sendTextureToGpu( gl, _textureData0, _texture1, 0 );
-    GL.sendTextureToGpu( gl, _textureData1, _texture2, 1 );
+    GL.bindTexture( gl, _textureData0, _texture1, 0 );
+    GL.bindTexture( gl, _textureData1, _texture2, 1 );
   }
 }

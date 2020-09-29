@@ -103,6 +103,19 @@ public final class GL
 
   @Nullable
   public static WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
+                                            @GLSL @Nonnull final String vertexShaderSource,
+                                            @GLSL @Nonnull final String fragmentShaderSource )
+  {
+    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
+    assert null != vertexShader;
+    final WebGLShader fragmentShader =
+      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
+    assert null != fragmentShader;
+    return createProgram( gl, vertexShader, fragmentShader );
+  }
+
+  @Nullable
+  public static WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
                                             @Nonnull final WebGLShader vertexShader,
                                             @Nonnull final WebGLShader fragmentShader )
   {
@@ -186,10 +199,10 @@ public final class GL
     return texture;
   }
 
-  public static void sendTextureToGpu( @Nonnull final WebGL2RenderingContext gl,
-                                       @Nonnull final UniformBinding binding,
-                                       @Nonnull final WebGLTexture texture,
-                                       final int index )
+  public static void bindTexture( @Nonnull final WebGL2RenderingContext gl,
+                                  @Nonnull final UniformBinding binding,
+                                  @Nonnull final WebGLTexture texture,
+                                  final int index )
   {
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + index );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
