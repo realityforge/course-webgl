@@ -2,7 +2,6 @@ package org.realityforge.webgl.vaos;
 
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
@@ -12,29 +11,11 @@ import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.UniformBinding;
 
 final class Mesh
+  extends Object3D
 {
-  @Nonnull
-  private final BufferAttributeBinding _position;
-  @Nonnull
-  private final BufferAttributeBinding _normal;
-  @Nonnull
-  private final BufferAttributeBinding _color;
-  @Nonnull
-  private final BufferAttributeBinding _textureCoordinate;
-  private WebGLTexture _texture1;
-  private WebGLTexture _texture2;
-  @Nonnull
-  private final WebGLProgram _program;
-  @Nonnull
-  private final UniformBinding _modelMatrix;
-  @Nonnull
-  private final UniformBinding _viewMatrix;
-  @Nonnull
-  private final UniformBinding _projectionMatrix;
   @Nonnull
   private final UniformBinding _textureData0;
   @Nonnull
@@ -45,6 +26,10 @@ final class Mesh
   private final UniformBinding _lightPosition;
   @Nonnull
   private final UniformBinding _cameraPosition;
+  private int _texturesLoaded;
+  @Nonnull
+  private final WebGLTexture[] _textures = new WebGLTexture[ 2 ];
+  private boolean _uploaded;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32Buffer positionAttribute,
@@ -54,41 +39,41 @@ final class Mesh
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
-    GL.loadTexture( gl, "img/wood.jpg" ).thenAccept( texture -> _texture1 = texture );
-    GL.loadTexture( gl, "img/StoreLogo.png" ).thenAccept( texture -> _texture2 = texture );
+    super( gl, vertexShaderSource, fragmentShaderSource );
 
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
-    assert null != vertexShader;
-    assert null != fragmentShader;
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
-    assert null != program;
-    _program = program;
-    _modelMatrix = new UniformBinding( gl, program, "modelMatrix" );
-    _viewMatrix = new UniformBinding( gl, program, "viewMatrix" );
-    _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
+
+    final WebGLProgram program = getProgram();
     _textureData0 = new UniformBinding( gl, program, "textureData0" );
     _textureData1 = new UniformBinding( gl, program, "textureData1" );
     _lightColor = new UniformBinding( gl, program, "lightColor" );
     _lightPosition = new UniformBinding( gl, program, "lightPosition" );
     _cameraPosition = new UniformBinding( gl, program, "cameraPosition" );
+    loadTexture( gl, "img/wood.jpg", 0 );
+    loadTexture( gl, "img/StoreLogo.png", 1 );
 
-    _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
-    _normal = new BufferAttributeBinding( gl, program, "normal", normalsAttribute );
-    _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
-    _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
+    setGeometry( new Geometry( gl,
+                               new BufferAttributeBinding( gl, program, "position", positionAttribute ),
+                               new BufferAttributeBinding( gl, program, "normal", normalsAttribute ),
+                               new BufferAttributeBinding( gl, program, "color", colorAttribute ),
+                               new BufferAttributeBinding( gl,
+                                                           program,
+                                                           "textureCoordinate",
+                                                           textureCoordinatesAttribute ) ) );
   }
 
-  @Nonnull
-  WebGLProgram getProgram()
+  private void loadTexture( @Nonnull final WebGL2RenderingContext gl,
+                            @Nonnull final String src,
+                            final int textureUnitIndex )
   {
-    return _program;
+    GL.loadTexture( gl, src ).thenAccept( texture -> {
+      _textures[ textureUnitIndex ] = texture;
+      _texturesLoaded++;
+    } );
   }
 
   boolean areTexturesLoaded()
   {
-    return null != _texture1 && null != _texture2;
+    return 2 == _texturesLoaded;
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,
@@ -98,9 +83,15 @@ final class Mesh
                @Nonnull final Light light,
                @Nonnull final Camera camera )
   {
-    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    if ( !_uploaded )
+    {
+      final WebGLProgram program = getProgram();
+      gl.useProgram( program );
+      GL.bindTexture( gl, _textureData0, _textures[ 0 ], 0 );
+      GL.bindTexture( gl, _textureData1, _textures[ 1 ], 1 );
+      _uploaded = true;
+    }
+
     final Vector3f color = light.getColor();
     gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
     final Vector3f lightPosition = light.getPosition();
@@ -112,19 +103,6 @@ final class Mesh
                   (float) cameraPosition.y,
                   (float) cameraPosition.z );
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
-  }
-
-  void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
-  {
-    _position.sendToGpu( gl );
-    _normal.sendToGpu( gl );
-    _color.sendToGpu( gl );
-    _textureCoordinate.sendToGpu( gl );
-
-    gl.useProgram( _program );
-
-    GL.sendTextureToGpu( gl, _textureData0, _texture1, 0 );
-    GL.sendTextureToGpu( gl, _textureData1, _texture2, 1 );
+    super.render( gl, modelMatrix, viewMatrix, projectionMatrix );
   }
 }

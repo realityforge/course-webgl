@@ -146,13 +146,6 @@ public final class Main
     {
       return;
     }
-    else if ( !_sentToGpu )
-    {
-      // Have to send to GPU here as otherwise texture data has not loaded
-      _mesh.sendToGpu( gl );
-      _lightMesh.sendToGpu( gl );
-      _sentToGpu = true;
-    }
 
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
@@ -171,6 +164,7 @@ public final class Main
     _viewMatrix.lookAt( _camera.getPosition(), target, _camera.getUp() );
 
     gl.useProgram( _mesh.getProgram() );
+    gl.bindVertexArray( _mesh.getGeometry().getVao() );
 
     // ModelMatrix should be calculated in the simulation loop rather than render loop
     // but they are effectively the same in out app so we can just recalculate in render loop
@@ -196,6 +190,7 @@ public final class Main
     _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light, _camera );
 
     gl.useProgram( _lightMesh.getProgram() );
+    gl.bindVertexArray( _lightMesh.getGeometry().getVao() );
 
     _modelMatrix.identity();
     _modelMatrix.translate( position.x, position.y, position.z );
