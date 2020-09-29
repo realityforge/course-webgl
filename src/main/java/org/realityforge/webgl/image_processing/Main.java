@@ -105,7 +105,7 @@ public final class Main
       "vec4 applyKernel() {\n" +
       // compute 1 pixel in texture coordinates.
       "  ivec2 dims = textureSize(u_image, 0);\n" +
-      "  vec2 onePixel = 1.0 / vec2(dims);\n "+
+      "  vec2 onePixel = 1.0 / vec2(dims);\n " +
       // Compute the unweighted value based on the kernel
       "  vec4 values =\n" +
       "    texture(u_image, v_textureCoordinate + onePixel * vec2(-1, -1)) * u_kernel[0] +\n" +

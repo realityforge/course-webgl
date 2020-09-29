@@ -17,10 +17,8 @@ public final class VecfUniformBinding
                              final Float32Array values )
   {
     super( gl, program, name );
-    _values = Objects.requireNonNull(values);
+    _values = Objects.requireNonNull( values );
   }
-
-
 
   public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {

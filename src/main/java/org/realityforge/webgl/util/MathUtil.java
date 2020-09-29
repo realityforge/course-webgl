@@ -17,6 +17,7 @@ public final class MathUtil
   {
     return new Float32Array( new double[]{ input.x, input.y, input.z, input.w } );
   }
+
   @Nonnull
   public static Float32Array toFloat32Array( @Nonnull final Vector3d input )
   {
