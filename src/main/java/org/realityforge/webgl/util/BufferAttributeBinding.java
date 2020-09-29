@@ -8,11 +8,6 @@ import javax.annotation.Nonnull;
 public final class BufferAttributeBinding
 {
   /**
-   * The name of the shader variable.
-   */
-  @Nonnull
-  private final String _name;
-  /**
    * The data and layout of data.
    */
   @Nonnull
@@ -24,22 +19,19 @@ public final class BufferAttributeBinding
    */
   private final int _location;
 
+  public BufferAttributeBinding( @Nonnull final Buffer<?> buffer, final int location )
+  {
+    assert WebGL2RenderingContext.INVALID_INDEX != location;
+    _buffer = Objects.requireNonNull( buffer );
+    _location = location;
+  }
+
   public BufferAttributeBinding( @Nonnull final WebGL2RenderingContext gl,
                                  @Nonnull final WebGLProgram program,
                                  @Nonnull final String name,
                                  @Nonnull final Buffer<?> buffer )
   {
-    _name = Objects.requireNonNull( name );
-    _buffer = Objects.requireNonNull( buffer );
-    _location = gl.getAttribLocation( program, name );
-    //TODO: We should improve the handling of this error
-    assert WebGL2RenderingContext.INVALID_INDEX != _location;
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
+    this( buffer, gl.getAttribLocation( program, name ) );
   }
 
   @Nonnull
