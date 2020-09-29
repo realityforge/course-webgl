@@ -1,6 +1,5 @@
 package elemental2.promise;
 
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
 
 /**
