@@ -13,16 +13,16 @@ public final class BufferAttributeBinding
   @Nonnull
   private final String _name;
   @Nonnull
-  private final Buffer<?> _attribute;
+  private final Buffer<?> _buffer;
   private final int _location;
 
   public BufferAttributeBinding( @Nonnull final WebGL2RenderingContext gl,
                                  @Nonnull final WebGLProgram program,
                                  @Nonnull final String name,
-                                 @Nonnull final Buffer<?> attribute )
+                                 @Nonnull final Buffer<?> buffer )
   {
     _name = Objects.requireNonNull( name );
-    _attribute = Objects.requireNonNull( attribute );
+    _buffer = Objects.requireNonNull( buffer );
     _location = gl.getAttribLocation( program, name );
     //TODO: We should improve the handling of this error
     assert WebGL2RenderingContext.INVALID_INDEX != _location;
@@ -35,9 +35,9 @@ public final class BufferAttributeBinding
   }
 
   @Nonnull
-  public Buffer<?> getAttribute()
+  public Buffer<?> getBuffer()
   {
-    return _attribute;
+    return _buffer;
   }
 
   public int getLocation()
@@ -48,12 +48,12 @@ public final class BufferAttributeBinding
   public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     gl.enableVertexAttribArray( _location );
-    gl.bindBuffer( _attribute.getTarget(), _attribute.getBuffer() );
+    gl.bindBuffer( _buffer.getTarget(), _buffer.getBuffer() );
     gl.vertexAttribPointer( _location,
-                            _attribute.getDimension(),
-                            _attribute.getType(),
+                            _buffer.getDimension(),
+                            _buffer.getType(),
                             false,
-                            _attribute.getStride(),
-                            _attribute.getOffset() );
+                            _buffer.getStride(),
+                            _buffer.getOffset() );
   }
 }
