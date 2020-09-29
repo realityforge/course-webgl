@@ -43,6 +43,12 @@ public final class Global extends Window {
   @Nonnull
   public native WebAssembly webAssembly();
 
+  @JsProperty(
+      name = "Atomics"
+  )
+  @Nonnull
+  public native Atomics atomics();
+
   /**
    * Accessor for the global <b>globalThis</b> property contains the global <i>this</i> value, which is akin to the global object.
    *
