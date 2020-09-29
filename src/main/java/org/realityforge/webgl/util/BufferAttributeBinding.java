@@ -12,6 +12,9 @@ public final class BufferAttributeBinding
    */
   @Nonnull
   private final String _name;
+  /**
+   * The data and layout of data.
+   */
   @Nonnull
   private final Buffer<?> _buffer;
   /**
