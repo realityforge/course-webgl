@@ -8,7 +8,7 @@ import org.joml.Matrix4d;
 import org.joml.Vector3f;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
-import org.realityforge.webgl.util.Float32BufferAttribute;
+import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.UniformBinding;
@@ -29,7 +29,7 @@ final class LightMesh
   private final UniformBinding _color;
 
   LightMesh( @Nonnull final WebGL2RenderingContext gl,
-             @Nonnull final Float32BufferAttribute positionAttribute,
+             @Nonnull final Float32Buffer positionAttribute,
              @GLSL @Nonnull final String vertexShaderSource,
              @GLSL @Nonnull final String fragmentShaderSource )
   {

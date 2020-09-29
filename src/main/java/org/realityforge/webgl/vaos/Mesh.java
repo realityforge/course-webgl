@@ -10,7 +10,7 @@ import org.joml.Vector3d;
 import org.joml.Vector3f;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
-import org.realityforge.webgl.util.Float32BufferAttribute;
+import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.UniformBinding;
@@ -47,10 +47,10 @@ final class Mesh
   private final UniformBinding _cameraPosition;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Float32BufferAttribute positionAttribute,
-        @Nonnull final Float32BufferAttribute normalsAttribute,
-        @Nonnull final Float32BufferAttribute colorAttribute,
-        @Nonnull final Float32BufferAttribute textureCoordinatesAttribute,
+        @Nonnull final Float32Buffer positionAttribute,
+        @Nonnull final Float32Buffer normalsAttribute,
+        @Nonnull final Float32Buffer colorAttribute,
+        @Nonnull final Float32Buffer textureCoordinatesAttribute,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {

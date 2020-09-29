@@ -13,13 +13,13 @@ public final class BufferAttributeBinding
   @Nonnull
   private final String _name;
   @Nonnull
-  private final BufferAttribute<?> _attribute;
+  private final Buffer<?> _attribute;
   private final int _location;
 
   public BufferAttributeBinding( @Nonnull final WebGL2RenderingContext gl,
                                  @Nonnull final WebGLProgram program,
                                  @Nonnull final String name,
-                                 @Nonnull final BufferAttribute<?> attribute )
+                                 @Nonnull final Buffer<?> attribute )
   {
     _name = Objects.requireNonNull( name );
     _attribute = Objects.requireNonNull( attribute );
@@ -35,7 +35,7 @@ public final class BufferAttributeBinding
   }
 
   @Nonnull
-  public BufferAttribute<?> getAttribute()
+  public Buffer<?> getAttribute()
   {
     return _attribute;
   }

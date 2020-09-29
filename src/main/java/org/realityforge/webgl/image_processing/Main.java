@@ -16,7 +16,7 @@ import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BoolUniformBinding;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.CanvasUtil;
-import org.realityforge.webgl.util.Float32BufferAttribute;
+import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.FloatUniformBinding;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.TextureUniformBinding;
@@ -155,12 +155,12 @@ public final class Main
       new BufferAttributeBinding( _gl,
                                   program,
                                   "a_position",
-                                  new Float32BufferAttribute( _gl, new Float32Array( positions ), 2 ) );
+                                  new Float32Buffer( _gl, new Float32Array( positions ), 2 ) );
     final BufferAttributeBinding a_textureCoordinate =
       new BufferAttributeBinding( _gl,
                                   program,
                                   "a_textureCoordinate",
-                                  new Float32BufferAttribute( _gl, new Float32Array( textureCoordinates ), 2 ) );
+                                  new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ) );
 
     u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
     u_colorPalette = new TextureUniformBinding( _gl, program, "u_colorPalette", "img/ColorPalette.jpg", 1 );

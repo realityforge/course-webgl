@@ -73,7 +73,7 @@ public final class GL
 
   @SuppressWarnings( "SameParameterValue" )
   public static void sendToGpu( @Nonnull final WebGL2RenderingContext gl,
-                                @Nonnull final Float32BufferAttribute attribute,
+                                @Nonnull final Float32Buffer attribute,
                                 final int index )
   {
     gl.enableVertexAttribArray( index );

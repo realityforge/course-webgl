@@ -10,7 +10,7 @@ import org.realityforge.webgl.annotations.DataType;
 import org.realityforge.webgl.annotations.TargetType;
 import org.realityforge.webgl.annotations.Usage;
 
-public abstract class BufferAttribute<T extends TypedArray>
+public abstract class Buffer<T extends TypedArray>
 {
   @Nonnull
   private final T _data;
@@ -26,14 +26,14 @@ public abstract class BufferAttribute<T extends TypedArray>
   @Nonnull
   private final WebGLBuffer _buffer;
 
-  protected BufferAttribute( @Nonnull final WebGL2RenderingContext gl,
-                             @Nonnull final T data,
-                             @TargetType final int target,
-                             @Usage final int usage,
-                             final int dimension,
-                             @DataType final int type,
-                             final int stride,
-                             final int offset )
+  protected Buffer( @Nonnull final WebGL2RenderingContext gl,
+                    @Nonnull final T data,
+                    @TargetType final int target,
+                    @Usage final int usage,
+                    final int dimension,
+                    @DataType final int type,
+                    final int stride,
+                    final int offset )
   {
     assert dimension > 0 && dimension <= 4;
     assert stride >= 0 && stride <= 255;

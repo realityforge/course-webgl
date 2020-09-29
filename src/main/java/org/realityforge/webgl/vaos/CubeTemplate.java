@@ -4,7 +4,7 @@ import elemental2.core.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.annotations.GLSL;
-import org.realityforge.webgl.util.Float32BufferAttribute;
+import org.realityforge.webgl.util.Float32Buffer;
 
 final class CubeTemplate
 {
@@ -323,7 +323,7 @@ final class CubeTemplate
   public static LightMesh createLightCube( @Nonnull final WebGL2RenderingContext gl )
   {
     return new LightMesh( gl,
-                          new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
+                          new Float32Buffer( gl, new Float32Array( POSITIONS ), 3 ),
                           LIGHT_VERTEX_SHADER_SOURCE,
                           LIGHT_FRAGMENT_SHADER_SOURCE );
   }
@@ -332,10 +332,10 @@ final class CubeTemplate
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
     return new Mesh( gl,
-                     new Float32BufferAttribute( gl, new Float32Array( POSITIONS ), 3 ),
-                     new Float32BufferAttribute( gl, new Float32Array( VERTEX_NORMALS ), 3 ),
-                     new Float32BufferAttribute( gl, new Float32Array( COLORS ), 4 ),
-                     new Float32BufferAttribute( gl, new Float32Array( TEXTURE_COORDINATES ), 2 ),
+                     new Float32Buffer( gl, new Float32Array( POSITIONS ), 3 ),
+                     new Float32Buffer( gl, new Float32Array( VERTEX_NORMALS ), 3 ),
+                     new Float32Buffer( gl, new Float32Array( COLORS ), 4 ),
+                     new Float32Buffer( gl, new Float32Array( TEXTURE_COORDINATES ), 2 ),
                      VERTEX_SHADER_SOURCE,
                      FRAGMENT_SHADER_SOURCE );
   }
