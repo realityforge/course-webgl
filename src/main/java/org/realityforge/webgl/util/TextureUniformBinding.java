@@ -21,10 +21,7 @@ public final class TextureUniformBinding
   {
     super( gl, program, name );
     _textureUnitIndex = textureUnitIndex;
-    GL.loadTexture( gl, src ).then( texture -> {
-      _texture = texture;
-      return null;
-    } );
+    GL.loadTexture( gl, src ).thenAccept( texture -> _texture = texture );
   }
 
   public boolean isReady()

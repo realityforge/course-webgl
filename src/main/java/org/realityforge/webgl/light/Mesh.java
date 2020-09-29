@@ -54,15 +54,8 @@ final class Mesh
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
-    GL.loadTexture( gl, "img/wood.jpg" ).then( texture -> {
-      _texture1 = texture;
-      return null;
-    } );
-
-    GL.loadTexture( gl, "img/StoreLogo.png" ).then( texture -> {
-      _texture2 = texture;
-      return null;
-    } );
+    GL.loadTexture( gl, "img/wood.jpg" ).thenAccept( texture -> _texture1 = texture );
+    GL.loadTexture( gl, "img/StoreLogo.png" ).thenAccept( texture -> _texture2 = texture );
 
     final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     final WebGLShader fragmentShader =
