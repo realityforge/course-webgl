@@ -16,5 +16,5 @@ public interface AcceptCallback<T>
    *
    * @param value the value that the promise was resolved with.
    */
-  void onFulfilled( @Nullable T value );
+  void onFulfilled( T value );
 }

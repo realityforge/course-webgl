@@ -19,5 +19,5 @@ public interface OnFulfilledCallback<T, V>
    * @return the promise to chain to if any.
    */
   @Nullable
-  Promise<V> onFulfilled( @Nullable T value );
+  Promise<V> onFulfilled( T value );
 }

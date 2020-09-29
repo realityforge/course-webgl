@@ -18,5 +18,5 @@ interface OnRejectedCallback<V>
    * @return the promise to chain to if any.
    */
   @Nullable
-  Promise<V> onRejected( @Nullable Object reason );
+  Promise<V> onRejected( Object reason );
 }
