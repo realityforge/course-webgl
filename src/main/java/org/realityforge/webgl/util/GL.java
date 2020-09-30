@@ -231,4 +231,100 @@ public final class GL
   {
     return Objects.requireNonNull( object );
   }
+
+  /**
+   * Describe specified WebGL2 type, returning "UNKNOWN" if supplied type matches no known value.
+   *
+   * @param type the type.
+   * @return the string label for type.
+   */
+  @Nonnull
+  public static String describeType( final int type )
+  {
+    switch ( type )
+    {
+      case WebGL2RenderingContext.FLOAT:
+        return "FLOAT";
+      case WebGL2RenderingContext.FLOAT_VEC2:
+        return "FLOAT_VEC2";
+      case WebGL2RenderingContext.FLOAT_VEC3:
+        return "FLOAT_VEC3";
+      case WebGL2RenderingContext.FLOAT_VEC4:
+        return "FLOAT_VEC4";
+      case WebGL2RenderingContext.INT:
+        return "INT";
+      case WebGL2RenderingContext.INT_VEC2:
+        return "INT_VEC2";
+      case WebGL2RenderingContext.INT_VEC3:
+        return "INT_VEC3";
+      case WebGL2RenderingContext.INT_VEC4:
+        return "INT_VEC4";
+      case WebGL2RenderingContext.BOOL:
+        return "BOOL";
+      case WebGL2RenderingContext.BOOL_VEC2:
+        return "BOOL_VEC2";
+      case WebGL2RenderingContext.BOOL_VEC3:
+        return "BOOL_VEC3";
+      case WebGL2RenderingContext.BOOL_VEC4:
+        return "BOOL_VEC4";
+      case WebGL2RenderingContext.FLOAT_MAT2:
+        return "FLOAT_MAT2";
+      case WebGL2RenderingContext.FLOAT_MAT3:
+        return "FLOAT_MAT3";
+      case WebGL2RenderingContext.FLOAT_MAT4:
+        return "FLOAT_MAT4";
+      case WebGL2RenderingContext.SAMPLER_2D:
+        return "SAMPLER_2D";
+      case WebGL2RenderingContext.SAMPLER_CUBE:
+        return "SAMPLER_CUBE";
+      case WebGL2RenderingContext.UNSIGNED_INT:
+        return "UNSIGNED_INT";
+      case WebGL2RenderingContext.UNSIGNED_INT_VEC2:
+        return "UNSIGNED_INT_VEC2";
+      case WebGL2RenderingContext.UNSIGNED_INT_VEC3:
+        return "UNSIGNED_INT_VEC3";
+      case WebGL2RenderingContext.UNSIGNED_INT_VEC4:
+        return "UNSIGNED_INT_VEC4";
+      case WebGL2RenderingContext.FLOAT_MAT2x3:
+        return "FLOAT_MAT2x3";
+      case WebGL2RenderingContext.FLOAT_MAT2x4:
+        return "FLOAT_MAT2x4";
+      case WebGL2RenderingContext.FLOAT_MAT3x2:
+        return "FLOAT_MAT3x2";
+      case WebGL2RenderingContext.FLOAT_MAT3x4:
+        return "FLOAT_MAT3x4";
+      case WebGL2RenderingContext.FLOAT_MAT4x2:
+        return "FLOAT_MAT4x2";
+      case WebGL2RenderingContext.FLOAT_MAT4x3:
+        return "FLOAT_MAT4x3";
+      case WebGL2RenderingContext.SAMPLER_3D:
+        return "SAMPLER_3D";
+      case WebGL2RenderingContext.SAMPLER_2D_SHADOW:
+        return "SAMPLER_2D_SHADOW";
+      case WebGL2RenderingContext.SAMPLER_2D_ARRAY:
+        return "SAMPLER_2D_ARRAY";
+      case WebGL2RenderingContext.SAMPLER_2D_ARRAY_SHADOW:
+        return "SAMPLER_2D_ARRAY_SHADOW";
+      case WebGL2RenderingContext.SAMPLER_CUBE_SHADOW:
+        return "SAMPLER_CUBE_SHADOW";
+      case WebGL2RenderingContext.INT_SAMPLER_2D:
+        return "INT_SAMPLER_2D";
+      case WebGL2RenderingContext.INT_SAMPLER_3D:
+        return "INT_SAMPLER_3D";
+      case WebGL2RenderingContext.INT_SAMPLER_CUBE:
+        return "INT_SAMPLER_CUBE";
+      case WebGL2RenderingContext.INT_SAMPLER_2D_ARRAY:
+        return "INT_SAMPLER_2D_ARRAY";
+      case WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_2D:
+        return "UNSIGNED_INT_SAMPLER_2D";
+      case WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_3D:
+        return "UNSIGNED_INT_SAMPLER_3D";
+      case WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_CUBE:
+        return "UNSIGNED_INT_SAMPLER_CUBE";
+      case WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_2D_ARRAY:
+        return "UNSIGNED_INT_SAMPLER_2D_ARRAY";
+      default:
+        return "UNKNOWN";
+    }
+  }
 }
