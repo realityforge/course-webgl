@@ -84,7 +84,7 @@ final class Options {
             return false;
         if (v.trim().length() == 0)
             return true;
-        return Boolean.valueOf(v).booleanValue();
+        return Boolean.parseBoolean( v );
     }
 
 }
