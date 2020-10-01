@@ -32,7 +32,6 @@ public final class Main
   private Mesh _mesh;
   private LightMesh _lightMesh;
   private double _angle;
-  private boolean _sentToGpu;
   private boolean _forwardPressed;
   private boolean _backwardPressed;
   private boolean _leftPressed;
