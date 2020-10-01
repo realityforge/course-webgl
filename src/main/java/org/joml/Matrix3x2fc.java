@@ -23,9 +23,10 @@
  */
 package org.joml;
 
-import java.util.*;
-
 import com.google.gwt.typedarrays.shared.Float32Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Interface to a read-only view of a 3x2 matrix of single-precision floats.

@@ -23,12 +23,7 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
-
-public class AABBi implements Externalizable {
+public class AABBi {
 
     /**
      * The x coordinate of the minimum corner.
@@ -890,23 +885,5 @@ public class AABBi implements Externalizable {
     public String toString() {
         return "(" + this.minX + " " + this.minY + " " + this.minZ + ") < " +
             "(" + this.maxX + " " + this.maxY + " " + this.maxZ + ")";
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeInt(minX);
-        out.writeInt(minY);
-        out.writeInt(minZ);
-        out.writeInt(maxX);
-        out.writeInt(maxY);
-        out.writeInt(maxZ);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        minX = in.readInt();
-        minY = in.readInt();
-        minZ = in.readInt();
-        maxX = in.readInt();
-        maxY = in.readInt();
-        maxZ = in.readInt();
     }
 }

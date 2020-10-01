@@ -23,14 +23,9 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
+import com.google.gwt.typedarrays.shared.Float64Array;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-
-import com.google.gwt.typedarrays.shared.Float64Array;
 
 /**
  * Contains the definition of a 3x2 matrix of doubles, and associated functions to transform
@@ -41,11 +36,9 @@ import com.google.gwt.typedarrays.shared.Float64Array;
  *
  * @author Kai Burjack
  */
-public class Matrix3x2d implements Matrix3x2dc, Externalizable {
+public class Matrix3x2d implements Matrix3x2dc {
 
-    private static final long serialVersionUID = 1L;
-
-    public double m00, m01;
+public double m00, m01;
     public double m10, m11;
     public double m20, m21;
 
@@ -1540,24 +1533,6 @@ public class Matrix3x2d implements Matrix3x2dc, Externalizable {
      */
     public Vector2d transformDirection(double x, double y, Vector2d dest) {
         return dest.set(m00 * x + m10 * y, m01 * x + m11 * y);
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(m00);
-        out.writeDouble(m01);
-        out.writeDouble(m10);
-        out.writeDouble(m11);
-        out.writeDouble(m20);
-        out.writeDouble(m21);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException {
-        m00 = in.readDouble();
-        m01 = in.readDouble();
-        m10 = in.readDouble();
-        m11 = in.readDouble();
-        m20 = in.readDouble();
-        m21 = in.readDouble();
     }
 
     /**

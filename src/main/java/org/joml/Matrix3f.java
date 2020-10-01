@@ -23,14 +23,9 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
+import com.google.gwt.typedarrays.shared.Float32Array;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-
-import com.google.gwt.typedarrays.shared.Float32Array;
 
 /**
  * Contains the definition of a 3x3 matrix of floats, and associated functions to transform
@@ -43,11 +38,9 @@ import com.google.gwt.typedarrays.shared.Float32Array;
  * @author Richard Greenlees
  * @author Kai Burjack
  */
-public class Matrix3f implements Externalizable, Matrix3fc {
+public class Matrix3f implements Matrix3fc {
 
-    private static final long serialVersionUID = 1L;
-
-    public float m00, m01, m02;
+public float m00, m01, m02;
     public float m10, m11, m12;
     public float m20, m21, m22;
 
@@ -1541,30 +1534,6 @@ public class Matrix3f implements Externalizable, Matrix3fc {
         return dest.set(Math.fma(m00, x, Math.fma(m01, y, m02 * z)),
                         Math.fma(m10, x, Math.fma(m11, y, m12 * z)),
                         Math.fma(m20, x, Math.fma(m21, y, m22 * z)));
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeFloat(m00);
-        out.writeFloat(m01);
-        out.writeFloat(m02);
-        out.writeFloat(m10);
-        out.writeFloat(m11);
-        out.writeFloat(m12);
-        out.writeFloat(m20);
-        out.writeFloat(m21);
-        out.writeFloat(m22);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException {
-        m00 = in.readFloat();
-        m01 = in.readFloat();
-        m02 = in.readFloat();
-        m10 = in.readFloat();
-        m11 = in.readFloat();
-        m12 = in.readFloat();
-        m20 = in.readFloat();
-        m21 = in.readFloat();
-        m22 = in.readFloat();
     }
 
     public Matrix3f rotateX(float ang, Matrix3f dest) {

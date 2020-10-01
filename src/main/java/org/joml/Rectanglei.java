@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -35,7 +31,7 @@ import java.text.NumberFormat;
  *
  * @author Kai Burjack
  */
-public class Rectanglei implements Externalizable {
+public class Rectanglei {
 
     /**
      * The x coordinate of the minimum corner.
@@ -647,19 +643,4 @@ public class Rectanglei implements Externalizable {
         return "(" + formatter.format(minX) + " " + formatter.format(minY) + ") < "
              + "(" + formatter.format(maxX) + " " + formatter.format(maxY) + ")";
     }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeInt(minX);
-        out.writeInt(minY);
-        out.writeInt(maxX);
-        out.writeInt(maxY);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        minX = in.readInt();
-        minY = in.readInt();
-        maxX = in.readInt();
-        maxY = in.readInt();
-    }
-
 }

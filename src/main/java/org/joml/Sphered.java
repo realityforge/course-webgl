@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -35,7 +31,7 @@ import java.text.NumberFormat;
  *
  * @author Kai Burjack
  */
-public class Sphered implements Externalizable {
+public class Sphered {
 
     /**
      * The x coordinate of the sphere's center.
@@ -260,19 +256,4 @@ public class Sphered implements Externalizable {
     public String toString(NumberFormat formatter) {
         return "[" + Runtime.format(x, formatter) + " " + Runtime.format(y, formatter) + " " + Runtime.format(z, formatter) + " " + Runtime.format(r, formatter) + "]";
     }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(x);
-        out.writeDouble(y);
-        out.writeDouble(z);
-        out.writeDouble(r);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        x = in.readDouble();
-        y = in.readDouble();
-        z = in.readDouble();
-        r = in.readDouble();
-    }
-
 }

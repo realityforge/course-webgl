@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -35,7 +31,7 @@ import java.text.NumberFormat;
  *
  * @author Kai Burjack
  */
-public class Planed implements Externalizable {
+public class Planed {
 
     /**
      * The factor <code>a</code> in the plane equation <code>a*x + b*y + c*z + d = 0</code>.
@@ -335,19 +331,4 @@ public class Planed implements Externalizable {
     public String toString(NumberFormat formatter) {
         return "[" + Runtime.format(a, formatter) + " " + Runtime.format(b, formatter) + " " + Runtime.format(c, formatter) + " " + Runtime.format(d, formatter) + "]";
     }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(a);
-        out.writeDouble(b);
-        out.writeDouble(c);
-        out.writeDouble(d);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        a = in.readDouble();
-        b = in.readDouble();
-        c = in.readDouble();
-        d = in.readDouble();
-    }
-
 }

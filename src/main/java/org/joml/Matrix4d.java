@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -42,11 +38,9 @@ import java.text.NumberFormat;
  * @author Richard Greenlees
  * @author Kai Burjack
  */
-public class Matrix4d implements Externalizable, Matrix4dc {
+public class Matrix4d implements Matrix4dc {
 
-    private static final long serialVersionUID = 1L;
-
-    double m00, m01, m02, m03;
+double m00, m01, m02, m03;
     double m10, m11, m12, m13;
     double m20, m21, m22, m23;
     double m30, m31, m32, m33;
@@ -5693,45 +5687,6 @@ public class Matrix4d implements Externalizable, Matrix4dc {
      */
     public Matrix4d rotateLocalZ(double ang) {
         return rotateLocalZ(ang, this);
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(m00);
-        out.writeDouble(m01);
-        out.writeDouble(m02);
-        out.writeDouble(m03);
-        out.writeDouble(m10);
-        out.writeDouble(m11);
-        out.writeDouble(m12);
-        out.writeDouble(m13);
-        out.writeDouble(m20);
-        out.writeDouble(m21);
-        out.writeDouble(m22);
-        out.writeDouble(m23);
-        out.writeDouble(m30);
-        out.writeDouble(m31);
-        out.writeDouble(m32);
-        out.writeDouble(m33);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException {
-        _m00(in.readDouble()).
-        _m01(in.readDouble()).
-        _m02(in.readDouble()).
-        _m03(in.readDouble()).
-        _m10(in.readDouble()).
-        _m11(in.readDouble()).
-        _m12(in.readDouble()).
-        _m13(in.readDouble()).
-        _m20(in.readDouble()).
-        _m21(in.readDouble()).
-        _m22(in.readDouble()).
-        _m23(in.readDouble()).
-        _m30(in.readDouble()).
-        _m31(in.readDouble()).
-        _m32(in.readDouble()).
-        _m33(in.readDouble()).
-        determineProperties();
     }
 
     public Matrix4d rotateX(double ang, Matrix4d dest) {

@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -35,7 +31,7 @@ import java.text.NumberFormat;
  *
  * @author Kai Burjack
  */
-public class Rayf implements Externalizable {
+public class Rayf {
 
     /**
      * The x coordinate of the ray's origin.
@@ -182,23 +178,4 @@ public class Rayf implements Externalizable {
         return "(" + Runtime.format(oX, formatter) + " " + Runtime.format(oY, formatter) + " " + Runtime.format(oZ, formatter) + ") -> "
              + "(" + Runtime.format(dX, formatter) + " " + Runtime.format(dY, formatter) + " " + Runtime.format(dZ, formatter) + ")";
     }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeFloat(oX);
-        out.writeFloat(oY);
-        out.writeFloat(oZ);
-        out.writeFloat(dX);
-        out.writeFloat(dY);
-        out.writeFloat(dZ);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        oX = in.readFloat();
-        oY = in.readFloat();
-        oZ = in.readFloat();
-        dX = in.readFloat();
-        dY = in.readFloat();
-        dZ = in.readFloat();
-    }
-
 }

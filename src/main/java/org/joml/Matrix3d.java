@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -41,11 +37,9 @@ import java.text.NumberFormat;
  * @author Richard Greenlees
  * @author Kai Burjack
  */
-public class Matrix3d implements Externalizable, Matrix3dc {
+public class Matrix3d implements Matrix3dc {
 
-    private static final long serialVersionUID = 1L;
-
-    public double m00, m01, m02;
+public double m00, m01, m02;
     public double m10, m11, m12;
     public double m20, m21, m22;
 
@@ -1842,30 +1836,6 @@ public class Matrix3d implements Externalizable, Matrix3dc {
         return dest.set(Math.fma(m00, x, Math.fma(m01, y, m02 * z)),
                         Math.fma(m10, x, Math.fma(m11, y, m12 * z)),
                         Math.fma(m20, x, Math.fma(m21, y, m22 * z)));
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(m00);
-        out.writeDouble(m01);
-        out.writeDouble(m02);
-        out.writeDouble(m10);
-        out.writeDouble(m11);
-        out.writeDouble(m12);
-        out.writeDouble(m20);
-        out.writeDouble(m21);
-        out.writeDouble(m22);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException {
-        m00 = in.readDouble();
-        m01 = in.readDouble();
-        m02 = in.readDouble();
-        m10 = in.readDouble();
-        m11 = in.readDouble();
-        m12 = in.readDouble();
-        m20 = in.readDouble();
-        m21 = in.readDouble();
-        m22 = in.readDouble();
     }
 
     public Matrix3d rotateX(double ang, Matrix3d dest) {

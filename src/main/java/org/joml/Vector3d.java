@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -38,11 +34,9 @@ import java.text.NumberFormat;
  * @author Kai Burjack
  * @author F. Neurath
  */
-public class Vector3d implements Externalizable, Vector3dc {
+public class Vector3d implements Vector3dc {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
+/**
      * The x component of the vector.
      */
     public double x;
@@ -1987,19 +1981,6 @@ public class Vector3d implements Externalizable, Vector3dc {
      */
     public String toString(NumberFormat formatter) {
         return "(" + Runtime.format(x, formatter) + " " + Runtime.format(y, formatter) + " " + Runtime.format(z, formatter) + ")";
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(x);
-        out.writeDouble(y);
-        out.writeDouble(z);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException,
-            ClassNotFoundException {
-        x = in.readDouble();
-        y = in.readDouble();
-        z = in.readDouble();
     }
 
     /**

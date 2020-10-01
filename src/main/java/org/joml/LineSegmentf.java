@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -35,7 +31,7 @@ import java.text.NumberFormat;
  *
  * @author Kai Burjack
  */
-public class LineSegmentf implements Externalizable {
+public class LineSegmentf {
 
     /**
      * The x coordinate of the first point.
@@ -183,23 +179,4 @@ public class LineSegmentf implements Externalizable {
         return "(" + Runtime.format(aX, formatter) + " " + Runtime.format(aY, formatter) + " " + Runtime.format(aZ, formatter) + ") - "
              + "(" + Runtime.format(bX, formatter) + " " + Runtime.format(bY, formatter) + " " + Runtime.format(bZ, formatter) + ")";
     }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeFloat(aX);
-        out.writeFloat(aY);
-        out.writeFloat(aZ);
-        out.writeFloat(bX);
-        out.writeFloat(bY);
-        out.writeFloat(bZ);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        aX = in.readFloat();
-        aY = in.readFloat();
-        aZ = in.readFloat();
-        bX = in.readFloat();
-        bY = in.readFloat();
-        bZ = in.readFloat();
-    }
-
 }

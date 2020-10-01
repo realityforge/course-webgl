@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -38,11 +34,9 @@ import java.text.NumberFormat;
  *
  * @author Kai Burjack
  */
-public class AxisAngle4d implements Externalizable {
+public class AxisAngle4d {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
+/**
      * The angle in radians.
      */
     public double angle;
@@ -680,20 +674,6 @@ public class AxisAngle4d implements Externalizable {
      */
     public AxisAngle4f get(AxisAngle4f dest) {
         return dest.set(this);
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(angle);
-        out.writeDouble(x);
-        out.writeDouble(y);
-        out.writeDouble(z);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-        angle = in.readDouble();
-        x = in.readDouble();
-        y = in.readDouble();
-        z = in.readDouble();
     }
 
     /**

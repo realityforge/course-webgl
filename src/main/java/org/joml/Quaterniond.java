@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -36,11 +32,9 @@ import java.text.NumberFormat;
  * @author Richard Greenlees
  * @author Kai Burjack
  */
-public class Quaterniond implements Externalizable, Quaterniondc {
+public class Quaterniond implements Quaterniondc {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
+/**
      * The first component of the vector part.
      */
     public double x;
@@ -2130,21 +2124,6 @@ public class Quaterniond implements Externalizable, Quaterniondc {
      */
     public String toString(NumberFormat formatter) {
         return "(" + Runtime.format(x, formatter) + " " + Runtime.format(y, formatter) + " " + Runtime.format(z, formatter) + " " + Runtime.format(w, formatter) + ")";
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(x);
-        out.writeDouble(y);
-        out.writeDouble(z);
-        out.writeDouble(w);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException,
-            ClassNotFoundException {
-        x = in.readDouble();
-        y = in.readDouble();
-        z = in.readDouble();
-        w = in.readDouble();
     }
 
     public int hashCode() {

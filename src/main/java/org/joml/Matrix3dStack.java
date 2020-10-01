@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
-
 /**
  * A stack of many {@link Matrix3d} instances. This resembles the matrix stack known from legacy OpenGL.
  * <p>
@@ -39,9 +35,7 @@ import java.io.ObjectOutput;
  */
 public class Matrix3dStack extends Matrix3d {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
+/**
      * The matrix stack as a non-growable array. The size of the stack must be specified in the {@link #Matrix3dStack(int) constructor}.
      */
     private Matrix3d[] mats;
@@ -154,24 +148,4 @@ public class Matrix3dStack extends Matrix3d {
         }
         return true;
     }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        super.writeExternal(out);
-        out.writeInt(curr);
-        for (int i = 0; i < curr; i++) {
-            out.writeObject(mats[i]);
-        }
-    }
-
-    public void readExternal(ObjectInput in) throws IOException {
-        super.readExternal(in);
-        curr = in.readInt();
-        mats = new Matrix3dStack[curr];
-        for (int i = 0; i < curr; i++) {
-            Matrix3d m = new Matrix3d();
-            m.readExternal(in);
-            mats[i] = m;
-        }
-    }
-
 }

@@ -24,10 +24,6 @@
 package org.joml;
 
 import com.google.gwt.typedarrays.shared.Float64Array;
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -40,11 +36,9 @@ import java.text.NumberFormat;
  *
  * @author Joseph Burton
  */
-public class Matrix2d implements Externalizable, Matrix2dc {
+public class Matrix2d implements Matrix2dc {
 
-    private static final long serialVersionUID = 1L;
-
-    public double m00, m01;
+public double m00, m01;
     public double m10, m11;
 
     /**
@@ -875,20 +869,6 @@ public class Matrix2d implements Externalizable, Matrix2dc {
         dest.set(m00 * x + m01 * y,
                 m10 * x + m11 * y);
         return dest;
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeDouble(m00);
-        out.writeDouble(m01);
-        out.writeDouble(m10);
-        out.writeDouble(m11);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException {
-        m00 = in.readDouble();
-        m01 = in.readDouble();
-        m10 = in.readDouble();
-        m11 = in.readDouble();
     }
 
     /**

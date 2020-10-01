@@ -23,7 +23,9 @@
  */
 package org.joml;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Interface to a read-only view of a 2-dimensional vector of double-precision floats.

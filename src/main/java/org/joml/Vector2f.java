@@ -23,10 +23,6 @@
  */
 package org.joml;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -37,11 +33,9 @@ import java.text.NumberFormat;
  * @author Kai Burjack
  * @author F. Neurath
  */
-public class Vector2f implements Externalizable, Vector2fc {
+public class Vector2f implements Vector2fc {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
+/**
      * The x component of the vector.
      */
     public float x;
@@ -538,17 +532,6 @@ public class Vector2f implements Externalizable, Vector2fc {
         this.x = 0;
         this.y = 0;
         return this;
-    }
-
-    public void writeExternal(ObjectOutput out) throws IOException {
-        out.writeFloat(x);
-        out.writeFloat(y);
-    }
-
-    public void readExternal(ObjectInput in) throws IOException,
-            ClassNotFoundException {
-        x = in.readFloat();
-        y = in.readFloat();
     }
 
     /**
