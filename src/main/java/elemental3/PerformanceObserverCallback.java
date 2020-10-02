@@ -9,5 +9,5 @@ import jsinterop.annotations.JsFunction;
 @FunctionalInterface
 public interface PerformanceObserverCallback {
   void onInvoke(@Nonnull PerformanceObserverEntryList entries,
-      @Nonnull PerformanceObserver observer);
+      @Nonnull PerformanceObserver observer, boolean hasDroppedEntry);
 }

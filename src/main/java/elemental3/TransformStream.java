@@ -1,7 +1,9 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -13,9 +15,33 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TransformStream"
 )
-public class TransformStream {
-  protected TransformStream() {
+public class TransformStream implements Transferable {
+  public TransformStream(@Nonnull final Object transformer,
+      @Nonnull final QueuingStrategy writableStrategy,
+      @Nonnull final QueuingStrategy readableStrategy) {
   }
+
+  public TransformStream(@Nonnull final Object transformer,
+      @Nonnull final QueuingStrategy writableStrategy) {
+  }
+
+  public TransformStream(@Nonnull final Object transformer) {
+  }
+
+  public TransformStream() {
+  }
+
+  @JsProperty(
+      name = "readable"
+  )
+  @Nonnull
+  public native ReadableStream readable();
+
+  @JsProperty(
+      name = "writable"
+  )
+  @Nonnull
+  public native WritableStream writable();
 }

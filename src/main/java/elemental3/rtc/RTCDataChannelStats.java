@@ -19,9 +19,8 @@ public interface RTCDataChannelStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCDataChannelStats create(@Nonnull final String id, final double timestamp,
-      @RTCStatsType @Nonnull final String type, @RTCDataChannelState @Nonnull final String state,
-      @Nonnull final String transportId) {
-    return Js.<RTCDataChannelStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).state( state ).transportId( transportId );
+      @RTCStatsType @Nonnull final String type, @RTCDataChannelState @Nonnull final String state) {
+    return Js.<RTCDataChannelStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).state( state );
   }
 
   @JsProperty(
@@ -143,22 +142,6 @@ public interface RTCDataChannelStats extends RTCStats {
   @Nonnull
   default RTCDataChannelStats state(@RTCDataChannelState @Nonnull final String state) {
     setState( state );
-    return this;
-  }
-
-  @JsProperty(
-      name = "transportId"
-  )
-  @Nonnull
-  String transportId();
-
-  @JsProperty
-  void setTransportId(@Nonnull String transportId);
-
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelStats transportId(@Nonnull final String transportId) {
-    setTransportId( transportId );
     return this;
   }
 

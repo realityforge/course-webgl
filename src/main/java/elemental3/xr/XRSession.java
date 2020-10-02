@@ -38,6 +38,15 @@ public class XRSession extends EventTarget {
   public EventHandler onselectstart;
 
   @Nullable
+  public EventHandler onsqueeze;
+
+  @Nullable
+  public EventHandler onsqueezeend;
+
+  @Nullable
+  public EventHandler onsqueezestart;
+
+  @Nullable
   public EventHandler onvisibilitychange;
 
   protected XRSession() {

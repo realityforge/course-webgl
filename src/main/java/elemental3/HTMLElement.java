@@ -256,14 +256,6 @@ public class HTMLElement extends Element {
   public EventHandler ondragenter;
 
   /**
-   * The GlobalEventHandler.ondragexit property is an event handler for the dragexit event.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragexit">GlobalEventHandlers.ondragexit - MDN</a>
-   */
-  @Nullable
-  public EventHandler ondragexit;
-
-  /**
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>

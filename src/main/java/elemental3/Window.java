@@ -240,14 +240,6 @@ public class Window extends EventTarget {
   public EventHandler ondragenter;
 
   /**
-   * The GlobalEventHandler.ondragexit property is an event handler for the dragexit event.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragexit">GlobalEventHandlers.ondragexit - MDN</a>
-   */
-  @Nullable
-  public EventHandler ondragexit;
-
-  /**
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
@@ -1087,6 +1079,11 @@ public class Window extends EventTarget {
   )
   @Nonnull
   public native String origin();
+
+  @JsProperty(
+      name = "originIsolated"
+  )
+  public native boolean originIsolated();
 
   /**
    * The Window.outerHeight read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.

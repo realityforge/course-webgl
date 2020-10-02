@@ -84,6 +84,21 @@ public interface RTCSctpTransportStats extends RTCStats {
   }
 
   @JsProperty(
+      name = "transportId"
+  )
+  String transportId();
+
+  @JsProperty
+  void setTransportId(@Nonnull String transportId);
+
+  @JsOverlay
+  @Nonnull
+  default RTCSctpTransportStats transportId(@Nonnull final String transportId) {
+    setTransportId( transportId );
+    return this;
+  }
+
+  @JsProperty(
       name = "unackData"
   )
   int unackData();

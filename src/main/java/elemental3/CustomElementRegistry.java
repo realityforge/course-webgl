@@ -3,10 +3,8 @@ package elemental3;
 import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 /**
  * The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.
@@ -43,8 +41,8 @@ public class CustomElementRegistry {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/get">CustomElementRegistry.get - MDN</a>
    */
-  @Nullable
-  public native Any get(@Nonnull String name);
+  @Nonnull
+  public native CustomElementConstructorOrUndefinedUnion get(@Nonnull String name);
 
   /**
    * The upgrade() method of the CustomElementRegistry interface upgrades all shadow-containing custom elements in a Node subtree, even before they are connected to the main document.
@@ -59,5 +57,5 @@ public class CustomElementRegistry {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined">CustomElementRegistry.whenDefined - MDN</a>
    */
   @Nonnull
-  public native Promise<Void> whenDefined(@Nonnull String name);
+  public native Promise<CustomElementConstructor> whenDefined(@Nonnull String name);
 }

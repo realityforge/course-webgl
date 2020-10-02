@@ -1,5 +1,6 @@
 package elemental3.xr;
 
+import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -86,6 +87,34 @@ public interface XRRenderStateInit {
   @Nonnull
   default XRRenderStateInit inlineVerticalFieldOfView(final double inlineVerticalFieldOfView) {
     setInlineVerticalFieldOfView( inlineVerticalFieldOfView );
+    return this;
+  }
+
+  @JsProperty(
+      name = "layers"
+  )
+  @Nullable
+  JsArray<XRLayer> layers();
+
+  @JsProperty
+  void setLayers(@Nullable JsArray<XRLayer> layers);
+
+  @JsOverlay
+  @Nonnull
+  default XRRenderStateInit layers(@Nullable final JsArray<XRLayer> layers) {
+    setLayers( layers );
+    return this;
+  }
+
+  @JsOverlay
+  default void setLayers(@Nullable final XRLayer... layers) {
+    setLayers( Js.<JsArray<XRLayer>>uncheckedCast( layers ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default XRRenderStateInit layers(@Nullable final XRLayer... layers) {
+    setLayers( layers );
     return this;
   }
 }

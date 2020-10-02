@@ -3,6 +3,7 @@ package elemental3.xr;
 import elemental3.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -67,6 +68,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
   @JsProperty(
       name = "transform"
   )
+  @Nullable
   XRRigidTransform transform();
 
   /**
@@ -75,7 +77,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform">XRReferenceSpaceEventInit.transform - MDN</a>
    */
   @JsProperty
-  void setTransform(@Nonnull XRRigidTransform transform);
+  void setTransform(@Nullable XRRigidTransform transform);
 
   /**
    * The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.
@@ -84,7 +86,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    */
   @JsOverlay
   @Nonnull
-  default XRReferenceSpaceEventInit transform(@Nonnull final XRRigidTransform transform) {
+  default XRReferenceSpaceEventInit transform(@Nullable final XRRigidTransform transform) {
     setTransform( transform );
     return this;
   }

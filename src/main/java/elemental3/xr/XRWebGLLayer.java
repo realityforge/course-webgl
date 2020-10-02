@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRWebGLLayer"
 )
-public class XRWebGLLayer {
+public class XRWebGLLayer extends XRLayer {
   /**
    * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
    *
@@ -94,7 +94,7 @@ public class XRWebGLLayer {
   @JsProperty(
       name = "framebuffer"
   )
-  @Nonnull
+  @Nullable
   public native WebGLFramebuffer framebuffer();
 
   /**

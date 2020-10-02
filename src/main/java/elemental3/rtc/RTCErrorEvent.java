@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The WebRTC API's RTCErrorEvent interface represents an error sent to a WebRTC object. It's based on the standard Event interface, but adds RTC-specific information describing the error, as shown below.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCErrorEvent">RTCErrorEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -18,6 +23,11 @@ public class RTCErrorEvent extends Event {
     super( null );
   }
 
+  /**
+   * The read-only RTCErrorEvent property error contains an RTCError object describing the details of the error which the event is announcing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCErrorEvent/error">RTCErrorEvent.error - MDN</a>
+   */
   @JsProperty(
       name = "error"
   )

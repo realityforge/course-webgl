@@ -847,6 +847,36 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   }
 
   @JsProperty(
+      name = "totalProcessingDelay"
+  )
+  double totalProcessingDelay();
+
+  @JsProperty
+  void setTotalProcessingDelay(double totalProcessingDelay);
+
+  @JsOverlay
+  @Nonnull
+  default RTCInboundRtpStreamStats totalProcessingDelay(final double totalProcessingDelay) {
+    setTotalProcessingDelay( totalProcessingDelay );
+    return this;
+  }
+
+  @JsProperty(
+      name = "totalSamplesDecoded"
+  )
+  int totalSamplesDecoded();
+
+  @JsProperty
+  void setTotalSamplesDecoded(int totalSamplesDecoded);
+
+  @JsOverlay
+  @Nonnull
+  default RTCInboundRtpStreamStats totalSamplesDecoded(final int totalSamplesDecoded) {
+    setTotalSamplesDecoded( totalSamplesDecoded );
+    return this;
+  }
+
+  @JsProperty(
       name = "totalSamplesDuration"
   )
   double totalSamplesDuration();

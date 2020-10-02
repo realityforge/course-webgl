@@ -124,6 +124,8 @@ public class HTMLMediaElement extends HTMLElement {
   @MediaPreloadType
   public String preload;
 
+  public boolean preservesPitch;
+
   /**
    * The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element.
    *

@@ -14,6 +14,129 @@ import jsinterop.annotations.JsType;
     name = "ElementInternals"
 )
 public class ElementInternals {
+  @Nonnull
+  public String ariaAtomic;
+
+  @Nonnull
+  public String ariaAutoComplete;
+
+  @Nonnull
+  public String ariaBusy;
+
+  @Nonnull
+  public String ariaChecked;
+
+  @Nonnull
+  public String ariaColCount;
+
+  @Nonnull
+  public String ariaColIndex;
+
+  @Nonnull
+  public String ariaColIndexText;
+
+  @Nonnull
+  public String ariaColSpan;
+
+  @Nonnull
+  public String ariaCurrent;
+
+  @Nonnull
+  public String ariaDescription;
+
+  @Nonnull
+  public String ariaDisabled;
+
+  @Nonnull
+  public String ariaExpanded;
+
+  @Nonnull
+  public String ariaHasPopup;
+
+  @Nonnull
+  public String ariaHidden;
+
+  @Nonnull
+  public String ariaInvalid;
+
+  @Nonnull
+  public String ariaKeyShortcuts;
+
+  @Nonnull
+  public String ariaLabel;
+
+  @Nonnull
+  public String ariaLevel;
+
+  @Nonnull
+  public String ariaLive;
+
+  @Nonnull
+  public String ariaModal;
+
+  @Nonnull
+  public String ariaMultiLine;
+
+  @Nonnull
+  public String ariaMultiSelectable;
+
+  @Nonnull
+  public String ariaOrientation;
+
+  @Nonnull
+  public String ariaPlaceholder;
+
+  @Nonnull
+  public String ariaPosInSet;
+
+  @Nonnull
+  public String ariaPressed;
+
+  @Nonnull
+  public String ariaReadOnly;
+
+  @Nonnull
+  public String ariaRequired;
+
+  @Nonnull
+  public String ariaRoleDescription;
+
+  @Nonnull
+  public String ariaRowCount;
+
+  @Nonnull
+  public String ariaRowIndex;
+
+  @Nonnull
+  public String ariaRowIndexText;
+
+  @Nonnull
+  public String ariaRowSpan;
+
+  @Nonnull
+  public String ariaSelected;
+
+  @Nonnull
+  public String ariaSetSize;
+
+  @Nonnull
+  public String ariaSort;
+
+  @Nonnull
+  public String ariaValueMax;
+
+  @Nonnull
+  public String ariaValueMin;
+
+  @Nonnull
+  public String ariaValueNow;
+
+  @Nonnull
+  public String ariaValueText;
+
+  @Nullable
+  public String role;
+
   protected ElementInternals() {
   }
 

@@ -15,7 +15,7 @@ import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import elemental3.bluetooth.Bluetooth;
 import elemental3.media.MediaDevices;
-import elemental3.xr.XR;
+import elemental3.xr.XRSystem;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -345,7 +345,7 @@ public class Navigator {
       name = "xr"
   )
   @Nonnull
-  public native XR xr();
+  public native XRSystem xr();
 
   /**
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.

@@ -12,6 +12,9 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface XRSessionMode {
   @Nonnull
+  String immersive_ar = "immersive-ar";
+
+  @Nonnull
   String immersive_vr = "immersive-vr";
 
   @Nonnull
