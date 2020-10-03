@@ -6,7 +6,7 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.joml.Vector3d;
-import org.joml.Vector3f;
+import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.annotations.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32Buffer;

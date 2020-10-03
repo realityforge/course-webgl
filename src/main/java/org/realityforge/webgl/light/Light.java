@@ -1,7 +1,7 @@
 package org.realityforge.webgl.light;
 
 import javax.annotation.Nonnull;
-import org.joml.Vector3f;
+import org.realityforge.vecmath.Vector3f;
 
 final class Light
 {
