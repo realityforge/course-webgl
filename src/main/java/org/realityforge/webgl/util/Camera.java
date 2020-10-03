@@ -1,9 +1,9 @@
-package org.realityforge.webgl.light;
+package org.realityforge.webgl.util;
 
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Vector3f;
 
-final class Camera
+public final class Camera
 {
   // Position of the eye
   @Nonnull
@@ -18,44 +18,44 @@ final class Camera
   private double _yaw = -Math.PI / 2.0;
 
   @Nonnull
-  Vector3f getPosition()
+  public Vector3f getPosition()
   {
     return _position;
   }
 
   @Nonnull
-  Vector3f getDirection()
+  public Vector3f getDirection()
   {
     return _direction;
   }
 
   @Nonnull
-  Vector3f getUp()
+  public Vector3f getUp()
   {
     return _up;
   }
 
-  double getPitch()
+  public double getPitch()
   {
     return _pitch;
   }
 
-  void setPitch( final double pitch )
+  public void setPitch( final double pitch )
   {
     _pitch = pitch;
   }
 
-  double getYaw()
+  public double getYaw()
   {
     return _yaw;
   }
 
-  void setYaw( final double yaw )
+  public void setYaw( final double yaw )
   {
     _yaw = yaw;
   }
 
-  void computeDirection()
+  public void computeDirection()
   {
     _direction.x = (float) ( Math.cos( _pitch ) * Math.cos( _yaw ) );
     _direction.y = (float) Math.sin( _pitch );

@@ -9,6 +9,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Main
