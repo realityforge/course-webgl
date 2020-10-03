@@ -1,36 +1,36 @@
 package org.realityforge.webgl.camera;
 
 import javax.annotation.Nonnull;
-import org.joml.Vector3d;
+import org.realityforge.vecmath.Vector3f;
 
 final class Camera
 {
   // Position of the eye
   @Nonnull
-  private final Vector3d _position = new Vector3d( 0.0, 0.0, 0.0 );
+  private final Vector3f _position = new Vector3f( 0, 0, 0 );
   // Position of the target we are looking at
   @Nonnull
-  private final Vector3d _direction = new Vector3d( 0.0, 0, -1.0 );
+  private final Vector3f _direction = new Vector3f( 0, 0, -1.0F );
   // The up vector
   @Nonnull
-  private final Vector3d _up = new Vector3d( 0.0, 1.0, 0.0 );
+  private final Vector3f _up = new Vector3f( 0, 1, 0 );
   private double _pitch = 0.0;
   private double _yaw = -Math.PI / 2.0;
 
   @Nonnull
-  Vector3d getPosition()
+  Vector3f getPosition()
   {
     return _position;
   }
 
   @Nonnull
-  Vector3d getDirection()
+  Vector3f getDirection()
   {
     return _direction;
   }
 
   @Nonnull
-  Vector3d getUp()
+  Vector3f getUp()
   {
     return _up;
   }
@@ -57,8 +57,8 @@ final class Camera
 
   void computeDirection()
   {
-    _direction.x = Math.cos( _pitch ) * Math.cos( _yaw );
-    _direction.y = Math.sin( _pitch );
-    _direction.z = Math.cos( _pitch ) * Math.sin( _yaw );
+    _direction.x = (float) ( Math.cos( _pitch ) * Math.cos( _yaw ) );
+    _direction.y = (float) Math.sin( _pitch );
+    _direction.z = (float) ( Math.cos( _pitch ) * Math.sin( _yaw ) );
   }
 }

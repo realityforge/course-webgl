@@ -3,8 +3,8 @@ package org.realityforge.webgl.util;
 import elemental2.core.Float32Array;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector3d;
 import org.joml.Vector4d;
+import org.realityforge.vecmath.Vector3f;
 
 public final class MathUtil
 {
@@ -19,7 +19,7 @@ public final class MathUtil
   }
 
   @Nonnull
-  public static Float32Array toFloat32Array( @Nonnull final Vector3d input )
+  public static Float32Array toFloat32Array( @Nonnull final Vector3f input )
   {
     return new Float32Array( new double[]{ input.x, input.y, input.z } );
   }

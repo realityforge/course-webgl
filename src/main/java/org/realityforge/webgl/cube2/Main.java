@@ -6,8 +6,8 @@ import elemental3.HTMLCanvasElement;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector3d;
 import org.joml.Vector4d;
+import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Main
@@ -56,7 +56,7 @@ public final class Main
     final Vector4d[] colors = { new Vector4d( 1, 0, 0, 1 ),
                                 new Vector4d( 0, 1, 0, 1 ),
                                 new Vector4d( 0, 0, 1, 1 ) };
-    final Vector3d offsets = new Vector3d( -2, 0, 2 );
+    final Vector3f offsets = new Vector3f( -2, 0, 2 );
     _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, colors, offsets );
 
     _angle += 0.1;

@@ -4,8 +4,8 @@ import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector3d;
 import org.joml.Vector4d;
+import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 
@@ -33,7 +33,7 @@ final class Mesh
                     @Nonnull final Matrix4d viewMatrix,
                     @Nonnull final Matrix4d projectionMatrix,
                     @Nonnull final Vector4d[] colors,
-                    @Nonnull final Vector3d offsets )
+                    @Nonnull final Vector3f offsets )
   {
     gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );

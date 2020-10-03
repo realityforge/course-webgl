@@ -8,7 +8,6 @@ import elemental3.KeyboardEvent;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.CanvasUtil;
 
@@ -157,10 +156,11 @@ public final class Main
     position.y = (float) ( 2 * Math.sin( 0.1 * ( _time + position.y ) ) );
     position.x = (float) ( -2 * Math.sin( 0.1 * ( _time + position.x ) ) );
     _viewMatrix.identity();
-    final Vector3d target = new Vector3d( _camera.getPosition() ).add( _camera.getDirection() );
-    // TODO: It would be really nice if instead we could do
-    //final Vector3d target = _camera.getPosition().dup().add( _camera.getDirection() );
-    _viewMatrix.lookAt( _camera.getPosition(), target, _camera.getUp() );
+
+    final Vector3f eye = _camera.getPosition();
+    final Vector3f target = eye.dup().add( _camera.getDirection() );
+    final Vector3f up = _camera.getUp();
+    _viewMatrix.lookAt( eye.x, eye.y, eye.z, target.x, target.y, target.z, up.x, up.y, up.z );
 
     gl.useProgram( _mesh.getProgram() );
     gl.bindVertexArray( _mesh.getGeometry().getVao() );
@@ -204,25 +204,29 @@ public final class Main
   private void updateCamera()
   {
     _camera.computeDirection();
-    final Vector3d direction = _camera.getDirection();
-    final Vector3d position = _camera.getPosition();
+    final Vector3f direction = _camera.getDirection();
+    final Vector3f position = _camera.getPosition();
     if ( _forwardPressed )
     {
-      position.add( new Vector3d( direction ).mul( 0.1 ) );
+      position.add( direction.dup().mul( 0.1F ) );
     }
     if ( _backwardPressed )
     {
-      position.add( new Vector3d( direction ).mul( -0.1 ) );
+      position.add( direction.dup().mul( -0.1F ) );
     }
     if ( _leftPressed )
     {
       // Calculate the "right" vector (We assume our view has no roll and thus can just use yaw) and
       // after right vector is calculated then use direction to calculate movement
-      position.add( new Vector3d( -1 * Math.sin( _camera.getYaw() ), 0.0, Math.cos( _camera.getYaw() ) ).mul( -0.1 ) );
+      position.add( new Vector3f( -1 * (float) Math.sin( _camera.getYaw() ),
+                                  0,
+                                  (float) Math.cos( _camera.getYaw() ) ).mul( -0.1F ) );
     }
     if ( _rightPressed )
     {
-      position.add( new Vector3d( -1 * Math.sin( _camera.getYaw() ), 0.0, Math.cos( _camera.getYaw() ) ).mul( 0.1 ) );
+      position.add( new Vector3f( -1 * (float) Math.sin( _camera.getYaw() ),
+                                  0,
+                                  (float) Math.cos( _camera.getYaw() ) ).mul( 0.1F ) );
     }
     if ( _pitchUpPressed )
     {
