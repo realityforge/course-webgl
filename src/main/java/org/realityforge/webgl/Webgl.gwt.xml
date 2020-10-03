@@ -5,6 +5,9 @@
   <inherits name='elemental2.promise.Promise'/>
   <inherits name='elemental3.Elemental3'/>
   <inherits name='org.joml.JOML'/>
+  <inherits name='org.realityforge.vecmath.VecmathDev'/>
+  <!-- TODO: The grim inherit should not be required after we move to vecmath 0.02 -->
+  <inherits name='grim.annotations.Annotations'/>
 
   <source path='annotations'/>
   <source path='util'/>

@@ -15,6 +15,8 @@ define 'course-webgl' do
 
   compile.with :javax_annotation,
                :jetbrains_annotations,
+               :vecmath,
+               :grim_annotations,
                :jsinterop_base,
                :jsinterop_annotations,
                :elemental2_core,
