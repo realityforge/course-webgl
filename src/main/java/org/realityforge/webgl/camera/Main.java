@@ -22,8 +22,6 @@ public final class Main
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
-  private final Matrix4d _viewMatrix = new Matrix4d();
-  @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
   @Nonnull
   private final Camera _camera = new Camera();
@@ -162,13 +160,10 @@ public final class Main
     // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
     updateCamera();
 
-    _viewMatrix.identity();
-    final Vector3f eye = _camera.getPosition();
-    final Vector3f target = eye.dup().add( _camera.getDirection() );
-    final Vector3f up = _camera.getUp();
-    _viewMatrix.lookAt( eye.x, eye.y, eye.z, target.x, target.y, target.z, up.x, up.y, up.z );
+    _camera.updateViewMatrix();
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    final Matrix4d viewMatrix = _camera.getViewMatrix();
+    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix );
 
     _angle += 0.01;
   }

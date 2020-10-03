@@ -22,8 +22,6 @@ public final class Main
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
-  private final Matrix4d _viewMatrix = new Matrix4d();
-  @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
   @Nonnull
   private final Camera _camera = new Camera();
@@ -156,12 +154,9 @@ public final class Main
     final Vector3f position = _light.getPosition();
     position.y = (float) ( 2 * Math.sin( 0.1 * ( _time + position.y ) ) );
     position.x = (float) ( -2 * Math.sin( 0.1 * ( _time + position.x ) ) );
-    _viewMatrix.identity();
 
-    final Vector3f eye = _camera.getPosition();
-    final Vector3f target = eye.dup().add( _camera.getDirection() );
-    final Vector3f up = _camera.getUp();
-    _viewMatrix.lookAt( eye.x, eye.y, eye.z, target.x, target.y, target.z, up.x, up.y, up.z );
+    _camera.updateViewMatrix();
+    final Matrix4d viewMatrix = _camera.getViewMatrix();
 
     gl.useProgram( _mesh.getProgram() );
     gl.bindVertexArray( _mesh.getGeometry().getVao() );
@@ -173,21 +168,21 @@ public final class Main
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light, _camera );
+    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light, _camera );
 
     _modelMatrix.identity();
     _modelMatrix.translate( 3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light, _camera );
+    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light, _camera );
 
     _modelMatrix.identity();
     _modelMatrix.translate( -3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light, _camera );
+    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light, _camera );
 
     gl.useProgram( _lightMesh.getProgram() );
     gl.bindVertexArray( _lightMesh.getGeometry().getVao() );
@@ -196,7 +191,7 @@ public final class Main
     _modelMatrix.translate( position.x, position.y, position.z );
     _modelMatrix.scale( 0.2 );
 
-    _lightMesh.render( gl, _modelMatrix, _viewMatrix, _projectionMatrix, _light );
+    _lightMesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light );
 
     _angle += 0.01;
     _time += 0.1;
