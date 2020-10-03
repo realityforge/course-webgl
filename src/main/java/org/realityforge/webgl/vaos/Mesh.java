@@ -41,7 +41,6 @@ final class Mesh
   {
     super( gl, vertexShaderSource, fragmentShaderSource );
 
-
     final WebGLProgram program = getProgram();
     _textureData0 = new UniformBinding( gl, program, "textureData0" );
     _textureData1 = new UniformBinding( gl, program, "textureData1" );

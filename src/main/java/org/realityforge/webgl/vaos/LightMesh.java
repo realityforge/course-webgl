@@ -21,7 +21,7 @@ final class LightMesh
              @GLSL @Nonnull final String vertexShaderSource,
              @GLSL @Nonnull final String fragmentShaderSource )
   {
-    super(gl, vertexShaderSource, fragmentShaderSource );
+    super( gl, vertexShaderSource, fragmentShaderSource );
     final WebGLProgram program = getProgram();
     _color = new UniformBinding( gl, program, "color" );
     setGeometry( new Geometry( gl, new BufferAttributeBinding( gl, program, "position", positionAttribute ) ) );
