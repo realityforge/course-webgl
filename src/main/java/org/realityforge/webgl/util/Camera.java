@@ -6,6 +6,9 @@ import org.realityforge.vecmath.Vector3f;
 
 public final class Camera
 {
+  /**
+   * The world to camera space transform.
+   */
   @Nonnull
   private final Matrix4d _viewMatrix = new Matrix4d();
   // Position of the eye
