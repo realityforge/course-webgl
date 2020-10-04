@@ -22,8 +22,6 @@ public final class Main
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
-  private final Matrix4d _projectionMatrix = new Matrix4d();
-  @Nonnull
   private final Camera _camera = new Camera();
   @Nonnull
   private final Light _light = new Light();
@@ -47,7 +45,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
+    _camera.getProjection().setPerspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
     _lightMesh = CubeTemplate.createLightCube( gl );
@@ -175,21 +173,23 @@ public final class Main
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light, _camera );
+    final Matrix4d projectionMatrix = _camera.getProjection().getProjectionMatrix();
+
+    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
     _modelMatrix.identity();
     _modelMatrix.translate( 3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light, _camera );
+    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
     _modelMatrix.identity();
     _modelMatrix.translate( -3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light, _camera );
+    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
     gl.useProgram( _lightMesh.getProgram() );
 
@@ -197,7 +197,7 @@ public final class Main
     _modelMatrix.translate( position.x, position.y, position.z );
     _modelMatrix.scale( 0.2 );
 
-    _lightMesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix, _light );
+    _lightMesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light );
 
     _angle += 0.01;
     _time += 0.1;

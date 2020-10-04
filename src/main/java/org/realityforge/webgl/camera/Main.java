@@ -22,8 +22,6 @@ public final class Main
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
-  private final Matrix4d _projectionMatrix = new Matrix4d();
-  @Nonnull
   private final Camera _camera = new Camera();
   private Mesh _mesh;
   private double _angle;
@@ -43,7 +41,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
+    _camera.getProjection().setPerspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
 
@@ -163,7 +161,8 @@ public final class Main
     _camera.updateViewMatrix();
 
     final Matrix4d viewMatrix = _camera.getViewMatrix();
-    _mesh.render( gl, _modelMatrix, viewMatrix, _projectionMatrix );
+    final Matrix4d projectionMatrix = _camera.getProjection().getProjectionMatrix();
+    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix );
 
     _angle += 0.01;
   }
