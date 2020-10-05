@@ -37,58 +37,29 @@ public final class Main
       1.0, 1.0, 0.0, //2
       -1.0, 1.0, 0.0 //3
     };
-  // Vertices color data in RGBA form
-  private static final double[] COLORS = new double[]
-    {
-      1.0, 0.0, 0.0, 1.0,
-      1.0, 0.0, 0.0, 1.0,
-      1.0, 0.0, 0.0, 1.0,
-      1.0, 0.0, 0.0, 1.0
-    };
   // The vertex shader that will be run for every vertex
   @GLSL
   @Nonnull
   private static final String VERTEX_SHADER_SOURCE =
-    // The shader language is OpenGL 3 (i.e. 300) ES and this version pragma must
-    // be the first thing present in the shader source
     "#version 300 es\n" +
-    // The incoming vertex position
     "in vec3 position;\n" +
-    // The incoming vertex color
-    "in vec4 color;\n" +
-    // The output vertex color that will be fed to the next shader
-    "out vec4 fcolor;\n" +
-    "\n" +
-    // The following are the unions (aka constant across multiple vertices)
     "uniform mat4 modelMatrix;\n" +
     "uniform mat4 viewMatrix;\n" +
     "uniform mat4 projectionMatrix;\n" +
-    // The main program/kernel
     "void main()\n" +
     "{\n" +
-    // Copy position from input to output, converting to vec4 by adding using 1 for 4th dimension
-    // and transforming via model/view/project matrices
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
-    // Copy color from input to output
-    "  fcolor = color;" +
     "}\n";
   // The fragment shader that will be run for every pixel
   @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
-    // The version of language in use
     "#version 300 es\n" +
-    // There is no default precision for floats in fragment shaders so specify it
     "precision mediump float;\n" +
-    // The incoming fragment color
-    "in vec4 fcolor;\n" +
-    // The output fragment color
-    "out vec4 finalColor;\n" +
-    "" +
-    // The main program/kernel
+    "out vec4 color;\n" +
+    "uniform float u_time;\n" +
     "void main()\n" +
     "{\n" +
-    // Copy color from input to output
-    "  finalColor = fcolor;" +
+    "  color = vec4((sin(u_time) + 1.0)/ 2.0, 0.0, (cos(u_time) + 1.0)/2.0, 1.0) ;" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
@@ -100,11 +71,9 @@ public final class Main
   private WebGLUniformLocation _modelMatrixLocation;
   private WebGLUniformLocation _viewMatrixLocation;
   private WebGLUniformLocation _projectionMatrixLocation;
-  private int _positionIndex;
-  private int _colorIndex;
+  private WebGLUniformLocation _timeLocation;
   private WebGLVertexArrayObject _vertexArrayObject;
-  private WebGLBuffer _positionBuffer;
-  private WebGLBuffer _colorBuffer;
+  private final long startedAt = System.currentTimeMillis();
 
   @Override
   public void onModuleLoad()
@@ -125,9 +94,9 @@ public final class Main
     _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
     _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
     _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
+    _timeLocation = getUniformLocation( gl, _program, "u_time" );
 
-    _positionIndex = gl.getAttribLocation( _program, "position" );
-    _colorIndex = gl.getAttribLocation( _program, "color" );
+    final int positionIndex = gl.getAttribLocation( _program, "position" );
     final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
     assert null != vertexArrayObject;
     // A bound vertexArrayObject will record the subsequent binds
@@ -140,21 +109,27 @@ public final class Main
                       WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER,
                       WebGL2RenderingContext.STATIC_DRAW,
                       new Uint16Array( INDEXES ) );
-    _positionBuffer = GL.prepareBuffer( gl,
-                                        WebGL2RenderingContext.ARRAY_BUFFER,
-                                        WebGL2RenderingContext.STATIC_DRAW,
-                                        new Float32Array( POSITIONS ) );
-    _colorBuffer = GL.prepareBuffer( gl,
-                                     WebGL2RenderingContext.ARRAY_BUFFER,
-                                     WebGL2RenderingContext.STATIC_DRAW,
-                                     new Float32Array( COLORS ) );
-    sendToGpu( gl );
+    final WebGLBuffer positionBuffer = GL.prepareBuffer( gl,
+                                                         WebGL2RenderingContext.ARRAY_BUFFER,
+                                                         WebGL2RenderingContext.STATIC_DRAW,
+                                                         new Float32Array( POSITIONS ) );
+    // Tell GPU to load position data into program from out buffer
+    GL.sendToGpu( gl,
+                  positionBuffer,
+                  positionIndex,
+                  WebGL2RenderingContext.ARRAY_BUFFER,
+                  3,
+                  WebGL2RenderingContext.FLOAT,
+                  0,
+                  0 );
+    gl.bindVertexArray( null );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
     CanvasUtil.resize( gl, canvas );
 
     gl.clearColor( 0, 0, 0, 1 );
@@ -167,45 +142,14 @@ public final class Main
     _viewMatrix.identity();
 
     gl.useProgram( _program );
-    setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    gl.bindVertexArray( _vertexArrayObject );
+    final float time = ( System.currentTimeMillis() - startedAt ) / 1000.0F;
+    gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( _modelMatrix ) );
+    gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( _viewMatrix ) );
+    gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( _projectionMatrix ) );
+    gl.uniform1f( _timeLocation, time );
 
     gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
-
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-  }
-
-  void setUniforms( @Nonnull final WebGL2RenderingContext gl,
-                    @Nonnull final Matrix4d modelMatrix,
-                    @Nonnull final Matrix4d viewMatrix,
-                    @Nonnull final Matrix4d projectionMatrix )
-  {
-    gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( projectionMatrix ) );
-  }
-
-  void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
-  {
-    gl.bindVertexArray( _vertexArrayObject );
-    // Tell GPU to load position data into program from out buffer
-    GL.sendToGpu( gl,
-                  _positionBuffer,
-                  _positionIndex,
-                  WebGL2RenderingContext.ARRAY_BUFFER,
-                  3,
-                  WebGL2RenderingContext.FLOAT,
-                  0,
-                  0 );
-
-    // Tell GPU to load color data into program from out buffer
-    GL.sendToGpu( gl,
-                  _colorBuffer,
-                  _colorIndex,
-                  WebGL2RenderingContext.ARRAY_BUFFER,
-                  4,
-                  WebGL2RenderingContext.FLOAT,
-                  0,
-                  0 );
   }
 
   @Nonnull
