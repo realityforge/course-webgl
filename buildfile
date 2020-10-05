@@ -2,7 +2,7 @@ require 'buildr/git_auto_version'
 require 'buildr/gwt'
 require 'reality/naming'
 
-GWT_MODULES = %w(Camera ChangeCOlors Cube Cube2 Rectangle HelloTriangle ImageProcessing Light Textures Tjs Vaos)
+GWT_MODULES = %w(Camera ColorBlend ChangeColors Cube Cube2 Rectangle HelloTriangle ImageProcessing Light Textures Tjs Vaos)
 
 desc 'Coursework for learning WebGL'
 define 'course-webgl' do
