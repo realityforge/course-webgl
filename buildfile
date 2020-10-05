@@ -1,9 +1,6 @@
 require 'buildr/git_auto_version'
 require 'buildr/gwt'
 
-GLSLFS_MODULES = %w(glslfs.change_colors glslfs.clamp glslfs.color_blend)
-GWT_MODULES = %w(camera cube cube2 rectangle hello_triangle image_processing light textures tjs vaos) + GLSLFS_MODULES
-
 desc 'Coursework for learning WebGL'
 define 'course-webgl' do
   project.group = 'org.realityforge.webgl'
@@ -24,8 +21,9 @@ define 'course-webgl' do
                :gwt_user
 
   gwt_config = {}
-  GWT_MODULES.each do |m|
-    module_name = "org.realityforge.webgl.#{m}.Main"
+  base = _('src/main/java')
+  Dir["#{base}/**/Main.gwt.xml"].collect{|v|v.gsub(/\.gwt\.xml$/,'').gsub("#{base}/",'').gsub('/','.')}.each do |m|
+    module_name = m
     gwt_config[module_name] = false
     gwt([module_name],
         {
@@ -35,7 +33,7 @@ define 'course-webgl' do
           :output_key => m
         })
     ipr.add_gwt_configuration(project,
-                              :name => "Run #{m}",
+                              :name => "Run #{m.gsub('.Main','').gsub('org.realityforge.webgl.','')}",
                               :gwt_module => module_name,
                               :start_javascript_debugger => false,
                               :open_in_browser => false,
