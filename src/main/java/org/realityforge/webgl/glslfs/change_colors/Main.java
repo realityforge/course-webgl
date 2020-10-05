@@ -1,4 +1,4 @@
-package org.realityforge.webgl.change_colors;
+package org.realityforge.webgl.glslfs.change_colors;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental2.core.Float32Array;

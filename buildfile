@@ -1,8 +1,8 @@
 require 'buildr/git_auto_version'
 require 'buildr/gwt'
-require 'reality/naming'
 
-GWT_MODULES = %w(Camera ColorBlend ChangeColors Cube Cube2 Rectangle HelloTriangle ImageProcessing Light Textures Tjs Vaos)
+GLSLFS_MODULES = %w(glslfs.color_blend glslfs.change_colors)
+GWT_MODULES = %w(camera cube cube2 rectangle hello_triangle image_processing light textures tjs vaos) + GLSLFS_MODULES
 
 desc 'Coursework for learning WebGL'
 define 'course-webgl' do
@@ -25,15 +25,14 @@ define 'course-webgl' do
 
   gwt_config = {}
   GWT_MODULES.each do |m|
-    uname = Reality::Naming.underscore(m)
-    module_name = "org.realityforge.webgl.#{uname}.Main"
+    module_name = "org.realityforge.webgl.#{m}.Main"
     gwt_config[module_name] = false
     gwt([module_name],
         {
           :java_args => %w(-Xms512M -Xmx1024M -Dgwt.watchFileChanges=false),
           :dependencies => project.compile.dependencies + [project.compile.target] + [Buildr.artifact(:gwt_user)],
           :gwtc_args => %w(-optimize 9 -checkAssertions -XmethodNameDisplayMode FULL -noincremental),
-          :output_key => uname
+          :output_key => m
         })
     ipr.add_gwt_configuration(project,
                               :name => "Run #{m}",

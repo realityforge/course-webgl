@@ -1,4 +1,4 @@
-package org.realityforge.webgl.color_blend;
+package org.realityforge.webgl.glslfs.color_blend;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental2.core.Float32Array;
