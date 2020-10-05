@@ -4,7 +4,7 @@ require 'reality/naming'
 
 GWT_MODULES = %w(Camera Cube Cube2 Rectangle HelloTriangle ImageProcessing Light Textures Tjs Vaos)
 
-desc 'The Extensive WebGL Series coursework'
+desc 'Coursework for learning WebGL'
 define 'course-webgl' do
   project.group = 'org.realityforge.webgl'
   compile.options.source = '1.8'
