@@ -1,7 +1,7 @@
 require 'buildr/git_auto_version'
 require 'buildr/gwt'
 
-GLSLFS_MODULES = %w(glslfs.color_blend glslfs.change_colors)
+GLSLFS_MODULES = %w(glslfs.change_colors glslfs.clamp glslfs.color_blend)
 GWT_MODULES = %w(camera cube cube2 rectangle hello_triangle image_processing light textures tjs vaos) + GLSLFS_MODULES
 
 desc 'Coursework for learning WebGL'
