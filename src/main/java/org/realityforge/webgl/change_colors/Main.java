@@ -143,7 +143,7 @@ public final class Main
 
     gl.useProgram( _program );
     gl.bindVertexArray( _vertexArrayObject );
-    final float time = ( System.currentTimeMillis() - startedAt ) / 1000.0F;
+    final float time = ( ( System.currentTimeMillis() - startedAt ) / 1000.0F ) / (float) ( 2 * Math.PI );
     gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( _modelMatrix ) );
     gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( _viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( _projectionMatrix ) );
