@@ -59,12 +59,18 @@ public final class Main
     "uniform vec2 u_resolution;\n" +
     "void main()\n" +
     "{\n" +
-    "  vec2 position = gl_FragCoord.xy/u_resolution;" +
-    "  vec4 tempColor = vec4(0.0);" +
-    "  tempColor.x = clamp(position.x - 0.5, 0.0, 1.0);" +
-    "  tempColor.y = clamp(position.y - 0.5, 0.0, 1.0);" +
-    "  tempColor.w = 1.0;" +
-    "  color = tempColor;" +
+    "  vec2 uv = gl_FragCoord.xy/u_resolution;" +
+
+    // Arbitrary radius of 20% of the canvas
+    "  float radius = 0.2;" +
+    "  vec2 center = vec2(0.5, 0.5);" +
+    "  float distanceFromCenter = distance(uv, center);" +
+    //step(edge, x) 0.0 is returned if x < edge, and 1.0 is returned otherwise.
+    "  float lightFactor = 1.0 - step(radius, distanceFromCenter);" +
+    "  vec3 tempColor = vec3(1.0, 0.0, 1.0);" +
+    "  tempColor.x *= lightFactor;" +
+    "  tempColor.y *= lightFactor;" +
+    "  color = vec4(tempColor, 1.0);" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
