@@ -71,13 +71,23 @@ public final class Main
     // this next expression will also be 0 or 1
     "  return xIn * yIn;" +
     "}\n" +
+    "mat2 getRorationMatrix(float degree)\n" +
+    "{\n" +
+    "  float c = cos(degree);" +
+    "  float s = sin(degree);" +
+    "  return mat2(c, -s, s, c);" +
+    "}\n" +
     "void main()\n" +
     "{\n" +
     "  float radius = 0.4;" +
-    "  vec2 center = vec2(cos(u_time) * radius, sin(u_time) * radius) + vec2(0.5, 0.5);" +
+    "  vec2 screenCenter = vec2(0.5, 0.5);" +
+    "  vec2 center = vec2(cos(u_time) * radius, sin(u_time) * radius) + screenCenter;" +
     "  vec2 size = vec2(0.4, 0.4);" +
     "  vec2 uv = gl_FragCoord.xy/u_resolution;" +
-    "  float lightFactor = inShape(uv, size, center);" +
+    // The testpoint is rotated around the screen center so we first translate
+    // it to center, apply rotation then translate back
+    "  vec2 testPoint = (uv - screenCenter)  * getRorationMatrix( u_time * 2.0) + screenCenter;" +
+    "  float lightFactor = inShape(testPoint, size, center);" +
     "  vec3 tempColor = vec3(1.0, 1.0, 0.0);" +
     "  tempColor.x *= lightFactor;" +
     "  tempColor.y *= lightFactor;" +
