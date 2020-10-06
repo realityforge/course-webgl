@@ -67,10 +67,7 @@ public final class Main
     "  float glow = 0.01;" +
     "  vec2 center = vec2(0.5, 0.5);" +
     "  float distanceFromCenter = distance(uv, center);" +
-    //step(edge, x) 0.0 is returned if x < edge, and 1.0 is returned otherwise.
-    "  float lightFactorXX = (1.0 - (smoothstep(radius + glow, radius, distanceFromCenter)) - (1.0 - smoothstep(innerRadius - glow, innerRadius, distanceFromCenter)));" +
     "  float lightFactor = (1.0 - (smoothstep(radius - glow, radius, distanceFromCenter)) - (1.0 - smoothstep(innerRadius - glow, innerRadius, distanceFromCenter)));" +
-    "  float lightFactorX = (1.0 - (step(radius, distanceFromCenter)) - (1.0 - step(innerRadius, distanceFromCenter)));" +
     "  vec3 tempColor = vec3(1.0, 1.0, 0.0);" +
     "  tempColor.x *= lightFactor;" +
     "  tempColor.y *= lightFactor;" +
