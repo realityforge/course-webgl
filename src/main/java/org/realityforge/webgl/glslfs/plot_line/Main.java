@@ -54,18 +54,30 @@ public final class Main
   @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
     "#version 300 es\n" +
+    "#define PI 3.1415926538\n" +
     "precision mediump float;\n" +
     "out vec4 color;\n" +
     "uniform vec2 u_resolution;\n" +
-    "float plot(float actualX, float plottedX)\n" +
+    "float plot(float x, float y, float edgeWidth)\n" +
     "{\n" +
-    "  float glow = 0.01;" +
-    "  return smoothstep(plottedX - glow, plottedX, actualX) - smoothstep(plottedX, plottedX + glow, actualX);" +
+    "  return smoothstep(y - edgeWidth, y, x) - smoothstep(y, y + edgeWidth, x);" +
     "}\n" +
     "void main()\n" +
     "{\n" +
     "  vec2 uv = gl_FragCoord.xy/u_resolution;" +
-    "  float lightFactor = plot(uv.x, uv.y);" +
+
+
+    // A sine wave
+    //"  float lightFactor = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.5, 0.01);" +
+
+    // A combined wave
+    "  float lightFactor1 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.5, 0.01);" +
+    "  float lightFactor2 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.3, 0.05);" +
+    "  float lightFactor3 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.1, 0.15);" +
+    "  float lightFactor = lightFactor1 + 0.5 * lightFactor2 + 0.25 * lightFactor3;" +
+
+    // single line from bottom left to top right
+    //"  float lightFactor = plot(uv.x, uv.y, 0.01);" +
     "  vec3 tempColor = vec3(1.0, 1.0, 0.0);" +
     "  tempColor.x *= lightFactor;" +
     "  tempColor.y *= lightFactor;" +
