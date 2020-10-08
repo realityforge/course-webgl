@@ -58,9 +58,10 @@ public final class Main
     "precision mediump float;\n" +
     "out vec4 color;\n" +
     "uniform vec2 u_resolution;\n" +
-    "float plot(float x, float y, float edgeWidth)\n" +
+    "float plot(float x, float y, float lineWidth, float edgeWidth)\n" +
     "{\n" +
-    "  return smoothstep(y - edgeWidth, y, x) - smoothstep(y, y + edgeWidth, x);" +
+    "  float lineWidthHalved = lineWidth / 2.0;" +
+    "  return smoothstep(y - lineWidthHalved - edgeWidth, y - lineWidthHalved, x) - smoothstep(y + lineWidthHalved, y + lineWidthHalved + edgeWidth, x);" +
     "}\n" +
     "void main()\n" +
     "{\n" +
@@ -71,9 +72,9 @@ public final class Main
     //"  float lightFactor = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.5, 0.01);" +
 
     // A combined wave
-    "  float lightFactor1 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.5, 0.01);" +
-    "  float lightFactor2 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.3, 0.05);" +
-    "  float lightFactor3 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.1, 0.15);" +
+    "  float lightFactor1 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.5, 0.1, 0.01);" +
+    "  float lightFactor2 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.3, 0.1, 0.05);" +
+    "  float lightFactor3 = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.1, 0.1, 0.15);" +
     "  float lightFactor = lightFactor1 + 0.5 * lightFactor2 + 0.25 * lightFactor3;" +
 
     // single line from bottom left to top right
