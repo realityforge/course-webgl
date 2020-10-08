@@ -85,10 +85,7 @@ public final class Main
     "  uv = fract(uv * 10.0);" +
 
     "  float lightFactor = brick(uv.x, uv.y, 0.05, 0.001);" +
-    "  vec3 tempColor = vec3(1.0, 1.0, 0.0);" +
-    "  tempColor.x *= lightFactor;" +
-    "  tempColor.y *= lightFactor;" +
-    "  color = vec4(tempColor, 1.0);" +
+    "  color = mix(vec4(203.0/256.0, 65.0/256.0, 84.0/256.0, 1.0), vec4(40.0/256.0, 40.0/256.0, 40.0/256.0, 1.0), lightFactor);" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
