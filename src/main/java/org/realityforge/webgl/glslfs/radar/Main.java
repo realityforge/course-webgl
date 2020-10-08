@@ -58,6 +58,7 @@ public final class Main
     "precision mediump float;\n" +
     "out vec4 color;\n" +
     "uniform vec2 u_resolution;\n" +
+    "uniform float u_time;\n" +
     "float plot(float x, float y, float lineWidth, float edgeWidth)\n" +
     "{\n" +
     "  float lineWidthHalved = lineWidth / 2.0;" +
@@ -69,11 +70,37 @@ public final class Main
     "  float distanceFromCenter = distance(vec2(x,y), center);" +
     "  return smoothstep(radius - lineWidthHalved - edgeWidth, radius - lineWidthHalved, distanceFromCenter) - smoothstep(radius + lineWidthHalved, radius + lineWidthHalved + edgeWidth, distanceFromCenter);" +
     "}\n" +
+    "float sweep(float x, float y, vec2 center, float radius, float lineWidth, float edgeWidth)\n" +
+    "{\n" +
+    // How long does it take to make a full sweep
+    "  float secondsPerRotation = 4.0;\n" +
+    // Derive angle of sweep from time and convert into radians
+    "  float theta = fract( u_time / secondsPerRotation ) * PI * 2.0;\n" +
+    // The outer point of sweep that tracing around circle
+    // Derived via basic trig
+    "  vec2 sweepPoint = vec2(cos(theta), -sin(theta)) * radius;\n" +
+
+    // Pixel coordinate relative to center of cell
+    "  vec2 relativePixelCoordinate = vec2(x, y) - center;\n" +
+    // Project the pixel coordinate vector onto sweepPoint vector to see how similar the two vectors are and then divide
+    // by dot(sweepPoint, sweepPoint) to normalize it between -1.0 to 1.0, then clamp the value 0.0 so anything on the
+    // opposite side of the sweep arm is ignored.
+    // Another way to to think of this is how far along the sweep vector would a normal need to be placed to intersect
+    // the pixel of interest
+    "  float h = clamp( dot(relativePixelCoordinate, sweepPoint) / dot(sweepPoint, sweepPoint), 0.0, 1.0 );\n" +
+
+    // Then calculate the length of the normal from the sweep vector
+    "  float l = distance(relativePixelCoordinate, sweepPoint * h);\n" +
+
+    // Then decide how much of pixel we let through based on the length of the normal
+    "  return 1.0 - smoothstep(lineWidth, lineWidth + edgeWidth, l);\n" +
+    "}\n" +
     "void main()\n" +
     "{\n" +
     "  vec2 uv = gl_FragCoord.xy/u_resolution;" +
 
     "  vec3 axisColor = vec3(0.8);" +
+    "  vec3 sweepColor = vec3(0.1, 0.3, 1.0);" +
     "  vec2 center = vec2(0.5);" +
 
     "  vec3 tempColor =\n" +
@@ -81,7 +108,8 @@ public final class Main
     "    circle(uv.x, uv.y, center, 0.2, 0.002, 0.001) * axisColor +\n" +
     "    circle(uv.x, uv.y, center, 0.3, 0.002, 0.001) * axisColor +\n" +
     "    plot(uv.x, 0.5, 0.002, 0.001) * axisColor +\n" +
-    "    plot(uv.y, 0.5, 0.002, 0.001) * axisColor;\n" +
+    "    plot(uv.y, 0.5, 0.002, 0.001) * axisColor +\n" +
+    "    sweep(uv.x, uv.y, center, 0.3, 0.003, 0.001) * sweepColor;\n" +
     "  color = vec4(tempColor, 1.0);" +
     "}\n";
   @Nonnull
@@ -95,7 +123,9 @@ public final class Main
   private WebGLUniformLocation _viewMatrixLocation;
   private WebGLUniformLocation _projectionMatrixLocation;
   private WebGLUniformLocation _resolutionLocation;
+  private WebGLUniformLocation _timeLocation;
   private WebGLVertexArrayObject _vertexArrayObject;
+  private final long startedAt = System.currentTimeMillis();
 
   @Override
   public void onModuleLoad()
@@ -117,6 +147,7 @@ public final class Main
     _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
     _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
     _resolutionLocation = getUniformLocation( gl, _program, "u_resolution" );
+    _timeLocation = getUniformLocation( gl, _program, "u_time" );
 
     final int positionIndex = gl.getAttribLocation( _program, "position" );
     final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
@@ -169,6 +200,9 @@ public final class Main
     gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( _viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( _projectionMatrix ) );
     gl.uniform2f( _resolutionLocation, canvas.width, canvas.height );
+
+    final float time = ( System.currentTimeMillis() - startedAt ) / 1000.0F;
+    gl.uniform1f( _timeLocation, time );
 
     gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
   }
