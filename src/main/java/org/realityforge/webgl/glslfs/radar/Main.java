@@ -78,7 +78,7 @@ public final class Main
     "  float theta = fract( u_time / secondsPerRotation ) * PI * 2.0;\n" +
     // The outer point of sweep that tracing around circle
     // Derived via basic trig
-    "  vec2 sweepPoint = vec2(cos(theta), -sin(theta)) * radius;\n" +
+    "  vec2 sweepPoint = vec2(cos(theta), sin(theta)) * radius;\n" +
 
     // Pixel coordinate relative to center of cell
     "  vec2 relativePixelCoordinate = vec2(x, y) - center;\n" +
@@ -93,7 +93,29 @@ public final class Main
     "  float l = distance(relativePixelCoordinate, sweepPoint * h);\n" +
 
     // Then decide how much of pixel we let through based on the length of the normal
-    "  return 1.0 - smoothstep(lineWidth, lineWidth + edgeWidth, l);\n" +
+    "  float sweepArm = 1.0 - smoothstep(lineWidth, lineWidth + edgeWidth, l);\n" +
+
+    // The gradiant is the trail left behind by the sweep arm
+    "  float sweepGradient = 0.0;\n" +
+
+    // If we are inside our radar sweep
+    "  if( length( relativePixelCoordinate ) < radius )\n" +
+    "  {\n" +
+    // How wide is the sweep angle?
+    "     const float sweepGradiantAngle = 1.0;\n" +
+
+    // atan calculates the angle between current pixel and center of radar but we need to mod it as u_time
+    // is quite large. We also remove it from theta to produce the angle from the sweep
+    "     float angle = mod(theta - atan(relativePixelCoordinate.y, relativePixelCoordinate.x), PI * 2.0);\n" +
+
+    // What range do we want to restrict gradiant to?
+    "     float maxGradiantContrib = 0.5;\n" +
+
+    // If the pixel is within the gradiant arc then it will contribute
+    "     sweepGradient = clamp(sweepGradiantAngle - angle, 0.0, sweepGradiantAngle) * maxGradiantContrib;\n" +
+    "  }\n" +
+
+    "  return sweepGradient + sweepArm;\n" +
     "}\n" +
     "void main()\n" +
     "{\n" +
