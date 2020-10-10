@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
  * be called, so there is no race condition between an asynchronous operation completing and its handlers being
  * attached.</p>
  *
- * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN - Promise</a>
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise - MDN</a>
  */
 @JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "Promise" )
 public class Promise<T>
@@ -43,7 +43,7 @@ public class Promise<T>
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
    * @return the result promise.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">MDN - Promise.all</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all - MDN</a>
    */
   @SafeVarargs
   @Nonnull
@@ -59,7 +59,7 @@ public class Promise<T>
    * @param promises the promises.
    * @param <V>      the component type of the promise results.
    * @return the result promise.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">MDN - Promise.all</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all - MDN</a>
    */
   @Nonnull
   public static native <V> Promise<V[]> all( @Nonnull JsIterator<Promise<? extends V>> promises );
@@ -74,7 +74,7 @@ public class Promise<T>
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
    * @return A promise that yields the value of the first promise in the given iterable to fulfill or an {@link AggregateError} containing the reasons for all the rejected promises.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">MDN - Promise.any</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">Promise.any - MDN</a>
    */
   @SafeVarargs
   @Nonnull
@@ -90,7 +90,7 @@ public class Promise<T>
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
    * @return A promise that yields the value of the first promise in the given iterable to fulfill or an {@link AggregateError} containing the reasons for all the rejected promises.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">MDN - Promise.any</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">Promise.any - MDN</a>
    */
   @Nonnull
   public static native <V> Promise<V> any( @Nonnull JsIterator<Promise<? extends V>> promises );
@@ -101,7 +101,7 @@ public class Promise<T>
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
    * @return A pending Promise that asynchronously yields the value of the first promise in the given iterable to fulfill or reject.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">MDN - Promise.race</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">Promise.race - MDN</a>
    */
   @SafeVarargs
   @Nonnull
@@ -113,7 +113,7 @@ public class Promise<T>
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
    * @return A pending Promise that asynchronously yields the value of the first promise in the given iterable to fulfill or reject.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">MDN - Promise.race</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">Promise.race - MDN</a>
    */
   @Nonnull
   public static native <V> Promise<V> race( @Nonnull JsIterator<Promise<? extends V>> promises );
@@ -124,7 +124,7 @@ public class Promise<T>
    * @param value the promise to wrap and return.
    * @param <V>   the component type of the promise returned.
    * @return a Promise that is resolved with the given value.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">MDN - Promise.resolve</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve - MDN</a>
    */
   @Nonnull
   public static native <V> Promise<V> resolve( @Nullable Promise<V> value );
@@ -140,7 +140,7 @@ public class Promise<T>
    * @param value the value to use when creating the promise.
    * @param <V>   the component type of the promise returned.
    * @return a Promise that is resolved with the given value.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">MDN - Promise.resolve</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve - MDN</a>
    */
   @Nonnull
   public static native <V> Promise<V> resolve( @Nullable V value );
@@ -151,13 +151,16 @@ public class Promise<T>
    * @param reason the reason to reject promise with.
    * @param <V>    the component type of the promise returned.
    * @return a promise that is rejected with the given reason.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">MDN - Promise.reject</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject - MDN</a>
    */
   @Nonnull
   public static native <V> Promise<V> reject( @Nullable Object reason );
 
   /**
    * Creates a new Promise object. The constructor is primarily used to wrap functions that do not already support promises.
+   *
+   * @param executor a function executed by the constructor during the process of constructing the promise. The executor is custom code that ties an outcome to a promise.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise">Promise() - MDN</a>
    */
   @SuppressWarnings( "unused" )
   public Promise( @Nonnull final PromiseExecutor<T> executor )
@@ -171,7 +174,7 @@ public class Promise<T>
    * @param onFulfilled the callback function called when the promise is fulfilled.
    * @param <V>         the component type of the promise returned from the callback.
    * @return a Promise with the fulfillment handler set to the specified callback.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">MDN - Promise.then</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">Promise.then - MDN</a>
    */
   @Nonnull
   public native <V> Promise<V> then( @Nonnull OnFulfilledCallback<? super T, ? extends V> onFulfilled );
@@ -183,7 +186,7 @@ public class Promise<T>
    *
    * @param onAccept the callback function called when the promise is fulfilled.
    * @return a promise with the fulfillment handler set to the specified callback.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">MDN - Promise.then</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">Promise.then - MDN</a>
    */
   @JsMethod( name = "then" )
   @Nonnull
@@ -197,7 +200,7 @@ public class Promise<T>
    * @param onRejected the callback function called when the promise is rejected.
    * @param <V>        the component type of the promise returned from the callback.
    * @return a Promise with the rejection handler set to the specified callback.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">MDN - Promise.catch</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">Promise.catch - MDN</a>
    */
   @JsMethod( name = "catch" )
   @Nonnull
@@ -212,7 +215,7 @@ public class Promise<T>
    * @param onRejected  the callback function called when the promise is rejected.
    * @param <V>         the component type of the promise returned from the callback.
    * @return a Promise with the fulfillment handler set to the specified callback.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">MDN - Promise.then</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">Promise.then - MDN</a>
    */
   @Nonnull
   public native <V> Promise<V> then( @Nullable OnFulfilledCallback<? super T, ? extends V> onFulfilled,
@@ -225,7 +228,7 @@ public class Promise<T>
    *
    * @param onSettle a callback function called when the Promise is settled.
    * @return a Promise with the finally handler set to the specified callback.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">MDN - Promise.finally</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">Promise.finally - MDN</a>
    */
   @JsMethod( name = "finally" )
   @Nonnull
