@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -16,8 +21,7 @@ public class JsError {
   /**
    * The Error constructor creates an error object.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-error-constructor">Error() - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error.Error - MDN</a>
    */
   public JsError(@Nonnull final String message) {
   }
@@ -25,8 +29,7 @@ public class JsError {
   /**
    * The Error constructor creates an error object.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-error-constructor">Error() - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error.Error - MDN</a>
    */
   public JsError() {
   }
