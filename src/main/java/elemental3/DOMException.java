@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.core.JsError;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DOMException"
 )
-public class DOMException {
+public class DOMException extends JsError {
   @JsOverlay
   public static final int ABORT_ERR = 20;
 
@@ -127,26 +128,4 @@ public class DOMException {
       name = "code"
   )
   public native int code();
-
-  /**
-   * The message read-only property of the DOMException interface returns a DOMString representing a message or description associated with the given error name.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/message">DOMException.message - MDN</a>
-   */
-  @JsProperty(
-      name = "message"
-  )
-  @Nonnull
-  public native String message();
-
-  /**
-   * The name read-only property of the DOMException interface returns a DOMString that contains one of the strings associated with an error name.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/name">DOMException.name - MDN</a>
-   */
-  @JsProperty(
-      name = "name"
-  )
-  @Nonnull
-  public native String name();
 }
