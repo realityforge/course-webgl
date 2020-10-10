@@ -9,14 +9,12 @@ import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.annotations.GLSL;
+import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
-import org.realityforge.webgl.util.FloatUniformBinding;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.TextureUniformBinding;
-import org.realityforge.webgl.util.VecfUniformBinding;
 
 public final class Main
   implements EntryPoint

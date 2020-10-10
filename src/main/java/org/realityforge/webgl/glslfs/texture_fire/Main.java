@@ -14,7 +14,7 @@ import elemental3.gl.WebGLUniformLocation;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.realityforge.webgl.annotations.GLSL;
+import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;

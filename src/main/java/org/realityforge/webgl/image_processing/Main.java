@@ -12,7 +12,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.annotations.GLSL;
+import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BoolUniformBinding;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.CanvasUtil;
