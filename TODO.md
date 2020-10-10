@@ -12,6 +12,8 @@
 
 * Rewrite [model-viewer](https://github.com/google/model-viewer)
 
+* Reimplement each of https://github.com/lettier/3d-game-shaders-for-beginners
+
 ## References
 
 * [WebGL2 Fundamentals](https://webgl2fundamentals.org/) - a great learning resource.
