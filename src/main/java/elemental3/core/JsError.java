@@ -21,7 +21,8 @@ public class JsError {
   /**
    * The Error constructor creates an error object.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error.Error - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-error-constructor">Error() - ECMA</a>
    */
   public JsError(@Nonnull final String message) {
   }
@@ -29,7 +30,8 @@ public class JsError {
   /**
    * The Error constructor creates an error object.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error.Error - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-error-constructor">Error() - ECMA</a>
    */
   public JsError() {
   }

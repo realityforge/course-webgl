@@ -20,7 +20,8 @@ public class RangeError extends JsError {
   /**
    * The RangeError() constructor creates an error when a value is not in the set or range of allowed values.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/RangeError">RangeError.RangeError - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/RangeError">RangeError() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-rangeerror">RangeError() - ECMA</a>
    */
   public RangeError(@Nonnull final String message) {
   }
@@ -28,7 +29,8 @@ public class RangeError extends JsError {
   /**
    * The RangeError() constructor creates an error when a value is not in the set or range of allowed values.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/RangeError">RangeError.RangeError - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/RangeError">RangeError() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-rangeerror">RangeError() - ECMA</a>
    */
   public RangeError() {
   }
