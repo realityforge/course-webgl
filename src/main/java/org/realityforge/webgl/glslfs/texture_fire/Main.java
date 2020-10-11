@@ -5,6 +5,7 @@ import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
@@ -14,7 +15,6 @@ import elemental3.gl.WebGLUniformLocation;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
@@ -193,11 +193,11 @@ public final class Main
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    if( null == _texture )
+    if ( null == _texture )
     {
       return;
     }
-    else if( !_sentToCPU )
+    else if ( !_sentToCPU )
     {
       _sentToCPU = true;
       gl.useProgram( _program );

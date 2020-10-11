@@ -1,12 +1,12 @@
 package org.realityforge.webgl.light;
 
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;

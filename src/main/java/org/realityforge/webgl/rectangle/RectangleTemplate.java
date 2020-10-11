@@ -2,9 +2,9 @@ package org.realityforge.webgl.rectangle;
 
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import elemental3.gl.GLSL;
 
 final class RectangleTemplate
 {

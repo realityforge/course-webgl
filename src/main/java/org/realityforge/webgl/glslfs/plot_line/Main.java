@@ -5,6 +5,7 @@ import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
@@ -13,7 +14,6 @@ import elemental3.gl.WebGLUniformLocation;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
@@ -66,7 +66,6 @@ public final class Main
     "void main()\n" +
     "{\n" +
     "  vec2 uv = gl_FragCoord.xy/u_resolution;" +
-
 
     // A sine wave
     //"  float lightFactor = plot(uv.y, (sin(uv.x * 2.0 * PI) + 1.0) * 0.5, 0.01);" +

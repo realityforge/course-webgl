@@ -1,12 +1,12 @@
 package org.realityforge.webgl.tjs;
 
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;

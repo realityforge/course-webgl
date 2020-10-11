@@ -1,12 +1,12 @@
 package org.realityforge.webgl.vaos;
 
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
@@ -98,9 +98,9 @@ final class Mesh
 
     final Vector3f cameraPosition = camera.getPosition();
     gl.uniform3f( _cameraPosition.getLocation(),
-                  (float) cameraPosition.x,
-                  (float) cameraPosition.y,
-                  (float) cameraPosition.z );
+                  cameraPosition.x,
+                  cameraPosition.y,
+                  cameraPosition.z );
 
     super.render( gl, modelMatrix, viewMatrix, projectionMatrix );
   }

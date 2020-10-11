@@ -1,5 +1,6 @@
 package org.realityforge.webgl.textures;
 
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
@@ -7,7 +8,6 @@ import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;

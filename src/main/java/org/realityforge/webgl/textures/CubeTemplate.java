@@ -1,9 +1,9 @@
 package org.realityforge.webgl.textures;
 
 import elemental2.core.Float32Array;
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.Float32Buffer;
 
 final class CubeTemplate

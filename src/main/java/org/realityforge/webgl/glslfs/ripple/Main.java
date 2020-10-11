@@ -4,12 +4,12 @@ import com.google.gwt.core.client.EntryPoint;
 import elemental2.core.Float32Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
@@ -117,7 +117,7 @@ public final class Main
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
   {
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
-    if ( !u_image.isReady()  )
+    if ( !u_image.isReady() )
     {
       return;
     }

@@ -1,12 +1,12 @@
 package org.realityforge.webgl.tjs;
 
+import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.joml.Matrix4d;
-import elemental3.gl.GLSL;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.UniformBinding;
