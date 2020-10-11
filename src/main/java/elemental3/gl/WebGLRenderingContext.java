@@ -2240,6 +2240,7 @@ public class WebGLRenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource">WebGLRenderingContext.getShaderSource - MDN</a>
    */
+  @GLSL
   @Nullable
   public native String getShaderSource(@Nonnull WebGLShader shader);
 
@@ -2409,7 +2410,7 @@ public class WebGLRenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource">WebGLRenderingContext.shaderSource - MDN</a>
    */
-  public native void shaderSource(@Nonnull WebGLShader shader, @Nonnull String source);
+  public native void shaderSource(@Nonnull WebGLShader shader, @GLSL @Nonnull String source);
 
   /**
    * The WebGLRenderingContext.stencilFunc() method of the WebGL API sets the front and back function and reference value for stencil testing.
