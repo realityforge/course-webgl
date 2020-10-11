@@ -27,9 +27,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -39,9 +39,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -51,9 +51,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -63,9 +63,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -75,9 +75,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -87,9 +87,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -99,9 +99,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -111,9 +111,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -123,9 +123,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -135,9 +135,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -147,9 +147,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -159,9 +159,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -171,9 +171,9 @@ public class JSON {
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link elemental3.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
    *
    * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
@@ -182,9 +182,9 @@ public class JSON {
 
   /**
    * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
+   * Throws a {@link elemental3.core.SyntaxError} if the string to parse is not valid JSON.
    *
    * @return The Object, Array, string, number, boolean, or null value corresponding to the given JSON text.
-   * @throw SyntaxError if the string to parse is not valid JSON.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.parse">JSON.parse() - ECMA</a>
    */
@@ -193,9 +193,9 @@ public class JSON {
 
   /**
    * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
+   * Throws a {@link elemental3.core.SyntaxError} if the string to parse is not valid JSON.
    *
    * @return The Object, Array, string, number, boolean, or null value corresponding to the given JSON text.
-   * @throw SyntaxError if the string to parse is not valid JSON.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.parse">JSON.parse() - ECMA</a>
    */
