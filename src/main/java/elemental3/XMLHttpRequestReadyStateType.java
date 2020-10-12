@@ -15,5 +15,5 @@ import org.intellij.lang.annotations.MagicConstant;
         XMLHttpRequest.DONE
     }
 )
-public @interface ReadyStateType {
+public @interface XMLHttpRequestReadyStateType {
 }
