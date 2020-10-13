@@ -1,4 +1,4 @@
-package org.realityforge.webgl.annotations;
+package elemental3.gl;
 
 import elemental3.gl.WebGL2RenderingContext;
 import java.lang.annotation.Documented;

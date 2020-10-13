@@ -16,7 +16,7 @@ import elemental3.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webgl.annotations.ShaderType;
+import elemental3.gl.ShaderType;
 import org.realityforge.webgl.annotations.TargetType;
 import org.realityforge.webgl.annotations.Usage;
 
