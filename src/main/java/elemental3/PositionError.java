@@ -39,6 +39,7 @@ public class PositionError {
   @JsProperty(
       name = "code"
   )
+  @PositionErrorCode
   public native int code();
 
   /**
