@@ -52,6 +52,7 @@ public class PerformanceNavigation {
   @JsProperty(
       name = "type"
   )
+  @PerformanceNavigationType
   public native int type();
 
   @Nonnull
