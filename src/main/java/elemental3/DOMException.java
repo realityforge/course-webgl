@@ -127,5 +127,6 @@ public class DOMException extends JsError {
   @JsProperty(
       name = "code"
   )
-  public native int code();
+  @Nonnull
+  public native DOMException code();
 }
