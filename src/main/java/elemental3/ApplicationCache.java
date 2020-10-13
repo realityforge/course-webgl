@@ -62,6 +62,7 @@ public class ApplicationCache extends EventTarget {
   @JsProperty(
       name = "status"
   )
+  @ApplicationCacheStatusType
   public native int status();
 
   public native void abort();
