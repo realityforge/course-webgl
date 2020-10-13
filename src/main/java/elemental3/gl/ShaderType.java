@@ -1,12 +1,16 @@
 package elemental3.gl;
 
-import elemental3.gl.WebGL2RenderingContext;
 import java.lang.annotation.Documented;
+import javax.annotation.Generated;
 import org.intellij.lang.annotations.MagicConstant;
 
-// TODO: This should be generated as part of WebGL2RenderingContext
+@Generated("org.realityforge.webtack")
 @Documented
-@MagicConstant( intValues = { WebGL2RenderingContext.VERTEX_SHADER, WebGL2RenderingContext.FRAGMENT_SHADER } )
-public @interface ShaderType
-{
+@MagicConstant(
+    intValues = {
+        WebGL2RenderingContext.VERTEX_SHADER,
+        WebGL2RenderingContext.FRAGMENT_SHADER
+    }
+)
+public @interface ShaderType {
 }
