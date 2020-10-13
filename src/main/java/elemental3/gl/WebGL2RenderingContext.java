@@ -1930,7 +1930,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader">WebGLRenderingContext.createShader - MDN</a>
    */
   @Nullable
-  public native WebGLShader createShader(int type);
+  public native WebGLShader createShader(@ShaderType int type);
 
   /**
    * The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.
