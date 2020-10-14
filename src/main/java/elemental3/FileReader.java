@@ -90,6 +90,7 @@ public class FileReader extends EventTarget {
   @JsProperty(
       name = "readyState"
   )
+  @FileReaderReadyState
   public native int readyState();
 
   /**
