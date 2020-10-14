@@ -85,7 +85,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/compareBoundaryPoints">Range.compareBoundaryPoints - MDN</a>
    */
-  public native short compareBoundaryPoints(int how, @Nonnull Range sourceRange);
+  public native short compareBoundaryPoints(@RangeCompareType int how, @Nonnull Range sourceRange);
 
   /**
    * The Range.comparePoint() method returns -1, 0, or 1 depending on whether the referenceNode is before, the same as, or after the Range.

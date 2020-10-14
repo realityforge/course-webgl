@@ -177,6 +177,7 @@ public class Node extends EventTarget {
   @JsProperty(
       name = "nodeType"
   )
+  @NodeType
   public native int nodeType();
 
   /**

@@ -91,6 +91,7 @@ public class XPathResult {
   @JsProperty(
       name = "resultType"
   )
+  @XPathResultResultType
   public native int resultType();
 
   /**

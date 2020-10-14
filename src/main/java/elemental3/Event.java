@@ -122,6 +122,7 @@ public class Event {
   @JsProperty(
       name = "eventPhase"
   )
+  @EventPhase
   public native int eventPhase();
 
   /**
