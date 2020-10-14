@@ -16,11 +16,10 @@ public final class BufferAttributeBinding
    * the shader definition or looked up at runtime. Specifying the value in the shader source
    * is more efficient but more complex when authoring shaders.
    */
-  private final int _location;
+  private int _location;
 
   public BufferAttributeBinding( @Nonnull final Buffer<?> buffer, final int location )
   {
-    assert WebGL2RenderingContext.INVALID_INDEX != location;
     _buffer = Objects.requireNonNull( buffer );
     _location = location;
   }
@@ -31,9 +30,19 @@ public final class BufferAttributeBinding
     return _buffer;
   }
 
+  public boolean isLocationValid()
+  {
+    return WebGL2RenderingContext.INVALID_INDEX != _location;
+  }
+
   public int getLocation()
   {
     return _location;
+  }
+
+  public void setLocation( final int location )
+  {
+    _location = location;
   }
 
   public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
