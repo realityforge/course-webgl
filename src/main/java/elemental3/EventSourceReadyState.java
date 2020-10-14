@@ -8,12 +8,10 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
     intValues = {
-        XMLHttpRequest.UNSENT,
-        XMLHttpRequest.OPENED,
-        XMLHttpRequest.HEADERS_RECEIVED,
-        XMLHttpRequest.LOADING,
-        XMLHttpRequest.DONE
+        EventSource.CONNECTING,
+        EventSource.OPEN,
+        EventSource.CLOSED
     }
 )
-public @interface XMLHttpRequestReadyStateType {
+public @interface EventSourceReadyState {
 }

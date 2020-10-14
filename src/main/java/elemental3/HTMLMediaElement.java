@@ -230,7 +230,7 @@ public class HTMLMediaElement extends HTMLElement {
   @JsProperty(
       name = "networkState"
   )
-  @HTMLMediaElementNetworkStateType
+  @HTMLMediaElementNetworkState
   public native int networkState();
 
   /**
@@ -257,7 +257,7 @@ public class HTMLMediaElement extends HTMLElement {
   @JsProperty(
       name = "readyState"
   )
-  @HTMLMediaElementReadyStateType
+  @HTMLMediaElementReadyState
   public native int readyState();
 
   /**

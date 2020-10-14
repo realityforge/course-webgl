@@ -15,5 +15,5 @@ import org.intellij.lang.annotations.MagicConstant;
         HTMLMediaElement.HAVE_ENOUGH_DATA
     }
 )
-public @interface HTMLMediaElementReadyStateType {
+public @interface HTMLMediaElementReadyState {
 }

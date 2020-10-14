@@ -8,10 +8,11 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
     intValues = {
-        EventSource.CONNECTING,
-        EventSource.OPEN,
-        EventSource.CLOSED
+        WebSocket.CONNECTING,
+        WebSocket.OPEN,
+        WebSocket.CLOSING,
+        WebSocket.CLOSED
     }
 )
-public @interface EventSourceReadyStateType {
+public @interface WebSocketReadyState {
 }

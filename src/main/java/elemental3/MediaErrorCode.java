@@ -8,11 +8,11 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
     intValues = {
-        WebSocket.CONNECTING,
-        WebSocket.OPEN,
-        WebSocket.CLOSING,
-        WebSocket.CLOSED
+        MediaError.MEDIA_ERR_ABORTED,
+        MediaError.MEDIA_ERR_NETWORK,
+        MediaError.MEDIA_ERR_DECODE,
+        MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED
     }
 )
-public @interface WebSocketReadyStateType {
+public @interface MediaErrorCode {
 }

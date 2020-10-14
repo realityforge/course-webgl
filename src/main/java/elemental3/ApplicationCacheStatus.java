@@ -16,5 +16,5 @@ import org.intellij.lang.annotations.MagicConstant;
         ApplicationCache.OBSOLETE
     }
 )
-public @interface ApplicationCacheStatusType {
+public @interface ApplicationCacheStatus {
 }

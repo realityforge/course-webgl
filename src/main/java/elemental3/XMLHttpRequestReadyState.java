@@ -8,11 +8,12 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
     intValues = {
-        MediaError.MEDIA_ERR_ABORTED,
-        MediaError.MEDIA_ERR_NETWORK,
-        MediaError.MEDIA_ERR_DECODE,
-        MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED
+        XMLHttpRequest.UNSENT,
+        XMLHttpRequest.OPENED,
+        XMLHttpRequest.HEADERS_RECEIVED,
+        XMLHttpRequest.LOADING,
+        XMLHttpRequest.DONE
     }
 )
-public @interface MediaErrorCodeType {
+public @interface XMLHttpRequestReadyState {
 }

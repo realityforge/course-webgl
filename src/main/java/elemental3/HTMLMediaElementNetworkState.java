@@ -14,5 +14,5 @@ import org.intellij.lang.annotations.MagicConstant;
         HTMLMediaElement.NETWORK_NO_SOURCE
     }
 )
-public @interface HTMLMediaElementNetworkStateType {
+public @interface HTMLMediaElementNetworkState {
 }

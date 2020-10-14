@@ -42,7 +42,7 @@ public class MediaError {
   @JsProperty(
       name = "code"
   )
-  @MediaErrorCodeType
+  @MediaErrorCode
   public native int code();
 
   /**

@@ -14,5 +14,5 @@ import org.intellij.lang.annotations.MagicConstant;
         HTMLTrackElement.ERROR
     }
 )
-public @interface HTMLTrackElementReadyStateType {
+public @interface HTMLTrackElementReadyState {
 }

@@ -61,7 +61,7 @@ public class HTMLTrackElement extends HTMLElement {
   @JsProperty(
       name = "readyState"
   )
-  @HTMLTrackElementReadyStateType
+  @HTMLTrackElementReadyState
   public native int readyState();
 
   @JsProperty(

@@ -158,7 +158,7 @@ public class WebSocket extends EventTarget {
   @JsProperty(
       name = "readyState"
   )
-  @WebSocketReadyStateType
+  @WebSocketReadyState
   public native int readyState();
 
   /**
