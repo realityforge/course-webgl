@@ -2529,8 +2529,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
    */
-  public native void vertexAttribPointer(int index, int size, int type, boolean normalized,
-      int stride, int offset);
+  public native void vertexAttribPointer(int index, int size, @DataType int type,
+      boolean normalized, int stride, int offset);
 
   /**
    * The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates.
