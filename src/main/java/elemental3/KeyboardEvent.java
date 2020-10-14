@@ -129,6 +129,7 @@ public class KeyboardEvent extends UIEvent {
   @JsProperty(
       name = "location"
   )
+  @KeyboardEventLocation
   public native int location();
 
   /**

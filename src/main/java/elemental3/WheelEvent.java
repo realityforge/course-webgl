@@ -54,6 +54,7 @@ public class WheelEvent extends MouseEvent {
   @JsProperty(
       name = "deltaMode"
   )
+  @WheelEventDeltaMode
   public native int deltaMode();
 
   /**
