@@ -24,7 +24,16 @@ public class CSSRule {
   public static final int CHARSET_RULE = 2;
 
   @JsOverlay
+  public static final int COUNTER_STYLE_RULE = 11;
+
+  @JsOverlay
   public static final int FONT_FACE_RULE = 5;
+
+  @JsOverlay
+  public static final int FONT_FEATURE_VALUES_RULE = 14;
+
+  @JsOverlay
+  public static final int FONT_PALETTE_VALUES_RULE = 15;
 
   @JsOverlay
   public static final int IMPORT_RULE = 3;
@@ -84,5 +93,6 @@ public class CSSRule {
   @JsProperty(
       name = "type"
   )
+  @CSSRuleType
   public native int type();
 }
