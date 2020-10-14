@@ -3685,592 +3685,614 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nullable ArrayBufferView pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nullable ArrayBufferView pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int8Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Int8Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int16Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Int16Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int32Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Int32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint8Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint16Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint16Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint32Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8ClampedArray pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint8ClampedArray pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float32Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Float32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float64Array pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Float64Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull DataView pixels);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull DataView pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull TexImageSource source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull ImageBitmap source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull ImageData source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull HTMLImageElement source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull HTMLCanvasElement source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull HTMLVideoElement source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
-      @Nonnull OffscreenCanvas source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int format, int type, @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, int pboOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, int pboOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull TexImageSource source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ImageBitmap source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ImageData source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull HTMLImageElement source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull HTMLCanvasElement source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull HTMLVideoElement source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull OffscreenCanvas source);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull ArrayBufferView srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int8Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Int8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int16Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Int16Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int32Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Int32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint16Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint16Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint32Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8ClampedArray srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Uint8ClampedArray srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float32Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Float32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float64Array srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull Float64Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull DataView srcData, int srcOffset);
+  public native void texImage2D(@TextureTargetType int target, int level, int internalformat,
+      int width, int height, int border, int format, int type, @Nonnull DataView srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nullable ArrayBufferView pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nullable ArrayBufferView pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int8Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Int8Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int16Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Int16Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int32Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Int32Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint8Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint16Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint16Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint32Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint32Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8ClampedArray pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint8ClampedArray pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float32Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Float32Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float64Array pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Float64Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull DataView pixels);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull DataView pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull TexImageSource source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull ImageBitmap source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull ImageData source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull HTMLImageElement source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull HTMLCanvasElement source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull HTMLVideoElement source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull OffscreenCanvas source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int format, int type, @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, int pboOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, int pboOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull TexImageSource source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ImageBitmap source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ImageData source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull HTMLImageElement source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull HTMLCanvasElement source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull HTMLVideoElement source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull OffscreenCanvas source);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull ArrayBufferView srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int8Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Int8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int16Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Int16Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int32Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Int32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint16Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint16Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint32Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8ClampedArray srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Uint8ClampedArray srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float32Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Float32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float64Array srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull Float64Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull DataView srcData, int srcOffset);
+  public native void texSubImage2D(@TextureTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, int type, @Nonnull DataView srcData,
+      int srcOffset);
 
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
