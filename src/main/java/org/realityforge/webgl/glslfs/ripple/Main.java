@@ -102,8 +102,8 @@ public final class Main
                                   new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ) );
 
     u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
-    u_resolution = getUniformLocation( _gl, program, "u_resolution" );
-    u_time = getUniformLocation( _gl, program, "u_time" );
+    u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
+    u_time = GL.getUniformLocation( _gl, program, "u_time" );
 
     // Start using the program for all vertexes pass through gl until the program is changed
     _gl.useProgram( program );
@@ -150,15 +150,5 @@ public final class Main
         endX, endY,
         endX, startY
       };
-  }
-
-  @Nonnull
-  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                          @Nonnull final WebGLProgram program,
-                                                          @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
   }
 }

@@ -117,7 +117,7 @@ public class Main
     gl.useProgram( program );
 
     // Tell GPU to load position data into program from out buffer
-    final int positionAttribLocation = gl.getAttribLocation( program, "position" );
+    final int positionAttribLocation = GL.getAttribLocation( gl, program, "position" );
     gl.enableVertexAttribArray( positionAttribLocation );
     gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
     gl.vertexAttribPointer( positionAttribLocation,
@@ -128,7 +128,7 @@ public class Main
       /* no offset so start at the start of the buffer */ 0 );
 
     // Tell GPU to load color data into program from out buffer
-    final int colorAttribLocation = gl.getAttribLocation( program, "color" );
+    final int colorAttribLocation = GL.getAttribLocation( gl, program, "color" );
     gl.enableVertexAttribArray( colorAttribLocation );
     gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
     gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );

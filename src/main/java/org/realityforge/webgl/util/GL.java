@@ -16,6 +16,7 @@ import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
+import elemental3.gl.WebGLUniformLocation;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -311,5 +312,24 @@ public final class GL
       default:
         return "UNKNOWN";
     }
+  }
+
+  public static int getAttribLocation( @Nonnull final WebGL2RenderingContext gl,
+                                       @Nonnull final WebGLProgram program,
+                                       @Nonnull final String name )
+  {
+    final int location = gl.getAttribLocation( program, name );
+    assert WebGL2RenderingContext.INVALID_INDEX != location;
+    return location;
+  }
+
+  @Nonnull
+  public static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
+                                                         @Nonnull final WebGLProgram program,
+                                                         @Nonnull final String name )
+  {
+    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
+    assert null != location;
+    return location;
   }
 }

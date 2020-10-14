@@ -40,29 +40,19 @@ final class Material
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
-    _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
-    _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
+    _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );
+    _viewMatrixLocation = GL.getUniformLocation( gl, _program, "viewMatrix" );
+    _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
 
     // Notice how we name these uniforms. So rather than uploading a
     // single 3x4f array we upload 3 separate 4f arrays
-    _colorsLocation1 = getUniformLocation( gl, _program, "u_colors[0]" );
-    _colorsLocation2 = getUniformLocation( gl, _program, "u_colors[1]" );
-    _colorsLocation3 = getUniformLocation( gl, _program, "u_colors[2]" );
+    _colorsLocation1 = GL.getUniformLocation( gl, _program, "u_colors[0]" );
+    _colorsLocation2 = GL.getUniformLocation( gl, _program, "u_colors[1]" );
+    _colorsLocation3 = GL.getUniformLocation( gl, _program, "u_colors[2]" );
 
-    _xOffsetsLocation = getUniformLocation( gl, _program, "u_xOffsets" );
+    _xOffsetsLocation = GL.getUniformLocation( gl, _program, "u_xOffsets" );
 
     _positionIndex = gl.getAttribLocation( _program, "position" );
-  }
-
-  @Nonnull
-  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                          @Nonnull final WebGLProgram program,
-                                                          @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
   }
 
   @Nonnull

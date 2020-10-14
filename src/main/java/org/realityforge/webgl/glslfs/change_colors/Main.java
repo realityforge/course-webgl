@@ -91,10 +91,10 @@ public final class Main
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
-    _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
-    _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
-    _timeLocation = getUniformLocation( gl, _program, "u_time" );
+    _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );
+    _viewMatrixLocation = GL.getUniformLocation( gl, _program, "viewMatrix" );
+    _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
+    _timeLocation = GL.getUniformLocation( gl, _program, "u_time" );
 
     final int positionIndex = gl.getAttribLocation( _program, "position" );
     final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
@@ -150,15 +150,5 @@ public final class Main
     gl.uniform1f( _timeLocation, time );
 
     gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
-  }
-
-  @Nonnull
-  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                          @Nonnull final WebGLProgram program,
-                                                          @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
   }
 }

@@ -102,12 +102,12 @@ public final class Main
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
-    _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
-    _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
-    _resolutionLocation = getUniformLocation( gl, _program, "u_resolution" );
+    _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );
+    _viewMatrixLocation = GL.getUniformLocation( gl, _program, "viewMatrix" );
+    _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
+    _resolutionLocation = GL.getUniformLocation( gl, _program, "u_resolution" );
 
-    final int positionIndex = gl.getAttribLocation( _program, "position" );
+    final int positionIndex = GL.getAttribLocation( gl, _program, "position" );
     final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
     assert null != vertexArrayObject;
     // A bound vertexArrayObject will record the subsequent binds
@@ -160,15 +160,5 @@ public final class Main
     gl.uniform2f( _resolutionLocation, canvas.width, canvas.height );
 
     gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
-  }
-
-  @Nonnull
-  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                          @Nonnull final WebGLProgram program,
-                                                          @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
   }
 }

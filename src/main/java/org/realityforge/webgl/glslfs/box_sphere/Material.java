@@ -33,22 +33,12 @@ final class Material
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrixLocation = getUniformLocation( gl, _program, "modelMatrix" );
-    _viewMatrixLocation = getUniformLocation( gl, _program, "viewMatrix" );
-    _projectionMatrixLocation = getUniformLocation( gl, _program, "projectionMatrix" );
+    _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );
+    _viewMatrixLocation = GL.getUniformLocation( gl, _program, "viewMatrix" );
+    _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
 
     _positionIndex = gl.getAttribLocation( _program, "position" );
     _colorIndex = gl.getAttribLocation( _program, "color" );
-  }
-
-  @Nonnull
-  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                          @Nonnull final WebGLProgram program,
-                                                          @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
   }
 
   @Nonnull

@@ -114,10 +114,10 @@ public final class Main
     GL.loadTexture( _gl, "img/sa1.jpg" ).thenAccept( texture -> _texture1 = texture );
     GL.loadTexture( _gl, "img/sa2.jpg" ).thenAccept( texture -> _texture2 = texture );
 
-    u_resolution = getUniformLocation( _gl, program, "u_resolution" );
-    u_time = getUniformLocation( _gl, program, "u_time" );
-    u_image1 = getUniformLocation( _gl, program, "u_image1" );
-    u_image2 = getUniformLocation( _gl, program, "u_image2" );
+    u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
+    u_time = GL.getUniformLocation( _gl, program, "u_time" );
+    u_image1 = GL.getUniformLocation( _gl, program, "u_image1" );
+    u_image2 = GL.getUniformLocation( _gl, program, "u_image2" );
 
     // Start using the program for all vertexes pass through gl until the program is changed
     _gl.useProgram( program );
@@ -168,15 +168,5 @@ public final class Main
         endX, endY,
         endX, startY
       };
-  }
-
-  @Nonnull
-  private static WebGLUniformLocation getUniformLocation( @Nonnull final WebGL2RenderingContext gl,
-                                                          @Nonnull final WebGLProgram program,
-                                                          @Nonnull final String name )
-  {
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    assert null != location;
-    return location;
   }
 }

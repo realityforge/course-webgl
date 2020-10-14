@@ -21,10 +21,7 @@ public class UniformBinding
                          @Nonnull final String name )
   {
     _name = Objects.requireNonNull( name );
-    final WebGLUniformLocation location = gl.getUniformLocation( program, name );
-    //TODO: We should improve the handling of this error
-    assert null != location;
-    _location = location;
+    _location = GL.getUniformLocation( gl, program, name );
   }
 
   @Nonnull

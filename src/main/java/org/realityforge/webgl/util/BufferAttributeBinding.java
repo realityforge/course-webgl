@@ -31,7 +31,7 @@ public final class BufferAttributeBinding
                                  @Nonnull final String name,
                                  @Nonnull final Buffer<?> buffer )
   {
-    this( buffer, gl.getAttribLocation( program, name ) );
+    this( buffer, GL.getAttribLocation( gl, program, name ) );
   }
 
   @Nonnull
