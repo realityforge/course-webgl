@@ -101,15 +101,11 @@ public final class Main
     assert null != program;
 
     final BufferAttributeBinding a_position =
-      new BufferAttributeBinding( _gl,
-                                  program,
-                                  "a_position",
-                                  new Float32Buffer( _gl, new Float32Array( positions ), 2 ) );
+      new BufferAttributeBinding( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
+                                  GL.getAttribLocation( _gl, program, "a_position" ) );
     final BufferAttributeBinding a_textureCoordinate =
-      new BufferAttributeBinding( _gl,
-                                  program,
-                                  "a_textureCoordinate",
-                                  new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ) );
+      new BufferAttributeBinding( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
+                                  GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
     GL.loadTexture( _gl, "img/sa1.jpg" ).thenAccept( texture -> _texture1 = texture );
     GL.loadTexture( _gl, "img/sa2.jpg" ).thenAccept( texture -> _texture2 = texture );

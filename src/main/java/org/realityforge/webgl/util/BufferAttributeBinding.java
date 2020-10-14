@@ -1,7 +1,6 @@
 package org.realityforge.webgl.util;
 
 import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
@@ -24,14 +23,6 @@ public final class BufferAttributeBinding
     assert WebGL2RenderingContext.INVALID_INDEX != location;
     _buffer = Objects.requireNonNull( buffer );
     _location = location;
-  }
-
-  public BufferAttributeBinding( @Nonnull final WebGL2RenderingContext gl,
-                                 @Nonnull final WebGLProgram program,
-                                 @Nonnull final String name,
-                                 @Nonnull final Buffer<?> buffer )
-  {
-    this( buffer, GL.getAttribLocation( gl, program, name ) );
   }
 
   @Nonnull

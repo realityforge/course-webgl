@@ -8,6 +8,7 @@ import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.UniformBinding;
 
 final class LightMesh
@@ -24,7 +25,10 @@ final class LightMesh
     super( gl, vertexShaderSource, fragmentShaderSource );
     final WebGLProgram program = getProgram();
     _color = new UniformBinding( gl, program, "color" );
-    setGeometry( new Geometry( gl, new BufferAttributeBinding( gl, program, "position", positionAttribute ) ) );
+    setGeometry( new Geometry( gl, new BufferAttributeBinding( positionAttribute,
+                                                               GL.getAttribLocation( gl, program, "position" ) )
+                 )
+    );
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,

@@ -74,10 +74,11 @@ final class Mesh
     _lightPosition = new UniformBinding( gl, program, "lightPosition" );
     _cameraPosition = new UniformBinding( gl, program, "cameraPosition" );
 
-    _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
-    _normal = new BufferAttributeBinding( gl, program, "normal", normalsAttribute );
-    _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
-    _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
+    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _normal = new BufferAttributeBinding( normalsAttribute, GL.getAttribLocation( gl, program, "normal" ) );
+    _color = new BufferAttributeBinding( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
+    _textureCoordinate = new BufferAttributeBinding( textureCoordinatesAttribute,
+                                                     GL.getAttribLocation( gl, program, "textureCoordinate" ) );
   }
 
   @Nonnull

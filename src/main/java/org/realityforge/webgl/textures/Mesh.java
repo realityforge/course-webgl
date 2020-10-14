@@ -60,9 +60,10 @@ final class Mesh
     _textureData0Location = GL.getUniformLocation( gl, _program, "textureData0" );
     _textureData1Location = GL.getUniformLocation( gl, _program, "textureData1" );
 
-    _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
-    _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
-    _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
+    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _color = new BufferAttributeBinding( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
+    _textureCoordinate = new BufferAttributeBinding( textureCoordinatesAttribute,
+                                                     GL.getAttribLocation( gl, program, "textureCoordinate" ) );
   }
 
   boolean areTexturesLoaded()

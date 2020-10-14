@@ -56,9 +56,10 @@ final class Mesh
     _textureData0 = new TextureUniformBinding( gl, program, "textureData0", "img/webgl-logo-256.jpg", 0 );
     _textureData1 = new TextureUniformBinding( gl, program, "textureData1", "img/StoreLogo.png", 1 );
 
-    _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
-    _color = new BufferAttributeBinding( gl, program, "color", colorAttribute );
-    _textureCoordinate = new BufferAttributeBinding( gl, program, "textureCoordinate", textureCoordinatesAttribute );
+    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _color = new BufferAttributeBinding( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
+    _textureCoordinate = new BufferAttributeBinding( textureCoordinatesAttribute,
+                                                     GL.getAttribLocation( gl, program, "textureCoordinate" ) );
   }
 
   boolean areTexturesLoaded()

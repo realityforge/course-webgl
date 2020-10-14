@@ -51,13 +51,16 @@ final class Mesh
     loadTexture( gl, "img/StoreLogo.png", 1 );
 
     setGeometry( new Geometry( gl,
-                               new BufferAttributeBinding( gl, program, "position", positionAttribute ),
-                               new BufferAttributeBinding( gl, program, "normal", normalsAttribute ),
-                               new BufferAttributeBinding( gl, program, "color", colorAttribute ),
-                               new BufferAttributeBinding( gl,
-                                                           program,
-                                                           "textureCoordinate",
-                                                           textureCoordinatesAttribute ) ) );
+                               new BufferAttributeBinding( positionAttribute,
+                                                           GL.getAttribLocation( gl, program, "position" ) ),
+                               new BufferAttributeBinding( normalsAttribute,
+                                                           GL.getAttribLocation( gl, program, "normal" ) ),
+                               new BufferAttributeBinding( colorAttribute,
+                                                           GL.getAttribLocation( gl, program, "color" ) ),
+                               new BufferAttributeBinding( textureCoordinatesAttribute,
+                                                           GL.getAttribLocation( gl, program, "textureCoordinate" ) )
+                 )
+    );
   }
 
   private void loadTexture( @Nonnull final WebGL2RenderingContext gl,

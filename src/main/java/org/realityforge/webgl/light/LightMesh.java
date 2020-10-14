@@ -46,7 +46,7 @@ final class LightMesh
     _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
     _color = new UniformBinding( gl, program, "color" );
 
-    _position = new BufferAttributeBinding( gl, program, "position", positionAttribute );
+    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
   }
 
   @Nonnull
