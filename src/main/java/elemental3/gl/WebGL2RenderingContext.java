@@ -2547,105 +2547,106 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, int size, int usage);
+  public native void bufferData(int target, int size, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nullable BufferSource srcData, int usage);
+  public native void bufferData(int target, @Nullable BufferSource srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, int usage);
+  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int8Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Int8Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int16Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Int16Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int32Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Int32Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Uint8Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint16Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Uint16Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint32Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Uint32Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData, int usage);
+  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float32Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Float32Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float64Array srcData, int usage);
+  public native void bufferData(int target, @Nonnull Float64Array srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull DataView srcData, int usage);
+  public native void bufferData(int target, @Nonnull DataView srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBuffer srcData, int usage);
+  public native void bufferData(int target, @Nonnull ArrayBuffer srcData, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, int usage,
+  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, @UsageType int usage,
       int srcOffset, int length);
 
   /**
@@ -2653,55 +2654,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int8Array srcData, int usage, int srcOffset,
-      int length);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Int16Array srcData, int usage, int srcOffset,
-      int length);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Int32Array srcData, int usage, int srcOffset,
-      int length);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint8Array srcData, int usage, int srcOffset,
-      int length);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint16Array srcData, int usage, int srcOffset,
-      int length);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint32Array srcData, int usage, int srcOffset,
-      int length);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData, int usage,
+  public native void bufferData(int target, @Nonnull Int8Array srcData, @UsageType int usage,
       int srcOffset, int length);
 
   /**
@@ -2709,31 +2662,79 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float32Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(int target, @Nonnull Int16Array srcData, @UsageType int usage,
+      int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float64Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(int target, @Nonnull Int32Array srcData, @UsageType int usage,
+      int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull DataView srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(int target, @Nonnull Uint8Array srcData, @UsageType int usage,
+      int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, int usage,
+  public native void bufferData(int target, @Nonnull Uint16Array srcData, @UsageType int usage,
+      int srcOffset, int length);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Uint32Array srcData, @UsageType int usage,
+      int srcOffset, int length);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData,
+      @UsageType int usage, int srcOffset, int length);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Float32Array srcData, @UsageType int usage,
+      int srcOffset, int length);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Float64Array srcData, @UsageType int usage,
+      int srcOffset, int length);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull DataView srcData, @UsageType int usage,
+      int srcOffset, int length);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, @UsageType int usage,
       int srcOffset);
 
   /**
@@ -2741,49 +2742,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int8Array srcData, int usage, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Int16Array srcData, int usage, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Int32Array srcData, int usage, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint8Array srcData, int usage, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint16Array srcData, int usage, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint32Array srcData, int usage, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   */
-  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData, int usage,
+  public native void bufferData(int target, @Nonnull Int8Array srcData, @UsageType int usage,
       int srcOffset);
 
   /**
@@ -2791,7 +2750,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float32Array srcData, int usage,
+  public native void bufferData(int target, @Nonnull Int16Array srcData, @UsageType int usage,
       int srcOffset);
 
   /**
@@ -2799,7 +2758,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float64Array srcData, int usage,
+  public native void bufferData(int target, @Nonnull Int32Array srcData, @UsageType int usage,
       int srcOffset);
 
   /**
@@ -2807,7 +2766,56 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull DataView srcData, int usage, int srcOffset);
+  public native void bufferData(int target, @Nonnull Uint8Array srcData, @UsageType int usage,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Uint16Array srcData, @UsageType int usage,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Uint32Array srcData, @UsageType int usage,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData,
+      @UsageType int usage, int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Float32Array srcData, @UsageType int usage,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull Float64Array srcData, @UsageType int usage,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   */
+  public native void bufferData(int target, @Nonnull DataView srcData, @UsageType int usage,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
