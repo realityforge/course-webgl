@@ -17,7 +17,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import elemental3.gl.ShaderType;
-import org.realityforge.webgl.annotations.TargetType;
+import elemental3.gl.BufferTargetType;
 import elemental3.gl.UsageType;
 
 // TODO: All of these methods should take a onError handler that is invoked when unexpected error
@@ -46,7 +46,7 @@ public final class GL
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                           @TargetType final int target,
+                                           @BufferTargetType final int target,
                                            @UsageType final int usage,
                                            @Nonnull final ArrayBufferView data )
   {
@@ -60,7 +60,7 @@ public final class GL
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                           @TargetType final int target,
+                                           @BufferTargetType final int target,
                                            @UsageType final int usage,
                                            @Nonnull final Float32Array data )
   {
@@ -90,7 +90,7 @@ public final class GL
   public static void sendToGpu( @Nonnull final WebGL2RenderingContext gl,
                                 @Nonnull final WebGLBuffer buffer,
                                 final int index,
-                                @TargetType final int target,
+                                @BufferTargetType final int target,
                                 final int dimension,
                                 final int type,
                                 final int stride,

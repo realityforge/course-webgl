@@ -7,14 +7,14 @@ import elemental3.gl.WebGLBuffer;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
 import org.realityforge.webgl.annotations.DataType;
-import org.realityforge.webgl.annotations.TargetType;
+import elemental3.gl.BufferTargetType;
 import elemental3.gl.UsageType;
 
 public abstract class Buffer<T extends TypedArray>
 {
   @Nonnull
   private final T _data;
-  @TargetType
+  @BufferTargetType
   private final int _target;
   @UsageType
   private final int _usage;
@@ -28,7 +28,7 @@ public abstract class Buffer<T extends TypedArray>
 
   protected Buffer( @Nonnull final WebGL2RenderingContext gl,
                     @Nonnull final T data,
-                    @TargetType final int target,
+                    @BufferTargetType final int target,
                     @UsageType final int usage,
                     final int dimension,
                     @DataType final int type,
@@ -53,7 +53,7 @@ public abstract class Buffer<T extends TypedArray>
     return _data;
   }
 
-  @TargetType
+  @BufferTargetType
   public int getTarget()
   {
     return _target;
