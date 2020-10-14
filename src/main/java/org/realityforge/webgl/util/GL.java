@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import elemental3.gl.ShaderType;
 import org.realityforge.webgl.annotations.TargetType;
-import org.realityforge.webgl.annotations.Usage;
+import elemental3.gl.UsageType;
 
 // TODO: All of these methods should take a onError handler that is invoked when unexpected error
 //  occurs. We should then follow this up with throwing a runtime error to rollback state. Both of
@@ -33,7 +33,7 @@ public final class GL
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
                                            final int target,
-                                           @Usage final int usage,
+                                           @UsageType final int usage,
                                            @Nonnull final Uint16Array data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
@@ -47,7 +47,7 @@ public final class GL
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
                                            @TargetType final int target,
-                                           @Usage final int usage,
+                                           @UsageType final int usage,
                                            @Nonnull final ArrayBufferView data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
@@ -61,7 +61,7 @@ public final class GL
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
                                            @TargetType final int target,
-                                           @Usage final int usage,
+                                           @UsageType final int usage,
                                            @Nonnull final Float32Array data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
