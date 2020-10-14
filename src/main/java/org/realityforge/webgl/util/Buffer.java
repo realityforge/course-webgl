@@ -2,13 +2,13 @@ package org.realityforge.webgl.util;
 
 import elemental2.core.TypedArray;
 import elemental3.ArrayBufferView;
+import elemental3.gl.BufferTargetType;
+import elemental3.gl.DataType;
+import elemental3.gl.UsageType;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
-import org.realityforge.webgl.annotations.DataType;
-import elemental3.gl.BufferTargetType;
-import elemental3.gl.UsageType;
 
 public abstract class Buffer<T extends TypedArray>
 {
