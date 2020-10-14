@@ -21,6 +21,7 @@ public abstract class Buffer<T extends TypedArray>
   private final int _dimension;
   @DataType
   private final int _type;
+  private final boolean _normalized;
   private final int _stride;
   private final int _offset;
   @Nonnull
@@ -32,9 +33,11 @@ public abstract class Buffer<T extends TypedArray>
                     @UsageType final int usage,
                     final int dimension,
                     @DataType final int type,
+                    final boolean normalized,
                     final int stride,
                     final int offset )
   {
+    _normalized = normalized;
     assert dimension > 0 && dimension <= 4;
     assert stride >= 0 && stride <= 255;
     _data = data;
@@ -74,6 +77,11 @@ public abstract class Buffer<T extends TypedArray>
   public int getType()
   {
     return _type;
+  }
+
+  public boolean isNormalized()
+  {
+    return _normalized;
   }
 
   public int getStride()

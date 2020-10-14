@@ -21,7 +21,7 @@ public final class Float32Buffer
                         @BufferTargetType final int target,
                         final int dimension )
   {
-    this( gl, data, target, WebGL2RenderingContext.STATIC_DRAW, dimension, 0, 0 );
+    this( gl, data, target, WebGL2RenderingContext.STATIC_DRAW, dimension, true, 0, 0 );
   }
 
   public Float32Buffer( @Nonnull final WebGL2RenderingContext gl,
@@ -29,9 +29,10 @@ public final class Float32Buffer
                         @BufferTargetType final int target,
                         @UsageType final int usage,
                         final int dimension,
+                        final boolean normalized,
                         final int stride,
                         final int offset )
   {
-    super( gl, data, target, usage, dimension, WebGL2RenderingContext.FLOAT, stride, offset );
+    super( gl, data, target, usage, dimension, WebGL2RenderingContext.FLOAT, normalized, stride, offset );
   }
 }

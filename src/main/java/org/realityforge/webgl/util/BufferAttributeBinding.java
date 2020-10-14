@@ -52,7 +52,7 @@ public final class BufferAttributeBinding
     gl.vertexAttribPointer( _location,
                             _buffer.getDimension(),
                             _buffer.getType(),
-                            false,
+                            _buffer.isNormalized(),
                             _buffer.getStride(),
                             _buffer.getOffset() );
   }
