@@ -57,10 +57,10 @@ final class Mesh
                     new Attribute( colorAttribute ),
                     new Attribute( textureCoordinatesAttribute ) );
     setGeometry( geometry );
-    geometry.getAttributes()[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    geometry.getAttributes()[ 1 ].setLocation( GL.getAttribLocation( gl, program, "normal" ) );
-    geometry.getAttributes()[ 2 ].setLocation( GL.getAttribLocation( gl, program, "color" ) );
-    geometry.getAttributes()[ 3 ].setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
+    geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "normal" ) );
+    geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    geometry.getAttribute( 3 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
     geometry.uploadToCpu( gl );
 
   }

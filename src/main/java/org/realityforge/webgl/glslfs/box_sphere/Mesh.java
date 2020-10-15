@@ -5,7 +5,6 @@ import elemental3.gl.WebGLProgram;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.MathUtil;
@@ -48,9 +47,8 @@ final class Mesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     final WebGLProgram program = _material.getProgram();
-    final Attribute[] attributes = _geometry.getAttributes();
-    attributes[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    attributes[ 1 ].setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );
     _geometry.uploadToCpu( gl );
   }
 }

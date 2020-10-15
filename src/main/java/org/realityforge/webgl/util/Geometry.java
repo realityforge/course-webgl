@@ -50,9 +50,9 @@ public final class Geometry
   }
 
   @Nonnull
-  public Attribute[] getAttributes()
+  public Attribute getAttribute( final int index )
   {
-    return _attributes;
+    return _attributes[ index ];
   }
 
   @Nonnull

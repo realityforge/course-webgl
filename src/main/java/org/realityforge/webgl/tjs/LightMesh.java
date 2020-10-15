@@ -28,7 +28,7 @@ final class LightMesh
     _color = new Uniform( gl, program, "color" );
     final Geometry geometry = new Geometry( new Attribute( positionAttribute ) );
     setGeometry( geometry );
-    geometry.getAttributes()[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
     geometry.uploadToCpu( gl );
   }
 
