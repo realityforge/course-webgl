@@ -8,7 +8,7 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
@@ -18,13 +18,13 @@ import org.realityforge.webgl.util.UniformBinding;
 final class Mesh
 {
   @Nonnull
-  private final BufferAttributeBinding _position;
+  private final BufferAttribute _position;
   @Nonnull
-  private final BufferAttributeBinding _normal;
+  private final BufferAttribute _normal;
   @Nonnull
-  private final BufferAttributeBinding _color;
+  private final BufferAttribute _color;
   @Nonnull
-  private final BufferAttributeBinding _textureCoordinate;
+  private final BufferAttribute _textureCoordinate;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -74,11 +74,11 @@ final class Mesh
     _lightPosition = new UniformBinding( gl, program, "lightPosition" );
     _cameraPosition = new UniformBinding( gl, program, "cameraPosition" );
 
-    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
-    _normal = new BufferAttributeBinding( normalsAttribute, GL.getAttribLocation( gl, program, "normal" ) );
-    _color = new BufferAttributeBinding( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
-    _textureCoordinate = new BufferAttributeBinding( textureCoordinatesAttribute,
-                                                     GL.getAttribLocation( gl, program, "textureCoordinate" ) );
+    _position = new BufferAttribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _normal = new BufferAttribute( normalsAttribute, GL.getAttribLocation( gl, program, "normal" ) );
+    _color = new BufferAttribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
+    _textureCoordinate = new BufferAttribute( textureCoordinatesAttribute,
+                                              GL.getAttribLocation( gl, program, "textureCoordinate" ) );
   }
 
   @Nonnull

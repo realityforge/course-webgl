@@ -7,7 +7,7 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
@@ -51,14 +51,14 @@ final class Mesh
     loadTexture( gl, "img/StoreLogo.png", 1 );
 
     setGeometry( new Geometry( gl,
-                               new BufferAttributeBinding( positionAttribute,
-                                                           GL.getAttribLocation( gl, program, "position" ) ),
-                               new BufferAttributeBinding( normalsAttribute,
-                                                           GL.getAttribLocation( gl, program, "normal" ) ),
-                               new BufferAttributeBinding( colorAttribute,
-                                                           GL.getAttribLocation( gl, program, "color" ) ),
-                               new BufferAttributeBinding( textureCoordinatesAttribute,
-                                                           GL.getAttribLocation( gl, program, "textureCoordinate" ) )
+                               new BufferAttribute( positionAttribute,
+                                                    GL.getAttribLocation( gl, program, "position" ) ),
+                               new BufferAttribute( normalsAttribute,
+                                                    GL.getAttribLocation( gl, program, "normal" ) ),
+                               new BufferAttribute( colorAttribute,
+                                                    GL.getAttribLocation( gl, program, "color" ) ),
+                               new BufferAttribute( textureCoordinatesAttribute,
+                                                    GL.getAttribLocation( gl, program, "textureCoordinate" ) )
                  )
     );
   }

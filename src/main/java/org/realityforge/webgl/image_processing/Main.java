@@ -14,7 +14,7 @@ import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.BoolUniformBinding;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.FloatUniformBinding;
@@ -151,12 +151,12 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final BufferAttributeBinding a_position =
-      new BufferAttributeBinding( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
-                                  GL.getAttribLocation( _gl, program, "a_position" ) );
-    final BufferAttributeBinding a_textureCoordinate =
-      new BufferAttributeBinding( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
-                                  GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
+    final BufferAttribute a_position =
+      new BufferAttribute( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
+                           GL.getAttribLocation( _gl, program, "a_position" ) );
+    final BufferAttribute a_textureCoordinate =
+      new BufferAttribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
+                           GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
     u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
     u_colorPalette = new TextureUniformBinding( _gl, program, "u_colorPalette", "img/ColorPalette.jpg", 1 );

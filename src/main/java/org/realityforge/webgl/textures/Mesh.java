@@ -8,7 +8,7 @@ import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
@@ -16,11 +16,11 @@ import org.realityforge.webgl.util.MathUtil;
 final class Mesh
 {
   @Nonnull
-  private final BufferAttributeBinding _position;
+  private final BufferAttribute _position;
   @Nonnull
-  private final BufferAttributeBinding _color;
+  private final BufferAttribute _color;
   @Nonnull
-  private final BufferAttributeBinding _textureCoordinate;
+  private final BufferAttribute _textureCoordinate;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -60,10 +60,10 @@ final class Mesh
     _textureData0Location = GL.getUniformLocation( gl, _program, "textureData0" );
     _textureData1Location = GL.getUniformLocation( gl, _program, "textureData1" );
 
-    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
-    _color = new BufferAttributeBinding( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
-    _textureCoordinate = new BufferAttributeBinding( textureCoordinatesAttribute,
-                                                     GL.getAttribLocation( gl, program, "textureCoordinate" ) );
+    _position = new BufferAttribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _color = new BufferAttribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
+    _textureCoordinate = new BufferAttribute( textureCoordinatesAttribute,
+                                              GL.getAttribLocation( gl, program, "textureCoordinate" ) );
   }
 
   boolean areTexturesLoaded()

@@ -7,7 +7,7 @@ import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
@@ -16,7 +16,7 @@ import org.realityforge.webgl.util.UniformBinding;
 final class LightMesh
 {
   @Nonnull
-  private final BufferAttributeBinding _position;
+  private final BufferAttribute _position;
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
@@ -46,7 +46,7 @@ final class LightMesh
     _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
     _color = new UniformBinding( gl, program, "color" );
 
-    _position = new BufferAttributeBinding( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _position = new BufferAttribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
   }
 
   @Nonnull

@@ -11,7 +11,7 @@ import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
@@ -100,12 +100,12 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final BufferAttributeBinding a_position =
-      new BufferAttributeBinding( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
-                                  GL.getAttribLocation( _gl, program, "a_position" ) );
-    final BufferAttributeBinding a_textureCoordinate =
-      new BufferAttributeBinding( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
-                                  GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
+    final BufferAttribute a_position =
+      new BufferAttribute( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
+                           GL.getAttribLocation( _gl, program, "a_position" ) );
+    final BufferAttribute a_textureCoordinate =
+      new BufferAttribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
+                           GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
     GL.loadTexture( _gl, "img/sa1.jpg" ).thenAccept( texture -> _texture1 = texture );
     GL.loadTexture( _gl, "img/sa2.jpg" ).thenAccept( texture -> _texture2 = texture );

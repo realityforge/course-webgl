@@ -4,7 +4,7 @@ import elemental2.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Float32Buffer;
 
 final class CubeTemplate
@@ -152,10 +152,10 @@ final class CubeTemplate
   @Nonnull
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
-    final BufferAttributeBinding positions =
-      new BufferAttributeBinding( new Float32Buffer( new Float32Array( POSITIONS ), 3 ) );
-    final BufferAttributeBinding colors =
-      new BufferAttributeBinding( new Float32Buffer( new Float32Array( COLORS ), 4 ) );
+    final BufferAttribute positions =
+      new BufferAttribute( new Float32Buffer( new Float32Array( POSITIONS ), 3 ) );
+    final BufferAttribute colors =
+      new BufferAttribute( new Float32Buffer( new Float32Array( COLORS ), 4 ) );
     return new Mesh( new Geometry( positions, colors ),
                      new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
   }

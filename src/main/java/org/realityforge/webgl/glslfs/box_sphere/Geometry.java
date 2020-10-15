@@ -5,16 +5,16 @@ import elemental3.gl.WebGLVertexArrayObject;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webgl.util.BufferAttributeBinding;
+import org.realityforge.webgl.util.BufferAttribute;
 
 final class Geometry
 {
   @Nonnull
-  private final BufferAttributeBinding[] _bindings;
+  private final BufferAttribute[] _bindings;
   @Nullable
   private WebGLVertexArrayObject _vao;
 
-  Geometry( @Nonnull final BufferAttributeBinding... bindings )
+  Geometry( @Nonnull final BufferAttribute... bindings )
   {
     _bindings = Objects.requireNonNull( bindings );
   }
@@ -31,7 +31,7 @@ final class Geometry
     assert null != vao;
     gl.bindVertexArray( vao );
 
-    for ( final BufferAttributeBinding binding : _bindings )
+    for ( final BufferAttribute binding : _bindings )
     {
       binding.sendToGpu( gl );
     }
@@ -44,14 +44,14 @@ final class Geometry
 
   private void uploadBuffers( @Nonnull final WebGL2RenderingContext gl )
   {
-    for ( final BufferAttributeBinding binding : _bindings )
+    for ( final BufferAttribute binding : _bindings )
     {
       binding.getBuffer().uploadToGpu( gl );
     }
   }
 
   @Nonnull
-  BufferAttributeBinding[] getBindings()
+  BufferAttribute[] getBindings()
   {
     return _bindings;
   }

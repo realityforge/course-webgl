@@ -4,7 +4,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
-public final class BufferAttributeBinding
+public final class BufferAttribute
 {
   /**
    * The data and layout of data.
@@ -18,12 +18,12 @@ public final class BufferAttributeBinding
    */
   private int _location;
 
-  public BufferAttributeBinding( @Nonnull final Buffer<?> buffer )
+  public BufferAttribute( @Nonnull final Buffer<?> buffer )
   {
     this( buffer, WebGL2RenderingContext.INVALID_INDEX );
   }
 
-  public BufferAttributeBinding( @Nonnull final Buffer<?> buffer, final int location )
+  public BufferAttribute( @Nonnull final Buffer<?> buffer, final int location )
   {
     _buffer = Objects.requireNonNull( buffer );
     _location = location;
