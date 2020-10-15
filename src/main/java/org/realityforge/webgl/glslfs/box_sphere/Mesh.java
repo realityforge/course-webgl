@@ -1,9 +1,12 @@
 package org.realityforge.webgl.glslfs.box_sphere;
 
 import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.WebGLProgram;
+import elemental3.gl.WebGLVertexArrayObject;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.realityforge.webgl.util.BufferAttributeBinding;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 
@@ -38,24 +41,17 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    // Tell GPU to load position data into program from out buffer
-    GL.sendToGpu( gl,
-                  _geometry.getPositionBuffer(),
-                  _material.getPositionIndex(),
-                  WebGL2RenderingContext.ARRAY_BUFFER,
-                  3,
-                  WebGL2RenderingContext.FLOAT,
-                  0,
-                  0 );
+    final BufferAttributeBinding positionAttribute = _geometry.getPositionAttribute();
+    final BufferAttributeBinding colorAttribute = _geometry.getColorAttribute();
 
-    // Tell GPU to load color data into program from out buffer
-    GL.sendToGpu( gl,
-                  _geometry.getColorBuffer(),
-                  _material.getColorIndex(),
-                  WebGL2RenderingContext.ARRAY_BUFFER,
-                  4,
-                  WebGL2RenderingContext.FLOAT,
-                  0,
-                  0 );
+    final WebGLProgram program = _material.getProgram();
+    positionAttribute.setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    colorAttribute.setLocation( GL.getAttribLocation( gl, program, "color" ) );
+
+    positionAttribute.getBuffer().uploadToGpu( gl );
+    colorAttribute.getBuffer().uploadToGpu( gl );
+
+    positionAttribute.sendToGpu( gl );
+    colorAttribute.sendToGpu( gl );
   }
 }

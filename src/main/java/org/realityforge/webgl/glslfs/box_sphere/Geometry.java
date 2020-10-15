@@ -1,44 +1,32 @@
 package org.realityforge.webgl.glslfs.box_sphere;
 
-import elemental2.core.Float32Array;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLBuffer;
+import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.BufferAttributeBinding;
 
 final class Geometry
 {
   @Nonnull
-  private final WebGLBuffer _positionBuffer;
+  private final BufferAttributeBinding _positionAttribute;
   @Nonnull
-  private final WebGLBuffer _colorBuffer;
+  private final BufferAttributeBinding _colorAttribute;
 
-  Geometry( @Nonnull final WebGL2RenderingContext gl,
-            @Nonnull final Float32Array positionData,
-            @Nonnull final Float32Array colorData )
+  Geometry( @Nonnull final BufferAttributeBinding positionAttribute,
+            @Nonnull final BufferAttributeBinding colorAttribute )
   {
-    // Create a GPU buffer for position data and send data via ARRAY_BUFFER gate with a hint that
-    // the data is static and the CPU will not update it often which means that the GPU can store it
-    // close to where it is used without worrying about latency to update
-    _positionBuffer = GL.prepareBuffer( gl,
-                                        WebGL2RenderingContext.ARRAY_BUFFER,
-                                        WebGL2RenderingContext.STATIC_DRAW,
-                                        positionData );
-    _colorBuffer = GL.prepareBuffer( gl,
-                                     WebGL2RenderingContext.ARRAY_BUFFER,
-                                     WebGL2RenderingContext.STATIC_DRAW,
-                                     colorData );
+    _positionAttribute = Objects.requireNonNull( positionAttribute );
+    _colorAttribute = Objects.requireNonNull( colorAttribute );
   }
 
   @Nonnull
-  WebGLBuffer getPositionBuffer()
+  BufferAttributeBinding getPositionAttribute()
   {
-    return _positionBuffer;
+    return _positionAttribute;
   }
 
   @Nonnull
-  WebGLBuffer getColorBuffer()
+  BufferAttributeBinding getColorAttribute()
   {
-    return _colorBuffer;
+    return _colorAttribute;
   }
 }
