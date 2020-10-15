@@ -51,7 +51,7 @@ public final class Main
     _viewMatrix.identity();
 
     gl.useProgram( _mesh.getMaterial().getProgram() );
-    _mesh.setUniforms( gl, this._modelMatrix, this._viewMatrix, this._projectionMatrix );
+    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     c_angle += 0.1;
 
