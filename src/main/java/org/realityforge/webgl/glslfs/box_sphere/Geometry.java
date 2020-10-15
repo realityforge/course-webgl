@@ -10,13 +10,13 @@ import org.realityforge.webgl.util.BufferAttribute;
 final class Geometry
 {
   @Nonnull
-  private final BufferAttribute[] _bindings;
+  private final BufferAttribute[] _attributes;
   @Nullable
   private WebGLVertexArrayObject _vao;
 
-  Geometry( @Nonnull final BufferAttribute... bindings )
+  Geometry( @Nonnull final BufferAttribute... attributes )
   {
-    _bindings = Objects.requireNonNull( bindings );
+    _attributes = Objects.requireNonNull( attributes );
   }
 
   void uploadToCpu( @Nonnull final WebGL2RenderingContext gl )
@@ -31,9 +31,9 @@ final class Geometry
     assert null != vao;
     gl.bindVertexArray( vao );
 
-    for ( final BufferAttribute binding : _bindings )
+    for ( final BufferAttribute attribute : _attributes )
     {
-      binding.sendToGpu( gl );
+      attribute.sendToGpu( gl );
     }
 
     // If we could guarantee that another bind happens immediately
@@ -44,16 +44,16 @@ final class Geometry
 
   private void uploadBuffers( @Nonnull final WebGL2RenderingContext gl )
   {
-    for ( final BufferAttribute binding : _bindings )
+    for ( final BufferAttribute attribute : _attributes )
     {
-      binding.getBuffer().uploadToGpu( gl );
+      attribute.getBuffer().uploadToGpu( gl );
     }
   }
 
   @Nonnull
-  BufferAttribute[] getBindings()
+  BufferAttribute[] getAttributes()
   {
-    return _bindings;
+    return _attributes;
   }
 
   @Nonnull

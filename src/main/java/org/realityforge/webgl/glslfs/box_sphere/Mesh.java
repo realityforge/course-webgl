@@ -47,9 +47,9 @@ final class Mesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     final WebGLProgram program = _material.getProgram();
-    final BufferAttribute[] bindings = _geometry.getBindings();
-    bindings[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    bindings[ 1 ].setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    final BufferAttribute[] attributes = _geometry.getAttributes();
+    attributes[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    attributes[ 1 ].setLocation( GL.getAttribLocation( gl, program, "color" ) );
     _geometry.uploadToCpu( gl );
   }
 }
