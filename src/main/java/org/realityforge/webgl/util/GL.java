@@ -171,13 +171,13 @@ public final class GL
   }
 
   public static void bindTexture( @Nonnull final WebGL2RenderingContext gl,
-                                  @Nonnull final Uniform binding,
+                                  @Nonnull final Uniform uniform,
                                   @Nonnull final WebGLTexture texture,
                                   final int index )
   {
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + index );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
-    gl.uniform1i( binding.getLocation(), index );
+    gl.uniform1i( uniform.getLocation(), index );
   }
 
   @Nonnull
