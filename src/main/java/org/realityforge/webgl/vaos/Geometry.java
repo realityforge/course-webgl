@@ -3,7 +3,7 @@ package org.realityforge.webgl.vaos;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.BufferAttribute;
+import org.realityforge.webgl.util.Attribute;
 
 final class Geometry
 {
@@ -11,16 +11,16 @@ final class Geometry
   private final WebGLVertexArrayObject _vao;
 
   Geometry( @Nonnull final WebGL2RenderingContext gl,
-            @Nonnull final BufferAttribute... bindings )
+            @Nonnull final Attribute... attributes )
   {
     final WebGLVertexArrayObject vao = gl.createVertexArray();
     assert null != vao;
     _vao = vao;
     gl.bindVertexArray( _vao );
 
-    for ( final BufferAttribute binding : bindings )
+    for ( final Attribute attribute : attributes )
     {
-      binding.sendToGpu( gl );
+      attribute.sendToGpu( gl );
     }
 
     // If we could guarantee that another bind happens immediately

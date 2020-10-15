@@ -6,7 +6,7 @@ import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
-import org.realityforge.webgl.util.BufferAttribute;
+import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Uniform;
@@ -25,8 +25,8 @@ final class LightMesh
     super( gl, vertexShaderSource, fragmentShaderSource );
     final WebGLProgram program = getProgram();
     _color = new Uniform( gl, program, "color" );
-    setGeometry( new Geometry( gl, new BufferAttribute( positionAttribute,
-                                                        GL.getAttribLocation( gl, program, "position" ) )
+    setGeometry( new Geometry( gl, new Attribute( positionAttribute,
+                                                  GL.getAttribLocation( gl, program, "position" ) )
                  )
     );
   }

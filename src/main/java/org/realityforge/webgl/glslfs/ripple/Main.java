@@ -10,7 +10,7 @@ import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.BufferAttribute;
+import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
@@ -90,12 +90,12 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final BufferAttribute a_position =
-      new BufferAttribute( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
-                           GL.getAttribLocation( _gl, program, "a_position" ) );
-    final BufferAttribute a_textureCoordinate =
-      new BufferAttribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
-                           GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
+    final Attribute a_position =
+      new Attribute( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
+                     GL.getAttribLocation( _gl, program, "a_position" ) );
+    final Attribute a_textureCoordinate =
+      new Attribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
+                     GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
     u_image = new TextureUniform( _gl, program, "u_image", "img/4KSample.jpg", 0 );
     u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
