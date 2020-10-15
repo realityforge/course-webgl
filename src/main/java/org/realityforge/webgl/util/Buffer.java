@@ -38,7 +38,6 @@ public abstract class Buffer<T extends TypedArray>
                     final int offset,
                     @Nullable final WebGLBuffer buffer )
   {
-    _normalized = normalized;
     assert dimension > 0 && dimension <= 4;
     assert stride >= 0 && stride <= 255;
     _data = data;
@@ -46,6 +45,7 @@ public abstract class Buffer<T extends TypedArray>
     _usage = usage;
     _dimension = dimension;
     _type = type;
+    _normalized = normalized;
     _stride = stride;
     _offset = offset;
     _buffer = buffer;
