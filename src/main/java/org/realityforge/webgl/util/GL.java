@@ -11,6 +11,7 @@ import elemental3.gl.DataType;
 import elemental3.gl.GLSL;
 import elemental3.gl.ShaderType;
 import elemental3.gl.UsageType;
+import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
@@ -63,14 +64,14 @@ public final class GL
                                 @Nonnull final WebGLBuffer buffer,
                                 final int index,
                                 @BufferTargetType final int target,
-                                final int dimension,
+                                @VertexDimensions final int size,
                                 @DataType final int type,
                                 final int stride,
                                 final int offset )
   {
     gl.enableVertexAttribArray( index );
     gl.bindBuffer( target, buffer );
-    gl.vertexAttribPointer( index, dimension, type, false, stride, offset );
+    gl.vertexAttribPointer( index, size, type, false, stride, offset );
   }
 
   @Nullable
