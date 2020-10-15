@@ -7,6 +7,7 @@ import elemental3.Global;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
 import elemental3.gl.BufferTargetType;
+import elemental3.gl.DataType;
 import elemental3.gl.GLSL;
 import elemental3.gl.ShaderType;
 import elemental3.gl.UsageType;
@@ -63,7 +64,7 @@ public final class GL
                                 final int index,
                                 @BufferTargetType final int target,
                                 final int dimension,
-                                final int type,
+                                @DataType final int type,
                                 final int stride,
                                 final int offset )
   {
