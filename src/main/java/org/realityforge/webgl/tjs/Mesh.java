@@ -50,17 +50,18 @@ final class Mesh
     loadTexture( gl, "img/wood.jpg", 0 );
     loadTexture( gl, "img/StoreLogo.png", 1 );
 
-    setGeometry( new Geometry( gl,
-                               new BufferAttributeBinding( positionAttribute,
-                                                           GL.getAttribLocation( gl, program, "position" ) ),
-                               new BufferAttributeBinding( normalsAttribute,
-                                                           GL.getAttribLocation( gl, program, "normal" ) ),
-                               new BufferAttributeBinding( colorAttribute,
-                                                           GL.getAttribLocation( gl, program, "color" ) ),
-                               new BufferAttributeBinding( textureCoordinatesAttribute,
-                                                           GL.getAttribLocation( gl, program, "textureCoordinate" ) )
-                 )
-    );
+    final Geometry geometry =
+      new Geometry( new BufferAttributeBinding( positionAttribute ),
+                    new BufferAttributeBinding( normalsAttribute ),
+                    new BufferAttributeBinding( colorAttribute ),
+                    new BufferAttributeBinding( textureCoordinatesAttribute ) );
+    setGeometry( geometry );
+    geometry.getBindings()[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    geometry.getBindings()[ 1 ].setLocation( GL.getAttribLocation( gl, program, "normal" ) );
+    geometry.getBindings()[ 2 ].setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    geometry.getBindings()[ 3 ].setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
+    geometry.uploadToCpu( gl );
+
   }
 
   private void loadTexture( @Nonnull final WebGL2RenderingContext gl,

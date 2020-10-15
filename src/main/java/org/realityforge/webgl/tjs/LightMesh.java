@@ -25,8 +25,10 @@ final class LightMesh
     super( gl, vertexShaderSource, fragmentShaderSource );
     final WebGLProgram program = getProgram();
     _color = new UniformBinding( gl, program, "color" );
-    setGeometry( new Geometry( gl, new BufferAttributeBinding( positionAttribute,
-                                                               GL.getAttribLocation( gl, program, "position" ) ) ) );
+    final Geometry geometry = new Geometry( new BufferAttributeBinding( positionAttribute ) );
+    setGeometry( geometry );
+    geometry.getBindings()[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    geometry.uploadToCpu( gl );
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,
