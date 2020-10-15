@@ -11,6 +11,7 @@ import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.Uniform;
 
 final class Mesh

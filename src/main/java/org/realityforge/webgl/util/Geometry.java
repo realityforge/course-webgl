@@ -1,25 +1,24 @@
-package org.realityforge.webgl.tjs;
+package org.realityforge.webgl.util;
 
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLVertexArrayObject;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webgl.util.Attribute;
 
-final class Geometry
+public final class Geometry
 {
   @Nonnull
   private final Attribute[] _attributes;
   @Nullable
   private WebGLVertexArrayObject _vao;
 
-  Geometry( @Nonnull final Attribute... attributes )
+  public Geometry( @Nonnull final Attribute... attributes )
   {
     _attributes = Objects.requireNonNull( attributes );
   }
 
-  void uploadToCpu( @Nonnull final WebGL2RenderingContext gl )
+  public void uploadToCpu( @Nonnull final WebGL2RenderingContext gl )
   {
     uploadBuffers( gl );
     buildVertexArrayObject( gl );
@@ -51,13 +50,13 @@ final class Geometry
   }
 
   @Nonnull
-  Attribute[] getAttributes()
+  public Attribute[] getAttributes()
   {
     return _attributes;
   }
 
   @Nonnull
-  WebGLVertexArrayObject getVao()
+  public WebGLVertexArrayObject getVao()
   {
     assert null != _vao;
     return _vao;

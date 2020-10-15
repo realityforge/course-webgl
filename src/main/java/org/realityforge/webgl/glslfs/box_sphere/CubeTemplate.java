@@ -6,6 +6,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.Geometry;
 
 final class CubeTemplate
 {
