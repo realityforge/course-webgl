@@ -2529,7 +2529,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
    */
-  public native void vertexAttribPointer(int index, int size, @DataType int type,
+  public native void vertexAttribPointer(int index, @VertexDimensions int size, @DataType int type,
       boolean normalized, int stride, int offset);
 
   /**
@@ -6769,7 +6769,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribIPointer">WebGL2RenderingContext.vertexAttribIPointer - MDN</a>
    */
-  public native void vertexAttribIPointer(int index, int size, int type, int stride, int offset);
+  public native void vertexAttribIPointer(int index, @VertexDimensions int size, int type,
+      int stride, int offset);
 
   /**
    * The WebGL2RenderingContext.waitSync() method of the WebGL 2 API returns immediately, but waits on the GL server until the given WebGLSync object is signaled.
