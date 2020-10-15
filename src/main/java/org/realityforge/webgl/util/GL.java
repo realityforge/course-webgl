@@ -16,9 +16,9 @@ import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
-import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.base.Any;
 
 // TODO: All of these methods should take a onError handler that is invoked when unexpected error
 //  occurs. We should then follow this up with throwing a runtime error to rollback state. Both of
@@ -96,7 +96,9 @@ public final class GL
     gl.attachShader( program, fragmentShader );
     gl.linkProgram( program );
 
-    if ( !requireNonNull( gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS ) ).asBoolean() )
+    final Any parameter = gl.getProgramParameter( program, WebGL2RenderingContext.LINK_STATUS );
+    assert null != parameter;
+    if ( !parameter.asBoolean() )
     {
       Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
       gl.deleteProgram( program );
@@ -118,7 +120,9 @@ public final class GL
 
     gl.shaderSource( shader, source );
     gl.compileShader( shader );
-    if ( !requireNonNull( gl.getShaderParameter( shader, WebGL2RenderingContext.COMPILE_STATUS ) ).asBoolean() )
+    final Any parameter = gl.getShaderParameter( shader, WebGL2RenderingContext.COMPILE_STATUS );
+    assert null != parameter;
+    if ( !parameter.asBoolean() )
     {
       Global.globalThis().console().log( gl.getShaderInfoLog( shader ) );
       gl.deleteShader( shader );
@@ -195,12 +199,6 @@ public final class GL
                                                                 WebGL2RenderingContext.CLAMP_TO_EDGE ) );
       image.onerror = ( e, s, l, c, o ) -> rejectFn.reject( e );
     } );
-  }
-
-  @Nonnull
-  private static <T> T requireNonNull( final T object )
-  {
-    return Objects.requireNonNull( object );
   }
 
   /**
