@@ -18,8 +18,6 @@ final class Material
   private final WebGLUniformLocation _viewMatrixLocation;
   @Nonnull
   private final WebGLUniformLocation _projectionMatrixLocation;
-  private final int _positionIndex;
-  private final int _colorIndex;
 
   Material( @Nonnull final WebGL2RenderingContext gl,
             @GLSL @Nonnull final String vertexShaderSource,
@@ -36,9 +34,6 @@ final class Material
     _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );
     _viewMatrixLocation = GL.getUniformLocation( gl, _program, "viewMatrix" );
     _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
-
-    _positionIndex = gl.getAttribLocation( _program, "position" );
-    _colorIndex = gl.getAttribLocation( _program, "color" );
   }
 
   @Nonnull
@@ -63,15 +58,5 @@ final class Material
   WebGLUniformLocation getProjectionMatrixLocation()
   {
     return _projectionMatrixLocation;
-  }
-
-  int getPositionIndex()
-  {
-    return _positionIndex;
-  }
-
-  int getColorIndex()
-  {
-    return _colorIndex;
   }
 }
