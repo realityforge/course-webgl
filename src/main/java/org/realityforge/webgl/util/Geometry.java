@@ -88,7 +88,8 @@ public final class Geometry
   {
     assert null != _vertexArrayObject;
 
-    //TODO: Should not need to change vao all the time if it is current vao.
+    // TODO: Should not need to change vao all the time if it is current vao.
+    //       We probably need to maintain global state and only change if required
     gl.bindVertexArray( _vertexArrayObject );
 
     if ( null == _indexBuffer )
@@ -100,6 +101,7 @@ public final class Geometry
       gl.drawElements( _mode, _count, _indexBuffer.getType(), _offset );
     }
     // TODO: Should not null out if we will re-use this or we will immediately change to another vao
+    //       We probably should gate this on either compile-time setting or runtime setting or both
     gl.bindVertexArray( null );
   }
 }
