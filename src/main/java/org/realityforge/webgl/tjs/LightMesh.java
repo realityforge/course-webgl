@@ -26,7 +26,7 @@ final class LightMesh
     super( gl, vertexShaderSource, fragmentShaderSource );
     final WebGLProgram program = getProgram();
     _color = new Uniform( gl, program, "color" );
-    final Geometry geometry = new Geometry( new Attribute( positionAttribute ) );
+    final Geometry geometry = new Geometry( 36, new Attribute( positionAttribute ) );
     setGeometry( geometry );
     geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
     geometry.uploadToCpu( gl );

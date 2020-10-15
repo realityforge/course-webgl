@@ -157,7 +157,8 @@ final class CubeTemplate
       new Attribute( new Float32Buffer( new Float32Array( POSITIONS ), 3 ) );
     final Attribute colors =
       new Attribute( new Float32Buffer( new Float32Array( COLORS ), 4 ) );
-    return new Mesh( new Geometry( positions, colors ),
+    final int elementCount = 36;// or POSITIONS.length / 3;
+    return new Mesh( new Geometry( elementCount, positions, colors ),
                      new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
   }
 }

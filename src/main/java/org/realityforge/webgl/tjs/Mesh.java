@@ -51,8 +51,10 @@ final class Mesh
     loadTexture( gl, "img/wood.jpg", 0 );
     loadTexture( gl, "img/StoreLogo.png", 1 );
 
+    //TODO: 36 can be derived...
     final Geometry geometry =
-      new Geometry( new Attribute( positionAttribute ),
+      new Geometry( 36,
+                    new Attribute( positionAttribute ),
                     new Attribute( normalsAttribute ),
                     new Attribute( colorAttribute ),
                     new Attribute( textureCoordinatesAttribute ) );

@@ -158,7 +158,6 @@ public final class Main
     final Matrix4d viewMatrix = _camera.getViewMatrix();
 
     gl.useProgram( _mesh.getProgram() );
-    gl.bindVertexArray( _mesh.getGeometry().getVao() );
 
     final Matrix4d projectionMatrix = _camera.getProjection().getProjectionMatrix();
 
@@ -186,7 +185,6 @@ public final class Main
     _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
     gl.useProgram( _lightMesh.getProgram() );
-    gl.bindVertexArray( _lightMesh.getGeometry().getVao() );
 
     _modelMatrix.identity();
     _modelMatrix.translate( position.x, position.y, position.z );

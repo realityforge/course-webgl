@@ -51,12 +51,11 @@ public final class Main
     _viewMatrix.identity();
 
     gl.useProgram( _mesh.getMaterial().getProgram() );
-    gl.bindVertexArray( _mesh.getGeometry().getVao() );
     _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     c_angle += 0.1;
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
+    _mesh.getGeometry().draw( gl );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }

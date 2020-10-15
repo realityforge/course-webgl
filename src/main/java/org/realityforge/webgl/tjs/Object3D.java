@@ -68,6 +68,7 @@ abstract class Object3D
     gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
+    assert null != _geometry;
+    _geometry.draw( gl );
   }
 }
