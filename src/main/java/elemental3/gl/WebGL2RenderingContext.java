@@ -1769,7 +1769,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer">WebGLRenderingContext.bindBuffer - MDN</a>
    */
-  public native void bindBuffer(@BufferType int target, @Nullable WebGLBuffer buffer);
+  public native void bindBuffer(@BufferTargetType int target, @Nullable WebGLBuffer buffer);
 
   /**
    * The WebGLRenderingContext.bindFramebuffer() method of the WebGL API binds a given WebGLFramebuffer to a target.
