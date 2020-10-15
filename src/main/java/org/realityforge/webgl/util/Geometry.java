@@ -39,7 +39,7 @@ public final class Geometry
     assert null != vao;
     gl.bindVertexArray( vao );
 
-    if( null != _indexBuffer )
+    if ( null != _indexBuffer )
     {
       _indexBuffer.bind( gl );
     }
