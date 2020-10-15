@@ -47,6 +47,8 @@ public final class Attribute
 
   public void setLocation( final int location )
   {
+    // Location should only be set once
+    assert WebGL2RenderingContext.INVALID_INDEX == _location;
     _location = location;
   }
 
