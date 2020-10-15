@@ -34,7 +34,7 @@ public final class GL
   @SuppressWarnings( { "SameParameterValue", "UnusedReturnValue" } )
   @Nonnull
   public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                           final int target,
+                                           @BufferTargetType final int target,
                                            @UsageType final int usage,
                                            @Nonnull final Uint16Array data )
   {
