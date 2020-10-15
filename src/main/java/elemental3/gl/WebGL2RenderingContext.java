@@ -2036,14 +2036,14 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">WebGLRenderingContext.drawArrays - MDN</a>
    */
-  public native void drawArrays(int mode, int first, int count);
+  public native void drawArrays(@DrawPrimitiveType int mode, int first, int count);
 
   /**
    * The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">WebGLRenderingContext.drawElements - MDN</a>
    */
-  public native void drawElements(int mode, int count, int type, int offset);
+  public native void drawElements(@DrawPrimitiveType int mode, int count, int type, int offset);
 
   /**
    * The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.
@@ -5293,7 +5293,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">WebGL2RenderingContext.drawArraysInstanced - MDN</a>
    */
-  public native void drawArraysInstanced(int mode, int first, int count, int instanceCount);
+  public native void drawArraysInstanced(@DrawPrimitiveType int mode, int first, int count,
+      int instanceCount);
 
   /**
    * The WebGL2RenderingContext.drawBuffers() method of the WebGL 2 API defines draw buffers to which fragment colors are written into. The draw buffer settings are part of the state of the currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
@@ -5314,16 +5315,16 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced">WebGL2RenderingContext.drawElementsInstanced - MDN</a>
    */
-  public native void drawElementsInstanced(int mode, int count, int type, int offset,
-      int instanceCount);
+  public native void drawElementsInstanced(@DrawPrimitiveType int mode, int count, int type,
+      int offset, int instanceCount);
 
   /**
    * The WebGL2RenderingContext.drawRangeElements() method of the WebGL API renders primitives from array data in a given range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawRangeElements">WebGL2RenderingContext.drawRangeElements - MDN</a>
    */
-  public native void drawRangeElements(int mode, int start, int end, int count, int type,
-      int offset);
+  public native void drawRangeElements(@DrawPrimitiveType int mode, int start, int end, int count,
+      int type, int offset);
 
   /**
    * The WebGL2RenderingContext.endQuery() method of the WebGL 2 API marks the end of a given query target.
