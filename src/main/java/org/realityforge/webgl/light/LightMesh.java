@@ -11,7 +11,7 @@ import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.util.UniformBinding;
+import org.realityforge.webgl.util.Uniform;
 
 final class LightMesh
 {
@@ -20,13 +20,13 @@ final class LightMesh
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
-  private final UniformBinding _modelMatrix;
+  private final Uniform _modelMatrix;
   @Nonnull
-  private final UniformBinding _viewMatrix;
+  private final Uniform _viewMatrix;
   @Nonnull
-  private final UniformBinding _projectionMatrix;
+  private final Uniform _projectionMatrix;
   @Nonnull
-  private final UniformBinding _color;
+  private final Uniform _color;
 
   LightMesh( @Nonnull final WebGL2RenderingContext gl,
              @Nonnull final Float32Buffer positionAttribute,
@@ -41,10 +41,10 @@ final class LightMesh
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrix = new UniformBinding( gl, program, "modelMatrix" );
-    _viewMatrix = new UniformBinding( gl, program, "viewMatrix" );
-    _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
-    _color = new UniformBinding( gl, program, "color" );
+    _modelMatrix = new Uniform( gl, program, "modelMatrix" );
+    _viewMatrix = new Uniform( gl, program, "viewMatrix" );
+    _projectionMatrix = new Uniform( gl, program, "projectionMatrix" );
+    _color = new Uniform( gl, program, "color" );
 
     _position = new BufferAttribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
   }

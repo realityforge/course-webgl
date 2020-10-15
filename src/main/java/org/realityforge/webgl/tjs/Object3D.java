@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 import org.joml.Matrix4d;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.util.UniformBinding;
+import org.realityforge.webgl.util.Uniform;
 
 /**
  * Abstract base class that assumes the program has model, view and projection matrices
@@ -21,11 +21,11 @@ abstract class Object3D
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
-  private final UniformBinding _modelMatrix;
+  private final Uniform _modelMatrix;
   @Nonnull
-  private final UniformBinding _viewMatrix;
+  private final Uniform _viewMatrix;
   @Nonnull
-  private final UniformBinding _projectionMatrix;
+  private final Uniform _projectionMatrix;
 
   protected Object3D( @Nonnull final WebGL2RenderingContext gl,
                       @GLSL @Nonnull final String vertexShaderSource,
@@ -34,9 +34,9 @@ abstract class Object3D
     final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
     _program = program;
-    _modelMatrix = new UniformBinding( gl, program, "modelMatrix" );
-    _viewMatrix = new UniformBinding( gl, program, "viewMatrix" );
-    _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
+    _modelMatrix = new Uniform( gl, program, "modelMatrix" );
+    _viewMatrix = new Uniform( gl, program, "viewMatrix" );
+    _projectionMatrix = new Uniform( gl, program, "projectionMatrix" );
   }
 
   @Nonnull

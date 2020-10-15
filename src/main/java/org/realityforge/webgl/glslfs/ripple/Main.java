@@ -14,12 +14,12 @@ import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.TextureUniformBinding;
+import org.realityforge.webgl.util.TextureUniform;
 
 public final class Main
   implements EntryPoint
 {
-  private TextureUniformBinding u_image;
+  private TextureUniform u_image;
   private WebGLUniformLocation u_resolution;
   private WebGLUniformLocation u_time;
   private WebGL2RenderingContext _gl;
@@ -97,7 +97,7 @@ public final class Main
       new BufferAttribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
                            GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
-    u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
+    u_image = new TextureUniform( _gl, program, "u_image", "img/4KSample.jpg", 0 );
     u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
     u_time = GL.getUniformLocation( _gl, program, "u_time" );
 

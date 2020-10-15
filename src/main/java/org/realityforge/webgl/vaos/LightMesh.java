@@ -9,13 +9,13 @@ import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.UniformBinding;
+import org.realityforge.webgl.util.Uniform;
 
 final class LightMesh
   extends Object3D
 {
   @Nonnull
-  private final UniformBinding _color;
+  private final Uniform _color;
 
   LightMesh( @Nonnull final WebGL2RenderingContext gl,
              @Nonnull final Float32Buffer positionAttribute,
@@ -24,7 +24,7 @@ final class LightMesh
   {
     super( gl, vertexShaderSource, fragmentShaderSource );
     final WebGLProgram program = getProgram();
-    _color = new UniformBinding( gl, program, "color" );
+    _color = new Uniform( gl, program, "color" );
     setGeometry( new Geometry( gl, new BufferAttribute( positionAttribute,
                                                         GL.getAttribLocation( gl, program, "position" ) )
                  )

@@ -171,7 +171,7 @@ public final class GL
   }
 
   public static void bindTexture( @Nonnull final WebGL2RenderingContext gl,
-                                  @Nonnull final UniformBinding binding,
+                                  @Nonnull final Uniform binding,
                                   @Nonnull final WebGLTexture texture,
                                   final int index )
   {

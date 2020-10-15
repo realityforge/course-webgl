@@ -13,7 +13,7 @@ import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.util.UniformBinding;
+import org.realityforge.webgl.util.Uniform;
 
 final class Mesh
 {
@@ -30,21 +30,21 @@ final class Mesh
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
-  private final UniformBinding _modelMatrix;
+  private final Uniform _modelMatrix;
   @Nonnull
-  private final UniformBinding _viewMatrix;
+  private final Uniform _viewMatrix;
   @Nonnull
-  private final UniformBinding _projectionMatrix;
+  private final Uniform _projectionMatrix;
   @Nonnull
-  private final UniformBinding _textureData0;
+  private final Uniform _textureData0;
   @Nonnull
-  private final UniformBinding _textureData1;
+  private final Uniform _textureData1;
   @Nonnull
-  private final UniformBinding _lightColor;
+  private final Uniform _lightColor;
   @Nonnull
-  private final UniformBinding _lightPosition;
+  private final Uniform _lightPosition;
   @Nonnull
-  private final UniformBinding _cameraPosition;
+  private final Uniform _cameraPosition;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32Buffer positionAttribute,
@@ -65,14 +65,14 @@ final class Mesh
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrix = new UniformBinding( gl, program, "modelMatrix" );
-    _viewMatrix = new UniformBinding( gl, program, "viewMatrix" );
-    _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
-    _textureData0 = new UniformBinding( gl, program, "textureData0" );
-    _textureData1 = new UniformBinding( gl, program, "textureData1" );
-    _lightColor = new UniformBinding( gl, program, "lightColor" );
-    _lightPosition = new UniformBinding( gl, program, "lightPosition" );
-    _cameraPosition = new UniformBinding( gl, program, "cameraPosition" );
+    _modelMatrix = new Uniform( gl, program, "modelMatrix" );
+    _viewMatrix = new Uniform( gl, program, "viewMatrix" );
+    _projectionMatrix = new Uniform( gl, program, "projectionMatrix" );
+    _textureData0 = new Uniform( gl, program, "textureData0" );
+    _textureData1 = new Uniform( gl, program, "textureData1" );
+    _lightColor = new Uniform( gl, program, "lightColor" );
+    _lightPosition = new Uniform( gl, program, "lightPosition" );
+    _cameraPosition = new Uniform( gl, program, "cameraPosition" );
 
     _position = new BufferAttribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
     _normal = new BufferAttribute( normalsAttribute, GL.getAttribLocation( gl, program, "normal" ) );

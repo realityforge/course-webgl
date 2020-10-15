@@ -10,8 +10,8 @@ import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.util.TextureUniformBinding;
-import org.realityforge.webgl.util.UniformBinding;
+import org.realityforge.webgl.util.TextureUniform;
+import org.realityforge.webgl.util.Uniform;
 
 final class Mesh
 {
@@ -24,15 +24,15 @@ final class Mesh
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
-  private final UniformBinding _modelMatrix;
+  private final Uniform _modelMatrix;
   @Nonnull
-  private final UniformBinding _viewMatrix;
+  private final Uniform _viewMatrix;
   @Nonnull
-  private final UniformBinding _projectionMatrix;
+  private final Uniform _projectionMatrix;
   @Nonnull
-  private final TextureUniformBinding _textureData0;
+  private final TextureUniform _textureData0;
   @Nonnull
-  private final TextureUniformBinding _textureData1;
+  private final TextureUniform _textureData1;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
         @Nonnull final Float32Buffer positionAttribute,
@@ -49,12 +49,12 @@ final class Mesh
     final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
     assert null != program;
     _program = program;
-    _modelMatrix = new UniformBinding( gl, program, "modelMatrix" );
-    _viewMatrix = new UniformBinding( gl, program, "viewMatrix" );
-    _projectionMatrix = new UniformBinding( gl, program, "projectionMatrix" );
+    _modelMatrix = new Uniform( gl, program, "modelMatrix" );
+    _viewMatrix = new Uniform( gl, program, "viewMatrix" );
+    _projectionMatrix = new Uniform( gl, program, "projectionMatrix" );
 
-    _textureData0 = new TextureUniformBinding( gl, program, "textureData0", "img/webgl-logo-256.jpg", 0 );
-    _textureData1 = new TextureUniformBinding( gl, program, "textureData1", "img/StoreLogo.png", 1 );
+    _textureData0 = new TextureUniform( gl, program, "textureData0", "img/webgl-logo-256.jpg", 0 );
+    _textureData1 = new TextureUniform( gl, program, "textureData1", "img/StoreLogo.png", 1 );
 
     _position = new BufferAttribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
     _color = new BufferAttribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );

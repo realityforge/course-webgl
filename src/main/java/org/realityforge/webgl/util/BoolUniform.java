@@ -4,15 +4,15 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 
-public final class BoolUniformBinding
-  extends UniformBinding
+public final class BoolUniform
+  extends Uniform
 {
   private boolean _value;
 
-  public BoolUniformBinding( @Nonnull final WebGL2RenderingContext gl,
-                             @Nonnull final WebGLProgram program,
-                             @Nonnull final String name,
-                             final boolean value )
+  public BoolUniform( @Nonnull final WebGL2RenderingContext gl,
+                      @Nonnull final WebGLProgram program,
+                      @Nonnull final String name,
+                      final boolean value )
   {
     super( gl, program, name );
     _value = value;

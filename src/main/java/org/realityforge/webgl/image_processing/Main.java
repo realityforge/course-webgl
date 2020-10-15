@@ -13,24 +13,24 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.BoolUniformBinding;
+import org.realityforge.webgl.util.BoolUniform;
 import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
-import org.realityforge.webgl.util.FloatUniformBinding;
+import org.realityforge.webgl.util.FloatUniform;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.TextureUniformBinding;
-import org.realityforge.webgl.util.VecfUniformBinding;
+import org.realityforge.webgl.util.TextureUniform;
+import org.realityforge.webgl.util.VecfUniform;
 
 public final class Main
   implements EntryPoint
 {
-  private TextureUniformBinding u_image;
-  private TextureUniformBinding u_colorPalette;
-  private BoolUniformBinding u_isGrayscale;
-  private BoolUniformBinding u_isColorPalette;
-  private BoolUniformBinding u_isKernel;
-  private BoolUniformBinding u_isInverse;
+  private TextureUniform u_image;
+  private TextureUniform u_colorPalette;
+  private BoolUniform u_isGrayscale;
+  private BoolUniform u_isColorPalette;
+  private BoolUniform u_isKernel;
+  private BoolUniform u_isInverse;
   private WebGL2RenderingContext _gl;
 
   @Override
@@ -158,18 +158,18 @@ public final class Main
       new BufferAttribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
                            GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
-    u_image = new TextureUniformBinding( _gl, program, "u_image", "img/4KSample.jpg", 0 );
-    u_colorPalette = new TextureUniformBinding( _gl, program, "u_colorPalette", "img/ColorPalette.jpg", 1 );
-    u_isGrayscale = new BoolUniformBinding( _gl, program, "u_isGrayscale", false );
-    u_isInverse = new BoolUniformBinding( _gl, program, "u_isInverse", false );
-    u_isKernel = new BoolUniformBinding( _gl, program, "u_isKernel", false );
-    u_isColorPalette = new BoolUniformBinding( _gl, program, "u_isColorPalette", false );
+    u_image = new TextureUniform( _gl, program, "u_image", "img/4KSample.jpg", 0 );
+    u_colorPalette = new TextureUniform( _gl, program, "u_colorPalette", "img/ColorPalette.jpg", 1 );
+    u_isGrayscale = new BoolUniform( _gl, program, "u_isGrayscale", false );
+    u_isInverse = new BoolUniform( _gl, program, "u_isInverse", false );
+    u_isKernel = new BoolUniform( _gl, program, "u_isKernel", false );
+    u_isColorPalette = new BoolUniform( _gl, program, "u_isColorPalette", false );
 
     // Kernel Weight = su of each kernel element
-    final FloatUniformBinding u_kernelWeight = new FloatUniformBinding( _gl, program, "u_kernelWeight", 2 );
+    final FloatUniform u_kernelWeight = new FloatUniform( _gl, program, "u_kernelWeight", 2 );
     final double[] sharpenKernel = new double[]{ -1, -1, -1, -1, 10, -1, -1, -1, -1 };
-    final VecfUniformBinding u_kernel =
-      new VecfUniformBinding( _gl, program, "u_kernel", new Float32Array( sharpenKernel ) );
+    final VecfUniform u_kernel =
+      new VecfUniform( _gl, program, "u_kernel", new Float32Array( sharpenKernel ) );
 
     // Start using the program for all vertexes pass through gl until the program is changed
     _gl.useProgram( program );

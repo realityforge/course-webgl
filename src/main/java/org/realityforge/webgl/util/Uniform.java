@@ -6,7 +6,7 @@ import elemental3.gl.WebGLUniformLocation;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
-public class UniformBinding
+public class Uniform
 {
   /**
    * The name of the shader variable.
@@ -16,9 +16,9 @@ public class UniformBinding
   @Nonnull
   private final WebGLUniformLocation _location;
 
-  public UniformBinding( @Nonnull final WebGL2RenderingContext gl,
-                         @Nonnull final WebGLProgram program,
-                         @Nonnull final String name )
+  public Uniform( @Nonnull final WebGL2RenderingContext gl,
+                  @Nonnull final WebGLProgram program,
+                  @Nonnull final String name )
   {
     _name = Objects.requireNonNull( name );
     _location = GL.getUniformLocation( gl, program, name );

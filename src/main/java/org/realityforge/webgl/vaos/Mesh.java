@@ -11,21 +11,21 @@ import org.realityforge.webgl.util.BufferAttribute;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.UniformBinding;
+import org.realityforge.webgl.util.Uniform;
 
 final class Mesh
   extends Object3D
 {
   @Nonnull
-  private final UniformBinding _textureData0;
+  private final Uniform _textureData0;
   @Nonnull
-  private final UniformBinding _textureData1;
+  private final Uniform _textureData1;
   @Nonnull
-  private final UniformBinding _lightColor;
+  private final Uniform _lightColor;
   @Nonnull
-  private final UniformBinding _lightPosition;
+  private final Uniform _lightPosition;
   @Nonnull
-  private final UniformBinding _cameraPosition;
+  private final Uniform _cameraPosition;
   private int _texturesLoaded;
   @Nonnull
   private final WebGLTexture[] _textures = new WebGLTexture[ 2 ];
@@ -42,11 +42,11 @@ final class Mesh
     super( gl, vertexShaderSource, fragmentShaderSource );
 
     final WebGLProgram program = getProgram();
-    _textureData0 = new UniformBinding( gl, program, "textureData0" );
-    _textureData1 = new UniformBinding( gl, program, "textureData1" );
-    _lightColor = new UniformBinding( gl, program, "lightColor" );
-    _lightPosition = new UniformBinding( gl, program, "lightPosition" );
-    _cameraPosition = new UniformBinding( gl, program, "cameraPosition" );
+    _textureData0 = new Uniform( gl, program, "textureData0" );
+    _textureData1 = new Uniform( gl, program, "textureData1" );
+    _lightColor = new Uniform( gl, program, "lightColor" );
+    _lightPosition = new Uniform( gl, program, "lightPosition" );
+    _cameraPosition = new Uniform( gl, program, "cameraPosition" );
     loadTexture( gl, "img/wood.jpg", 0 );
     loadTexture( gl, "img/StoreLogo.png", 1 );
 

@@ -4,15 +4,15 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 
-public final class FloatUniformBinding
-  extends UniformBinding
+public final class FloatUniform
+  extends Uniform
 {
   private float _x;
 
-  public FloatUniformBinding( @Nonnull final WebGL2RenderingContext gl,
-                              @Nonnull final WebGLProgram program,
-                              @Nonnull final String name,
-                              final float x )
+  public FloatUniform( @Nonnull final WebGL2RenderingContext gl,
+                       @Nonnull final WebGLProgram program,
+                       @Nonnull final String name,
+                       final float x )
   {
     super( gl, program, name );
     _x = x;

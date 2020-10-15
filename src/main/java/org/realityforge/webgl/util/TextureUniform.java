@@ -6,18 +6,18 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public final class TextureUniformBinding
-  extends UniformBinding
+public final class TextureUniform
+  extends Uniform
 {
   private final int _textureUnitIndex;
   @Nullable
   private WebGLTexture _texture;
 
-  public TextureUniformBinding( @Nonnull final WebGL2RenderingContext gl,
-                                @Nonnull final WebGLProgram program,
-                                @Nonnull final String name,
-                                @Nonnull final String src,
-                                final int textureUnitIndex )
+  public TextureUniform( @Nonnull final WebGL2RenderingContext gl,
+                         @Nonnull final WebGLProgram program,
+                         @Nonnull final String name,
+                         @Nonnull final String src,
+                         final int textureUnitIndex )
   {
     super( gl, program, name );
     _textureUnitIndex = textureUnitIndex;
