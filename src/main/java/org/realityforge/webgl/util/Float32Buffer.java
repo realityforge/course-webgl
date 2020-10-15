@@ -28,7 +28,7 @@ public final class Float32Buffer
                         @BufferTargetType final int target,
                         final int dimension )
   {
-    this( data, target, WebGL2RenderingContext.STATIC_DRAW, dimension, true, 0, 0, null );
+    this( data, target, WebGL2RenderingContext.STATIC_DRAW, dimension, false, 0, 0, null );
   }
 
   public Float32Buffer( @Nonnull final Float32Array data,
