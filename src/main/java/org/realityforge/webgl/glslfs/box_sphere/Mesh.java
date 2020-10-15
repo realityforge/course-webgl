@@ -2,7 +2,6 @@ package org.realityforge.webgl.glslfs.box_sphere;
 
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLVertexArrayObject;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
@@ -24,6 +23,12 @@ final class Mesh
   }
 
   @Nonnull
+  Geometry getGeometry()
+  {
+    return _geometry;
+  }
+
+  @Nonnull
   Material getMaterial()
   {
     return _material;
@@ -41,17 +46,10 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    final BufferAttributeBinding positionAttribute = _geometry.getPositionAttribute();
-    final BufferAttributeBinding colorAttribute = _geometry.getColorAttribute();
-
     final WebGLProgram program = _material.getProgram();
-    positionAttribute.setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    colorAttribute.setLocation( GL.getAttribLocation( gl, program, "color" ) );
-
-    positionAttribute.getBuffer().uploadToGpu( gl );
-    colorAttribute.getBuffer().uploadToGpu( gl );
-
-    positionAttribute.sendToGpu( gl );
-    colorAttribute.sendToGpu( gl );
+    final BufferAttributeBinding[] bindings = _geometry.getBindings();
+    bindings[ 0 ].setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    bindings[ 1 ].setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    _geometry.uploadToCpu( gl );
   }
 }
