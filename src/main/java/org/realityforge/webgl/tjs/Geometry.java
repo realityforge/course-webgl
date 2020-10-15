@@ -10,9 +10,13 @@ final class Geometry
   @Nonnull
   private final WebGLVertexArrayObject _vao;
 
-  Geometry( @Nonnull final WebGL2RenderingContext gl,
-            @Nonnull final BufferAttributeBinding... bindings )
+  Geometry( @Nonnull final WebGL2RenderingContext gl, @Nonnull final BufferAttributeBinding... bindings )
   {
+    for ( final BufferAttributeBinding binding : bindings )
+    {
+      binding.getBuffer().uploadToGpu( gl );
+    }
+
     final WebGLVertexArrayObject vao = gl.createVertexArray();
     assert null != vao;
     _vao = vao;
