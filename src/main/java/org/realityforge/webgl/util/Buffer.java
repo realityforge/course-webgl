@@ -8,6 +8,7 @@ import elemental3.gl.UsageType;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.base.Js;
 
 public abstract class Buffer<T extends TypedArray>
@@ -24,18 +25,18 @@ public abstract class Buffer<T extends TypedArray>
   private final boolean _normalized;
   private final int _stride;
   private final int _offset;
-  @Nonnull
-  private final WebGLBuffer _buffer;
+  @Nullable
+  private WebGLBuffer _buffer;
 
-  protected Buffer( @Nonnull final WebGL2RenderingContext gl,
-                    @Nonnull final T data,
+  protected Buffer( @Nonnull final T data,
                     @BufferTargetType final int target,
                     @UsageType final int usage,
                     final int dimension,
                     @DataType final int type,
                     final boolean normalized,
                     final int stride,
-                    final int offset )
+                    final int offset,
+                    @Nullable final WebGLBuffer buffer )
   {
     _normalized = normalized;
     assert dimension > 0 && dimension <= 4;
@@ -47,7 +48,7 @@ public abstract class Buffer<T extends TypedArray>
     _type = type;
     _stride = stride;
     _offset = offset;
-    _buffer = GL.prepareBuffer( gl, target, usage, Js.<ArrayBufferView>uncheckedCast( data ) );
+    _buffer = buffer;
   }
 
   @Nonnull
@@ -94,9 +95,23 @@ public abstract class Buffer<T extends TypedArray>
     return _offset;
   }
 
-  @Nonnull
-  public WebGLBuffer getBuffer()
+  public boolean isBufferOnGpu()
   {
-    return _buffer;
+    return null != _buffer;
+  }
+
+  public void uploadToGpu( @Nonnull final WebGL2RenderingContext gl )
+  {
+    _buffer = gl.createBuffer();
+    assert null != _buffer;
+    bind( gl );
+    //TODO: Rework webtack to remove this unchecked cast
+    gl.bufferData( _target, Js.<ArrayBufferView>uncheckedCast( _data ), _usage );
+  }
+
+  public void bind( @Nonnull final WebGL2RenderingContext gl )
+  {
+    assert null != _buffer;
+    gl.bindBuffer( _target, _buffer );
   }
 }

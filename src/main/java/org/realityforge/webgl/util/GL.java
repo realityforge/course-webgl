@@ -3,7 +3,6 @@ package org.realityforge.webgl.util;
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
 import elemental2.promise.Promise;
-import elemental3.ArrayBufferView;
 import elemental3.Global;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
@@ -36,20 +35,6 @@ public final class GL
                                            final int target,
                                            @UsageType final int usage,
                                            @Nonnull final Uint16Array data )
-  {
-    final WebGLBuffer buffer = gl.createBuffer();
-    assert null != buffer;
-    gl.bindBuffer( target, buffer );
-    gl.bufferData( target, data, usage );
-    return buffer;
-  }
-
-  @SuppressWarnings( "SameParameterValue" )
-  @Nonnull
-  public static WebGLBuffer prepareBuffer( @Nonnull final WebGL2RenderingContext gl,
-                                           @BufferTargetType final int target,
-                                           @UsageType final int usage,
-                                           @Nonnull final ArrayBufferView data )
   {
     final WebGLBuffer buffer = gl.createBuffer();
     assert null != buffer;

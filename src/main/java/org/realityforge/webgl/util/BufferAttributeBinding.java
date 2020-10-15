@@ -18,6 +18,11 @@ public final class BufferAttributeBinding
    */
   private int _location;
 
+  public BufferAttributeBinding( @Nonnull final Buffer<?> buffer )
+  {
+    this( buffer, WebGL2RenderingContext.INVALID_INDEX );
+  }
+
   public BufferAttributeBinding( @Nonnull final Buffer<?> buffer, final int location )
   {
     _buffer = Objects.requireNonNull( buffer );
@@ -47,8 +52,9 @@ public final class BufferAttributeBinding
 
   public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
+    assert isLocationValid();
     gl.enableVertexAttribArray( _location );
-    gl.bindBuffer( _buffer.getTarget(), _buffer.getBuffer() );
+    _buffer.bind( gl );
     gl.vertexAttribPointer( _location,
                             _buffer.getDimension(),
                             _buffer.getType(),
