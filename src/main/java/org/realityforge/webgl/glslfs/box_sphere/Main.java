@@ -53,7 +53,7 @@ public final class Main
     gl.useProgram( _mesh.getMaterial().getProgram() );
     _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
-    c_angle += 0.1;
+    c_angle += 0.01;
 
     _mesh.getGeometry().draw( gl );
 
