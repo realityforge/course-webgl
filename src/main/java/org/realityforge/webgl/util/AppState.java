@@ -19,7 +19,7 @@ public final class AppState
 
   public interface Action
   {
-    void run( @Nonnull WebGL2RenderingContext gl );
+    void run();
   }
 
   public static AppState create( @Nonnull final WebGL2RenderingContext context )
@@ -39,7 +39,7 @@ public final class AppState
   }
 
   @Nonnull
-  public WebGL2RenderingContext getContext()
+  public WebGL2RenderingContext gl()
   {
     return _context;
   }

@@ -50,6 +50,6 @@ final class Mesh
   {
     final WebGLProgram program = _material.getProgram();
     _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    _geometry.uploadToCpu( gl );
+    _geometry.uploadToCpu();
   }
 }

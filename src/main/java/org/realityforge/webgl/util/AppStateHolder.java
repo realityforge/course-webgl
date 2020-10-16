@@ -14,7 +14,7 @@ final class AppStateHolder
     try
     {
       c_appState = appState;
-      action.run( appState.getContext() );
+      action.run();
     }
     finally
     {

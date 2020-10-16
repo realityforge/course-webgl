@@ -38,18 +38,21 @@ public final class Geometry
     _attributes = Objects.requireNonNull( attributes );
   }
 
-  public void uploadToCpu( @Nonnull final WebGL2RenderingContext gl )
+  public void uploadToCpu()
   {
-    //TODO: Stop accepting gl context here and instead get it from global state
-    uploadBuffers( gl );
-    buildVertexArrayObject( gl );
+    final AppState appState = AppState.get();
+    appState.in( () -> {
+      uploadBuffers( appState );
+      buildVertexArrayObject( appState );
+    } );
   }
 
-  private void buildVertexArrayObject( @Nonnull final WebGL2RenderingContext gl )
+  private void buildVertexArrayObject( @Nonnull final AppState appState )
   {
+    final WebGL2RenderingContext gl = appState.gl();
     final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
     assert null != vertexArrayObject;
-    AppState.get().bindVertexArrayObject( vertexArrayObject );
+    appState.bindVertexArrayObject( vertexArrayObject );
 
     if ( null != _indexBuffer )
     {
@@ -67,8 +70,9 @@ public final class Geometry
     _vertexArrayObject = vertexArrayObject;
   }
 
-  private void uploadBuffers( @Nonnull final WebGL2RenderingContext gl )
+  private void uploadBuffers( @Nonnull final AppState appState )
   {
+    final WebGL2RenderingContext gl = appState.gl();
     if ( null != _indexBuffer )
     {
       _indexBuffer.uploadToGpu( gl );

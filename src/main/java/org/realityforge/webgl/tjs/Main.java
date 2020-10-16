@@ -50,7 +50,8 @@ public final class Main
     _camera.getProjection()
       .setPerspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    appState.in( gl -> {
+    appState.in( () -> {
+      final WebGL2RenderingContext gl = appState.gl();
       _mesh = CubeTemplate.create( gl );
       _lightMesh = CubeTemplate.createLightCube( gl );
     } );
@@ -141,7 +142,8 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    appState.in( gl -> {
+    appState.in( () -> {
+      final WebGL2RenderingContext gl = appState.gl();
       CanvasUtil.resize( gl, canvas );
       Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
       if ( !_mesh.areTexturesLoaded() )
