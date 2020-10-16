@@ -3,7 +3,7 @@ package org.realityforge.webgl.glslfs.box_sphere;
 import elemental2.core.Float32Array;
 import elemental2.core.JsArray;
 import elemental2.core.Uint16Array;
-import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.DrawPrimitiveType;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
@@ -28,14 +28,16 @@ public final class CuboidGeometryFactory
   private final Geometry _geometry;
 
   @Nonnull
-  public static Geometry create( final double width,
+  public static Geometry create( @DrawPrimitiveType final int mode,
+                                 final double width,
                                  final double height,
                                  final double depth,
                                  final int widthSegments,
                                  final int heightSegments,
                                  final int depthSegments )
   {
-    return new CuboidGeometryFactory( width,
+    return new CuboidGeometryFactory( mode,
+                                      width,
                                       height,
                                       depth,
                                       widthSegments,
@@ -44,7 +46,8 @@ public final class CuboidGeometryFactory
       ._geometry;
   }
 
-  private CuboidGeometryFactory( final double width,
+  private CuboidGeometryFactory( @DrawPrimitiveType final int mode,
+                                 final double width,
                                  final double height,
                                  final double depth,
                                  final int widthSegments,
@@ -58,7 +61,7 @@ public final class CuboidGeometryFactory
     buildPlane( 0, 1, 2, 1, -1, width, height, depth, widthSegments, heightSegments, 4 );
     buildPlane( 0, 1, 2, -1, -1, width, height, -depth, widthSegments, heightSegments, 5 );
 
-    _geometry = new Geometry( WebGL2RenderingContext.LINE_LOOP,
+    _geometry = new Geometry( mode,
                               0,
                               _indices.length,
                               new Uint16IndexBuffer( new Uint16Array( _indices ) ),
