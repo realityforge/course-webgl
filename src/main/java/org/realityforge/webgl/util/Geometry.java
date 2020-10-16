@@ -48,7 +48,7 @@ public final class Geometry
   {
     final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
     assert null != vertexArrayObject;
-    gl.bindVertexArray( vertexArrayObject );
+    AppState.get().bindVertexArrayObject( vertexArrayObject );
 
     if ( null != _indexBuffer )
     {
@@ -63,10 +63,6 @@ public final class Geometry
         attribute.sendToGpu( gl );
       }
     }
-
-    // If we could guarantee that another bind happens immediately
-    // after this we could skip this bind operation
-    gl.bindVertexArray( null );
     _vertexArrayObject = vertexArrayObject;
   }
 
@@ -95,10 +91,7 @@ public final class Geometry
   public void draw( @Nonnull final WebGL2RenderingContext gl )
   {
     assert null != _vertexArrayObject;
-
-    // TODO: Should not need to change vao all the time if it is current vao.
-    //       We probably need to maintain global state and only change if required
-    gl.bindVertexArray( _vertexArrayObject );
+    AppState.get().bindVertexArrayObject( _vertexArrayObject );
 
     if ( null == _indexBuffer )
     {
@@ -108,8 +101,5 @@ public final class Geometry
     {
       gl.drawElements( _mode, _count, _indexBuffer.getType(), _offset );
     }
-    // TODO: Should not null out if we will re-use this or we will immediately change to another vao
-    //       We probably should gate this on either compile-time setting or runtime setting or both
-    gl.bindVertexArray( null );
   }
 }

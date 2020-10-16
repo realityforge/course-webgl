@@ -9,6 +9,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
 
@@ -44,20 +45,22 @@ public final class Main
   public void onModuleLoad()
   {
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
-    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
+    final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
     _camera.getProjection()
       .setPerspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _mesh = CubeTemplate.create( gl );
-    _lightMesh = CubeTemplate.createLightCube( gl );
+    appState.in( gl -> {
+      _mesh = CubeTemplate.create( gl );
+      _lightMesh = CubeTemplate.createLightCube( gl );
+    } );
 
     final Global global = Global.globalThis();
     final Document document = global.document();
     document.addKeydownListener( this::onKeyDown );
     document.addKeyupListener( this::onKeyUp );
 
-    global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void onKeyDown( @Nonnull final KeyboardEvent event )
@@ -136,67 +139,69 @@ public final class Main
     }
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
+  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    CanvasUtil.resize( gl, canvas );
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    if ( !_mesh.areTexturesLoaded() )
-    {
-      return;
-    }
+    appState.in( gl -> {
+      CanvasUtil.resize( gl, canvas );
+      Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+      if ( !_mesh.areTexturesLoaded() )
+      {
+        return;
+      }
 
-    final Vector3f backgroundColor = _scene.getBackgroundColor();
-    gl.clearColor( backgroundColor.x, backgroundColor.y, backgroundColor.z, 1 );
-    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
-    gl.enable( WebGL2RenderingContext.DEPTH_TEST );
+      final Vector3f backgroundColor = _scene.getBackgroundColor();
+      gl.clearColor( backgroundColor.x, backgroundColor.y, backgroundColor.z, 1 );
+      gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
+      gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
-    updateCamera();
+      // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
+      updateCamera();
 
-    final Vector3f position = _light.getPosition();
-    position.y = (float) ( 2 * Math.sin( 0.1 * ( _time + position.y ) ) );
-    position.x = (float) ( -2 * Math.sin( 0.1 * ( _time + position.x ) ) );
+      final Vector3f position = _light.getPosition();
+      position.y = (float) ( 2 * Math.sin( 0.1 * ( _time + position.y ) ) );
+      position.x = (float) ( -2 * Math.sin( 0.1 * ( _time + position.x ) ) );
 
-    _camera.updateViewMatrix();
-    final Matrix4d viewMatrix = _camera.getViewMatrix();
+      _camera.updateViewMatrix();
+      final Matrix4d viewMatrix = _camera.getViewMatrix();
 
-    gl.useProgram( _mesh.getProgram() );
+      gl.useProgram( _mesh.getProgram() );
 
-    final Matrix4d projectionMatrix = _camera.getProjection().getProjectionMatrix();
+      final Matrix4d projectionMatrix = _camera.getProjection().getProjectionMatrix();
 
-    // ModelMatrix should be calculated in the simulation loop rather than render loop
-    // but they are effectively the same in out app so we can just recalculate in render loop
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
-    _modelMatrix.rotateY( _angle );
-    _modelMatrix.rotateX( 0.25 );
+      // ModelMatrix should be calculated in the simulation loop rather than render loop
+      // but they are effectively the same in out app so we can just recalculate in render loop
+      _modelMatrix.identity();
+      _modelMatrix.translate( 0, 0, -7 );
+      _modelMatrix.rotateY( _angle );
+      _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
+      _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( 3, 0, -7 );
-    _modelMatrix.rotateY( _angle );
-    _modelMatrix.rotateX( 0.25 );
+      _modelMatrix.identity();
+      _modelMatrix.translate( 3, 0, -7 );
+      _modelMatrix.rotateY( _angle );
+      _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
+      _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( -3, 0, -7 );
-    _modelMatrix.rotateY( _angle );
-    _modelMatrix.rotateX( 0.25 );
+      _modelMatrix.identity();
+      _modelMatrix.translate( -3, 0, -7 );
+      _modelMatrix.rotateY( _angle );
+      _modelMatrix.rotateX( 0.25 );
 
-    _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
+      _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-    gl.useProgram( _lightMesh.getProgram() );
+      gl.useProgram( _lightMesh.getProgram() );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( position.x, position.y, position.z );
-    _modelMatrix.scale( 0.2 );
+      _modelMatrix.identity();
+      _modelMatrix.translate( position.x, position.y, position.z );
+      _modelMatrix.scale( 0.2 );
 
-    _lightMesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light );
+      _lightMesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light );
 
-    _angle += 0.01;
-    _time += 0.1;
+      _angle += 0.01;
+      _time += 0.1;
+    } );
   }
 
   private void updateCamera()
