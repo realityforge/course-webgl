@@ -40,7 +40,8 @@ public final class CuboidGeometryFactory
                                       depth,
                                       widthSegments,
                                       heightSegments,
-                                      depthSegments )._geometry;
+                                      depthSegments )
+      ._geometry;
   }
 
   private CuboidGeometryFactory( final double width,
