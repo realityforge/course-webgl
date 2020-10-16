@@ -46,9 +46,9 @@ public final class Geometry
 
   private void buildVertexArrayObject( @Nonnull final WebGL2RenderingContext gl )
   {
-    final WebGLVertexArrayObject vao = gl.createVertexArray();
-    assert null != vao;
-    gl.bindVertexArray( vao );
+    final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
+    assert null != vertexArrayObject;
+    gl.bindVertexArray( vertexArrayObject );
 
     if ( null != _indexBuffer )
     {
@@ -63,7 +63,7 @@ public final class Geometry
     // If we could guarantee that another bind happens immediately
     // after this we could skip this bind operation
     gl.bindVertexArray( null );
-    _vertexArrayObject = vao;
+    _vertexArrayObject = vertexArrayObject;
   }
 
   private void uploadBuffers( @Nonnull final WebGL2RenderingContext gl )
