@@ -20,6 +20,7 @@ public final class Main
   @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private Mesh _mesh;
+  private final long startedAt = System.currentTimeMillis();
 
   @Override
   public void onModuleLoad()
@@ -51,7 +52,8 @@ public final class Main
     _viewMatrix.identity();
 
     gl.useProgram( _mesh.getMaterial().getProgram() );
-    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
+    final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
+    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, time );
 
     c_angle += 0.01;
 

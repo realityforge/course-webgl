@@ -37,11 +37,13 @@ final class Mesh
   void setUniforms( @Nonnull final WebGL2RenderingContext gl,
                     @Nonnull final Matrix4d modelMatrix,
                     @Nonnull final Matrix4d viewMatrix,
-                    @Nonnull final Matrix4d projectionMatrix )
+                    @Nonnull final Matrix4d projectionMatrix,
+                    final float time )
   {
     gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniform1f( _material.getTimeLocation(), time );
   }
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )

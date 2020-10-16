@@ -18,6 +18,8 @@ final class Material
   private final WebGLUniformLocation _viewMatrixLocation;
   @Nonnull
   private final WebGLUniformLocation _projectionMatrixLocation;
+  @Nonnull
+  private final WebGLUniformLocation u_time;
 
   Material( @Nonnull final WebGL2RenderingContext gl,
             @GLSL @Nonnull final String vertexShaderSource,
@@ -34,6 +36,7 @@ final class Material
     _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );
     _viewMatrixLocation = GL.getUniformLocation( gl, _program, "viewMatrix" );
     _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
+    u_time = GL.getUniformLocation( gl, _program, "u_time" );
   }
 
   @Nonnull
@@ -58,5 +61,11 @@ final class Material
   WebGLUniformLocation getProjectionMatrixLocation()
   {
     return _projectionMatrixLocation;
+  }
+
+  @Nonnull
+  public WebGLUniformLocation getTimeLocation()
+  {
+    return u_time;
   }
 }

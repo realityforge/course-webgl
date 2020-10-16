@@ -15,9 +15,14 @@ final class CubeTemplate
     "uniform mat4 modelMatrix;\n" +
     "uniform mat4 viewMatrix;\n" +
     "uniform mat4 projectionMatrix;\n" +
+    "uniform float u_time;\n" +
     "void main()\n" +
     "{\n" +
-    "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);" +
+    "  float delta = (sin(u_time) + 1.0) / 2.0;\n" +
+    "  float radius = 2.0;\n" +
+    "  vec3 circlePosition = normalize(position) * radius;\n" +
+    "  vec3 finalPosition = mix(position, circlePosition, delta);\n" +
+    "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(finalPosition, 1);\n" +
     "}\n";
   @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
