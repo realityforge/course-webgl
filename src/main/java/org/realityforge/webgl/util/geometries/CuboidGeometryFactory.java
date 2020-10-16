@@ -24,7 +24,7 @@ public final class CuboidGeometryFactory
   /**
    * If specified the factory should create vertex uvs.
    */
-  public static final int UVS = 0x01;
+  public static final int UVS = 0x02;
   // We use JsArray of doubles as this will autogrow and contains native js numbers
   @Nonnull
   private final JsArray<Double> _indices = new JsArray<>();
