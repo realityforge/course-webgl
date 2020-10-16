@@ -3,6 +3,7 @@ package org.realityforge.webgl.glslfs.box_sphere;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.geometries.CuboidGeometryFactory;
 
 final class CubeTemplate
 {

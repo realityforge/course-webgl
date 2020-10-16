@@ -1,4 +1,4 @@
-package org.realityforge.webgl.glslfs.box_sphere;
+package org.realityforge.webgl.util.geometries;
 
 import elemental2.core.Float32Array;
 import elemental2.core.JsArray;
