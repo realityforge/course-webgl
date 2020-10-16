@@ -1,9 +1,6 @@
 
 ## Actions
 
-* Look at [Three.JS](https://threejs.org/docs/) and recreate a very small proportion of it that
-  is needed as part of learning experiments.
-
 * Complete the `Learn GLSL Shaders from Scratch` udemy course 
 
 * Start experimenting with the lessons on `WebGL Academy`
