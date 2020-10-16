@@ -5,6 +5,8 @@ import elemental2.core.JsArray;
 import elemental2.core.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import org.intellij.lang.annotations.MagicConstant;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.Geometry;
@@ -15,15 +17,23 @@ import org.realityforge.webgl.util.Uint16IndexBuffer;
  */
 public final class CuboidGeometryFactory
 {
+  /**
+   * If specified the factory should create vertex normals.
+   */
+  public static final int NORMALS = 0x01;
+  /**
+   * If specified the factory should create vertex uvs.
+   */
+  public static final int UVS = 0x01;
   // We use JsArray of doubles as this will autogrow and contains native js numbers
   @Nonnull
   private final JsArray<Double> _indices = new JsArray<>();
   @Nonnull
   private final JsArray<Double> _vertices = new JsArray<>();
-  @Nonnull
-  private final JsArray<Double> _normals = new JsArray<>();
-  @Nonnull
-  private final JsArray<Double> _uvs = new JsArray<>();
+  @Nullable
+  private final JsArray<Double> _normals;
+  @Nullable
+  private final JsArray<Double> _uvs;
   @Nonnull
   private final Geometry _geometry;
 
@@ -36,13 +46,27 @@ public final class CuboidGeometryFactory
                                  final int heightSegments,
                                  final int depthSegments )
   {
+    return create( mode, width, height, depth, widthSegments, heightSegments, depthSegments, 0 );
+  }
+
+  @Nonnull
+  public static Geometry create( @DrawPrimitiveType final int mode,
+                                 final double width,
+                                 final double height,
+                                 final double depth,
+                                 final int widthSegments,
+                                 final int heightSegments,
+                                 final int depthSegments,
+                                 @MagicConstant( flags = { NORMALS, UVS } ) final int options )
+  {
     return new CuboidGeometryFactory( mode,
                                       width,
                                       height,
                                       depth,
                                       widthSegments,
                                       heightSegments,
-                                      depthSegments )
+                                      depthSegments,
+                                      options )
       ._geometry;
   }
 
@@ -52,8 +76,12 @@ public final class CuboidGeometryFactory
                                  final double depth,
                                  final int widthSegments,
                                  final int heightSegments,
-                                 final int depthSegments )
+                                 final int depthSegments,
+                                 @MagicConstant( flags = { NORMALS, UVS } ) final int options )
   {
+    _normals = NORMALS == ( NORMALS & options ) ? new JsArray<>() : null;
+    _uvs = UVS == ( UVS & options ) ? new JsArray<>() : null;
+
     buildPlane( 2, 1, 0, -1, -1, depth, height, width, depthSegments, heightSegments, 0 );
     buildPlane( 2, 1, 0, 1, -1, depth, height, -width, depthSegments, heightSegments, 1 );
     buildPlane( 0, 2, 1, 1, 1, width, depth, height, widthSegments, depthSegments, 2 );
@@ -113,17 +141,23 @@ public final class CuboidGeometryFactory
         // now apply vector to vertex buffer
         _vertices.push( vector[ 0 ], vector[ 1 ], vector[ 2 ] );
 
-        // set values to correct vector component
-        vector[ uIndex ] = 0;
-        vector[ vIndex ] = 0;
-        vector[ wIndex ] = depth > 0 ? 1 : -1;
+        if ( null != _normals )
+        {
+          // set values to correct vector component
+          vector[ uIndex ] = 0;
+          vector[ vIndex ] = 0;
+          vector[ wIndex ] = depth > 0 ? 1 : -1;
 
-        // now apply vector to normal buffer
-        _normals.push( vector[ 0 ], vector[ 1 ], vector[ 2 ] );
+          // now apply vector to normal buffer
+          _normals.push( vector[ 0 ], vector[ 1 ], vector[ 2 ] );
+        }
 
-        // uvs
-        _uvs.push( ix / (double) gridX );
-        _uvs.push( 1.0 - ( iy / (double) gridY ) );
+        if ( null != _uvs )
+        {
+          // uvs
+          _uvs.push( ix / (double) gridX );
+          _uvs.push( 1.0 - ( iy / (double) gridY ) );
+        }
 
         vertexCount++;
       }
