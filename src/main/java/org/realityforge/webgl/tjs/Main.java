@@ -25,6 +25,8 @@ public final class Main
   private final Camera _camera = new Camera();
   @Nonnull
   private final Light _light = new Light();
+  @Nonnull
+  private final Scene _scene = new Scene();
   private Mesh _mesh;
   private LightMesh _lightMesh;
   private double _angle;
@@ -143,7 +145,8 @@ public final class Main
       return;
     }
 
-    gl.clearColor( 0, 0, 0, 1 );
+    final Vector3f backgroundColor = _scene.getBackgroundColor();
+    gl.clearColor( backgroundColor.x, backgroundColor.y, backgroundColor.z, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
