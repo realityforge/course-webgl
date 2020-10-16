@@ -40,6 +40,7 @@ public final class Geometry
 
   public void uploadToCpu( @Nonnull final WebGL2RenderingContext gl )
   {
+    //TODO: Stop accepting gl context here and instead get it from global state
     uploadBuffers( gl );
     buildVertexArrayObject( gl );
   }
