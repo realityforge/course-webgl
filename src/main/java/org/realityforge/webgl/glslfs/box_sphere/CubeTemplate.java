@@ -18,10 +18,15 @@ final class CubeTemplate
     "uniform float u_time;\n" +
     "void main()\n" +
     "{\n" +
-    "  float delta = (sin(u_time) + 1.0) / 2.0;\n" +
+    // circle position is the position when pushed out to surface of sphere of specified radius
     "  float radius = 2.0;\n" +
     "  vec3 circlePosition = normalize(position) * radius;\n" +
+
+    // merge between the box to the sphere and back as time passes
+    "  float delta = (sin(u_time) + 1.0) / 2.0;\n" +
     "  vec3 finalPosition = mix(position, circlePosition, delta);\n" +
+
+    // Transform from objectspace to clipspace
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(finalPosition, 1);\n" +
     "}\n";
   @GLSL
