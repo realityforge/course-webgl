@@ -57,7 +57,11 @@ public final class Geometry
 
     for ( final Attribute attribute : _attributes )
     {
-      attribute.sendToGpu( gl );
+      // TODO: Maybe we should assume attribute is valid by here
+      if ( attribute.isLocationValid() )
+      {
+        attribute.sendToGpu( gl );
+      }
     }
 
     // If we could guarantee that another bind happens immediately
@@ -74,7 +78,11 @@ public final class Geometry
     }
     for ( final Attribute attribute : _attributes )
     {
-      attribute.getBuffer().uploadToGpu( gl );
+      // TODO: Maybe we should assume attribute is valid by here
+      if ( attribute.isLocationValid() )
+      {
+        attribute.getBuffer().uploadToGpu( gl );
+      }
     }
   }
 
