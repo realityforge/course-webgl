@@ -92,13 +92,10 @@ public final class Main
 
       _viewMatrix.identity();
 
-      gl.useProgram( _mesh.getMaterial().getProgram() );
       final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
-      _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, time );
+      _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, time );
 
       c_angle += 0.01;
-
-      _mesh.getGeometry().draw();
     } );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
