@@ -7,6 +7,7 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.geometries.PolyhedronGeometryFactory;
@@ -53,6 +54,8 @@ public final class Main
   private final Matrix4d _viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
+  @Nonnull
+  private final Scene _scene = new Scene();
   private Mesh _mesh;
   private final long startedAt = System.currentTimeMillis();
 
@@ -81,7 +84,8 @@ public final class Main
 
       CanvasUtil.resize( gl, canvas );
 
-      gl.clearColor( 0, 0, 0, 1 );
+      final Vector3f backgroundColor = _scene.getBackgroundColor();
+      gl.clearColor( backgroundColor.x, backgroundColor.y, backgroundColor.z, 1 );
       gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
