@@ -93,11 +93,13 @@ public final class Geometry
     return _attributes[ index ];
   }
 
-  public void draw( @Nonnull final WebGL2RenderingContext gl )
+  public void draw()
   {
     assert null != _vertexArrayObject;
-    AppState.get().bindVertexArrayObject( _vertexArrayObject );
+    final AppState appState = AppState.get();
+    appState.bindVertexArrayObject( _vertexArrayObject );
 
+    final WebGL2RenderingContext gl = appState.gl();
     if ( null == _indexBuffer )
     {
       gl.drawArrays( _mode, _offset, _count );

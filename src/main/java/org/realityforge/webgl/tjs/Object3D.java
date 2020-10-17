@@ -69,6 +69,6 @@ abstract class Object3D
     gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
 
     assert null != _geometry;
-    _geometry.draw( gl );
+    _geometry.draw();
   }
 }

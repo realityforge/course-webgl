@@ -6,6 +6,7 @@ import elemental3.HTMLCanvasElement;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
+import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Main
@@ -26,39 +27,46 @@ public final class Main
   public void onModuleLoad()
   {
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
-    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
+    final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    _mesh = CubeTemplate.create( gl );
-    _mesh.sendToGpu( gl );
+    appState.in( () -> {
+      final WebGL2RenderingContext gl = appState.gl();
+      _mesh = CubeTemplate.create( gl );
+      _mesh.sendToGpu( gl );
+    } );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
+  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    CanvasUtil.resize( gl, canvas );
+    appState.in( () -> {
+      final WebGL2RenderingContext gl = appState.gl();
 
-    gl.clearColor( 0, 0, 0, 1 );
-    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
-    gl.enable( WebGL2RenderingContext.DEPTH_TEST );
+      CanvasUtil.resize( gl, canvas );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
-    _modelMatrix.rotateY( c_angle );
-    _modelMatrix.rotateX( 0.25 );
+      gl.clearColor( 0, 0, 0, 1 );
+      gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
+      gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    _viewMatrix.identity();
+      _modelMatrix.identity();
+      _modelMatrix.translate( 0, 0, -7 );
+      _modelMatrix.rotateY( c_angle );
+      _modelMatrix.rotateX( 0.25 );
 
-    gl.useProgram( _mesh.getMaterial().getProgram() );
-    final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
-    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, time );
+      _viewMatrix.identity();
 
-    c_angle += 0.01;
+      gl.useProgram( _mesh.getMaterial().getProgram() );
+      final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
+      _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix, time );
 
-    _mesh.getGeometry().draw( gl );
+      c_angle += 0.01;
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+      _mesh.getGeometry().draw();
+    } );
+
+    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 }
