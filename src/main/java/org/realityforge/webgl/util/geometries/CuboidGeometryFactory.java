@@ -4,6 +4,8 @@ import elemental2.core.Float32Array;
 import elemental2.core.JsArray;
 import elemental2.core.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.intellij.lang.annotations.MagicConstant;
@@ -89,13 +91,21 @@ public final class CuboidGeometryFactory
     buildPlane( 0, 1, 2, 1, -1, width, height, depth, widthSegments, heightSegments, 4 );
     buildPlane( 0, 1, 2, -1, -1, width, height, -depth, widthSegments, heightSegments, 5 );
 
+    final List<Attribute> attributes = new ArrayList<>();
+    attributes.add( new Attribute( new Float32Buffer( new Float32Array( _vertices ), 3 ) ) );
+    if ( null != _normals )
+    {
+      attributes.add( new Attribute( new Float32Buffer( new Float32Array( _normals ), 3 ) ) );
+    }
+    if ( null != _uvs )
+    {
+      attributes.add( new Attribute( new Float32Buffer( new Float32Array( _uvs ), 2 ) ) );
+    }
     _geometry = new Geometry( mode,
                               0,
                               _indices.length,
                               new Uint16IndexBuffer( new Uint16Array( _indices ) ),
-                              new Attribute( new Float32Buffer( new Float32Array( _vertices ), 3 ) ),
-                              new Attribute( new Float32Buffer( new Float32Array( _normals ), 3 ) ),
-                              new Attribute( new Float32Buffer( new Float32Array( _uvs ), 2 ) ) );
+                              attributes.toArray( new Attribute[ 0 ] ) );
   }
 
   private void buildPlane( final int uIndex,
