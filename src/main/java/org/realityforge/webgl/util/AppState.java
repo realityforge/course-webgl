@@ -1,6 +1,7 @@
 package org.realityforge.webgl.util;
 
 import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -11,6 +12,8 @@ public final class AppState
   private final WebGL2RenderingContext _context;
   @Nullable
   private WebGLVertexArrayObject _vertexArrayObject;
+  @Nullable
+  private WebGLProgram _program;
 
   AppState( @Nonnull final WebGL2RenderingContext context )
   {
@@ -42,6 +45,15 @@ public final class AppState
   public WebGL2RenderingContext gl()
   {
     return _context;
+  }
+
+  public void useProgram( @Nonnull final WebGLProgram program )
+  {
+    if ( _program != program )
+    {
+      _program = program;
+      _context.useProgram( program );
+    }
   }
 
   public void bindVertexArrayObject( @Nonnull final WebGLVertexArrayObject vertexArrayObject )

@@ -6,6 +6,7 @@ import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
@@ -38,6 +39,7 @@ final class LightMesh
                @Nonnull final Matrix4d projectionMatrix,
                @Nonnull final Light light )
   {
+    AppState.get().useProgram( getProgram() );
     final Vector3f color = light.getColor();
     gl.uniform3f( _color.getLocation(), color.x, color.y, color.z );
 

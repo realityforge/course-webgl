@@ -166,8 +166,6 @@ public final class Main
       _camera.updateViewMatrix();
       final Matrix4d viewMatrix = _camera.getViewMatrix();
 
-      gl.useProgram( _mesh.getProgram() );
-
       final Matrix4d projectionMatrix = _camera.getProjection().getProjectionMatrix();
 
       // ModelMatrix should be calculated in the simulation loop rather than render loop
@@ -192,8 +190,6 @@ public final class Main
       _modelMatrix.rotateX( 0.25 );
 
       _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
-
-      gl.useProgram( _lightMesh.getProgram() );
 
       _modelMatrix.identity();
       _modelMatrix.translate( position.x, position.y, position.z );

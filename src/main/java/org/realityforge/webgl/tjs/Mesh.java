@@ -7,6 +7,7 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
@@ -89,10 +90,9 @@ final class Mesh
                @Nonnull final Light light,
                @Nonnull final Camera camera )
   {
+    AppState.get().useProgram( getProgram() );
     if ( !_uploaded )
     {
-      final WebGLProgram program = getProgram();
-      gl.useProgram( program );
       GL.bindTexture( gl, _textureData0, _textures[ 0 ], 0 );
       GL.bindTexture( gl, _textureData1, _textures[ 1 ], 1 );
       _uploaded = true;
