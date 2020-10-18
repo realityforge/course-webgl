@@ -237,9 +237,7 @@ public final class PolyhedronGeometryFactory
     // iterate over the entire buffer and apply the radius to each vertex
     for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
     {
-      vertex.x = _vertices.getAt( i );
-      vertex.y = _vertices.getAt( i + 1 );
-      vertex.z = _vertices.getAt( i + 2 );
+      loadFromVertexes( vertex, i );
 
       vertex.normalize().mul( radius );
 
@@ -249,15 +247,20 @@ public final class PolyhedronGeometryFactory
     }
   }
 
+  private void loadFromVertexes( @Nonnull final Vector3d vertex, final int index )
+  {
+    vertex.x = _vertices.getAt( index );
+    vertex.y = _vertices.getAt( index + 1 );
+    vertex.z = _vertices.getAt( index + 2 );
+  }
+
   private void generateUVs()
   {
     assert null != _uvs;
     final Vector3d vertex = new Vector3d();
     for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
     {
-      vertex.x = _vertices.getAt( i );
-      vertex.y = _vertices.getAt( i + 1 );
-      vertex.z = _vertices.getAt( i + 2 );
+      loadFromVertexes( vertex, i );
 
       final double u = azimuth( vertex ) / 2 / Math.PI + 0.5;
       final double v = inclination( vertex ) / Math.PI + 0.5;
