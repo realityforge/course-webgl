@@ -46,5 +46,7 @@
 
 ## Long Term Actions
 
-* Consider writing a tool that parses GLSL and adds explicit locations for all attributes and uniforms and generates
-  a descriptor to avoid the need to look up data at runtime.
+* Consider writing a tool that parses GLSL and adds explicit locations for all attributes and
+  uniforms and generates a descriptor to avoid the need to look up data at runtime. Also add a
+  pre-processor so that can combine multiple elements into a single shader. See how three.js does
+  it?
