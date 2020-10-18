@@ -7,7 +7,7 @@
 
 * Add orbit controls either by looking at `THREE.OrbitControls` or a-frame, or x, or y...
 
-* Complete the `Learn GLSL Shaders from Scratch` udemy course 
+* Complete the `Learn GLSL Shaders from Scratch` udemy course
 
 * Start experimenting with the lessons on `WebGL Academy`
 
