@@ -9,6 +9,7 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.intellij.lang.annotations.MagicConstant;
+import org.joml.Vector2d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
@@ -115,7 +116,7 @@ public final class PolyhedronGeometryFactory
     if ( null != _uvs )
     {
       // finally, create the uv data
-      //TODO: generateUVs();
+      generateUVs();
     }
 
     if ( null != _normals )
@@ -245,6 +246,118 @@ public final class PolyhedronGeometryFactory
       _vertices.setAt( i, vertex.x );
       _vertices.setAt( i + 1, vertex.y );
       _vertices.setAt( i + 2, vertex.z );
+    }
+  }
+
+  private void generateUVs()
+  {
+    assert null != _uvs;
+    final Vector3d vertex = new Vector3d();
+    for ( int i = 0; i < _vertices.length; i += 3 )
+    {
+      vertex.x = _vertices.getAt( i );
+      vertex.y = _vertices.getAt( i + 1 );
+      vertex.z = _vertices.getAt( i + 2 );
+
+      final double u = azimuth( vertex ) / 2 / Math.PI + 0.5;
+      final double v = inclination( vertex ) / Math.PI + 0.5;
+      _uvs.push( u, 1 - v );
+    }
+    correctUVs();
+    correctSeam();
+  }
+
+  private void correctUVs()
+  {
+    assert null != _uvs;
+    final Vector3d a = new Vector3d();
+    final Vector3d b = new Vector3d();
+    final Vector3d c = new Vector3d();
+
+    final Vector3d centroid = new Vector3d();
+
+    final Vector2d uvA = new Vector2d();
+    final Vector2d uvB = new Vector2d();
+    final Vector2d uvC = new Vector2d();
+
+    for ( int i = 0, j = 0; i < _vertices.length; i += 9, j += 6 )
+    {
+      a.set( _vertices.getAt( i ), _vertices.getAt( i + 1 ), _vertices.getAt( i + 2 ) );
+      b.set( _vertices.getAt( i + 3 ), _vertices.getAt( i + 4 ), _vertices.getAt( i + 5 ) );
+      c.set( _vertices.getAt( i + 6 ), _vertices.getAt( i + 7 ), _vertices.getAt( i + 8 ) );
+
+      uvA.set( _uvs.getAt( j ), _uvs.getAt( j + 1 ) );
+      uvB.set( _uvs.getAt( j + 2 ), _uvs.getAt( j + 3 ) );
+      uvC.set( _uvs.getAt( j + 4 ), _uvs.getAt( j + 5 ) );
+
+      centroid.set( a ).add( b ).add( c ).div( 3 );
+
+      final double azi = azimuth( centroid );
+
+      correctUV( uvA, j, a, azi );
+      correctUV( uvB, j + 2, b, azi );
+      correctUV( uvC, j + 4, c, azi );
+    }
+  }
+
+  private void correctUV( @Nonnull final Vector2d uv,
+                          final int stride,
+                          @Nonnull final Vector3d vector,
+                          final double azimuth )
+  {
+    assert null != _uvs;
+    if ( azimuth < 0 && 1 == uv.x )
+    {
+      _uvs.setAt( stride, uv.x - 1 );
+    }
+    if ( 0 == vector.x && 0 == vector.z )
+    {
+      _uvs.setAt( stride, azimuth / 2 / Math.PI + 0.5 );
+    }
+  }
+
+  // Angle around the Y axis, counter-clockwise when looking from above.
+  private double azimuth( @Nonnull final Vector3d vector )
+  {
+    return Math.atan2( vector.z, -vector.x );
+  }
+
+  // Angle above the XZ plane.
+  private double inclination( @Nonnull final Vector3d vector )
+  {
+    return Math.atan2( -vector.y, Math.sqrt( ( vector.x * vector.x ) + ( vector.z * vector.z ) ) );
+  }
+
+  private void correctSeam()
+  {
+    assert null != _uvs;
+    // handle case when face straddles the seam, see #3269
+    for ( int i = 0; i < _uvs.length; i += 6 )
+    {
+      // uv data of a single face
+      final double x0 = _uvs.getAt( i );
+      final double x1 = _uvs.getAt( i + 2 );
+      final double x2 = _uvs.getAt( i + 4 );
+
+      final double max = Math.max( x0, Math.max( x1, x2 ) );
+      final double min = Math.min( x0, Math.max( x1, x2 ) );
+
+      // 0.9 is somewhat arbitrary
+      if ( max > 0.9 && min < 0.1 )
+      {
+        if ( x0 < 0.2 )
+        {
+          _uvs.setAt( i, _uvs.getAt( i ) + 1 );
+        }
+        if ( x1 < 0.2 )
+        {
+          _uvs.setAt( i + 2, _uvs.getAt( i + 2 ) + 1 );
+        }
+        if ( x2 < 0.2 )
+        {
+          _uvs.setAt( i + 4, _uvs.getAt( i + 4 ) + 1 );
+        }
+      }
     }
   }
 
