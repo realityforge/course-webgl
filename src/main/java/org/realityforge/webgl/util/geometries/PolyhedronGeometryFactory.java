@@ -9,7 +9,7 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.intellij.lang.annotations.MagicConstant;
-import org.joml.Vector2d;
+import org.realityforge.vecmath.Vector2d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
