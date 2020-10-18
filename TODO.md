@@ -1,6 +1,10 @@
 
 ## Actions
 
+* Reimplement `Vector4d` in vecmath
+
+* Reimplement `Matrix4d` in vecmath
+
 * Add orbit controls either by looking at `THREE.OrbitControls` or a-frame, or x, or y...
 
 * Complete the `Learn GLSL Shaders from Scratch` udemy course 
@@ -12,6 +16,10 @@
 * Rewrite [model-viewer](https://github.com/google/model-viewer)
 
 * Reimplement each of https://github.com/lettier/3d-game-shaders-for-beginners
+
+* Figure out how to benchmark/performance profile
+
+* Figure out how to "unit test" - maybe render scene and look at pixels?
 
 ## References
 
