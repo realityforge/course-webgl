@@ -23,18 +23,6 @@ final class Mesh
     _material = Objects.requireNonNull( material );
   }
 
-  @Nonnull
-  Geometry getGeometry()
-  {
-    return _geometry;
-  }
-
-  @Nonnull
-  Material getMaterial()
-  {
-    return _material;
-  }
-
   void render( @Nonnull final Matrix4d modelMatrix,
                @Nonnull final Matrix4d viewMatrix,
                @Nonnull final Matrix4d projectionMatrix,
