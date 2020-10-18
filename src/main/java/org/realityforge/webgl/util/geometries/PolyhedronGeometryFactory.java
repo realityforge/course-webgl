@@ -160,7 +160,7 @@ public final class PolyhedronGeometryFactory
     final Vector3d c = new Vector3d();
 
     // iterate over all faces and apply a subdivison with the given detail value
-    for ( int i = 0; i < indices.length; i += 3 )
+    for ( int i = 0, iEnd = indices.length; i < indices.length; i += 3 )
     {
       // get the vertices of the face
       extractVertexByIndex( a, vertices, indices[ i ] );
@@ -212,7 +212,7 @@ public final class PolyhedronGeometryFactory
     // construct all of the faces
     for ( int i = 0; i < columns; i++ )
     {
-      for ( int j = 0; j < 2 * ( columns - i ) - 1; j++ )
+      for ( int j = 0, jEnd = 2 * ( columns - i ) - 1; j < jEnd; j++ )
       {
         final int k = j / 2;
         if ( 0 == j % 2 )
@@ -235,7 +235,7 @@ public final class PolyhedronGeometryFactory
   {
     final Vector3d vertex = new Vector3d();
     // iterate over the entire buffer and apply the radius to each vertex
-    for ( int i = 0; i < _vertices.length; i += 3 )
+    for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
     {
       vertex.x = _vertices.getAt( i );
       vertex.y = _vertices.getAt( i + 1 );
@@ -253,7 +253,7 @@ public final class PolyhedronGeometryFactory
   {
     assert null != _uvs;
     final Vector3d vertex = new Vector3d();
-    for ( int i = 0; i < _vertices.length; i += 3 )
+    for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
     {
       vertex.x = _vertices.getAt( i );
       vertex.y = _vertices.getAt( i + 1 );
@@ -280,7 +280,7 @@ public final class PolyhedronGeometryFactory
     final Vector2d uvB = new Vector2d();
     final Vector2d uvC = new Vector2d();
 
-    for ( int i = 0, j = 0; i < _vertices.length; i += 9, j += 6 )
+    for ( int i = 0, j = 0, iEnd = _vertices.length; i < iEnd; i += 9, j += 6 )
     {
       a.set( _vertices.getAt( i ), _vertices.getAt( i + 1 ), _vertices.getAt( i + 2 ) );
       b.set( _vertices.getAt( i + 3 ), _vertices.getAt( i + 4 ), _vertices.getAt( i + 5 ) );
@@ -332,7 +332,7 @@ public final class PolyhedronGeometryFactory
   {
     assert null != _uvs;
     // handle case when face straddles the seam, see #3269
-    for ( int i = 0; i < _uvs.length; i += 6 )
+    for ( int i = 0, iEnd = _uvs.length; i < iEnd; i += 6 )
     {
       // uv data of a single face
       final double x0 = _uvs.getAt( i );
