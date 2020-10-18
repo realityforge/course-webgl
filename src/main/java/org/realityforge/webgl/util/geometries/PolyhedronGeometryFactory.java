@@ -160,7 +160,7 @@ public final class PolyhedronGeometryFactory
     final Vector3d c = new Vector3d();
 
     // iterate over all faces and apply a subdivison with the given detail value
-    for ( int i = 0, iEnd = indices.length; i < indices.length; i += 3 )
+    for ( int i = 0, iEnd = indices.length; i < iEnd; i += 3 )
     {
       // get the vertices of the face
       extractVertexByIndex( a, vertices, indices[ i ] );
