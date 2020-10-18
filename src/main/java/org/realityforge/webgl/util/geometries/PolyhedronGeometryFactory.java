@@ -237,21 +237,12 @@ public final class PolyhedronGeometryFactory
     // iterate over the entire buffer and apply the radius to each vertex
     for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
     {
-      loadFromVertexes( vertex, i );
+      getVector3d( _vertices, i, vertex );
 
       vertex.normalize().mul( radius );
 
-      _vertices.setAt( i, vertex.x );
-      _vertices.setAt( i + 1, vertex.y );
-      _vertices.setAt( i + 2, vertex.z );
+      setVector3d( _vertices, i, vertex );
     }
-  }
-
-  private void loadFromVertexes( @Nonnull final Vector3d vertex, final int index )
-  {
-    vertex.x = _vertices.getAt( index );
-    vertex.y = _vertices.getAt( index + 1 );
-    vertex.z = _vertices.getAt( index + 2 );
   }
 
   private void generateUVs()
@@ -260,7 +251,7 @@ public final class PolyhedronGeometryFactory
     final Vector3d vertex = new Vector3d();
     for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
     {
-      loadFromVertexes( vertex, i );
+      getVector3d( _vertices, i, vertex );
 
       final double u = azimuth( vertex ) / 2 / Math.PI + 0.5;
       final double v = inclination( vertex ) / Math.PI + 0.5;
@@ -367,6 +358,22 @@ public final class PolyhedronGeometryFactory
   private void pushVertex( @Nonnull final Vector3d vertex )
   {
     _vertices.push( vertex.x, vertex.y, vertex.z );
+  }
+
+  private void setVector3d( @Nonnull final JsArray<Double> array, final int position, @Nonnull final Vector3d vector )
+  {
+    array.setAt( position, vector.x );
+    array.setAt( position + 1, vector.y );
+    array.setAt( position + 2, vector.z );
+  }
+
+  private void getVector3d( @Nonnull final JsArray<Double> array,
+                            final int position,
+                            @Nonnull final Vector3d vector )
+  {
+    vector.x = array.getAt( position );
+    vector.y = array.getAt( position + 1 );
+    vector.z = array.getAt( position + 2 );
   }
 
   private void extractVertexByIndex( @Nonnull final Vector3d vertex, @Nonnull final double[] vertices, final int index )
