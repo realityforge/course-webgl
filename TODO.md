@@ -50,3 +50,6 @@
   uniforms and generates a descriptor to avoid the need to look up data at runtime. Also add a
   pre-processor so that can combine multiple elements into a single shader. See how three.js does
   it?
+
+* Collect a library of functions to use in shaders. i.e. Perlin noise through various means such as
+  computationally or via textures etc.
