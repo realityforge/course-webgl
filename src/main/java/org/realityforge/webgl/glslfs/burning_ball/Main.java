@@ -59,10 +59,13 @@ public final class Main
   private static final String FRAGMENT_SHADER_SOURCE =
     "#version 300 es\n" +
     "precision mediump float;\n" +
+    "in vec3 v_normal;\n" +
+    "in vec2 v_uv;\n" +
+    "in float v_noise;\n" +
     "out vec4 color;\n" +
     "void main()\n" +
     "{\n" +
-    "  color = vec4(vec3(1.0), 1.0);" +
+    "  color = vec4(vec3(v_uv * ( 1.0 - 2.0 * v_noise ), 0.0 ), 1.0);" +
     "}\n";
   // Cube rotation angle
   private static double c_angle;
