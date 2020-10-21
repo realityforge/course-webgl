@@ -265,8 +265,7 @@ public final class Main
     // lookup vertically in the texture, using noise and offset
     // to get the right RGB colour
     "  vec2 uv = vec2( 0, 1.3 * v_noise + r );" +
-    "  vec3 tColor = texture( u_tex, uv ).rgb;\n" +
-    "  color = vec4( tColor, 1.0 );" +
+    "  color = vec4( texture( u_tex, uv ).rgb, 1.0 );\n" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
