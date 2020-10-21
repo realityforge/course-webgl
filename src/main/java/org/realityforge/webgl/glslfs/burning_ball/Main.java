@@ -52,7 +52,7 @@ public final class Main
     "  float displacement = b - 10.0 * v_noise;\n" +
 
     // move the position along the normal and transform it
-    "  vec3 newPosition = position + (normal *  0.1 * displacement);\n" +
+    "  vec3 newPosition = position + (normal *  displacement);\n" +
     "  v_uv = uv;\n" +
     "  v_normal = normal;\n" +
 
@@ -88,7 +88,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
+    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 1, 10000 );
 
     Global
       .globalThis()
@@ -100,7 +100,7 @@ public final class Main
         final String vertexShaderSource = "#version 300 es\n" + shaderPrefix + VERTEX_SHADER_SOURCE;
         final WebGL2RenderingContext gl = appState.gl();
         _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
-                                                                       1,
+                                                                       20,
                                                                        4,
                                                                        PolyhedronGeometryFactory.UVS |
                                                                        PolyhedronGeometryFactory.NORMALS ),
