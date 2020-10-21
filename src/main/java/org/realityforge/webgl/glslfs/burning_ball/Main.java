@@ -68,8 +68,6 @@ public final class Main
     "{\n" +
     "  color = vec4(vec3(v_uv * ( 1.0 - 2.0 * v_noise ), 0.0 ), 1.0);" +
     "}\n";
-  // Cube rotation angle
-  private static double c_angle;
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
   @Nonnull
@@ -129,15 +127,13 @@ public final class Main
 
       _modelMatrix.identity();
       _modelMatrix.translate( 0, 0, -7 );
-      _modelMatrix.rotateY( c_angle );
+      _modelMatrix.rotateY( 0 );
       _modelMatrix.rotateX( 0.25 );
 
       _viewMatrix.identity();
 
       final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
       _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, time );
-
-      c_angle += 0.01;
     } );
   }
 }
