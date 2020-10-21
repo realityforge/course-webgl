@@ -264,7 +264,7 @@ public final class Main
     "  float r = .01 * random( vec3( 12.9898, 78.233, 151.7182 ), 0.0 );\n" +
     // lookup vertically in the texture, using noise and offset
     // to get the right RGB colour
-    "  vec2 uv = vec2( 0, 1.3 * v_noise + r );" +
+    "  vec2 uv = vec2( 0, 1.3 * v_noise + r );\n" +
     "  color = vec4( texture( u_tex, uv ).rgb, 1.0 );\n" +
     "}\n";
   @Nonnull
