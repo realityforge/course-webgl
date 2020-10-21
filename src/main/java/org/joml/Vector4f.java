@@ -74,19 +74,6 @@ public class Vector4f implements Vector4fc {
     }
 
     /**
-     * Create a new {@link Vector4f} with the same values as <code>v</code>.
-     *
-     * @param v
-     *          the {@link Vector4ic} to copy the values from
-     */
-    public Vector4f(Vector4ic v) {
-        this.x = v.x();
-        this.y = v.y();
-        this.z = v.z();
-        this.w = v.w();
-    }
-
-    /**
      * Create a new {@link Vector4f} with the first three components from the
      * given <code>v</code> and the given <code>w</code>.
      *
@@ -225,21 +212,6 @@ public class Vector4f implements Vector4fc {
      * @return this
      */
     public Vector4f set(Vector4fc v) {
-        this.x = v.x();
-        this.y = v.y();
-        this.z = v.z();
-        this.w = v.w();
-        return this;
-    }
-
-    /**
-     * Set this {@link Vector4f} to the values of the given <code>v</code>.
-     *
-     * @param v
-     *          the vector whose values will be copied into this
-     * @return this
-     */
-    public Vector4f set(Vector4ic v) {
         this.x = v.x();
         this.y = v.y();
         this.z = v.z();
@@ -1571,14 +1543,6 @@ public class Vector4f implements Vector4fc {
         default:
             throw new IllegalArgumentException();
         }
-    }
-
-    public Vector4i get(int mode, Vector4i dest) {
-        dest.x = Math.roundUsing(this.x(), mode);
-        dest.y = Math.roundUsing(this.y(), mode);
-        dest.z = Math.roundUsing(this.z(), mode);
-        dest.w = Math.roundUsing(this.w(), mode);
-        return dest;
     }
 
     public Vector4f get(Vector4f dest) {
