@@ -39,7 +39,8 @@ public final class Main
     "  v_noise = 10.0 * -0.1 * turbulence(0.5 * normal * u_time);\n" +
 
     // get a 3d noise using the position, low frequency
-    "  float b = 5.0 * pnoise(0.05 * position, vec3(100.0));\n" +
+    // and add time to the noise parameters so it's animated
+    "  float b = 5.0 * pnoise(0.05 * position + vec3( 0.3 * u_time ), vec3(100.0));\n" +
     // compose both noises
     //b = 5.0 * cnoise(position.xy);//spiky
     //b = 5.0 * cnoise(vUv);//smooth
