@@ -214,7 +214,6 @@ public final class PolyhedronGeometryFactory
       extractVertexByIndex( c, vertices, indices[ i + 2 ] );
 
       // perform subdivision
-
       subdivideFace( a, b, c, detail );
     }
   }
