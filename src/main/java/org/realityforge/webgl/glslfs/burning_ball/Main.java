@@ -27,8 +27,6 @@ public final class Main
     "in vec3 normal;\n" +
     "in vec2 uv;\n" +
     "out float v_noise;\n" +
-    "out vec2 v_uv;\n" +
-    "out vec3 v_normal;\n" +
 
     "uniform mat4 modelMatrix;\n" +
     "uniform mat4 viewMatrix;\n" +
@@ -38,23 +36,21 @@ public final class Main
     "{\n" +
     // get a turbulent 3d noise using the normal, normal to high freq
     // and add time to the noise parameters so it's animated
-    "  v_noise = 10.0 * -0.1 * turbulence(0.5 * normal * u_time);\n" +
+    "  v_noise = 10.0 * -0.1 * turbulence(0.5 * normal + u_time);\n" +
 
     // get a 3d noise using the position, low frequency
     // and add time to the noise parameters so it's animated
-    "  float b = 5.0 * pnoise(0.05 * position + vec3( 0.3 * u_time ), vec3(100.0));\n" +
+    "  float b = 5.0 * pnoise(0.05 * position + vec3( 2.0 * u_time ), vec3(100.0));\n" +
     // compose both noises
     //b = 5.0 * cnoise(position.xy);//spiky
     //b = 5.0 * cnoise(vUv);//smooth
     //b = 5.0 * cnoise(position);//super-spiky
     //b = turbulence(position);//smooth
     //b = srnoise(vUv, 0.0);
-    "  float displacement = b - 10.0 * v_noise;\n" +
+    "  float displacement = b - v_noise;\n" +
 
     // move the position along the normal and transform it
     "  vec3 newPosition = position + (normal *  displacement);\n" +
-    "  v_uv = uv;\n" +
-    "  v_normal = normal;\n" +
 
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(newPosition, 1);\n" +
     "}\n";
@@ -62,13 +58,26 @@ public final class Main
   private static final String FRAGMENT_SHADER_SOURCE =
     "#version 300 es\n" +
     "precision mediump float;\n" +
-    "in vec3 v_normal;\n" +
-    "in vec2 v_uv;\n" +
     "in float v_noise;\n" +
+    "uniform sampler2D u_tex;\n" +
     "out vec4 color;\n" +
+
+    // <https://www.shadertoy.com/view/4dS3Wd>
+    // By Morgan McGuire @morgan3d, http://graphicscodex.com
+
+    //https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js/
+    "float random( vec3 scale, float seed ){\n" +
+    "  return fract( sin( dot( gl_FragCoord.xyz + seed, scale ) ) * 43758.5453 + seed ) ;\n" +
+    "}\n" +
     "void main()\n" +
     "{\n" +
-    "  color = vec4(vec3(v_uv * ( 1.0 - 2.0 * v_noise ), 0.0 ), 1.0);" +
+    // get a random offset
+    "  float r = .01 * random( vec3( 12.9898, 78.233, 151.7182 ), 0.0 );" +
+    // lookup vertically in the texture, using noise and offset
+    // to get the right RGB colour
+    "  vec2 uv = vec2( 0, 1.3 * v_noise + r );" +
+    "  vec3 tColor = texture( u_tex, uv ).rgb;\n" +
+    "  color = vec4( tColor, 1.0 );" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
@@ -99,13 +108,14 @@ public final class Main
         @GLSL
         final String vertexShaderSource = "#version 300 es\n" + shaderPrefix + VERTEX_SHADER_SOURCE;
         final WebGL2RenderingContext gl = appState.gl();
-        _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
-                                                                       20,
-                                                                       4,
                                                                        PolyhedronGeometryFactory.UVS |
-                                                                       PolyhedronGeometryFactory.NORMALS ),
-                          new Material( gl, vertexShaderSource, FRAGMENT_SHADER_SOURCE ) );
-        _mesh.sendToGpu( gl );
+        final Mesh mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
+                                                                                 20,
+                                                                                 4,
+                                                                                 PolyhedronGeometryFactory.NORMALS ),
+                                    new Material( gl, vertexShaderSource, FRAGMENT_SHADER_SOURCE ) );
+        mesh.sendToGpu( gl );
+        _mesh = mesh;
       } ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
@@ -139,7 +149,7 @@ public final class Main
 
       _viewMatrix.identity();
 
-      final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
+      final float time = ( System.currentTimeMillis() - startedAt ) * 0.00025F;
       _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, _texture, time );
     } );
   }
