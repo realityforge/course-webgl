@@ -101,6 +101,7 @@ public final class Main
         _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.LINE_STRIP,
                                                                        1,
                                                                        4,
+                                                                       PolyhedronGeometryFactory.UVS |
                                                                        PolyhedronGeometryFactory.NORMALS ),
                           new Material( gl, vertexShaderSource, FRAGMENT_SHADER_SOURCE ) );
         _mesh.sendToGpu( gl );
