@@ -4,4 +4,5 @@
   <entry-point class='org.realityforge.webgl.glslfs.burning_ball.Main'/>
 
   <source path=''/>
+  <public path='public'/>
 </module>
