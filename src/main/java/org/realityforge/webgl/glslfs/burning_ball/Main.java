@@ -3,6 +3,7 @@ package org.realityforge.webgl.glslfs.burning_ball;
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
+import elemental3.Response;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
@@ -18,24 +19,41 @@ public final class Main
   @GLSL
   @Nonnull
   private static final String VERTEX_SHADER_SOURCE =
-    "#version 300 es\n" +
+
+    "\n" +
     "in vec3 position;\n" +
+    "in vec3 normal;\n" +
+    "in vec2 uv;\n" +
+    "out float v_noise;\n" +
+    "out vec2 v_uv;\n" +
+    "out vec3 v_normal;\n" +
+
     "uniform mat4 modelMatrix;\n" +
     "uniform mat4 viewMatrix;\n" +
     "uniform mat4 projectionMatrix;\n" +
     "uniform float u_time;\n" +
     "void main()\n" +
     "{\n" +
-    // circle position is the position when pushed out to surface of sphere of specified radius
-    "  float radius = 2.0;\n" +
-    "  vec3 circlePosition = normalize(position) * radius;\n" +
+    // get a turbulent 3d noise using the normal, normal to high freq
+    // and add time to the noise parameters so it's animated
+    "  v_noise = 10.0 * -0.1 * turbulence(0.5 * normal * u_time);\n" +
 
-    // merge between the box to the sphere and back as time passes
-    "  float delta = (sin(u_time) + 1.0) / 2.0;\n" +
-    "  vec3 finalPosition = mix(position, circlePosition, delta);\n" +
+    // get a 3d noise using the position, low frequency
+    "  float b = 5.0 * pnoise(0.05 * position, vec3(100.0));\n" +
+    // compose both noises
+    //b = 5.0 * cnoise(position.xy);//spiky
+    //b = 5.0 * cnoise(vUv);//smooth
+    //b = 5.0 * cnoise(position);//super-spiky
+    //b = turbulence(position);//smooth
+    //b = srnoise(vUv, 0.0);
+    "  float displacement = b - 10.0 * v_noise;\n" +
 
-    // Transform from objectspace to clipspace
-    "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(finalPosition, 1);\n" +
+    // move the position along the normal and transform it
+    "  vec3 newPosition = position + (normal *  0.1 * displacement);\n" +
+    "  v_uv = uv;\n" +
+    "  v_normal = normal;\n" +
+
+    "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(newPosition, 1);\n" +
     "}\n";
   @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
@@ -67,12 +85,22 @@ public final class Main
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
 
-    appState.in( () -> {
-      final WebGL2RenderingContext gl = appState.gl();
-      _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.LINE_LOOP, 3, 4, 0 ),
-                        new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
-      _mesh.sendToGpu( gl );
-    } );
+    Global
+      .globalThis()
+      .fetch( "materials/noise.shader" )
+      .then( Response::text )
+      .thenAccept( shaderPrefix -> appState.in( () -> {
+        // This dynamic composition of shaders should be done at compile time
+        @GLSL
+        final String vertexShaderSource = "#version 300 es\n" + shaderPrefix + VERTEX_SHADER_SOURCE;
+        final WebGL2RenderingContext gl = appState.gl();
+        _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.LINE_STRIP,
+                                                                       1,
+                                                                       4,
+                                                                       PolyhedronGeometryFactory.NORMALS ),
+                          new Material( gl, vertexShaderSource, FRAGMENT_SHADER_SOURCE ) );
+        _mesh.sendToGpu( gl );
+      } ) );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
@@ -80,6 +108,10 @@ public final class Main
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    if ( null == _mesh )
+    {
+      return;
+    }
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
 
