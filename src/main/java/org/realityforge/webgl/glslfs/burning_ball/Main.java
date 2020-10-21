@@ -290,7 +290,7 @@ public final class Main
       final WebGL2RenderingContext gl = appState.gl();
       final Mesh mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
                                                                                20,
-                                                                               4,
+                                                                               20,
                                                                                PolyhedronGeometryFactory.NORMALS ),
                                   new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
       mesh.sendToGpu( gl );
