@@ -128,16 +128,17 @@ public final class PolyhedronGeometryFactory
 
     if ( NORMALS == ( NORMALS & options ) )
     {
-      _normals = new JsArray<>();
-      _normals.setLength( _vertices.length );
       if ( 0 == detail )
       {
         // flat normals
+        _normals = new JsArray<>();
+        _normals.setLength( _vertices.length );
         computeVertexNormals();
       }
       else
       {
         // smooth normals
+        _normals = _vertices.slice();
         normalizeNormals();
       }
     }
