@@ -32,7 +32,7 @@ public final class PolyhedronGeometryFactory
   @Nonnull
   private final JsArray<Double> _vertices = new JsArray<>();
   @Nullable
-  private final JsArray<Double> _normals;
+  private JsArray<Double> _normals;
   @Nullable
   private final JsArray<Double> _uvs;
   @Nonnull
@@ -104,7 +104,6 @@ public final class PolyhedronGeometryFactory
                                      final int detail,
                                      @MagicConstant( flags = { NORMALS, UVS } ) final int options )
   {
-    _normals = NORMALS == ( NORMALS & options ) ? new JsArray<>() : null;
     _uvs = UVS == ( UVS & options ) ? new JsArray<>() : null;
 
     // the subdivision creates the vertex buffer data
@@ -119,17 +118,19 @@ public final class PolyhedronGeometryFactory
       generateUVs();
     }
 
-    if ( null != _normals )
+    if ( NORMALS == ( NORMALS & options ) )
     {
+      _normals = new JsArray<>();
+      _normals.setLength( _vertices.length );
       if ( 0 == detail )
       {
         // flat normals
-        //TODO: computeVertexNormals();
+        computeVertexNormals();
       }
       else
       {
         // smooth normals
-        //TODO: normalizeNormals();
+        normalizeNormals();
       }
     }
 
@@ -352,6 +353,49 @@ public final class PolyhedronGeometryFactory
           _uvs.setAt( i + 4, _uvs.getAt( i + 4 ) + 1 );
         }
       }
+    }
+  }
+
+  private void computeVertexNormals()
+  {
+    assert null != _normals;
+
+    for ( int i = 0, iEnd = _normals.length; i < iEnd; i += 1 )
+    {
+      _normals.setAt( i, _vertices.getAt( i ) );
+    }
+    final Vector3d pA = new Vector3d();
+    final Vector3d pB = new Vector3d();
+    final Vector3d pC = new Vector3d();
+    final Vector3d cb = new Vector3d();
+    for ( int i = 0, iEnd = _normals.length - 9; i < iEnd; i += 3 )
+    {
+      // Load three vertexes to form triangle
+      getVector3d( _vertices, i, pA );
+      getVector3d( _vertices, i + 3, pB );
+      getVector3d( _vertices, i + 6, pC );
+
+      // Compute normal to face
+      cb.cross( pC.sub( pB ), pA.sub( pB ) );
+
+      setVector3d( _normals, i, cb );
+      setVector3d( _normals, i + 3, cb );
+      setVector3d( _normals, i + 6, cb );
+    }
+    normalizeNormals();
+  }
+
+  private void normalizeNormals()
+  {
+    assert null != _normals;
+    final Vector3d vertex = new Vector3d();
+    for ( int i = 0, iEnd = _normals.length; i < iEnd; i += 3 )
+    {
+      getVector3d( _normals, i, vertex );
+
+      vertex.normalize();
+
+      setVector3d( _normals, i, vertex );
     }
   }
 
