@@ -2,6 +2,7 @@ package org.realityforge.webgl.glslfs.burning_ball;
 
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
+import elemental3.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
@@ -26,6 +27,7 @@ final class Mesh
   void render( @Nonnull final Matrix4d modelMatrix,
                @Nonnull final Matrix4d viewMatrix,
                @Nonnull final Matrix4d projectionMatrix,
+               @Nonnull final WebGLTexture texture,
                final float time )
   {
     final AppState appState = AppState.get();
@@ -36,6 +38,11 @@ final class Mesh
     gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
     gl.uniform1f( _material.getTimeLocation(), time );
+
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
+    gl.uniform1i( _material.getTexLocation(), 0 );
+
     _geometry.draw();
   }
 

@@ -6,11 +6,13 @@ import elemental3.HTMLCanvasElement;
 import elemental3.Response;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
+import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
+import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.geometries.PolyhedronGeometryFactory;
 
 public final class Main
@@ -78,6 +80,7 @@ public final class Main
   private final Scene _scene = new Scene();
   private Mesh _mesh;
   private final long startedAt = System.currentTimeMillis();
+  private WebGLTexture _texture;
 
   @Override
   public void onModuleLoad()
@@ -104,6 +107,10 @@ public final class Main
                           new Material( gl, vertexShaderSource, FRAGMENT_SHADER_SOURCE ) );
         _mesh.sendToGpu( gl );
       } ) );
+    appState.in( () -> {
+      final WebGL2RenderingContext gl = appState.gl();
+      GL.loadTexture( gl, "img/explosion.png" ).thenAccept( texture -> _texture = texture );
+    } );
 
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
@@ -111,7 +118,7 @@ public final class Main
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
-    if ( null == _mesh )
+    if ( null == _mesh || null == _texture )
     {
       return;
     }
@@ -126,14 +133,14 @@ public final class Main
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
       _modelMatrix.identity();
-      _modelMatrix.translate( 0, 0, -7 );
+      _modelMatrix.translate( 0, 0, -100 );
       _modelMatrix.rotateY( 0 );
       _modelMatrix.rotateX( 0.25 );
 
       _viewMatrix.identity();
 
       final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
-      _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, time );
+      _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, _texture, time );
     } );
   }
 }
