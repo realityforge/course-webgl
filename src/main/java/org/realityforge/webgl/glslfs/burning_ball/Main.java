@@ -3,7 +3,6 @@ package org.realityforge.webgl.glslfs.burning_ball;
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
-import elemental3.Response;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLTexture;
@@ -287,24 +286,17 @@ public final class Main
 
     _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 1, 10000 );
 
-    Global
-      .globalThis()
-      .fetch( "materials/noise.shader" )
-      .then( Response::text )
-      .thenAccept( shaderPrefix -> appState.in( () -> {
-        // This dynamic composition of shaders should be done at compile time
-        @GLSL
-        final String vertexShaderSource = "#version 300 es\n" + shaderPrefix + VERTEX_SHADER_SOURCE;
-        final WebGL2RenderingContext gl = appState.gl();
-                                                                       PolyhedronGeometryFactory.UVS |
-        final Mesh mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
-                                                                                 20,
-                                                                                 4,
-                                                                                 PolyhedronGeometryFactory.NORMALS ),
-                                    new Material( gl, vertexShaderSource, FRAGMENT_SHADER_SOURCE ) );
-        mesh.sendToGpu( gl );
-        _mesh = mesh;
-      } ) );
+    appState.in( () -> {
+      // This dynamic composition of shaders should be done at compile time
+      final WebGL2RenderingContext gl = appState.gl();
+      final Mesh mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
+                                                                               20,
+                                                                               4,
+                                                                               PolyhedronGeometryFactory.NORMALS ),
+                                  new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
+      mesh.sendToGpu( gl );
+      _mesh = mesh;
+    } );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
       GL.loadTexture( gl, "img/explosion.png" ).thenAccept( texture -> _texture = texture );
