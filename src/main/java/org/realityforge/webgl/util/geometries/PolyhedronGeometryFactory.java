@@ -2,10 +2,13 @@ package org.realityforge.webgl.util.geometries;
 
 import elemental2.core.Float32Array;
 import elemental2.core.JsArray;
+import elemental2.core.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.intellij.lang.annotations.MagicConstant;
@@ -14,6 +17,7 @@ import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.Geometry;
+import org.realityforge.webgl.util.Uint16IndexBuffer;
 
 /**
  * This file was extracted from https://github.com/mrdoob/three.js/blob/1040b5c9718eeb1b011b770ba56217ced3ca6bcc/src/geometries/PolyhedronBufferGeometry.js
@@ -30,7 +34,9 @@ public final class PolyhedronGeometryFactory
   public static final int UVS = 0x02;
   // We use JsArray of doubles as this will autogrow and contains native js numbers
   @Nonnull
-  private final JsArray<Double> _vertices = new JsArray<>();
+  private JsArray<Double> _vertices = new JsArray<>();
+  @Nonnull
+  private final JsArray<Double> _indexes = new JsArray<>();
   @Nullable
   private JsArray<Double> _normals;
   @Nullable
@@ -112,6 +118,8 @@ public final class PolyhedronGeometryFactory
     // all vertices should lie on a conceptual sphere with a given radius
     applyRadius( radius );
 
+    mergeVertices();
+
     if ( null != _uvs )
     {
       // finally, create the uv data
@@ -147,9 +155,45 @@ public final class PolyhedronGeometryFactory
     }
     _geometry = new Geometry( mode,
                               0,
-                              _vertices.length / 3,
-                              null,
+                              _indexes.length,
+                              new Uint16IndexBuffer( new Uint16Array( _indexes ) ),
                               attributes.toArray( new Attribute[ 0 ] ) );
+  }
+
+  /*
+   * Checks for duplicate vertices with hashmap.
+   */
+  private void mergeVertices()
+  {
+    // map for looking up vertices by position coordinates (and making sure they are unique)
+
+    final Map<String, Double> verticesMap = new HashMap<>();
+    final JsArray<Double> newVertices = new JsArray<>();
+    int newVerticesCount = 0;
+
+    final int precisionPoints = 4; // number of decimal points, e.g. 4 for epsilon of 0.0001
+    final double precision = Math.pow( 10, precisionPoints );
+
+    final Vector3d v = new Vector3d();
+    for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
+    {
+      getVector3d( _vertices, i, v );
+
+      final String key =
+        Math.round( v.x * precision ) + "_" + Math.round( v.y * precision ) + "_" + Math.round( v.z * precision );
+
+      Double index = verticesMap.get( key );
+      if ( null == index )
+      {
+        index = (double) newVerticesCount;
+        verticesMap.put( key, index );
+        newVertices.push( v.x, v.y, v.z );
+        newVerticesCount++;
+      }
+
+      _indexes.push( index );
+    }
+    _vertices = newVertices;
   }
 
   private void subdivide( @Nonnull double[] vertices,
