@@ -234,7 +234,7 @@ public final class Main
     //b = 5.0 * cnoise(position);//super-spiky
     //b = turbulence(position);//smooth
     //b = srnoise(vUv, 0.0);
-    "  float displacement = b - v_noise;\n" +
+    "  float displacement = b - 10.0 * v_noise;\n" +
 
     // move the position along the normal and transform it
     "  vec3 newPosition = position + (normal *  displacement);\n" +
