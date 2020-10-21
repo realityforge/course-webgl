@@ -202,7 +202,6 @@ public final class Main
     "\n" +
     "in vec3 position;\n" +
     "in vec3 normal;\n" +
-    "in vec2 uv;\n" +
     "out float v_noise;\n" +
 
     "uniform mat4 modelMatrix;\n" +
