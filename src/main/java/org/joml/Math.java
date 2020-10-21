@@ -54,7 +54,6 @@ public class Math {
     static final float PI2_f = PI_f * 2.0f;
     static final double PIHalf = PI * 0.5;
     static final float PIHalf_f = (float) (PI * 0.5);
-    static final double PI_4 = PI * 0.25;
     static final double PI_INV = 1.0 / PI;
     private static final int lookupBits = Options.SIN_LOOKUP_BITS;
     private static final int lookupTableSize = 1 << lookupBits;
@@ -62,7 +61,7 @@ public class Math {
     private static final int lookupTableSizeWithMargin = lookupTableSize + 1;
     private static final float pi2OverLookupSize = PI2_f / lookupTableSize;
     private static final float lookupSizeOverPi2 = lookupTableSize / PI2_f;
-    private static final float sinTable[];
+    private static final float[] sinTable;
     static {
         if (Options.FASTMATH && Options.SIN_LOOKUP) {
             sinTable = new float[lookupTableSizeWithMargin];
@@ -73,91 +72,6 @@ public class Math {
         } else {
             sinTable = null;
         }
-    }
-
-    private static final double c1 = Double.longBitsToDouble(-4628199217061079772L);
-    private static final double c2 = Double.longBitsToDouble(4575957461383582011L);
-    private static final double c3 = Double.longBitsToDouble(-4671919876300759001L);
-    private static final double c4 = Double.longBitsToDouble(4523617214285661942L);
-    private static final double c5 = Double.longBitsToDouble(-4730215272828025532L);
-    private static final double c6 = Double.longBitsToDouble(4460272573143870633L);
-    private static final double c7 = Double.longBitsToDouble(-4797767418267846529L);
-
-    /**
-     * @author theagentd
-     */
-    static double sin_theagentd_arith(double x){
-        double xi = floor((x + PI_4) * PI_INV);
-        double x_ = x - xi * PI;
-        double sign = ((int)xi & 1) * -2 + 1;
-        double x2 = x_ * x_;
-        double sin = x_;
-        double tx = x_ * x2;
-        sin += tx * c1; tx *= x2;
-        sin += tx * c2; tx *= x2;
-        sin += tx * c3; tx *= x2;
-        sin += tx * c4; tx *= x2;
-        sin += tx * c5; tx *= x2;
-        sin += tx * c6; tx *= x2;
-        sin += tx * c7;
-        return sign * sin;
-    }
-
-    /**
-     * Reference: <a href="http://www.java-gaming.org/topics/joml-1-8-0-release/37491/msg/361718/view.html#msg361718">http://www.java-gaming.org/</a>
-     */
-    static double sin_roquen_arith(double x) {
-        double xi = Math.floor((x + PI_4) * PI_INV);
-        double x_ = x - xi * PI;
-        double sign = ((int)xi & 1) * -2 + 1;
-        double x2 = x_ * x_;
-
-        // code from sin_theagentd_arith:
-        // double sin = x_;
-        // double tx = x_ * x2;
-        // sin += tx * c1; tx *= x2;
-        // sin += tx * c2; tx *= x2;
-        // sin += tx * c3; tx *= x2;
-        // sin += tx * c4; tx *= x2;
-        // sin += tx * c5; tx *= x2;
-        // sin += tx * c6; tx *= x2;
-        // sin += tx * c7;
-        // return sign * sin;
-
-        double sin;
-        x_  = sign*x_;
-        sin =          c7;
-        sin = sin*x2 + c6;
-        sin = sin*x2 + c5;
-        sin = sin*x2 + c4;
-        sin = sin*x2 + c3;
-        sin = sin*x2 + c2;
-        sin = sin*x2 + c1;
-        return x_ + x_*x2*sin;
-    }
-
-    private static final double s5 = Double.longBitsToDouble(4523227044276562163L);
-    private static final double s4 = Double.longBitsToDouble(-4671934770969572232L);
-    private static final double s3 = Double.longBitsToDouble(4575957211482072852L);
-    private static final double s2 = Double.longBitsToDouble(-4628199223918090387L);
-    private static final double s1 = Double.longBitsToDouble(4607182418589157889L);
-
-    /**
-     * Reference: <a href="http://www.java-gaming.org/topics/joml-1-8-0-release/37491/msg/361815/view.html#msg361815">http://www.java-gaming.org/</a>
-     */
-    static double sin_roquen_9(double v) {
-      double i  = java.lang.Math.rint(v*PI_INV);
-      double x  = v - i * Math.PI;
-      double qs = 1-2*((int)i & 1);
-      double x2 = x*x;
-      double r;
-      x = qs*x;
-      r =        s5;
-      r = r*x2 + s4;
-      r = r*x2 + s3;
-      r = r*x2 + s2;
-      r = r*x2 + s1;
-      return x*r;
     }
 
     private static final double k1 = Double.longBitsToDouble(-4628199217061079959L);
@@ -421,10 +335,6 @@ public class Math {
 
     public static int round(float v) {
         return java.lang.Math.round(v);
-    }
-
-    public static double exp(double a) {
-        return java.lang.Math.exp(a);
     }
 
     public static boolean isFinite(double d) {
