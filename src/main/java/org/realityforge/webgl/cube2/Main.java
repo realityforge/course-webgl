@@ -45,8 +45,7 @@ public final class Main
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
+    _modelMatrix.translation( 0, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 

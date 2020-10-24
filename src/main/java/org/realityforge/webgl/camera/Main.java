@@ -151,8 +151,7 @@ public final class Main
 
     // ModelMatrix should be calculated in the simulation loop rather than render loop
     // but they are effectively the same in out app so we can just recalculate in render loop
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
+    _modelMatrix.translation( 0, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 

@@ -161,8 +161,7 @@ public final class Main
 
     // ModelMatrix should be calculated in the simulation loop rather than render loop
     // but they are effectively the same in out app so we can just recalculate in render loop
-    _modelMatrix.identity();
-    _modelMatrix.translate( 0, 0, -7 );
+    _modelMatrix.translation( 0, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
@@ -170,15 +169,13 @@ public final class Main
 
     _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( 3, 0, -7 );
+    _modelMatrix.translation( 3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
     _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( -3, 0, -7 );
+    _modelMatrix.translation( -3, 0, -7 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
 
@@ -187,8 +184,7 @@ public final class Main
     gl.useProgram( _lightMesh.getProgram() );
     gl.bindVertexArray( _lightMesh.getGeometry().getVao() );
 
-    _modelMatrix.identity();
-    _modelMatrix.translate( position.x, position.y, position.z );
+    _modelMatrix.translation( position.x, position.y, position.z );
     _modelMatrix.scale( 0.2 );
 
     _lightMesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light );
