@@ -6,8 +6,8 @@ import elemental3.HTMLCanvasElement;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.vecmath.Vector4d;
 import org.realityforge.webgl.util.CanvasUtil;
 
 public final class Main

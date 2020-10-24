@@ -4,8 +4,8 @@ import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
-import org.joml.Vector4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.vecmath.Vector4d;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
 
