@@ -21,7 +21,7 @@ public final class MathUtil
   @Nonnull
   public static Float32Array toFloat32Array( @Nonnull final Vector3f input )
   {
-    return new Float32Array( new double[]{ input.x, input.y, input.z } );
+    return new Float32Array( input.toArray() );
   }
 
   @Nonnull
