@@ -1,5 +1,6 @@
 package org.realityforge.webgl.cube2;
 
+import elemental2.core.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -38,10 +39,10 @@ final class Mesh
     gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
-    gl.uniform4fv( _material.getColorsLocation1(), MathUtil.toFloat32Array( colors[ 0 ] ) );
-    gl.uniform4fv( _material.getColorsLocation2(), MathUtil.toFloat32Array( colors[ 1 ] ) );
-    gl.uniform4fv( _material.getColorsLocation3(), MathUtil.toFloat32Array( colors[ 2 ] ) );
-    gl.uniform3fv( _material.getOffsetsLocation(), MathUtil.toFloat32Array( offsets ) );
+    gl.uniform4fv( _material.getColorsLocation1(), new Float32Array( colors[ 0 ].toArray() ) );
+    gl.uniform4fv( _material.getColorsLocation2(), new Float32Array( colors[ 1 ].toArray() ) );
+    gl.uniform4fv( _material.getColorsLocation3(), new Float32Array( colors[ 2 ].toArray() ) );
+    gl.uniform3fv( _material.getOffsetsLocation(), new Float32Array( offsets.toArray() ) );
   }
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
