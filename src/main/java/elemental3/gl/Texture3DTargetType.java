@@ -8,11 +8,9 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
     intValues = {
-        WebGL2RenderingContext.TEXTURE_2D,
-        WebGL2RenderingContext.TEXTURE_CUBE_MAP,
         WebGL2RenderingContext.TEXTURE_3D,
         WebGL2RenderingContext.TEXTURE_2D_ARRAY
     }
 )
-public @interface TextureTargetType {
+public @interface Texture3DTargetType {
 }
