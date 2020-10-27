@@ -5,6 +5,7 @@ import elemental3.ArrayBufferView;
 import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
 import elemental3.gl.UsageType;
+import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import javax.annotation.Nonnull;
@@ -19,6 +20,7 @@ public abstract class Buffer<T extends TypedArray>
   private final int _target;
   @UsageType
   private final int _usage;
+  @VertexDimensions
   private final int _dimension;
   @DataType
   private final int _type;
@@ -31,7 +33,7 @@ public abstract class Buffer<T extends TypedArray>
   protected Buffer( @Nonnull final T data,
                     @BufferTargetType final int target,
                     @UsageType final int usage,
-                    final int dimension,
+                    @VertexDimensions final int dimension,
                     @DataType final int type,
                     final boolean normalized,
                     final int stride,
@@ -69,6 +71,7 @@ public abstract class Buffer<T extends TypedArray>
     return _usage;
   }
 
+  @VertexDimensions
   public int getDimension()
   {
     return _dimension;
