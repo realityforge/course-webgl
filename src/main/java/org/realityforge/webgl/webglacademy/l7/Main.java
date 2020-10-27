@@ -48,6 +48,21 @@ public final class Main
     "in vec2 v_uv;\n" +
     "out vec4 o_color;\n" +
     "uniform sampler2D u_textureData;\n" +
+
+    // Hardcode all the light source parameters for the sake of convenience.
+    // We could pass the lighting parameters in if we wanted
+    "const vec3 source_ambient_color = vec3(1.0, 1.0, 1.0);\n" +
+    "const vec3 source_diffuse_color = vec3(1.0, 2.0, 4.0);\n" +
+    "const vec3 source_specular_color = vec3(1.0, 1.0, 1.0);\n" +
+    "const vec3 source_direction = vec3(0.0, 0.0, 1.0);\n" +
+
+    // Hardcode the material parameters. These could likewise be passed in
+    // but we don't do it at this stage
+    "const vec3 mat_ambient_color = vec3(0.3, 0.3, 0.3);\n" +
+    "const vec3 mat_diffuse_color = vec3(1.0, 1.0, 1.0);\n" +
+    "const vec3 mat_specular_color = vec3(1.0, 1.0, 1.0);\n" +
+    "const float mat_shininess = 10.0;\n" +
+
     "void main()\n" +
     "{\n" +
     "  o_color = texture(u_textureData, v_uv).rgba;" +
