@@ -16,6 +16,8 @@ define 'course-webgl' do
                :grim_annotations,
                :jsinterop_base,
                :jsinterop_annotations,
+               :guava,
+               :guava_gwt,
                :elemental2_core,
                :braincheck,
                :gwt_user

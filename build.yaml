@@ -25,3 +25,6 @@ artifacts:
   elemental2_core: org.realityforge.com.google.elemental2:elemental2-core:jar:2.27
 
   braincheck: org.realityforge.braincheck:braincheck:jar:1.29.0
+
+  guava: com.google.guava:guava:jar:r09
+  guava_gwt: com.google.guava:guava:jar:gwt:r09
