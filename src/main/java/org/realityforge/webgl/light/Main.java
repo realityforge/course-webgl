@@ -46,7 +46,7 @@ public final class Main
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
     _camera.getProjection()
-      .setPerspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 0.1, 10.0 );
+      .setPerspective( 45 * Math.PI / 180.0, canvas.clientWidth() / ( (double) canvas.clientHeight() ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
     _lightMesh = CubeTemplate.createLightCube( gl );

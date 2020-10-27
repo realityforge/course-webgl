@@ -283,7 +283,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.width / ( (double) canvas.height ), 1, 10000 );
+    _projectionMatrix.perspective( 45 * Math.PI / 180.0, canvas.clientWidth() / ( (double) canvas.clientHeight() ), 1, 10000 );
 
     appState.in( () -> {
       // This dynamic composition of shaders should be done at compile time
