@@ -3,7 +3,7 @@
 
 * Reimplement `Matrix4d` in vecmath
 
-* Add flgas to attribtus to determine whether they need to be uploaded and clear flag on next upload.
+* Add flags to attributes to determine whether they need to be uploaded and clear flag on next upload.
 
 * Add orbit controls either by looking at `THREE.OrbitControls` or a-frame, or x, or y...
 
