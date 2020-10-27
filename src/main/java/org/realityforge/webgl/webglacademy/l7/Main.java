@@ -65,7 +65,8 @@ public final class Main
 
     "void main()\n" +
     "{\n" +
-    "  o_color = texture(u_textureData, v_uv).rgba;" +
+    "  vec3 color = texture(u_textureData, v_uv).rgb;\n" +
+    "  o_color = vec4(color, 1.0);" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
