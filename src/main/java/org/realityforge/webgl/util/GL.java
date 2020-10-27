@@ -216,6 +216,17 @@ public final class GL
     } );
   }
 
+  @Nonnull
+  public static Promise<HTMLImageElement> loadImage( @Nonnull final String src )
+  {
+    return new Promise<>( ( resolveFn, rejectFn ) -> {
+      final HTMLImageElement image = new Image();
+      image.src = src;
+      image.onload = e -> resolveFn.resolve( image );
+      image.onerror = ( e, s, l, c, o ) -> rejectFn.reject( e );
+    } );
+  }
+
   /**
    * Describe specified WebGL2 type, returning "UNKNOWN" if supplied type matches no known value.
    *
