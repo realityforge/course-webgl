@@ -37,7 +37,7 @@ public final class Main
     "void main()\n" +
     "{\n" +
     "  v_uv = uv;\n" +
-    "  v_normal = normal;\n" +
+    "  v_normal = vec3(modelMatrix * vec4(normal, 0.));\n" +
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);\n" +
     "}\n";
   @GLSL
