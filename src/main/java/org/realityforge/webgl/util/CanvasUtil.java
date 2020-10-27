@@ -43,7 +43,10 @@ public final class CanvasUtil
       canvas.width = displayWidth;
       canvas.height = displayHeight;
 
-      gl.viewport( 0, 0, canvas.width, canvas.height );
+      // When you need to set the viewport to match the size of the canvas's
+      // drawingBuffer this will always be correct. See the reasoning at
+      //   https://webgl2fundamentals.org/webgl/lessons/webgl-anti-patterns.html#drawingbuffer
+      gl.viewport( 0, 0, gl.drawingBufferWidth(), gl.drawingBufferHeight() );
     }
   }
 
