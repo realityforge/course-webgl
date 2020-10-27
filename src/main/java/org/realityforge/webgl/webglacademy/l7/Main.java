@@ -66,7 +66,13 @@ public final class Main
     "void main()\n" +
     "{\n" +
     "  vec3 color = texture(u_textureData, v_uv).rgb;\n" +
-    "  o_color = vec4(color, 1.0);" +
+
+    // Ambient intensity is a function of the light and the material properties
+    "  vec3 ambientIntensity = source_ambient_color * mat_ambient_color;\n" +
+
+    // Calculate the final color
+    "  vec3 intensity = ambientIntensity;\n" +
+    "  o_color = vec4(intensity * color, 1.0);" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
