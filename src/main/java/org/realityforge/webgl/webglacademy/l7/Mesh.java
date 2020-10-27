@@ -3,7 +3,6 @@ package org.realityforge.webgl.webglacademy.l7;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;
-import elemental3.gl.WebGLUniformLocation;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
