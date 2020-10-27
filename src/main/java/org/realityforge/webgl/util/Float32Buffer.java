@@ -37,6 +37,17 @@ public final class Float32Buffer
                         final int dimension,
                         final boolean normalized,
                         final int stride,
+                        final int offset )
+  {
+    this( data, target, usage, dimension, normalized, stride, offset, null );
+  }
+
+  public Float32Buffer( @Nonnull final Float32Array data,
+                        @BufferTargetType final int target,
+                        @UsageType final int usage,
+                        final int dimension,
+                        final boolean normalized,
+                        final int stride,
                         final int offset,
                         @Nullable final WebGLBuffer buffer )
   {
