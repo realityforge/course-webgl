@@ -1,8 +1,6 @@
 
 ## Actions
 
-* Reimplement `Vector4d` in vecmath
-
 * Reimplement `Matrix4d` in vecmath
 
 * Add flgas to attribtus to determine whether they need to be uploaded and clear flag on next upload.
