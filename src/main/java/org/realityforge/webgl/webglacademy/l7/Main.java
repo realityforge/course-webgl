@@ -91,7 +91,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( 40 * Math.PI / 180.0, canvas.clientWidth() / ( (double) canvas.clientHeight() ), 1, 100 );
+    _projectionMatrix.perspective( 40 * Math.PI / 180.0, CanvasUtil.getAspect( canvas ), 1, 100 );
 
     Global
       .globalThis()

@@ -57,4 +57,11 @@ public final class CanvasUtil
     assert null != gl;
     return gl;
   }
+
+  public static double getAspect( @Nonnull final HTMLCanvasElement canvas )
+  {
+    // Don't use canvas.width and canvas.height as the actual size may be controlled by css
+    // See https://webgl2fundamentals.org/webgl/lessons/webgl-anti-patterns.html for more understanding
+    return canvas.clientWidth() / ( (double) canvas.clientHeight() );
+  }
 }
