@@ -1,6 +1,10 @@
 
 ## Actions
 
+* Remove Buffer subclasses and instead use factory methods to create buffers.
+
+* Rework the way we do buffers so we split it between `Buffer`, `BufferView` and `Accessor` as is done in glTf
+
 * Reimplement `Matrix4d` in vecmath
 
 * Add flags to attributes to determine whether they need to be uploaded and clear flag on next upload.
