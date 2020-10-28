@@ -15,4 +15,9 @@ public final class MathUtil
   {
     return new Float32Array( input.get( new double[ 16 ] ) );
   }
+
+  public static double degreesToRadians( final double degrees )
+  {
+    return degrees * Math.PI / 180.0;
+  }
 }

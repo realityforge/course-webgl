@@ -11,6 +11,7 @@ import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
+import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.geometries.PolyhedronGeometryFactory;
 
 public final class Main
@@ -85,7 +86,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( 45 * Math.PI / 180.0, CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+    _projectionMatrix.perspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     Global
       .globalThis()

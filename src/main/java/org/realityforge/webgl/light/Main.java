@@ -11,6 +11,7 @@ import org.joml.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
+import org.realityforge.webgl.util.MathUtil;
 
 public final class Main
   implements EntryPoint
@@ -46,7 +47,7 @@ public final class Main
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
     _camera.getProjection()
-      .setPerspective( 45 * Math.PI / 180.0, CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+      .setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
     _lightMesh = CubeTemplate.createLightCube( gl );

@@ -16,6 +16,7 @@ import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.Geometry;
+import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Uint32IndexBuffer;
 
 public final class Main
@@ -91,7 +92,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( 40 * Math.PI / 180.0, CanvasUtil.getAspect( canvas ), 1, 100 );
+    _projectionMatrix.perspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
     Global
       .globalThis()

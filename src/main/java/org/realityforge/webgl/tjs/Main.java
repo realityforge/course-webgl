@@ -12,6 +12,7 @@ import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
+import org.realityforge.webgl.util.MathUtil;
 
 public final class Main
   implements EntryPoint
@@ -48,7 +49,7 @@ public final class Main
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
     _camera.getProjection()
-      .setPerspective( 45 * Math.PI / 180.0, CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+      .setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
