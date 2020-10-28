@@ -159,8 +159,6 @@ public final class GL
 
     // Make sure we specify how perform interpolation between texture coordinates
 
-    // TODO: These methods should have integer enums defined for their target,
-    //  parameters and potentially param values
     gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
                       WebGL2RenderingContext.TEXTURE_MAG_FILTER,
                       magFilter );
