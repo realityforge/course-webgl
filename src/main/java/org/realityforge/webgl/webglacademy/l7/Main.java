@@ -71,8 +71,11 @@ public final class Main
     // Ambient intensity is a function of the light and the material properties
     "  vec3 ambientIntensity = source_ambient_color * mat_ambient_color;\n" +
 
+    // Diffuse lighting is proportional to the scalar product between point normal and lighting direction.
+    "  vec3 diffuseIntensity = source_diffuse_color * mat_diffuse_color * max(0.0, dot(v_normal, source_direction));\n" +
+
     // Calculate the final color
-    "  vec3 intensity = ambientIntensity;\n" +
+    "  vec3 intensity = ambientIntensity + diffuseIntensity;\n" +
     "  o_color = vec4(intensity * color, 1.0);" +
     "}\n";
   @Nonnull
