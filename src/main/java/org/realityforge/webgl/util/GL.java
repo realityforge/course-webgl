@@ -150,6 +150,7 @@ public final class GL
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
 
     // This is the call that pushes data across to GPU so will be "slow"
+    // TODO: Add typing for this call
     gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
                    0,
                    WebGL2RenderingContext.RGB,
