@@ -2450,9 +2450,11 @@ public class WebGL2RenderingContext {
    */
   public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
 
-  public native void texParameterf(@TextureTargetType int target, int pname, float param);
+  public native void texParameterf(@TextureTargetType int target, @TextureParameter int pname,
+      float param);
 
-  public native void texParameteri(@TextureTargetType int target, int pname, int param);
+  public native void texParameteri(@TextureTargetType int target, @TextureParameter int pname,
+      int param);
 
   public native void uniform1f(@Nullable WebGLUniformLocation location, float x);
 
