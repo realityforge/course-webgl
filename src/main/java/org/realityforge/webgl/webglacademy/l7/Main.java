@@ -31,6 +31,7 @@ public final class Main
     "in vec2 uv;\n" +
     "out vec2 v_uv;\n" +
     "out vec3 v_normal;\n" +
+    "out vec3 v_positionInCameraSpace;\n" +
     "uniform mat4 projectionMatrix;\n" +
     "uniform mat4 viewMatrix;\n" +
     "uniform mat4 modelMatrix;\n" +
@@ -40,6 +41,7 @@ public final class Main
     "  v_uv = uv;\n" +
     "  v_normal = vec3(modelMatrix * vec4(normal, 0.));\n" +
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);\n" +
+    "  v_positionInCameraSpace = (viewMatrix * modelMatrix * vec4(position, 1)).xyz;\n" +
     "}\n";
   @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
@@ -47,6 +49,7 @@ public final class Main
     "precision mediump float;\n" +
     "in vec3 v_normal;\n" +
     "in vec2 v_uv;\n" +
+    "in vec3 v_positionInCameraSpace;\n" +
     "out vec4 o_color;\n" +
     "uniform sampler2D u_textureData;\n" +
 
@@ -74,8 +77,15 @@ public final class Main
     // Diffuse lighting is proportional to the scalar product between point normal and lighting direction.
     "  vec3 diffuseIntensity = source_diffuse_color * mat_diffuse_color * max(0.0, dot(v_normal, source_direction));\n" +
 
+    // Specular lighting requires the view vector, ie the vector between the point and
+    // the camera. Unlike ambient and diffuse lighting, specular lighting depends on
+    // the position of the camera.
+    "  vec3 V = normalize(v_positionInCameraSpace);\n" +
+    "  vec3 R = reflect(source_direction, v_normal);\n" +
+    "  vec3 specularIntensity = source_specular_color * mat_specular_color * pow(max(dot(R,V),0.0), mat_shininess);\n" +
+
     // Calculate the final color
-    "  vec3 intensity = ambientIntensity + diffuseIntensity;\n" +
+    "  vec3 intensity = ambientIntensity + diffuseIntensity + specularIntensity;\n" +
     "  o_color = vec4(intensity * color, 1.0);" +
     "}\n";
   @Nonnull
