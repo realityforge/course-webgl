@@ -3,9 +3,12 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
@@ -213,4 +216,9 @@ public class HTMLSelectElement extends HTMLElement {
    */
   @Nullable
   public native Element item(int index);
+
+  @JsOverlay
+  public final void setAt(final int index, @Nullable final HTMLOptionElement option) {
+    Js.<JsArrayLike<HTMLOptionElement>>cast( this ).setAt( index, option );
+  }
 }

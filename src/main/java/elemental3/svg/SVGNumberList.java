@@ -2,9 +2,12 @@ package elemental3.svg;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The SVGNumberList defines a list of SVGNumber objects.
@@ -50,4 +53,9 @@ public class SVGNumberList {
 
   @Nonnull
   public native SVGNumber getItem(int index);
+
+  @JsOverlay
+  public final void setAt(final int index, @Nonnull final SVGNumber newItem) {
+    Js.<JsArrayLike<SVGNumber>>cast( this ).setAt( index, newItem );
+  }
 }

@@ -2,8 +2,12 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * This interface inherits the methods of its parent, HTMLCollection.
@@ -37,4 +41,9 @@ public class HTMLOptionsCollection extends HTMLCollection {
   public native void add(@Nonnull HTMLOptGroupElement element);
 
   public native void remove(int index);
+
+  @JsOverlay
+  public final void setAt(final int index, @Nullable final HTMLOptionElement option) {
+    Js.<JsArrayLike<HTMLOptionElement>>cast( this ).setAt( index, option );
+  }
 }

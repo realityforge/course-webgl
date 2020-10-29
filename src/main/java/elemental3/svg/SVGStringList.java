@@ -2,9 +2,12 @@ package elemental3.svg;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The SVGStringList defines a list of DOMString objects.
@@ -50,4 +53,9 @@ public class SVGStringList {
 
   @Nonnull
   public native String getItem(int index);
+
+  @JsOverlay
+  public final void setAt(final int index, @Nonnull final String newItem) {
+    Js.<JsArrayLike<String>>cast( this ).setAt( index, newItem );
+  }
 }

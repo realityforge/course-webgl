@@ -2,9 +2,12 @@ package elemental3.svg;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The SVGLengthList defines a list of SVGLength objects.
@@ -50,4 +53,9 @@ public class SVGLengthList {
 
   @Nonnull
   public native SVGLength getItem(int index);
+
+  @JsOverlay
+  public final void setAt(final int index, @Nonnull final SVGLength newItem) {
+    Js.<JsArrayLike<SVGLength>>cast( this ).setAt( index, newItem );
+  }
 }

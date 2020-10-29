@@ -4,9 +4,12 @@ import elemental3.DOMMatrixReadOnly;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The SVGTransformList defines a list of SVGTransform objects.
@@ -58,4 +61,9 @@ public class SVGTransformList {
 
   @Nonnull
   public native SVGTransform getItem(int index);
+
+  @JsOverlay
+  public final void setAt(final int index, @Nonnull final SVGTransform newItem) {
+    Js.<JsArrayLike<SVGTransform>>cast( this ).setAt( index, newItem );
+  }
 }
