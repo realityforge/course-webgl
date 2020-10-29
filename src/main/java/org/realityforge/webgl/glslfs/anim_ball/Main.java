@@ -12,6 +12,7 @@ import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.Scene;
 import org.realityforge.webgl.util.geometries.PolyhedronGeometryFactory;
 
 public final class Main

@@ -13,6 +13,7 @@ import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.Scene;
 
 public final class Main
   implements EntryPoint

@@ -1,4 +1,4 @@
-package org.realityforge.webgl.webglacademy.l8;
+package org.realityforge.webgl.util;
 
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Vector3f;

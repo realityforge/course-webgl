@@ -17,6 +17,7 @@ import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.Scene;
 import org.realityforge.webgl.util.Uint32IndexBuffer;
 
 public final class Main
