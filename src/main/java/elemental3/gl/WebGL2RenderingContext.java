@@ -2372,7 +2372,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei">WebGLRenderingContext.pixelStorei - MDN</a>
    */
-  public native void pixelStorei(int pname, int param);
+  public native void pixelStorei(@PixelStorageParameter int pname, int param);
 
   /**
    * The WebGLRenderingContext.polygonOffset() method of the WebGL API specifies the scale factors and units to calculate depth values.
