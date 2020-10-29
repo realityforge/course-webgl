@@ -1,9 +1,13 @@
 package elemental3.xr;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources.
@@ -29,4 +33,10 @@ public class XRInputSourceArray {
       name = "length"
   )
   public native int length();
+
+  @JsOverlay
+  @Nonnull
+  public final XRInputSource getAt(final int index) {
+    return Js.<JsArrayLike<XRInputSource>>cast( this ).getAt( index );
+  }
 }

@@ -15,6 +15,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
 
 /**
  * The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.
@@ -29,7 +30,7 @@ import jsinterop.base.Js;
 )
 public class Window extends EventTarget {
   /**
-   * Gets/sets the name of the window's browsing context.
+   * The Window.name property gets/sets the name of the window's browsing context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name">Window.name - MDN</a>
    */
@@ -1485,6 +1486,12 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/stop">Window.stop - MDN</a>
    */
   public native void stop();
+
+  @JsOverlay
+  @Nonnull
+  public final Object get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<Object>>cast( this ).get( name );
+  }
 
   /**
    * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.

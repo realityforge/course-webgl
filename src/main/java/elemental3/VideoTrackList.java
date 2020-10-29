@@ -8,6 +8,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The VideoTrackList interface is used to represent a list of the video tracks contained within a video element, with each track represented by a separate VideoTrack object in the list.
@@ -75,6 +76,12 @@ public class VideoTrackList extends EventTarget {
    */
   @Nullable
   public native VideoTrack getTrackById(@Nonnull String id);
+
+  @JsOverlay
+  @Nonnull
+  public final VideoTrack getAt(final int index) {
+    return Js.<JsArrayLike<VideoTrack>>cast( this ).getAt( index );
+  }
 
   @JsOverlay
   public final void addAddtrackListener(@Nonnull final TrackEventListener callback,

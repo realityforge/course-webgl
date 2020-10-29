@@ -11,6 +11,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
 
 /**
  * The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
@@ -1584,6 +1585,12 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln">Document.writeln - MDN</a>
    */
   public native void writeln(@Nonnull String... text);
+
+  @JsOverlay
+  @Nonnull
+  public final Object get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<Object>>cast( this ).get( name );
+  }
 
   public native void captureEvents();
 

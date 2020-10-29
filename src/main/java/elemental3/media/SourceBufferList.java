@@ -3,10 +3,14 @@ package elemental3.media;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects.
@@ -38,4 +42,10 @@ public class SourceBufferList extends EventTarget {
       name = "length"
   )
   public native int length();
+
+  @JsOverlay
+  @Nonnull
+  public final SourceBuffer getAt(final int index) {
+    return Js.<JsArrayLike<SourceBuffer>>cast( this ).getAt( index );
+  }
 }

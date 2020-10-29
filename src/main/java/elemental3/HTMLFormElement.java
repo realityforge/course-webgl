@@ -8,6 +8,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
+import jsinterop.base.JsPropertyMap;
 
 /**
  * The HTMLFormElement interface represents a form element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
@@ -154,6 +156,18 @@ public class HTMLFormElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit">HTMLFormElement.submit - MDN</a>
    */
   public native void submit();
+
+  @JsOverlay
+  @Nonnull
+  public final Element getAt(final int index) {
+    return Js.<JsArrayLike<Element>>cast( this ).getAt( index );
+  }
+
+  @JsOverlay
+  @Nonnull
+  public final RadioNodeListOrElementUnion get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<RadioNodeListOrElementUnion>>cast( this ).get( name );
+  }
 
   @JsOverlay
   public final void addFormdataListener(@Nonnull final FormDataEventListener callback,

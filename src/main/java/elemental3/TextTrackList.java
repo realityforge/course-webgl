@@ -8,6 +8,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The TextTrackList interface is used to represent a list of the text tracks defined by the track element, with each track represented by a separate textTrack object in the list.
@@ -65,6 +66,12 @@ public class TextTrackList extends EventTarget {
    */
   @Nullable
   public native TextTrack getTrackById(@Nonnull String id);
+
+  @JsOverlay
+  @Nonnull
+  public final TextTrack getAt(final int index) {
+    return Js.<JsArrayLike<TextTrack>>cast( this ).getAt( index );
+  }
 
   @JsOverlay
   public final void addAddtrackListener(@Nonnull final TrackEventListener callback,

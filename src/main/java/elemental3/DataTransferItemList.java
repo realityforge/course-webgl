@@ -3,9 +3,12 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList.
@@ -61,4 +64,10 @@ public class DataTransferItemList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/remove">DataTransferItemList.remove - MDN</a>
    */
   public native void remove(int index);
+
+  @JsOverlay
+  @Nonnull
+  public final DataTransferItem getAt(final int index) {
+    return Js.<JsArrayLike<DataTransferItem>>cast( this ).getAt( index );
+  }
 }
