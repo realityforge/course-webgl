@@ -1,6 +1,8 @@
 
 ## Actions
 
+* Vertex shaders should be in files named `X.vert` while fragment shaders are in files named `X.frag`
+
 * Remove Buffer subclasses and instead use factory methods to create buffers.
 
 * Rework the way we do buffers so we split it between `Buffer`, `BufferView` and `Accessor` as is done in glTf. The idea is that a `BufferView` can be uploaded once and bound to multiple `Accessor` and our code should implement this. Contrast this with what we are doing in `webglacademy/l7`
