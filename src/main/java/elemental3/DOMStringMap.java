@@ -36,6 +36,6 @@ public class DOMStringMap {
 
   @JsOverlay
   public final void delete(@Nonnull final String name) {
-     Js.<JsPropertyMap<?>>cast( this ).delete( name );
+    Js.<JsPropertyMap<?>>cast( this ).delete( name );
   }
 }
