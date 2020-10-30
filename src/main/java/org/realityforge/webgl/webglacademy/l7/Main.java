@@ -174,8 +174,8 @@ public final class Main
       }
       CanvasUtil.resize( gl, canvas );
 
-      final Vector3f backgroundColor = _scene.getBackgroundColor();
-      gl.clearColor( backgroundColor.x, backgroundColor.y, backgroundColor.z, 1 );
+      final Vector3f clearColor = _scene.getClearColor();
+      gl.clearColor( clearColor.x, clearColor.y, clearColor.z, 1 );
       gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 

@@ -6,16 +6,16 @@ import org.realityforge.vecmath.Vector3f;
 public final class Scene
 {
   @Nonnull
-  private final Vector3f _backgroundColor = new Vector3f( 0, 0, 0 );
+  private final Vector3f _clearColor = new Vector3f( 0, 0, 0 );
 
   @Nonnull
-  public Vector3f getBackgroundColor()
+  public Vector3f getClearColor()
   {
-    return _backgroundColor;
+    return _clearColor;
   }
 
-  public void setBackgroundColor( @Nonnull final Vector3f backgroundColor )
+  public void setClearColor( @Nonnull final Vector3f clearColor )
   {
-    _backgroundColor.set( backgroundColor );
+    _clearColor.set( clearColor );
   }
 }
