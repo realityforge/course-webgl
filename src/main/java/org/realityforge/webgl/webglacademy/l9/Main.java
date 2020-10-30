@@ -133,11 +133,13 @@ public final class Main
   private void refreshTexture( @Nonnull final WebGL2RenderingContext gl )
   {
     // Draw a random circle every refresh
-    final double r = Math.floor( 256 * Math.random() ), g = Math.floor( 256 * Math.random() ), b =
-      Math.floor( 256 * Math.random() );
+    final double r = Math.floor( 256 * Math.random() );
+    final double g = Math.floor( 256 * Math.random() );
+    final double b = Math.floor( 256 * Math.random() );
     _context2D.fillStyle = StringOrCanvasGradientOrCanvasPatternUnion.of( "rgb(" + r + "," + g + "," + b + ")" );
     final double radius = 100 * Math.random();
-    final double x = radius + Math.random() * ( 512 - 2 * radius ), y = radius + Math.random() * ( 512 - 2 * radius );
+    final double x = radius + Math.random() * ( 512 - 2 * radius );
+    final double y = radius + Math.random() * ( 512 - 2 * radius );
     _context2D.beginPath();
     _context2D.arc( x, y, radius, 0, 2 * Math.PI, false );
     _context2D.fill();
