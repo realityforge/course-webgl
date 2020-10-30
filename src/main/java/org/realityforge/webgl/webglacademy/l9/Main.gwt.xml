@@ -1,0 +1,8 @@
+<module rename-to='example'>
+  <inherits name='org.realityforge.webgl.Webgl'/>
+
+  <entry-point class='org.realityforge.webgl.webglacademy.l9.Main'/>
+
+  <source path=''/>
+  <public path='public'/>
+</module>
