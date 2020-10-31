@@ -2089,8 +2089,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D">WebGLRenderingContext.framebufferTexture2D - MDN</a>
    */
-  public native void framebufferTexture2D(int target, int attachment, int textarget,
-      @Nullable WebGLTexture texture, int level);
+  public native void framebufferTexture2D(@FramebufferTargetType int target, int attachment,
+      int textarget, @Nullable WebGLTexture texture, int level);
 
   /**
    * The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation.
