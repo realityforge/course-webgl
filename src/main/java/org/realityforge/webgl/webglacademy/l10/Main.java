@@ -34,8 +34,6 @@ public final class Main
     "in vec3 normal;\n" +
     "in vec2 uv;\n" +
     "out vec2 v_uv;\n" +
-    "out vec3 v_normal;\n" +
-    "out vec3 v_positionInCameraSpace;\n" +
     "uniform mat4 projectionMatrix;\n" +
     "uniform mat4 viewMatrix;\n" +
     "uniform mat4 modelMatrix;\n" +
@@ -43,9 +41,7 @@ public final class Main
     "void main()\n" +
     "{\n" +
     "  v_uv = uv;\n" +
-    "  v_normal = vec3(modelMatrix * vec4(normal, 0.));\n" +
     "  gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1);\n" +
-    "  v_positionInCameraSpace = (viewMatrix * modelMatrix * vec4(position, 1)).xyz;\n" +
     "}\n";
   @GLSL
   private static final String FRAGMENT_SHADER_SOURCE =
