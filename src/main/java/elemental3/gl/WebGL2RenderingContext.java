@@ -1776,14 +1776,16 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">WebGLRenderingContext.bindFramebuffer - MDN</a>
    */
-  public native void bindFramebuffer(int target, @Nullable WebGLFramebuffer framebuffer);
+  public native void bindFramebuffer(@FramebufferTargetType int target,
+      @Nullable WebGLFramebuffer framebuffer);
 
   /**
    * The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer">WebGLRenderingContext.bindRenderbuffer - MDN</a>
    */
-  public native void bindRenderbuffer(int target, @Nullable WebGLRenderbuffer renderbuffer);
+  public native void bindRenderbuffer(@RenderbufferTargetType int target,
+      @Nullable WebGLRenderbuffer renderbuffer);
 
   /**
    * The WebGLRenderingContext.bindTexture() method of the WebGL API binds a given WebGLTexture to a target (binding point).
