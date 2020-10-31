@@ -2081,7 +2081,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer">WebGLRenderingContext.framebufferRenderbuffer - MDN</a>
    */
-  public native void framebufferRenderbuffer(int target, int attachment, int renderbuffertarget,
+  public native void framebufferRenderbuffer(@FramebufferTargetType int target,
+      @FramebufferAttachment int attachment, int renderbuffertarget,
       @Nullable WebGLRenderbuffer renderbuffer);
 
   /**
@@ -3541,184 +3542,184 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nullable ArrayBufferView dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nullable ArrayBufferView dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Int8Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Int8Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Int16Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Int16Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Int32Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Int32Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint8Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint8Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint16Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint16Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint32Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint32Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint8ClampedArray dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint8ClampedArray dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Float32Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Float32Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Float64Array dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Float64Array dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull DataView dstData);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull DataView dstData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      int offset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, int offset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull ArrayBufferView dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull ArrayBufferView dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Int8Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Int8Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Int16Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Int16Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Int32Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Int32Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint8Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint8Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint16Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint16Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint32Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint32Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Uint8ClampedArray dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Uint8ClampedArray dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Float32Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Float32Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull Float64Array dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull Float64Array dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
    */
-  public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull DataView dstData, int dstOffset);
+  public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
+      @TexelDataType int type, @Nonnull DataView dstData, int dstOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3726,8 +3727,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nullable ArrayBufferView pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nullable ArrayBufferView pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3735,8 +3736,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Int8Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Int8Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3744,8 +3745,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Int16Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Int16Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3753,8 +3754,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Int32Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Int32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3762,8 +3763,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint8Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint8Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3771,8 +3772,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint16Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint16Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3780,8 +3781,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint32Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3789,8 +3790,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint8ClampedArray pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint8ClampedArray pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3798,8 +3799,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Float32Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Float32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3807,8 +3808,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Float64Array pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Float64Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3816,8 +3817,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull DataView pixels);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull DataView pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3825,72 +3826,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull TexImageSource source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull ImageBitmap source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull ImageData source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull HTMLImageElement source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull HTMLCanvasElement source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull HTMLVideoElement source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int format, @TexelDataType int type, @Nonnull OffscreenCanvas source);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      int pboOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull TexImageSource source);
 
   /**
@@ -3899,7 +3835,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull ImageBitmap source);
 
   /**
@@ -3908,7 +3844,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull ImageData source);
 
   /**
@@ -3917,7 +3853,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull HTMLImageElement source);
 
   /**
@@ -3926,7 +3862,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull HTMLCanvasElement source);
 
   /**
@@ -3935,7 +3871,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull HTMLVideoElement source);
 
   /**
@@ -3944,7 +3880,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
       @Nonnull OffscreenCanvas source);
 
   /**
@@ -3953,8 +3889,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull ArrayBufferView srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, int pboOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3962,8 +3898,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Int8Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3971,8 +3907,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Int16Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3980,8 +3916,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Int32Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3989,8 +3925,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint8Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -3998,8 +3934,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint16Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -4007,8 +3943,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint32Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -4016,8 +3952,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Uint8ClampedArray srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -4025,8 +3961,9 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Float32Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull ArrayBufferView srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -4034,8 +3971,9 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull Float64Array srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Int8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
@@ -4043,8 +3981,88 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
-      @Nonnull DataView srcData, int srcOffset);
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Int16Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Int32Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint8Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint16Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint32Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Uint8ClampedArray srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Float32Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull Float64Array srcData,
+      int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      @TextureInternalFormat int internalformat, int width, int height, int border,
+      @TextureFormat int format, @TexelDataType int type, @Nonnull DataView srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
