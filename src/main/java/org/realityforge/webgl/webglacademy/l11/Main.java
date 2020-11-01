@@ -67,6 +67,7 @@ public final class Main
     "const vec3 mat_diffuse_color = vec3(1.0, 1.0, 1.0);\n" +
     "const vec3 mat_specular_color = vec3(1.0, 1.0, 1.0);\n" +
     "const float mat_shininess = 10.0;\n" +
+    "const float mat_alpha = 0.5;\n" +
 
     "void main()\n" +
     "{\n" +
@@ -87,7 +88,7 @@ public final class Main
 
     // Calculate the final color
     "  vec3 intensity = ambientIntensity + diffuseIntensity + specularIntensity;\n" +
-    "  o_color = vec4(intensity * color, 1.0);" +
+    "  o_color = vec4(intensity * color, mat_alpha);" +
     "}\n";
   @Nonnull
   private final Matrix4d _modelMatrix = new Matrix4d();
@@ -192,6 +193,18 @@ public final class Main
       gl.depthFunc( WebGL2RenderingContext.LEQUAL );
 
       _backgroundMesh.render();
+
+      // Disable depth tests so that we render the other side of model
+      gl.disable( WebGL2RenderingContext.DEPTH_TEST );
+
+      gl.enable( WebGL2RenderingContext.BLEND );
+      gl.blendFunc( WebGL2RenderingContext.SRC_ALPHA, WebGL2RenderingContext.ONE );
+
+      // Do not render both sides of the model as we only care about the outside
+      // and should nto render the same surface twice which can result in triangulation
+      // as one side is culled or not
+      gl.enable( WebGL2RenderingContext.CULL_FACE );
+      gl.frontFace( WebGL2RenderingContext.CCW );
 
       _modelMatrix.translation( 0, -4, -20 );
       _modelMatrix.scale( 0.5 );
