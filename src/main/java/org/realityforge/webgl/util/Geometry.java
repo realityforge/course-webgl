@@ -68,6 +68,18 @@ public final class Geometry
       }
     }
     appState.bindVertexArrayObject( null );
+    for ( final Attribute attribute : _attributes )
+    {
+      // TODO: Maybe we should assume attribute is valid by here
+      if ( attribute.isLocationValid() )
+      {
+        // TODO: It is unclear whether there is any value in performing disable here?
+        //  did this as part of experiment to detect errors but left it in to potentially
+        //  guard against similar errors. Maybe this should be optionally done behind compile
+        //  time constant
+        gl.disableVertexAttribArray( attribute.getLocation() );
+      }
+    }
     _vertexArrayObject = vertexArrayObject;
   }
 

@@ -62,6 +62,14 @@ final class Mesh
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture );
     gl.uniform1i( _material.getTextureLocation(), 0 );
     _geometry.draw();
+    // TODO: It is unclear whether nulling state is of value or should only be done
+    //  when we cached value in appState differs from what we expect. Possible appState
+    //  should contain  list of textures bound and could unbind them when they need to
+    //  be unbound?. We could perform a appState.reset() at end of frame or similar to
+    //  try and track down stray state? Or maybe the geometry/material objects should
+    //  just manage their own state?
+    appState.useProgram( null );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, null );
   }
 
   boolean areTexturesLoaded()
