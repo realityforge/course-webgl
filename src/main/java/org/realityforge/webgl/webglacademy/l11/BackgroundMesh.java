@@ -43,7 +43,7 @@ final class BackgroundMesh
                      image );
       gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
                         WebGL2RenderingContext.TEXTURE_MAG_FILTER,
-                        WebGL2RenderingContext.LINEAR );
+                        WebGL2RenderingContext.LINEAR_MIPMAP_LINEAR );
       gl.texParameteri( WebGL2RenderingContext.TEXTURE_2D,
                         WebGL2RenderingContext.TEXTURE_MIN_FILTER,
                         WebGL2RenderingContext.NEAREST_MIPMAP_LINEAR );
