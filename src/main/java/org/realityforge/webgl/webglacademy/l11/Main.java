@@ -99,6 +99,7 @@ public final class Main
   private final Scene _scene = new Scene();
   private Mesh _mesh;
   private double _angle;
+  private BackgroundMesh _backgroundMesh;
 
   @Override
   public void onModuleLoad()
@@ -156,13 +157,18 @@ public final class Main
         _mesh = new Mesh( gl, geometry, new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
       } ) );
 
+    appState.in( () -> _backgroundMesh = new BackgroundMesh( appState.gl() ) );
+
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
     Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
-    if ( null == _mesh || !_mesh.areTexturesLoaded() )
+    if ( null == _mesh ||
+         !_mesh.areTexturesLoaded() ||
+         null == _backgroundMesh ||
+         !_backgroundMesh.areTexturesLoaded() )
     {
       return;
     }
@@ -172,12 +178,19 @@ public final class Main
       {
         _mesh.sendToGpu( gl );
       }
+      if ( _backgroundMesh.needsUploadToGpu() )
+      {
+        _backgroundMesh.sendToGpu( gl );
+      }
+
       CanvasUtil.resize( gl, canvas );
 
       final Vector3f clearColor = _scene.getClearColor();
       gl.clearColor( clearColor.x, clearColor.y, clearColor.z, 1 );
       gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
+
+      _backgroundMesh.render();
 
       _modelMatrix.translation( 0, -4, -20 );
       _modelMatrix.rotateY( _angle );
