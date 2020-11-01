@@ -67,6 +67,7 @@ public final class Geometry
         attribute.sendToGpu( gl );
       }
     }
+    appState.bindVertexArrayObject( null );
     _vertexArrayObject = vertexArrayObject;
   }
 
@@ -108,5 +109,6 @@ public final class Geometry
     {
       gl.drawElements( _mode, _count, _indexBuffer.getType(), _offset );
     }
+    appState.bindVertexArrayObject( null );
   }
 }
