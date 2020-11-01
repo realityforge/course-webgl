@@ -27,7 +27,8 @@
 
 * Figure out how to benchmark/performance profile
 
-* Figure out how to "unit test" - maybe render scene and look at pixels?
+* Figure out how to "unit test" - maybe render scene and look at pixels? Should also query the API
+  and make sure the state is as expected. This includes which attributePointers etc are enabled/disabled etc.
 
 ## References
 
