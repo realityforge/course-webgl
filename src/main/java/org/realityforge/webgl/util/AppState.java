@@ -56,7 +56,7 @@ public final class AppState
     }
   }
 
-  public void bindVertexArrayObject( @Nonnull final WebGLVertexArrayObject vertexArrayObject )
+  public void bindVertexArrayObject( @Nullable final WebGLVertexArrayObject vertexArrayObject )
   {
     if ( _vertexArrayObject != vertexArrayObject )
     {
