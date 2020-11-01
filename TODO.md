@@ -5,6 +5,8 @@
 
 * Remove Buffer subclasses and instead use factory methods to create buffers.
 
+* Do we need to call `disableVertexAttribArray` after rendering mesh?
+
 * Rework the way we do buffers so we split it between `Buffer`, `BufferView` and `Accessor` as is done in glTf. The idea is that a `BufferView` can be uploaded once and bound to multiple `Accessor` and our code should implement this. Contrast this with what we are doing in `webglacademy/l7`
 
 * Reimplement `Matrix4d` in vecmath
