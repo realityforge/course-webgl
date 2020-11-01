@@ -4,5 +4,4 @@
   <entry-point class='org.realityforge.webgl.webglacademy.l7.Main'/>
 
   <source path=''/>
-  <public path='public'/>
 </module>
