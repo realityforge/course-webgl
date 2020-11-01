@@ -47,7 +47,7 @@ public final class AppState
     return _context;
   }
 
-  public void useProgram( @Nonnull final WebGLProgram program )
+  public void useProgram( @Nullable final WebGLProgram program )
   {
     if ( _program != program )
     {
