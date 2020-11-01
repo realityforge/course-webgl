@@ -18,7 +18,7 @@ final class BackgroundMaterial
     "out vec2 v_uv;\n" +
     "void main()\n" +
     "{\n" +
-    "  gl_Position = vec4(a_position, -1.0, 1.0);\n" +
+    "  gl_Position = vec4(a_position, 1.0, 1.0);\n" +
     //v_uv must be between 0 and 1;
     "  v_uv = 0.5 * (a_position + vec2(1.0, 1.0));\n" +
     "}";

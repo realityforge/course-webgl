@@ -189,6 +189,7 @@ public final class Main
       gl.clearColor( clearColor.x, clearColor.y, clearColor.z, 1 );
       gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
+      gl.depthFunc( WebGL2RenderingContext.LEQUAL );
 
       _backgroundMesh.render();
 
