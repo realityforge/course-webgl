@@ -1820,7 +1820,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFunc">WebGLRenderingContext.blendFunc - MDN</a>
    */
-  public native void blendFunc(int sfactor, int dfactor);
+  public native void blendFunc(@BlendFactor int sfactor, @BlendFactor int dfactor);
 
   /**
    * The WebGLRenderingContext.blendFuncSeparate() method of the WebGL API defines which function is used for blending pixel arithmetic for RGB and alpha components separately.
