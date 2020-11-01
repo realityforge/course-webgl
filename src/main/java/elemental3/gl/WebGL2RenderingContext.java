@@ -2024,7 +2024,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable">WebGLRenderingContext.disable - MDN</a>
    */
-  public native void disable(@TexelDataType int cap);
+  public native void disable(@Capability int cap);
 
   /**
    * The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position.
@@ -2053,7 +2053,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable">WebGLRenderingContext.enable - MDN</a>
    */
-  public native void enable(@TexelDataType int cap);
+  public native void enable(@Capability int cap);
 
   /**
    * The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.
@@ -2320,7 +2320,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isEnabled">WebGLRenderingContext.isEnabled - MDN</a>
    */
-  public native boolean isEnabled(@TexelDataType int cap);
+  public native boolean isEnabled(@Capability int cap);
 
   /**
    * The WebGLRenderingContext.isFramebuffer() method of the WebGL API returns true if the passed WebGLFramebuffer is valid and false otherwise.
