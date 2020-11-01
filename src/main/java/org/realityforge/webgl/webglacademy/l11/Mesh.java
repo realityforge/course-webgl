@@ -58,6 +58,9 @@ final class Mesh
     gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
     gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
     gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture );
+    gl.uniform1i( _material.getTextureLocation(), 0 );
     _geometry.draw();
   }
 
