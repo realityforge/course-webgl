@@ -50,8 +50,7 @@ final class Mesh
     appState.useProgram( program );
 
     _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "normal" ) );
-    _geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "uv" ) );
+    _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "uv" ) );
     _geometry.uploadToCpu();
   }
 }
