@@ -194,6 +194,7 @@ public final class Main
       _backgroundMesh.render();
 
       _modelMatrix.translation( 0, -4, -20 );
+      _modelMatrix.scale( 0.5 );
       _modelMatrix.rotateY( _angle );
       _modelMatrix.rotateX( 0.25 );
 
