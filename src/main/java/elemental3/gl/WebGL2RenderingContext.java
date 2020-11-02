@@ -2455,27 +2455,77 @@ public class WebGL2RenderingContext {
    */
   public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
 
+  /**
+   * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
+   */
   public native void texParameterf(@TextureTargetType int target, @TextureParameter int pname,
       float param);
 
+  /**
+   * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
+   */
   public native void texParameteri(@TextureTargetType int target, @TextureParameter int pname,
       int param);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1f(@Nullable WebGLUniformLocation location, float x);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1i(@Nullable WebGLUniformLocation location, int x);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2f(@Nullable WebGLUniformLocation location, float x, float y);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2i(@Nullable WebGLUniformLocation location, int x, int y);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3f(@Nullable WebGLUniformLocation location, float x, float y, float z);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3i(@Nullable WebGLUniformLocation location, int x, int y, int z);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4f(@Nullable WebGLUniformLocation location, float x, float y, float z,
       float w);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4i(@Nullable WebGLUniformLocation location, int x, int y, int z, int w);
 
   /**
@@ -2492,44 +2542,144 @@ public class WebGL2RenderingContext {
    */
   public native void validateProgram(@Nonnull WebGLProgram program);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib1f(int index, float x);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib1fv(int index, @Nonnull Float32List values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib1fv(int index, @Nonnull Float32Array values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib1fv(int index, @Nonnull JsArray<Double> values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib1fv(int index, @Nonnull Double[] values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib2f(int index, float x, float y);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib2fv(int index, @Nonnull Float32List values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib2fv(int index, @Nonnull Float32Array values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib2fv(int index, @Nonnull JsArray<Double> values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib2fv(int index, @Nonnull Double[] values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib3f(int index, float x, float y, float z);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib3fv(int index, @Nonnull Float32List values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib3fv(int index, @Nonnull Float32Array values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib3fv(int index, @Nonnull JsArray<Double> values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib3fv(int index, @Nonnull Double[] values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib4f(int index, float x, float y, float z, float w);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib4fv(int index, @Nonnull Float32List values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib4fv(int index, @Nonnull Float32Array values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib4fv(int index, @Nonnull JsArray<Double> values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttrib4fv(int index, @Nonnull Double[] values);
 
   /**
@@ -4389,379 +4539,1039 @@ public class WebGL2RenderingContext {
       int yoffset, int width, int height, int format, @TexelDataType int type,
       @Nonnull DataView srcData, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
@@ -6541,149 +7351,409 @@ public class WebGL2RenderingContext {
   public native void transformFeedbackVaryings(@Nonnull WebGLProgram program,
       @Nonnull String[] varyings, int bufferMode);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1ui(@Nullable WebGLUniformLocation location, int v0);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2ui(@Nullable WebGLUniformLocation location, int v0, int v1);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3ui(@Nullable WebGLUniformLocation location, int v0, int v1, int v2);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4ui(@Nullable WebGLUniformLocation location, int v0, int v1, int v2,
       int v3);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data,
       int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Double[] data);
 
   /**
@@ -6694,219 +7764,579 @@ public class WebGL2RenderingContext {
   public native void uniformBlockBinding(@Nonnull WebGLProgram program, int uniformBlockIndex,
       int uniformBlockBinding);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset, int srcLength);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data, int srcOffset);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
 
+  /**
+   * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
+   */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Double[] data);
 
@@ -6917,24 +8347,74 @@ public class WebGL2RenderingContext {
    */
   public native void vertexAttribDivisor(int index, int divisor);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4i(int index, int x, int y, int z, int w);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4iv(int index, @Nonnull Int32List values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4iv(int index, @Nonnull Int32Array values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4iv(int index, @Nonnull JsArray<Double> values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4iv(int index, @Nonnull Double[] values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4ui(int index, int x, int y, int z, int w);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4uiv(int index, @Nonnull Uint32List values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4uiv(int index, @Nonnull Uint32Array values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4uiv(int index, @Nonnull JsArray<Double> values);
 
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   */
   public native void vertexAttribI4uiv(int index, @Nonnull Double[] values);
 
   /**
