@@ -34,6 +34,7 @@ import jsinterop.base.Any;
  * The WebGLRenderingContext interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML canvas element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext - MDN</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14">The definition of 'WebGLRenderingContext' in WebGL 1.0.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -937,6 +938,7 @@ public class WebGLRenderingContext {
    * The read-only WebGLRenderingContext.drawingBufferHeight property represents the actual height of the current drawing buffer. It should match the height attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested height.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferHeight">WebGLRenderingContext.drawingBufferHeight - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferHeight">The definition of 'WebGLRenderingContext.drawingBufferHeight' in WebGL 1.0.</a>
    */
   @JsProperty(
       name = "drawingBufferHeight"
@@ -947,6 +949,7 @@ public class WebGLRenderingContext {
    * The read-only WebGLRenderingContext.drawingBufferWidth property represents the actual width of the current drawing buffer. It should match the width attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested width.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferWidth">WebGLRenderingContext.drawingBufferWidth - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferWidth">The definition of 'WebGLRenderingContext.drawingBufferWidth' in WebGL 1.0.</a>
    */
   @JsProperty(
       name = "drawingBufferWidth"
@@ -957,6 +960,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, int size, int usage);
 
@@ -964,6 +970,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nullable BufferSource data, int usage);
 
@@ -971,6 +980,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull ArrayBufferView data, int usage);
 
@@ -978,6 +990,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Int8Array data, int usage);
 
@@ -985,6 +1000,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Int16Array data, int usage);
 
@@ -992,6 +1010,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Int32Array data, int usage);
 
@@ -999,6 +1020,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Uint8Array data, int usage);
 
@@ -1006,6 +1030,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Uint16Array data, int usage);
 
@@ -1013,6 +1040,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Uint32Array data, int usage);
 
@@ -1020,6 +1050,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Uint8ClampedArray data, int usage);
 
@@ -1027,6 +1060,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Float32Array data, int usage);
 
@@ -1034,6 +1070,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull Float64Array data, int usage);
 
@@ -1041,6 +1080,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull DataView data, int usage);
 
@@ -1048,6 +1090,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in OpenGL ES 3.0.</a>
    */
   public native void bufferData(int target, @Nonnull ArrayBuffer data, int usage);
 
@@ -1055,6 +1100,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull BufferSource data);
 
@@ -1062,6 +1110,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull ArrayBufferView data);
 
@@ -1069,6 +1120,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Int8Array data);
 
@@ -1076,6 +1130,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Int16Array data);
 
@@ -1083,6 +1140,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Int32Array data);
 
@@ -1090,6 +1150,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Uint8Array data);
 
@@ -1097,6 +1160,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Uint16Array data);
 
@@ -1104,6 +1170,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Uint32Array data);
 
@@ -1111,6 +1180,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Uint8ClampedArray data);
 
@@ -1118,6 +1190,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Float32Array data);
 
@@ -1125,6 +1200,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull Float64Array data);
 
@@ -1132,6 +1210,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull DataView data);
 
@@ -1139,6 +1220,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in OpenGL ES 3.0.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull ArrayBuffer data);
 
@@ -1179,6 +1263,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull ArrayBufferView data);
@@ -1187,6 +1274,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Int8Array data);
@@ -1195,6 +1285,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Int16Array data);
@@ -1203,6 +1296,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Int32Array data);
@@ -1211,6 +1307,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Uint8Array data);
@@ -1219,6 +1318,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Uint16Array data);
@@ -1227,6 +1329,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Uint32Array data);
@@ -1235,6 +1340,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Uint8ClampedArray data);
@@ -1243,6 +1351,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Float32Array data);
@@ -1251,6 +1362,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull Float64Array data);
@@ -1259,6 +1373,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
       int width, int height, int format, @Nonnull DataView data);
@@ -1267,6 +1384,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nullable ArrayBufferView pixels);
@@ -1275,6 +1394,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Int8Array pixels);
@@ -1283,6 +1404,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Int16Array pixels);
@@ -1291,6 +1414,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Int32Array pixels);
@@ -1299,6 +1424,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Uint8Array pixels);
@@ -1307,6 +1434,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Uint16Array pixels);
@@ -1315,6 +1444,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Uint32Array pixels);
@@ -1323,6 +1454,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Uint8ClampedArray pixels);
@@ -1331,6 +1464,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Float32Array pixels);
@@ -1339,6 +1474,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Float64Array pixels);
@@ -1347,6 +1484,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in OpenGL ES 2.0.</a>
    */
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull DataView pixels);
@@ -1355,6 +1494,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nullable ArrayBufferView pixels);
@@ -1363,6 +1506,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Int8Array pixels);
@@ -1371,6 +1518,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Int16Array pixels);
@@ -1379,6 +1530,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Int32Array pixels);
@@ -1387,6 +1542,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Uint8Array pixels);
@@ -1395,6 +1554,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Uint16Array pixels);
@@ -1403,6 +1566,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Uint32Array pixels);
@@ -1411,6 +1578,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Uint8ClampedArray pixels);
@@ -1419,6 +1590,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Float32Array pixels);
@@ -1427,6 +1602,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Float64Array pixels);
@@ -1435,6 +1614,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull DataView pixels);
@@ -1443,6 +1626,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull TexImageSource source);
@@ -1451,6 +1638,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull ImageBitmap source);
@@ -1459,6 +1650,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull ImageData source);
@@ -1467,6 +1662,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull HTMLImageElement source);
@@ -1475,6 +1674,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull HTMLCanvasElement source);
@@ -1483,6 +1686,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull HTMLVideoElement source);
@@ -1491,6 +1698,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texImage2D(int target, int level, int internalformat, int format, int type,
       @Nonnull OffscreenCanvas source);
@@ -1499,6 +1710,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nullable ArrayBufferView pixels);
@@ -1507,6 +1722,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Int8Array pixels);
@@ -1515,6 +1734,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Int16Array pixels);
@@ -1523,6 +1746,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Int32Array pixels);
@@ -1531,6 +1758,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Uint8Array pixels);
@@ -1539,6 +1770,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Uint16Array pixels);
@@ -1547,6 +1782,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Uint32Array pixels);
@@ -1555,6 +1794,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Uint8ClampedArray pixels);
@@ -1563,6 +1806,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Float32Array pixels);
@@ -1571,6 +1818,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Float64Array pixels);
@@ -1579,6 +1830,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull DataView pixels);
@@ -1587,6 +1842,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull TexImageSource source);
@@ -1595,6 +1854,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull ImageBitmap source);
@@ -1603,6 +1866,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull ImageData source);
@@ -1611,6 +1878,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull HTMLImageElement source);
@@ -1619,6 +1890,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull HTMLCanvasElement source);
@@ -1627,6 +1902,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull HTMLVideoElement source);
@@ -1635,6 +1914,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in OpenGL ES 3.0.</a>
    */
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
       int type, @Nonnull OffscreenCanvas source);
@@ -1751,6 +2034,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture">WebGLRenderingContext.activeTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'activeTexture' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glActiveTexture.xml">The definition of 'glActiveTexture' in OpenGL ES 2.0.</a>
    */
   public native void activeTexture(int texture);
 
@@ -1758,6 +2043,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader">WebGLRenderingContext.attachShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'attachShader' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glAttachShader.xml">The definition of 'glAttachShader' in OpenGL ES 2.0.</a>
    */
   public native void attachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
 
@@ -1765,6 +2052,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation">WebGLRenderingContext.bindAttribLocation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'bindAttribLocation' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindAttribLocation.xml">The definition of 'glBindAttribLocation' in OpenGL ES 2.0.</a>
    */
   public native void bindAttribLocation(@Nonnull WebGLProgram program, int index,
       @Nonnull String name);
@@ -1773,6 +2062,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer">WebGLRenderingContext.bindBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bindBuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindBuffer.xml">The definition of 'glBindBuffer' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">The definition of 'bindBuffer' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBuffer.xhtml">The definition of 'glBindBuffer' in OpenGL ES 3.0.</a>
    */
   public native void bindBuffer(int target, @Nullable WebGLBuffer buffer);
 
@@ -1780,6 +2073,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bindFramebuffer() method of the WebGL API binds a given WebGLFramebuffer to a target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">WebGLRenderingContext.bindFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'bindFramebuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindFramebuffer.xml">The definition of 'glBindFramebuffer' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">The definition of 'bindFrameBuffer' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindFramebuffer.xhtml">The definition of 'glBindFramebuffer' in OpenGL ES 3.0.</a>
    */
   public native void bindFramebuffer(int target, @Nullable WebGLFramebuffer framebuffer);
 
@@ -1787,6 +2084,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer">WebGLRenderingContext.bindRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'bindRenderbuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml">The definition of 'glBindRenderbuffer' in OpenGL ES 2.0.</a>
    */
   public native void bindRenderbuffer(int target, @Nullable WebGLRenderbuffer renderbuffer);
 
@@ -1794,6 +2093,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.bindTexture() method of the WebGL API binds a given WebGLTexture to a target (binding point).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture">WebGLRenderingContext.bindTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'bindTexture' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindTexture.xml">The definition of 'glBindTexture' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">The definition of 'bindTexture' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTexture.xhtml">The definition of 'glBindTexture' in OpenGL ES 3.0.</a>
    */
   public native void bindTexture(int target, @Nullable WebGLTexture texture);
 
@@ -1801,6 +2104,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor">WebGLRenderingContext.blendColor - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendColor' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendColor.xml">The definition of 'glBlendColor' in OpenGL ES 2.0.</a>
    */
   public native void blendColor(float red, float green, float blue, float alpha);
 
@@ -1808,6 +2113,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.blendEquation() method of the WebGL API is used to set both the RGB blend equation and alpha blend equation to a single equation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquation">WebGLRenderingContext.blendEquation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendEquation' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquation.xml">The definition of 'glBlendEquation' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquation.xml">The definition of 'glBlendEquation' in OpenGL ES 3.0.</a>
    */
   public native void blendEquation(int mode);
 
@@ -1815,6 +2123,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.blendEquationSeparate() method of the WebGL API is used to set the RGB blend equation and alpha blend equation separately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquationSeparate">WebGLRenderingContext.blendEquationSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendEquationSeparate' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquationSeparate.xml">The definition of 'glBlendEquationSeparate' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquationSeparate.xhtml">The definition of 'glBlendEquationSeparate' in OpenGL ES 3.0.</a>
    */
   public native void blendEquationSeparate(int modeRGB, int modeAlpha);
 
@@ -1836,6 +2147,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.checkFramebufferStatus() method of the WebGL API returns the completeness status of the WebGLFramebuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus">WebGLRenderingContext.checkFramebufferStatus - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'checkFramebufferStatus' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCheckFramebufferStatus.xml">The definition of 'glCheckFramebufferStatus' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'checkFramebufferStatus' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCheckFramebufferStatus.xhtml">The definition of 'glCheckFramebufferStatus' in OpenGL ES 3.0.</a>
    */
   public native int checkFramebufferStatus(int target);
 
@@ -1843,6 +2158,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.clear() method of the WebGL API clears buffers to preset values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear">WebGLRenderingContext.clear - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'clear' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClear.xml">The definition of 'glClear' in OpenGL ES 2.0.</a>
    */
   public native void clear(int mask);
 
@@ -1850,6 +2167,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor">WebGLRenderingContext.clearColor - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'clearColor' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearColor.xml">The definition of 'glClearColor' in OpenGL ES 2.0.</a>
    */
   public native void clearColor(float red, float green, float blue, float alpha);
 
@@ -1857,6 +2176,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.clearDepth() method of the WebGL API specifies the clear value for the depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearDepth">WebGLRenderingContext.clearDepth - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'clearDepth' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearDepthf.xml">The definition of 'glClearDepthf' in OpenGL ES 2.0.</a>
    */
   public native void clearDepth(float depth);
 
@@ -1864,6 +2185,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.clearStencil() method of the WebGL API specifies the clear value for the stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearStencil">WebGLRenderingContext.clearStencil - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'clearStencil' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearStencil.xml">The definition of 'glClearStencil' in OpenGL ES 2.0.</a>
    */
   public native void clearStencil(int s);
 
@@ -1871,6 +2194,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.colorMask() method of the WebGL API sets which color components to enable or to disable when drawing or rendering to a WebGLFramebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/colorMask">WebGLRenderingContext.colorMask - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'colorMask' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glColorMask.xml">The definition of 'glColorMask' in OpenGL ES 2.0.</a>
    */
   public native void colorMask(boolean red, boolean green, boolean blue, boolean alpha);
 
@@ -1878,6 +2203,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compileShader">WebGLRenderingContext.compileShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'compileShader' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompileShader.xml">The definition of 'glCompileShader' in OpenGL ES 2.0.</a>
    */
   public native void compileShader(@Nonnull WebGLShader shader);
 
@@ -1885,6 +2212,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D">WebGLRenderingContext.copyTexImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'copyTexImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexImage2D.xml">The definition of 'glCopyTexImage2D' in OpenGL ES 2.0.</a>
    */
   public native void copyTexImage2D(int target, int level, int internalformat, int x, int y,
       int width, int height, int border);
@@ -1893,6 +2222,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.copyTexSubImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into an existing 2D texture sub-image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D">WebGLRenderingContext.copyTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'copyTexSubImage2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexSubImage2D.xml">The definition of 'glCopyTexSubImage2D' in OpenGL ES 2.0.</a>
    */
   public native void copyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x,
       int y, int width, int height);
@@ -1901,6 +2232,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createBuffer">WebGLRenderingContext.createBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'createBuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">The definition of 'glGenBuffers' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLBuffer createBuffer();
@@ -1909,6 +2242,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.createFramebuffer() method of the WebGL API creates and initializes a WebGLFramebuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createFramebuffer">WebGLRenderingContext.createFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'createFramebuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">The definition of 'glGenFramebuffers' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLFramebuffer createFramebuffer();
@@ -1917,6 +2252,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram">WebGLRenderingContext.createProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'createProgram' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">The definition of 'glCreateProgram' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLProgram createProgram();
@@ -1925,6 +2262,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.createRenderbuffer() method of the WebGL API creates and initializes a WebGLRenderbuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer">WebGLRenderingContext.createRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'createRenderbuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">The definition of 'glGenRenderbuffers' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLRenderbuffer createRenderbuffer();
@@ -1933,6 +2272,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader">WebGLRenderingContext.createShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'createShader' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">The definition of 'glCreateShader' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLShader createShader(int type);
@@ -1941,6 +2282,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture">WebGLRenderingContext.createTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'createTexture' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">The definition of 'glGenTextures' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLTexture createTexture();
@@ -1949,6 +2292,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.cullFace() method of the WebGL API specifies whether or not front- and/or back-facing polygons can be culled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/cullFace">WebGLRenderingContext.cullFace - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'cullFace' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCullFace.xml">The definition of 'glCullFace' in OpenGL ES 2.0.</a>
    */
   public native void cullFace(int mode);
 
@@ -1956,6 +2301,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.deleteBuffer() method of the WebGL API deletes a given WebGLBuffer. This method has no effect if the buffer has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteBuffer">WebGLRenderingContext.deleteBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'deleteBuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteBuffers.xml">The definition of 'glDeleteBuffers' in OpenGL ES 2.0.</a>
    */
   public native void deleteBuffer(@Nullable WebGLBuffer buffer);
 
@@ -1963,6 +2310,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.deleteFramebuffer() method of the WebGL API deletes a given WebGLFramebuffer object. This method has no effect if the frame buffer has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteFramebuffer">WebGLRenderingContext.deleteFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'deleteFramebuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteFramebuffers.xml">The definition of 'glDeleteFramebuffers' in OpenGL ES 2.0.</a>
    */
   public native void deleteFramebuffer(@Nullable WebGLFramebuffer framebuffer);
 
@@ -1970,6 +2319,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram">WebGLRenderingContext.deleteProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'deleteProgram' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteProgram.xml">The definition of 'glDeleteProgram' in OpenGL ES 2.0.</a>
    */
   public native void deleteProgram(@Nullable WebGLProgram program);
 
@@ -1977,6 +2328,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.deleteRenderbuffer() method of the WebGL API deletes a given WebGLRenderbuffer object. This method has no effect if the render buffer has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteRenderbuffer">WebGLRenderingContext.deleteRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'deleteRenderbuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteRenderbuffers.xml">The definition of 'glDeleteRenderbuffers' in OpenGL ES 2.0.</a>
    */
   public native void deleteRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
 
@@ -1984,6 +2337,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.deleteShader() method of the WebGL API marks a given WebGLShader object for deletion. It will then be deleted whenever the shader is no longer in use. This method has no effect if the shader has already been deleted, and the WebGLShader is automatically marked for deletion when it is destroyed by the garbage collector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteShader">WebGLRenderingContext.deleteShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'deleteShader' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteShader.xml">The definition of 'glDeleteShader' in OpenGL ES 2.0.</a>
    */
   public native void deleteShader(@Nullable WebGLShader shader);
 
@@ -1991,6 +2346,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture">WebGLRenderingContext.deleteTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'deleteTexture' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteTextures.xml">The definition of 'glDeleteTextures' in OpenGL ES 2.0.</a>
    */
   public native void deleteTexture(@Nullable WebGLTexture texture);
 
@@ -1998,6 +2355,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.depthFunc() method of the WebGL API specifies a function that compares incoming pixel depth to the current depth buffer value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthFunc">WebGLRenderingContext.depthFunc - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'depthFunc' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthFunc.xml">The definition of 'glDepthFunc' in OpenGL ES 2.0.</a>
    */
   public native void depthFunc(int func);
 
@@ -2005,6 +2364,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.depthMask() method of the WebGL API sets whether writing into the depth buffer is enabled or disabled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthMask">WebGLRenderingContext.depthMask - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'depthMask' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthMask.xml">The definition of 'glDepthMask' in OpenGL ES 2.0.</a>
    */
   public native void depthMask(boolean flag);
 
@@ -2012,6 +2373,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.depthRange() method of the WebGL API specifies the depth range mapping from normalized device coordinates to window or viewport coordinates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthRange">WebGLRenderingContext.depthRange - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'depthRange' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthRangef.xml">The definition of 'glDepthRangef' in OpenGL ES 2.0.</a>
    */
   public native void depthRange(float zNear, float zFar);
 
@@ -2019,6 +2382,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached WebGLShader from a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/detachShader">WebGLRenderingContext.detachShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'detachShader' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDetachShader.xml">The definition of 'glDetachShader' in OpenGL ES 2.0.</a>
    */
   public native void detachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
 
@@ -2033,6 +2398,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray">WebGLRenderingContext.disableVertexAttribArray - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'disableVertexAttribArray' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">The definition of 'glDisableVertexAttribArray' in OpenGL ES 2.0.</a>
    */
   public native void disableVertexAttribArray(int index);
 
@@ -2040,6 +2407,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.drawArrays() method of the WebGL API renders primitives from array data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">WebGLRenderingContext.drawArrays - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'drawArrays' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawArrays.xml">The definition of 'glDrawArrays' in OpenGL ES 2.0.</a>
    */
   public native void drawArrays(int mode, int first, int count);
 
@@ -2047,6 +2416,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">WebGLRenderingContext.drawElements - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'drawElements' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawElements.xml">The definition of 'glDrawElements' in OpenGL ES 2.0.</a>
    */
   public native void drawElements(int mode, int count, int type, int offset);
 
@@ -2061,6 +2432,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray">WebGLRenderingContext.enableVertexAttribArray - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'enableVertexAttribArray' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">The definition of 'glEnableVertexAttribArray' in OpenGL ES 2.0.</a>
    */
   public native void enableVertexAttribArray(int index);
 
@@ -2068,6 +2441,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'finish' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">The definition of 'glFinish' in OpenGL ES 2.0.</a>
    */
   public native void finish();
 
@@ -2075,6 +2450,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.flush() method of the WebGL API empties different buffer commands, causing all commands to be executed as quickly as possible.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush">WebGLRenderingContext.flush - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'flush' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFlush.xml">The definition of 'glFlush' in OpenGL ES 2.0.</a>
    */
   public native void flush();
 
@@ -2082,6 +2459,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.framebufferRenderbuffer() method of the WebGL API attaches a WebGLRenderbuffer object to a WebGLFramebuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer">WebGLRenderingContext.framebufferRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'framebufferRenderbuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferRenderbuffer.xml">The definition of 'glFramebufferRenderbuffer' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferRenderbuffer.xhtml">The definition of 'glFramebufferRenderbuffer' in OpenGL ES 3.0.</a>
    */
   public native void framebufferRenderbuffer(int target, int attachment, int renderbuffertarget,
       @Nullable WebGLRenderbuffer renderbuffer);
@@ -2090,6 +2470,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D">WebGLRenderingContext.framebufferTexture2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'framebufferTexture2D' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml">The definition of 'glFramebufferTexture2D' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml">The definition of 'glFramebufferTexture2D' in OpenGL ES 3.0.</a>
    */
   public native void framebufferTexture2D(int target, int attachment, int textarget,
       @Nullable WebGLTexture texture, int level);
@@ -2098,6 +2481,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace">WebGLRenderingContext.frontFace - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'frontFace' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFrontFace.xml">The definition of 'glFrontFace' in OpenGL ES 2.0.</a>
    */
   public native void frontFace(int mode);
 
@@ -2105,6 +2490,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.generateMipmap() method of the WebGL API generates a set of mipmaps for a WebGLTexture object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap">WebGLRenderingContext.generateMipmap - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'generateMipmap' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenerateMipmap.xml">The definition of 'glGenerateMipmap' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenerateMipmap.xhtml">The definition of 'glGenerateMipmap' in OpenGL ES 3.0.</a>
    */
   public native void generateMipmap(int target);
 
@@ -2112,6 +2500,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getActiveAttrib() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a vertex attribute. It is generally used when querying unknown attributes either for debugging or generic library creation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveAttrib">WebGLRenderingContext.getActiveAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getActiveAttrib' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">The definition of 'glGetActiveAttrib' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLActiveInfo getActiveAttrib(@Nonnull WebGLProgram program, int index);
@@ -2120,6 +2510,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform">WebGLRenderingContext.getActiveUniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getActiveUniform' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">The definition of 'glGetActiveUniform' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLActiveInfo getActiveUniform(@Nonnull WebGLProgram program, int index);
@@ -2128,6 +2520,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders">WebGLRenderingContext.getAttachedShaders - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getAttachedShaders' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">The definition of 'glGetAttachedShaders' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native JsArray<WebGLShader> getAttachedShaders(@Nonnull WebGLProgram program);
@@ -2136,6 +2530,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getAttribLocation() method of the WebGL API returns the location of an attribute variable in a given WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttribLocation">WebGLRenderingContext.getAttribLocation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getAttribLocation' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttribLocation.xml">The definition of 'glGetAttribLocation' in OpenGL ES 2.0.</a>
    */
   public native int getAttribLocation(@Nonnull WebGLProgram program, @Nonnull String name);
 
@@ -2143,6 +2539,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getBufferParameter() method of the WebGL API returns information about the buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter">WebGLRenderingContext.getBufferParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'getBufferParameter' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetBufferParameteriv.xml">The definition of 'glGetBufferParameteriv' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">The definition of 'getBufferParameter' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">The definition of 'glGetBufferParameter' in OpenGL ES 3.0.</a>
    */
   @Nullable
   public native Any getBufferParameter(int target, int pname);
@@ -2151,6 +2551,7 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getContextAttributes() method returns a WebGLContextAttributes object that contains the actual context parameters. Might return null, if the context is lost.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes">WebGLRenderingContext.getContextAttributes - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">The definition of 'WebGLRenderingContext.getContextAttributes' in WebGL 1.0.</a>
    */
   @Nullable
   public native WebGLContextAttributes getContextAttributes();
@@ -2166,6 +2567,7 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getExtension() method enables a WebGL extension.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension">WebGLRenderingContext.getExtension - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">The definition of 'WebGLRenderingContext.getExtension' in WebGL 1.0.</a>
    */
   @Nullable
   public native Object getExtension(@Nonnull String name);
@@ -2190,6 +2592,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog">WebGLRenderingContext.getProgramInfoLog - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getProgramInfoLog' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">The definition of 'glGetProgramInfoLog' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native String getProgramInfoLog(@Nonnull WebGLProgram program);
@@ -2198,6 +2602,9 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramParameter">WebGLRenderingContext.getProgramParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getProgramParameter' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramiv.xml">The definition of 'glGetProgramiv' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">The definition of 'getProgramParameter' in WebGL 2.0.</a>
    */
   @Nullable
   public native Any getProgramParameter(@Nonnull WebGLProgram program, int pname);
@@ -2206,6 +2613,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getRenderbufferParameter() method of the WebGL API returns information about the renderbuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getRenderbufferParameter">WebGLRenderingContext.getRenderbufferParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'getRenderbufferParameter' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetRenderbufferParameteriv.xml">The definition of 'glGetRenderbufferParameteriv' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">The definition of 'getRenderbufferParameter' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">The definition of 'glGetRenderbufferParameteriv' in OpenGL ES 3.0.</a>
    */
   @Nullable
   public native Any getRenderbufferParameter(int target, int pname);
@@ -2214,6 +2625,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderInfoLog">WebGLRenderingContext.getShaderInfoLog - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderInfoLog' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">The definition of 'glGetShaderInfoLog' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native String getShaderInfoLog(@Nonnull WebGLShader shader);
@@ -2222,6 +2635,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderParameter">WebGLRenderingContext.getShaderParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderParameter' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">The definition of 'glGetShaderiv' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native Any getShaderParameter(@Nonnull WebGLShader shader, int pname);
@@ -2230,6 +2645,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getShaderPrecisionFormat() method of the WebGL API returns a new WebGLShaderPrecisionFormat object describing the range and precision for the specified shader numeric format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderPrecisionFormat">WebGLRenderingContext.getShaderPrecisionFormat - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderPrecisionFormat' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">The definition of 'glGetShaderPrecisionFormat' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(int shadertype,
@@ -2239,6 +2656,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource">WebGLRenderingContext.getShaderSource - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderSource' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml">The definition of 'glGetShaderSource' in OpenGL ES 2.0.</a>
    */
   @GLSL
   @Nullable
@@ -2248,6 +2667,7 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions">WebGLRenderingContext.getSupportedExtensions - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">The definition of 'WebGLRenderingContext.getSupportedExtensions' in WebGL 1.0.</a>
    */
   @Nullable
   public native JsArray<String> getSupportedExtensions();
@@ -2273,6 +2693,8 @@ public class WebGLRenderingContext {
    * Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation">WebGLRenderingContext.getUniformLocation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getUniformLocation' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">The definition of 'glGetUniformLocation' in OpenGL ES 2.0.</a>
    */
   @Nullable
   public native WebGLUniformLocation getUniformLocation(@Nonnull WebGLProgram program,
@@ -2282,6 +2704,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getVertexAttrib() method of the WebGL API returns information about a vertex attribute at a given position.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttrib">WebGLRenderingContext.getVertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getVertexAttrib' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml">The definition of 'glGetVertexAttrib' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">The definition of 'getVertexAttrib' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">The definition of 'glGetVertexAttrib' in OpenGL ES 3.0.</a>
    */
   @Nullable
   public native Any getVertexAttrib(int index, int pname);
@@ -2290,6 +2716,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.getVertexAttribOffset() method of the WebGL API returns the address of a specified vertex attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttribOffset">WebGLRenderingContext.getVertexAttribOffset - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getVertexAttribOffset' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml">The definition of 'glGetVertexAttribPointerv' in OpenGL ES 2.0.</a>
    */
   public native int getVertexAttribOffset(int index, int pname);
 
@@ -2297,6 +2725,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.hint() method of the WebGL API specifies hints for certain behaviors. The interpretation of these hints depend on the implementation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/hint">WebGLRenderingContext.hint - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'hint' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glHint.xml">The definition of 'glHint' in OpenGL ES 2.0.</a>
    */
   public native void hint(int target, int mode);
 
@@ -2304,6 +2734,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isBuffer() method of the WebGL API returns true if the passed WebGLBuffer is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isBuffer">WebGLRenderingContext.isBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'isBuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsBuffer.xml">The definition of 'glIsBuffer' in OpenGL ES 2.0.</a>
    */
   public native boolean isBuffer(@Nullable WebGLBuffer buffer);
 
@@ -2311,6 +2743,7 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isContextLost() method returns a Boolean indicating whether or not the WebGL context has been lost and must be re-established before rendering can resume.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost">WebGLRenderingContext.isContextLost - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13">The definition of 'WebGLRenderingContext.isContextLost' in WebGL 1.0.</a>
    */
   public native boolean isContextLost();
 
@@ -2325,6 +2758,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isFramebuffer() method of the WebGL API returns true if the passed WebGLFramebuffer is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isFramebuffer">WebGLRenderingContext.isFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'isFramebuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsFramebuffer.xml">The definition of 'glIsFramebuffer' in OpenGL ES 2.0.</a>
    */
   public native boolean isFramebuffer(@Nullable WebGLFramebuffer framebuffer);
 
@@ -2332,6 +2767,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isProgram">WebGLRenderingContext.isProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'isProgram' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml">The definition of 'glIsProgram' in OpenGL ES 2.0.</a>
    */
   public native boolean isProgram(@Nullable WebGLProgram program);
 
@@ -2339,6 +2776,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isRenderbuffer() method of the WebGL API returns true if the passed WebGLRenderbuffer is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isRenderbuffer">WebGLRenderingContext.isRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'isRenderbuffer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsRenderbuffer.xml">The definition of 'glIsRenderbuffer' in OpenGL ES 2.0.</a>
    */
   public native boolean isRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
 
@@ -2346,6 +2785,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isShader() method of the WebGL API returns true if the passed WebGLShader is valid, false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isShader">WebGLRenderingContext.isShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'isShader' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml">The definition of 'glIsShader' in OpenGL ES 2.0.</a>
    */
   public native boolean isShader(@Nullable WebGLShader shader);
 
@@ -2353,6 +2794,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.isTexture() method of the WebGL API returns true if the passed WebGLTexture is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isTexture">WebGLRenderingContext.isTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'isTexture' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml">The definition of 'glIsTexture' in OpenGL ES 2.0.</a>
    */
   public native boolean isTexture(@Nullable WebGLTexture texture);
 
@@ -2360,6 +2803,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.lineWidth() method of the WebGL API sets the line width of rasterized lines.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth">WebGLRenderingContext.lineWidth - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'lineWidth' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLineWidth.xml">The definition of 'glLineWidth' in OpenGL ES 2.0.</a>
    */
   public native void lineWidth(float width);
 
@@ -2367,6 +2812,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext interface's linkProgram() method links a given WebGLProgram, completing the process of preparing the GPU code for the program's fragment and vertex shaders.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/linkProgram">WebGLRenderingContext.linkProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'linkProgram' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLinkProgram.xml">The definition of 'glLinkProgram' in OpenGL ES 2.0.</a>
    */
   public native void linkProgram(@Nonnull WebGLProgram program);
 
@@ -2381,6 +2828,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.polygonOffset() method of the WebGL API specifies the scale factors and units to calculate depth values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset">WebGLRenderingContext.polygonOffset - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'polygonOffset' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPolygonOffset.xml">The definition of 'glPolygonOffset' in OpenGL ES 2.0.</a>
    */
   public native void polygonOffset(float factor, float units);
 
@@ -2388,6 +2837,10 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.renderbufferStorage() method of the WebGL API creates and initializes a renderbuffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/renderbufferStorage">WebGLRenderingContext.renderbufferStorage - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'renderbufferStorage' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glRenderbufferStorage.xml">The definition of 'glRenderbufferStorage' in OpenGL ES 2.0.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">The definition of 'getRenderbufferParameter' in WebGL 2.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorage.xhtml">The definition of 'glRenderbufferStorage' in OpenGL ES 3.0.</a>
    */
   public native void renderbufferStorage(int target, int internalformat, int width, int height);
 
@@ -2395,6 +2848,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.sampleCoverage() method of the WebGL API specifies multi-sample coverage parameters for anti-aliasing effects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/sampleCoverage">WebGLRenderingContext.sampleCoverage - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'sampleCoverage' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glSampleCoverage.xml">The definition of 'glSampleCoverage' in OpenGL ES 2.0.</a>
    */
   public native void sampleCoverage(float value, boolean invert);
 
@@ -2402,6 +2857,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.scissor() method of the WebGL API sets a scissor box, which limits the drawing to a specified rectangle.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/scissor">WebGLRenderingContext.scissor - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">The definition of 'scissor' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glScissor.xml">The definition of 'glScissor' in OpenGL ES 2.0.</a>
    */
   public native void scissor(int x, int y, int width, int height);
 
@@ -2409,6 +2866,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource">WebGLRenderingContext.shaderSource - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'shaderSource' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glShaderSource.xml">The definition of 'glShaderSource' in OpenGL ES 2.0.</a>
    */
   public native void shaderSource(@Nonnull WebGLShader shader, @GLSL @Nonnull String source);
 
@@ -2416,6 +2875,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.stencilFunc() method of the WebGL API sets the front and back function and reference value for stencil testing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFunc">WebGLRenderingContext.stencilFunc - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilFunc' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFunc.xml">The definition of 'glStencilFunc' in OpenGL ES 2.0.</a>
    */
   public native void stencilFunc(int func, int ref, int mask);
 
@@ -2423,6 +2884,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.stencilFuncSeparate() method of the WebGL API sets the front and/or back function and reference value for stencil testing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate">WebGLRenderingContext.stencilFuncSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilFuncSeparate' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFuncSeparate.xml">The definition of 'glStencilFuncSeparate' in OpenGL ES 2.0.</a>
    */
   public native void stencilFuncSeparate(int face, int func, int ref, int mask);
 
@@ -2430,6 +2893,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.stencilMask() method of the WebGL API controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMask">WebGLRenderingContext.stencilMask - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilMask' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMask.xml">The definition of 'glStencilMask' in OpenGL ES 2.0.</a>
    */
   public native void stencilMask(int mask);
 
@@ -2437,6 +2902,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.stencilMaskSeparate() method of the WebGL API controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate">WebGLRenderingContext.stencilMaskSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilMaskSeparate' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMaskSeparate.xml">The definition of 'glStencilMaskSeparate' in OpenGL ES 2.0.</a>
    */
   public native void stencilMaskSeparate(int face, int mask);
 
@@ -2444,6 +2911,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.stencilOp() method of the WebGL API sets both the front and back-facing stencil test actions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOp">WebGLRenderingContext.stencilOp - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilOp' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOp.xml">The definition of 'glStencilOp' in OpenGL ES 2.0.</a>
    */
   public native void stencilOp(int fail, int zfail, int zpass);
 
@@ -2451,6 +2920,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.stencilOpSeparate() method of the WebGL API sets the front and/or back-facing stencil test actions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOpSeparate">WebGLRenderingContext.stencilOpSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilOpSeparate' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOpSeparate.xml">The definition of 'glStencilOpSeparate' in OpenGL ES 2.0.</a>
    */
   public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
 
@@ -2479,6 +2950,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram">WebGLRenderingContext.useProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'useProgram' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUseProgram.xml">The definition of 'glUseProgram' in OpenGL ES 2.0.</a>
    */
   public native void useProgram(@Nullable WebGLProgram program);
 
@@ -2486,6 +2959,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/validateProgram">WebGLRenderingContext.validateProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'validateProgram' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glValidateProgram.xml">The definition of 'glValidateProgram' in OpenGL ES 2.0.</a>
    */
   public native void validateProgram(@Nonnull WebGLProgram program);
 
@@ -2533,6 +3008,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttribPointer' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml">The definition of 'glVertexAttribPointer' in OpenGL ES 2.0.</a>
    */
   public native void vertexAttribPointer(int index, int size, int type, boolean normalized,
       int stride, int offset);
@@ -2541,6 +3018,8 @@ public class WebGLRenderingContext {
    * The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport">WebGLRenderingContext.viewport - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">The definition of 'viewport' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glViewport.xml">The definition of 'glViewport' in OpenGL ES 2.0.</a>
    */
   public native void viewport(int x, int y, int width, int height);
 
