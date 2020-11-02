@@ -30,6 +30,25 @@
 * Figure out how to "unit test" - maybe render scene and look at pixels? Should also query the API
   and make sure the state is as expected. This includes which attributePointers etc are enabled/disabled etc.
 
+* Typically Engines have fixed locations for attribute data so don't have to look them up.
+  In this scenario you do need the layout specifier when declaring attributes/vertex shader
+  in values:
+
+```glsl
+#version 410
+layout (location = 0) in vec3 pos; layout (location = 3) in vec2 uv;
+out vec2 fragUV;
+void main() {
+gl_Position = vec4(pos, 1.0);
+fragUV = uv; }
+```
+  Locations for `OpenFramework`
+
+  1. Position
+  2. Color
+  3. Normal
+  4. UV Coordinates
+
 ## References
 
 * [WebGL2 Fundamentals](https://webgl2fundamentals.org/) - a great learning resource.
