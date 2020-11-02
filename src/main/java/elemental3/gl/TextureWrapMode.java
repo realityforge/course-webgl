@@ -13,5 +13,5 @@ import org.intellij.lang.annotations.MagicConstant;
         WebGL2RenderingContext.MIRRORED_REPEAT
     }
 )
-public @interface TextureWrap {
+public @interface TextureWrapMode {
 }

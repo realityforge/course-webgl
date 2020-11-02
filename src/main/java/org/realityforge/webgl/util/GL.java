@@ -10,7 +10,7 @@ import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
 import elemental3.gl.GLSL;
 import elemental3.gl.ShaderType;
-import elemental3.gl.TextureWrap;
+import elemental3.gl.TextureWrapMode;
 import elemental3.gl.UsageType;
 import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
@@ -142,8 +142,8 @@ public final class GL
                                              @Nonnull final HTMLImageElement image,
                                              final int magFilter,
                                              final int minFilter,
-                                             @TextureWrap final int wrapS,
-                                             @TextureWrap final int wrapT )
+                                             @TextureWrapMode final int wrapS,
+                                             @TextureWrapMode final int wrapT )
   {
     // Bind texture1 texture buffer to the TEXTURE_2D gate/channel and send data across
     final WebGLTexture texture = gl.createTexture();
