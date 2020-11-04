@@ -142,6 +142,7 @@ public final class GL
   @Nonnull
   public static WebGLTexture prepareTexture( @Nonnull final WebGL2RenderingContext gl,
                                              @Nonnull final HTMLImageElement image,
+                                             final boolean flipYCoord,
                                              @TextureMagnificationFilter final int magFilter,
                                              @TextureMinificationFilter final int minFilter,
                                              @TextureWrapMode final int wrapS,
@@ -151,6 +152,11 @@ public final class GL
     final WebGLTexture texture = gl.createTexture();
     assert null != texture;
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
+
+    if ( flipYCoord )
+    {
+      gl.pixelStorei( WebGL2RenderingContext.UNPACK_FLIP_Y_WEBGL, 1 );
+    }
 
     // This is the call that pushes data across to GPU so will be "slow"
     gl.texImage2D( WebGL2RenderingContext.TEXTURE_2D,
@@ -191,8 +197,17 @@ public final class GL
   public static Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
                                                    @Nonnull final String src )
   {
+    return loadTexture( gl, src, false );
+  }
+
+  @Nonnull
+  public static Promise<WebGLTexture> loadTexture( @Nonnull final WebGL2RenderingContext gl,
+                                                   @Nonnull final String src,
+                                                   final boolean flipYCoord )
+  {
     return loadTexture( src, image -> GL.prepareTexture( gl,
                                                          image,
+                                                         flipYCoord,
                                                          WebGL2RenderingContext.LINEAR,
                                                          WebGL2RenderingContext.LINEAR,
                                                          WebGL2RenderingContext.CLAMP_TO_EDGE,
