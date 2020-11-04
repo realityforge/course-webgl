@@ -12,7 +12,7 @@ import jsinterop.base.Js;
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement">HTMLDialogElement - MDN</a>
  * @see <a href="https://html.spec.whatwg.org/multipage/#htmldialogelement">The definition of 'HTMLDialogElement' in HTML Living Standard.</a>
- * @see <a href="https://www.w3.org/TR/html52/interactive-elements.html#the-dialog-element">The definition of '<dialog>' in HTML 5.2.</a>
+ * @see <a href="https://www.w3.org/TR/html52/interactive-elements.html#the-dialog-element">The definition of '&lt;dialog&gt;' in HTML 5.2.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
