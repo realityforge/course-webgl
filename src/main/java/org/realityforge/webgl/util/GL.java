@@ -10,6 +10,8 @@ import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
 import elemental3.gl.GLSL;
 import elemental3.gl.ShaderType;
+import elemental3.gl.TextureMagnificationFilter;
+import elemental3.gl.TextureMinificationFilter;
 import elemental3.gl.TextureWrapMode;
 import elemental3.gl.UsageType;
 import elemental3.gl.VertexDimensions;
@@ -140,8 +142,8 @@ public final class GL
   @Nonnull
   public static WebGLTexture prepareTexture( @Nonnull final WebGL2RenderingContext gl,
                                              @Nonnull final HTMLImageElement image,
-                                             final int magFilter,
-                                             final int minFilter,
+                                             @TextureMagnificationFilter final int magFilter,
+                                             @TextureMinificationFilter final int minFilter,
                                              @TextureWrapMode final int wrapS,
                                              @TextureWrapMode final int wrapT )
   {
