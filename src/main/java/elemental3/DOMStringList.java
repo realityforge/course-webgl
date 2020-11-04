@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * A type returned by some APIs which contains a list of DOMString (strings).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList">DOMStringList - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-domstringlist-interface">The definition of 'DOMStringList' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

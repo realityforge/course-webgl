@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The AudioListener interface represents the position and orientation of the unique person listening to the audio scene, and is used in audio spatialization. All PannerNodes spatialize in relation to the AudioListener stored in the BaseAudioContext.listener attribute.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener">AudioListener - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#audiolistener">The definition of 'AudioListener' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,6 +26,7 @@ public class AudioListener {
    * The forwardX read-only property of the AudioListener interface is an AudioParam representing the x value of the direction vector defining the forward direction the listener is pointing in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardX">AudioListener.forwardX - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardx">The definition of 'forwardX' in Web Audio API.</a>
    */
   @JsProperty(
       name = "forwardX"
@@ -36,6 +38,7 @@ public class AudioListener {
    * The forwardY read-only property of the AudioListener interface is an AudioParam representing the y value of the direction vector defining the forward direction the listener is pointing in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardY">AudioListener.forwardY - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardy">The definition of 'forwardY' in Web Audio API.</a>
    */
   @JsProperty(
       name = "forwardY"
@@ -47,6 +50,7 @@ public class AudioListener {
    * The forwardZ read-only property of the AudioListener interface is an AudioParam representing the z value of the direction vector defining the forward direction the listener is pointing in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardZ">AudioListener.forwardZ - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardz">The definition of 'forwardZ' in Web Audio API.</a>
    */
   @JsProperty(
       name = "forwardZ"
@@ -58,6 +62,7 @@ public class AudioListener {
    * The positionX read-only property of the AudioListener interface is an AudioParam representing the x position of the listener in 3D cartesian space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionX">AudioListener.positionX - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-positionx">The definition of 'positionX' in Web Audio API.</a>
    */
   @JsProperty(
       name = "positionX"
@@ -69,6 +74,7 @@ public class AudioListener {
    * The positionY read-only property of the AudioListener interface is an AudioParam representing the y position of the listener in 3D cartesian space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionY">AudioListener.positionY - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-positiony">The definition of 'positionY' in Web Audio API.</a>
    */
   @JsProperty(
       name = "positionY"
@@ -80,6 +86,7 @@ public class AudioListener {
    * The positionZ read-only property of the AudioListener interface is an AudioParam representing the z position of the listener in 3D cartesian space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionZ">AudioListener.positionZ - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-positionz">The definition of 'positionZ' in Web Audio API.</a>
    */
   @JsProperty(
       name = "positionZ"
@@ -91,6 +98,7 @@ public class AudioListener {
    * The upX read-only property of the AudioListener interface is an AudioParam representing the x value of the direction vector defining the up direction the listener is pointing in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upX">AudioListener.upX - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-upx">The definition of 'upX' in Web Audio API.</a>
    */
   @JsProperty(
       name = "upX"
@@ -102,6 +110,7 @@ public class AudioListener {
    * The upY read-only property of the AudioListener interface is an AudioParam representing the y value of the direction vector defining the up direction the listener is pointing in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upY">AudioListener.upY - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-upy">The definition of 'upY' in Web Audio API.</a>
    */
   @JsProperty(
       name = "upY"
@@ -113,6 +122,7 @@ public class AudioListener {
    * The upZ read-only property of the AudioListener interface is an AudioParam representing the z value of the direction vector defining the up direction the listener is pointing in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upZ">AudioListener.upZ - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-upz">The definition of 'upZ' in Web Audio API.</a>
    */
   @JsProperty(
       name = "upZ"
@@ -131,6 +141,7 @@ public class AudioListener {
    * Void.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition">AudioListener.setPosition - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiolistener-setposition">The definition of 'setPosition()' in Web Audio API.</a>
    */
   public native void setPosition(float x, float y, float z);
 }

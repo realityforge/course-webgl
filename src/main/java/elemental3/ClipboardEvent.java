@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The ClipboardEvent interface represents events providing information related to modification of the clipboard, that is cut, copy, and paste events.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent">ClipboardEvent - MDN</a>
+ * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces">The definition of 'ClipboardEvent' in Clipboard API and events.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class ClipboardEvent extends Event {
    * The ClipboardEvent() constructor returns a newly created ClipboardEvent, representing an event providing information related to modification of the clipboard, that is cut, copy, and paste events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent">ClipboardEvent.ClipboardEvent - MDN</a>
+   * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboardevent-clipboardevent">The definition of 'ClipboardEvent()' in Clipboard API and events.</a>
    */
   public ClipboardEvent(@Nonnull final String type,
       @Nonnull final ClipboardEventInit eventInitDict) {
@@ -33,6 +35,7 @@ public class ClipboardEvent extends Event {
    * The ClipboardEvent() constructor returns a newly created ClipboardEvent, representing an event providing information related to modification of the clipboard, that is cut, copy, and paste events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent">ClipboardEvent.ClipboardEvent - MDN</a>
+   * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboardevent-clipboardevent">The definition of 'ClipboardEvent()' in Clipboard API and events.</a>
    */
   public ClipboardEvent(@Nonnull final String type) {
     super( null );
@@ -42,6 +45,7 @@ public class ClipboardEvent extends Event {
    * The ClipboardEvent.clipboardData property holds a DataTransfer object, which can be used:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData">ClipboardEvent.clipboardData - MDN</a>
+   * @see <a href="https://w3c.github.io/clipboard-apis/#clipboardevent-clipboarddata">The definition of 'ClipboardEvent.clipboardData' in Clipboard API and events.</a>
    */
   @JsProperty(
       name = "clipboardData"

@@ -32,6 +32,7 @@ public class BiquadFilterNode extends AudioNode {
    * The BiquadFilterNode() constructor of the Web Audio API creates a new BiquadFilterNode object, which represents a simple low-order filter, and is created using the AudioContext.createBiquadFilter() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode">BiquadFilterNode.BiquadFilterNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-biquadfilternode">The definition of 'BiquadFilterNode()' in Web Audio API.</a>
    */
   public BiquadFilterNode(@Nonnull final BaseAudioContext context,
       @Nonnull final BiquadFilterOptions options) {
@@ -41,6 +42,7 @@ public class BiquadFilterNode extends AudioNode {
    * The BiquadFilterNode() constructor of the Web Audio API creates a new BiquadFilterNode object, which represents a simple low-order filter, and is created using the AudioContext.createBiquadFilter() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode">BiquadFilterNode.BiquadFilterNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-biquadfilternode">The definition of 'BiquadFilterNode()' in Web Audio API.</a>
    */
   public BiquadFilterNode(@Nonnull final BaseAudioContext context) {
   }
@@ -49,6 +51,7 @@ public class BiquadFilterNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/Q">BiquadFilterNode.Q - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-q">The definition of 'Q' in Web Audio API.</a>
    */
   @JsProperty(
       name = "Q"
@@ -60,6 +63,7 @@ public class BiquadFilterNode extends AudioNode {
    * An a-rate AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/detune">BiquadFilterNode.detune - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-detune">The definition of 'detune' in Web Audio API.</a>
    */
   @JsProperty(
       name = "detune"
@@ -71,6 +75,7 @@ public class BiquadFilterNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/frequency">BiquadFilterNode.frequency - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-frequency">The definition of 'frequency' in Web Audio API.</a>
    */
   @JsProperty(
       name = "frequency"
@@ -82,6 +87,7 @@ public class BiquadFilterNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/gain">BiquadFilterNode.gain - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-gain">The definition of 'gain' in Web Audio API.</a>
    */
   @JsProperty(
       name = "gain"
@@ -93,6 +99,7 @@ public class BiquadFilterNode extends AudioNode {
    * undefined
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/getFrequencyResponse">BiquadFilterNode.getFrequencyResponse - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-getfrequencyresponse">The definition of 'getFrequencyResponse()' in Web Audio API.</a>
    */
   public native void getFrequencyResponse(@Nonnull Float32Array frequencyHz,
       @Nonnull Float32Array magResponse, @Nonnull Float32Array phaseResponse);

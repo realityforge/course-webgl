@@ -25,6 +25,7 @@ public class Worklet {
    * The addModule() method of the Worklet interface loads the module in the given JavaScript file and adds it to the current Worklet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worklet/addModule">Worklet.addModule - MDN</a>
+   * @see <a href="https://drafts.css-houdini.org/worklets/#dom-worklet-addmodule">The definition of 'addModule()' in Worklets Level 1.</a>
    */
   @Nonnull
   public native Promise<Void> addModule(@Nonnull String moduleURL, @Nonnull WorkletOptions options);
@@ -33,6 +34,7 @@ public class Worklet {
    * The addModule() method of the Worklet interface loads the module in the given JavaScript file and adds it to the current Worklet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worklet/addModule">Worklet.addModule - MDN</a>
+   * @see <a href="https://drafts.css-houdini.org/worklets/#dom-worklet-addmodule">The definition of 'addModule()' in Worklets Level 1.</a>
    */
   @Nonnull
   public native Promise<Void> addModule(@Nonnull String moduleURL);

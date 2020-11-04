@@ -9,6 +9,10 @@ import jsinterop.annotations.JsType;
  * The HTMLHRElement interface provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating hr elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHRElement">HTMLHRElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlhrelement">The definition of 'HTMLHRElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/grouping-content.html#the-hr-element">The definition of 'HTMLHRElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68228811">The definition of 'HTMLHRElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-68228811">The definition of 'HTMLHRElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

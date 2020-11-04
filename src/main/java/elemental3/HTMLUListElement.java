@@ -9,6 +9,10 @@ import jsinterop.annotations.JsType;
  * The HTMLUListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating unordered list elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLUListElement">HTMLUListElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlulistelement">The definition of 'HTMLUListElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/grouping-content.html#the-ul-element">The definition of 'HTMLUListElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-86834457">The definition of 'HTMLUListElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-86834457">The definition of 'HTMLUListElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -10,6 +10,8 @@ import jsinterop.annotations.JsType;
  * The HTMLTemplateElement interface enables access to the contents of an HTML template element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement">HTMLTemplateElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmltemplateelement">The definition of 'HTMLTemplateElement interface' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#htmltemplateelement">The definition of 'HTMLTemplateElement interface' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,6 +27,8 @@ public class HTMLTemplateElement extends HTMLElement {
    * The HTMLTemplateElement.content property returns a template element's template contents (a DocumentFragment).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/content">HTMLTemplateElement.content - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-template-content">The definition of 'HTMLTemplateElement interface' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-template-content">The definition of 'HTMLTemplateElement interface' in HTML5.</a>
    */
   @JsProperty(
       name = "content"

@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The Report interface of the Reporting API represents a single report.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Report">Report - MDN</a>
+ * @see <a href="https://w3c.github.io/reporting/#dom-report">The definition of 'Report' in Reporting API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,6 +27,7 @@ public class Report {
    * The body read-only property of the Report interface returns the body of the report, which is a ReportBody object containing the detailed report information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Report/body">Report.body - MDN</a>
+   * @see <a href="https://w3c.github.io/reporting/#dom-report-body">The definition of 'Report.body' in Reporting API.</a>
    */
   @JsProperty(
       name = "body"
@@ -37,6 +39,7 @@ public class Report {
    * The type read-only property of the Report interface returns the type of report generated, e.g. deprecation or intervention.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Report/type">Report.type - MDN</a>
+   * @see <a href="https://w3c.github.io/reporting/#dom-report-body">The definition of 'Report.body' in Reporting API.</a>
    */
   @JsProperty(
       name = "type"
@@ -48,6 +51,7 @@ public class Report {
    * The url read-only property of the Report interface returns the URL of the document that generated the report.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Report/url">Report.url - MDN</a>
+   * @see <a href="https://w3c.github.io/reporting/#dom-report-url">The definition of 'Report.url' in Reporting API.</a>
    */
   @JsProperty(
       name = "url"

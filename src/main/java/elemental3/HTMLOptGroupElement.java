@@ -9,6 +9,10 @@ import jsinterop.annotations.JsType;
  * The HTMLOptGroupElement interface provides special properties and methods (beyond the regular HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of optgroup elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptGroupElement">HTMLOptGroupElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmloptgroupelement">The definition of 'HTMLOptgroupElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-optgroup-element">The definition of 'HTMLOptGroupElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-38450247">The definition of 'HTMLOptGroupElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-38450247">The definition of 'HTMLOptGroupElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -14,6 +14,9 @@ import jsinterop.base.Js;
  * The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement - MDN</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#introduction">The definition of 'Encrypted Media Extensions' in Encrypted Media Extensions.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/the-video-element.html#htmlmediaelement">The definition of 'HTMLMediaElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -53,6 +56,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.autoplay property reflects the autoplay HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/autoplay">HTMLMediaElement.autoplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-autoplay">The definition of 'HTMLMediaElement.autoplay' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.autoplay' in HTML5.</a>
    */
   public boolean autoplay;
 
@@ -60,6 +65,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls for playing the media item will be displayed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/controls">HTMLMediaElement.controls - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-controls">The definition of 'HTMLMediaElement.controls' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.controls' in HTML5.</a>
    */
   public boolean controls;
 
@@ -67,6 +74,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.crossOrigin property is the CORS setting for this image element. See CORS settings attributes for details.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/crossOrigin">HTMLMediaElement.crossOrigin - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#attr-media-crossorigin">The definition of 'HTMLMediaElement.crossOrigin' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.crossOrigin' in HTML5.</a>
    */
   @Nullable
   @CrossOriginType
@@ -76,6 +85,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement interface's currentTime property specifies the current playback time in seconds.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime">HTMLMediaElement.currentTime - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-currenttime">The definition of 'HTMLMediaElement.currentTime' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.currentTime' in HTML5.</a>
    */
   public double currentTime;
 
@@ -83,6 +94,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.defaultMuted property reflects the muted HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the muted property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/defaultMuted">HTMLMediaElement.defaultMuted - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-defaultmuted">The definition of 'HTMLMediaElement.defaultMuted' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.defaultMuted' in HTML5.</a>
    */
   public boolean defaultMuted;
 
@@ -90,6 +103,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.defaultPlaybackRate property indicates the default playback rate for the media.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/defaultPlaybackRate">HTMLMediaElement.defaultPlaybackRate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-defaultplaybackrate">The definition of 'HTMLMediaElement.defaultPlaybackRate' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.defaultPlaybackRate' in HTML5.</a>
    */
   public double defaultPlaybackRate;
 
@@ -97,6 +112,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the media element should start over when it reaches the end.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loop">HTMLMediaElement.loop - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-loop">The definition of 'HTMLMediaElement.loop' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.loop' in HTML5.</a>
    */
   public boolean loop;
 
@@ -104,6 +121,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.muted indicates whether the media element muted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/muted">HTMLMediaElement.muted - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-muted">The definition of 'HTMLMediaElement.muted' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.muted' in HTML5.</a>
    */
   public boolean muted;
 
@@ -117,6 +136,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.playbackRate property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/playbackRate">HTMLMediaElement.playbackRate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-playbackrate">The definition of 'HTMLMediaElement.playbackRate' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.playbackRate' in HTML5.</a>
    */
   public double playbackRate;
 
@@ -130,6 +151,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/src">HTMLMediaElement.src - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-src">The definition of 'HTMLMediaElement.src' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-src">The definition of 'HTMLMediaElement.src' in HTML5.</a>
    */
   @Nonnull
   public String src;
@@ -138,6 +161,7 @@ public class HTMLMediaElement extends HTMLElement {
    * The srcObject property of the HTMLMediaElement interface sets or returns the object which serves as the source of the media associated with the HTMLMediaElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject">HTMLMediaElement.srcObject - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-srcobject">The definition of 'srcObject' in HTML Living Standard.</a>
    */
   @Nullable
   public MediaProvider srcObject;
@@ -146,6 +170,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.volume property sets the volume at which the media will be played.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume">HTMLMediaElement.volume - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-volume">The definition of 'HTMLMediaElement.volume' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.volume' in HTML5.</a>
    */
   public double volume;
 
@@ -156,6 +182,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The read-only audioTracks property on HTMLMediaElement objects returns an AudioTrackList object listing all of the  AudioTrack objects representing the media element's audio tracks.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/audioTracks">HTMLMediaElement.audioTracks - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-audiotracks">The definition of 'HTMLMediaElement.audioTracks' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.audioTracks' in HTML5.</a>
    */
   @JsProperty(
       name = "audioTracks"
@@ -167,6 +195,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/buffered">HTMLMediaElement.buffered - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#media-elements">The definition of 'HTMLMediaElement.buffered' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.buffered' in HTML5.</a>
    */
   @JsProperty(
       name = "buffered"
@@ -178,6 +208,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.currentSrc property contains the absolute URL of the chosen media resource. This could happen, for example, if the web server selects a media file based on the resolution of the user's display. The value is an empty string if the networkState property is EMPTY.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentSrc">HTMLMediaElement.currentSrc - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-currentsrc">The definition of 'HTMLMediaElement.currentSrc' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.currentSrc' in HTML5.</a>
    */
   @JsProperty(
       name = "currentSrc"
@@ -189,6 +221,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The read-only HTMLMediaElement property duration indicates the length of the element's media in seconds.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/duration">HTMLMediaElement.duration - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-duration">The definition of 'HTMLMediaElement.duration' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.duration' in HTML5.</a>
    */
   @JsProperty(
       name = "duration"
@@ -199,6 +233,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.ended indicates whether the media element has ended playback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended">HTMLMediaElement.ended - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-ended">The definition of 'HTMLMediaElement.ended' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.ended' in HTML5.</a>
    */
   @JsProperty(
       name = "ended"
@@ -209,6 +245,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.error is the MediaError object for the most recent error, or null if there has not been an error. When an error event is received by the element, you can determine details about what happened by examining this object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/error">HTMLMediaElement.error - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-error">The definition of 'HTMLMediaElement.error' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.error' in HTML5.</a>
    */
   @JsProperty(
       name = "error"
@@ -237,6 +275,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The read-only HTMLMediaElement.paused property tells whether the media element is paused.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/paused">HTMLMediaElement.paused - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-paused">The definition of 'HTMLMediaElement.paused' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.paused' in HTML5.</a>
    */
   @JsProperty(
       name = "paused"
@@ -264,6 +304,9 @@ public class HTMLMediaElement extends HTMLElement {
    * The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seekable">HTMLMediaElement.seekable - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/the-video-element.html#dom-media-seekable">The definition of 'HTMLMediaElement' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-seekable">The definition of 'HTMLMediaElement' in HTML5.</a>
+   * @see <a href="https://w3c.github.io/media-source/#htmlmediaelement-extensions">The definition of 'HTMLMediaElement extensions, like for seekable' in Media Source Extensions.</a>
    */
   @JsProperty(
       name = "seekable"
@@ -280,6 +323,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The read-only textTracks property on HTMLMediaElement objects returns a TextTrackList object listing all of the TextTrack objects representing the media element's text tracks
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/textTracks">HTMLMediaElement.textTracks - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-texttracks">The definition of 'HTMLMediaElement.textTracks' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.textTracks' in HTML5.</a>
    */
   @JsProperty(
       name = "textTracks"
@@ -291,6 +336,7 @@ public class HTMLMediaElement extends HTMLElement {
    * The read-only videoTracks property on HTMLMediaElement objects returns a VideoTrackList object listing all of the VideoTrack objects representing the media element's video tracks.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/videoTracks">HTMLMediaElement.videoTracks - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-media-videotracks">The definition of 'HTMLMediaElement.videoTracks' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "videoTracks"
@@ -312,6 +358,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement method canPlayType() reports how likely it is that the current browser will be able to play media of a given MIME type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType">HTMLMediaElement.canPlayType - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-canplaytype">The definition of 'canplaytype' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">The definition of 'HTMLMediaElement.canplaytype' in HTML5.</a>
    */
   @CanPlayTypeResult
   @Nonnull
@@ -321,6 +369,7 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.fastSeek() method quickly seeks the media to the new time with precision tradeoff.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/fastSeek">HTMLMediaElement.fastSeek - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-fastseek">The definition of 'fastSeek()' in HTML Living Standard.</a>
    */
   public native void fastSeek(double time);
 
@@ -331,6 +380,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement method load() resets the media element to its initial state and begins the process of selecting a media source and loading the media in preparation for playback to begin at the beginning.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/load">HTMLMediaElement.load - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/media.html#dom-media-load">The definition of 'HTMLMediaElement.load()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlmediaelement-load">The definition of 'HTMLMediaElement.load()' in HTML5.</a>
    */
   public native void load();
 
@@ -338,6 +389,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement.pause() method will pause playback of the media, if the media is already in a paused state this method will have no effect.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/pause">HTMLMediaElement.pause - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-pause">The definition of 'pause()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-pause">The definition of 'pause()' in HTML5.</a>
    */
   public native void pause();
 
@@ -345,6 +398,8 @@ public class HTMLMediaElement extends HTMLElement {
    * The HTMLMediaElement play() method attempts to begin playback of the media. It returns a Promise which is resolved when playback has been successfully started.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play">HTMLMediaElement.play - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-play">The definition of 'play()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-play">The definition of 'play()' in HTML5.</a>
    */
   @Nonnull
   public native Promise<Void> play();
@@ -353,6 +408,7 @@ public class HTMLMediaElement extends HTMLElement {
    * The setMediaKeys() property of the HTMLMediaElement interface returns a Promise that resolves to the passed MediaKeys, which are those used to decrypt media during playback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setMediaKeys">HTMLMediaElement.setMediaKeys - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-setmediakeys">The definition of 'setMediaKeys()' in Encrypted Media Extensions.</a>
    */
   @Nonnull
   public native Promise<Void> setMediaKeys(@Nullable MediaKeys mediaKeys);

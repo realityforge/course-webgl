@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The ImageData interface represents the underlying pixel data of an area of a canvas element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">ImageData - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">The definition of 'ImageData' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class ImageData {
    * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata">The definition of 'ImageData()' in HTML Living Standard.</a>
    */
   public ImageData(final int sw, final int sh) {
   }
@@ -31,6 +33,7 @@ public class ImageData {
    * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata">The definition of 'ImageData()' in HTML Living Standard.</a>
    */
   public ImageData(@Nonnull final Uint8ClampedArray data, final int sw, final int sh) {
   }
@@ -39,6 +42,7 @@ public class ImageData {
    * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata">The definition of 'ImageData()' in HTML Living Standard.</a>
    */
   public ImageData(@Nonnull final Uint8ClampedArray data, final int sw) {
   }
@@ -47,6 +51,7 @@ public class ImageData {
    * The readonly ImageData.data property returns a Uint8ClampedArray that contains the ImageData object's pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer values between 0 and 255 (inclusive).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/data">ImageData.data - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata-data">The definition of 'ImageData.data' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "data"
@@ -58,6 +63,7 @@ public class ImageData {
    * The readonly ImageData.height property returns the number of rows in the ImageData object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/height">ImageData.height - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata-height">The definition of 'ImageData.height' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "height"
@@ -68,6 +74,7 @@ public class ImageData {
    * The readonly ImageData.width property returns the number of pixels per row in the ImageData object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/width">ImageData.width - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata-width">The definition of 'ImageData.width' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "width"

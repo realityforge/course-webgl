@@ -9,6 +9,10 @@ import jsinterop.annotations.JsType;
  * The HTMLModElement interface provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is del and ins.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLModElement">HTMLModElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/edits.html#htmlmodelement">The definition of 'HTMLAnchorElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/edits.html#htmlmodelement">The definition of 'HTMLAnchorElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-79359609">The definition of 'HTMLModElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-79359609">The definition of 'HTMLModElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

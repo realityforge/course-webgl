@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The DelayNode interface represents a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode">DelayNode - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#DelayNode">The definition of 'DelayNode' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -22,6 +23,7 @@ public class DelayNode extends AudioNode {
    * The DelayNode() constructor of the Web Audio API creates a new DelayNode object with a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data, and its propagation to the output.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/DelayNode">DelayNode.DelayNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-delaynode-delaynode">The definition of 'DelayNode()' in Web Audio API.</a>
    */
   public DelayNode(@Nonnull final BaseAudioContext context, @Nonnull final DelayOptions options) {
   }
@@ -30,6 +32,7 @@ public class DelayNode extends AudioNode {
    * The DelayNode() constructor of the Web Audio API creates a new DelayNode object with a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data, and its propagation to the output.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/DelayNode">DelayNode.DelayNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-delaynode-delaynode">The definition of 'DelayNode()' in Web Audio API.</a>
    */
   public DelayNode(@Nonnull final BaseAudioContext context) {
   }
@@ -38,6 +41,7 @@ public class DelayNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/delayTime">DelayNode.delayTime - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-delaynode-delaytime">The definition of 'delayTime' in Web Audio API.</a>
    */
   @JsProperty(
       name = "delayTime"

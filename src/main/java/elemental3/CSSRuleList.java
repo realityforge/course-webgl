@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * A CSSRuleList is an (indirect-modify only) array-like object containing an ordered collection of CSSRule objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList">CSSRuleList - MDN</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssrulelist-interface">The definition of 'CSSRuleList' in CSS Object Model (CSSOM).</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

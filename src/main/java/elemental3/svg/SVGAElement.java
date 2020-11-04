@@ -26,6 +26,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.hash property returns a USVString containing a '#' followed by the fragment identifier of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">HTMLHyperlinkElementUtils.hash - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hash">The definition of 'HTMLHyperlinkElementUtils.hash' in HTML Living Standard.</a>
    */
   @Nonnull
   public String hash;
@@ -34,6 +35,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.host property is a USVString containing the host, that is the hostname, and then, if the port of the URL is nonempty, a ':', and the port of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/host">HTMLHyperlinkElementUtils.host - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-host">The definition of 'HTMLHyperlinkElementUtils.host' in HTML Living Standard.</a>
    */
   @Nonnull
   public String host;
@@ -42,6 +44,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.hostname property is a USVString containing the domain of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname">HTMLHyperlinkElementUtils.hostname - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hostname">The definition of 'HTMLHyperlinkElementUtils.hostname' in HTML Living Standard.</a>
    */
   @Nonnull
   public String hostname;
@@ -50,6 +53,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.href property is a stringifier that returns a USVString containing the whole URL, and allows the href to be updated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/href">HTMLHyperlinkElementUtils.href - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-href">The definition of 'HTMLHyperlinkElementUtils.href' in HTML Living Standard.</a>
    */
   @Nonnull
   public String href;
@@ -61,6 +65,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.password property is a USVString containing the password specified before the domain name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">HTMLHyperlinkElementUtils.password - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-password">The definition of 'HTMLHyperlinkElementUtils.password' in HTML Living Standard.</a>
    */
   @Nonnull
   public String password;
@@ -69,6 +74,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.pathname property is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname">HTMLHyperlinkElementUtils.pathname - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-pathname">The definition of 'HTMLHyperlinkElementUtils.pathname' in HTML Living Standard.</a>
    */
   @Nonnull
   public String pathname;
@@ -80,6 +86,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.port property is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/port">HTMLHyperlinkElementUtils.port - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-port">The definition of 'HTMLHyperlinkElementUtils.port' in HTML Living Standard.</a>
    */
   @Nonnull
   public String port;
@@ -88,6 +95,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.protocol property is a USVString representing the protocol scheme of the URL, including the final ':'.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/protocol">HTMLHyperlinkElementUtils.protocol - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-protocol">The definition of 'HTMLHyperlinkElementUtils.protocol' in HTML Living Standard.</a>
    */
   @Nonnull
   public String protocol;
@@ -102,6 +110,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.search property is a search string, also called a query string, that is USVString containing a '?' followed by the parameters of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">HTMLHyperlinkElementUtils.search - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-search">The definition of 'HTMLHyperlinkElementUtils.search' in HTML Living Standard.</a>
    */
   @Nonnull
   public String search;
@@ -116,6 +125,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.username property is a USVString containing the username specified before the domain name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">HTMLHyperlinkElementUtils.username - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-username">The definition of 'HTMLHyperlinkElementUtils.username' in HTML Living Standard.</a>
    */
   @Nonnull
   public String username;
@@ -127,6 +137,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * The HTMLHyperlinkElementUtils.origin read-only property is a USVString containing the Unicode serialization of the origin of the represented URL
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/origin">HTMLHyperlinkElementUtils.origin - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-origin">The definition of 'HTMLHyperlinkElementUtils.origin' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "origin"

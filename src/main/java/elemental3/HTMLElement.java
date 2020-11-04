@@ -13,6 +13,11 @@ import jsinterop.base.Js;
  * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement - MDN</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-htmlelement-interface">The definition of 'HTMLElement' in CSS Object Model (CSSOM) View Module.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/elements.html#htmlelement">The definition of 'HTMLElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/dom.html#htmlelement">The definition of 'HTMLElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-011100101">The definition of 'HTMLElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-011100101">The definition of 'HTMLElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -39,6 +44,7 @@ public class HTMLElement extends Element {
    * The contentEditable property of the HTMLElement interface specifies whether or not the element is editable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable">HTMLElement.contentEditable - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#contenteditable">The definition of 'contenteditable' in HTML Living Standard.</a>
    */
   @Nonnull
   public String contentEditable;
@@ -47,6 +53,9 @@ public class HTMLElement extends Element {
    * The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir">HTMLElement.dir - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-dir">The definition of 'dir' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-52460740">The definition of 'dir' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-52460740">The definition of 'dir' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   @DirType
@@ -61,6 +70,9 @@ public class HTMLElement extends Element {
    * The HTMLElement property hidden is a Boolean which is true if the element is hidden; otherwise the value is false. This is quite different from using the CSS property display to control the visibility of an element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden">HTMLElement.hidden - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-hidden">The definition of 'HTMLElement.hidden' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/editing.html#the-hidden-attribute">The definition of 'HTMLElement.hidden' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/editing.html#the-hidden-attribute">The definition of 'HTMLElement.hidden' in HTML5.</a>
    */
   public boolean hidden;
 
@@ -68,6 +80,7 @@ public class HTMLElement extends Element {
    * The innerText property of the HTMLElement interface represents the &quot;rendered&quot; text content of a node and its descendants.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText">HTMLElement.innerText - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute">The definition of 'innerText' in HTML Living Standard.</a>
    */
   @Nonnull
   public String innerText;
@@ -80,6 +93,7 @@ public class HTMLElement extends Element {
    * The HTMLElement.lang property gets or sets the base language of an element's attribute values and text content.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/lang">HTMLElement.lang - MDN</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59132807">The definition of 'lang' in Document Object Model (DOM) Level 2 HTML Specification.</a>
    */
   @Nonnull
   public String lang;
@@ -91,6 +105,7 @@ public class HTMLElement extends Element {
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onabort">HTMLElement.onabort - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onabort">The definition of 'onabort' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -99,6 +114,7 @@ public class HTMLElement extends Element {
    * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel">The definition of 'onanimationcancel' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationcancel;
@@ -107,6 +123,7 @@ public class HTMLElement extends Element {
    * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationend">The definition of 'onanimationend' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationend;
@@ -115,6 +132,7 @@ public class HTMLElement extends Element {
    * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration">The definition of 'onanimationiteration' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationiteration;
@@ -123,6 +141,7 @@ public class HTMLElement extends Element {
    * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart">The definition of 'onanimationstart' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationstart;
@@ -131,6 +150,7 @@ public class HTMLElement extends Element {
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
+   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in UI Events.</a>
    */
   @Nullable
   public MouseEventHandler onauxclick;
@@ -139,6 +159,7 @@ public class HTMLElement extends Element {
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onblur">HTMLElement.onblur - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in HTML Living Standard.</a>
    */
   @Nullable
   public FocusEventHandler onblur;
@@ -147,6 +168,7 @@ public class HTMLElement extends Element {
    * The oncancel property of the GlobalEventHandlers mixin is an EventHandler for processing cancel events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncancel;
@@ -155,6 +177,7 @@ public class HTMLElement extends Element {
    * The oncanplay property of the GlobalEventHandlers mixin is the EventHandler for processing canplay events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplay">GlobalEventHandlers.oncanplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplay">The definition of 'oncanplay' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncanplay;
@@ -163,6 +186,7 @@ public class HTMLElement extends Element {
    * The oncanplaythrough property of the GlobalEventHandlers mixin is the EventHandler for processing canplaythrough events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough">GlobalEventHandlers.oncanplaythrough - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplaythrough">The definition of 'oncanplaythrough' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncanplaythrough;
@@ -171,6 +195,7 @@ public class HTMLElement extends Element {
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onchange">HTMLElement.onchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onchange">The definition of 'onchange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -179,6 +204,7 @@ public class HTMLElement extends Element {
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onclick">HTMLElement.onclick - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick">The definition of 'onclick' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onclick;
@@ -187,6 +213,7 @@ public class HTMLElement extends Element {
    * The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onclose;
@@ -195,6 +222,7 @@ public class HTMLElement extends Element {
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncontextmenu">HTMLElement.oncontextmenu - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler oncontextmenu;
@@ -211,6 +239,7 @@ public class HTMLElement extends Element {
    * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncuechange">GlobalEventHandlers.oncuechange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncuechange">The definition of 'oncuechange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncuechange;
@@ -227,6 +256,7 @@ public class HTMLElement extends Element {
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/ondblclick">HTMLElement.ondblclick - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler ondblclick;
@@ -235,6 +265,8 @@ public class HTMLElement extends Element {
    * A global event handler for the drag event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag">GlobalEventHandlers.ondrag - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondrag;
@@ -243,6 +275,8 @@ public class HTMLElement extends Element {
    * A global event handler for the dragend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend">GlobalEventHandlers.ondragend - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragend;
@@ -251,6 +285,8 @@ public class HTMLElement extends Element {
    * A global event handler for the dragenter event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter">GlobalEventHandlers.ondragenter - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragenter;
@@ -259,6 +295,8 @@ public class HTMLElement extends Element {
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragleave;
@@ -267,6 +305,8 @@ public class HTMLElement extends Element {
    * A global event handler for the dragover event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover">GlobalEventHandlers.ondragover - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragover;
@@ -275,6 +315,8 @@ public class HTMLElement extends Element {
    * A global event handler for the dragstart event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart">GlobalEventHandlers.ondragstart - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragstart;
@@ -283,6 +325,8 @@ public class HTMLElement extends Element {
    * A global event handler for the drop event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop">GlobalEventHandlers.ondrop - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondrop;
@@ -291,6 +335,7 @@ public class HTMLElement extends Element {
    * The ondurationchange property of the GlobalEventHandlers mixin is the EventHandler for processing durationchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange">GlobalEventHandlers.ondurationchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-ondurationchange">The definition of 'ondurationchange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler ondurationchange;
@@ -299,6 +344,7 @@ public class HTMLElement extends Element {
    * The onemptied property sets and returns the event handler for the emptied event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onemptied">GlobalEventHandlers.onemptied - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onemptied">The definition of 'onemptied' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onemptied;
@@ -307,6 +353,7 @@ public class HTMLElement extends Element {
    * The onended property of the GlobalEventHandlers mixin is the EventHandler for processing ended events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onended">GlobalEventHandlers.onended - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onended">The definition of 'onended' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onended;
@@ -315,6 +362,7 @@ public class HTMLElement extends Element {
    * The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in HTML Living Standard.</a>
    */
   @Nullable
   public OnErrorEventHandler onerror;
@@ -323,6 +371,7 @@ public class HTMLElement extends Element {
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onfocus">HTMLElement.onfocus - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in HTML Living Standard.</a>
    */
   @Nullable
   public FocusEventHandler onfocus;
@@ -331,6 +380,7 @@ public class HTMLElement extends Element {
    * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onformdata;
@@ -339,6 +389,7 @@ public class HTMLElement extends Element {
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in Pointer Events – Level 2.</a>
    */
   @Nullable
   public PointerEventHandler ongotpointercapture;
@@ -347,6 +398,7 @@ public class HTMLElement extends Element {
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oninput">HTMLElement.oninput - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#ix-handler-oninput">The definition of 'oninput' in HTML Living Standard.</a>
    */
   @Nullable
   public InputEventHandler oninput;
@@ -355,6 +407,7 @@ public class HTMLElement extends Element {
    * The oninvalid property of the GlobalEventHandlers mixin is an EventHandler that processes invalid events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">GlobalEventHandlers.oninvalid - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oninvalid">The definition of 'oninvalid' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oninvalid;
@@ -363,6 +416,7 @@ public class HTMLElement extends Element {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onkeydown">HTMLElement.onkeydown - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onkeydown;
@@ -371,6 +425,7 @@ public class HTMLElement extends Element {
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onkeypress">HTMLElement.onkeypress - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -379,6 +434,7 @@ public class HTMLElement extends Element {
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onkeyup">HTMLElement.onkeyup - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onkeyup;
@@ -387,6 +443,7 @@ public class HTMLElement extends Element {
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onload">HTMLElement.onload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onload;
@@ -395,6 +452,7 @@ public class HTMLElement extends Element {
    * The onloadeddata property of the GlobalEventHandlers mixin is the EventHandler for processing loadeddata events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata">GlobalEventHandlers.onloadeddata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadeddata">The definition of 'onloadeddata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadeddata;
@@ -403,6 +461,7 @@ public class HTMLElement extends Element {
    * The onloadedmetadata property of the GlobalEventHandlers mixin is the EventHandler for processing loadedmetadata events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata">GlobalEventHandlers.onloadedmetadata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadedmetadata">The definition of 'onloadedmetadata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadedmetadata;
@@ -411,6 +470,7 @@ public class HTMLElement extends Element {
    * The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadstart;
@@ -419,6 +479,7 @@ public class HTMLElement extends Element {
    * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in Pointer Events – Level 2.</a>
    */
   @Nullable
   public PointerEventHandler onlostpointercapture;
@@ -427,6 +488,7 @@ public class HTMLElement extends Element {
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmousedown">HTMLElement.onmousedown - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousedown">The definition of 'onmousedown' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmousedown;
@@ -435,6 +497,7 @@ public class HTMLElement extends Element {
    * The onmouseenter property of the GlobalEventHandlers mixin is the EventHandler for processing mouseenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter">GlobalEventHandlers.onmouseenter - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseenter">The definition of 'onmouseenter' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmouseenter;
@@ -443,6 +506,7 @@ public class HTMLElement extends Element {
    * The onmouseleave property of the GlobalEventHandlers mixin is the EventHandler for processing mouseleave events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave">GlobalEventHandlers.onmouseleave - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseleave">The definition of 'onmouseleave' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmouseleave;
@@ -451,6 +515,7 @@ public class HTMLElement extends Element {
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmousemove">HTMLElement.onmousemove - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmousemove;
@@ -459,6 +524,7 @@ public class HTMLElement extends Element {
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmouseout">HTMLElement.onmouseout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseout">The definition of 'onmouseout' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmouseout;
@@ -467,6 +533,7 @@ public class HTMLElement extends Element {
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmouseover">HTMLElement.onmouseover - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmouseover;
@@ -475,6 +542,7 @@ public class HTMLElement extends Element {
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onmouseup">HTMLElement.onmouseup - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseup">The definition of 'onmouseup' in HTML Living Standard.</a>
    */
   @Nullable
   public MouseEventHandler onmouseup;
@@ -491,6 +559,7 @@ public class HTMLElement extends Element {
    * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpause">GlobalEventHandlers.onpause - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onpause">The definition of 'onpause' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onpause;
@@ -499,6 +568,7 @@ public class HTMLElement extends Element {
    * The onplay property of the GlobalEventHandlers mixin is the EventHandler for processing play events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplay">GlobalEventHandlers.onplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onplay">The definition of 'onplay' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onplay;
@@ -507,6 +577,7 @@ public class HTMLElement extends Element {
    * The onplaying property of the GlobalEventHandlers mixin is the EventHandler for processing playing events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplaying">GlobalEventHandlers.onplaying - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onplaying">The definition of 'onplaying' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onplaying;
@@ -515,6 +586,8 @@ public class HTMLElement extends Element {
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointercancel;
@@ -523,6 +596,8 @@ public class HTMLElement extends Element {
    * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointerdown;
@@ -531,6 +606,8 @@ public class HTMLElement extends Element {
    * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointerenter;
@@ -539,6 +616,8 @@ public class HTMLElement extends Element {
    * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointerleave;
@@ -547,6 +626,8 @@ public class HTMLElement extends Element {
    * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointermove;
@@ -555,6 +636,8 @@ public class HTMLElement extends Element {
    * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointerout;
@@ -563,6 +646,8 @@ public class HTMLElement extends Element {
    * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointerover;
@@ -571,6 +656,8 @@ public class HTMLElement extends Element {
    * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in Pointer Events.</a>
    */
   @Nullable
   public PointerEventHandler onpointerup;
@@ -585,6 +672,7 @@ public class HTMLElement extends Element {
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onreset">HTMLElement.onreset - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onreset">The definition of 'onreset' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onreset;
@@ -593,6 +681,7 @@ public class HTMLElement extends Element {
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onresize">HTMLElement.onresize - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onreset">The definition of 'onreset' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onresize;
@@ -601,6 +690,8 @@ public class HTMLElement extends Element {
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onscroll">HTMLElement.onscroll - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in Document Object Model (DOM) Level 3 Events Specification.</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -618,6 +709,7 @@ public class HTMLElement extends Element {
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onselect">HTMLElement.onselect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onselect">The definition of 'onselect' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -626,6 +718,7 @@ public class HTMLElement extends Element {
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in Selection API.</a>
    */
   @Nullable
   public EventHandler onselectionchange;
@@ -634,6 +727,7 @@ public class HTMLElement extends Element {
    * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in Selection API.</a>
    */
   @Nullable
   public EventHandler onselectstart;
@@ -648,6 +742,7 @@ public class HTMLElement extends Element {
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onsubmit">HTMLElement.onsubmit - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onsubmit;
@@ -665,6 +760,7 @@ public class HTMLElement extends Element {
    * The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel">GlobalEventHandlers.ontouchcancel - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchcancel">Touch Events – Level 2</a>
    */
   @Nullable
   public TouchEventHandler ontouchcancel;
@@ -673,6 +769,7 @@ public class HTMLElement extends Element {
    * A global event handler for the touchend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchend">GlobalEventHandlers.ontouchend - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchend">Touch Events – Level 2</a>
    */
   @Nullable
   public TouchEventHandler ontouchend;
@@ -681,6 +778,7 @@ public class HTMLElement extends Element {
    * A global event handler for the touchmove event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove">GlobalEventHandlers.ontouchmove - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchmove">Touch Events – Level 2</a>
    */
   @Nullable
   public TouchEventHandler ontouchmove;
@@ -689,6 +787,7 @@ public class HTMLElement extends Element {
    * The ontouchstart property of the GlobalEventHandlers mixin is an EventHandler that processes touchstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart">GlobalEventHandlers.ontouchstart - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchstart">Touch Events – Level 2</a>
    */
   @Nullable
   public TouchEventHandler ontouchstart;
@@ -697,6 +796,7 @@ public class HTMLElement extends Element {
    * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitioncancel">The definition of 'ontransitioncancel' in CSS Transitions.</a>
    */
   @Nullable
   public TransitionEventHandler ontransitioncancel;
@@ -705,6 +805,7 @@ public class HTMLElement extends Element {
    * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitionend">The definition of 'ontransitionend' in CSS Transitions.</a>
    */
   @Nullable
   public TransitionEventHandler ontransitionend;
@@ -737,6 +838,7 @@ public class HTMLElement extends Element {
    * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onwheel">The definition of 'onwheel' in HTML Living Standard.</a>
    */
   @Nullable
   public WheelEventHandler onwheel;
@@ -749,6 +851,9 @@ public class HTMLElement extends Element {
    * The HTMLElement.title property represents the title of the element: the text usually displayed in a 'tooltip' popup when the mouse is over the node.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title">HTMLElement.title - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-title">The definition of 'title' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-78276800">The definition of 'title' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-78276800">The definition of 'title' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   public String title;
@@ -759,9 +864,12 @@ public class HTMLElement extends Element {
   }
 
   /**
-   * The HTMLElement.accessKeyLabel read-only property returns a String that represents the element's assigned access key (if any); otherwise it returns an empty string.
+   * The HTMLElement.accessKeyLabel read-only property returns a String containing the element's browser-assigned access key (if any); otherwise it returns an empty string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel">HTMLElement.accessKeyLabel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-accesskeylabel">The definition of 'HTMLElement.accessKeyLabel' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/">HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/editing.html#dom-accesskeylabel">The definition of 'HTMLElement.accessKeyLabel' in HTML5.</a>
    */
   @JsProperty(
       name = "accessKeyLabel"
@@ -779,6 +887,9 @@ public class HTMLElement extends Element {
    * The HTMLElement.isContentEditable read-only property returns a Boolean that is true if the contents of the element are editable; otherwise it returns false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/isContentEditable">HTMLElement.isContentEditable - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/editing.html#dom-iscontenteditable">The definition of 'HTMLElement.contenteditable' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-iscontenteditable">The definition of 'HTMLElement.contenteditable' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/editing.html#dom-iscontenteditable">The definition of 'HTMLElement.contenteditable' in HTML5.</a>
    */
   @JsProperty(
       name = "isContentEditable"
@@ -789,6 +900,7 @@ public class HTMLElement extends Element {
    * The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight">HTMLElement.offsetHeight - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetheight">The definition of 'offsetHeight' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "offsetHeight"
@@ -799,6 +911,7 @@ public class HTMLElement extends Element {
    * The HTMLElement.offsetLeft read-only property returns the number of pixels that the upper left corner of the current element is offset to the left within the HTMLElement.offsetParent node.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft">HTMLElement.offsetLeft - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetleft">The definition of 'offsetLeft' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "offsetLeft"
@@ -809,6 +922,7 @@ public class HTMLElement extends Element {
    * The HTMLElement.offsetParent read-only property returns a reference to the element which is the closest (nearest in the containment hierarchy) positioned ancestor element. If there is no positioned ancestor element, the nearest ancestor td, th, table will be returned, or the body if there are no ancestor table elements either.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent">HTMLElement.offsetParent - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetparent">The definition of 'offsetParent' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "offsetParent"
@@ -820,6 +934,7 @@ public class HTMLElement extends Element {
    * The HTMLElement.offsetTop read-only property returns the distance of the current element relative to the top of the offsetParent node.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop">HTMLElement.offsetTop - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsettop">The definition of 'offsetTop' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "offsetTop"
@@ -830,6 +945,7 @@ public class HTMLElement extends Element {
    * The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth">HTMLElement.offsetWidth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetwidth">The definition of 'offsetWidth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "offsetWidth"
@@ -840,6 +956,7 @@ public class HTMLElement extends Element {
    * The style property is used to get as well as set the inline style of an element. When getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">HTMLElement.style - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-elementcssinlinestyle-style">The definition of 'the ElementCSSInlineStyle.style property' in CSS Object Model (CSSOM).</a>
    */
   @JsProperty(
       name = "style"
@@ -854,6 +971,8 @@ public class HTMLElement extends Element {
    * The HTMLElement.click() method simulates a mouse click on an element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click">HTMLElement.click - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-click">HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-2651361">Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   public native void click();
 

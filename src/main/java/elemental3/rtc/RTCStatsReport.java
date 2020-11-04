@@ -15,6 +15,7 @@ import jsinterop.base.Js;
  * The RTCStatsReport interface provides a statistics report obtained by calling one of the RTCPeerConnection.getStats(), RTCRtpReceiver.getStats(), and RTCRtpSender.getStats() methods.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport">RTCStatsReport - MDN</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcstatsreport-object">The definition of 'RTCStatsReport' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

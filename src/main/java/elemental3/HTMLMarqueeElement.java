@@ -10,6 +10,10 @@ import jsinterop.annotations.JsType;
  * The HTMLMarqueeElement interface provides methods to manipulate marquee elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMarqueeElement">HTMLMarqueeElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in HTML 5.2.</a>
+ * @see <a href="https://www.w3.org/TR/html51/obsolete.html#htmlmarqueeelement-htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in HTML 5.1.</a>
+ * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

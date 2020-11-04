@@ -28,14 +28,31 @@ public interface IntersectionObserverInit {
       name = "root"
   )
   @Nullable
-  Element root();
+  ElementOrDocumentUnion root();
 
   @JsProperty
-  void setRoot(@Nullable Element root);
+  void setRoot(@Nullable ElementOrDocumentUnion root);
+
+  @JsOverlay
+  default void setRoot(@Nonnull final Element root) {
+    setRoot( ElementOrDocumentUnion.of( root ) );
+  }
 
   @JsOverlay
   @Nonnull
-  default IntersectionObserverInit root(@Nullable final Element root) {
+  default IntersectionObserverInit root(@Nonnull final Element root) {
+    setRoot( root );
+    return this;
+  }
+
+  @JsOverlay
+  default void setRoot(@Nonnull final Document root) {
+    setRoot( ElementOrDocumentUnion.of( root ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default IntersectionObserverInit root(@Nonnull final Document root) {
     setRoot( root );
     return this;
   }

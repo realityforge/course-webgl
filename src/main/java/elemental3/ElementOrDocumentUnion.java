@@ -13,28 +13,16 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface GeometryNode {
+public interface ElementOrDocumentUnion {
   @JsOverlay
   @Nonnull
-  static GeometryNode of(@Nonnull final Text value) {
+  static ElementOrDocumentUnion of(@Nonnull final Element value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static GeometryNode of(@Nonnull final Element value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static GeometryNode of(@Nonnull final CSSPseudoElement value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static GeometryNode of(@Nonnull final Document value) {
+  static ElementOrDocumentUnion of(@Nonnull final Document value) {
     return Js.cast( value );
   }
 }

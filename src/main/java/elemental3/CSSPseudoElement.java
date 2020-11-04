@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement">CSSPseudoElement - MDN</a>
+ * @see <a href="https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface">The definition of 'CSSPseudoElement' in CSS Pseudo-Elements Level 4.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,6 +28,7 @@ public class CSSPseudoElement extends EventTarget {
    * The element read-only property of the CSSPseudoElement interface returns a reference to the originating element of the pseudo-element, in other words its parent element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/element">CSSPseudoElement.element - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-element">The definition of 'element' in CSS Pseudo-Elements Level 4.</a>
    */
   @JsProperty(
       name = "element"
@@ -38,128 +40,13 @@ public class CSSPseudoElement extends EventTarget {
    * The type read-only property of the CSSPseudoElement interface returns the type of the pseudo-element as a string, represented in the form of a CSS selector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/type">CSSPseudoElement.type - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-type">The definition of 'type' in CSS Pseudo-Elements Level 4.</a>
    */
   @JsProperty(
       name = "type"
   )
   @Nonnull
   public native String type();
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads(@Nonnull BoxQuadOptions options);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads();
 
   @Nonnull
   public native Animation animate(@Nullable Object keyframes, double options);

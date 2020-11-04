@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL">URL - MDN</a>
+ * @see <a href="https://w3c.github.io/FileAPI/#creating-revoking">The definition of 'URL' in File API.</a>
+ * @see <a href="https://url.spec.whatwg.org/#api">The definition of 'API' in URL.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +25,7 @@ public class URL {
    * The hash property of the URL interface is a USVString containing a '#' followed by the fragment identifier of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hash">URL.hash - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-hash">The definition of 'URL.hash' in URL.</a>
    */
   @Nonnull
   public String hash;
@@ -31,6 +34,7 @@ public class URL {
    * The host property of the URL interface is a USVString containing the host, that is the hostname, and then, if the port of the URL is nonempty, a ':', followed by the port of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/host">URL.host - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-host">The definition of 'URL.host' in URL.</a>
    */
   @Nonnull
   public String host;
@@ -39,6 +43,7 @@ public class URL {
    * The hostname property of the URL interface is a USVString containing the domain name of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname">URL.hostname - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-hostname">The definition of 'URL.hostname' in URL.</a>
    */
   @Nonnull
   public String hostname;
@@ -47,6 +52,7 @@ public class URL {
    * The href property of the URL interface is a USVString containing the whole URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/href">URL.href - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-href">The definition of 'URL.href' in URL.</a>
    */
   @Nonnull
   public String href;
@@ -55,6 +61,7 @@ public class URL {
    * The password property of the URL interface is a USVString containing the password specified before the domain name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/password">URL.password - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-password">The definition of 'URL.password' in URL.</a>
    */
   @Nonnull
   public String password;
@@ -63,6 +70,7 @@ public class URL {
    * The pathname property of the URL interface is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname">URL.pathname - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-pathname">The definition of 'URL.pathname' in URL.</a>
    */
   @Nonnull
   public String pathname;
@@ -71,6 +79,7 @@ public class URL {
    * The port property of the URL interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/port">URL.port - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-port">The definition of 'URL.port' in URL.</a>
    */
   @Nonnull
   public String port;
@@ -79,6 +88,7 @@ public class URL {
    * The protocol property of the URL interface is a USVString representing the protocol scheme of the URL, including the final ':'.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol">URL.protocol - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-protocol">The definition of 'protocol' in URL.</a>
    */
   @Nonnull
   public String protocol;
@@ -87,6 +97,7 @@ public class URL {
    * The search property of the URL interface is a search string, also called a query string, that is a USVString containing a '?' followed by the parameters of the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/search">URL.search - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-search">The definition of 'URL.search' in URL.</a>
    */
   @Nonnull
   public String search;
@@ -95,6 +106,7 @@ public class URL {
    * The username property of the URL interface is a USVString containing the username specified before the domain name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/username">URL.username - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-username">The definition of 'username' in URL.</a>
    */
   @Nonnull
   public String username;
@@ -119,6 +131,7 @@ public class URL {
    * The origin read-only property of the URL interface returns a USVString containing the Unicode serialization of the origin of the represented URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/origin">URL.origin - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-origin">The definition of 'URL.origin' in URL.</a>
    */
   @JsProperty(
       name = "origin"
@@ -130,6 +143,7 @@ public class URL {
    * The searchParams readonly property of the URL interface returns a URLSearchParams object allowing access to the GET decoded query arguments contained in the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams">URL.searchParams - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-searchparams">The definition of 'searchParams' in URL.</a>
    */
   @JsProperty(
       name = "searchParams"
@@ -141,6 +155,7 @@ public class URL {
    * The toJSON() method of the URL interface returns a USVString containing a serialized version of the URL, although in practice it seems to have the same effect as URL.toString().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/toJSON">URL.toJSON - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-url-tojson">The definition of 'toJSON()' in URL.</a>
    */
   @Nonnull
   public native String toJSON();
@@ -149,6 +164,7 @@ public class URL {
    * The URL.revokeObjectURL() static method releases an existing object URL which was previously created by calling URL.createObjectURL().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL">URL.revokeObjectURL - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#dfn-revokeObjectURL">The definition of 'revokeObjectURL()' in File API.</a>
    */
   public static native void revokeObjectURL(@Nonnull String url);
 
@@ -156,6 +172,8 @@ public class URL {
    * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">The definition of 'createObjectURL()' in File API.</a>
+   * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">The definition of 'URL' in Media Source Extensions.</a>
    */
   @Nonnull
   public static native String createObjectURL(@Nonnull Blob blob);
@@ -164,6 +182,8 @@ public class URL {
    * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">The definition of 'createObjectURL()' in File API.</a>
+   * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">The definition of 'URL' in Media Source Extensions.</a>
    */
   @Nonnull
   public static native String createObjectURL(@Nonnull MediaSource mediaSource);

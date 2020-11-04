@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters">RTCRtpEncodingParameters - MDN</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters">The definition of 'RTCRtpEncodingParameters' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,6 +47,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate">RTCRtpEncodingParameters.maxBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-maxbitrate">The definition of 'RTCRtpEncodingParameters.maxBitrate' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "maxBitrate"
@@ -56,6 +58,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate">RTCRtpEncodingParameters.maxBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-maxbitrate">The definition of 'RTCRtpEncodingParameters.maxBitrate' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty
   void setMaxBitrate(int maxBitrate);
@@ -64,6 +67,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate">RTCRtpEncodingParameters.maxBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-maxbitrate">The definition of 'RTCRtpEncodingParameters.maxBitrate' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsOverlay
   @Nonnull
@@ -76,6 +80,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy">RTCRtpEncodingParameters.scaleResolutionDownBy - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-scaleresolutiondownby">The definition of 'RTCRtpEncodingParameters.scaleResolutionDownBy' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "scaleResolutionDownBy"
@@ -86,6 +91,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy">RTCRtpEncodingParameters.scaleResolutionDownBy - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-scaleresolutiondownby">The definition of 'RTCRtpEncodingParameters.scaleResolutionDownBy' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty
   void setScaleResolutionDownBy(double scaleResolutionDownBy);
@@ -94,6 +100,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy">RTCRtpEncodingParameters.scaleResolutionDownBy - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-scaleresolutiondownby">The definition of 'RTCRtpEncodingParameters.scaleResolutionDownBy' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsOverlay
   @Nonnull

@@ -9,6 +9,10 @@ import jsinterop.annotations.JsType;
  * The HTMLLIElement interface exposes specific properties and methods (beyond those defined by regular HTMLElement interface it also has available to it by inheritance) for manipulating list elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLIElement">HTMLLIElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmllielement">The definition of 'HTMLLIElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/grouping-content.html#the-li-element">The definition of 'HTMLLIElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74680021">The definition of 'HTMLLIElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-74680021">The definition of 'HTMLLIElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

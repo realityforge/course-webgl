@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">The definition of 'RTCIceCandidatePairStats' in Identifiers for WebRTC's Statistics API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -35,6 +36,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property availableIncomingBitrate returns a value indicative of the available inbound capacity of the network connection represented by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableIncomingBitrate">RTCIceCandidatePairStats.availableIncomingBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableincomingbitrate">The definition of 'RTCIceCandidatePairStats.availableIncomingBitrate' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "availableIncomingBitrate"
@@ -45,6 +47,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property availableIncomingBitrate returns a value indicative of the available inbound capacity of the network connection represented by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableIncomingBitrate">RTCIceCandidatePairStats.availableIncomingBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableincomingbitrate">The definition of 'RTCIceCandidatePairStats.availableIncomingBitrate' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setAvailableIncomingBitrate(double availableIncomingBitrate);
@@ -53,6 +56,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property availableIncomingBitrate returns a value indicative of the available inbound capacity of the network connection represented by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableIncomingBitrate">RTCIceCandidatePairStats.availableIncomingBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableincomingbitrate">The definition of 'RTCIceCandidatePairStats.availableIncomingBitrate' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -65,6 +69,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property availableOutgoingBitrate returns a value indicative of the available outbound capacity of the network connection represented by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate">RTCIceCandidatePairStats.availableOutgoingBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableoutgoingbitrate">The definition of 'RTCIceCandidatePairStats.availableoutgoingbitrate' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "availableOutgoingBitrate"
@@ -75,6 +80,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property availableOutgoingBitrate returns a value indicative of the available outbound capacity of the network connection represented by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate">RTCIceCandidatePairStats.availableOutgoingBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableoutgoingbitrate">The definition of 'RTCIceCandidatePairStats.availableoutgoingbitrate' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setAvailableOutgoingBitrate(double availableOutgoingBitrate);
@@ -83,6 +89,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property availableOutgoingBitrate returns a value indicative of the available outbound capacity of the network connection represented by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate">RTCIceCandidatePairStats.availableOutgoingBitrate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableoutgoingbitrate">The definition of 'RTCIceCandidatePairStats.availableoutgoingbitrate' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -110,6 +117,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats.bytesReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytesreceived">The definition of 'RTCIceCandidatePairStats.bytesReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "bytesReceived"
@@ -120,6 +128,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats.bytesReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytesreceived">The definition of 'RTCIceCandidatePairStats.bytesReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setBytesReceived(int bytesReceived);
@@ -128,6 +137,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats.bytesReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytesreceived">The definition of 'RTCIceCandidatePairStats.bytesReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -140,6 +150,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats.bytesSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytessent">The definition of 'RTCIceCandidatePairStats.bytesSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "bytesSent"
@@ -150,6 +161,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats.bytesSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytessent">The definition of 'RTCIceCandidatePairStats.bytesSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setBytesSent(int bytesSent);
@@ -158,6 +170,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats.bytesSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytessent">The definition of 'RTCIceCandidatePairStats.bytesSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -170,6 +183,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property circuitBreakerTriggerCount indicates the number of times the circuit-breaker has been triggered to indicate a connection timeout or other unexpected connection abort on this specific connection configuration.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount">RTCIceCandidatePairStats.circuitBreakerTriggerCount - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-circuitbreakertriggercount">The definition of 'RTCIceCandidatePairStats.circuitBreakerTriggerCount' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "circuitBreakerTriggerCount"
@@ -180,6 +194,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property circuitBreakerTriggerCount indicates the number of times the circuit-breaker has been triggered to indicate a connection timeout or other unexpected connection abort on this specific connection configuration.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount">RTCIceCandidatePairStats.circuitBreakerTriggerCount - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-circuitbreakertriggercount">The definition of 'RTCIceCandidatePairStats.circuitBreakerTriggerCount' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setCircuitBreakerTriggerCount(int circuitBreakerTriggerCount);
@@ -188,6 +203,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property circuitBreakerTriggerCount indicates the number of times the circuit-breaker has been triggered to indicate a connection timeout or other unexpected connection abort on this specific connection configuration.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount">RTCIceCandidatePairStats.circuitBreakerTriggerCount - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-circuitbreakertriggercount">The definition of 'RTCIceCandidatePairStats.circuitBreakerTriggerCount' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -201,6 +217,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property consentExpiredTimestamp indicates the time at which the most recent STUN binding response expired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp">RTCIceCandidatePairStats.consentExpiredTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentexpiredtimestamp">The definition of 'RTCIceCandidatePairStats.consentExpiredTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "consentExpiredTimestamp"
@@ -211,6 +228,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property consentExpiredTimestamp indicates the time at which the most recent STUN binding response expired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp">RTCIceCandidatePairStats.consentExpiredTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentexpiredtimestamp">The definition of 'RTCIceCandidatePairStats.consentExpiredTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setConsentExpiredTimestamp(double consentExpiredTimestamp);
@@ -219,6 +237,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property consentExpiredTimestamp indicates the time at which the most recent STUN binding response expired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp">RTCIceCandidatePairStats.consentExpiredTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentexpiredtimestamp">The definition of 'RTCIceCandidatePairStats.consentExpiredTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -246,6 +265,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property consentRequestsSent specifies the number of consent requests that have been sent by this peer to the remote peer on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent">RTCIceCandidatePairStats.consentRequestsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentrequestssent">The definition of 'RTCIceCandidatePairStats.consentRequestsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "consentRequestsSent"
@@ -256,6 +276,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property consentRequestsSent specifies the number of consent requests that have been sent by this peer to the remote peer on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent">RTCIceCandidatePairStats.consentRequestsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentrequestssent">The definition of 'RTCIceCandidatePairStats.consentRequestsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setConsentRequestsSent(int consentRequestsSent);
@@ -264,6 +285,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property consentRequestsSent specifies the number of consent requests that have been sent by this peer to the remote peer on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent">RTCIceCandidatePairStats.consentRequestsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentrequestssent">The definition of 'RTCIceCandidatePairStats.consentRequestsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -276,6 +298,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property currentRoundTripTime is a floating-point value indicating the number of seconds it takes for data to be sent by this peer to the remote peer and back over the connection described by this pair of ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/currentRoundTripTime">RTCIceCandidatePairStats.currentRoundTripTime - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-currentroundtriptime">The definition of 'RTCIceCandidatePairStats.currentRoundTripTime' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "currentRoundTripTime"
@@ -286,6 +309,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property currentRoundTripTime is a floating-point value indicating the number of seconds it takes for data to be sent by this peer to the remote peer and back over the connection described by this pair of ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/currentRoundTripTime">RTCIceCandidatePairStats.currentRoundTripTime - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-currentroundtriptime">The definition of 'RTCIceCandidatePairStats.currentRoundTripTime' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setCurrentRoundTripTime(double currentRoundTripTime);
@@ -294,6 +318,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property currentRoundTripTime is a floating-point value indicating the number of seconds it takes for data to be sent by this peer to the remote peer and back over the connection described by this pair of ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/currentRoundTripTime">RTCIceCandidatePairStats.currentRoundTripTime - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-currentroundtriptime">The definition of 'RTCIceCandidatePairStats.currentRoundTripTime' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -306,6 +331,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property firstRequestTimestamp specifies the time at which the first STUN request was sent on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/firstRequestTimestamp">RTCIceCandidatePairStats.firstRequestTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-firstrequesttimestamp">The definition of 'RTCIceCandidatePairStats.firstRequestTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "firstRequestTimestamp"
@@ -316,6 +342,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property firstRequestTimestamp specifies the time at which the first STUN request was sent on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/firstRequestTimestamp">RTCIceCandidatePairStats.firstRequestTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-firstrequesttimestamp">The definition of 'RTCIceCandidatePairStats.firstRequestTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setFirstRequestTimestamp(double firstRequestTimestamp);
@@ -324,6 +351,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property firstRequestTimestamp specifies the time at which the first STUN request was sent on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/firstRequestTimestamp">RTCIceCandidatePairStats.firstRequestTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-firstrequesttimestamp">The definition of 'RTCIceCandidatePairStats.firstRequestTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -336,6 +364,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastPacketReceivedTimestamp indicates the time at which the connection described by the candidate pair last received a packet. STUN packets are not included.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp">RTCIceCandidatePairStats.lastPacketReceivedTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketreceivedtimestamp">The definition of 'RTCIceCandidatePairStats.lastPacketReceivedTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "lastPacketReceivedTimestamp"
@@ -346,6 +375,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastPacketReceivedTimestamp indicates the time at which the connection described by the candidate pair last received a packet. STUN packets are not included.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp">RTCIceCandidatePairStats.lastPacketReceivedTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketreceivedtimestamp">The definition of 'RTCIceCandidatePairStats.lastPacketReceivedTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setLastPacketReceivedTimestamp(double lastPacketReceivedTimestamp);
@@ -354,6 +384,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastPacketReceivedTimestamp indicates the time at which the connection described by the candidate pair last received a packet. STUN packets are not included.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp">RTCIceCandidatePairStats.lastPacketReceivedTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketreceivedtimestamp">The definition of 'RTCIceCandidatePairStats.lastPacketReceivedTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -367,6 +398,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastPacketSentTimestamp indicates the time at which the connection described by the candidate pair last sent a packet, not including STUN packets.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp">RTCIceCandidatePairStats.lastPacketSentTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketsenttimestamp">The definition of 'RTCIceCandidatePairStats.lastPacketSentTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "lastPacketSentTimestamp"
@@ -377,6 +409,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastPacketSentTimestamp indicates the time at which the connection described by the candidate pair last sent a packet, not including STUN packets.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp">RTCIceCandidatePairStats.lastPacketSentTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketsenttimestamp">The definition of 'RTCIceCandidatePairStats.lastPacketSentTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setLastPacketSentTimestamp(double lastPacketSentTimestamp);
@@ -385,6 +418,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastPacketSentTimestamp indicates the time at which the connection described by the candidate pair last sent a packet, not including STUN packets.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp">RTCIceCandidatePairStats.lastPacketSentTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketsenttimestamp">The definition of 'RTCIceCandidatePairStats.lastPacketSentTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -397,6 +431,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastRequestTimestamp indicates the time at which the most recent STUN request was sent on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastRequestTimestamp">RTCIceCandidatePairStats.lastRequestTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastrequesttimestamp">The definition of 'RTCIceCandidatePairStats.lastRequestTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "lastRequestTimestamp"
@@ -407,6 +442,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastRequestTimestamp indicates the time at which the most recent STUN request was sent on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastRequestTimestamp">RTCIceCandidatePairStats.lastRequestTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastrequesttimestamp">The definition of 'RTCIceCandidatePairStats.lastRequestTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setLastRequestTimestamp(double lastRequestTimestamp);
@@ -415,6 +451,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastRequestTimestamp indicates the time at which the most recent STUN request was sent on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastRequestTimestamp">RTCIceCandidatePairStats.lastRequestTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastrequesttimestamp">The definition of 'RTCIceCandidatePairStats.lastRequestTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -427,6 +464,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "lastResponseTimestamp"
@@ -437,6 +475,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setLastResponseTimestamp(double lastResponseTimestamp);
@@ -445,6 +484,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -457,6 +497,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">The definition of 'RTCIceCandidatePairStats.localCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "localCandidateId"
@@ -468,6 +509,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">The definition of 'RTCIceCandidatePairStats.localCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setLocalCandidateId(@Nonnull String localCandidateId);
@@ -476,6 +518,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">The definition of 'RTCIceCandidatePairStats.localCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -488,6 +531,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated">RTCIceCandidatePairStats.nominated - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-nominated">The definition of 'RTCIceCandidatePairStats.nominated' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "nominated"
@@ -498,6 +542,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated">RTCIceCandidatePairStats.nominated - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-nominated">The definition of 'RTCIceCandidatePairStats.nominated' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setNominated(boolean nominated);
@@ -506,6 +551,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated">RTCIceCandidatePairStats.nominated - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-nominated">The definition of 'RTCIceCandidatePairStats.nominated' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -533,6 +579,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's packetsReceived property indicates the total number of packets of any kind that have been received on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsReceived">RTCIceCandidatePairStats.packetsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-packetsreceived">The definition of 'RTCIceCandidatePairStats.packetsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "packetsReceived"
@@ -543,6 +590,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's packetsReceived property indicates the total number of packets of any kind that have been received on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsReceived">RTCIceCandidatePairStats.packetsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-packetsreceived">The definition of 'RTCIceCandidatePairStats.packetsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setPacketsReceived(int packetsReceived);
@@ -551,6 +599,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's packetsReceived property indicates the total number of packets of any kind that have been received on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsReceived">RTCIceCandidatePairStats.packetsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-packetsreceived">The definition of 'RTCIceCandidatePairStats.packetsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -563,6 +612,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's packetsSent property indicates the total number of packets which have been sent on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsSent">RTCIceCandidatePairStats.packetsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-packetssent">The definition of 'RTCIceCandidatePairStats.packetsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "packetsSent"
@@ -573,6 +623,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's packetsSent property indicates the total number of packets which have been sent on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsSent">RTCIceCandidatePairStats.packetsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-packetssent">The definition of 'RTCIceCandidatePairStats.packetsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setPacketsSent(int packetsSent);
@@ -581,6 +632,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's packetsSent property indicates the total number of packets which have been sent on the connection described by the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsSent">RTCIceCandidatePairStats.packetsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-packetssent">The definition of 'RTCIceCandidatePairStats.packetsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -593,6 +645,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "remoteCandidateId"
@@ -604,6 +657,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setRemoteCandidateId(@Nonnull String remoteCandidateId);
@@ -612,6 +666,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -639,6 +694,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's requestsReceived property indicates the total number of STUN connectivity check requests that have been received so far on the connection described by this pairing of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsReceived">RTCIceCandidatePairStats.requestsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestsreceived">The definition of 'RTCIceCandidatePairStats.requestsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "requestsReceived"
@@ -649,6 +705,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's requestsReceived property indicates the total number of STUN connectivity check requests that have been received so far on the connection described by this pairing of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsReceived">RTCIceCandidatePairStats.requestsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestsreceived">The definition of 'RTCIceCandidatePairStats.requestsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setRequestsReceived(int requestsReceived);
@@ -657,6 +714,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's requestsReceived property indicates the total number of STUN connectivity check requests that have been received so far on the connection described by this pairing of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsReceived">RTCIceCandidatePairStats.requestsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestsreceived">The definition of 'RTCIceCandidatePairStats.requestsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -669,6 +727,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's requestsSent property indicates the total number of STUN connectivity check requests that have been sent so far on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsSent">RTCIceCandidatePairStats.requestsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestssent">The definition of 'RTCIceCandidatePairStats.requestsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "requestsSent"
@@ -679,6 +738,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's requestsSent property indicates the total number of STUN connectivity check requests that have been sent so far on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsSent">RTCIceCandidatePairStats.requestsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestssent">The definition of 'RTCIceCandidatePairStats.requestsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setRequestsSent(int requestsSent);
@@ -687,6 +747,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's requestsSent property indicates the total number of STUN connectivity check requests that have been sent so far on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsSent">RTCIceCandidatePairStats.requestsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestssent">The definition of 'RTCIceCandidatePairStats.requestsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -714,6 +775,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The responsesReceived property in the RTCIceCandidatePairStats dictionary indicates the total number of STUN connectivity check responses that have been received on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesReceived">RTCIceCandidatePairStats.responsesReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-responsesreceived">The definition of 'RTCIceCandidatePairStats.responsesReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "responsesReceived"
@@ -724,6 +786,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The responsesReceived property in the RTCIceCandidatePairStats dictionary indicates the total number of STUN connectivity check responses that have been received on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesReceived">RTCIceCandidatePairStats.responsesReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-responsesreceived">The definition of 'RTCIceCandidatePairStats.responsesReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setResponsesReceived(int responsesReceived);
@@ -732,6 +795,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The responsesReceived property in the RTCIceCandidatePairStats dictionary indicates the total number of STUN connectivity check responses that have been received on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesReceived">RTCIceCandidatePairStats.responsesReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-responsesreceived">The definition of 'RTCIceCandidatePairStats.responsesReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -744,6 +808,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's responsesSent property indicates the total number of STUN connectivity check responses that have been sent so far on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesSent">RTCIceCandidatePairStats.responsesSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-responsessent">The definition of 'RTCIceCandidatePairStats.responsesSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "responsesSent"
@@ -754,6 +819,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's responsesSent property indicates the total number of STUN connectivity check responses that have been sent so far on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesSent">RTCIceCandidatePairStats.responsesSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-responsessent">The definition of 'RTCIceCandidatePairStats.responsesSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setResponsesSent(int responsesSent);
@@ -762,6 +828,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's responsesSent property indicates the total number of STUN connectivity check responses that have been sent so far on the connection described by this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesSent">RTCIceCandidatePairStats.responsesSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-responsessent">The definition of 'RTCIceCandidatePairStats.responsesSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -774,6 +841,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's retransmissionsReceived property indicates the total number of STUN connectivity check request retransmissions that have been received so far on the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsReceived">RTCIceCandidatePairStats.retransmissionsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionsreceived">The definition of 'RTCIceCandidatePairStats.retransmissionsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "retransmissionsReceived"
@@ -784,6 +852,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's retransmissionsReceived property indicates the total number of STUN connectivity check request retransmissions that have been received so far on the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsReceived">RTCIceCandidatePairStats.retransmissionsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionsreceived">The definition of 'RTCIceCandidatePairStats.retransmissionsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setRetransmissionsReceived(int retransmissionsReceived);
@@ -792,6 +861,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's retransmissionsReceived property indicates the total number of STUN connectivity check request retransmissions that have been received so far on the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsReceived">RTCIceCandidatePairStats.retransmissionsReceived - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionsreceived">The definition of 'RTCIceCandidatePairStats.retransmissionsReceived' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -804,6 +874,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's retransmissionsSent property indicates the total number of STUN connectivity check request retransmissions that have been sent so far on the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsSent">RTCIceCandidatePairStats.retransmissionsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionssent">The definition of 'RTCIceCandidatePairStats.retransmissionsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "retransmissionsSent"
@@ -814,6 +885,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's retransmissionsSent property indicates the total number of STUN connectivity check request retransmissions that have been sent so far on the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsSent">RTCIceCandidatePairStats.retransmissionsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionssent">The definition of 'RTCIceCandidatePairStats.retransmissionsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setRetransmissionsSent(int retransmissionsSent);
@@ -822,6 +894,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's retransmissionsSent property indicates the total number of STUN connectivity check request retransmissions that have been sent so far on the pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsSent">RTCIceCandidatePairStats.retransmissionsSent - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionssent">The definition of 'RTCIceCandidatePairStats.retransmissionsSent' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -834,6 +907,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "state"
@@ -846,6 +920,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setState(@RTCStatsIceCandidatePairState @Nonnull String state);
@@ -854,6 +929,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -867,6 +943,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime">RTCIceCandidatePairStats.totalRoundTripTime - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-totalroundtriptime">The definition of 'RTCIceCandidatePairStats.totalRoundTripTime' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "totalRoundTripTime"
@@ -877,6 +954,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime">RTCIceCandidatePairStats.totalRoundTripTime - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-totalroundtriptime">The definition of 'RTCIceCandidatePairStats.totalRoundTripTime' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);
@@ -885,6 +963,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime">RTCIceCandidatePairStats.totalRoundTripTime - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-totalroundtriptime">The definition of 'RTCIceCandidatePairStats.totalRoundTripTime' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -897,6 +976,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty(
       name = "transportId"
@@ -908,6 +988,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
   void setTransportId(@Nonnull String transportId);
@@ -916,6 +997,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsOverlay
   @Nonnull
@@ -973,6 +1055,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">The definition of 'RTCStats.id' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsOverlay
   @Nonnull
@@ -986,6 +1069,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">The definition of 'RTCStats.timestamp' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsOverlay
   @Nonnull
@@ -999,6 +1083,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">The definition of 'RTCStats.type' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsOverlay
   @Nonnull

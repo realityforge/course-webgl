@@ -45,6 +45,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onafterprint">WindowEventHandlers.onafterprint - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onafterprint">The definition of 'onafterprint' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onafterprint;
@@ -53,6 +54,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onbeforeprint property of the WindowEventHandlers mixin is the EventHandler for processing beforeprint events for the current window. These events are raised before the print dialog window is opened.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint">WindowEventHandlers.onbeforeprint - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeprint">The definition of 'onbeforeprint' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onbeforeprint;
@@ -61,6 +63,9 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload">WindowEventHandlers.onbeforeunload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeunload">The definition of 'onbeforeunload' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML5.</a>
    */
   @Nullable
   public OnBeforeUnloadEventHandler onbeforeunload;
@@ -77,6 +82,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">WindowEventHandlers.onlanguagechange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">The definition of 'WindowEventHandler.onlanguagechange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onlanguagechange;
@@ -85,6 +91,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">The definition of 'onmessage' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmessage;
@@ -93,6 +100,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">The definition of 'onmessageerror' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmessageerror;
@@ -113,6 +121,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate">WindowEventHandlers.onpopstate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">The definition of 'onpopstate' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onpopstate;
@@ -121,6 +130,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">WindowEventHandlers.onrejectionhandled - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">The definition of 'onrejectionhandled' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onrejectionhandled;
@@ -129,6 +139,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onstorage">WindowEventHandlers.onstorage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">The definition of 'onstorage' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onstorage;
@@ -137,6 +148,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">WindowEventHandlers.onunhandledrejection - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">The definition of 'onunhandledrejection' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onunhandledrejection;
@@ -145,6 +157,9 @@ public class SVGSVGElement extends SVGGraphicsElement {
    * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload">WindowEventHandlers.onunload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onunload">The definition of 'onunload' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML5.</a>
    */
   @Nullable
   public EventHandler onunload;

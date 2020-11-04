@@ -48,6 +48,8 @@ public class HTMLTrackElement extends HTMLElement {
    * The HTMLTrackElement.src property reflects the value of the track element's src attribute, which indicates the URL of the text track's data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/src">HTMLTrackElement.src - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-track-src">The definition of 'HTMLTrackElement.src' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-track-src">The definition of 'HTMLTrackElement.src' in HTML5.</a>
    */
   @Nonnull
   public String src;

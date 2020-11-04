@@ -11,6 +11,10 @@ import jsinterop.annotations.JsType;
  * The HTMLTableElement interface provides special properties and methods (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement">HTMLTableElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmltableelement">The definition of 'HTMLTableElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/tabular-data.html#the-table-element">The definition of 'HTMLTableElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425">The definition of 'HTMLTableElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-64060425">The definition of 'HTMLTableElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -47,6 +51,10 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.caption property represents the table caption. If no caption element is associated with the table, this property is null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/caption">HTMLTableElement.caption - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/tabular-data.html#dom-table-caption">The definition of 'HTMLTableElement.caption' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/tabular-data.html#dom-table-caption">The definition of 'HTMLTableElement.caption' in HTML5.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520">The definition of 'HTMLTableElement.caption' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14594520">The definition of 'HTMLTableElement.caption' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nullable
   public HTMLTableCaptionElement caption;
@@ -90,6 +98,10 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.tFoot property represents the tfoot element of a table. Its value will be null if there is no such element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tFoot">HTMLTableElement.tFoot - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/tabular-data.html#dom-table-tfoot">The definition of 'HTMLTableElement.tFoot' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/tabular-data.html#dom-table-tfoot">The definition of 'HTMLTableElement.tFoot' in HTML5.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64197097">The definition of 'HTMLTableElement.tFoot' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-64197097">The definition of 'HTMLTableElement.tFoot' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nullable
   public HTMLTableSectionElement tFoot;
@@ -98,6 +110,10 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.tHead represents the thead element of a table. Its value will be null if there is no such element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tHead">HTMLTableElement.tHead - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/tabular-data.html#dom-table-thead">The definition of 'HTMLTableElement.tHead' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/tabular-data.html#dom-table-thead">The definition of 'HTMLTableElement.tHead' in HTML5.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9530944">The definition of 'HTMLTableElement.tHead' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-9530944">The definition of 'HTMLTableElement.tHead' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nullable
   public HTMLTableSectionElement tHead;
@@ -117,6 +133,7 @@ public class HTMLTableElement extends HTMLElement {
    * The read-only HTMLTableElement property rows returns a live HTMLCollection of all the rows in the table, including the rows contained within any thead, tfoot, and tbody elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rows">HTMLTableElement.rows - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-rows">The definition of 'HTMLTableElement: rows' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "rows"
@@ -128,6 +145,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.tBodies read-only property returns a live HTMLCollection of the bodies in a table.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tBodies">HTMLTableElement.tBodies - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-tbodies">The definition of 'HTMLTableElement: tBodies' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "tBodies"
@@ -139,6 +157,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.createCaption() method returns the caption element associated with a given table. If no caption element exists on the table, this method creates it, and then returns it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createCaption">HTMLTableElement.createCaption - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-createcaption">The definition of 'HTMLTableElement: createCaption' in HTML Living Standard.</a>
    */
   @Nonnull
   public native HTMLTableCaptionElement createCaption();
@@ -150,6 +169,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.createTFoot() method returns the tfoot element associated with a given table. If no footer exists in the table, this methods creates it, and then returns it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTFoot">HTMLTableElement.createTFoot - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-createtfoot">The definition of 'HTMLTableElement: createTFoot' in HTML Living Standard.</a>
    */
   @Nonnull
   public native HTMLTableSectionElement createTFoot();
@@ -158,6 +178,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.createTHead() method returns the thead element associated with a given table. If no header exists in the table, this method creates it, and then returns it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTHead">HTMLTableElement.createTHead - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-createthead">The definition of 'HTMLTableElement: createTHead' in HTML Living Standard.</a>
    */
   @Nonnull
   public native HTMLTableSectionElement createTHead();
@@ -166,6 +187,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.deleteCaption() method removes the caption element from a given table. If there is no caption element associated with the table, this method does nothing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteCaption">HTMLTableElement.deleteCaption - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-deletecaption">The definition of 'HTMLTableElement: deleteCaption' in HTML Living Standard.</a>
    */
   public native void deleteCaption();
 
@@ -173,6 +195,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.deleteRow() method removes a specific row (tr) from a given table.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteRow">HTMLTableElement.deleteRow - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-deleterow">The definition of 'HTMLTableElement: deleteRow' in HTML Living Standard.</a>
    */
   public native void deleteRow(int index);
 
@@ -180,6 +203,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.deleteTFoot() method removes the tfoot element from a given table.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTFoot">HTMLTableElement.deleteTFoot - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-deletetfoot">The definition of 'HTMLTableElement: deleteTFoot' in HTML Living Standard.</a>
    */
   public native void deleteTFoot();
 
@@ -187,6 +211,7 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.deleteTHead() removes the thead element from a given table.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTHead">HTMLTableElement.deleteTHead - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-table-deletethead">The definition of 'HTMLTableElement: deleteTHead' in HTML Living Standard.</a>
    */
   public native void deleteTHead();
 
@@ -194,6 +219,9 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.insertRow() method inserts a new row (tr) in a given table, and returns a reference to the new row.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow">HTMLTableElement.insertRow - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#dom-table-insertrow">The definition of 'HTMLTableElement.insertRow()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-93995626">The definition of 'HTMLTableElement.insertRow()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-39872903">The definition of 'HTMLTableElement.insertRow()' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   public native HTMLTableRowElement insertRow(int index);
@@ -202,6 +230,9 @@ public class HTMLTableElement extends HTMLElement {
    * The HTMLTableElement.insertRow() method inserts a new row (tr) in a given table, and returns a reference to the new row.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow">HTMLTableElement.insertRow - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#dom-table-insertrow">The definition of 'HTMLTableElement.insertRow()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-93995626">The definition of 'HTMLTableElement.insertRow()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-39872903">The definition of 'HTMLTableElement.insertRow()' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   public native HTMLTableRowElement insertRow();

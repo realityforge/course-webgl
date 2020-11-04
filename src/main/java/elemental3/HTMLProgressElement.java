@@ -10,6 +10,9 @@ import jsinterop.annotations.JsType;
  * The HTMLProgressElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of progress elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement">HTMLProgressElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlprogresselement">The definition of 'HTMLProgressElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html51/forms.html#the-progress-element">The definition of 'HTMLProgressElement' in HTML 5.1.</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-progress-element">The definition of 'HTMLProgressElement' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,6 +32,8 @@ public class HTMLProgressElement extends HTMLElement {
    * The HTMLProgressElement.labels read-only property returns a NodeList of the label elements associated with the progress element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/labels">HTMLProgressElement.labels - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in HTML5.</a>
    */
   @JsProperty(
       name = "labels"

@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The AudioBuffer interface represents a short audio asset residing in memory, created from an audio file using the AudioContext.decodeAudioData() method, or from raw data using AudioContext.createBuffer(). Once put into an AudioBuffer, the audio can then be played by being passed into an AudioBufferSourceNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer">AudioBuffer - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#audiobuffer">The definition of 'AudioBuffer' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class AudioBuffer {
    * The AudioBuffer constructor of the Web Audio API creates a new AudioBuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/AudioBuffer">AudioBuffer.AudioBuffer - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioBuffer">The definition of 'AudioBuffer' in Web Audio API.</a>
    */
   public AudioBuffer(@Nonnull final AudioBufferOptions options) {
   }
@@ -31,6 +33,7 @@ public class AudioBuffer {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/duration">AudioBuffer.duration - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-duration">The definition of 'duration' in Web Audio API.</a>
    */
   @JsProperty(
       name = "duration"
@@ -41,6 +44,7 @@ public class AudioBuffer {
    * The length property of the AudioBuffer interface returns an integer representing the length, in sample-frames, of the PCM data stored in the buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/length">AudioBuffer.length - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-length">The definition of 'length' in Web Audio API.</a>
    */
   @JsProperty(
       name = "length"
@@ -51,6 +55,7 @@ public class AudioBuffer {
    * An integer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/numberOfChannels">AudioBuffer.numberOfChannels - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-numberofchannels">The definition of 'numberOfChannels' in Web Audio API.</a>
    */
   @JsProperty(
       name = "numberOfChannels"
@@ -61,6 +66,7 @@ public class AudioBuffer {
    * A floating-point value indicating the current sample rate of the buffers data, in samples per second.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/sampleRate">AudioBuffer.sampleRate - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-samplerate">The definition of 'sampleRate' in Web Audio API.</a>
    */
   @JsProperty(
       name = "sampleRate"
@@ -71,6 +77,7 @@ public class AudioBuffer {
    * The copyFromChannel() method of the AudioBuffer interface copies the audio sample data from the specified channel of the AudioBuffer to a specified Float32Array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyFromChannel">AudioBuffer.copyFromChannel - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-copyfromchannel">The definition of 'copyFromChannel' in Web Audio API.</a>
    */
   public native void copyFromChannel(@Nonnull Float32Array destination, int channelNumber,
       int bufferOffset);
@@ -79,6 +86,7 @@ public class AudioBuffer {
    * The copyFromChannel() method of the AudioBuffer interface copies the audio sample data from the specified channel of the AudioBuffer to a specified Float32Array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyFromChannel">AudioBuffer.copyFromChannel - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-copyfromchannel">The definition of 'copyFromChannel' in Web Audio API.</a>
    */
   public native void copyFromChannel(@Nonnull Float32Array destination, int channelNumber);
 
@@ -86,6 +94,7 @@ public class AudioBuffer {
    * The copyToChannel() method of the AudioBuffer interface copies the samples to the specified channel of the AudioBuffer, from the source array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyToChannel">AudioBuffer.copyToChannel - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-copytochannel">The definition of 'copyToChannel' in Web Audio API.</a>
    */
   public native void copyToChannel(@Nonnull Float32Array source, int channelNumber,
       int bufferOffset);
@@ -94,6 +103,7 @@ public class AudioBuffer {
    * The copyToChannel() method of the AudioBuffer interface copies the samples to the specified channel of the AudioBuffer, from the source array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyToChannel">AudioBuffer.copyToChannel - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-copytochannel">The definition of 'copyToChannel' in Web Audio API.</a>
    */
   public native void copyToChannel(@Nonnull Float32Array source, int channelNumber);
 
@@ -101,6 +111,7 @@ public class AudioBuffer {
    * The getChannelData() method of the AudioBuffer Interface returns a Float32Array containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/getChannelData">AudioBuffer.getChannelData - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffer-getchanneldata">The definition of 'getChannelData' in Web Audio API.</a>
    */
   @Nonnull
   public native Float32Array getChannelData(int channel);

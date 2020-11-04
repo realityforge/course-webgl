@@ -14,6 +14,8 @@ import jsinterop.base.JsArrayLike;
  * The AudioTrackList interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate AudioTrack object in the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList">AudioTrackList - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist">The definition of 'AudioTrackList' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#audiotracklist">The definition of 'AudioTrackList' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,6 +28,8 @@ public class AudioTrackList extends EventTarget {
    * The AudioTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new audio track has been added to the media element whose audio tracks the AudioTrackList represents.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onaddtrack">AudioTrackList.onaddtrack - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">The definition of 'AudioTrackList.onaddtrack' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onaddtrack">The definition of 'AudioTrackList.onaddtrack' in HTML5.</a>
    */
   @Nullable
   public TrackEventHandler onaddtrack;
@@ -34,6 +38,8 @@ public class AudioTrackList extends EventTarget {
    * The AudioTrackList property onchange is an event handler which is called when the change event occurs, indicating that one or more of the AudioTracks in the AudioTrackList have been enabled or disabled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onchange">AudioTrackList.onchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">The definition of 'AudioTrackList.onchange' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onchange">The definition of 'AudioTrackList.onchange' in HTML5.</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -42,6 +48,8 @@ public class AudioTrackList extends EventTarget {
    * The AudioTrackList onremovetrack event handler is called when the removetrack event occurs, indicating that an audio track has been removed from the media element, and therefore also from the AudioTrackList.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onremovetrack">AudioTrackList.onremovetrack - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">The definition of 'AudioTrackList.onremovetrack' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onremovetrack">The definition of 'AudioTrackList.onremovetrack' in HTML5.</a>
    */
   @Nullable
   public TrackEventHandler onremovetrack;
@@ -53,6 +61,8 @@ public class AudioTrackList extends EventTarget {
    * The read-only AudioTrackList property length returns the number of entries in the AudioTrackList, each of which is an AudioTrack representing one audio track in the media element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/length">AudioTrackList.length - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/media.html#dom-audiotracklist-length">The definition of 'AudioTrackList.length' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-length">The definition of 'AudioTrackList.length' in HTML5.</a>
    */
   @JsProperty(
       name = "length"
@@ -63,6 +73,8 @@ public class AudioTrackList extends EventTarget {
    * The AudioTrackList method getTrackById() returns the first AudioTrack object from the track list whose id matches the specified string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/getTrackById">AudioTrackList.getTrackById - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-audiotracklist-gettrackbyid">The definition of 'AudioTrackList.getTrackById()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-getTrackById">The definition of 'AudioTrackList.getTrackById()' in HTML5.</a>
    */
   @Nullable
   public native AudioTrack getTrackById(@Nonnull String id);

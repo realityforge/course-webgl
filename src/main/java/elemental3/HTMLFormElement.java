@@ -15,6 +15,8 @@ import jsinterop.base.JsPropertyMap;
  * The HTMLFormElement interface represents a form element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlformelement">The definition of 'HTMLFormElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#htmlformelement">The definition of 'HTMLFormElement' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,6 +29,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.acceptCharset property represents a list of the supported character encodings for the given form element. This list can be comma-separated or space-separated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/acceptCharset">HTMLFormElement.acceptCharset - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-acceptcharset">The definition of 'HTMLFormElement: acceptCharset' in HTML Living Standard.</a>
    */
   @Nonnull
   public String acceptCharset;
@@ -35,6 +38,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.action property represents the action of the form element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/action">HTMLFormElement.action - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fs-action">The definition of 'HTMLFormElement: action' in HTML Living Standard.</a>
    */
   @Nonnull
   public String action;
@@ -55,6 +59,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fs-enctype">The definition of 'HTMLFormElement: enctype' in HTML Living Standard.</a>
    */
   @Nonnull
   @FormEncodingType
@@ -64,6 +69,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.method property represents the HTTP method used to submit the form.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fs-method">The definition of 'HTMLFormElement: method' in HTML Living Standard.</a>
    */
   @Nonnull
   @FormMethodType
@@ -73,6 +79,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.name property represents the name of the current form element as a string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name">HTMLFormElement.name - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-name">The definition of 'HTMLFormElement: name' in HTML Living Standard.</a>
    */
   @Nonnull
   public String name;
@@ -86,6 +93,7 @@ public class HTMLFormElement extends HTMLElement {
    * The target property of the HTMLFormElement interface represents the target of the form's action (i.e., the frame in which to render its output).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/target">HTMLFormElement.target - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fs-target">The definition of 'HTMLFormElement: target' in HTML Living Standard.</a>
    */
   @Nonnull
   public String target;
@@ -97,6 +105,8 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement property elements returns an HTMLFormControlsCollection listing all the form controls contained in the form element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements">HTMLFormElement.elements - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-elements">The definition of 'HTMLFormElement.elements' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479">The definition of 'HTMLFormElement.elements' in Document Object Model (DOM) Level 2 HTML Specification.</a>
    */
   @JsProperty(
       name = "elements"
@@ -108,6 +118,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.length read-only property returns the number of controls in the form element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/length">HTMLFormElement.length - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-length">The definition of 'HTMLFormElement: length' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "length"
@@ -126,6 +137,8 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.reportValidity() method returns true if the element's child controls satisfy their validation constraints. When false is returned, cancelable invalid events are fired for each invalid child and validation problems are reported to the user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity">HTMLFormElement.reportValidity - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-cva-reportvalidity">The definition of 'HTMLFormElement.reportValidity()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/semantics.html#the-constraint-validation-api">The definition of 'HTMLFormElement.reportValidity()' in HTML 5.1.</a>
    */
   public native boolean reportValidity();
 
@@ -133,6 +146,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit">HTMLFormElement.requestSubmit - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-requestsubmit">The definition of 'requestSubmit()' in HTML Living Standard.</a>
    */
   public native void requestSubmit(@Nullable HTMLElement submitter);
 
@@ -140,6 +154,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit">HTMLFormElement.requestSubmit - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-requestsubmit">The definition of 'requestSubmit()' in HTML Living Standard.</a>
    */
   public native void requestSubmit();
 
@@ -147,6 +162,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset">HTMLFormElement.reset - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-reset">The definition of 'HTMLFormElement: reset' in HTML Living Standard.</a>
    */
   public native void reset();
 
@@ -154,6 +170,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.submit() method submits a given form.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit">HTMLFormElement.submit - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-submit">The definition of 'HTMLFormElement: submit' in HTML Living Standard.</a>
    */
   public native void submit();
 

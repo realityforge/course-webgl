@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * Inherits properties from its parent, AudioNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode">DynamicsCompressorNode - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dynamicscompressornode">The definition of 'DynamicsCompressorNode' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -22,6 +23,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * The DynamicsCompressorNode() constructor creates a new DynamicsCompressorNode object which provides a compression effect, which lowers the volume of the loudest parts of the signal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/DynamicsCompressorNode">DynamicsCompressorNode.DynamicsCompressorNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dynamicscompressornode">The definition of 'DynamicsCompressorNode()' in Web Audio API.</a>
    */
   public DynamicsCompressorNode(@Nonnull final BaseAudioContext context,
       @Nonnull final DynamicsCompressorOptions options) {
@@ -31,6 +33,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * The DynamicsCompressorNode() constructor creates a new DynamicsCompressorNode object which provides a compression effect, which lowers the volume of the loudest parts of the signal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/DynamicsCompressorNode">DynamicsCompressorNode.DynamicsCompressorNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dynamicscompressornode">The definition of 'DynamicsCompressorNode()' in Web Audio API.</a>
    */
   public DynamicsCompressorNode(@Nonnull final BaseAudioContext context) {
   }
@@ -39,6 +42,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/attack">DynamicsCompressorNode.attack - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-attack">The definition of 'attack' in Web Audio API.</a>
    */
   @JsProperty(
       name = "attack"
@@ -50,6 +54,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/knee">DynamicsCompressorNode.knee - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-knee">The definition of 'knee' in Web Audio API.</a>
    */
   @JsProperty(
       name = "knee"
@@ -61,6 +66,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/ratio">DynamicsCompressorNode.ratio - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-ratio">The definition of 'ratio' in Web Audio API.</a>
    */
   @JsProperty(
       name = "ratio"
@@ -72,6 +78,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * The reduction read-only property of the DynamicsCompressorNode interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/reduction">DynamicsCompressorNode.reduction - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-reduction">The definition of 'reduction' in Web Audio API.</a>
    */
   @JsProperty(
       name = "reduction"
@@ -82,6 +89,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/release">DynamicsCompressorNode.release - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-release">The definition of 'release' in Web Audio API.</a>
    */
   @JsProperty(
       name = "release"
@@ -93,6 +101,7 @@ public class DynamicsCompressorNode extends AudioNode {
    * An AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/threshold">DynamicsCompressorNode.threshold - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-threshold">The definition of 'threshold' in Web Audio API.</a>
    */
   @JsProperty(
       name = "threshold"

@@ -14,6 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions">MediaStreamAudioSourceOptions - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamaudiosourceoptions">The definition of 'MediaStreamAudioSourceOptions' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,6 +33,7 @@ public interface MediaStreamAudioSourceOptions {
    * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourceoptions-mediastream">The definition of 'MediaStreamAudioSourceOptions.mediaStream' in Web Audio API.</a>
    */
   @JsProperty(
       name = "mediaStream"
@@ -43,6 +45,7 @@ public interface MediaStreamAudioSourceOptions {
    * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourceoptions-mediastream">The definition of 'MediaStreamAudioSourceOptions.mediaStream' in Web Audio API.</a>
    */
   @JsProperty
   void setMediaStream(@Nonnull MediaStream mediaStream);
@@ -51,6 +54,7 @@ public interface MediaStreamAudioSourceOptions {
    * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourceoptions-mediastream">The definition of 'MediaStreamAudioSourceOptions.mediaStream' in Web Audio API.</a>
    */
   @JsOverlay
   @Nonnull

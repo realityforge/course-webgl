@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver">RTCRtpTransceiver - MDN</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtptransceiver-interface">The definition of 'RTCRtpTransceiver' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -48,6 +49,7 @@ public class RTCRtpTransceiver {
    * The read-only RTCRtpTransceiver interface's mid property specifies the negotiated media ID (mid) which the local and remote peers have agreed upon to uniquely identify the stream's pairing of sender and receiver.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/mid">RTCRtpTransceiver.mid - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtptransceiver-mid">The definition of 'RTCRtpTransceiver.mid' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "mid"
@@ -59,6 +61,7 @@ public class RTCRtpTransceiver {
    * The read-only  receiver property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpReceiver responsible for receiving and decoding incoming media data for the transceiver's stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/receiver">RTCRtpTransceiver.receiver - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-receiver">The definition of 'RTCRtpTransceiver.receiver' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "receiver"
@@ -70,6 +73,7 @@ public class RTCRtpTransceiver {
    * The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender">RTCRtpTransceiver.sender - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-sender">The definition of 'RTCRtpTransceiver.sender' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "sender"
@@ -81,6 +85,7 @@ public class RTCRtpTransceiver {
    * The RTCRtpTransceiver method setCodecPreferences() configures the transceiver's codecs given a list of RTCRtpCodecCapability objects specifying the new preferences for each codec.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences">RTCRtpTransceiver.setCodecPreferences - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-setcodecpreferences">The definition of 'RTCRtpTransceiver.setCodecPreferences()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void setCodecPreferences(@Nonnull JsArray<RTCRtpCodecCapability> codecs);
 
@@ -88,6 +93,7 @@ public class RTCRtpTransceiver {
    * The RTCRtpTransceiver method setCodecPreferences() configures the transceiver's codecs given a list of RTCRtpCodecCapability objects specifying the new preferences for each codec.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences">RTCRtpTransceiver.setCodecPreferences - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-setcodecpreferences">The definition of 'RTCRtpTransceiver.setCodecPreferences()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void setCodecPreferences(@Nonnull RTCRtpCodecCapability[] codecs);
 
@@ -95,6 +101,7 @@ public class RTCRtpTransceiver {
    * The stop() method in the RTCRtpTransceiver interface permanently stops the transceiver by stopping both the associated RTCRtpSender and RTCRtpReceiver.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stop">RTCRtpTransceiver.stop - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-stop">The definition of 'RTCRtpTransceiver.stop()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void stop();
 }

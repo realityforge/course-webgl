@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The Screen interface represents a screen, usually the one on which the current window is being rendered, and is obtained using window.screen.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen">Screen - MDN</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#the-screen-interface">The definition of 'Screen' in CSS Object Model (CSSOM) View Module.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,6 +26,7 @@ public class Screen {
    * The read-only Screen interface's availHeight property returns the height, in CSS pixels, of the space available for Web content on the screen. Since Screen is exposed on the Window interface's window.screen property, you access availHeight using window.screen.availHeight.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/availHeight">Screen.availHeight - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-availheight">The definition of 'Screen.availHeight' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "availHeight"
@@ -35,6 +37,7 @@ public class Screen {
    * The Screen.availWidth property returns the amount of horizontal space (in pixels) available to the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/availWidth">Screen.availWidth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-availwidth">The definition of 'Screen.availWidth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "availWidth"
@@ -45,6 +48,7 @@ public class Screen {
    * The Screen.colorDepth read-only property returns the color depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/colorDepth">Screen.colorDepth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-colordepth">The definition of 'Screen.colorDepth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "colorDepth"
@@ -55,6 +59,7 @@ public class Screen {
    * The Screen.height read-only property returns the height of the screen in pixels.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/height">Screen.height - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-height">The definition of 'Screen.height' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "height"
@@ -65,6 +70,7 @@ public class Screen {
    * The orientation read-only property of the Screen interface returns the current orientation of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation">Screen.orientation - MDN</a>
+   * @see <a href="https://w3c.github.io/screen-orientation/#dom-screen-orientation">The definition of 'orientation' in Screen Orientation API.</a>
    */
   @JsProperty(
       name = "orientation"
@@ -76,6 +82,7 @@ public class Screen {
    * Returns the bit depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/pixelDepth">Screen.pixelDepth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-pixeldepth">The definition of 'Screen.pixelDepth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "pixelDepth"
@@ -83,9 +90,10 @@ public class Screen {
   public native int pixelDepth();
 
   /**
-   * Returns the width of the screen.
+   * The Screen.width read-only property returns the width of the screen in pixels.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/width">Screen.width - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-width">The definition of 'Screen.width' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "width"

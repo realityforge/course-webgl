@@ -65,6 +65,7 @@ public class HTMLButtonElement extends HTMLElement {
    * The HTMLButtonElement.labels read-only property returns a NodeList of the label elements associated with the button element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/labels">HTMLButtonElement.labels - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "labels"

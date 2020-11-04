@@ -153,6 +153,12 @@ public class ElementInternals {
   public native NodeList labels();
 
   @JsProperty(
+      name = "shadowRoot"
+  )
+  @Nullable
+  public native ShadowRoot shadowRoot();
+
+  @JsProperty(
       name = "validationMessage"
   )
   @Nonnull

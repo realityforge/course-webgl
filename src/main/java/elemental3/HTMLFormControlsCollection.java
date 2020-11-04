@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The HTMLFormControlsCollection interface represents a collection of HTML form control elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection">HTMLFormControlsCollection - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection">The definition of 'HTMLFormControlsCollection' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">The definition of 'HTMLFormControlsCollection' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,6 +36,8 @@ public class HTMLFormControlsCollection {
    * The HTMLFormControlsCollection.namedItem() method returns the RadioNodeList or the Element in the collection whose name or id match the specified name, or null if no node matches.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem">HTMLFormControlsCollection.namedItem - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-htmlformcontrolscollection-nameditem">The definition of 'HTMLFormControlsCollection.namedItem()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">The definition of 'HTMLFormControlsCollection' in HTML5.</a>
    */
   @Nullable
   public native RadioNodeListOrElementUnion namedItem(@Nonnull String name);

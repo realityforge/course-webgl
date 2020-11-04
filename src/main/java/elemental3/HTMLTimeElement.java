@@ -9,6 +9,9 @@ import jsinterop.annotations.JsType;
  * The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating time elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement">HTMLTimeElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmltimeelement">The definition of 'HTMLTimeElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html51/text-level-semantics.html#the-time-element">The definition of 'HTMLTimeElement' in HTML 5.1.</a>
+ * @see <a href="https://www.w3.org/TR/html52/text-level-semantics.html#the-time-element">The definition of 'HTMLTimeElement' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

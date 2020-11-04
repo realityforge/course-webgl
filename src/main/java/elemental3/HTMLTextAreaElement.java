@@ -75,6 +75,8 @@ public class HTMLTextAreaElement extends HTMLElement {
    * The HTMLTextAreaElement.labels read-only property returns a NodeList of the label elements associated with the textarea element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/labels">HTMLTextAreaElement.labels - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in HTML5.</a>
    */
   @JsProperty(
       name = "labels"

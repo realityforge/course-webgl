@@ -9,6 +9,7 @@ import jsinterop.annotations.JsType;
  * PeriodicWave has no inputs or outputs; it is used to define custom oscillators when calling OscillatorNode.setPeriodicWave(). The PeriodicWave itself is created/returned by AudioContext.createPeriodicWave().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave">PeriodicWave - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#periodicwave">The definition of 'PeriodicWave' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,6 +22,7 @@ public class PeriodicWave {
    * The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave/PeriodicWave">PeriodicWave.PeriodicWave - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#periodicwave">The definition of 'PeriodicWave' in Web Audio API.</a>
    */
   public PeriodicWave(@Nonnull final BaseAudioContext context,
       @Nonnull final PeriodicWaveOptions options) {
@@ -30,6 +32,7 @@ public class PeriodicWave {
    * The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave/PeriodicWave">PeriodicWave.PeriodicWave - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#periodicwave">The definition of 'PeriodicWave' in Web Audio API.</a>
    */
   public PeriodicWave(@Nonnull final BaseAudioContext context) {
   }

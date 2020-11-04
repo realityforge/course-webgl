@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * TextTrackCue is an abstract class which is used as the basis for the various derived cue types, such as VTTCue; you will instead work with those derived types.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue">TextTrackCue - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#texttrackcue">The definition of 'TextTrackCue' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/#texttrackcue">The definition of 'TextTrackCue' in HTML5.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

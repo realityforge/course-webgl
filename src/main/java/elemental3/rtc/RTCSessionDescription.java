@@ -30,6 +30,7 @@ public class RTCSessionDescription {
    * The property RTCSessionDescription.sdp is a read-only DOMString containing the SDP which describes the session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/sdp">RTCSessionDescription.sdp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcsessiondescription-sdp">The definition of 'RTCSessionDescription.sdp' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "sdp"
@@ -41,6 +42,7 @@ public class RTCSessionDescription {
    * The property RTCSessionDescription.type is a read-only value of type RTCSdpType which describes the description's type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type">RTCSessionDescription.type - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcsessiondescription-type">The definition of 'RTCSessionDescription.type' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "type"
@@ -53,6 +55,7 @@ public class RTCSessionDescription {
    * The RTCSessionDescription.toJSON() method generates a JSON description of the object. Both properties, type and sdp, are contained in the generated JSON.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/toJSON">RTCSessionDescription.toJSON - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcsessiondescription-tojson">The definition of 'RTCSessionDescription: toJSON()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Object toJSON();

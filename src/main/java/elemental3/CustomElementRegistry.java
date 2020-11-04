@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#customelementregistry">The definition of 'CustomElementRegistry' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,6 +41,7 @@ public class CustomElementRegistry {
    * The get() method of the CustomElementRegistry interface returns the constructor for a previously-defined custom element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/get">CustomElementRegistry.get - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-get">The definition of 'customElements.get()' in HTML Living Standard.</a>
    */
   @Nonnull
   public native CustomElementConstructorOrUndefinedUnion get(@Nonnull String name);
@@ -48,6 +50,7 @@ public class CustomElementRegistry {
    * The upgrade() method of the CustomElementRegistry interface upgrades all shadow-containing custom elements in a Node subtree, even before they are connected to the main document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/upgrade">CustomElementRegistry.upgrade - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade">The definition of 'customElements.upgrade()' in HTML Living Standard.</a>
    */
   public native void upgrade(@Nonnull Node root);
 

@@ -49,6 +49,7 @@ public class MediaError {
    * The read-only property MediaError.message returns a DOMString which contains a human-readable string offering specific diagnostic details related to the error described by the MediaError object, or an empty string (&quot;&quot;) if no diagnostic information can be determined or provided.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message">MediaError.message - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-mediaerror-message">The definition of 'MediaError.message' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "message"

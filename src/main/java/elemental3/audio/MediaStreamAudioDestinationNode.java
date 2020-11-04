@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * Inherits properties from its parent, AudioNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#mediastreamaudiodestinationnode">The definition of 'MediaStreamAudioDestinationNode' in Web Audio API.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class MediaStreamAudioDestinationNode extends AudioNode {
    * The MediaStreamAudioDestinationNode() constructor of the Web Audio API creates a new MediaStreamAudioDestinationNode object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#mediastreamaudiodestinationnode">The definition of 'MediaStreamAudioDestinationNode' in Web Audio API.</a>
    */
   public MediaStreamAudioDestinationNode(@Nonnull final AudioContext context,
       @Nonnull final AudioNodeOptions options) {
@@ -32,6 +34,7 @@ public class MediaStreamAudioDestinationNode extends AudioNode {
    * The MediaStreamAudioDestinationNode() constructor of the Web Audio API creates a new MediaStreamAudioDestinationNode object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#mediastreamaudiodestinationnode">The definition of 'MediaStreamAudioDestinationNode' in Web Audio API.</a>
    */
   public MediaStreamAudioDestinationNode(@Nonnull final AudioContext context) {
   }
@@ -40,6 +43,7 @@ public class MediaStreamAudioDestinationNode extends AudioNode {
    * A MediaStream containing a single audio track. The audio track is a MediaStreamTrack whose kind is audio.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream">MediaStreamAudioDestinationNode.stream - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiodestinationnode-stream">The definition of 'stream' in Web Audio API.</a>
    */
   @JsProperty(
       name = "stream"

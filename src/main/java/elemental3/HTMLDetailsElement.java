@@ -11,6 +11,7 @@ import jsinterop.base.Js;
  * The HTMLDetailsElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating details elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement">HTMLDetailsElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement">The definition of 'HTMLDetailsElement' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

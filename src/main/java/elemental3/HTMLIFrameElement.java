@@ -11,6 +11,10 @@ import jsinterop.annotations.JsType;
  * The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmliframeelement">The definition of 'HTMLIFrameElement' in HTML Living Standard.</a>
+ * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#the-iframe-element">The definition of 'HTMLIFrameElement' in HTML5.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-50708718">The definition of 'HTMLIFrameElement' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-50708718">The definition of 'HTMLIFrameElement' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -53,6 +57,8 @@ public class HTMLIFrameElement extends HTMLElement {
    * The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy">HTMLIFrameElement.referrerPolicy - MDN</a>
+   * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">The definition of 'referrerpolicy attribute' in Referrer Policy.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-iframe-referrerpolicy">The definition of 'HTMLIFrameElement: referrerPolicy' in HTML Living Standard.</a>
    */
   @Nonnull
   @ReferrerPolicy
@@ -65,6 +71,7 @@ public class HTMLIFrameElement extends HTMLElement {
    * The HTMLIFrameElement.src property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src">HTMLIFrameElement.src - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-iframe-src">The definition of 'HTMLIFrameElement: src' in HTML Living Standard.</a>
    */
   @Nonnull
   public String src;
@@ -73,6 +80,7 @@ public class HTMLIFrameElement extends HTMLElement {
    * The srcdoc property of the HTMLIFrameElement specifies the content of the page.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc">HTMLIFrameElement.srcdoc - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#attr-iframe-srcdoc">The definition of 'HTMLIFrameElement: srcdoc' in HTML Living Standard.</a>
    */
   @Nonnull
   public String srcdoc;
@@ -87,6 +95,7 @@ public class HTMLIFrameElement extends HTMLElement {
    * If the iframe and the iframe's parent document are Same Origin, returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument">HTMLIFrameElement.contentDocument - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-iframe-contentdocument">The definition of 'HTMLIFrameElement: contentDocument' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "contentDocument"
@@ -98,6 +107,7 @@ public class HTMLIFrameElement extends HTMLElement {
    * The contentWindow property returns the Window object of an HTMLIFrameElement. You can use this Window object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global Window object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow">HTMLIFrameElement.contentWindow - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-iframe-contentwindow">The definition of 'HTMLIFrameElement: contentWindow' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "contentWindow"

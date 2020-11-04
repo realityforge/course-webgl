@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException">DOMException - MDN</a>
+ * @see <a href="https://heycam.github.io/webidl/#idl-DOMException">The definition of 'constructor' in Web IDL.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -99,6 +100,7 @@ public class DOMException extends JsError {
    * The DOMException() constructor returns a DOMException object with a specified message and name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException">DOMException.DOMException - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#dom-domexception-domexception">The definition of 'DOMException()' in Web IDL.</a>
    */
   public DOMException(@Nonnull final String message, @Nonnull final String name) {
   }
@@ -107,6 +109,7 @@ public class DOMException extends JsError {
    * The DOMException() constructor returns a DOMException object with a specified message and name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException">DOMException.DOMException - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#dom-domexception-domexception">The definition of 'DOMException()' in Web IDL.</a>
    */
   public DOMException(@Nonnull final String message) {
   }
@@ -115,6 +118,7 @@ public class DOMException extends JsError {
    * The DOMException() constructor returns a DOMException object with a specified message and name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException">DOMException.DOMException - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#dom-domexception-domexception">The definition of 'DOMException()' in Web IDL.</a>
    */
   public DOMException() {
   }
@@ -123,6 +127,7 @@ public class DOMException extends JsError {
    * The code read-only property of the DOMException interface returns a short that contains one of the error code constants, or 0 if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the DOMException.name attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code">DOMException.code - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#dom-domexception-code">The definition of 'code' in Web IDL.</a>
    */
   @JsProperty(
       name = "code"

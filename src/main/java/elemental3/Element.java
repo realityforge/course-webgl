@@ -15,6 +15,22 @@ import jsinterop.base.Js;
  * Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element - MDN</a>
+ * @see <a href="https://drafts.csswg.org/css-pseudo-4/#window-interface">The definition of 'Element' in CSS Pseudo-Elements Level 4.</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/">Web Animations</a>
+ * @see <a href="https://dvcs.w3.org/hg/undomanager/raw-file/tip/undomanager.html">The definition of 'Element' in UndoManager and DOMTransaction.</a>
+ * @see <a href="https://www.w3.org/TR/pointerevents2/#extensions-to-the-element-interface">The definition of 'Element' in Pointer Events – Level 2.</a>
+ * @see <a href="https://www.w3.org/TR/pointerevents1/#extensions-to-the-element-interface">The definition of 'Element' in Pointer Events.</a>
+ * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">The definition of 'Element' in Selectors API Level 1.</a>
+ * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface">The definition of 'Element' in Pointer Lock.</a>
+ * @see <a href="https://fullscreen.spec.whatwg.org/#api">The definition of 'Element' in Fullscreen API.</a>
+ * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface">The definition of 'Element' in DOM Parsing and Serialization.</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface">The definition of 'Element' in CSS Object Model (CSSOM) View Module.</a>
+ * @see <a href="https://www.w3.org/TR/ElementTraversal/#ecmascript-bindings">The definition of 'Element' in Element Traversal Specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-element">The definition of 'Element' in DOM.</a>
+ * @see <a href="https://www.w3.org/TR/dom/#interface-element">The definition of 'Element' in DOM4.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-745549614">The definition of 'Element' in Document Object Model (DOM) Level 3 Core Specification.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-745549614">The definition of 'Element' in Document Object Model (DOM) Level 2 Core Specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614">The definition of 'Element' in Document Object Model (DOM) Level 1 Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -147,6 +163,9 @@ public class Element extends Node {
    * The className property of the Element interface gets and sets the value of the class attribute of the specified element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className">Element.className - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-classname">The definition of 'element.className' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-element-classname">The definition of 'element.className' in DOM4.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176">The definition of 'element.className' in Document Object Model (DOM) Level 2 HTML Specification.</a>
    */
   @Nonnull
   public String className;
@@ -155,6 +174,9 @@ public class Element extends Node {
    * The id property of the Element interface represents the element's identifier, reflecting the id global attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/id">Element.id - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-id">The definition of 'id' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-63534901">The definition of 'id' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-63534901">The definition of 'id' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   public String id;
@@ -163,6 +185,7 @@ public class Element extends Node {
    * The Element property innerHTML gets or sets the HTML or XML markup contained within the element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">Element.innerHTML - MDN</a>
+   * @see <a href="https://w3c.github.io/DOM-Parsing/#dom-innerhtml-innerhtml">The definition of 'Element.innerHTML' in DOM Parsing and Serialization.</a>
    */
   @Nonnull
   public String innerHTML;
@@ -171,6 +194,7 @@ public class Element extends Node {
    * The Element interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired when the element has transitioned into or out of full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/onfullscreenchange">Element.onfullscreenchange - MDN</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange">The definition of 'onfullscreenchange' in Fullscreen API.</a>
    */
   @Nullable
   public EventHandler onfullscreenchange;
@@ -179,6 +203,7 @@ public class Element extends Node {
    * The Element interface's onfullscreenerror property is an event handler for the fullscreenerror event which is sent to the element when an error occurs while attempting to transition into or out of full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/onfullscreenerror">Element.onfullscreenerror - MDN</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-element-onfullscreenerror">The definition of 'onfullscreenerror' in Fullscreen API.</a>
    */
   @Nullable
   public EventHandler onfullscreenerror;
@@ -187,6 +212,7 @@ public class Element extends Node {
    * The outerHTML attribute of the Element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can also be set to replace the element with nodes parsed from the given string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML">Element.outerHTML - MDN</a>
+   * @see <a href="https://w3c.github.io/DOM-Parsing/#dom-element-outerhtml">The definition of 'Element.outerHTML' in DOM Parsing and Serialization.</a>
    */
   @Nonnull
   public String outerHTML;
@@ -198,6 +224,7 @@ public class Element extends Node {
    * The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft">Element.scrollLeft - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollleft">The definition of 'scrollLeft' in CSS Object Model (CSSOM) View Module.</a>
    */
   public double scrollLeft;
 
@@ -205,6 +232,7 @@ public class Element extends Node {
    * The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop">Element.scrollTop - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrolltop">The definition of 'scrollTop' in CSS Object Model (CSSOM) View Module.</a>
    */
   public double scrollTop;
 
@@ -212,6 +240,7 @@ public class Element extends Node {
    * The slot property of the Element interface returns the name of the shadow DOM slot the element is inserted in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/slot">Element.slot - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-slot">The definition of 'slot' in DOM.</a>
    */
   @Nonnull
   public String slot;
@@ -234,6 +263,10 @@ public class Element extends Node {
    * The Element.attributes property returns a live collection of all attribute nodes registered to the specified node. It is a NamedNodeMap, not an Array, so it has no Array methods and the Attr nodes' indexes may differ among browsers. To be more specific, attributes is a key/value pair of strings that represents any information regarding that attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes">Element.attributes - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-attributes">The definition of 'Element.attributes' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-84CF096">The definition of 'Element.attributes' in Document Object Model (DOM) Level 3 Core Specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-84CF096">The definition of 'Element.attributes' in Document Object Model (DOM) Level 2 Core Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-84CF096">The definition of 'Element.attributes' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @JsProperty(
       name = "attributes"
@@ -245,6 +278,8 @@ public class Element extends Node {
    * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/childElementCount">Element.childElementCount - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-childelementcount">The definition of 'ParentNode.childElementCount' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-childElementCount">The definition of 'ElementTraversal.childElementCount' in Element Traversal Specification.</a>
    */
   @JsProperty(
       name = "childElementCount"
@@ -255,6 +290,7 @@ public class Element extends Node {
    * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/children">Element.children - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-children">The definition of 'ParentNode.children' in DOM.</a>
    */
   @JsProperty(
       name = "children"
@@ -266,6 +302,8 @@ public class Element extends Node {
    * The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element.classList - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-classlist">The definition of 'Element.classList' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-element-classlist">The definition of 'Element.classList' in DOM4.</a>
    */
   @JsProperty(
       name = "classList"
@@ -277,6 +315,7 @@ public class Element extends Node {
    * The Element.clientHeight read-only property is zero for elements with no CSS or inline layout boxes; otherwise, it's the inner height of an element in pixels. It includes padding but excludes borders, margins, and horizontal scrollbars (if present).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight">Element.clientHeight - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-clientheight">The definition of 'clientHeight' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "clientHeight"
@@ -287,6 +326,7 @@ public class Element extends Node {
    * The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right&ndash;to&ndash;left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientLeft">Element.clientLeft - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-clientleft">The definition of 'clientLeft' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "clientLeft"
@@ -297,6 +337,7 @@ public class Element extends Node {
    * The width of the top border of an element in pixels. It is a read-only, integer property of element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientTop">Element.clientTop - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-clienttop">The definition of 'clientTop' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "clientTop"
@@ -307,6 +348,7 @@ public class Element extends Node {
    * The Element.clientWidth property is zero for inline elements and elements with no CSS; otherwise, it's the inner width of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth">Element.clientWidth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-clientwidth">The definition of 'clientWidth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "clientWidth"
@@ -317,6 +359,8 @@ public class Element extends Node {
    * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild">Element.firstElementChild - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-firstelementchild">The definition of 'ParentNode.firstElementChild' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-firstElementChild">The definition of 'ElementTraversal.firstElementChild' in Element Traversal Specification.</a>
    */
   @JsProperty(
       name = "firstElementChild"
@@ -328,6 +372,7 @@ public class Element extends Node {
    * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild">Element.lastElementChild - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-lastelementchild">The definition of 'ParentNode.lastElementChild' in DOM.</a>
    */
   @JsProperty(
       name = "lastElementChild"
@@ -339,6 +384,7 @@ public class Element extends Node {
    * The Element.localName read-only property returns the local part of the qualified name of an element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/localName">Element.localName - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-localname">The definition of 'Element.localName' in DOM.</a>
    */
   @JsProperty(
       name = "localName"
@@ -350,6 +396,7 @@ public class Element extends Node {
    * The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI">Element.namespaceURI - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-namespaceuri">The definition of 'Element: namespaceURI' in DOM.</a>
    */
   @JsProperty(
       name = "namespaceURI"
@@ -361,6 +408,8 @@ public class Element extends Node {
    * The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling">Element.nextElementSibling - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-nextelementsibling">The definition of 'ChildNodenextElementSibling' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-nextElementSibling">The definition of 'ElementTraversal.nextElementSibling' in Element Traversal Specification.</a>
    */
   @JsProperty(
       name = "nextElementSibling"
@@ -372,6 +421,7 @@ public class Element extends Node {
    * The Element.prefix read-only property returns the namespace prefix of the specified element, or null if no prefix is specified.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix">Element.prefix - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-prefix">The definition of 'Element: prefix' in DOM.</a>
    */
   @JsProperty(
       name = "prefix"
@@ -383,6 +433,8 @@ public class Element extends Node {
    * The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling">Element.previousElementSibling - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-previouselementsibling">The definition of 'NonDocumentTypeChildNode.previousElementSibling' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-previousElementSibling">The definition of 'ElementTraversal.previousElementSibling' in Element Traversal Specification.</a>
    */
   @JsProperty(
       name = "previousElementSibling"
@@ -394,6 +446,7 @@ public class Element extends Node {
    * The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight">Element.scrollHeight - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollheight">The definition of 'Element.scrollHeight' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "scrollHeight"
@@ -404,6 +457,7 @@ public class Element extends Node {
    * The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth">Element.scrollWidth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollwidth">The definition of 'Element.scrollWidth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "scrollWidth"
@@ -414,6 +468,7 @@ public class Element extends Node {
    * The Element.shadowRoot read-only property represents the shadow root hosted by the element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot">Element.shadowRoot - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-shadowroot">The definition of 'shadowRoot' in DOM.</a>
    */
   @JsProperty(
       name = "shadowRoot"
@@ -425,6 +480,7 @@ public class Element extends Node {
    * The tagName read-only property of the Element interface returns the tag name of the element on which it's called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">Element.tagName - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-tagname">The definition of 'Element: tagName' in DOM.</a>
    */
   @JsProperty(
       name = "tagName"
@@ -441,9 +497,10 @@ public class Element extends Node {
   public native ShadowRoot attachShadow(@Nonnull ShadowRootInit init);
 
   /**
-   * For browsers that do not support Element.closest(), but carry support for element.matches() (or a prefixed equivalent, meaning IE9+), a polyfill exists:
+   * The closest() method traverses the Element and its parents (heading toward the document root) until it finds a node that matches the provided selector string. Will return itself or the matching ancestor. If no such element exists, it returns null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">Element.closest - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-closest">The definition of 'Element.closest()' in DOM.</a>
    */
   @Nullable
   public native Element closest(@Nonnull String selectors);
@@ -452,6 +509,7 @@ public class Element extends Node {
    * The getAttribute() method of the Element interface returns the value of a specified attribute on the element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">Element.getAttribute - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattribute">The definition of 'getAttribute()' in DOM.</a>
    */
   @Nullable
   public native String getAttribute(@Nonnull String qualifiedName);
@@ -468,6 +526,7 @@ public class Element extends Node {
    * The getAttributeNames() method of the Element interface returns the attribute names of the element as an Array of strings. If the element has no attributes it returns an empty array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames">Element.getAttributeNames - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattributenames">The definition of 'Element.getAttributeNames' in DOM.</a>
    */
   @Nonnull
   public native JsArray<String> getAttributeNames();
@@ -492,6 +551,7 @@ public class Element extends Node {
    * The Element method getElementsByClassName() returns a live HTMLCollection which contains every descendant element which has the specified class name or names.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName">Element.getElementsByClassName - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">The definition of 'Element.getElementsByClassName()' in DOM.</a>
    */
   @Nonnull
   public native HTMLCollection getElementsByClassName(@Nonnull String classNames);
@@ -500,6 +560,10 @@ public class Element extends Node {
    * The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName">Element.getElementsByTagName - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-getelementsbytagname">The definition of 'Element.getElementsByTagName()' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1938918D">The definition of 'Element.getElementsByTagName()' in Document Object Model (DOM) Level 3 Core Specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1938918D">The definition of 'Element.getElementsByTagName()' in Document Object Model (DOM) Level 2 Core Specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1938918D">The definition of 'Element.getElementsByTagName()' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   public native HTMLCollection getElementsByTagName(@Nonnull String qualifiedName);
@@ -508,6 +572,9 @@ public class Element extends Node {
    * The Element.getElementsByTagNameNS() method returns a live HTMLCollection of elements with the given tag name belonging to the given namespace. It is similar to Document.getElementsByTagNameNS, except that its search is restricted to descendants of the specified element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagNameNS">Element.getElementsByTagNameNS - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-getelementsbytagnamens">The definition of 'Element.getElementsByTagNameNS()' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-A6C90942">The definition of 'Element.getElementsByTagNameNS()' in Document Object Model (DOM) Level 3 Core Specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">The definition of 'Element.getElementsByTagNameNS()' in Document Object Model (DOM) Level 2 Core Specification.</a>
    */
   @Nonnull
   public native HTMLCollection getElementsByTagNameNS(@Nullable String namespace,
@@ -531,6 +598,9 @@ public class Element extends Node {
    * The hasAttributes() method of the Element interface returns a Boolean indicating whether the current element has any attributes or not.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes">Element.hasAttributes - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-hasattributes">The definition of 'Element.hasAttributes()' in DOM.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/#ID-NodeHasAttrs">The definition of 'hasAttributes()' in Document Object Model (DOM) Level 3 Core Specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#ID-NodeHasAttrs">The definition of 'hasAttributes()' in Document Object Model (DOM) Level 2 Core Specification.</a>
    */
   public native boolean hasAttributes();
 
@@ -553,6 +623,7 @@ public class Element extends Node {
    * The matches() method checks to see if the Element would be selected by the provided selectorString -- in other words -- checks if the element &quot;is&quot; the selector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches">Element.matches - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-element-matches">The definition of 'Element.prototype.matches' in DOM.</a>
    */
   public native boolean matches(@Nonnull String selectors);
 
@@ -629,9 +700,10 @@ public class Element extends Node {
   public native CSSPseudoElement pseudo(@Nonnull String type);
 
   /**
-   * The Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+   * The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">Element.getBoundingClientRect - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect">The definition of 'Element.getBoundingClientRect()' in CSS Object Model (CSSOM) View Module.</a>
    */
   @Nonnull
   public native DOMRect getBoundingClientRect();
@@ -640,6 +712,7 @@ public class Element extends Node {
    * The getClientRects() method of the Element interface returns a collection of DOMRect objects that indicate the bounding rectangles for each CSS border box in a client.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getClientRects">Element.getClientRects - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-getclientrects">The definition of 'Element.getClientRects()' in CSS Object Model (CSSOM) View Module.</a>
    */
   @Nonnull
   public native DOMRectList getClientRects();
@@ -648,6 +721,7 @@ public class Element extends Node {
    * The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll">Element.scroll - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scroll-options-options">The definition of 'element.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scroll(@Nonnull ScrollToOptions options);
 
@@ -655,6 +729,7 @@ public class Element extends Node {
    * The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll">Element.scroll - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scroll-options-options">The definition of 'element.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scroll();
 
@@ -662,6 +737,7 @@ public class Element extends Node {
    * The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll">Element.scroll - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scroll-options-options">The definition of 'element.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scroll(double x, double y);
 
@@ -669,6 +745,7 @@ public class Element extends Node {
    * The scrollBy() method of the Element interface scrolls an element by the given amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollBy">Element.scrollBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollby-options-options">The definition of 'element.scrollBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollBy(@Nonnull ScrollToOptions options);
 
@@ -676,6 +753,7 @@ public class Element extends Node {
    * The scrollBy() method of the Element interface scrolls an element by the given amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollBy">Element.scrollBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollby-options-options">The definition of 'element.scrollBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollBy();
 
@@ -683,6 +761,7 @@ public class Element extends Node {
    * The scrollBy() method of the Element interface scrolls an element by the given amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollBy">Element.scrollBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollby-options-options">The definition of 'element.scrollBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollBy(double x, double y);
 
@@ -690,6 +769,7 @@ public class Element extends Node {
    * The Element interface's scrollIntoView() method scrolls the element's parent container such that the element on which scrollIntoView() is called is visible to the user
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">Element.scrollIntoView - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview">The definition of 'Element.scrollIntoView()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollIntoView(boolean arg);
 
@@ -697,6 +777,7 @@ public class Element extends Node {
    * The Element interface's scrollIntoView() method scrolls the element's parent container such that the element on which scrollIntoView() is called is visible to the user
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">Element.scrollIntoView - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview">The definition of 'Element.scrollIntoView()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollIntoView(@Nonnull ScrollIntoViewOptions arg);
 
@@ -704,6 +785,7 @@ public class Element extends Node {
    * The Element interface's scrollIntoView() method scrolls the element's parent container such that the element on which scrollIntoView() is called is visible to the user
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">Element.scrollIntoView - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview">The definition of 'Element.scrollIntoView()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollIntoView();
 
@@ -711,6 +793,7 @@ public class Element extends Node {
    * The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo">Element.scrollTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollto-options-options">The definition of 'element.scrollTo()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollTo(@Nonnull ScrollToOptions options);
 
@@ -718,6 +801,7 @@ public class Element extends Node {
    * The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo">Element.scrollTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollto-options-options">The definition of 'element.scrollTo()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollTo();
 
@@ -725,6 +809,7 @@ public class Element extends Node {
    * The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo">Element.scrollTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-scrollto-options-options">The definition of 'element.scrollTo()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollTo(double x, double y);
 
@@ -732,6 +817,7 @@ public class Element extends Node {
    * The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct innerHTML manipulation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML">Element.insertAdjacentHTML - MDN</a>
+   * @see <a href="https://w3c.github.io/DOM-Parsing/#dom-element-insertadjacenthtml">The definition of 'Element.insertAdjacentHTML()' in DOM Parsing and Serialization.</a>
    */
   public native void insertAdjacentHTML(@Nonnull String position, @Nonnull String text);
 
@@ -739,6 +825,7 @@ public class Element extends Node {
    * The hasPointerCapture() method of the Element interface sets whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasPointerCapture">Element.hasPointerCapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-element-haspointercapture">The definition of 'hasPointerCapture()' in Pointer Events – Level 2.</a>
    */
   public native boolean hasPointerCapture(int pointerId);
 
@@ -760,6 +847,7 @@ public class Element extends Node {
    * The Element.requestPointerLock() method lets you asynchronously ask for the pointer to be locked on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestPointerLock">Element.requestPointerLock - MDN</a>
+   * @see <a href="https://w3c.github.io/pointerlock/#dom-element-requestpointerlock">The definition of 'requestPointerLock()' in Pointer Lock.</a>
    */
   public native void requestPointerLock();
 
@@ -767,6 +855,7 @@ public class Element extends Node {
    * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen">Element.requestFullscreen - MDN</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen">The definition of 'Element.requestFullscreen()' in Fullscreen API.</a>
    */
   @Nonnull
   public native Promise<Void> requestFullscreen(@Nonnull FullscreenOptions options);
@@ -775,6 +864,7 @@ public class Element extends Node {
    * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen">Element.requestFullscreen - MDN</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen">The definition of 'Element.requestFullscreen()' in Fullscreen API.</a>
    */
   @Nonnull
   public native Promise<Void> requestFullscreen();
@@ -811,6 +901,9 @@ public class Element extends Node {
    * The querySelector() method of the Element interface returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector">Element.querySelector - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall">The definition of 'querySelector()' in DOM.</a>
+   * @see <a href="https://dev.w3.org/2006/webapi/selectors-api2/#queryselectorall">The definition of 'querySelectorAll()' in Selectors API Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/selectors-api/#queryselectorall">The definition of 'querySelectorAll()' in Selectors API Level 1.</a>
    */
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
@@ -819,6 +912,10 @@ public class Element extends Node {
    * The Element method querySelectorAll() returns a static (not live) NodeList representing a list of elements matching the specified group of selectors which are descendants of the element on which the method was called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll">Element.querySelectorAll - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in DOM.</a>
+   * @see <a href="https://dev.w3.org/2006/webapi/selectors-api2/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in Selectors API Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in DOM4.</a>
+   * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">The definition of 'document.querySelector()' in Selectors API Level 1.</a>
    */
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
@@ -836,122 +933,6 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/replaceChildren">ParentNode.replaceChildren - MDN</a>
    */
   public native void replaceChildren(@Nonnull String... nodes);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads(@Nonnull BoxQuadOptions options);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads();
 
   /**
    * The ChildNode.after() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just after this ChildNode. DOMString objects are inserted as equivalent Text nodes.
@@ -985,6 +966,7 @@ public class Element extends Node {
    * The ChildNode.remove() method removes the object from the tree it belongs to.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove">Element.remove - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-childnode-remove">The definition of 'ChildNode.remove' in DOM.</a>
    */
   public native void remove();
 
@@ -1006,6 +988,8 @@ public class Element extends Node {
    * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">The definition of 'KeyframeAnimationOptions.iterationComposite' in Web Animations Level 2.</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">The definition of 'animate()' in Web Animations.</a>
    */
   @Nonnull
   public native Animation animate(@Nullable Object keyframes, double options);
@@ -1014,6 +998,8 @@ public class Element extends Node {
    * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">The definition of 'KeyframeAnimationOptions.iterationComposite' in Web Animations Level 2.</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">The definition of 'animate()' in Web Animations.</a>
    */
   @Nonnull
   public native Animation animate(@Nullable Object keyframes,
@@ -1023,6 +1009,8 @@ public class Element extends Node {
    * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">The definition of 'KeyframeAnimationOptions.iterationComposite' in Web Animations Level 2.</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">The definition of 'animate()' in Web Animations.</a>
    */
   @Nonnull
   public native Animation animate(@Nullable Object keyframes);
@@ -1031,6 +1019,7 @@ public class Element extends Node {
    * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">The definition of 'Animatable.getAnimations()' in Web Animations.</a>
    */
   @Nonnull
   public native JsArray<Animation> getAnimations();

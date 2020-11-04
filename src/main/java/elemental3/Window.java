@@ -33,6 +33,8 @@ public class Window extends EventTarget {
    * The Window.name property gets/sets the name of the window's browsing context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name">Window.name - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-name">The definition of 'Window.name' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-name">The definition of 'Window.name' in HTML5.</a>
    */
   @Nonnull
   public String name;
@@ -41,6 +43,7 @@ public class Window extends EventTarget {
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onabort">Window.onabort - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onabort">The definition of 'onabort' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -49,6 +52,7 @@ public class Window extends EventTarget {
    * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onafterprint">Window.onafterprint - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onafterprint">The definition of 'onafterprint' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onafterprint;
@@ -57,6 +61,7 @@ public class Window extends EventTarget {
    * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel">The definition of 'onanimationcancel' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationcancel;
@@ -65,6 +70,7 @@ public class Window extends EventTarget {
    * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationend">The definition of 'onanimationend' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationend;
@@ -73,6 +79,7 @@ public class Window extends EventTarget {
    * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration">The definition of 'onanimationiteration' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationiteration;
@@ -81,6 +88,7 @@ public class Window extends EventTarget {
    * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart">The definition of 'onanimationstart' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationstart;
@@ -89,6 +97,7 @@ public class Window extends EventTarget {
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
+   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in UI Events.</a>
    */
   @Nullable
   public EventHandler onauxclick;
@@ -97,6 +106,7 @@ public class Window extends EventTarget {
    * The onbeforeprint property of the WindowEventHandlers mixin is the EventHandler for processing beforeprint events for the current window. These events are raised before the print dialog window is opened.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeprint">Window.onbeforeprint - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeprint">The definition of 'onbeforeprint' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onbeforeprint;
@@ -105,6 +115,9 @@ public class Window extends EventTarget {
    * The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeunload">Window.onbeforeunload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeunload">The definition of 'onbeforeunload' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML5.</a>
    */
   @Nullable
   public OnBeforeUnloadEventHandler onbeforeunload;
@@ -113,6 +126,7 @@ public class Window extends EventTarget {
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onblur">Window.onblur - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in HTML Living Standard.</a>
    */
   @Nullable
   public FocusEventHandler onblur;
@@ -121,6 +135,7 @@ public class Window extends EventTarget {
    * The oncancel property of the GlobalEventHandlers mixin is an EventHandler for processing cancel events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncancel;
@@ -129,6 +144,7 @@ public class Window extends EventTarget {
    * The oncanplay property of the GlobalEventHandlers mixin is the EventHandler for processing canplay events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplay">GlobalEventHandlers.oncanplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplay">The definition of 'oncanplay' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncanplay;
@@ -137,6 +153,7 @@ public class Window extends EventTarget {
    * The oncanplaythrough property of the GlobalEventHandlers mixin is the EventHandler for processing canplaythrough events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough">GlobalEventHandlers.oncanplaythrough - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplaythrough">The definition of 'oncanplaythrough' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncanplaythrough;
@@ -145,6 +162,7 @@ public class Window extends EventTarget {
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onchange">Window.onchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onchange">The definition of 'onchange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -153,6 +171,7 @@ public class Window extends EventTarget {
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onclick">Window.onclick - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick">The definition of 'onclick' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onclick;
@@ -161,6 +180,7 @@ public class Window extends EventTarget {
    * The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onclose;
@@ -172,6 +192,7 @@ public class Window extends EventTarget {
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oncontextmenu">Window.oncontextmenu - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncontextmenu;
@@ -180,6 +201,7 @@ public class Window extends EventTarget {
    * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncuechange">GlobalEventHandlers.oncuechange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncuechange">The definition of 'oncuechange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncuechange;
@@ -188,6 +210,7 @@ public class Window extends EventTarget {
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondblclick">Window.ondblclick - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler ondblclick;
@@ -196,6 +219,7 @@ public class Window extends EventTarget {
    * An event handler for the devicemotion events sent to the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
   @Nullable
   public DeviceMotionEventHandler ondevicemotion;
@@ -204,6 +228,7 @@ public class Window extends EventTarget {
    * An event handler for the deviceorientation event, which contains information about a relative device orientation change.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
   @Nullable
   public DeviceOrientationEventHandler ondeviceorientation;
@@ -220,6 +245,8 @@ public class Window extends EventTarget {
    * A global event handler for the drag event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag">GlobalEventHandlers.ondrag - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondrag;
@@ -228,6 +255,8 @@ public class Window extends EventTarget {
    * A global event handler for the dragend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend">GlobalEventHandlers.ondragend - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragend;
@@ -236,6 +265,8 @@ public class Window extends EventTarget {
    * A global event handler for the dragenter event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter">GlobalEventHandlers.ondragenter - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragenter;
@@ -244,6 +275,8 @@ public class Window extends EventTarget {
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragleave;
@@ -252,6 +285,8 @@ public class Window extends EventTarget {
    * A global event handler for the dragover event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover">GlobalEventHandlers.ondragover - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragover;
@@ -260,6 +295,8 @@ public class Window extends EventTarget {
    * A global event handler for the dragstart event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart">GlobalEventHandlers.ondragstart - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondragstart;
@@ -268,6 +305,8 @@ public class Window extends EventTarget {
    * A global event handler for the drop event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop">GlobalEventHandlers.ondrop - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in HTML 5.1.</a>
    */
   @Nullable
   public EventHandler ondrop;
@@ -276,6 +315,7 @@ public class Window extends EventTarget {
    * The ondurationchange property of the GlobalEventHandlers mixin is the EventHandler for processing durationchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange">GlobalEventHandlers.ondurationchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-ondurationchange">The definition of 'ondurationchange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler ondurationchange;
@@ -284,6 +324,7 @@ public class Window extends EventTarget {
    * The onemptied property sets and returns the event handler for the emptied event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onemptied">GlobalEventHandlers.onemptied - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onemptied">The definition of 'onemptied' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onemptied;
@@ -292,6 +333,7 @@ public class Window extends EventTarget {
    * The onended property of the GlobalEventHandlers mixin is the EventHandler for processing ended events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onended">GlobalEventHandlers.onended - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onended">The definition of 'onended' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onended;
@@ -300,6 +342,7 @@ public class Window extends EventTarget {
    * The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in HTML Living Standard.</a>
    */
   @Nullable
   public OnErrorEventHandler onerror;
@@ -308,6 +351,7 @@ public class Window extends EventTarget {
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onfocus">Window.onfocus - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in HTML Living Standard.</a>
    */
   @Nullable
   public FocusEventHandler onfocus;
@@ -316,6 +360,7 @@ public class Window extends EventTarget {
    * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onformdata;
@@ -324,6 +369,7 @@ public class Window extends EventTarget {
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in Pointer Events – Level 2.</a>
    */
   @Nullable
   public EventHandler ongotpointercapture;
@@ -340,6 +386,7 @@ public class Window extends EventTarget {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oninput">Window.oninput - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oninput;
@@ -348,6 +395,7 @@ public class Window extends EventTarget {
    * The oninvalid property of the GlobalEventHandlers mixin is an EventHandler that processes invalid events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">GlobalEventHandlers.oninvalid - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oninvalid">The definition of 'oninvalid' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oninvalid;
@@ -356,6 +404,7 @@ public class Window extends EventTarget {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeydown">Window.onkeydown - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onkeydown;
@@ -364,6 +413,7 @@ public class Window extends EventTarget {
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeypress">Window.onkeypress - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -372,6 +422,7 @@ public class Window extends EventTarget {
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeyup">Window.onkeyup - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onkeyup;
@@ -380,6 +431,7 @@ public class Window extends EventTarget {
    * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onlanguagechange">Window.onlanguagechange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">The definition of 'WindowEventHandler.onlanguagechange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onlanguagechange;
@@ -388,6 +440,7 @@ public class Window extends EventTarget {
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onload">Window.onload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onload;
@@ -396,6 +449,7 @@ public class Window extends EventTarget {
    * The onloadeddata property of the GlobalEventHandlers mixin is the EventHandler for processing loadeddata events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata">GlobalEventHandlers.onloadeddata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadeddata">The definition of 'onloadeddata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadeddata;
@@ -404,6 +458,7 @@ public class Window extends EventTarget {
    * The onloadedmetadata property of the GlobalEventHandlers mixin is the EventHandler for processing loadedmetadata events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata">GlobalEventHandlers.onloadedmetadata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadedmetadata">The definition of 'onloadedmetadata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadedmetadata;
@@ -412,6 +467,7 @@ public class Window extends EventTarget {
    * The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadstart;
@@ -420,6 +476,7 @@ public class Window extends EventTarget {
    * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in Pointer Events – Level 2.</a>
    */
   @Nullable
   public EventHandler onlostpointercapture;
@@ -428,6 +485,7 @@ public class Window extends EventTarget {
    * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">The definition of 'onmessage' in HTML Living Standard.</a>
    */
   @Nullable
   public MessageEventHandler onmessage;
@@ -436,6 +494,7 @@ public class Window extends EventTarget {
    * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">The definition of 'onmessageerror' in HTML Living Standard.</a>
    */
   @Nullable
   public MessageEventHandler onmessageerror;
@@ -444,6 +503,7 @@ public class Window extends EventTarget {
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousedown">Window.onmousedown - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousedown">The definition of 'onmousedown' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmousedown;
@@ -452,6 +512,7 @@ public class Window extends EventTarget {
    * The onmouseenter property of the GlobalEventHandlers mixin is the EventHandler for processing mouseenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter">GlobalEventHandlers.onmouseenter - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseenter">The definition of 'onmouseenter' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseenter;
@@ -460,6 +521,7 @@ public class Window extends EventTarget {
    * The onmouseleave property of the GlobalEventHandlers mixin is the EventHandler for processing mouseleave events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave">GlobalEventHandlers.onmouseleave - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseleave">The definition of 'onmouseleave' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseleave;
@@ -468,6 +530,7 @@ public class Window extends EventTarget {
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousemove">Window.onmousemove - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmousemove;
@@ -476,6 +539,7 @@ public class Window extends EventTarget {
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseout">Window.onmouseout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseout">The definition of 'onmouseout' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseout;
@@ -484,6 +548,7 @@ public class Window extends EventTarget {
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseover">Window.onmouseover - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseover;
@@ -492,6 +557,7 @@ public class Window extends EventTarget {
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseup">Window.onmouseup - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseup">The definition of 'onmouseup' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseup;
@@ -515,6 +581,7 @@ public class Window extends EventTarget {
    * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpause">GlobalEventHandlers.onpause - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onpause">The definition of 'onpause' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onpause;
@@ -523,6 +590,7 @@ public class Window extends EventTarget {
    * The onplay property of the GlobalEventHandlers mixin is the EventHandler for processing play events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplay">GlobalEventHandlers.onplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onplay">The definition of 'onplay' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onplay;
@@ -531,6 +599,7 @@ public class Window extends EventTarget {
    * The onplaying property of the GlobalEventHandlers mixin is the EventHandler for processing playing events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplaying">GlobalEventHandlers.onplaying - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onplaying">The definition of 'onplaying' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onplaying;
@@ -539,6 +608,8 @@ public class Window extends EventTarget {
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointercancel;
@@ -547,6 +618,8 @@ public class Window extends EventTarget {
    * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointerdown;
@@ -555,6 +628,8 @@ public class Window extends EventTarget {
    * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointerenter;
@@ -563,6 +638,8 @@ public class Window extends EventTarget {
    * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointerleave;
@@ -571,6 +648,8 @@ public class Window extends EventTarget {
    * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointermove;
@@ -579,6 +658,8 @@ public class Window extends EventTarget {
    * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointerout;
@@ -587,6 +668,8 @@ public class Window extends EventTarget {
    * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointerover;
@@ -595,6 +678,8 @@ public class Window extends EventTarget {
    * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in Pointer Events.</a>
    */
   @Nullable
   public EventHandler onpointerup;
@@ -603,6 +688,7 @@ public class Window extends EventTarget {
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onpopstate">Window.onpopstate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">The definition of 'onpopstate' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onpopstate;
@@ -617,6 +703,7 @@ public class Window extends EventTarget {
    * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled">Window.onrejectionhandled - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">The definition of 'onrejectionhandled' in HTML Living Standard.</a>
    */
   @Nullable
   public PromiseRejectionEventHandler onrejectionhandled;
@@ -625,6 +712,7 @@ public class Window extends EventTarget {
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onreset">Window.onreset - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onreset">The definition of 'onreset' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onreset;
@@ -633,6 +721,7 @@ public class Window extends EventTarget {
    * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onresize">Window.onresize - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onresize">The definition of 'onresize' in HTML Living Standard.</a>
    */
   @Nullable
   public UIEventHandler onresize;
@@ -641,6 +730,8 @@ public class Window extends EventTarget {
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onscroll">Window.onscroll - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in Document Object Model (DOM) Level 3 Events Specification.</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -658,6 +749,7 @@ public class Window extends EventTarget {
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onselect">Window.onselect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onselect">The definition of 'onselect' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -666,6 +758,7 @@ public class Window extends EventTarget {
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in Selection API.</a>
    */
   @Nullable
   public EventHandler onselectionchange;
@@ -674,6 +767,7 @@ public class Window extends EventTarget {
    * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in Selection API.</a>
    */
   @Nullable
   public EventHandler onselectstart;
@@ -688,6 +782,7 @@ public class Window extends EventTarget {
    * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onstorage">Window.onstorage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">The definition of 'onstorage' in HTML Living Standard.</a>
    */
   @Nullable
   public StorageEventHandler onstorage;
@@ -696,6 +791,7 @@ public class Window extends EventTarget {
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onsubmit">Window.onsubmit - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onsubmit;
@@ -713,6 +809,7 @@ public class Window extends EventTarget {
    * The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel">GlobalEventHandlers.ontouchcancel - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchcancel">Touch Events – Level 2</a>
    */
   @Nullable
   public EventHandler ontouchcancel;
@@ -721,6 +818,7 @@ public class Window extends EventTarget {
    * A global event handler for the touchend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchend">GlobalEventHandlers.ontouchend - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchend">Touch Events – Level 2</a>
    */
   @Nullable
   public EventHandler ontouchend;
@@ -729,6 +827,7 @@ public class Window extends EventTarget {
    * A global event handler for the touchmove event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove">GlobalEventHandlers.ontouchmove - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchmove">Touch Events – Level 2</a>
    */
   @Nullable
   public EventHandler ontouchmove;
@@ -737,6 +836,7 @@ public class Window extends EventTarget {
    * The ontouchstart property of the GlobalEventHandlers mixin is an EventHandler that processes touchstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart">GlobalEventHandlers.ontouchstart - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchstart">Touch Events – Level 2</a>
    */
   @Nullable
   public EventHandler ontouchstart;
@@ -745,6 +845,7 @@ public class Window extends EventTarget {
    * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitioncancel">The definition of 'ontransitioncancel' in CSS Transitions.</a>
    */
   @Nullable
   public TransitionEventHandler ontransitioncancel;
@@ -753,6 +854,7 @@ public class Window extends EventTarget {
    * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitionend">The definition of 'ontransitionend' in CSS Transitions.</a>
    */
   @Nullable
   public TransitionEventHandler ontransitionend;
@@ -767,6 +869,7 @@ public class Window extends EventTarget {
    * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunhandledrejection">Window.onunhandledrejection - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">The definition of 'onunhandledrejection' in HTML Living Standard.</a>
    */
   @Nullable
   public PromiseRejectionEventHandler onunhandledrejection;
@@ -775,6 +878,9 @@ public class Window extends EventTarget {
    * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunload">Window.onunload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onunload">The definition of 'onunload' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML5.</a>
    */
   @Nullable
   public EventHandler onunload;
@@ -801,6 +907,7 @@ public class Window extends EventTarget {
    * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onwheel">The definition of 'onwheel' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onwheel;
@@ -809,6 +916,7 @@ public class Window extends EventTarget {
    * The Window interface's opener property returns a reference to the window that opened the window, either with open(), or by navigating a link with a target attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener">Window.opener - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-opener">The definition of 'window.opener' in HTML Living Standard.</a>
    */
   @Nullable
   public Any opener;
@@ -817,6 +925,7 @@ public class Window extends EventTarget {
    * The status property of the Window interface was originally intended to set the text in the status bar at the bottom of the browser window. However, the HTML standard now requires setting window.status to have no effect on the text displayed in the status bar.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/status">Window.status - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window-status">The definition of 'window.status' in HTML Living Standard.</a>
    */
   @Nonnull
   public String status;
@@ -839,6 +948,8 @@ public class Window extends EventTarget {
    * The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/caches">Window.caches - MDN</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#self-caches">The definition of 'caches' in Service Workers.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/">Service Workers</a>
    */
   @JsProperty(
       name = "caches"
@@ -850,6 +961,7 @@ public class Window extends EventTarget {
    * The Window.closed read-only property indicates whether the referenced window is closed or not.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed">Window.closed - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window-closed">The definition of 'window.closed' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "closed"
@@ -860,6 +972,7 @@ public class Window extends EventTarget {
    * The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">WindowOrWorkerGlobalScope.crossOriginIsolated - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-crossoriginisolated">The definition of 'crossOriginIsolated' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "crossOriginIsolated"
@@ -870,6 +983,7 @@ public class Window extends EventTarget {
    * The read-only Window.crypto property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crypto">Window.crypto - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-GlobalCrypto">The definition of 'Window.crypto' in Web Cryptography API.</a>
    */
   @JsProperty(
       name = "crypto"
@@ -881,6 +995,7 @@ public class Window extends EventTarget {
    * The customElements read-only property of the Window interface returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and get information about previously registered custom elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements">Window.customElements - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#dom-window-customelements">The definition of 'window.customElements' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "customElements"
@@ -892,6 +1007,7 @@ public class Window extends EventTarget {
    * The devicePixelRatio of Window interface returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-devicepixelratio">The definition of 'Window.devicePixelRatio' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "devicePixelRatio"
@@ -902,6 +1018,8 @@ public class Window extends EventTarget {
    * window.document returns a reference to the document contained in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/document">Window.document - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-2">The definition of 'Window.document' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-document-0">The definition of 'Window.document' in HTML5.</a>
    */
   @JsProperty(
       name = "document"
@@ -913,6 +1031,7 @@ public class Window extends EventTarget {
    * The read-only Window property event returns the Event which is currently being handled by the site's code. Outside the context of an event handler, the value is always undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/event">Window.event - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-window-event">The definition of 'Window.event' in DOM.</a>
    */
   @JsProperty(
       name = "event"
@@ -930,6 +1049,7 @@ public class Window extends EventTarget {
    * The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement">Window.frameElement - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frameelement">The definition of 'Window.frameElement' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "frameElement"
@@ -941,6 +1061,8 @@ public class Window extends EventTarget {
    * Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">Window.frames - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frames">The definition of 'Window.frames' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-frames">The definition of 'Window.frames' in HTML5.</a>
    */
   @JsProperty(
       name = "frames"
@@ -952,6 +1074,8 @@ public class Window extends EventTarget {
    * The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history">Window.history - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#the-history-interface">The definition of 'The History interface' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-history-interface">The definition of 'The History interface' in HTML5.</a>
    */
   @JsProperty(
       name = "history"
@@ -963,6 +1087,8 @@ public class Window extends EventTarget {
    * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/indexedDB">Window.indexedDB - MDN</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-windoworworkerglobalscope-indexeddb">The definition of 'indexedDB' in Indexed Database API Draft.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb">The definition of 'indexedDB' in Indexed Database API 2.0.</a>
    */
   @JsProperty(
       name = "indexedDB"
@@ -974,6 +1100,7 @@ public class Window extends EventTarget {
    * The read-only innerHeight property of the Window interface returns the interior height of the window in pixels, including the height of the horizontal scroll bar, if present.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight">Window.innerHeight - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-innerheight">The definition of 'window.innerHeight' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "innerHeight"
@@ -984,6 +1111,7 @@ public class Window extends EventTarget {
    * The read-only Window property innerWidth returns the interior width of the window in pixels. This includes the width of the vertical scroll bar, if one is present.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth">Window.innerWidth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-innerwidth">The definition of 'window.innerWidth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "innerWidth"
@@ -994,6 +1122,7 @@ public class Window extends EventTarget {
    * The window.isSecureContext read-only property indicates whether a context is capable of using features that require secure contexts.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/isSecureContext">Window.isSecureContext - MDN</a>
+   * @see <a href="https://w3c.github.io/webappsec-secure-contexts/">Secure Contexts</a>
    */
   @JsProperty(
       name = "isSecureContext"
@@ -1004,6 +1133,8 @@ public class Window extends EventTarget {
    * Returns the number of frames (either frame or iframe elements) in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/length">Window.length - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-length">The definition of 'Window.length' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-length">The definition of 'Window.length' in HTML5.</a>
    */
   @JsProperty(
       name = "length"
@@ -1014,6 +1145,7 @@ public class Window extends EventTarget {
    * The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Window.localStorage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage">The definition of 'localStorage' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "localStorage"
@@ -1025,6 +1157,8 @@ public class Window extends EventTarget {
    * The Window.location read-only property returns a Location object with information about the current location of the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location">Window.location - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-location-interface">The definition of 'Window.location' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-location-interface">The definition of 'Window.location' in HTML5.</a>
    */
   @JsProperty(
       name = "location"
@@ -1036,6 +1170,8 @@ public class Window extends EventTarget {
    * Returns the locationbar object, whose visibility can be checked.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar">Window.locationbar - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-locationbar">The definition of 'Window.locationbar' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-locationbar">The definition of 'Window.locationbar' in HTML5.</a>
    */
   @JsProperty(
       name = "locationbar"
@@ -1047,6 +1183,8 @@ public class Window extends EventTarget {
    * The Window.menubar property returns the menubar object, whose visibility can be checked.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar">Window.menubar - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-menubar">The definition of 'Window.menubar' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-menubar">The definition of 'Window.menubar' in HTML5.</a>
    */
   @JsProperty(
       name = "menubar"
@@ -1058,6 +1196,7 @@ public class Window extends EventTarget {
    * The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator">Window.navigator - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator">The definition of 'Window: navigator' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "navigator"
@@ -1074,6 +1213,7 @@ public class Window extends EventTarget {
    * The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin">WindowOrWorkerGlobalScope.origin - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-origin">The definition of 'WindowOrWorkerGlobalScope.origin' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "origin"
@@ -1090,6 +1230,7 @@ public class Window extends EventTarget {
    * The Window.outerHeight read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-outerheight">The definition of 'Window.outerHeight' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "outerHeight"
@@ -1100,6 +1241,7 @@ public class Window extends EventTarget {
    * Window.outerWidth read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-outerwidth">The definition of 'Window.outerWidth' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "outerWidth"
@@ -1110,6 +1252,7 @@ public class Window extends EventTarget {
    * The read-only Window property pageXOffset is an alias for scrollX.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageXOffset">Window.pageXOffset - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-pagexoffset">The definition of 'window.pageXOffset' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "pageXOffset"
@@ -1120,6 +1263,7 @@ public class Window extends EventTarget {
    * The read-only Window property pageYOffset is an alias for scrollY; as such, it returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down) with a value of 0.0, indicating that the top edge of the Document is currently aligned with the top edge of the window's content area.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset">Window.pageYOffset - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-pageyoffset">The definition of 'window.pageYOffset' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "pageYOffset"
@@ -1130,6 +1274,7 @@ public class Window extends EventTarget {
    * The Window.parent property is a reference to the parent of the current window or subframe.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/parent">Window.parent - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-parent">The definition of 'window.parent' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "parent"
@@ -1141,6 +1286,7 @@ public class Window extends EventTarget {
    * The Window interface's performance property returns a Performance object, which can be used to gather performance information about the current document. It serves as the point of exposure for the Performance Timeline API, the High Resolution Time API, the Navigation Timing API, the User Timing API, and the Resource Timing API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/performance">Window.performance - MDN</a>
+   * @see <a href="https://www.w3.org/TR/hr-time-1/#performance">The definition of 'window.performance' in High Resolution Time.</a>
    */
   @JsProperty(
       name = "performance"
@@ -1152,6 +1298,8 @@ public class Window extends EventTarget {
    * Returns the personalbar object, whose visibility can be toggled in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/personalbar">Window.personalbar - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-personalbar">The definition of 'Window.personalbar' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-personalbar">The definition of 'Window.personalbar' in HTML5.</a>
    */
   @JsProperty(
       name = "personalbar"
@@ -1163,6 +1311,7 @@ public class Window extends EventTarget {
    * The Window property screen returns a reference to the screen object associated with the window. The screen object, implementing the Screen interface, is a special object for inspecting properties of the screen on which the current window is being rendered.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screen">Window.screen - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screen">The definition of 'window.screen' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "screen"
@@ -1174,6 +1323,7 @@ public class Window extends EventTarget {
    * The Window.screenLeft read-only property returns the horizontal distance, in CSS pixels, from the left border of the user's browser viewport to the left side of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenLeft">Window.screenLeft - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screenx">The definition of 'Window.screenLeft' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "screenLeft"
@@ -1184,6 +1334,7 @@ public class Window extends EventTarget {
    * The Window.screenTop read-only property returns the vertical distance, in CSS pixels, from the top border of the user's browser viewport to the top side of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenTop">Window.screenTop - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screeny">The definition of 'Window.screenTop' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "screenTop"
@@ -1194,6 +1345,7 @@ public class Window extends EventTarget {
    * The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser viewport to the left side of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenX">Window.screenX - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screenx">The definition of 'Window.screenX' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "screenX"
@@ -1204,6 +1356,7 @@ public class Window extends EventTarget {
    * The Window.screenY read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenY">Window.screenY - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screeny">The definition of 'Window.screenY' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "screenY"
@@ -1214,6 +1367,7 @@ public class Window extends EventTarget {
    * The read-only scrollX property of the Window interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the scrollY property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollX">Window.scrollX - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scrollx">The definition of 'window.scrollX' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "scrollX"
@@ -1224,6 +1378,7 @@ public class Window extends EventTarget {
    * The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY">Window.scrollY - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scrolly">The definition of 'window.scrollY' in CSS Object Model (CSSOM) View Module.</a>
    */
   @JsProperty(
       name = "scrollY"
@@ -1234,6 +1389,8 @@ public class Window extends EventTarget {
    * The Window.scrollbars property returns the scrollbars object, whose visibility can be checked.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars">Window.scrollbars - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-scrollbars">The definition of 'Window.scrollbars' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-scrollbars">The definition of 'Window.scrollbars' in HTML5.</a>
    */
   @JsProperty(
       name = "scrollbars"
@@ -1245,6 +1402,9 @@ public class Window extends EventTarget {
    * The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/self">Window.self - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-self">The definition of 'Window.self' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/browsers.html#dom-self">The definition of 'Window.self' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-self">The definition of 'Window.self' in HTML5.</a>
    */
   @JsProperty(
       name = "self"
@@ -1256,6 +1416,7 @@ public class Window extends EventTarget {
    * The read-only sessionStorage property accesses a session Storage object for the current origin. sessionStorage is similar to localStorage; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Window.sessionStorage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage">The definition of 'sessionStorage' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "sessionStorage"
@@ -1267,6 +1428,7 @@ public class Window extends EventTarget {
    * The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/speechSynthesis">Window.speechSynthesis - MDN</a>
+   * @see <a href="https://wicg.github.io/speech-api/#tts-section">The definition of 'SpeechSynthesis' in Web Speech API.</a>
    */
   @JsProperty(
       name = "speechSynthesis"
@@ -1278,6 +1440,8 @@ public class Window extends EventTarget {
    * The Window.statusbar property returns the statusbar object, whose visibility can be toggled in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar">Window.statusbar - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-statusbar">The definition of 'Window.statusbar' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-statusbar">The definition of 'Window.statusbar' in HTML5.</a>
    */
   @JsProperty(
       name = "statusbar"
@@ -1289,6 +1453,8 @@ public class Window extends EventTarget {
    * The Window.toolbar property returns the toolbar object, whose visibility can be toggled in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar">Window.toolbar - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-toolbar">The definition of 'Window.toolbar' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-toolbar">The definition of 'Window.toolbar' in HTML5.</a>
    */
   @JsProperty(
       name = "toolbar"
@@ -1300,6 +1466,8 @@ public class Window extends EventTarget {
    * Returns a reference to the topmost window in the window hierarchy.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/top">Window.top - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-top">The definition of 'window.top' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-top">The definition of 'window.top' in HTML5.</a>
    */
   @JsProperty(
       name = "top"
@@ -1311,6 +1479,7 @@ public class Window extends EventTarget {
    * The visualViewport read-only property of the Window interface returns a VisualViewport object representing the visual viewport for a given window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/visualViewport">Window.visualViewport - MDN</a>
+   * @see <a href="https://wicg.github.io/visual-viewport/#dom-window-visualviewport">The definition of 'visualViewport' in Visual Viewport API.</a>
    */
   @JsProperty(
       name = "visualViewport"
@@ -1322,6 +1491,9 @@ public class Window extends EventTarget {
    * The window property of a Window object points to the window object itself.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/window">Window.window - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window">The definition of 'Window.window' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/browsers.html#dom-window">The definition of 'Window.window' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window">The definition of 'Window.window' in HTML5.</a>
    */
   @JsProperty(
       name = "window"
@@ -1333,6 +1505,7 @@ public class Window extends EventTarget {
    * The Window.alert() method displays an alert dialog with the optional specified content and an OK button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-alert">The definition of 'alert()' in HTML Living Standard.</a>
    */
   public native void alert();
 
@@ -1340,6 +1513,7 @@ public class Window extends EventTarget {
    * The Window.alert() method displays an alert dialog with the optional specified content and an OK button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-alert">The definition of 'alert()' in HTML Living Standard.</a>
    */
   public native void alert(@Nonnull String message);
 
@@ -1347,6 +1521,7 @@ public class Window extends EventTarget {
    * Shifts focus away from the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/blur">Window.blur - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-window-blur">The definition of 'Window.blur()' in HTML Living Standard.</a>
    */
   public native void blur();
 
@@ -1354,6 +1529,8 @@ public class Window extends EventTarget {
    * The Window.close() method closes the current window, or the window on which it was called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close">Window.close - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window-close">The definition of 'window.close()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-close">The definition of 'Window.close()' in HTML5.</a>
    */
   public native void close();
 
@@ -1361,6 +1538,7 @@ public class Window extends EventTarget {
    * The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-confirm">The definition of 'confirm()' in HTML Living Standard.</a>
    */
   public native boolean confirm(@Nonnull String message);
 
@@ -1368,6 +1546,7 @@ public class Window extends EventTarget {
    * The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-confirm">The definition of 'confirm()' in HTML Living Standard.</a>
    */
   public native boolean confirm();
 
@@ -1375,6 +1554,7 @@ public class Window extends EventTarget {
    * Makes a request to bring the window to the front. It may fail due to user settings and the window isn't guaranteed to be frontmost before this method returns.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus">Window.focus - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-window-focus">The definition of 'Window.focus()' in HTML Living Standard.</a>
    */
   public native void focus();
 
@@ -1414,6 +1594,7 @@ public class Window extends EventTarget {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in HTML Living Standard.</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
@@ -1422,6 +1603,7 @@ public class Window extends EventTarget {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in HTML Living Standard.</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
@@ -1430,6 +1612,7 @@ public class Window extends EventTarget {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in HTML Living Standard.</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin);
@@ -1438,6 +1621,7 @@ public class Window extends EventTarget {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in HTML Living Standard.</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull WindowPostMessageOptions options);
@@ -1446,6 +1630,7 @@ public class Window extends EventTarget {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in HTML Living Standard.</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message);
 
@@ -1453,6 +1638,7 @@ public class Window extends EventTarget {
    * Opens the Print Dialog to print the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/print">Window.print - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#printing">The definition of 'print()' in HTML Living Standard.</a>
    */
   public native void print();
 
@@ -1460,6 +1646,7 @@ public class Window extends EventTarget {
    * The Window.prompt() displays a dialog with an optional message prompting the user to input some text.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-prompt">The definition of 'prompt()' in HTML Living Standard.</a>
    */
   @Nullable
   public native String prompt(@Nonnull String message, @Nonnull String default_);
@@ -1468,6 +1655,7 @@ public class Window extends EventTarget {
    * The Window.prompt() displays a dialog with an optional message prompting the user to input some text.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-prompt">The definition of 'prompt()' in HTML Living Standard.</a>
    */
   @Nullable
   public native String prompt(@Nonnull String message);
@@ -1476,6 +1664,7 @@ public class Window extends EventTarget {
    * The Window.prompt() displays a dialog with an optional message prompting the user to input some text.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-prompt">The definition of 'prompt()' in HTML Living Standard.</a>
    */
   @Nullable
   public native String prompt();
@@ -1484,6 +1673,8 @@ public class Window extends EventTarget {
    * The window.stop() stops further resource loading in the current browsing context, equivalent to the stop button in the browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/stop">Window.stop - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-stop">The definition of 'Window.stop()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-stop">The definition of 'Window.stop' in HTML5.</a>
    */
   public native void stop();
 
@@ -1497,6 +1688,8 @@ public class Window extends EventTarget {
    * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">Window.getComputedStyle - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">The definition of 'getComputedStyle()' in CSS Object Model (CSSOM).</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">The definition of 'getComputedStyle()' in Document Object Model (DOM) Level 2 Style Specification.</a>
    */
   @Nonnull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt,
@@ -1506,6 +1699,8 @@ public class Window extends EventTarget {
    * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">Window.getComputedStyle - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">The definition of 'getComputedStyle()' in CSS Object Model (CSSOM).</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">The definition of 'getComputedStyle()' in Document Object Model (DOM) Level 2 Style Specification.</a>
    */
   @Nonnull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt);
@@ -1514,6 +1709,7 @@ public class Window extends EventTarget {
    * The Window interface's matchMedia() method returns a new MediaQueryList object that can then be used to determine if the document matches the media query string, as well as to monitor the document to detect when it matches (or stops matching) that media query.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia">Window.matchMedia - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-matchmedia">The definition of 'Window.matchMedia()' in CSS Object Model (CSSOM) View Module.</a>
    */
   @Nonnull
   public native MediaQueryList matchMedia(@Nonnull String query);
@@ -1522,6 +1718,7 @@ public class Window extends EventTarget {
    * The moveBy() method of the Window interface moves the current window by a specified amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy">Window.moveBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-moveby">The definition of 'window.moveBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void moveBy(int x, int y);
 
@@ -1529,6 +1726,7 @@ public class Window extends EventTarget {
    * The moveTo() method of the Window interface moves the current window to the specified coordinates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo">Window.moveTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-moveto">The definition of 'window.moveTo()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void moveTo(int x, int y);
 
@@ -1536,6 +1734,7 @@ public class Window extends EventTarget {
    * The Window.resizeBy() method resizes the current window by a specified amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy">Window.resizeBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-resizeby">The definition of 'window.resizeBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void resizeBy(int x, int y);
 
@@ -1543,6 +1742,7 @@ public class Window extends EventTarget {
    * The Window.resizeTo() method dynamically resizes the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeTo">Window.resizeTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-resizeto">The definition of 'window.resizeTo()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void resizeTo(int width, int height);
 
@@ -1550,6 +1750,7 @@ public class Window extends EventTarget {
    * The Window.scroll() method scrolls the window to a particular place in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">Window.scroll - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scroll(@Nonnull ScrollToOptions options);
 
@@ -1557,6 +1758,7 @@ public class Window extends EventTarget {
    * The Window.scroll() method scrolls the window to a particular place in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">Window.scroll - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scroll();
 
@@ -1564,6 +1766,7 @@ public class Window extends EventTarget {
    * The Window.scroll() method scrolls the window to a particular place in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">Window.scroll - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scroll(double x, double y);
 
@@ -1571,6 +1774,7 @@ public class Window extends EventTarget {
    * The Window.scrollBy() method scrolls the document in the window by the given amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">Window.scrollBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scrollby">The definition of 'window.scrollBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollBy(@Nonnull ScrollToOptions options);
 
@@ -1578,6 +1782,7 @@ public class Window extends EventTarget {
    * The Window.scrollBy() method scrolls the document in the window by the given amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">Window.scrollBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scrollby">The definition of 'window.scrollBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollBy();
 
@@ -1585,6 +1790,7 @@ public class Window extends EventTarget {
    * The Window.scrollBy() method scrolls the document in the window by the given amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">Window.scrollBy - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scrollby">The definition of 'window.scrollBy()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollBy(double x, double y);
 
@@ -1592,6 +1798,7 @@ public class Window extends EventTarget {
    * Window.scrollTo() scrolls to a particular set of coordinates in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollTo(@Nonnull ScrollToOptions options);
 
@@ -1599,6 +1806,7 @@ public class Window extends EventTarget {
    * Window.scrollTo() scrolls to a particular set of coordinates in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollTo();
 
@@ -1606,6 +1814,7 @@ public class Window extends EventTarget {
    * Window.scrollTo() scrolls to a particular set of coordinates in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in CSS Object Model (CSSOM) View Module.</a>
    */
   public native void scrollTo(double x, double y);
 
@@ -1613,6 +1822,7 @@ public class Window extends EventTarget {
    * The Window.getSelection() method returns a Selection object representing the range of text selected by the user or the current position of the caret.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection">Window.getSelection - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#extensions-to-window-interface">The definition of 'Window.getSelection()' in Selection API.</a>
    */
   @Nullable
   public native Selection getSelection();
@@ -1635,6 +1845,9 @@ public class Window extends EventTarget {
    * The WindowOrWorkerGlobalScope.atob() function decodes a string of data which has been encoded using Base64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/atob">Window.atob - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-atob">The definition of 'WindowOrWorkerGlobalScope.atob()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-atob">The definition of 'WindowBase64.atob()' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-atob">The definition of 'WindowBase64.atob()' in HTML5.</a>
    */
   @Nonnull
   public native String atob(@Nonnull String data);
@@ -1643,6 +1856,9 @@ public class Window extends EventTarget {
    * The WindowOrWorkerGlobalScope.btoa() method creates a Base64-encoded ASCII string from a binary string (i.e., a String object in which each character in the string is treated as a byte of binary data).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/btoa">Window.btoa - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-btoa">The definition of 'WindowOrWorkerGlobalScope.btoa()' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-btoa">The definition of 'WindowBase64.btoa()' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-btoa">The definition of 'WindowBase64.btoa()' in HTML5.</a>
    */
   @Nonnull
   public native String btoa(@Nonnull String data);
@@ -1651,6 +1867,8 @@ public class Window extends EventTarget {
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval">Window.clearInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-clearinterval">The definition of 'WindowOrWorkerGlobalScope.clearInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-clearinterval">The definition of 'clearInterval()' in HTML Living Standard.</a>
    */
   public native void clearInterval(int handle);
 
@@ -1658,6 +1876,8 @@ public class Window extends EventTarget {
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval">Window.clearInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-clearinterval">The definition of 'WindowOrWorkerGlobalScope.clearInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-clearinterval">The definition of 'clearInterval()' in HTML Living Standard.</a>
    */
   public native void clearInterval();
 
@@ -1665,6 +1885,8 @@ public class Window extends EventTarget {
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout">Window.clearTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-cleartimeout">The definition of 'WindowOrWorkerGlobalScope.clearTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-cleartimeout">The definition of 'clearTimeout()' in HTML Living Standard.</a>
    */
   public native void clearTimeout(int handle);
 
@@ -1672,6 +1894,8 @@ public class Window extends EventTarget {
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout">Window.clearTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-cleartimeout">The definition of 'WindowOrWorkerGlobalScope.clearTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-cleartimeout">The definition of 'clearTimeout()' in HTML Living Standard.</a>
    */
   public native void clearTimeout();
 
@@ -1679,6 +1903,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image,
@@ -1688,6 +1913,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image,
@@ -1697,6 +1923,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image,
@@ -1706,6 +1933,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image,
@@ -1715,6 +1943,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image,
@@ -1724,6 +1953,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image,
@@ -1733,6 +1963,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image,
@@ -1742,6 +1973,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image,
@@ -1751,6 +1983,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image,
@@ -1760,6 +1993,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image,
@@ -1769,6 +2003,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image,
@@ -1778,6 +2013,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image);
@@ -1786,6 +2022,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image);
@@ -1794,6 +2031,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image);
@@ -1802,6 +2040,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image);
@@ -1810,6 +2049,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image);
@@ -1818,6 +2058,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image);
@@ -1826,6 +2067,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image);
@@ -1834,6 +2076,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image);
@@ -1842,6 +2085,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image);
@@ -1850,6 +2094,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image);
@@ -1858,6 +2103,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image);
@@ -1866,6 +2112,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image, int sx,
@@ -1875,6 +2122,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image, int sx,
@@ -1884,6 +2132,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image, int sx,
@@ -1893,6 +2142,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image, int sx,
@@ -1902,6 +2152,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image, int sx,
@@ -1911,6 +2162,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image, int sx,
@@ -1920,6 +2172,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image, int sx,
@@ -1929,6 +2182,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image, int sx, int sy,
@@ -1938,6 +2192,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image, int sx,
@@ -1947,6 +2202,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image, int sx, int sy, int sw,
@@ -1956,6 +2212,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image, int sx, int sy,
@@ -1965,6 +2222,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image, int sx,
@@ -1974,6 +2232,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image, int sx,
@@ -1983,6 +2242,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image, int sx,
@@ -1992,6 +2252,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image, int sx,
@@ -2001,6 +2262,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image, int sx,
@@ -2010,6 +2272,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image, int sx,
@@ -2019,6 +2282,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image, int sx,
@@ -2028,6 +2292,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image, int sx, int sy,
@@ -2037,6 +2302,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image, int sx,
@@ -2046,6 +2312,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image, int sx, int sy, int sw,
@@ -2055,6 +2322,7 @@ public class Window extends EventTarget {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in HTML Living Standard.</a>
    */
   @Nonnull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image, int sx, int sy,
@@ -2064,6 +2332,7 @@ public class Window extends EventTarget {
    * The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask">WindowOrWorkerGlobalScope.queueMicrotask - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">The definition of 'self.queueMicrotask()' in HTML Living Standard.</a>
    */
   public native void queueMicrotask(@Nonnull VoidFunction callback);
 
@@ -2071,6 +2340,8 @@ public class Window extends EventTarget {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in HTML Living Standard.</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -2079,6 +2350,8 @@ public class Window extends EventTarget {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in HTML Living Standard.</a>
    */
   public native int setInterval(@Nonnull String handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -2087,6 +2360,8 @@ public class Window extends EventTarget {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in HTML Living Standard.</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -2095,6 +2370,8 @@ public class Window extends EventTarget {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in HTML Living Standard.</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout);
 
@@ -2102,6 +2379,8 @@ public class Window extends EventTarget {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in HTML Living Standard.</a>
    */
   public native int setInterval(@Nonnull String handler, int timeout);
 
@@ -2109,6 +2388,8 @@ public class Window extends EventTarget {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in HTML Living Standard.</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout);
 
@@ -2116,6 +2397,8 @@ public class Window extends EventTarget {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in HTML Living Standard.</a>
    */
   public native int setTimeout(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -2124,6 +2407,8 @@ public class Window extends EventTarget {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in HTML Living Standard.</a>
    */
   public native int setTimeout(@Nonnull String handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -2132,6 +2417,8 @@ public class Window extends EventTarget {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in HTML Living Standard.</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments);
@@ -2140,6 +2427,8 @@ public class Window extends EventTarget {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in HTML Living Standard.</a>
    */
   public native int setTimeout(@Nonnull TimerHandler handler, int timeout);
 
@@ -2147,6 +2436,8 @@ public class Window extends EventTarget {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in HTML Living Standard.</a>
    */
   public native int setTimeout(@Nonnull String handler, int timeout);
 
@@ -2154,6 +2445,8 @@ public class Window extends EventTarget {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in HTML Living Standard.</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout);
 
@@ -2161,6 +2454,9 @@ public class Window extends EventTarget {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull RequestInfo input, @Nonnull RequestInit init);
@@ -2169,6 +2465,9 @@ public class Window extends EventTarget {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull Request input, @Nonnull RequestInit init);
@@ -2177,6 +2476,9 @@ public class Window extends EventTarget {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull String input, @Nonnull RequestInit init);
@@ -2185,6 +2487,9 @@ public class Window extends EventTarget {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull RequestInfo input);
@@ -2193,6 +2498,9 @@ public class Window extends EventTarget {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull Request input);
@@ -2201,6 +2509,9 @@ public class Window extends EventTarget {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in Fetch.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
   public native Promise<Response> fetch(@Nonnull String input);
@@ -2209,6 +2520,7 @@ public class Window extends EventTarget {
    * The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame">Window.cancelAnimationFrame - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#animationframeprovider-cancelanimationframe">The definition of 'cancelAnimationFrame()' in HTML Living Standard.</a>
    */
   public native void cancelAnimationFrame(int handle);
 
@@ -2216,6 +2528,8 @@ public class Window extends EventTarget {
    * The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame">Window.requestAnimationFrame - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#animation-frames">The definition of 'requestAnimationFrame' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/animation-timing/#dom-windowanimationtiming-requestanimationframe">The definition of 'requestAnimationFrame' in Timing control for script-based animations.</a>
    */
   public native int requestAnimationFrame(@Nonnull FrameRequestCallback callback);
 

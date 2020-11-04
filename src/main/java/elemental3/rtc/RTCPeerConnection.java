@@ -36,6 +36,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.onconnectionstatechange property specifies an EventHandler which is called to handle the connectionstatechange event when it occurs on an instance of RTCPeerConnection. This happens whenever the aggregate state of the connection changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onconnectionstatechange">RTCPeerConnection.onconnectionstatechange - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onconnectionstatechange">The definition of 'RTCPeerConnection.onconnectionstatechange' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public EventHandler onconnectionstatechange;
@@ -44,6 +45,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-ondatachannel">The definition of 'RTCPeerConnection.ondatachannel' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public RTCDataChannelEventHandler ondatachannel;
@@ -52,6 +54,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection property onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate">RTCPeerConnection.onicecandidate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicecandidate">The definition of 'RTCPeerConnection.onicecandidate' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public RTCPeerConnectionIceEventHandler onicecandidate;
@@ -60,6 +63,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.onicecandidateerror property is an EventHandler which specifies a function which is called to handle the icecandidateerror event when it occurs on an RTCPeerConnection instance. This event is fired when an error occurs during the ICE candidate gathering process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidateerror">RTCPeerConnection.onicecandidateerror - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicecandidateerror">The definition of 'RTCPeerConnection.onicecandidateerror' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public RTCPeerConnectionIceErrorEventHandler onicecandidateerror;
@@ -68,6 +72,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange">RTCPeerConnection.oniceconnectionstatechange - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-oniceconnectionstatechange">The definition of 'RTCPeerConnection.oniceconnectionstatechange' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public EventHandler oniceconnectionstatechange;
@@ -76,6 +81,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state&mdash;that is, whether or not the ICE agent is actively gathering candidates&mdash;changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicegatheringstatechange">RTCPeerConnection.onicegatheringstatechange - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicegatheringstatechange">The definition of 'RTCPeerConnection.onicegatheringstatechange' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public EventHandler onicegatheringstatechange;
@@ -84,6 +90,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection interface's onnegotiationneeded property is an EventListener which specifies a function which is called to handle the negotiationneeded event when it occurs on an RTCPeerConnection instance. This event is fired when a change has occurred which requires session negotiation. This negotiation should be carried out as the offerer, because some session changes cannot be negotiated as the answerer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onnegotiationneeded">RTCPeerConnection.onnegotiationneeded - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onnegotiationneeded">The definition of 'RTCPeerConnection.onnegotiationneeded' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public EventHandler onnegotiationneeded;
@@ -92,6 +99,7 @@ public class RTCPeerConnection extends EventTarget {
    * The onsignalingstatechange event handler property of the RTCPeerConnection interface specifies a function to be called when the signalingstatechange event occurs on an RTCPeerConnection interface.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange">RTCPeerConnection.onsignalingstatechange - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onsignalingstatechange">The definition of 'RTCPeerConnection.onsignalingstatechange' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public EventHandler onsignalingstatechange;
@@ -100,6 +108,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection property ontrack is an EventHandler which specifies a function to be called when the track event occurs, indicating that a track has been added to the RTCPeerConnection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack">RTCPeerConnection.ontrack - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-ontrack">The definition of 'RTCPeerConnection.ontrack' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nullable
   public RTCTrackEventHandler ontrack;
@@ -108,6 +117,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection">RTCPeerConnection.RTCPeerConnection - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection">The definition of 'RTCPeerConnection()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public RTCPeerConnection(@Nonnull final RTCConfiguration configuration) {
   }
@@ -116,6 +126,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection">RTCPeerConnection.RTCPeerConnection - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection">The definition of 'RTCPeerConnection()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public RTCPeerConnection() {
   }
@@ -124,6 +135,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only RTCPeerConnection property canTrickleIceCandidates returns a Boolean which indicates whether or not the remote peer can accept trickled ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates">RTCPeerConnection.canTrickleIceCandidates - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-cantrickleicecandidates">The definition of 'RTCPeerConnection.canTrickleIceCandidates' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "canTrickleIceCandidates"
@@ -147,6 +159,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only property RTCPeerConnection.currentLocalDescription returns an RTCSessionDescription object describing the local end of the connection as it was most recently successfully negotiated since the last time the  RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/currentLocalDescription">RTCPeerConnection.currentLocalDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-currentlocaldesc">The definition of 'RTCPeerConnection.currentLocalDescription' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "currentLocalDescription"
@@ -158,6 +171,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only property RTCPeerConnection.currentRemoteDescription returns an RTCSessionDescription object describing the remote end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/currentRemoteDescription">RTCPeerConnection.currentRemoteDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-currentremotedesc">The definition of 'RTCPeerConnection.currentRemoteDescription' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "currentRemoteDescription"
@@ -207,6 +221,7 @@ public class RTCPeerConnection extends EventTarget {
    * .
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/localDescription">RTCPeerConnection.localDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-localdescription">The definition of 'RTCPeerConnection.localDescription' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "localDescription"
@@ -218,6 +233,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only RTCPeerConnection property peerIdentity returns a JavaScript Promise that resolves to an RTCIdentityAssertion which contains a DOMString identifying the remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity">RTCPeerConnection.peerIdentity - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-identity/#dfn-peeridentity">Identity for WebRTC</a>
    */
   @JsProperty(
       name = "peerIdentity"
@@ -229,6 +245,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only property RTCPeerConnection.pendingLocalDescription returns an RTCSessionDescription object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentLocalDescription or RTCPeerConnection.localDescription to get the current state of the endpoint. For details on the difference, see Pending and current descriptions in WebRTC connectivity.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingLocalDescription">RTCPeerConnection.pendingLocalDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-pendinglocaldesc">The definition of 'RTCPeerConnection.pendingLocalDescription' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "pendingLocalDescription"
@@ -240,6 +257,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only property RTCPeerConnection.pendingRemoteDescription returns an RTCSessionDescription object describing a pending configuration change for the remote end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentRemoteDescription or RTCPeerConnection.remoteDescription to get the current session description for the remote endpoint. For details on the difference, see Pending and current descriptions in WebRTC connectivity.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingRemoteDescription">RTCPeerConnection.pendingRemoteDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-pendingremotedesc">The definition of 'RTCPeerConnection.pendingRemoteDescription' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "pendingRemoteDescription"
@@ -251,6 +269,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only property RTCPeerConnection.remoteDescription returns a RTCSessionDescription describing the session (which includes configuration and media information) for the remote end of the connection. If this hasn't been set yet, this is null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription">RTCPeerConnection.remoteDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-remotedescription">The definition of 'RTCPeerConnection.remoteDescription' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "remoteDescription"
@@ -262,6 +281,7 @@ public class RTCPeerConnection extends EventTarget {
    * The read-only sctp property on the RTCPeerConnection interface returns an RTCSctpTransport describing the SCTP transport over which SCTP data is being sent and received. If SCTP hasn't been negotiated, this value is null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/sctp">RTCPeerConnection.sctp - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-sctp">The definition of 'RTCPeerConnection.sctp' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "sctp"
@@ -285,6 +305,7 @@ public class RTCPeerConnection extends EventTarget {
    * When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate">RTCPeerConnection.addIceCandidate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate">The definition of 'RTCPeerConnection.addIceCandidate()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> addIceCandidate(@Nonnull RTCIceCandidateInit candidate);
@@ -293,6 +314,7 @@ public class RTCPeerConnection extends EventTarget {
    * When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate">RTCPeerConnection.addIceCandidate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate">The definition of 'RTCPeerConnection.addIceCandidate()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> addIceCandidate();
@@ -301,6 +323,7 @@ public class RTCPeerConnection extends EventTarget {
    * When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate">RTCPeerConnection.addIceCandidate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate">The definition of 'RTCPeerConnection.addIceCandidate()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> addIceCandidate(@Nonnull RTCIceCandidateInit candidate,
@@ -311,6 +334,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.close() method closes the current peer connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/close">RTCPeerConnection.close - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-close">The definition of 'RTCPeerConnection.close()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void close();
 
@@ -318,6 +342,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createAnswer() method on the RTCPeerConnection interface creates an SDP answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. The answer contains information about any media already attached to the session, codecs and options supported by the browser, and any ICE candidates already gathered. The answer is delivered to the returned Promise, and should then be sent to the source of the offer to continue the negotiation process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer">RTCPeerConnection.createAnswer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer">The definition of 'createAnswer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<RTCSessionDescriptionInit> createAnswer(@Nonnull RTCAnswerOptions options);
@@ -326,6 +351,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createAnswer() method on the RTCPeerConnection interface creates an SDP answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. The answer contains information about any media already attached to the session, codecs and options supported by the browser, and any ICE candidates already gathered. The answer is delivered to the returned Promise, and should then be sent to the source of the offer to continue the negotiation process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer">RTCPeerConnection.createAnswer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer">The definition of 'createAnswer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<RTCSessionDescriptionInit> createAnswer();
@@ -334,6 +360,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createAnswer() method on the RTCPeerConnection interface creates an SDP answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. The answer contains information about any media already attached to the session, codecs and options supported by the browser, and any ICE candidates already gathered. The answer is delivered to the returned Promise, and should then be sent to the source of the offer to continue the negotiation process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer">RTCPeerConnection.createAnswer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer">The definition of 'createAnswer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> createAnswer(@Nonnull RTCSessionDescriptionCallback successCallback,
@@ -343,6 +370,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">The definition of 'createOffer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<RTCSessionDescriptionInit> createOffer(@Nonnull RTCOfferOptions options);
@@ -351,6 +379,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">The definition of 'createOffer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<RTCSessionDescriptionInit> createOffer();
@@ -359,6 +388,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">The definition of 'createOffer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> createOffer(@Nonnull RTCSessionDescriptionCallback successCallback,
@@ -368,6 +398,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">The definition of 'createOffer()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> createOffer(@Nonnull RTCSessionDescriptionCallback successCallback,
@@ -377,6 +408,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.getConfiguration() method returns an RTCConfiguration object which indicates the current configuration of the RTCPeerConnection on which the method is called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration">RTCPeerConnection.getConfiguration - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-getconfiguration">The definition of 'getConfiguration()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native RTCConfiguration getConfiguration();
@@ -385,6 +417,7 @@ public class RTCPeerConnection extends EventTarget {
    * The WebRTC API's RTCPeerConnection interface offers the restartIce() method to allow a web application to easily request that ICE candidate gathering be redone on both ends of the connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/restartIce">RTCPeerConnection.restartIce - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-restartice">The definition of 'RTCPeerConnection.restartIce()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void restartIce();
 
@@ -392,6 +425,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.setConfiguration() method sets the current configuration of the RTCPeerConnection based on the values included in the specified RTCConfiguration object. This lets you change the ICE servers used by the connection and which transport policies to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setConfiguration">RTCPeerConnection.setConfiguration - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-setconfiguration">The definition of 'setConfiguration()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void setConfiguration(@Nonnull RTCConfiguration configuration);
 
@@ -399,6 +433,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.setConfiguration() method sets the current configuration of the RTCPeerConnection based on the values included in the specified RTCConfiguration object. This lets you change the ICE servers used by the connection and which transport policies to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setConfiguration">RTCPeerConnection.setConfiguration - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-setconfiguration">The definition of 'setConfiguration()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void setConfiguration();
 
@@ -406,6 +441,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method setLocalDescription() changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">The definition of 'RTCPeerConnection.setLocalDescription()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> setLocalDescription(
@@ -415,6 +451,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method setLocalDescription() changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">The definition of 'RTCPeerConnection.setLocalDescription()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> setLocalDescription();
@@ -423,6 +460,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method setLocalDescription() changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">The definition of 'RTCPeerConnection.setLocalDescription()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> setLocalDescription(
@@ -433,6 +471,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method setLocalDescription() changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">The definition of 'RTCPeerConnection.setLocalDescription()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> setLocalDescription(
@@ -442,6 +481,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method setRemoteDescription() sets the specified session description as the remote peer's current offer or answer. The description specifies the properties of the remote end of the connection, including the media format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription">RTCPeerConnection.setRemoteDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setremotedescription">The definition of 'RTCPeerConnection.setRemoteDescription()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> setRemoteDescription(@Nonnull RTCSessionDescriptionInit description);
@@ -450,6 +490,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method setRemoteDescription() sets the specified session description as the remote peer's current offer or answer. The description specifies the properties of the remote end of the connection, including the media format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription">RTCPeerConnection.setRemoteDescription - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setremotedescription">The definition of 'RTCPeerConnection.setRemoteDescription()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<Void> setRemoteDescription(@Nonnull RTCSessionDescriptionInit description,
@@ -460,6 +501,7 @@ public class RTCPeerConnection extends EventTarget {
    * The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate">RTCPeerConnection.generateCertificate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">The definition of 'RTCPeerConnection.generateCertificate()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public static native Promise<RTCCertificate> generateCertificate(
@@ -469,6 +511,7 @@ public class RTCPeerConnection extends EventTarget {
    * The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate">RTCPeerConnection.generateCertificate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">The definition of 'RTCPeerConnection.generateCertificate()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public static native Promise<RTCCertificate> generateCertificate(@Nonnull Object keygenAlgorithm);
@@ -477,6 +520,7 @@ public class RTCPeerConnection extends EventTarget {
    * The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate">RTCPeerConnection.generateCertificate - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">The definition of 'RTCPeerConnection.generateCertificate()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public static native Promise<RTCCertificate> generateCertificate(@Nonnull String keygenAlgorithm);
@@ -485,6 +529,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method addTrack() adds a new media track to the set of tracks which will be transmitted to the other peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTrack">RTCPeerConnection.addTrack - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-addtrack">The definition of 'RTCPeerConnection.addTrack()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native RTCRtpSender addTrack(@Nonnull MediaStreamTrack track,
@@ -508,6 +553,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.getReceivers() method returns an array of RTCRtpReceiver objects, each of which represents one RTP receiver. Each RTP receiver manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getReceivers">RTCPeerConnection.getReceivers - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-getreceivers">The definition of 'RTCPeerConnection.getReceivers()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native JsArray<RTCRtpReceiver> getReceivers();
@@ -516,6 +562,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method getSenders() returns an array of RTCRtpSender objects, each of which represents the RTP sender responsible for transmitting one track's data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders">RTCPeerConnection.getSenders - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-getsenders">The definition of 'RTCPeerConnection.getSenders()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native JsArray<RTCRtpSender> getSenders();
@@ -524,6 +571,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection interface's getTransceivers() method returns a list of the RTCRtpTransceiver objects being used to send and receive data on the connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers">RTCPeerConnection.getTransceivers - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-gettransceivers">The definition of 'RTCPeerConnection.getTransceivers()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native JsArray<RTCRtpTransceiver> getTransceivers();
@@ -532,6 +580,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.removeTrack() method tells the local end of the connection to stop sending media from the specified track, without actually removing the corresponding RTCRtpSender from the list of senders as reported by RTCPeerConnection.getSenders().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeTrack">RTCPeerConnection.removeTrack - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-removetrack">The definition of 'RTCPeerConnection.removeTrack()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   public native void removeTrack(@Nonnull RTCRtpSender sender);
 
@@ -539,6 +588,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createDataChannel() method on the RTCPeerConnection interface creates a new channel linked with the remote peer, over which any kind of data may be transmitted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel">RTCPeerConnection.createDataChannel - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-createdatachannel">The definition of 'createDataChannel()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native RTCDataChannel createDataChannel(@Nonnull String label,
@@ -548,6 +598,7 @@ public class RTCPeerConnection extends EventTarget {
    * The createDataChannel() method on the RTCPeerConnection interface creates a new channel linked with the remote peer, over which any kind of data may be transmitted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel">RTCPeerConnection.createDataChannel - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-createdatachannel">The definition of 'createDataChannel()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native RTCDataChannel createDataChannel(@Nonnull String label);
@@ -556,6 +607,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method getStats() returns a promise which resolves with data providing statistics about either the overall connection or about the specified MediaStreamTrack.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats">RTCPeerConnection.getStats - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-getStats-Promise-RTCStatsReport--MediaStreamTrack-selector">The definition of 'RTCPeerConnection.getStats()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<RTCStatsReport> getStats(@Nullable MediaStreamTrack selector);
@@ -564,6 +616,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection method getStats() returns a promise which resolves with data providing statistics about either the overall connection or about the specified MediaStreamTrack.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats">RTCPeerConnection.getStats - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-getStats-Promise-RTCStatsReport--MediaStreamTrack-selector">The definition of 'RTCPeerConnection.getStats()' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @Nonnull
   public native Promise<RTCStatsReport> getStats();
@@ -572,6 +625,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not &quot;closed&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion">RTCPeerConnection.getIdentityAssertion - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-identity/#dfn-getidentityassertion">The definition of 'RTCPeerConnection.getIdentityAssertion()' in Identity for WebRTC.</a>
    */
   @Nonnull
   public native Promise<String> getIdentityAssertion();
@@ -580,6 +634,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider">RTCPeerConnection.setIdentityProvider - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-identity/#dfn-setidentityprovider">The definition of 'RTCPeerConnection.setIdentityProvider()' in Identity for WebRTC.</a>
    */
   public native void setIdentityProvider(@Nonnull String provider,
       @Nonnull RTCIdentityProviderOptions options);
@@ -588,6 +643,7 @@ public class RTCPeerConnection extends EventTarget {
    * The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider">RTCPeerConnection.setIdentityProvider - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-identity/#dfn-setidentityprovider">The definition of 'RTCPeerConnection.setIdentityProvider()' in Identity for WebRTC.</a>
    */
   public native void setIdentityProvider(@Nonnull String provider);
 

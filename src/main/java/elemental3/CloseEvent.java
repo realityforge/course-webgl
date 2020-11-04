@@ -22,6 +22,7 @@ public class CloseEvent extends Event {
    * The CloseEvent() constructor creates a new CloseEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent">CloseEvent.CloseEvent - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#closeevent">The definition of 'CloseEvent()' in HTML Living Standard.</a>
    */
   public CloseEvent(@Nonnull final String type, @Nonnull final CloseEventInit eventInitDict) {
     super( null );
@@ -31,6 +32,7 @@ public class CloseEvent extends Event {
    * The CloseEvent() constructor creates a new CloseEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent">CloseEvent.CloseEvent - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#closeevent">The definition of 'CloseEvent()' in HTML Living Standard.</a>
    */
   public CloseEvent(@Nonnull final String type) {
     super( null );

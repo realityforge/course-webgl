@@ -9,6 +9,7 @@ import jsinterop.annotations.JsType;
  * The Path2D interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D">Path2D - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#path2d-objects">The definition of 'Path2D' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,6 +22,7 @@ public class Path2D {
    * The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D">Path2D.Path2D - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-path2d">The definition of 'Path2D()' in HTML Living Standard.</a>
    */
   public Path2D(@Nonnull final Path2D path) {
   }
@@ -29,6 +31,7 @@ public class Path2D {
    * The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D">Path2D.Path2D - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-path2d">The definition of 'Path2D()' in HTML Living Standard.</a>
    */
   public Path2D(@Nonnull final String path) {
   }
@@ -37,6 +40,7 @@ public class Path2D {
    * The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D">Path2D.Path2D - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-path2d">The definition of 'Path2D()' in HTML Living Standard.</a>
    */
   public Path2D() {
   }
@@ -45,6 +49,7 @@ public class Path2D {
    * The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/addPath">Path2D.addPath - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-path2d-addpath">The definition of 'Path2D.addPath()' in HTML Living Standard.</a>
    */
   public native void addPath(@Nonnull Path2D path, @Nonnull DOMMatrix2DInit transform);
 
@@ -52,6 +57,7 @@ public class Path2D {
    * The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/addPath">Path2D.addPath - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-path2d-addpath">The definition of 'Path2D.addPath()' in HTML Living Standard.</a>
    */
   public native void addPath(@Nonnull Path2D path);
 

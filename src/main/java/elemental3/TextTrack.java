@@ -14,6 +14,7 @@ import jsinterop.base.Js;
  * This interface also inherits properties from EventTarget.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack">TextTrack - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#texttrack">The definition of 'TextTrack' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,6 +27,7 @@ public class TextTrack extends EventTarget {
    * The TextTrack interface's mode property is a string specifying and controlling the text track's mode: disabled, hidden, or showing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/mode">TextTrack.mode - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttrack-mode">The definition of 'mode' in HTML Living Standard.</a>
    */
   @Nonnull
   @TextTrackMode

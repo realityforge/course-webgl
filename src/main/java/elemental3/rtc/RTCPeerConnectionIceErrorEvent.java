@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The RTCPeerConnectionIceErrorEvent interface&mdash;based upon the Event interface&mdash;provides details pertaining to an ICE error announced by sending an icecandidateerror event to the RTCPeerConnection object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent">RTCPeerConnectionIceErrorEvent - MDN</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceerrorevent">The definition of 'RTCPeerConnectionIceErrorEvent' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,6 +30,7 @@ public class RTCPeerConnectionIceErrorEvent extends Event {
    * The RTCPeerConnectionIceErrorEvent property address is a string which indicates the local IP address being used to communicate with the STUN or TURN server during negotiations. The error which occurred involved this address.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent/address">RTCPeerConnectionIceErrorEvent.address - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceerrorevent-address">The definition of 'RTCPeerConnectionIceErrorEvent.address' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
    */
   @JsProperty(
       name = "address"
