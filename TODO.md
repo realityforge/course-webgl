@@ -11,6 +11,8 @@
 
 * Reimplement `Matrix4d` in vecmath
 
+* Implement post processing similar to https://github.com/vanruesc/postprocessing
+
 * Add flags to attributes to determine whether they need to be uploaded and clear flag on next upload.
 
 * Add orbit controls either by looking at `THREE.OrbitControls` or a-frame, or x, or y...
