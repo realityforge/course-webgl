@@ -16,6 +16,7 @@ import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 
 public final class Main
@@ -41,16 +42,34 @@ public final class Main
     "in vec2 v_uv;\n" +
     "out vec4 o_color;\n" +
     "uniform sampler2D u_textureData;\n" +
+    "uniform sampler2D u_palette;\n" +
 
     "void main()\n" +
     "{\n" +
-    "  vec3 color = texture(u_textureData, v_uv).rgb;\n" +
-    "  o_color = vec4(color, 1.0);" +
+    "  vec4 color = texture(u_textureData, v_uv);\n" +
+
+    // We avoid rounding errors
+    "  color = floor(256.0 * color - vec4(0.01 / 256.0, 0.0, 0.0, 0.0)) / 256.0;\n" +
+    "  color = clamp(color, vec4(0.0, 0.0, 0.0, 0.0), vec4(1.0, 1.0, 1.0, 1.0));\n" +
+
+    // Get the index of the sub-square of the palette
+    "  float blueBlock = floor(color.b * 256.0);\n" +
+
+    // x and y index of the sub-square of the palette
+    "  float yBlue = floor(blueBlock / 16.0) / 16.0;\n" +
+    "  float xBlue = floor( (blueBlock - yBlue * 256.0) / 16.0) / 16.0;\n" +
+
+    // uv coordinate of the color "color" on the palette
+    "  vec2 paletteUv = vec2(color.r / 16.0 + yBlue, 1.0 - color.g / 16.0 - xBlue);\n" +
+
+    // Lookup color in palette
+    "  o_color = texture(u_palette, paletteUv);\n" +
     "}\n";
   private Mesh _mesh;
   private WebGLTexture _texture;
   private HTMLVideoElement _video;
   private double _lastFrameTime;
+  private WebGLTexture _palette;
 
   @Override
   public void onModuleLoad()
@@ -87,7 +106,14 @@ public final class Main
                     new Attribute( new Float32Buffer( new Float32Array( uvData ), 2 ) ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
-      //GL.loadTexture( gl, "img/4KSample.jpg", true ).thenAccept( texture -> _texture = texture );
+      GL.loadImage( "assets/palette_modified.jpg" )
+        .thenAccept( image -> _palette = GL.prepareTexture( gl,
+                                                            image,
+                                                            false,
+                                                            WebGL2RenderingContext.NEAREST,
+                                                            WebGL2RenderingContext.NEAREST,
+                                                            WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                                            WebGL2RenderingContext.CLAMP_TO_EDGE ) );
       final WebGLTexture texture = gl.createTexture();
       assert null != texture;
       gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
@@ -155,7 +181,7 @@ public final class Main
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
       gl.depthFunc( WebGL2RenderingContext.LEQUAL );
 
-      _mesh.render( _texture );
+      _mesh.render( _texture, _palette );
       gl.flush();
     } );
   }

@@ -14,6 +14,8 @@ final class Material
   private final WebGLProgram _program;
   @Nonnull
   private final WebGLUniformLocation _textureLocation;
+  @Nonnull
+  private final WebGLUniformLocation _paletteLocation;
 
   Material( @Nonnull final WebGL2RenderingContext gl,
             @GLSL @Nonnull final String vertexShaderSource,
@@ -28,6 +30,7 @@ final class Material
     assert null != program;
     _program = program;
     _textureLocation = GL.getUniformLocation( gl, _program, "u_textureData" );
+    _paletteLocation = GL.getUniformLocation( gl, _program, "u_palette" );
   }
 
   @Nonnull
@@ -40,5 +43,11 @@ final class Material
   public WebGLUniformLocation getTextureLocation()
   {
     return _textureLocation;
+  }
+
+  @Nonnull
+  public WebGLUniformLocation getPaletteLocation()
+  {
+    return _paletteLocation;
   }
 }

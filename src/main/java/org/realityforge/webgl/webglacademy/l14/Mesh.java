@@ -22,7 +22,7 @@ final class Mesh
     _material = Objects.requireNonNull( material );
   }
 
-  void render( @Nonnull final WebGLTexture texture )
+  void render( @Nonnull final WebGLTexture texture, @Nonnull final WebGLTexture palette )
   {
     final AppState appState = AppState.get();
     appState.useProgram( _material.getProgram() );
@@ -31,6 +31,10 @@ final class Mesh
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
     gl.uniform1i( _material.getTextureLocation(), 0 );
+
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE1 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, palette );
+    gl.uniform1i( _material.getPaletteLocation(), 1 );
 
     _geometry.draw();
   }
