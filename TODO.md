@@ -17,8 +17,6 @@
 
 * Add orbit controls either by looking at `THREE.OrbitControls` or a-frame, or x, or y...
 
-* Complete the `Learn GLSL Shaders from Scratch` udemy course
-
 * Start experimenting with the lessons on `WebGL Academy`
 
 * Port [quake2-gwt](https://github.com/treblereel/quake2-gwt-port)
