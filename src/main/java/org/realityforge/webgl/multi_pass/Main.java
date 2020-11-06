@@ -3,6 +3,7 @@ package org.realityforge.webgl.multi_pass;
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Document;
 import elemental3.Global;
+import elemental3.GlobalWindow;
 import elemental3.HTMLCanvasElement;
 import elemental3.KeyboardEvent;
 import elemental3.gl.WebGL2RenderingContext;
@@ -58,7 +59,7 @@ public final class Main
       _lightMesh = CubeTemplate.createLightCube( gl );
     } );
 
-    final Global global = Global.globalThis();
+    final GlobalWindow global = Global.globalThis();
     final Document document = global.document();
     document.addKeydownListener( this::onKeyDown );
     document.addKeyupListener( this::onKeyUp );
