@@ -70,8 +70,8 @@ public class XRSystem extends EventTarget {
 
   @JsOverlay
   public final void addDevicechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "devicechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "devicechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -87,8 +87,8 @@ public class XRSystem extends EventTarget {
 
   @JsOverlay
   public final void removeDevicechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "devicechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "devicechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

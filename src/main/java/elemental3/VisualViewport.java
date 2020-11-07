@@ -118,8 +118,8 @@ public class VisualViewport extends EventTarget {
 
   @JsOverlay
   public final void addResizeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "resize", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "resize", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -135,8 +135,8 @@ public class VisualViewport extends EventTarget {
 
   @JsOverlay
   public final void removeResizeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "resize", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "resize", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -152,8 +152,8 @@ public class VisualViewport extends EventTarget {
 
   @JsOverlay
   public final void addScrollListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "scroll", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "scroll", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -169,8 +169,8 @@ public class VisualViewport extends EventTarget {
 
   @JsOverlay
   public final void removeScrollListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "scroll", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "scroll", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

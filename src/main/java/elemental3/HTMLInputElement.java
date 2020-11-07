@@ -297,8 +297,8 @@ public class HTMLInputElement extends HTMLElement {
 
   @JsOverlay
   public final void addSearchListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "search", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "search", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -314,8 +314,8 @@ public class HTMLInputElement extends HTMLElement {
 
   @JsOverlay
   public final void removeSearchListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "search", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "search", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

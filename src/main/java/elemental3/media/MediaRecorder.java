@@ -208,8 +208,8 @@ public class MediaRecorder extends EventTarget {
 
   @JsOverlay
   public final void addErrorListener(@Nonnull final MediaRecorderErrorEventListener callback,
-      final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -225,8 +225,8 @@ public class MediaRecorder extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final MediaRecorderErrorEventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

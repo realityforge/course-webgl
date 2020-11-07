@@ -1032,8 +1032,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addCancelListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "cancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "cancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1049,8 +1049,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeCancelListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "cancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "cancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1066,8 +1066,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addFullscreenchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "fullscreenchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "fullscreenchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1083,8 +1083,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeFullscreenchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "fullscreenchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "fullscreenchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1100,8 +1100,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addFullscreenerrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "fullscreenerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "fullscreenerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1117,8 +1117,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeFullscreenerrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "fullscreenerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "fullscreenerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1134,8 +1134,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addScrollListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "scroll", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "scroll", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1151,8 +1151,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeScrollListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "scroll", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "scroll", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1167,8 +1167,9 @@ public class Element extends Node {
   }
 
   @JsOverlay
-  public final void addShowListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "show", Js.cast( callback ), options );
+  public final void addShowListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "show", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1184,8 +1185,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeShowListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "show", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "show", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1201,8 +1202,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addDOMActivateListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "DOMActivate", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "DOMActivate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1218,8 +1219,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeDOMActivateListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "DOMActivate", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "DOMActivate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1235,8 +1236,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addAuxclickListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "auxclick", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "auxclick", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1252,8 +1253,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeAuxclickListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "auxclick", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "auxclick", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1269,8 +1270,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addBlurListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    addEventListener( "blur", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "blur", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1286,8 +1287,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeBlurListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    removeEventListener( "blur", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "blur", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1303,8 +1304,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addClickListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "click", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "click", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1320,8 +1321,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeClickListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "click", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "click", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1337,8 +1338,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addCompositionendListener(@Nonnull final CompositionEventListener callback,
-      final boolean options) {
-    addEventListener( "compositionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "compositionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1354,8 +1355,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeCompositionendListener(@Nonnull final CompositionEventListener callback,
-      final boolean options) {
-    removeEventListener( "compositionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "compositionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1371,8 +1372,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addCompositionstartListener(@Nonnull final CompositionEventListener callback,
-      final boolean options) {
-    addEventListener( "compositionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "compositionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1388,8 +1389,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeCompositionstartListener(@Nonnull final CompositionEventListener callback,
-      final boolean options) {
-    removeEventListener( "compositionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "compositionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1406,8 +1407,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addCompositionupdateListener(@Nonnull final CompositionEventListener callback,
-      final boolean options) {
-    addEventListener( "compositionupdate", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "compositionupdate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1424,8 +1425,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeCompositionupdateListener(
-      @Nonnull final CompositionEventListener callback, final boolean options) {
-    removeEventListener( "compositionupdate", Js.cast( callback ), options );
+      @Nonnull final CompositionEventListener callback, final boolean useCapture) {
+    removeEventListener( "compositionupdate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1442,8 +1443,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addContextmenuListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "contextmenu", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "contextmenu", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1459,8 +1460,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeContextmenuListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "contextmenu", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "contextmenu", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1476,8 +1477,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addCopyListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "copy", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "copy", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1493,8 +1494,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeCopyListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "copy", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "copy", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1510,8 +1511,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addCutListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "cut", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "cut", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1527,8 +1528,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeCutListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "cut", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "cut", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1544,8 +1545,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addDblclickListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "dblclick", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dblclick", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1561,8 +1562,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeDblclickListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "dblclick", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dblclick", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1578,8 +1579,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addFocusListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    addEventListener( "focus", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "focus", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1595,8 +1596,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeFocusListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    removeEventListener( "focus", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "focus", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1612,8 +1613,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addFocusinListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    addEventListener( "focusin", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "focusin", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1629,8 +1630,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeFocusinListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    removeEventListener( "focusin", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "focusin", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1646,8 +1647,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addFocusoutListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    addEventListener( "focusout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "focusout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1663,8 +1664,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeFocusoutListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    removeEventListener( "focusout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "focusout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1680,8 +1681,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMousedownListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mousedown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mousedown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1697,8 +1698,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMousedownListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mousedown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mousedown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1714,8 +1715,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMouseenterListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mouseenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mouseenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1731,8 +1732,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMouseenterListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mouseenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mouseenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1748,8 +1749,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMouseleaveListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mouseleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mouseleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1765,8 +1766,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMouseleaveListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mouseleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mouseleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1782,8 +1783,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMousemoveListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mousemove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mousemove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1799,8 +1800,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMousemoveListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mousemove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mousemove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1816,8 +1817,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMouseoutListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mouseout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mouseout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1833,8 +1834,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMouseoutListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mouseout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mouseout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1850,8 +1851,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMouseoverListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mouseover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mouseover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1867,8 +1868,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMouseoverListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mouseover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mouseover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1884,8 +1885,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addMouseupListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "mouseup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mouseup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1901,8 +1902,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeMouseupListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "mouseup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mouseup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1918,8 +1919,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addPasteListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "paste", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "paste", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1935,8 +1936,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removePasteListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "paste", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "paste", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1952,8 +1953,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addTouchcancelListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1969,8 +1970,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeTouchcancelListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1986,8 +1987,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addTouchendListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2003,8 +2004,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeTouchendListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2020,8 +2021,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addTouchmoveListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchmove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchmove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2037,8 +2038,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeTouchmoveListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchmove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchmove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2054,8 +2055,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addTouchstartListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2071,8 +2072,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeTouchstartListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2088,8 +2089,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addWebkitmouseforcechangedListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "webkitmouseforcechanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "webkitmouseforcechanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2105,8 +2106,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeWebkitmouseforcechangedListener(
-      @Nonnull final MouseEventListener callback, final boolean options) {
-    removeEventListener( "webkitmouseforcechanged", Js.cast( callback ), options );
+      @Nonnull final MouseEventListener callback, final boolean useCapture) {
+    removeEventListener( "webkitmouseforcechanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2123,8 +2124,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addWebkitmouseforcedownListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "webkitmouseforcedown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "webkitmouseforcedown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2140,8 +2141,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeWebkitmouseforcedownListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "webkitmouseforcedown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "webkitmouseforcedown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2157,8 +2158,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addWebkitmouseforceupListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "webkitmouseforceup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "webkitmouseforceup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2174,8 +2175,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeWebkitmouseforceupListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    removeEventListener( "webkitmouseforceup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "webkitmouseforceup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2191,8 +2192,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addWebkitmouseforcewillbeginListener(@Nonnull final MouseEventListener callback,
-      final boolean options) {
-    addEventListener( "webkitmouseforcewillbegin", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "webkitmouseforcewillbegin", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2209,8 +2210,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeWebkitmouseforcewillbeginListener(
-      @Nonnull final MouseEventListener callback, final boolean options) {
-    removeEventListener( "webkitmouseforcewillbegin", Js.cast( callback ), options );
+      @Nonnull final MouseEventListener callback, final boolean useCapture) {
+    removeEventListener( "webkitmouseforcewillbegin", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2227,8 +2228,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void addWheelListener(@Nonnull final WheelEventListener callback,
-      final boolean options) {
-    addEventListener( "wheel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "wheel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2244,8 +2245,8 @@ public class Element extends Node {
 
   @JsOverlay
   public final void removeWheelListener(@Nonnull final WheelEventListener callback,
-      final boolean options) {
-    removeEventListener( "wheel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "wheel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

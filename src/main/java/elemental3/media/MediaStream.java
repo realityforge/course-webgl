@@ -170,8 +170,8 @@ public class MediaStream extends EventTarget {
 
   @JsOverlay
   public final void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
-      final boolean options) {
-    addEventListener( "addtrack", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "addtrack", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -187,8 +187,8 @@ public class MediaStream extends EventTarget {
 
   @JsOverlay
   public final void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
-      final boolean options) {
-    removeEventListener( "addtrack", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "addtrack", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -204,8 +204,8 @@ public class MediaStream extends EventTarget {
 
   @JsOverlay
   public final void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
-      final boolean options) {
-    addEventListener( "removetrack", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "removetrack", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -221,8 +221,8 @@ public class MediaStream extends EventTarget {
 
   @JsOverlay
   public final void removeRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
-      final boolean options) {
-    removeEventListener( "removetrack", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "removetrack", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

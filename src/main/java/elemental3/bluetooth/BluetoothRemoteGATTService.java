@@ -203,8 +203,8 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsOverlay
   public final void addServiceaddedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "serviceadded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "serviceadded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -220,8 +220,8 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsOverlay
   public final void removeServiceaddedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "serviceadded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "serviceadded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -237,8 +237,8 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsOverlay
   public final void addServicechangedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "servicechanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "servicechanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -254,8 +254,8 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsOverlay
   public final void removeServicechangedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "servicechanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "servicechanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -271,8 +271,8 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsOverlay
   public final void addServiceremovedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "serviceremoved", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "serviceremoved", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -288,8 +288,8 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsOverlay
   public final void removeServiceremovedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "serviceremoved", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "serviceremoved", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

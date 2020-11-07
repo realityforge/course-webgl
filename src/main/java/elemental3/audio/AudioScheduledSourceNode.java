@@ -76,8 +76,9 @@ public class AudioScheduledSourceNode extends AudioNode {
   }
 
   @JsOverlay
-  public final void addEndedListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "ended", Js.cast( callback ), options );
+  public final void addEndedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "ended", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -93,8 +94,8 @@ public class AudioScheduledSourceNode extends AudioNode {
 
   @JsOverlay
   public final void removeEndedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "ended", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "ended", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

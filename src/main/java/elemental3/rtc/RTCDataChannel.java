@@ -357,8 +357,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void addErrorListener(@Nonnull final RTCErrorEventListener callback,
-      final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -374,8 +374,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final RTCErrorEventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -391,8 +391,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void addOpenListener(@Nonnull final RTCDataChannelEventListener callback,
-      final boolean options) {
-    addEventListener( "open", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "open", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -408,8 +408,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void removeOpenListener(@Nonnull final RTCDataChannelEventListener callback,
-      final boolean options) {
-    removeEventListener( "open", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "open", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -425,8 +425,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void addBufferedamountlowListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "bufferedamountlow", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "bufferedamountlow", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -442,8 +442,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void removeBufferedamountlowListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "bufferedamountlow", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "bufferedamountlow", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -458,8 +458,9 @@ public class RTCDataChannel extends EventTarget {
   }
 
   @JsOverlay
-  public final void addCloseListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "close", Js.cast( callback ), options );
+  public final void addCloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -475,8 +476,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void removeCloseListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "close", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -492,8 +493,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -509,8 +510,8 @@ public class RTCDataChannel extends EventTarget {
 
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

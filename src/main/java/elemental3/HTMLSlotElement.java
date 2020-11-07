@@ -77,8 +77,8 @@ public class HTMLSlotElement extends HTMLElement {
 
   @JsOverlay
   public final void addSlotchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "slotchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "slotchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -94,8 +94,8 @@ public class HTMLSlotElement extends HTMLElement {
 
   @JsOverlay
   public final void removeSlotchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "slotchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "slotchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

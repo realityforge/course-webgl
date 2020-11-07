@@ -655,8 +655,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
-      final boolean options) {
-    addEventListener( "datachannel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "datachannel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -672,8 +672,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
-      final boolean options) {
-    removeEventListener( "datachannel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "datachannel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -690,8 +690,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addIcecandidateListener(
-      @Nonnull final RTCPeerConnectionIceEventListener callback, final boolean options) {
-    addEventListener( "icecandidate", Js.cast( callback ), options );
+      @Nonnull final RTCPeerConnectionIceEventListener callback, final boolean useCapture) {
+    addEventListener( "icecandidate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -709,8 +709,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeIcecandidateListener(
-      @Nonnull final RTCPeerConnectionIceEventListener callback, final boolean options) {
-    removeEventListener( "icecandidate", Js.cast( callback ), options );
+      @Nonnull final RTCPeerConnectionIceEventListener callback, final boolean useCapture) {
+    removeEventListener( "icecandidate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -728,8 +728,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addIcecandidateerrorListener(
-      @Nonnull final RTCPeerConnectionIceErrorEventListener callback, final boolean options) {
-    addEventListener( "icecandidateerror", Js.cast( callback ), options );
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback, final boolean useCapture) {
+    addEventListener( "icecandidateerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -747,8 +747,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeIcecandidateerrorListener(
-      @Nonnull final RTCPeerConnectionIceErrorEventListener callback, final boolean options) {
-    removeEventListener( "icecandidateerror", Js.cast( callback ), options );
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback, final boolean useCapture) {
+    removeEventListener( "icecandidateerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -765,8 +765,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addTrackListener(@Nonnull final RTCTrackEventListener callback,
-      final boolean options) {
-    addEventListener( "track", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "track", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -782,8 +782,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeTrackListener(@Nonnull final RTCTrackEventListener callback,
-      final boolean options) {
-    removeEventListener( "track", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "track", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -799,8 +799,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addConnectionstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "connectionstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "connectionstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -816,8 +816,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeConnectionstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "connectionstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "connectionstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -833,8 +833,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addIceconnectionstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "iceconnectionstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "iceconnectionstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -850,8 +850,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeIceconnectionstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "iceconnectionstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "iceconnectionstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -867,8 +867,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addIcegatheringstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "icegatheringstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "icegatheringstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -884,8 +884,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeIcegatheringstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "icegatheringstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "icegatheringstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -901,8 +901,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addNegotiationneededListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "negotiationneeded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "negotiationneeded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -918,8 +918,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeNegotiationneededListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "negotiationneeded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "negotiationneeded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -935,8 +935,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addPeeridentityListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "peeridentity", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "peeridentity", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -952,8 +952,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removePeeridentityListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "peeridentity", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "peeridentity", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -969,8 +969,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void addSignalingstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "signalingstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "signalingstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -986,8 +986,8 @@ public class RTCPeerConnection extends EventTarget {
 
   @JsOverlay
   public final void removeSignalingstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "signalingstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "signalingstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

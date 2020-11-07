@@ -49,8 +49,8 @@ public class XRReferenceSpace extends XRSpace {
 
   @JsOverlay
   public final void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
-      final boolean options) {
-    addEventListener( "reset", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "reset", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -66,8 +66,8 @@ public class XRReferenceSpace extends XRSpace {
 
   @JsOverlay
   public final void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
-      final boolean options) {
-    removeEventListener( "reset", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "reset", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

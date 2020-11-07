@@ -33,8 +33,8 @@ public class HTMLDetailsElement extends HTMLElement {
 
   @JsOverlay
   public final void addToggleListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "toggle", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "toggle", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -50,8 +50,8 @@ public class HTMLDetailsElement extends HTMLElement {
 
   @JsOverlay
   public final void removeToggleListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "toggle", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "toggle", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

@@ -25,8 +25,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Atomics"
 )
-public final class Atomics {
-  private Atomics() {
+public final class AtomicsNamespace {
+  private AtomicsNamespace() {
   }
 
   /**

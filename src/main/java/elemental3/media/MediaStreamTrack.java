@@ -210,8 +210,9 @@ public class MediaStreamTrack extends EventTarget {
   }
 
   @JsOverlay
-  public final void addEndedListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "ended", Js.cast( callback ), options );
+  public final void addEndedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "ended", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -227,8 +228,8 @@ public class MediaStreamTrack extends EventTarget {
 
   @JsOverlay
   public final void removeEndedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "ended", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "ended", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -243,8 +244,9 @@ public class MediaStreamTrack extends EventTarget {
   }
 
   @JsOverlay
-  public final void addMuteListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "mute", Js.cast( callback ), options );
+  public final void addMuteListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "mute", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -260,8 +262,8 @@ public class MediaStreamTrack extends EventTarget {
 
   @JsOverlay
   public final void removeMuteListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "mute", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mute", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -277,8 +279,8 @@ public class MediaStreamTrack extends EventTarget {
 
   @JsOverlay
   public final void addUnmuteListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "unmute", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "unmute", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -294,8 +296,8 @@ public class MediaStreamTrack extends EventTarget {
 
   @JsOverlay
   public final void removeUnmuteListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "unmute", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "unmute", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

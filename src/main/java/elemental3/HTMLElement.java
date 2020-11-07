@@ -990,8 +990,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addAnimationcancelListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1007,8 +1007,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeAnimationcancelListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1024,8 +1024,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addAnimationendListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1041,8 +1041,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeAnimationendListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1058,8 +1058,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addAnimationiterationListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationiteration", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationiteration", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1075,8 +1075,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeAnimationiterationListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationiteration", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationiteration", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1093,8 +1093,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1110,8 +1110,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1127,8 +1127,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addBeforeinputListener(@Nonnull final InputEventListener callback,
-      final boolean options) {
-    addEventListener( "beforeinput", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "beforeinput", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1144,8 +1144,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeBeforeinputListener(@Nonnull final InputEventListener callback,
-      final boolean options) {
-    removeEventListener( "beforeinput", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "beforeinput", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1161,8 +1161,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addChangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "change", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "change", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1178,8 +1178,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeChangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "change", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "change", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1195,8 +1195,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addGotpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "gotpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "gotpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1212,8 +1212,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeGotpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "gotpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "gotpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1229,8 +1229,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addInputListener(@Nonnull final InputEventListener callback,
-      final boolean options) {
-    addEventListener( "input", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "input", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1246,8 +1246,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeInputListener(@Nonnull final InputEventListener callback,
-      final boolean options) {
-    removeEventListener( "input", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "input", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1263,8 +1263,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addInvalidListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "invalid", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "invalid", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1280,8 +1280,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeInvalidListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "invalid", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "invalid", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1297,8 +1297,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addLostpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "lostpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "lostpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1314,8 +1314,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeLostpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "lostpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "lostpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1331,8 +1331,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointercancelListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointercancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointercancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1348,8 +1348,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointercancelListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointercancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointercancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1365,8 +1365,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointerdownListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerdown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerdown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1382,8 +1382,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointerdownListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerdown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerdown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1399,8 +1399,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointerenterListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1416,8 +1416,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointerenterListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1433,8 +1433,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointerleaveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1450,8 +1450,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointerleaveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1467,8 +1467,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointermoveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointermove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointermove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1484,8 +1484,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointermoveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointermove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointermove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1501,8 +1501,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointeroutListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1518,8 +1518,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointeroutListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1535,8 +1535,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointeroverListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1552,8 +1552,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointeroverListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1569,8 +1569,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addPointerupListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1586,8 +1586,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removePointerupListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1603,8 +1603,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitioncancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitioncancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1620,8 +1620,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitioncancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitioncancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1638,8 +1638,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1655,8 +1655,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1672,8 +1672,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionrun", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1689,8 +1689,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionrun", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1706,8 +1706,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1723,8 +1723,8 @@ public class HTMLElement extends Element {
 
   @JsOverlay
   public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

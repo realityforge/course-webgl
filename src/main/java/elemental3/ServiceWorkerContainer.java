@@ -124,8 +124,8 @@ public class ServiceWorkerContainer extends EventTarget {
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -141,8 +141,8 @@ public class ServiceWorkerContainer extends EventTarget {
 
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

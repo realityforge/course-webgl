@@ -98,8 +98,8 @@ public class OfflineAudioContext extends BaseAudioContext {
 
   @JsOverlay
   public final void addCompleteListener(@Nonnull final OfflineAudioCompletionEventListener callback,
-      final boolean options) {
-    addEventListener( "complete", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "complete", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -117,8 +117,8 @@ public class OfflineAudioContext extends BaseAudioContext {
 
   @JsOverlay
   public final void removeCompleteListener(
-      @Nonnull final OfflineAudioCompletionEventListener callback, final boolean options) {
-    removeEventListener( "complete", Js.cast( callback ), options );
+      @Nonnull final OfflineAudioCompletionEventListener callback, final boolean useCapture) {
+    removeEventListener( "complete", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

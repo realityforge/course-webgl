@@ -86,8 +86,9 @@ public class HTMLDialogElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addCloseListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "close", Js.cast( callback ), options );
+  public final void addCloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -103,8 +104,8 @@ public class HTMLDialogElement extends HTMLElement {
 
   @JsOverlay
   public final void removeCloseListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "close", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

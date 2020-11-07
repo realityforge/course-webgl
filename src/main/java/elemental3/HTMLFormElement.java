@@ -194,8 +194,8 @@ public class HTMLFormElement extends HTMLElement {
 
   @JsOverlay
   public final void addFormdataListener(@Nonnull final FormDataEventListener callback,
-      final boolean options) {
-    addEventListener( "formdata", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "formdata", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -211,8 +211,8 @@ public class HTMLFormElement extends HTMLElement {
 
   @JsOverlay
   public final void removeFormdataListener(@Nonnull final FormDataEventListener callback,
-      final boolean options) {
-    removeEventListener( "formdata", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "formdata", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -228,8 +228,8 @@ public class HTMLFormElement extends HTMLElement {
 
   @JsOverlay
   public final void addSubmitListener(@Nonnull final SubmitEventListener callback,
-      final boolean options) {
-    addEventListener( "submit", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "submit", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -245,8 +245,8 @@ public class HTMLFormElement extends HTMLElement {
 
   @JsOverlay
   public final void removeSubmitListener(@Nonnull final SubmitEventListener callback,
-      final boolean options) {
-    removeEventListener( "submit", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "submit", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -261,8 +261,9 @@ public class HTMLFormElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addResetListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "reset", Js.cast( callback ), options );
+  public final void addResetListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "reset", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -278,8 +279,8 @@ public class HTMLFormElement extends HTMLElement {
 
   @JsOverlay
   public final void removeResetListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "reset", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "reset", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

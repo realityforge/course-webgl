@@ -100,8 +100,8 @@ public class TextTrack extends EventTarget {
 
   @JsOverlay
   public final void addCuechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "cuechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "cuechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -117,8 +117,8 @@ public class TextTrack extends EventTarget {
 
   @JsOverlay
   public final void removeCuechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "cuechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "cuechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

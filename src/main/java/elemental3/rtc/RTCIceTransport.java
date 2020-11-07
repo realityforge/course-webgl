@@ -163,8 +163,8 @@ public class RTCIceTransport extends EventTarget {
 
   @JsOverlay
   public final void addGatheringstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "gatheringstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "gatheringstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -180,8 +180,8 @@ public class RTCIceTransport extends EventTarget {
 
   @JsOverlay
   public final void removeGatheringstatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "gatheringstatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "gatheringstatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -197,8 +197,8 @@ public class RTCIceTransport extends EventTarget {
 
   @JsOverlay
   public final void addSelectedcandidatepairchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "selectedcandidatepairchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "selectedcandidatepairchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -214,8 +214,8 @@ public class RTCIceTransport extends EventTarget {
 
   @JsOverlay
   public final void removeSelectedcandidatepairchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "selectedcandidatepairchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "selectedcandidatepairchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -232,8 +232,8 @@ public class RTCIceTransport extends EventTarget {
 
   @JsOverlay
   public final void addStatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "statechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "statechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -249,8 +249,8 @@ public class RTCIceTransport extends EventTarget {
 
   @JsOverlay
   public final void removeStatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "statechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "statechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

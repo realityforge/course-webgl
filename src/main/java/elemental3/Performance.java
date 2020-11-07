@@ -192,8 +192,8 @@ public class Performance extends EventTarget {
 
   @JsOverlay
   public final void addResourcetimingbufferfullListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "resourcetimingbufferfull", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "resourcetimingbufferfull", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -209,8 +209,8 @@ public class Performance extends EventTarget {
 
   @JsOverlay
   public final void removeResourcetimingbufferfullListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "resourcetimingbufferfull", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "resourcetimingbufferfull", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

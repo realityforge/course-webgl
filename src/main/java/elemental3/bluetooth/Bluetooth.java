@@ -108,8 +108,8 @@ public class Bluetooth extends EventTarget {
 
   @JsOverlay
   public final void addAvailabilitychangedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "availabilitychanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "availabilitychanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -125,8 +125,8 @@ public class Bluetooth extends EventTarget {
 
   @JsOverlay
   public final void removeAvailabilitychangedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "availabilitychanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "availabilitychanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

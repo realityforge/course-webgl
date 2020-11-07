@@ -420,8 +420,9 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addAbortListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "abort", Js.cast( callback ), options );
+  public final void addAbortListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -437,8 +438,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeAbortListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "abort", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -454,8 +455,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addCanplayListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "canplay", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "canplay", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -471,8 +472,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeCanplayListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "canplay", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "canplay", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -488,8 +489,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addCanplaythroughListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "canplaythrough", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "canplaythrough", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -505,8 +506,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeCanplaythroughListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "canplaythrough", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "canplaythrough", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -522,8 +523,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addDurationchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "durationchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "durationchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -539,8 +540,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeDurationchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "durationchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "durationchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -556,8 +557,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addEmptiedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "emptied", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "emptied", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -573,8 +574,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeEmptiedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "emptied", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "emptied", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -589,8 +590,9 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addEndedListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "ended", Js.cast( callback ), options );
+  public final void addEndedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "ended", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -606,8 +608,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeEndedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "ended", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "ended", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -622,8 +624,9 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -639,8 +642,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -656,8 +659,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addLoadeddataListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "loadeddata", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "loadeddata", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -673,8 +676,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeLoadeddataListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "loadeddata", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "loadeddata", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -690,8 +693,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addLoadedmetadataListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "loadedmetadata", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "loadedmetadata", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -707,8 +710,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeLoadedmetadataListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "loadedmetadata", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "loadedmetadata", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -724,8 +727,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addLoadstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "loadstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "loadstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -741,8 +744,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeLoadstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "loadstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "loadstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -757,8 +760,9 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addPauseListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "pause", Js.cast( callback ), options );
+  public final void addPauseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pause", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -774,8 +778,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removePauseListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "pause", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pause", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -790,8 +794,9 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addPlayListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "play", Js.cast( callback ), options );
+  public final void addPlayListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "play", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -807,8 +812,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removePlayListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "play", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "play", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -824,8 +829,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addPlayingListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "playing", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "playing", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -841,8 +846,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removePlayingListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "playing", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "playing", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -858,8 +863,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addProgressListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "progress", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "progress", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -875,8 +880,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeProgressListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "progress", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "progress", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -892,8 +897,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addRatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "ratechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "ratechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -909,8 +914,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeRatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "ratechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "ratechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -926,8 +931,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addSeekedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "seeked", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "seeked", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -943,8 +948,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeSeekedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "seeked", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "seeked", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -960,8 +965,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addSeekingListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "seeking", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "seeking", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -977,8 +982,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeSeekingListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "seeking", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "seeking", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -994,8 +999,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addStalledListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "stalled", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "stalled", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1011,8 +1016,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeStalledListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "stalled", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "stalled", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1028,8 +1033,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addSuspendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "suspend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "suspend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1045,8 +1050,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeSuspendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "suspend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "suspend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1062,8 +1067,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addTimeupdateListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "timeupdate", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "timeupdate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1079,8 +1084,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeTimeupdateListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "timeupdate", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "timeupdate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1096,8 +1101,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addVolumechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "volumechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "volumechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1113,8 +1118,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeVolumechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "volumechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "volumechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1130,8 +1135,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void addWaitingListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "waiting", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "waiting", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1147,8 +1152,8 @@ public class HTMLMediaElement extends HTMLElement {
 
   @JsOverlay
   public final void removeWaitingListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "waiting", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "waiting", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

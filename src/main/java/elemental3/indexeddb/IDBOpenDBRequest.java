@@ -51,8 +51,8 @@ public class IDBOpenDBRequest extends IDBRequest {
 
   @JsOverlay
   public final void addBlockedListener(@Nonnull final IDBVersionChangeEventListener callback,
-      final boolean options) {
-    addEventListener( "blocked", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "blocked", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -68,8 +68,8 @@ public class IDBOpenDBRequest extends IDBRequest {
 
   @JsOverlay
   public final void removeBlockedListener(@Nonnull final IDBVersionChangeEventListener callback,
-      final boolean options) {
-    removeEventListener( "blocked", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "blocked", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -85,8 +85,8 @@ public class IDBOpenDBRequest extends IDBRequest {
 
   @JsOverlay
   public final void addUpgradeneededListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "upgradeneeded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "upgradeneeded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -102,8 +102,8 @@ public class IDBOpenDBRequest extends IDBRequest {
 
   @JsOverlay
   public final void removeUpgradeneededListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "upgradeneeded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "upgradeneeded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

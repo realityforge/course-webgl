@@ -2541,8 +2541,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addHashchangeListener(@Nonnull final HashChangeEventListener callback,
-      final boolean options) {
-    addEventListener( "hashchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "hashchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2558,8 +2558,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeHashchangeListener(@Nonnull final HashChangeEventListener callback,
-      final boolean options) {
-    removeEventListener( "hashchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "hashchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2575,8 +2575,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2592,8 +2592,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2609,8 +2609,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "messageerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "messageerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2626,8 +2626,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "messageerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "messageerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2643,8 +2643,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addPagehideListener(@Nonnull final PageTransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "pagehide", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pagehide", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2660,8 +2660,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removePagehideListener(@Nonnull final PageTransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "pagehide", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pagehide", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2677,8 +2677,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addPageshowListener(@Nonnull final PageTransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "pageshow", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pageshow", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2694,8 +2694,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removePageshowListener(@Nonnull final PageTransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "pageshow", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pageshow", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2712,8 +2712,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addRejectionhandledListener(
-      @Nonnull final PromiseRejectionEventListener callback, final boolean options) {
-    addEventListener( "rejectionhandled", Js.cast( callback ), options );
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    addEventListener( "rejectionhandled", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2731,8 +2731,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeRejectionhandledListener(
-      @Nonnull final PromiseRejectionEventListener callback, final boolean options) {
-    removeEventListener( "rejectionhandled", Js.cast( callback ), options );
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    removeEventListener( "rejectionhandled", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2749,8 +2749,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addStorageListener(@Nonnull final StorageEventListener callback,
-      final boolean options) {
-    addEventListener( "storage", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "storage", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2766,8 +2766,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeStorageListener(@Nonnull final StorageEventListener callback,
-      final boolean options) {
-    removeEventListener( "storage", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "storage", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2784,8 +2784,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addUnhandledrejectionListener(
-      @Nonnull final PromiseRejectionEventListener callback, final boolean options) {
-    addEventListener( "unhandledrejection", Js.cast( callback ), options );
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    addEventListener( "unhandledrejection", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2803,8 +2803,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeUnhandledrejectionListener(
-      @Nonnull final PromiseRejectionEventListener callback, final boolean options) {
-    removeEventListener( "unhandledrejection", Js.cast( callback ), options );
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    removeEventListener( "unhandledrejection", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2821,8 +2821,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2838,8 +2838,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2855,8 +2855,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addAfterprintListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "afterprint", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "afterprint", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2872,8 +2872,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeAfterprintListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "afterprint", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "afterprint", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2889,8 +2889,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addAnimationcancelListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2906,8 +2906,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeAnimationcancelListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2923,8 +2923,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addAnimationendListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2940,8 +2940,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeAnimationendListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2957,8 +2957,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addAnimationiterationListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationiteration", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationiteration", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2974,8 +2974,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeAnimationiterationListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationiteration", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationiteration", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2992,8 +2992,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3009,8 +3009,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3026,8 +3026,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addAppinstalledListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "appinstalled", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "appinstalled", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3043,8 +3043,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeAppinstalledListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "appinstalled", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "appinstalled", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3060,8 +3060,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addBeforeprintListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "beforeprint", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "beforeprint", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3077,8 +3077,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeBeforeprintListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "beforeprint", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "beforeprint", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3094,8 +3094,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addBeforeunloadListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "beforeunload", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "beforeunload", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3111,8 +3111,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeBeforeunloadListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "beforeunload", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "beforeunload", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3128,8 +3128,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addBlurListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    addEventListener( "blur", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "blur", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3145,8 +3145,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeBlurListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    removeEventListener( "blur", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "blur", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3162,8 +3162,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addClipboardchangeListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "clipboardchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "clipboardchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3179,8 +3179,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeClipboardchangeListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "clipboardchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "clipboardchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3196,8 +3196,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addCopyListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "copy", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "copy", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3213,8 +3213,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeCopyListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "copy", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "copy", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3230,8 +3230,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addCutListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "cut", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "cut", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3247,8 +3247,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeCutListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "cut", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "cut", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3264,8 +3264,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
-      final boolean options) {
-    addEventListener( "devicemotion", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "devicemotion", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3281,8 +3281,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
-      final boolean options) {
-    removeEventListener( "devicemotion", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "devicemotion", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3299,8 +3299,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addDeviceorientationListener(
-      @Nonnull final DeviceOrientationEventListener callback, final boolean options) {
-    addEventListener( "deviceorientation", Js.cast( callback ), options );
+      @Nonnull final DeviceOrientationEventListener callback, final boolean useCapture) {
+    addEventListener( "deviceorientation", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3318,8 +3318,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeDeviceorientationListener(
-      @Nonnull final DeviceOrientationEventListener callback, final boolean options) {
-    removeEventListener( "deviceorientation", Js.cast( callback ), options );
+      @Nonnull final DeviceOrientationEventListener callback, final boolean useCapture) {
+    removeEventListener( "deviceorientation", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3336,8 +3336,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addFocusListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    addEventListener( "focus", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "focus", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3353,8 +3353,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeFocusListener(@Nonnull final FocusEventListener callback,
-      final boolean options) {
-    removeEventListener( "focus", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "focus", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3370,8 +3370,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addGamepadconnectedListener(@Nonnull final GamepadEventListener callback,
-      final boolean options) {
-    addEventListener( "gamepadconnected", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "gamepadconnected", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3387,8 +3387,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeGamepadconnectedListener(@Nonnull final GamepadEventListener callback,
-      final boolean options) {
-    removeEventListener( "gamepadconnected", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "gamepadconnected", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3404,8 +3404,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback,
-      final boolean options) {
-    addEventListener( "gamepaddisconnected", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "gamepaddisconnected", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3421,8 +3421,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback,
-      final boolean options) {
-    removeEventListener( "gamepaddisconnected", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "gamepaddisconnected", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3439,8 +3439,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addLanguagechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "languagechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "languagechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3456,8 +3456,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeLanguagechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "languagechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "languagechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3472,8 +3472,9 @@ public class Window extends EventTarget {
   }
 
   @JsOverlay
-  public final void addLoadListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "load", Js.cast( callback ), options );
+  public final void addLoadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "load", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3489,8 +3490,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeLoadListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "load", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "load", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3506,8 +3507,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addOfflineListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "offline", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "offline", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3523,8 +3524,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeOfflineListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "offline", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "offline", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3540,8 +3541,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addOnlineListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "online", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "online", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3557,8 +3558,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeOnlineListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "online", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "online", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3574,8 +3575,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addOrientationchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "orientationchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "orientationchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3591,8 +3592,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeOrientationchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "orientationchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "orientationchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3608,8 +3609,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addPasteListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "paste", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "paste", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3625,8 +3626,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removePasteListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "paste", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "paste", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3642,8 +3643,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addResizeListener(@Nonnull final UIEventListener callback,
-      final boolean options) {
-    addEventListener( "resize", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "resize", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3659,8 +3660,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeResizeListener(@Nonnull final UIEventListener callback,
-      final boolean options) {
-    removeEventListener( "resize", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "resize", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3676,8 +3677,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitioncancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitioncancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3693,8 +3694,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitioncancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitioncancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3711,8 +3712,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3728,8 +3729,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3745,8 +3746,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionrun", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3762,8 +3763,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionrun", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3779,8 +3780,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3796,8 +3797,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3813,8 +3814,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void addUnloadListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "unload", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "unload", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3830,8 +3831,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   public final void removeUnloadListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "unload", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "unload", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

@@ -148,8 +148,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addBoundaryListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "boundary", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "boundary", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -165,8 +165,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeBoundaryListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "boundary", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "boundary", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -182,8 +182,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addEndListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "end", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "end", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -199,8 +199,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeEndListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "end", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "end", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -216,8 +216,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addErrorListener(@Nonnull final SpeechSynthesisErrorEventListener callback,
-      final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -233,8 +233,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final SpeechSynthesisErrorEventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -250,8 +250,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addMarkListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "mark", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "mark", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -267,8 +267,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeMarkListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "mark", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "mark", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -284,8 +284,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addPauseListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "pause", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pause", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -301,8 +301,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removePauseListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "pause", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pause", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -318,8 +318,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addResumeListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "resume", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "resume", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -335,8 +335,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeResumeListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "resume", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "resume", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -352,8 +352,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addStartListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "start", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "start", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -369,8 +369,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeStartListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "start", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "start", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

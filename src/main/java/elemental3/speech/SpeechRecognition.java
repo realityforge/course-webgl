@@ -187,8 +187,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback,
-      final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -204,8 +204,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -222,8 +222,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addNomatchListener(@Nonnull final SpeechRecognitionEventListener callback,
-      final boolean options) {
-    addEventListener( "nomatch", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "nomatch", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -239,8 +239,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeNomatchListener(@Nonnull final SpeechRecognitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "nomatch", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "nomatch", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -256,8 +256,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addResultListener(@Nonnull final SpeechRecognitionEventListener callback,
-      final boolean options) {
-    addEventListener( "result", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "result", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -273,8 +273,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeResultListener(@Nonnull final SpeechRecognitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "result", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "result", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -290,8 +290,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addAudioendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "audioend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "audioend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -307,8 +307,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeAudioendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "audioend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "audioend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -324,8 +324,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addAudiostartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "audiostart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "audiostart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -341,8 +341,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeAudiostartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "audiostart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "audiostart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -357,8 +357,9 @@ public class SpeechRecognition extends EventTarget {
   }
 
   @JsOverlay
-  public final void addEndListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "end", Js.cast( callback ), options );
+  public final void addEndListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "end", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -374,8 +375,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeEndListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "end", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "end", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -391,8 +392,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addSoundendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "soundend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "soundend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -408,8 +409,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeSoundendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "soundend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "soundend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -425,8 +426,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addSoundstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "soundstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "soundstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -442,8 +443,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeSoundstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "soundstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "soundstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -459,8 +460,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addSpeechendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "speechend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "speechend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -476,8 +477,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeSpeechendListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "speechend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "speechend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -493,8 +494,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void addSpeechstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "speechstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "speechstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -510,8 +511,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeSpeechstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "speechstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "speechstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -526,8 +527,9 @@ public class SpeechRecognition extends EventTarget {
   }
 
   @JsOverlay
-  public final void addStartListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "start", Js.cast( callback ), options );
+  public final void addStartListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "start", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -543,8 +545,8 @@ public class SpeechRecognition extends EventTarget {
 
   @JsOverlay
   public final void removeStartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "start", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "start", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

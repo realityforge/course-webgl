@@ -119,8 +119,8 @@ public class Worker extends EventTarget {
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -136,8 +136,8 @@ public class Worker extends EventTarget {
 
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -153,8 +153,8 @@ public class Worker extends EventTarget {
 
   @JsOverlay
   public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "messageerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "messageerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -170,8 +170,8 @@ public class Worker extends EventTarget {
 
   @JsOverlay
   public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "messageerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "messageerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

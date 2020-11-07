@@ -110,8 +110,9 @@ public class IDBRequest extends EventTarget {
   }
 
   @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -127,8 +128,8 @@ public class IDBRequest extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -144,8 +145,8 @@ public class IDBRequest extends EventTarget {
 
   @JsOverlay
   public final void addSuccessListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "success", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "success", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -161,8 +162,8 @@ public class IDBRequest extends EventTarget {
 
   @JsOverlay
   public final void removeSuccessListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "success", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "success", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

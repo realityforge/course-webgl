@@ -101,8 +101,8 @@ public class BluetoothDevice extends EventTarget {
 
   @JsOverlay
   public final void addAdvertisementreceivedListener(
-      @Nonnull final BluetoothAdvertisingEventListener callback, final boolean options) {
-    addEventListener( "advertisementreceived", Js.cast( callback ), options );
+      @Nonnull final BluetoothAdvertisingEventListener callback, final boolean useCapture) {
+    addEventListener( "advertisementreceived", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -120,8 +120,8 @@ public class BluetoothDevice extends EventTarget {
 
   @JsOverlay
   public final void removeAdvertisementreceivedListener(
-      @Nonnull final BluetoothAdvertisingEventListener callback, final boolean options) {
-    removeEventListener( "advertisementreceived", Js.cast( callback ), options );
+      @Nonnull final BluetoothAdvertisingEventListener callback, final boolean useCapture) {
+    removeEventListener( "advertisementreceived", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -138,8 +138,8 @@ public class BluetoothDevice extends EventTarget {
 
   @JsOverlay
   public final void addGattserverdisconnectedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "gattserverdisconnected", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "gattserverdisconnected", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -155,8 +155,8 @@ public class BluetoothDevice extends EventTarget {
 
   @JsOverlay
   public final void removeGattserverdisconnectedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "gattserverdisconnected", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "gattserverdisconnected", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

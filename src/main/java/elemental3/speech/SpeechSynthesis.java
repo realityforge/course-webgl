@@ -112,8 +112,8 @@ public class SpeechSynthesis extends EventTarget {
 
   @JsOverlay
   public final void addVoiceschangedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "voiceschanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "voiceschanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -129,8 +129,8 @@ public class SpeechSynthesis extends EventTarget {
 
   @JsOverlay
   public final void removeVoiceschangedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "voiceschanged", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "voiceschanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

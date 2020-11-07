@@ -49,8 +49,9 @@ public class AbortSignal extends EventTarget {
   }
 
   @JsOverlay
-  public final void addAbortListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "abort", Js.cast( callback ), options );
+  public final void addAbortListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -66,8 +67,8 @@ public class AbortSignal extends EventTarget {
 
   @JsOverlay
   public final void removeAbortListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "abort", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

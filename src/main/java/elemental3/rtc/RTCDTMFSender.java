@@ -86,8 +86,8 @@ public class RTCDTMFSender extends EventTarget {
 
   @JsOverlay
   public final void addTonechangeListener(@Nonnull final RTCDTMFToneChangeEventListener callback,
-      final boolean options) {
-    addEventListener( "tonechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "tonechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -103,8 +103,8 @@ public class RTCDTMFSender extends EventTarget {
 
   @JsOverlay
   public final void removeTonechangeListener(@Nonnull final RTCDTMFToneChangeEventListener callback,
-      final boolean options) {
-    removeEventListener( "tonechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "tonechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

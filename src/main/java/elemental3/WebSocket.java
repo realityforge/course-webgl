@@ -329,8 +329,8 @@ public class WebSocket extends EventTarget {
 
   @JsOverlay
   public final void addCloseListener(@Nonnull final CloseEventListener callback,
-      final boolean options) {
-    addEventListener( "close", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -346,8 +346,8 @@ public class WebSocket extends EventTarget {
 
   @JsOverlay
   public final void removeCloseListener(@Nonnull final CloseEventListener callback,
-      final boolean options) {
-    removeEventListener( "close", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -363,8 +363,8 @@ public class WebSocket extends EventTarget {
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    addEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -380,8 +380,8 @@ public class WebSocket extends EventTarget {
 
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean options) {
-    removeEventListener( "message", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -396,8 +396,9 @@ public class WebSocket extends EventTarget {
   }
 
   @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -413,8 +414,8 @@ public class WebSocket extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -429,8 +430,9 @@ public class WebSocket extends EventTarget {
   }
 
   @JsOverlay
-  public final void addOpenListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "open", Js.cast( callback ), options );
+  public final void addOpenListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "open", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -446,8 +448,8 @@ public class WebSocket extends EventTarget {
 
   @JsOverlay
   public final void removeOpenListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "open", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "open", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

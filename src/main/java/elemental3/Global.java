@@ -5,7 +5,7 @@ import elemental2.promise.Promise;
 import elemental3.indexeddb.IDBFactory;
 import elemental3.speech.SpeechSynthesis;
 import elemental3.svg.SVGImageElement;
-import elemental3.wasm.WebAssembly;
+import elemental3.wasm.WebAssemblyNamespace;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -282,6 +282,18 @@ public final class Global {
   }
 
   /**
+   * The Window.name property gets/sets the name of the window's browsing context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name">Window.name - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-name">The definition of 'Window.name' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-name">The definition of 'Window.name' in HTML5.</a>
+   */
+  @Nonnull
+  public static String name() {
+    return globalThis().name;
+  }
+
+  /**
    * The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator">Window.navigator - MDN</a>
@@ -290,6 +302,1112 @@ public final class Global {
   @Nonnull
   public static Navigator navigator() {
     return globalThis().navigator();
+  }
+
+  /**
+   * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onabort">Window.onabort - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onabort">The definition of 'onabort' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onabort() {
+    return globalThis().onabort;
+  }
+
+  /**
+   * The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onafterprint">Window.onafterprint - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onafterprint">The definition of 'onafterprint' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onafterprint() {
+    return globalThis().onafterprint;
+  }
+
+  /**
+   * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel">The definition of 'onanimationcancel' in CSS Animations.</a>
+   */
+  @Nullable
+  public static AnimationEventHandler onanimationcancel() {
+    return globalThis().onanimationcancel;
+  }
+
+  /**
+   * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationend">The definition of 'onanimationend' in CSS Animations.</a>
+   */
+  @Nullable
+  public static AnimationEventHandler onanimationend() {
+    return globalThis().onanimationend;
+  }
+
+  /**
+   * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration">The definition of 'onanimationiteration' in CSS Animations.</a>
+   */
+  @Nullable
+  public static AnimationEventHandler onanimationiteration() {
+    return globalThis().onanimationiteration;
+  }
+
+  /**
+   * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart">The definition of 'onanimationstart' in CSS Animations.</a>
+   */
+  @Nullable
+  public static AnimationEventHandler onanimationstart() {
+    return globalThis().onanimationstart;
+  }
+
+  /**
+   * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
+   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in UI Events.</a>
+   */
+  @Nullable
+  public static EventHandler onauxclick() {
+    return globalThis().onauxclick;
+  }
+
+  /**
+   * The onbeforeprint property of the WindowEventHandlers mixin is the EventHandler for processing beforeprint events for the current window. These events are raised before the print dialog window is opened.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeprint">Window.onbeforeprint - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeprint">The definition of 'onbeforeprint' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onbeforeprint() {
+    return globalThis().onbeforeprint;
+  }
+
+  /**
+   * The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeunload">Window.onbeforeunload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeunload">The definition of 'onbeforeunload' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML5.</a>
+   */
+  @Nullable
+  public static OnBeforeUnloadEventHandler onbeforeunload() {
+    return globalThis().onbeforeunload;
+  }
+
+  /**
+   * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onblur">Window.onblur - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static FocusEventHandler onblur() {
+    return globalThis().onblur;
+  }
+
+  /**
+   * The oncancel property of the GlobalEventHandlers mixin is an EventHandler for processing cancel events sent to a dialog element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oncancel() {
+    return globalThis().oncancel;
+  }
+
+  /**
+   * The oncanplay property of the GlobalEventHandlers mixin is the EventHandler for processing canplay events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplay">GlobalEventHandlers.oncanplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplay">The definition of 'oncanplay' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oncanplay() {
+    return globalThis().oncanplay;
+  }
+
+  /**
+   * The oncanplaythrough property of the GlobalEventHandlers mixin is the EventHandler for processing canplaythrough events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough">GlobalEventHandlers.oncanplaythrough - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplaythrough">The definition of 'oncanplaythrough' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oncanplaythrough() {
+    return globalThis().oncanplaythrough;
+  }
+
+  /**
+   * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onchange">Window.onchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onchange">The definition of 'onchange' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onchange() {
+    return globalThis().onchange;
+  }
+
+  /**
+   * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onclick">Window.onclick - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick">The definition of 'onclick' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onclick() {
+    return globalThis().onclick;
+  }
+
+  /**
+   * The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onclose() {
+    return globalThis().onclose;
+  }
+
+  @Nullable
+  public static EventHandler oncompassneedscalibration() {
+    return globalThis().oncompassneedscalibration;
+  }
+
+  /**
+   * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oncontextmenu">Window.oncontextmenu - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oncontextmenu() {
+    return globalThis().oncontextmenu;
+  }
+
+  /**
+   * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncuechange">GlobalEventHandlers.oncuechange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncuechange">The definition of 'oncuechange' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oncuechange() {
+    return globalThis().oncuechange;
+  }
+
+  /**
+   * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondblclick">Window.ondblclick - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler ondblclick() {
+    return globalThis().ondblclick;
+  }
+
+  /**
+   * An event handler for the devicemotion events sent to the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
+   */
+  @Nullable
+  public static DeviceMotionEventHandler ondevicemotion() {
+    return globalThis().ondevicemotion;
+  }
+
+  /**
+   * An event handler for the deviceorientation event, which contains information about a relative device orientation change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
+   */
+  @Nullable
+  public static DeviceOrientationEventHandler ondeviceorientation() {
+    return globalThis().ondeviceorientation;
+  }
+
+  /**
+   * An event handler for the deviceorientationabsolute event containing information about an absolute device orientation change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientationabsolute">Window.ondeviceorientationabsolute - MDN</a>
+   */
+  @Nullable
+  public static EventHandler ondeviceorientationabsolute() {
+    return globalThis().ondeviceorientationabsolute;
+  }
+
+  /**
+   * A global event handler for the drag event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag">GlobalEventHandlers.ondrag - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondrag() {
+    return globalThis().ondrag;
+  }
+
+  /**
+   * A global event handler for the dragend event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend">GlobalEventHandlers.ondragend - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondragend() {
+    return globalThis().ondragend;
+  }
+
+  /**
+   * A global event handler for the dragenter event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter">GlobalEventHandlers.ondragenter - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondragenter() {
+    return globalThis().ondragenter;
+  }
+
+  /**
+   * A global event handler for the dragleave event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondragleave() {
+    return globalThis().ondragleave;
+  }
+
+  /**
+   * A global event handler for the dragover event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover">GlobalEventHandlers.ondragover - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondragover() {
+    return globalThis().ondragover;
+  }
+
+  /**
+   * A global event handler for the dragstart event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart">GlobalEventHandlers.ondragstart - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondragstart() {
+    return globalThis().ondragstart;
+  }
+
+  /**
+   * A global event handler for the drop event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop">GlobalEventHandlers.ondrop - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in HTML 5.1.</a>
+   */
+  @Nullable
+  public static EventHandler ondrop() {
+    return globalThis().ondrop;
+  }
+
+  /**
+   * The ondurationchange property of the GlobalEventHandlers mixin is the EventHandler for processing durationchange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange">GlobalEventHandlers.ondurationchange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-ondurationchange">The definition of 'ondurationchange' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler ondurationchange() {
+    return globalThis().ondurationchange;
+  }
+
+  /**
+   * The onemptied property sets and returns the event handler for the emptied event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onemptied">GlobalEventHandlers.onemptied - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onemptied">The definition of 'onemptied' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onemptied() {
+    return globalThis().onemptied;
+  }
+
+  /**
+   * The onended property of the GlobalEventHandlers mixin is the EventHandler for processing ended events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onended">GlobalEventHandlers.onended - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onended">The definition of 'onended' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onended() {
+    return globalThis().onended;
+  }
+
+  /**
+   * The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static OnErrorEventHandler onerror() {
+    return globalThis().onerror;
+  }
+
+  /**
+   * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onfocus">Window.onfocus - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static FocusEventHandler onfocus() {
+    return globalThis().onfocus;
+  }
+
+  /**
+   * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onformdata() {
+    return globalThis().onformdata;
+  }
+
+  /**
+   * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in Pointer Events – Level 2.</a>
+   */
+  @Nullable
+  public static EventHandler ongotpointercapture() {
+    return globalThis().ongotpointercapture;
+  }
+
+  /**
+   * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onhashchange">Window.onhashchange - MDN</a>
+   */
+  @Nullable
+  public static HashChangeEventHandler onhashchange() {
+    return globalThis().onhashchange;
+  }
+
+  /**
+   * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oninput">Window.oninput - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oninput() {
+    return globalThis().oninput;
+  }
+
+  /**
+   * The oninvalid property of the GlobalEventHandlers mixin is an EventHandler that processes invalid events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">GlobalEventHandlers.oninvalid - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oninvalid">The definition of 'oninvalid' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler oninvalid() {
+    return globalThis().oninvalid;
+  }
+
+  /**
+   * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeydown">Window.onkeydown - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onkeydown() {
+    return globalThis().onkeydown;
+  }
+
+  /**
+   * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeypress">Window.onkeypress - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onkeypress() {
+    return globalThis().onkeypress;
+  }
+
+  /**
+   * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeyup">Window.onkeyup - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onkeyup() {
+    return globalThis().onkeyup;
+  }
+
+  /**
+   * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onlanguagechange">Window.onlanguagechange - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">The definition of 'WindowEventHandler.onlanguagechange' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onlanguagechange() {
+    return globalThis().onlanguagechange;
+  }
+
+  /**
+   * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onload">Window.onload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onload() {
+    return globalThis().onload;
+  }
+
+  /**
+   * The onloadeddata property of the GlobalEventHandlers mixin is the EventHandler for processing loadeddata events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata">GlobalEventHandlers.onloadeddata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadeddata">The definition of 'onloadeddata' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onloadeddata() {
+    return globalThis().onloadeddata;
+  }
+
+  /**
+   * The onloadedmetadata property of the GlobalEventHandlers mixin is the EventHandler for processing loadedmetadata events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata">GlobalEventHandlers.onloadedmetadata - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadedmetadata">The definition of 'onloadedmetadata' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onloadedmetadata() {
+    return globalThis().onloadedmetadata;
+  }
+
+  /**
+   * The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onloadstart() {
+    return globalThis().onloadstart;
+  }
+
+  /**
+   * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in Pointer Events – Level 2.</a>
+   */
+  @Nullable
+  public static EventHandler onlostpointercapture() {
+    return globalThis().onlostpointercapture;
+  }
+
+  /**
+   * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">The definition of 'onmessage' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static MessageEventHandler onmessage() {
+    return globalThis().onmessage;
+  }
+
+  /**
+   * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">The definition of 'onmessageerror' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static MessageEventHandler onmessageerror() {
+    return globalThis().onmessageerror;
+  }
+
+  /**
+   * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousedown">Window.onmousedown - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousedown">The definition of 'onmousedown' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmousedown() {
+    return globalThis().onmousedown;
+  }
+
+  /**
+   * The onmouseenter property of the GlobalEventHandlers mixin is the EventHandler for processing mouseenter events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter">GlobalEventHandlers.onmouseenter - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseenter">The definition of 'onmouseenter' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmouseenter() {
+    return globalThis().onmouseenter;
+  }
+
+  /**
+   * The onmouseleave property of the GlobalEventHandlers mixin is the EventHandler for processing mouseleave events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave">GlobalEventHandlers.onmouseleave - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseleave">The definition of 'onmouseleave' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmouseleave() {
+    return globalThis().onmouseleave;
+  }
+
+  /**
+   * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousemove">Window.onmousemove - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmousemove() {
+    return globalThis().onmousemove;
+  }
+
+  /**
+   * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseout">Window.onmouseout - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseout">The definition of 'onmouseout' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmouseout() {
+    return globalThis().onmouseout;
+  }
+
+  /**
+   * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseover">Window.onmouseover - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmouseover() {
+    return globalThis().onmouseover;
+  }
+
+  /**
+   * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseup">Window.onmouseup - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseup">The definition of 'onmouseup' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onmouseup() {
+    return globalThis().onmouseup;
+  }
+
+  @Nullable
+  public static EventHandler onoffline() {
+    return globalThis().onoffline;
+  }
+
+  @Nullable
+  public static EventHandler ononline() {
+    return globalThis().ononline;
+  }
+
+  @Nullable
+  public static EventHandler onorientationchange() {
+    return globalThis().onorientationchange;
+  }
+
+  @Nullable
+  public static PageTransitionEventHandler onpagehide() {
+    return globalThis().onpagehide;
+  }
+
+  @Nullable
+  public static PageTransitionEventHandler onpageshow() {
+    return globalThis().onpageshow;
+  }
+
+  /**
+   * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpause">GlobalEventHandlers.onpause - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onpause">The definition of 'onpause' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onpause() {
+    return globalThis().onpause;
+  }
+
+  /**
+   * The onplay property of the GlobalEventHandlers mixin is the EventHandler for processing play events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplay">GlobalEventHandlers.onplay - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onplay">The definition of 'onplay' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onplay() {
+    return globalThis().onplay;
+  }
+
+  /**
+   * The onplaying property of the GlobalEventHandlers mixin is the EventHandler for processing playing events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplaying">GlobalEventHandlers.onplaying - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onplaying">The definition of 'onplaying' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onplaying() {
+    return globalThis().onplaying;
+  }
+
+  /**
+   * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointercancel() {
+    return globalThis().onpointercancel;
+  }
+
+  /**
+   * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointerdown() {
+    return globalThis().onpointerdown;
+  }
+
+  /**
+   * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointerenter() {
+    return globalThis().onpointerenter;
+  }
+
+  /**
+   * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointerleave() {
+    return globalThis().onpointerleave;
+  }
+
+  /**
+   * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointermove() {
+    return globalThis().onpointermove;
+  }
+
+  /**
+   * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointerout() {
+    return globalThis().onpointerout;
+  }
+
+  /**
+   * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointerover() {
+    return globalThis().onpointerover;
+  }
+
+  /**
+   * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in Pointer Events.</a>
+   */
+  @Nullable
+  public static EventHandler onpointerup() {
+    return globalThis().onpointerup;
+  }
+
+  /**
+   * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onpopstate">Window.onpopstate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">The definition of 'onpopstate' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onpopstate() {
+    return globalThis().onpopstate;
+  }
+
+  @Nullable
+  public static EventHandler onprogress() {
+    return globalThis().onprogress;
+  }
+
+  @Nullable
+  public static EventHandler onratechange() {
+    return globalThis().onratechange;
+  }
+
+  /**
+   * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled">Window.onrejectionhandled - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">The definition of 'onrejectionhandled' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static PromiseRejectionEventHandler onrejectionhandled() {
+    return globalThis().onrejectionhandled;
+  }
+
+  /**
+   * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onreset">Window.onreset - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onreset">The definition of 'onreset' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onreset() {
+    return globalThis().onreset;
+  }
+
+  /**
+   * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onresize">Window.onresize - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onresize">The definition of 'onresize' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static UIEventHandler onresize() {
+    return globalThis().onresize;
+  }
+
+  /**
+   * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onscroll">Window.onscroll - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in Document Object Model (DOM) Level 3 Events Specification.</a>
+   */
+  @Nullable
+  public static EventHandler onscroll() {
+    return globalThis().onscroll;
+  }
+
+  @Nullable
+  public static EventHandler onsecuritypolicyviolation() {
+    return globalThis().onsecuritypolicyviolation;
+  }
+
+  @Nullable
+  public static EventHandler onseeked() {
+    return globalThis().onseeked;
+  }
+
+  @Nullable
+  public static EventHandler onseeking() {
+    return globalThis().onseeking;
+  }
+
+  /**
+   * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onselect">Window.onselect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onselect">The definition of 'onselect' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onselect() {
+    return globalThis().onselect;
+  }
+
+  /**
+   * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in Selection API.</a>
+   */
+  @Nullable
+  public static EventHandler onselectionchange() {
+    return globalThis().onselectionchange;
+  }
+
+  /**
+   * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in Selection API.</a>
+   */
+  @Nullable
+  public static EventHandler onselectstart() {
+    return globalThis().onselectstart;
+  }
+
+  @Nullable
+  public static EventHandler onslotchange() {
+    return globalThis().onslotchange;
+  }
+
+  @Nullable
+  public static EventHandler onstalled() {
+    return globalThis().onstalled;
+  }
+
+  /**
+   * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onstorage">Window.onstorage - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">The definition of 'onstorage' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static StorageEventHandler onstorage() {
+    return globalThis().onstorage;
+  }
+
+  /**
+   * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onsubmit">Window.onsubmit - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onsubmit() {
+    return globalThis().onsubmit;
+  }
+
+  @Nullable
+  public static EventHandler onsuspend() {
+    return globalThis().onsuspend;
+  }
+
+  @Nullable
+  public static EventHandler ontimeupdate() {
+    return globalThis().ontimeupdate;
+  }
+
+  @Nullable
+  public static EventHandler ontoggle() {
+    return globalThis().ontoggle;
+  }
+
+  /**
+   * The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel">GlobalEventHandlers.ontouchcancel - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchcancel">Touch Events – Level 2</a>
+   */
+  @Nullable
+  public static EventHandler ontouchcancel() {
+    return globalThis().ontouchcancel;
+  }
+
+  /**
+   * A global event handler for the touchend event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchend">GlobalEventHandlers.ontouchend - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchend">Touch Events – Level 2</a>
+   */
+  @Nullable
+  public static EventHandler ontouchend() {
+    return globalThis().ontouchend;
+  }
+
+  /**
+   * A global event handler for the touchmove event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove">GlobalEventHandlers.ontouchmove - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchmove">Touch Events – Level 2</a>
+   */
+  @Nullable
+  public static EventHandler ontouchmove() {
+    return globalThis().ontouchmove;
+  }
+
+  /**
+   * The ontouchstart property of the GlobalEventHandlers mixin is an EventHandler that processes touchstart events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart">GlobalEventHandlers.ontouchstart - MDN</a>
+   * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchstart">Touch Events – Level 2</a>
+   */
+  @Nullable
+  public static EventHandler ontouchstart() {
+    return globalThis().ontouchstart;
+  }
+
+  /**
+   * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitioncancel">The definition of 'ontransitioncancel' in CSS Transitions.</a>
+   */
+  @Nullable
+  public static TransitionEventHandler ontransitioncancel() {
+    return globalThis().ontransitioncancel;
+  }
+
+  /**
+   * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
+   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitionend">The definition of 'ontransitionend' in CSS Transitions.</a>
+   */
+  @Nullable
+  public static TransitionEventHandler ontransitionend() {
+    return globalThis().ontransitionend;
+  }
+
+  @Nullable
+  public static TransitionEventHandler ontransitionrun() {
+    return globalThis().ontransitionrun;
+  }
+
+  @Nullable
+  public static TransitionEventHandler ontransitionstart() {
+    return globalThis().ontransitionstart;
+  }
+
+  /**
+   * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunhandledrejection">Window.onunhandledrejection - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">The definition of 'onunhandledrejection' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static PromiseRejectionEventHandler onunhandledrejection() {
+    return globalThis().onunhandledrejection;
+  }
+
+  /**
+   * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunload">Window.onunload - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onunload">The definition of 'onunload' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML 5.1.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in HTML5.</a>
+   */
+  @Nullable
+  public static EventHandler onunload() {
+    return globalThis().onunload;
+  }
+
+  @Nullable
+  public static EventHandler onvolumechange() {
+    return globalThis().onvolumechange;
+  }
+
+  @Nullable
+  public static EventHandler onwaiting() {
+    return globalThis().onwaiting;
+  }
+
+  @Nullable
+  public static EventHandler onwebkitanimationend() {
+    return globalThis().onwebkitanimationend;
+  }
+
+  @Nullable
+  public static EventHandler onwebkitanimationiteration() {
+    return globalThis().onwebkitanimationiteration;
+  }
+
+  @Nullable
+  public static EventHandler onwebkitanimationstart() {
+    return globalThis().onwebkitanimationstart;
+  }
+
+  @Nullable
+  public static EventHandler onwebkittransitionend() {
+    return globalThis().onwebkittransitionend;
+  }
+
+  /**
+   * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onwheel">The definition of 'onwheel' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static EventHandler onwheel() {
+    return globalThis().onwheel;
+  }
+
+  /**
+   * The Window interface's opener property returns a reference to the window that opened the window, either with open(), or by navigating a link with a target attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener">Window.opener - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-opener">The definition of 'window.opener' in HTML Living Standard.</a>
+   */
+  @Nullable
+  public static Any opener() {
+    return globalThis().opener;
   }
 
   public static short orientation() {
@@ -501,6 +1619,17 @@ public final class Global {
   @Nonnull
   public static SpeechSynthesis speechSynthesis() {
     return globalThis().speechSynthesis();
+  }
+
+  /**
+   * The status property of the Window interface was originally intended to set the text in the status bar at the bottom of the browser window. However, the HTML standard now requires setting window.status to have no effect on the text displayed in the status bar.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/status">Window.status - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window-status">The definition of 'window.status' in HTML Living Standard.</a>
+   */
+  @Nonnull
+  public static String status() {
+    return globalThis().status;
   }
 
   /**
@@ -1811,6 +2940,1086 @@ public final class Global {
     return globalThis().requestAnimationFrame(callback);
   }
 
+  public static void addHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addHashchangeListener( callback, options );
+  }
+
+  public static void addHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      final boolean useCapture) {
+    globalThis().addHashchangeListener( callback, useCapture );
+  }
+
+  public static void addHashchangeListener(@Nonnull final HashChangeEventListener callback) {
+    globalThis().addHashchangeListener( callback );
+  }
+
+  public static void removeHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeHashchangeListener( callback, options );
+  }
+
+  public static void removeHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeHashchangeListener( callback, useCapture );
+  }
+
+  public static void removeHashchangeListener(@Nonnull final HashChangeEventListener callback) {
+    globalThis().removeHashchangeListener( callback );
+  }
+
+  public static void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addMessageListener( callback, options );
+  }
+
+  public static void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    globalThis().addMessageListener( callback, useCapture );
+  }
+
+  public static void addMessageListener(@Nonnull final MessageEventListener callback) {
+    globalThis().addMessageListener( callback );
+  }
+
+  public static void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeMessageListener( callback, options );
+  }
+
+  public static void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeMessageListener( callback, useCapture );
+  }
+
+  public static void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    globalThis().removeMessageListener( callback );
+  }
+
+  public static void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addMessageerrorListener( callback, options );
+  }
+
+  public static void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    globalThis().addMessageerrorListener( callback, useCapture );
+  }
+
+  public static void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    globalThis().addMessageerrorListener( callback );
+  }
+
+  public static void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeMessageerrorListener( callback, options );
+  }
+
+  public static void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeMessageerrorListener( callback, useCapture );
+  }
+
+  public static void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    globalThis().removeMessageerrorListener( callback );
+  }
+
+  public static void addPagehideListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addPagehideListener( callback, options );
+  }
+
+  public static void addPagehideListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addPagehideListener( callback, useCapture );
+  }
+
+  public static void addPagehideListener(@Nonnull final PageTransitionEventListener callback) {
+    globalThis().addPagehideListener( callback );
+  }
+
+  public static void removePagehideListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removePagehideListener( callback, options );
+  }
+
+  public static void removePagehideListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removePagehideListener( callback, useCapture );
+  }
+
+  public static void removePagehideListener(@Nonnull final PageTransitionEventListener callback) {
+    globalThis().removePagehideListener( callback );
+  }
+
+  public static void addPageshowListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addPageshowListener( callback, options );
+  }
+
+  public static void addPageshowListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addPageshowListener( callback, useCapture );
+  }
+
+  public static void addPageshowListener(@Nonnull final PageTransitionEventListener callback) {
+    globalThis().addPageshowListener( callback );
+  }
+
+  public static void removePageshowListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removePageshowListener( callback, options );
+  }
+
+  public static void removePageshowListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removePageshowListener( callback, useCapture );
+  }
+
+  public static void removePageshowListener(@Nonnull final PageTransitionEventListener callback) {
+    globalThis().removePageshowListener( callback );
+  }
+
+  public static void addRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addRejectionhandledListener( callback, options );
+  }
+
+  public static void addRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    globalThis().addRejectionhandledListener( callback, useCapture );
+  }
+
+  public static void addRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    globalThis().addRejectionhandledListener( callback );
+  }
+
+  public static void removeRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeRejectionhandledListener( callback, options );
+  }
+
+  public static void removeRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    globalThis().removeRejectionhandledListener( callback, useCapture );
+  }
+
+  public static void removeRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    globalThis().removeRejectionhandledListener( callback );
+  }
+
+  public static void addStorageListener(@Nonnull final StorageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addStorageListener( callback, options );
+  }
+
+  public static void addStorageListener(@Nonnull final StorageEventListener callback,
+      final boolean useCapture) {
+    globalThis().addStorageListener( callback, useCapture );
+  }
+
+  public static void addStorageListener(@Nonnull final StorageEventListener callback) {
+    globalThis().addStorageListener( callback );
+  }
+
+  public static void removeStorageListener(@Nonnull final StorageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeStorageListener( callback, options );
+  }
+
+  public static void removeStorageListener(@Nonnull final StorageEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeStorageListener( callback, useCapture );
+  }
+
+  public static void removeStorageListener(@Nonnull final StorageEventListener callback) {
+    globalThis().removeStorageListener( callback );
+  }
+
+  public static void addUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addUnhandledrejectionListener( callback, options );
+  }
+
+  public static void addUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    globalThis().addUnhandledrejectionListener( callback, useCapture );
+  }
+
+  public static void addUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    globalThis().addUnhandledrejectionListener( callback );
+  }
+
+  public static void removeUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeUnhandledrejectionListener( callback, options );
+  }
+
+  public static void removeUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    globalThis().removeUnhandledrejectionListener( callback, useCapture );
+  }
+
+  public static void removeUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    globalThis().removeUnhandledrejectionListener( callback );
+  }
+
+  public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addDOMContentLoadedListener( callback, options );
+  }
+
+  public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addDOMContentLoadedListener( callback, useCapture );
+  }
+
+  public static void addDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    globalThis().addDOMContentLoadedListener( callback );
+  }
+
+  public static void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeDOMContentLoadedListener( callback, options );
+  }
+
+  public static void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeDOMContentLoadedListener( callback, useCapture );
+  }
+
+  public static void removeDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    globalThis().removeDOMContentLoadedListener( callback );
+  }
+
+  public static void addAfterprintListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addAfterprintListener( callback, options );
+  }
+
+  public static void addAfterprintListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addAfterprintListener( callback, useCapture );
+  }
+
+  public static void addAfterprintListener(@Nonnull final EventListener callback) {
+    globalThis().addAfterprintListener( callback );
+  }
+
+  public static void removeAfterprintListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeAfterprintListener( callback, options );
+  }
+
+  public static void removeAfterprintListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeAfterprintListener( callback, useCapture );
+  }
+
+  public static void removeAfterprintListener(@Nonnull final EventListener callback) {
+    globalThis().removeAfterprintListener( callback );
+  }
+
+  public static void addAnimationcancelListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addAnimationcancelListener( callback, options );
+  }
+
+  public static void addAnimationcancelListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().addAnimationcancelListener( callback, useCapture );
+  }
+
+  public static void addAnimationcancelListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().addAnimationcancelListener( callback );
+  }
+
+  public static void removeAnimationcancelListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeAnimationcancelListener( callback, options );
+  }
+
+  public static void removeAnimationcancelListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeAnimationcancelListener( callback, useCapture );
+  }
+
+  public static void removeAnimationcancelListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().removeAnimationcancelListener( callback );
+  }
+
+  public static void addAnimationendListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addAnimationendListener( callback, options );
+  }
+
+  public static void addAnimationendListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().addAnimationendListener( callback, useCapture );
+  }
+
+  public static void addAnimationendListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().addAnimationendListener( callback );
+  }
+
+  public static void removeAnimationendListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeAnimationendListener( callback, options );
+  }
+
+  public static void removeAnimationendListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeAnimationendListener( callback, useCapture );
+  }
+
+  public static void removeAnimationendListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().removeAnimationendListener( callback );
+  }
+
+  public static void addAnimationiterationListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addAnimationiterationListener( callback, options );
+  }
+
+  public static void addAnimationiterationListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().addAnimationiterationListener( callback, useCapture );
+  }
+
+  public static void addAnimationiterationListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().addAnimationiterationListener( callback );
+  }
+
+  public static void removeAnimationiterationListener(
+      @Nonnull final AnimationEventListener callback, @Nonnull final EventListenerOptions options) {
+    globalThis().removeAnimationiterationListener( callback, options );
+  }
+
+  public static void removeAnimationiterationListener(
+      @Nonnull final AnimationEventListener callback, final boolean useCapture) {
+    globalThis().removeAnimationiterationListener( callback, useCapture );
+  }
+
+  public static void removeAnimationiterationListener(
+      @Nonnull final AnimationEventListener callback) {
+    globalThis().removeAnimationiterationListener( callback );
+  }
+
+  public static void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addAnimationstartListener( callback, options );
+  }
+
+  public static void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().addAnimationstartListener( callback, useCapture );
+  }
+
+  public static void addAnimationstartListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().addAnimationstartListener( callback );
+  }
+
+  public static void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeAnimationstartListener( callback, options );
+  }
+
+  public static void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeAnimationstartListener( callback, useCapture );
+  }
+
+  public static void removeAnimationstartListener(@Nonnull final AnimationEventListener callback) {
+    globalThis().removeAnimationstartListener( callback );
+  }
+
+  public static void addAppinstalledListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addAppinstalledListener( callback, options );
+  }
+
+  public static void addAppinstalledListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addAppinstalledListener( callback, useCapture );
+  }
+
+  public static void addAppinstalledListener(@Nonnull final EventListener callback) {
+    globalThis().addAppinstalledListener( callback );
+  }
+
+  public static void removeAppinstalledListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeAppinstalledListener( callback, options );
+  }
+
+  public static void removeAppinstalledListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeAppinstalledListener( callback, useCapture );
+  }
+
+  public static void removeAppinstalledListener(@Nonnull final EventListener callback) {
+    globalThis().removeAppinstalledListener( callback );
+  }
+
+  public static void addBeforeprintListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addBeforeprintListener( callback, options );
+  }
+
+  public static void addBeforeprintListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addBeforeprintListener( callback, useCapture );
+  }
+
+  public static void addBeforeprintListener(@Nonnull final EventListener callback) {
+    globalThis().addBeforeprintListener( callback );
+  }
+
+  public static void removeBeforeprintListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeBeforeprintListener( callback, options );
+  }
+
+  public static void removeBeforeprintListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeBeforeprintListener( callback, useCapture );
+  }
+
+  public static void removeBeforeprintListener(@Nonnull final EventListener callback) {
+    globalThis().removeBeforeprintListener( callback );
+  }
+
+  public static void addBeforeunloadListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addBeforeunloadListener( callback, options );
+  }
+
+  public static void addBeforeunloadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addBeforeunloadListener( callback, useCapture );
+  }
+
+  public static void addBeforeunloadListener(@Nonnull final EventListener callback) {
+    globalThis().addBeforeunloadListener( callback );
+  }
+
+  public static void removeBeforeunloadListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeBeforeunloadListener( callback, options );
+  }
+
+  public static void removeBeforeunloadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeBeforeunloadListener( callback, useCapture );
+  }
+
+  public static void removeBeforeunloadListener(@Nonnull final EventListener callback) {
+    globalThis().removeBeforeunloadListener( callback );
+  }
+
+  public static void addBlurListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addBlurListener( callback, options );
+  }
+
+  public static void addBlurListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    globalThis().addBlurListener( callback, useCapture );
+  }
+
+  public static void addBlurListener(@Nonnull final FocusEventListener callback) {
+    globalThis().addBlurListener( callback );
+  }
+
+  public static void removeBlurListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeBlurListener( callback, options );
+  }
+
+  public static void removeBlurListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeBlurListener( callback, useCapture );
+  }
+
+  public static void removeBlurListener(@Nonnull final FocusEventListener callback) {
+    globalThis().removeBlurListener( callback );
+  }
+
+  public static void addClipboardchangeListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addClipboardchangeListener( callback, options );
+  }
+
+  public static void addClipboardchangeListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().addClipboardchangeListener( callback, useCapture );
+  }
+
+  public static void addClipboardchangeListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().addClipboardchangeListener( callback );
+  }
+
+  public static void removeClipboardchangeListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeClipboardchangeListener( callback, options );
+  }
+
+  public static void removeClipboardchangeListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeClipboardchangeListener( callback, useCapture );
+  }
+
+  public static void removeClipboardchangeListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().removeClipboardchangeListener( callback );
+  }
+
+  public static void addCopyListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addCopyListener( callback, options );
+  }
+
+  public static void addCopyListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().addCopyListener( callback, useCapture );
+  }
+
+  public static void addCopyListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().addCopyListener( callback );
+  }
+
+  public static void removeCopyListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeCopyListener( callback, options );
+  }
+
+  public static void removeCopyListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeCopyListener( callback, useCapture );
+  }
+
+  public static void removeCopyListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().removeCopyListener( callback );
+  }
+
+  public static void addCutListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addCutListener( callback, options );
+  }
+
+  public static void addCutListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().addCutListener( callback, useCapture );
+  }
+
+  public static void addCutListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().addCutListener( callback );
+  }
+
+  public static void removeCutListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeCutListener( callback, options );
+  }
+
+  public static void removeCutListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeCutListener( callback, useCapture );
+  }
+
+  public static void removeCutListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().removeCutListener( callback );
+  }
+
+  public static void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addDevicemotionListener( callback, options );
+  }
+
+  public static void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addDevicemotionListener( callback, useCapture );
+  }
+
+  public static void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback) {
+    globalThis().addDevicemotionListener( callback );
+  }
+
+  public static void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeDevicemotionListener( callback, options );
+  }
+
+  public static void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeDevicemotionListener( callback, useCapture );
+  }
+
+  public static void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback) {
+    globalThis().removeDevicemotionListener( callback );
+  }
+
+  public static void addDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addDeviceorientationListener( callback, options );
+  }
+
+  public static void addDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback, final boolean useCapture) {
+    globalThis().addDeviceorientationListener( callback, useCapture );
+  }
+
+  public static void addDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback) {
+    globalThis().addDeviceorientationListener( callback );
+  }
+
+  public static void removeDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeDeviceorientationListener( callback, options );
+  }
+
+  public static void removeDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback, final boolean useCapture) {
+    globalThis().removeDeviceorientationListener( callback, useCapture );
+  }
+
+  public static void removeDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback) {
+    globalThis().removeDeviceorientationListener( callback );
+  }
+
+  public static void addFocusListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addFocusListener( callback, options );
+  }
+
+  public static void addFocusListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    globalThis().addFocusListener( callback, useCapture );
+  }
+
+  public static void addFocusListener(@Nonnull final FocusEventListener callback) {
+    globalThis().addFocusListener( callback );
+  }
+
+  public static void removeFocusListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeFocusListener( callback, options );
+  }
+
+  public static void removeFocusListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeFocusListener( callback, useCapture );
+  }
+
+  public static void removeFocusListener(@Nonnull final FocusEventListener callback) {
+    globalThis().removeFocusListener( callback );
+  }
+
+  public static void addGamepadconnectedListener(@Nonnull final GamepadEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addGamepadconnectedListener( callback, options );
+  }
+
+  public static void addGamepadconnectedListener(@Nonnull final GamepadEventListener callback,
+      final boolean useCapture) {
+    globalThis().addGamepadconnectedListener( callback, useCapture );
+  }
+
+  public static void addGamepadconnectedListener(@Nonnull final GamepadEventListener callback) {
+    globalThis().addGamepadconnectedListener( callback );
+  }
+
+  public static void removeGamepadconnectedListener(@Nonnull final GamepadEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeGamepadconnectedListener( callback, options );
+  }
+
+  public static void removeGamepadconnectedListener(@Nonnull final GamepadEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeGamepadconnectedListener( callback, useCapture );
+  }
+
+  public static void removeGamepadconnectedListener(@Nonnull final GamepadEventListener callback) {
+    globalThis().removeGamepadconnectedListener( callback );
+  }
+
+  public static void addGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addGamepaddisconnectedListener( callback, options );
+  }
+
+  public static void addGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback,
+      final boolean useCapture) {
+    globalThis().addGamepaddisconnectedListener( callback, useCapture );
+  }
+
+  public static void addGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback) {
+    globalThis().addGamepaddisconnectedListener( callback );
+  }
+
+  public static void removeGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeGamepaddisconnectedListener( callback, options );
+  }
+
+  public static void removeGamepaddisconnectedListener(@Nonnull final GamepadEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeGamepaddisconnectedListener( callback, useCapture );
+  }
+
+  public static void removeGamepaddisconnectedListener(
+      @Nonnull final GamepadEventListener callback) {
+    globalThis().removeGamepaddisconnectedListener( callback );
+  }
+
+  public static void addLanguagechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addLanguagechangeListener( callback, options );
+  }
+
+  public static void addLanguagechangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addLanguagechangeListener( callback, useCapture );
+  }
+
+  public static void addLanguagechangeListener(@Nonnull final EventListener callback) {
+    globalThis().addLanguagechangeListener( callback );
+  }
+
+  public static void removeLanguagechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeLanguagechangeListener( callback, options );
+  }
+
+  public static void removeLanguagechangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeLanguagechangeListener( callback, useCapture );
+  }
+
+  public static void removeLanguagechangeListener(@Nonnull final EventListener callback) {
+    globalThis().removeLanguagechangeListener( callback );
+  }
+
+  public static void addLoadListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addLoadListener( callback, options );
+  }
+
+  public static void addLoadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addLoadListener( callback, useCapture );
+  }
+
+  public static void addLoadListener(@Nonnull final EventListener callback) {
+    globalThis().addLoadListener( callback );
+  }
+
+  public static void removeLoadListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeLoadListener( callback, options );
+  }
+
+  public static void removeLoadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeLoadListener( callback, useCapture );
+  }
+
+  public static void removeLoadListener(@Nonnull final EventListener callback) {
+    globalThis().removeLoadListener( callback );
+  }
+
+  public static void addOfflineListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addOfflineListener( callback, options );
+  }
+
+  public static void addOfflineListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addOfflineListener( callback, useCapture );
+  }
+
+  public static void addOfflineListener(@Nonnull final EventListener callback) {
+    globalThis().addOfflineListener( callback );
+  }
+
+  public static void removeOfflineListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeOfflineListener( callback, options );
+  }
+
+  public static void removeOfflineListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeOfflineListener( callback, useCapture );
+  }
+
+  public static void removeOfflineListener(@Nonnull final EventListener callback) {
+    globalThis().removeOfflineListener( callback );
+  }
+
+  public static void addOnlineListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addOnlineListener( callback, options );
+  }
+
+  public static void addOnlineListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addOnlineListener( callback, useCapture );
+  }
+
+  public static void addOnlineListener(@Nonnull final EventListener callback) {
+    globalThis().addOnlineListener( callback );
+  }
+
+  public static void removeOnlineListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeOnlineListener( callback, options );
+  }
+
+  public static void removeOnlineListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeOnlineListener( callback, useCapture );
+  }
+
+  public static void removeOnlineListener(@Nonnull final EventListener callback) {
+    globalThis().removeOnlineListener( callback );
+  }
+
+  public static void addOrientationchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addOrientationchangeListener( callback, options );
+  }
+
+  public static void addOrientationchangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addOrientationchangeListener( callback, useCapture );
+  }
+
+  public static void addOrientationchangeListener(@Nonnull final EventListener callback) {
+    globalThis().addOrientationchangeListener( callback );
+  }
+
+  public static void removeOrientationchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeOrientationchangeListener( callback, options );
+  }
+
+  public static void removeOrientationchangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeOrientationchangeListener( callback, useCapture );
+  }
+
+  public static void removeOrientationchangeListener(@Nonnull final EventListener callback) {
+    globalThis().removeOrientationchangeListener( callback );
+  }
+
+  public static void addPasteListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addPasteListener( callback, options );
+  }
+
+  public static void addPasteListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().addPasteListener( callback, useCapture );
+  }
+
+  public static void addPasteListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().addPasteListener( callback );
+  }
+
+  public static void removePasteListener(@Nonnull final ClipboardEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removePasteListener( callback, options );
+  }
+
+  public static void removePasteListener(@Nonnull final ClipboardEventListener callback,
+      final boolean useCapture) {
+    globalThis().removePasteListener( callback, useCapture );
+  }
+
+  public static void removePasteListener(@Nonnull final ClipboardEventListener callback) {
+    globalThis().removePasteListener( callback );
+  }
+
+  public static void addResizeListener(@Nonnull final UIEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addResizeListener( callback, options );
+  }
+
+  public static void addResizeListener(@Nonnull final UIEventListener callback,
+      final boolean useCapture) {
+    globalThis().addResizeListener( callback, useCapture );
+  }
+
+  public static void addResizeListener(@Nonnull final UIEventListener callback) {
+    globalThis().addResizeListener( callback );
+  }
+
+  public static void removeResizeListener(@Nonnull final UIEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeResizeListener( callback, options );
+  }
+
+  public static void removeResizeListener(@Nonnull final UIEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeResizeListener( callback, useCapture );
+  }
+
+  public static void removeResizeListener(@Nonnull final UIEventListener callback) {
+    globalThis().removeResizeListener( callback );
+  }
+
+  public static void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addTransitioncancelListener( callback, options );
+  }
+
+  public static void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addTransitioncancelListener( callback, useCapture );
+  }
+
+  public static void addTransitioncancelListener(@Nonnull final TransitionEventListener callback) {
+    globalThis().addTransitioncancelListener( callback );
+  }
+
+  public static void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeTransitioncancelListener( callback, options );
+  }
+
+  public static void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeTransitioncancelListener( callback, useCapture );
+  }
+
+  public static void removeTransitioncancelListener(
+      @Nonnull final TransitionEventListener callback) {
+    globalThis().removeTransitioncancelListener( callback );
+  }
+
+  public static void addTransitionendListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addTransitionendListener( callback, options );
+  }
+
+  public static void addTransitionendListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addTransitionendListener( callback, useCapture );
+  }
+
+  public static void addTransitionendListener(@Nonnull final TransitionEventListener callback) {
+    globalThis().addTransitionendListener( callback );
+  }
+
+  public static void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeTransitionendListener( callback, options );
+  }
+
+  public static void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeTransitionendListener( callback, useCapture );
+  }
+
+  public static void removeTransitionendListener(@Nonnull final TransitionEventListener callback) {
+    globalThis().removeTransitionendListener( callback );
+  }
+
+  public static void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addTransitionrunListener( callback, options );
+  }
+
+  public static void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addTransitionrunListener( callback, useCapture );
+  }
+
+  public static void addTransitionrunListener(@Nonnull final TransitionEventListener callback) {
+    globalThis().addTransitionrunListener( callback );
+  }
+
+  public static void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeTransitionrunListener( callback, options );
+  }
+
+  public static void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeTransitionrunListener( callback, useCapture );
+  }
+
+  public static void removeTransitionrunListener(@Nonnull final TransitionEventListener callback) {
+    globalThis().removeTransitionrunListener( callback );
+  }
+
+  public static void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addTransitionstartListener( callback, options );
+  }
+
+  public static void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().addTransitionstartListener( callback, useCapture );
+  }
+
+  public static void addTransitionstartListener(@Nonnull final TransitionEventListener callback) {
+    globalThis().addTransitionstartListener( callback );
+  }
+
+  public static void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeTransitionstartListener( callback, options );
+  }
+
+  public static void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeTransitionstartListener( callback, useCapture );
+  }
+
+  public static void removeTransitionstartListener(
+      @Nonnull final TransitionEventListener callback) {
+    globalThis().removeTransitionstartListener( callback );
+  }
+
+  public static void addUnloadListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addUnloadListener( callback, options );
+  }
+
+  public static void addUnloadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addUnloadListener( callback, useCapture );
+  }
+
+  public static void addUnloadListener(@Nonnull final EventListener callback) {
+    globalThis().addUnloadListener( callback );
+  }
+
+  public static void removeUnloadListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeUnloadListener( callback, options );
+  }
+
+  public static void removeUnloadListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeUnloadListener( callback, useCapture );
+  }
+
+  public static void removeUnloadListener(@Nonnull final EventListener callback) {
+    globalThis().removeUnloadListener( callback );
+  }
+
   /**
    * The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.
    *
@@ -1879,22 +4088,22 @@ public final class Global {
   }
 
   @Nonnull
-  public static Console console() {
+  public static ConsoleNamespace console() {
     return globalThis().console();
   }
 
   @Nonnull
-  public static CSS css() {
+  public static CSSNamespace css() {
     return globalThis().css();
   }
 
   @Nonnull
-  public static WebAssembly webAssembly() {
+  public static WebAssemblyNamespace webAssembly() {
     return globalThis().webAssembly();
   }
 
   @Nonnull
-  public static Atomics atomics() {
+  public static AtomicsNamespace atomics() {
     return globalThis().atomics();
   }
 }

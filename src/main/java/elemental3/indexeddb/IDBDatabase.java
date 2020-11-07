@@ -211,8 +211,9 @@ public class IDBDatabase extends EventTarget {
   }
 
   @JsOverlay
-  public final void addAbortListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "abort", Js.cast( callback ), options );
+  public final void addAbortListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -228,8 +229,8 @@ public class IDBDatabase extends EventTarget {
 
   @JsOverlay
   public final void removeAbortListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "abort", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -244,8 +245,9 @@ public class IDBDatabase extends EventTarget {
   }
 
   @JsOverlay
-  public final void addCloseListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "close", Js.cast( callback ), options );
+  public final void addCloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -261,8 +263,8 @@ public class IDBDatabase extends EventTarget {
 
   @JsOverlay
   public final void removeCloseListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "close", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "close", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -277,8 +279,9 @@ public class IDBDatabase extends EventTarget {
   }
 
   @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -294,8 +297,8 @@ public class IDBDatabase extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -311,8 +314,8 @@ public class IDBDatabase extends EventTarget {
 
   @JsOverlay
   public final void addVersionchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "versionchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "versionchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -328,8 +331,8 @@ public class IDBDatabase extends EventTarget {
 
   @JsOverlay
   public final void removeVersionchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "versionchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "versionchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

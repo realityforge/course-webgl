@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental3.wasm.WebAssembly;
+import elemental3.wasm.WebAssemblyNamespace;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -26,23 +26,23 @@ public final class GlobalWindow extends Window {
       name = "console"
   )
   @Nonnull
-  public native Console console();
+  public native ConsoleNamespace console();
 
   @JsProperty(
       name = "CSS"
   )
   @Nonnull
-  public native CSS css();
+  public native CSSNamespace css();
 
   @JsProperty(
       name = "WebAssembly"
   )
   @Nonnull
-  public native WebAssembly webAssembly();
+  public native WebAssemblyNamespace webAssembly();
 
   @JsProperty(
       name = "Atomics"
   )
   @Nonnull
-  public native Atomics atomics();
+  public native AtomicsNamespace atomics();
 }

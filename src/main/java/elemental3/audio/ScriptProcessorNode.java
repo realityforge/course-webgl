@@ -55,8 +55,8 @@ public class ScriptProcessorNode extends AudioNode {
 
   @JsOverlay
   public final void addAudioprocessListener(@Nonnull final AudioProcessingEventListener callback,
-      final boolean options) {
-    addEventListener( "audioprocess", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "audioprocess", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -72,8 +72,8 @@ public class ScriptProcessorNode extends AudioNode {
 
   @JsOverlay
   public final void removeAudioprocessListener(@Nonnull final AudioProcessingEventListener callback,
-      final boolean options) {
-    removeEventListener( "audioprocess", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "audioprocess", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

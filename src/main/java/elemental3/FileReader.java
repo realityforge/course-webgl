@@ -154,8 +154,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void addAbortListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    addEventListener( "abort", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -171,8 +171,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void removeAbortListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    removeEventListener( "abort", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "abort", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -188,8 +188,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void addErrorListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -205,8 +205,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void removeErrorListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -222,8 +222,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void addLoadListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    addEventListener( "load", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "load", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -239,8 +239,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void removeLoadListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    removeEventListener( "load", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "load", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -256,8 +256,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void addLoadendListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    addEventListener( "loadend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "loadend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -273,8 +273,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void removeLoadendListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    removeEventListener( "loadend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "loadend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -290,8 +290,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void addLoadstartListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    addEventListener( "loadstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "loadstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -307,8 +307,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    removeEventListener( "loadstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "loadstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -324,8 +324,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void addProgressListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    addEventListener( "progress", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "progress", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -341,8 +341,8 @@ public class FileReader extends EventTarget {
 
   @JsOverlay
   public final void removeProgressListener(@Nonnull final ProgressEventListener callback,
-      final boolean options) {
-    removeEventListener( "progress", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "progress", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

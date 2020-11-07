@@ -1962,8 +1962,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1979,8 +1979,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -1996,8 +1996,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addFullscreenchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "fullscreenchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "fullscreenchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2013,8 +2013,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeFullscreenchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "fullscreenchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "fullscreenchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2030,8 +2030,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointerlockchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "pointerlockchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerlockchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2047,8 +2047,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointerlockchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerlockchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerlockchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2064,8 +2064,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointerlockerrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "pointerlockerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerlockerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2081,8 +2081,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointerlockerrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerlockerror", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerlockerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2098,8 +2098,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addReadystatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "readystatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "readystatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2115,8 +2115,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeReadystatechangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "readystatechange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "readystatechange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2132,8 +2132,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addScrollListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "scroll", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "scroll", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2149,8 +2149,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeScrollListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "scroll", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "scroll", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2166,8 +2166,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addSelectionchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "selectionchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "selectionchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2183,8 +2183,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeSelectionchangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "selectionchange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "selectionchange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2200,8 +2200,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addSelectstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "selectstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "selectstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2217,8 +2217,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeSelectstartListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "selectstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "selectstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2234,8 +2234,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addVisibilitychangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "visibilitychange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "visibilitychange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2251,8 +2251,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeVisibilitychangeListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "visibilitychange", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "visibilitychange", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2268,8 +2268,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addAnimationcancelListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2285,8 +2285,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeAnimationcancelListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2302,8 +2302,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addAnimationendListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2319,8 +2319,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeAnimationendListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2336,8 +2336,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addAnimationiterationListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationiteration", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationiteration", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2353,8 +2353,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeAnimationiterationListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationiteration", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationiteration", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2371,8 +2371,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    addEventListener( "animationstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "animationstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2388,8 +2388,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
-      final boolean options) {
-    removeEventListener( "animationstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "animationstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2405,8 +2405,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addCopyListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "copy", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "copy", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2422,8 +2422,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeCopyListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "copy", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "copy", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2439,8 +2439,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addCutListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "cut", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "cut", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2456,8 +2456,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeCutListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "cut", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "cut", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2473,8 +2473,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "drag", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "drag", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2490,8 +2490,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "drag", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "drag", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2507,8 +2507,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragendListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "dragend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dragend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2524,8 +2524,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragendListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "dragend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dragend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2541,8 +2541,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragenterListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "dragenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dragenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2558,8 +2558,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragenterListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "dragenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dragenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2575,8 +2575,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragexitListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "dragexit", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dragexit", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2592,8 +2592,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragexitListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "dragexit", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dragexit", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2609,8 +2609,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragleaveListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "dragleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dragleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2626,8 +2626,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragleaveListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "dragleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dragleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2643,8 +2643,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragoverListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "dragover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dragover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2660,8 +2660,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragoverListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "dragover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dragover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2677,8 +2677,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDragstartListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "dragstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "dragstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2694,8 +2694,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDragstartListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "dragstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "dragstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2711,8 +2711,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addDropListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    addEventListener( "drop", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "drop", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2728,8 +2728,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeDropListener(@Nonnull final DragEventListener callback,
-      final boolean options) {
-    removeEventListener( "drop", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "drop", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2745,8 +2745,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addGotpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "gotpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "gotpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2762,8 +2762,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeGotpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "gotpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "gotpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2779,8 +2779,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addKeydownListener(@Nonnull final KeyboardEventListener callback,
-      final boolean options) {
-    addEventListener( "keydown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "keydown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2796,8 +2796,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeKeydownListener(@Nonnull final KeyboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "keydown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "keydown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2813,8 +2813,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addKeypressListener(@Nonnull final KeyboardEventListener callback,
-      final boolean options) {
-    addEventListener( "keypress", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "keypress", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2830,8 +2830,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeKeypressListener(@Nonnull final KeyboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "keypress", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "keypress", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2847,8 +2847,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addKeyupListener(@Nonnull final KeyboardEventListener callback,
-      final boolean options) {
-    addEventListener( "keyup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "keyup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2864,8 +2864,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeKeyupListener(@Nonnull final KeyboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "keyup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "keyup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2881,8 +2881,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addLostpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "lostpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "lostpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2898,8 +2898,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeLostpointercaptureListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "lostpointercapture", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "lostpointercapture", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2915,8 +2915,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPasteListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    addEventListener( "paste", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "paste", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2932,8 +2932,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePasteListener(@Nonnull final ClipboardEventListener callback,
-      final boolean options) {
-    removeEventListener( "paste", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "paste", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2949,8 +2949,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointercancelListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointercancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointercancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2966,8 +2966,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointercancelListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointercancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointercancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -2983,8 +2983,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointerdownListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerdown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerdown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3000,8 +3000,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointerdownListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerdown", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerdown", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3017,8 +3017,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointerenterListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3034,8 +3034,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointerenterListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerenter", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerenter", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3051,8 +3051,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointerleaveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3068,8 +3068,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointerleaveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerleave", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerleave", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3085,8 +3085,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointermoveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointermove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointermove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3102,8 +3102,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointermoveListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointermove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointermove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3119,8 +3119,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointeroutListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3136,8 +3136,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointeroutListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerout", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerout", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3153,8 +3153,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointeroverListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3170,8 +3170,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointeroverListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerover", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerover", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3187,8 +3187,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addPointerupListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    addEventListener( "pointerup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "pointerup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3204,8 +3204,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removePointerupListener(@Nonnull final PointerEventListener callback,
-      final boolean options) {
-    removeEventListener( "pointerup", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "pointerup", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3221,8 +3221,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTouchcancelListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3238,8 +3238,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTouchcancelListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchcancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchcancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3255,8 +3255,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTouchendListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3272,8 +3272,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTouchendListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3289,8 +3289,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTouchmoveListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchmove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchmove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3306,8 +3306,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTouchmoveListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchmove", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchmove", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3323,8 +3323,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTouchstartListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    addEventListener( "touchstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "touchstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3340,8 +3340,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTouchstartListener(@Nonnull final TouchEventListener callback,
-      final boolean options) {
-    removeEventListener( "touchstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "touchstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3357,8 +3357,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitioncancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitioncancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3374,8 +3374,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitioncancel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitioncancel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3392,8 +3392,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3409,8 +3409,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionend", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionend", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3426,8 +3426,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionrun", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3443,8 +3443,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionrun", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3460,8 +3460,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    addEventListener( "transitionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "transitionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3477,8 +3477,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean options) {
-    removeEventListener( "transitionstart", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "transitionstart", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3494,8 +3494,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void addWheelListener(@Nonnull final WheelEventListener callback,
-      final boolean options) {
-    addEventListener( "wheel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "wheel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -3511,8 +3511,8 @@ public class Document extends Node {
 
   @JsOverlay
   public final void removeWheelListener(@Nonnull final WheelEventListener callback,
-      final boolean options) {
-    removeEventListener( "wheel", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "wheel", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

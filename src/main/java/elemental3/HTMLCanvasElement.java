@@ -177,8 +177,8 @@ public class HTMLCanvasElement extends HTMLElement {
 
   @JsOverlay
   public final void addWebglcontextcreationerrorListener(
-      @Nonnull final WebGLContextEventListener callback, final boolean options) {
-    addEventListener( "webglcontextcreationerror", Js.cast( callback ), options );
+      @Nonnull final WebGLContextEventListener callback, final boolean useCapture) {
+    addEventListener( "webglcontextcreationerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -196,8 +196,8 @@ public class HTMLCanvasElement extends HTMLElement {
 
   @JsOverlay
   public final void removeWebglcontextcreationerrorListener(
-      @Nonnull final WebGLContextEventListener callback, final boolean options) {
-    removeEventListener( "webglcontextcreationerror", Js.cast( callback ), options );
+      @Nonnull final WebGLContextEventListener callback, final boolean useCapture) {
+    removeEventListener( "webglcontextcreationerror", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -214,8 +214,8 @@ public class HTMLCanvasElement extends HTMLElement {
 
   @JsOverlay
   public final void addWebglcontextlostListener(@Nonnull final WebGLContextEventListener callback,
-      final boolean options) {
-    addEventListener( "webglcontextlost", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "webglcontextlost", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -232,8 +232,8 @@ public class HTMLCanvasElement extends HTMLElement {
 
   @JsOverlay
   public final void removeWebglcontextlostListener(
-      @Nonnull final WebGLContextEventListener callback, final boolean options) {
-    removeEventListener( "webglcontextlost", Js.cast( callback ), options );
+      @Nonnull final WebGLContextEventListener callback, final boolean useCapture) {
+    removeEventListener( "webglcontextlost", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -251,8 +251,8 @@ public class HTMLCanvasElement extends HTMLElement {
 
   @JsOverlay
   public final void addWebglcontextrestoredListener(
-      @Nonnull final WebGLContextEventListener callback, final boolean options) {
-    addEventListener( "webglcontextrestored", Js.cast( callback ), options );
+      @Nonnull final WebGLContextEventListener callback, final boolean useCapture) {
+    addEventListener( "webglcontextrestored", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -270,8 +270,8 @@ public class HTMLCanvasElement extends HTMLElement {
 
   @JsOverlay
   public final void removeWebglcontextrestoredListener(
-      @Nonnull final WebGLContextEventListener callback, final boolean options) {
-    removeEventListener( "webglcontextrestored", Js.cast( callback ), options );
+      @Nonnull final WebGLContextEventListener callback, final boolean useCapture) {
+    removeEventListener( "webglcontextrestored", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

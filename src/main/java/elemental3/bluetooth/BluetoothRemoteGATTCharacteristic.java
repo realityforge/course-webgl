@@ -363,8 +363,8 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
 
   @JsOverlay
   public final void addCharacteristicvaluechangedListener(
-      @Nonnull final ValueEventListener callback, final boolean options) {
-    addEventListener( "characteristicvaluechanged", Js.cast( callback ), options );
+      @Nonnull final ValueEventListener callback, final boolean useCapture) {
+    addEventListener( "characteristicvaluechanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -381,8 +381,8 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
 
   @JsOverlay
   public final void removeCharacteristicvaluechangedListener(
-      @Nonnull final ValueEventListener callback, final boolean options) {
-    removeEventListener( "characteristicvaluechanged", Js.cast( callback ), options );
+      @Nonnull final ValueEventListener callback, final boolean useCapture) {
+    removeEventListener( "characteristicvaluechanged", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

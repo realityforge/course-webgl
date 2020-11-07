@@ -21,8 +21,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "console"
 )
-public final class Console {
-  private Console() {
+public final class ConsoleNamespace {
+  private ConsoleNamespace() {
   }
 
   @JsMethod(
