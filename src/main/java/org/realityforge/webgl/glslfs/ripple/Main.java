@@ -107,12 +107,12 @@ public final class Main
     a_position.sendToGpu( _gl );
     a_textureCoordinate.sendToGpu( _gl );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
     if ( !u_image.isReady() )
     {
       return;

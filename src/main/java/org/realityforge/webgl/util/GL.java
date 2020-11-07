@@ -105,7 +105,7 @@ public final class GL
     assert null != parameter;
     if ( !parameter.asBoolean() )
     {
-      Global.globalThis().console().log( gl.getProgramInfoLog( program ) );
+      Global.console().log( gl.getProgramInfoLog( program ) );
       gl.deleteProgram( program );
       return null;
     }
@@ -129,7 +129,7 @@ public final class GL
     assert null != parameter;
     if ( !parameter.asBoolean() )
     {
-      Global.globalThis().console().log( gl.getShaderInfoLog( shader ) );
+      Global.console().log( gl.getShaderInfoLog( shader ) );
       gl.deleteShader( shader );
       return null;
     }

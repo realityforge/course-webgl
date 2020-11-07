@@ -142,12 +142,12 @@ public final class Main
       gl.bindFramebuffer( WebGL2RenderingContext.DRAW_FRAMEBUFFER, null );
     } );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _texture )
     {
       return;

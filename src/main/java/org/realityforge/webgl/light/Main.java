@@ -53,12 +53,11 @@ public final class Main
     _mesh = CubeTemplate.create( gl );
     _lightMesh = CubeTemplate.createLightCube( gl );
 
-    final GlobalWindow global = Global.globalThis();
-    final Document document = global.document();
+    final Document document = Global.document();
     document.addKeydownListener( this::onKeyDown );
     document.addKeyupListener( this::onKeyUp );
 
-    global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 
   private void onKeyDown( @Nonnull final KeyboardEvent event )
@@ -140,7 +139,7 @@ public final class Main
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
     CanvasUtil.resize( gl, canvas );
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
     if ( !_mesh.areTexturesLoaded() )
     {
       return;

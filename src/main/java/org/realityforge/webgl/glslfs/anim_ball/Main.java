@@ -90,7 +90,6 @@ public final class Main
     _projectionMatrix.perspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     Global
-      .globalThis()
       .fetch( "materials/noise.shader" )
       .then( Response::text )
       .thenAccept( shaderPrefix -> appState.in( () -> {
@@ -107,12 +106,12 @@ public final class Main
         _mesh.sendToGpu( gl );
       } ) );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _mesh )
     {
       return;

@@ -133,7 +133,7 @@ public class Main
     gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
     gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
@@ -145,6 +145,6 @@ public class Main
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 3 );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 }

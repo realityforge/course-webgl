@@ -77,8 +77,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    final Window window = Global.globalThis();
-    final Document document = window.document();
+    final Document document = Global.document();
     _video = (HTMLVideoElement) document.createElement( "video" );
     _video.src = "assets/video.ogv";
     _video.loop = true;
@@ -137,7 +136,7 @@ public final class Main
       _mesh.sendToGpu( gl );
     } );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   public void pushVideoFrameToTexture( @Nonnull final WebGL2RenderingContext gl )
@@ -159,7 +158,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _texture )
     {
       return;

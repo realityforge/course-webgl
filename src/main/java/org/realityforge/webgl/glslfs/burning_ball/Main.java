@@ -303,12 +303,12 @@ public final class Main
       GL.loadTexture( gl, "img/explosion.png" ).thenAccept( texture -> _texture = texture );
     } );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _mesh || null == _texture )
     {
       return;

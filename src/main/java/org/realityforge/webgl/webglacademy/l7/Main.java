@@ -109,7 +109,6 @@ public final class Main
     _projectionMatrix.perspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
     Global
-      .globalThis()
       .fetch( "assets/dragon.json" )
       .then( Response::json )
       .thenAccept( data -> appState.in( () -> {
@@ -156,12 +155,12 @@ public final class Main
         _mesh = new Mesh( gl, geometry, new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
       } ) );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _mesh || !_mesh.areTexturesLoaded() )
     {
       return;

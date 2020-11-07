@@ -33,7 +33,7 @@ public final class Main
     _mesh = CubeTemplate.create( gl );
     _mesh.sendToGpu( gl );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
@@ -57,6 +57,6 @@ public final class Main
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 }

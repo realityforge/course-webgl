@@ -75,8 +75,7 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    final Window window = Global.globalThis();
-    final Document document = window.document();
+    final Document document = Global.document();
     _video = (HTMLVideoElement) document.createElement( "video" );
     _video.src = "assets/video.ogv";
     _video.loop = true;
@@ -130,7 +129,7 @@ public final class Main
       gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, null );
     } );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void refreshTexture( @Nonnull final WebGL2RenderingContext gl )
@@ -148,7 +147,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
       CanvasUtil.resize( gl, canvas );

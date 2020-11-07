@@ -36,8 +36,7 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    final Window window = Global.globalThis();
-    final Document document = window.document();
+    final Document document = Global.document();
     final HTMLElement body = document.body;
     assert null != body;
     final HTMLButtonElement button1 = (HTMLButtonElement) document.createElement( "button" );
@@ -183,7 +182,7 @@ public final class Main
     u_kernelWeight.sendToGpu( _gl );
     u_kernel.sendToGpu( _gl );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
   }
 
   private void updateMode( final boolean greyScale,
@@ -203,7 +202,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
   {
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
     if ( !u_image.isReady() || !u_colorPalette.isReady() )
     {
       return;

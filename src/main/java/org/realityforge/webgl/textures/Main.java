@@ -32,13 +32,13 @@ public final class Main
 
     _mesh = CubeTemplate.create( gl );
 
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
     CanvasUtil.resize( gl, canvas );
-    Global.globalThis().requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
     if ( !_mesh.areTexturesLoaded() )
     {
       return;

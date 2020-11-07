@@ -19,8 +19,7 @@ public final class CanvasUtil
   @Nonnull
   public static HTMLCanvasElement createCanvas()
   {
-    final Window window = Global.globalThis();
-    final Document document = window.document();
+    final Document document = Global.document();
     final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
     final HTMLElement body = document.body;
     assert null != body;
@@ -30,8 +29,7 @@ public final class CanvasUtil
 
   public static void resize( @Nonnull final WebGL2RenderingContext gl, @Nonnull final HTMLCanvasElement canvas )
   {
-    final Window window = Global.globalThis();
-    final Element element = window.document().documentElement();
+    final Element element = Global.document().documentElement();
     assert null != element;
 
     final int displayWidth = element.clientWidth();
