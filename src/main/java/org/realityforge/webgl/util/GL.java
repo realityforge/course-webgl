@@ -3,7 +3,7 @@ package org.realityforge.webgl.util;
 import elemental2.core.Float32Array;
 import elemental2.core.Uint16Array;
 import elemental2.promise.Promise;
-import elemental3.Global;
+import elemental3.Console;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
 import elemental3.gl.BufferTargetType;
@@ -105,7 +105,7 @@ public final class GL
     assert null != parameter;
     if ( !parameter.asBoolean() )
     {
-      Global.console().log( gl.getProgramInfoLog( program ) );
+      Console.log( gl.getProgramInfoLog( program ) );
       gl.deleteProgram( program );
       return null;
     }
@@ -129,7 +129,7 @@ public final class GL
     assert null != parameter;
     if ( !parameter.asBoolean() )
     {
-      Global.console().log( gl.getShaderInfoLog( shader ) );
+      Console.log( gl.getShaderInfoLog( shader ) );
       gl.deleteShader( shader );
       return null;
     }
