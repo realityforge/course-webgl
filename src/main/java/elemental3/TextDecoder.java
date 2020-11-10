@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
  * The TextDecoder interface represents a decoder for a specific text encoding, such as UTF-8, ISO-8859-2, KOI8-R, GBK, etc. A decoder takes a stream of bytes as input and emits a stream of code points.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder">TextDecoder - MDN</a>
- * @see <a href="https://encoding.spec.whatwg.org/#interface-textdecoder">The definition of 'TextDecoder' in Encoding.</a>
+ * @see <a href="https://encoding.spec.whatwg.org/#interface-textdecoder">The definition of 'TextDecoder' in the 'Encoding' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,6 +34,7 @@ public class TextDecoder {
    * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder">TextDecoder.TextDecoder - MDN</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder">The definition of 'TextDecoder()' in the 'Encoding' specification.</a>
    */
   public TextDecoder(@Nonnull final String label, @Nonnull final TextDecoderOptions options) {
   }
@@ -42,6 +43,7 @@ public class TextDecoder {
    * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder">TextDecoder.TextDecoder - MDN</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder">The definition of 'TextDecoder()' in the 'Encoding' specification.</a>
    */
   public TextDecoder(@Nonnull final String label) {
   }
@@ -50,6 +52,7 @@ public class TextDecoder {
    * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder">TextDecoder.TextDecoder - MDN</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder">The definition of 'TextDecoder()' in the 'Encoding' specification.</a>
    */
   public TextDecoder() {
   }
@@ -58,7 +61,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.encoding read-only property returns a DOMString containing the name of the decoding algorithm used by the specific decoder.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/encoding">TextDecoder.encoding - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-encoding">The definition of 'TextDecoder.encoding' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-encoding">The definition of 'TextDecoder.encoding' in the 'Encoding' specification.</a>
    */
   @JsProperty(
       name = "encoding"
@@ -80,7 +83,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull BufferSource input, @Nonnull TextDecodeOptions options);
@@ -89,7 +92,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull ArrayBufferView input, @Nonnull TextDecodeOptions options);
@@ -98,7 +101,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Int8Array input, @Nonnull TextDecodeOptions options);
@@ -107,7 +110,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Int16Array input, @Nonnull TextDecodeOptions options);
@@ -116,7 +119,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Int32Array input, @Nonnull TextDecodeOptions options);
@@ -125,7 +128,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint8Array input, @Nonnull TextDecodeOptions options);
@@ -134,7 +137,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint16Array input, @Nonnull TextDecodeOptions options);
@@ -143,7 +146,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint32Array input, @Nonnull TextDecodeOptions options);
@@ -152,7 +155,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint8ClampedArray input, @Nonnull TextDecodeOptions options);
@@ -161,7 +164,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Float32Array input, @Nonnull TextDecodeOptions options);
@@ -170,7 +173,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Float64Array input, @Nonnull TextDecodeOptions options);
@@ -179,7 +182,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull DataView input, @Nonnull TextDecodeOptions options);
@@ -188,7 +191,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull ArrayBuffer input, @Nonnull TextDecodeOptions options);
@@ -197,7 +200,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull BufferSource input);
@@ -206,7 +209,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull ArrayBufferView input);
@@ -215,7 +218,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Int8Array input);
@@ -224,7 +227,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Int16Array input);
@@ -233,7 +236,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Int32Array input);
@@ -242,7 +245,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint8Array input);
@@ -251,7 +254,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint16Array input);
@@ -260,7 +263,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint32Array input);
@@ -269,7 +272,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Uint8ClampedArray input);
@@ -278,7 +281,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Float32Array input);
@@ -287,7 +290,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull Float64Array input);
@@ -296,7 +299,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull DataView input);
@@ -305,7 +308,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode(@Nonnull ArrayBuffer input);
@@ -314,7 +317,7 @@ public class TextDecoder {
    * The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
-   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in Encoding.</a>
+   * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">The definition of 'TextDecoder.decode()' in the 'Encoding' specification.</a>
    */
   @Nonnull
   public native String decode();

@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver">PerformanceObserver - MDN</a>
+ * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver">The definition of 'PerformanceObserver' in the 'Performance Timeline Level 2' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class PerformanceObserver {
    * The PerformanceObserver() constructor creates a new PerformanceObserver object with the given observer callback. The observer callback is invoked when performance entry events are recorded for the entry types that have been registered, via the observe() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver">PerformanceObserver.PerformanceObserver - MDN</a>
+   * @see <a href="https://w3c.github.io/performance-timeline/#idl-def-performanceobservercallback">The definition of 'PerformanceObserver()' in the 'Performance Timeline Level 2' specification.</a>
    */
   public PerformanceObserver(@Nonnull final PerformanceObserverCallback callback) {
   }
@@ -37,6 +39,7 @@ public class PerformanceObserver {
    * The disconnect() method of the PerformanceObserver interface is used to stop the performance observer from receiving any performance entry events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/disconnect">PerformanceObserver.disconnect - MDN</a>
+   * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver-disconnect">The definition of 'disconnect()' in the 'Performance Timeline Level 2' specification.</a>
    */
   public native void disconnect();
 
@@ -44,6 +47,7 @@ public class PerformanceObserver {
    * The observe() method of the PerformanceObserver interface is used to specify the set of performance entry types to observe.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe">PerformanceObserver.observe - MDN</a>
+   * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver-observe">The definition of 'observe()' in the 'Performance Timeline Level 2' specification.</a>
    */
   public native void observe(@Nonnull PerformanceObserverInit options);
 
@@ -51,6 +55,7 @@ public class PerformanceObserver {
    * The observe() method of the PerformanceObserver interface is used to specify the set of performance entry types to observe.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe">PerformanceObserver.observe - MDN</a>
+   * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver-observe">The definition of 'observe()' in the 'Performance Timeline Level 2' specification.</a>
    */
   public native void observe();
 
@@ -58,6 +63,7 @@ public class PerformanceObserver {
    * The takeRecords() method of the PerformanceObserver interface returns the current list of performance entries stored in the performance observer, emptying it out.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/takeRecords">PerformanceObserver.takeRecords - MDN</a>
+   * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver-takerecords">The definition of 'takeRecords()' in the 'Performance Timeline Level 2' specification.</a>
    */
   @Nonnull
   public native JsArray<PerformanceEntry> takeRecords();

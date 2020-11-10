@@ -14,8 +14,8 @@ import jsinterop.base.Js;
  * Also inherits methods from its parents IDBRequest and EventTarget.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest">IDBOpenDBRequest - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbopendbrequest">The definition of 'IDBOpenDBRequest' in Indexed Database API 2.0.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#idbopendbrequest">The definition of 'IDBOpenDBRequest' in Indexed Database API Draft.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbopendbrequest">The definition of 'IDBOpenDBRequest' in the 'Indexed Database API 2.0' specification.</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#idbopendbrequest">The definition of 'IDBOpenDBRequest' in the 'Indexed Database API Draft' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,8 +28,8 @@ public class IDBOpenDBRequest extends IDBRequest {
    * The onblocked event handler of the IDBOpenDBRequest interface is the event handler for the blocked event. This event is triggered when the upgradeneeded should be triggered because of a version change but the database is still in use (that is, not closed) somewhere, even after the versionchange event was sent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/onblocked">IDBOpenDBRequest.onblocked - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onblocked">The definition of 'onblocked' in Indexed Database API 2.0.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onblocked">The definition of 'onblocked' in Indexed Database API Draft.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onblocked">The definition of 'onblocked' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onblocked">The definition of 'onblocked' in the 'Indexed Database API Draft' specification.</a>
    */
   @Nullable
   public IDBVersionChangeEventHandler onblocked;
@@ -38,8 +38,8 @@ public class IDBOpenDBRequest extends IDBRequest {
    * In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our To-do Notifications app (view example live.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded">IDBOpenDBRequest.onupgradeneeded - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onupgradeneeded">The definition of 'onupgradeneeded' in Indexed Database API 2.0.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onupgradeneeded">The definition of 'onupgradeneeded' in Indexed Database API Draft.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onupgradeneeded">The definition of 'onupgradeneeded' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onupgradeneeded">The definition of 'onupgradeneeded' in the 'Indexed Database API Draft' specification.</a>
    */
   @Nullable
   public IDBVersionChangeEventHandler onupgradeneeded;

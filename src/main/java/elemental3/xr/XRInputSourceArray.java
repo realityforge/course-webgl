@@ -13,6 +13,7 @@ import jsinterop.base.JsArrayLike;
  * The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray">XRInputSourceArray - MDN</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray-interface">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

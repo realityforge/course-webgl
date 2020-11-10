@@ -10,6 +10,8 @@ import jsinterop.annotations.JsType;
  * The SVGSymbolElement interface corresponds to the symbol element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSymbolElement">SVGSymbolElement - MDN</a>
+ * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGSymbolElement">The definition of 'SVGSymbolElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGSymbolElement">The definition of 'SVGSymbolElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

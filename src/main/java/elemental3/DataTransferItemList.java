@@ -14,8 +14,8 @@ import jsinterop.base.JsArrayLike;
  * The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList">DataTransferItemList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#datatransferitemlist">The definition of 'DataTransferItemList' in HTML Living Standard.</a>
- * @see <a href="https://www.w3.org/TR/html51/editing.html#datatransferitemlist">The definition of 'DataTransferItemList' in HTML 5.1.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#datatransferitemlist">The definition of 'DataTransferItemList' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://www.w3.org/TR/html51/editing.html#datatransferitemlist">The definition of 'DataTransferItemList' in the 'HTML 5.1' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,8 +31,8 @@ public class DataTransferItemList {
    * The read-only length property of the DataTransferItemList interface returns the number of items currently in the drag item list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/length">DataTransferItemList.length - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-length">The definition of 'length' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-length">The definition of 'length' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-length">The definition of 'length' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-length">The definition of 'length' in the 'HTML 5.1' specification.</a>
    */
   @JsProperty(
       name = "length"
@@ -43,8 +43,6 @@ public class DataTransferItemList {
    * The DataTransferItemList.add() method creates a new DataTransferItem using the specified data and adds it to the drag data list. The item may be a File or a string of a given type. If the item is successfully added to the list, the newly-created DataTransferItem object is returned.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/add">DataTransferItemList.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-add">The definition of 'add()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-add">The definition of 'add()' in HTML 5.1.</a>
    */
   @Nullable
   public native DataTransferItem add(@Nonnull String data, @Nonnull String type);
@@ -53,8 +51,6 @@ public class DataTransferItemList {
    * The DataTransferItemList.add() method creates a new DataTransferItem using the specified data and adds it to the drag data list. The item may be a File or a string of a given type. If the item is successfully added to the list, the newly-created DataTransferItem object is returned.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/add">DataTransferItemList.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-add">The definition of 'add()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-add">The definition of 'add()' in HTML 5.1.</a>
    */
   @Nullable
   public native DataTransferItem add(@Nonnull File data);
@@ -63,8 +59,8 @@ public class DataTransferItemList {
    * The DataTransferItemList method clear() removes all DataTransferItem objects from the drag data items list, leaving the list empty.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/clear">DataTransferItemList.clear - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-clear">The definition of 'clear()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-clear">The definition of 'clear()' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-clear">The definition of 'clear()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-clear">The definition of 'clear()' in the 'HTML 5.1' specification.</a>
    */
   public native void clear();
 
@@ -72,8 +68,8 @@ public class DataTransferItemList {
    * undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/remove">DataTransferItemList.remove - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-remove">The definition of 'remove()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-remove">The definition of 'remove()' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-remove">The definition of 'remove()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-remove">The definition of 'remove()' in the 'HTML 5.1' specification.</a>
    */
   public native void remove(int index);
 

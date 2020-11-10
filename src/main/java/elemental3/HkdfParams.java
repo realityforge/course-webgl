@@ -24,6 +24,7 @@ import jsinterop.base.JsPropertyMap;
  * See the examples for SubtleCrypto.deriveKey().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams">The definition of 'SubtleCrypto.HkdfParams' in the 'Web Cryptography API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

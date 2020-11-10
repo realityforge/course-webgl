@@ -45,6 +45,8 @@ public class CharacterData extends Node {
    * The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/previousElementSibling">CharacterData.previousElementSibling - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-previouselementsibling">The definition of 'NonDocumentTypeChildNode.previousElementSibling' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-previousElementSibling">The definition of 'ElementTraversal.previousElementSibling' in the 'Element Traversal Specification' specification.</a>
    */
   @JsProperty(
       name = "previousElementSibling"
@@ -95,6 +97,7 @@ public class CharacterData extends Node {
    * The ChildNode.remove() method removes the object from the tree it belongs to.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/remove">CharacterData.remove - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-childnode-remove">The definition of 'ChildNode.remove' in the 'DOM' specification.</a>
    */
   public native void remove();
 

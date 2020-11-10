@@ -21,6 +21,7 @@ public class Comment extends CharacterData {
    * The Comment() constructor returns a newly created Comment object with the optional DOMString given in parameter as its textual content.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment/Comment">Comment.Comment - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-comment-comment">The definition of 'Comment: Comment' in the 'DOM' specification.</a>
    */
   public Comment(@Nonnull final String data) {
   }
@@ -29,6 +30,7 @@ public class Comment extends CharacterData {
    * The Comment() constructor returns a newly created Comment object with the optional DOMString given in parameter as its textual content.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment/Comment">Comment.Comment - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-comment-comment">The definition of 'Comment: Comment' in the 'DOM' specification.</a>
    */
   public Comment() {
   }

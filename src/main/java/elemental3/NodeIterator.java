@@ -26,6 +26,8 @@ public class NodeIterator {
    * The NodeIterator.filter read-only method returns a NodeFilter object, that is an object implement an acceptNode(node) method, used to screen nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/filter">NodeIterator.filter - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-nodeiterator-filter">The definition of 'NodeIterator.filter' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator-filter">The definition of 'NodeIterator.filter' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
    */
   @JsProperty(
       name = "filter"

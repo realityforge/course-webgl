@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebXR Device API's XRWebGLLayerInit dictionary is used to provide configuration options when creating a new XRWebGLLayer object with the XRWebGLLayer() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit">XRWebGLLayerInit - MDN</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrwebgllayerinit">The definition of 'XRWebGLLayerInit' in the 'WebXR Device API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,6 +32,7 @@ public interface XRWebGLLayerInit {
    * The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha">XRWebGLLayerInit.alpha - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-alpha">The definition of 'XRWebGLLayerInit.alpha' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "alpha"
@@ -41,6 +43,7 @@ public interface XRWebGLLayerInit {
    * The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha">XRWebGLLayerInit.alpha - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-alpha">The definition of 'XRWebGLLayerInit.alpha' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setAlpha(boolean alpha);
@@ -49,6 +52,7 @@ public interface XRWebGLLayerInit {
    * The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha">XRWebGLLayerInit.alpha - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-alpha">The definition of 'XRWebGLLayerInit.alpha' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -61,6 +65,7 @@ public interface XRWebGLLayerInit {
    * The Boolean antialias property, if present and set to true in the XRWebGLLayerInit object provided as the XRWebGLLayer() constructor's layerInit parameter, requests that the new WebGL rendering layer support anti-aliasing. If this property is missing or is false, anti-aliasing is not desired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/antialias">XRWebGLLayerInit.antialias - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-antialias">The definition of 'XRWebGLLayerInit.antialias' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "antialias"
@@ -71,6 +76,7 @@ public interface XRWebGLLayerInit {
    * The Boolean antialias property, if present and set to true in the XRWebGLLayerInit object provided as the XRWebGLLayer() constructor's layerInit parameter, requests that the new WebGL rendering layer support anti-aliasing. If this property is missing or is false, anti-aliasing is not desired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/antialias">XRWebGLLayerInit.antialias - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-antialias">The definition of 'XRWebGLLayerInit.antialias' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setAntialias(boolean antialias);
@@ -79,6 +85,7 @@ public interface XRWebGLLayerInit {
    * The Boolean antialias property, if present and set to true in the XRWebGLLayerInit object provided as the XRWebGLLayer() constructor's layerInit parameter, requests that the new WebGL rendering layer support anti-aliasing. If this property is missing or is false, anti-aliasing is not desired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/antialias">XRWebGLLayerInit.antialias - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-antialias">The definition of 'XRWebGLLayerInit.antialias' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -91,6 +98,7 @@ public interface XRWebGLLayerInit {
    * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth">XRWebGLLayerInit.depth - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-depth">The definition of 'XRWebGLLayerInit.depth' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "depth"
@@ -101,6 +109,7 @@ public interface XRWebGLLayerInit {
    * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth">XRWebGLLayerInit.depth - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-depth">The definition of 'XRWebGLLayerInit.depth' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setDepth(boolean depth);
@@ -109,6 +118,7 @@ public interface XRWebGLLayerInit {
    * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth">XRWebGLLayerInit.depth - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-depth">The definition of 'XRWebGLLayerInit.depth' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -121,6 +131,7 @@ public interface XRWebGLLayerInit {
    * The XRWebGLLayerInit dictionary's framebufferScaleFactor property, when specified upon instantiating a new XRWebGLLayer using its constructor, XRWebGLLayer(), specifies the scaling factor to use when determining the size of the frame buffer to use when rendering the scene, relative to the default XR device display resolution.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/framebufferScaleFactor">XRWebGLLayerInit.framebufferScaleFactor - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-framebufferscalefactor">The definition of 'XRWebGLLayerInit.framebufferScaleFactor' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "framebufferScaleFactor"
@@ -131,6 +142,7 @@ public interface XRWebGLLayerInit {
    * The XRWebGLLayerInit dictionary's framebufferScaleFactor property, when specified upon instantiating a new XRWebGLLayer using its constructor, XRWebGLLayer(), specifies the scaling factor to use when determining the size of the frame buffer to use when rendering the scene, relative to the default XR device display resolution.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/framebufferScaleFactor">XRWebGLLayerInit.framebufferScaleFactor - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-framebufferscalefactor">The definition of 'XRWebGLLayerInit.framebufferScaleFactor' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setFramebufferScaleFactor(double framebufferScaleFactor);
@@ -139,6 +151,7 @@ public interface XRWebGLLayerInit {
    * The XRWebGLLayerInit dictionary's framebufferScaleFactor property, when specified upon instantiating a new XRWebGLLayer using its constructor, XRWebGLLayer(), specifies the scaling factor to use when determining the size of the frame buffer to use when rendering the scene, relative to the default XR device display resolution.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/framebufferScaleFactor">XRWebGLLayerInit.framebufferScaleFactor - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-framebufferscalefactor">The definition of 'XRWebGLLayerInit.framebufferScaleFactor' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -151,6 +164,7 @@ public interface XRWebGLLayerInit {
    * The XRWebGLLayerInit dictionary's Boolean ignoreDepthValues property can be provided in the options passed into the XRWebGLLayer() constructor to indicate that the depth buffer, if it exists, should be ignored while composing the scene.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/ignoreDepthValues">XRWebGLLayerInit.ignoreDepthValues - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-ignoredepthvalues">The definition of 'XRWebGLLayerInit.ignoreDepthValues' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "ignoreDepthValues"
@@ -161,6 +175,7 @@ public interface XRWebGLLayerInit {
    * The XRWebGLLayerInit dictionary's Boolean ignoreDepthValues property can be provided in the options passed into the XRWebGLLayer() constructor to indicate that the depth buffer, if it exists, should be ignored while composing the scene.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/ignoreDepthValues">XRWebGLLayerInit.ignoreDepthValues - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-ignoredepthvalues">The definition of 'XRWebGLLayerInit.ignoreDepthValues' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setIgnoreDepthValues(boolean ignoreDepthValues);
@@ -169,6 +184,7 @@ public interface XRWebGLLayerInit {
    * The XRWebGLLayerInit dictionary's Boolean ignoreDepthValues property can be provided in the options passed into the XRWebGLLayer() constructor to indicate that the depth buffer, if it exists, should be ignored while composing the scene.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/ignoreDepthValues">XRWebGLLayerInit.ignoreDepthValues - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-ignoredepthvalues">The definition of 'XRWebGLLayerInit.ignoreDepthValues' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -181,6 +197,7 @@ public interface XRWebGLLayerInit {
    * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil">XRWebGLLayerInit.stencil - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-stencil">The definition of 'XRWebGLLayerInit.stencil' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "stencil"
@@ -191,6 +208,7 @@ public interface XRWebGLLayerInit {
    * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil">XRWebGLLayerInit.stencil - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-stencil">The definition of 'XRWebGLLayerInit.stencil' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setStencil(boolean stencil);
@@ -199,6 +217,7 @@ public interface XRWebGLLayerInit {
    * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil">XRWebGLLayerInit.stencil - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-stencil">The definition of 'XRWebGLLayerInit.stencil' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull

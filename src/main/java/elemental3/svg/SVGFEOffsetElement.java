@@ -10,6 +10,8 @@ import jsinterop.annotations.JsType;
  * The SVGFEOffsetElement interface corresponds to the feOffset element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEOffsetElement">SVGFEOffsetElement - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEOffsetElement">The definition of 'SVGFEOffsetElement' in the 'Filter Effects Module Level 1' specification.</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEOffsetElement">The definition of 'SVGFEOffsetElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

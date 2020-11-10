@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The SVGFEConvolveMatrixElement interface corresponds to the feConvolveMatrix element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEConvolveMatrixElement">SVGFEConvolveMatrixElement - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEConvolveMatrixElement">The definition of 'SVGFEConvolveMatrixElement' in the 'Filter Effects Module Level 1' specification.</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEConvolveMatrixElement">The definition of 'SVGFEConvolveMatrixElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

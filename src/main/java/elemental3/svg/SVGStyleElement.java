@@ -12,6 +12,8 @@ import jsinterop.annotations.JsType;
  * The SVGStyleElement interface corresponds to the SVG style element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement">SVGStyleElement - MDN</a>
+ * @see <a href="https://svgwg.org/svg2-draft/styling.html#InterfaceSVGStyleElement">The definition of 'SVGStyleElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/styling.html#InterfaceSVGStyleElement">The definition of 'SVGStyleElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

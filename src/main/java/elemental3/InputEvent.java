@@ -8,9 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The InputEvent interface represents an event notifying of editable content change.
+ * The InputEvent interface represents an event notifying the user of editable content changes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent">InputEvent - MDN</a>
+ * @see <a href="https://w3c.github.io/input-events/#interface-InputEvent">The definition of 'InputEvent' in the 'Input Events Level 2' specification.</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-inputevent">The definition of 'InputEvent' in the 'UI Events' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -41,6 +43,7 @@ public class InputEvent extends UIEvent {
    * The data read-only property of the InputEvent interface returns a DOMString with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/data">InputEvent.data - MDN</a>
+   * @see <a href="https://w3c.github.io/input-events/#dfn-data">The definition of 'data' in the 'Input Events Level 2' specification.</a>
    */
   @JsProperty(
       name = "data"
@@ -52,6 +55,7 @@ public class InputEvent extends UIEvent {
    * The inputType read-only property of the InputEvent interface returns the type of change made to editible content. Possible changes include for example inserting, deleting, and formatting text.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType">InputEvent.inputType - MDN</a>
+   * @see <a href="https://w3c.github.io/uievents/#dom-inputevent-inputtype">The definition of 'inputType' in the 'UI Events' specification.</a>
    */
   @JsProperty(
       name = "inputType"
@@ -63,6 +67,7 @@ public class InputEvent extends UIEvent {
    * The InputEvent.isComposing read-only property returns a Boolean value indicating if the event is fired after compositionstart and before compositionend.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/isComposing">InputEvent.isComposing - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-InputEvent-isComposing">The definition of 'InputEvent.isComposing' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
    */
   @JsProperty(
       name = "isComposing"

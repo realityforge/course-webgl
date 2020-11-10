@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The SVGFEColorMatrixElement interface corresponds to the feColorMatrix element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement">SVGFEColorMatrixElement - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEColorMatrixElement">The definition of 'SVGFEColorMatrixElement' in the 'Filter Effects Module Level 1' specification.</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEColorMatrixElement">The definition of 'SVGFEColorMatrixElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

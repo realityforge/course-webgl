@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair">RTCIceCandidatePair - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidatepair">The definition of 'RTCIceCandidatePair' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidatepair">The definition of 'RTCIceCandidatePair' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public interface RTCIceCandidatePair {
    * The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local">RTCIceCandidatePair.local - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">The definition of 'RTCIceCandidatePair.local' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">The definition of 'RTCIceCandidatePair.local' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsProperty(
       name = "local"
@@ -43,7 +43,7 @@ public interface RTCIceCandidatePair {
    * The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local">RTCIceCandidatePair.local - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">The definition of 'RTCIceCandidatePair.local' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">The definition of 'RTCIceCandidatePair.local' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsProperty
   void setLocal(@Nonnull RTCIceCandidate local);
@@ -52,7 +52,7 @@ public interface RTCIceCandidatePair {
    * The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local">RTCIceCandidatePair.local - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">The definition of 'RTCIceCandidatePair.local' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">The definition of 'RTCIceCandidatePair.local' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -65,7 +65,7 @@ public interface RTCIceCandidatePair {
    * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote">RTCIceCandidatePair.remote - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">The definition of 'RTCIceCandidatePair.remote' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">The definition of 'RTCIceCandidatePair.remote' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsProperty(
       name = "remote"
@@ -76,7 +76,7 @@ public interface RTCIceCandidatePair {
    * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote">RTCIceCandidatePair.remote - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">The definition of 'RTCIceCandidatePair.remote' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">The definition of 'RTCIceCandidatePair.remote' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsProperty
   void setRemote(@Nonnull RTCIceCandidate remote);
@@ -85,7 +85,7 @@ public interface RTCIceCandidatePair {
    * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote">RTCIceCandidatePair.remote - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">The definition of 'RTCIceCandidatePair.remote' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">The definition of 'RTCIceCandidatePair.remote' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsOverlay
   @Nonnull

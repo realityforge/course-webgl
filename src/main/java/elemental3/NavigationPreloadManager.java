@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The NavigationPreloadManager interface of the the Service Worker API provides methods for managing the preloading of resources with a service worker.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager">NavigationPreloadManager - MDN</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#navigation-preload-manager">The definition of 'NavigationPreloadManager' in the 'Service Workers' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

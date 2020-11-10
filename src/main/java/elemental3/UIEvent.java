@@ -11,6 +11,10 @@ import jsinterop.annotations.JsType;
  * The UIEvent interface represents simple user interface events.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent">UIEvent - MDN</a>
+ * @see <a href="https://wicg.github.io/InputDeviceCapabilities/">InputDeviceCapabilities</a>
+ * @see <a href="https://w3c.github.io/uievents/">UI Events</a>
+ * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-UIEvent">The definition of 'UIEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">The definition of 'UIEvent' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +27,8 @@ public class UIEvent extends Event {
    * The UIEvent() constructor creates a new UIEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/UIEvent">UIEvent.UIEvent - MDN</a>
+   * @see <a href="https://wicg.github.io/InputDeviceCapabilities/">InputDeviceCapabilities</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-UIEvent">The definition of 'UIEvent()' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
    */
   public UIEvent(@Nonnull final String type, @Nonnull final UIEventInit eventInitDict) {
     super( null );
@@ -32,6 +38,8 @@ public class UIEvent extends Event {
    * The UIEvent() constructor creates a new UIEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/UIEvent">UIEvent.UIEvent - MDN</a>
+   * @see <a href="https://wicg.github.io/InputDeviceCapabilities/">InputDeviceCapabilities</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-UIEvent">The definition of 'UIEvent()' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
    */
   public UIEvent(@Nonnull final String type) {
     super( null );
@@ -41,6 +49,8 @@ public class UIEvent extends Event {
    * The UIEvent.detail read-only property, when non-zero, provides the current (or next, depending on the event) click count.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail">UIEvent.detail - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-detail">The definition of 'UIEvent.detail' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent-detail">The definition of 'UIEvent.detail' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
    */
   @JsProperty(
       name = "detail"
@@ -51,6 +61,8 @@ public class UIEvent extends Event {
    * The UIEvent.view read-only property returns the WindowProxy object from which the event was generated. In browsers, this is the Window object the event happened in.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/view">UIEvent.view - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-UIEvent">The definition of 'UIEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">The definition of 'UIEvent' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
    */
   @JsProperty(
       name = "view"

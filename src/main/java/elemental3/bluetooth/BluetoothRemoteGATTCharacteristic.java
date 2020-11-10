@@ -32,6 +32,7 @@ import jsinterop.base.Js;
  * The BluetoothRemoteGattCharacteristic interface of the Web Bluetooth API represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral&rsquo;s service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic">BluetoothRemoteGATTCharacteristic - MDN</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattcharacteristic">The definition of 'BluetoothRemoteGATTCharacteristic' in the 'Web Bluetooth' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -50,6 +51,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.properties read-only property returns a BluetoothCharacteristicProperties instance containing the properties of this characteristic.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/properties">BluetoothRemoteGATTCharacteristic.properties - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-properties">The definition of 'properties' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "properties"
@@ -61,6 +63,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.service read-only property returns the BluetoothGATTService this characteristic belongs to.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/service">BluetoothRemoteGATTCharacteristic.service - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-service">The definition of 'service' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "service"
@@ -72,6 +75,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.uuid read-only property returns DOMString containing the UUID of the characteristic, for example '00002a37-0000-1000-8000-00805f9b34fb' for the Heart Rate Measurement characteristic.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/uuid">BluetoothRemoteGATTCharacteristic.uuid - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-uuid">The definition of 'uuid' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "uuid"
@@ -83,6 +87,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.value read-only property returns currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/value">BluetoothRemoteGATTCharacteristic.value - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-value">The definition of 'value' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "value"
@@ -94,6 +99,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptor() method returns a Promise that resolves to the first BluetoothGATTDescriptor for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor">BluetoothRemoteGATTCharacteristic.getDescriptor - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor">The definition of 'getDescriptor()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(
@@ -103,6 +109,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptor() method returns a Promise that resolves to the first BluetoothGATTDescriptor for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor">BluetoothRemoteGATTCharacteristic.getDescriptor - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor">The definition of 'getDescriptor()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(@Nonnull String descriptor);
@@ -111,6 +118,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptor() method returns a Promise that resolves to the first BluetoothGATTDescriptor for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor">BluetoothRemoteGATTCharacteristic.getDescriptor - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor">The definition of 'getDescriptor()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(int descriptor);
@@ -119,6 +127,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">The definition of 'getDescriptors()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors(
@@ -128,6 +137,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">The definition of 'getDescriptors()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors(
@@ -137,6 +147,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">The definition of 'getDescriptors()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors(int descriptor);
@@ -145,6 +156,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">The definition of 'getDescriptors()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors();
@@ -153,6 +165,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.readValue() method returns a Promise that resolves to a DataView holding a duplicate of the value property if it is available and supported. Otherwise it throws an error.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/readValue">BluetoothRemoteGATTCharacteristic.readValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-readvalue">The definition of 'readValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<DataView> readValue();
@@ -161,6 +174,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.startNotifications() method returns a Promise to the BluetoothRemoteGATTCharacteristic instance when there is an active notification on it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/startNotifications">BluetoothRemoteGATTCharacteristic.startNotifications - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-startnotifications">The definition of 'startNotifications()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> startNotifications();
@@ -169,6 +183,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.stopNotifications() method returns a Promise to the BluetoothRemoteGATTCharacteristic instance when there is no longer an active notification on it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications">BluetoothRemoteGATTCharacteristic.stopNotifications - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-stopnotifications">The definition of 'stopNotifications()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> stopNotifications();
@@ -177,6 +192,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull BufferSource value);
@@ -185,6 +201,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull ArrayBufferView value);
@@ -193,6 +210,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Int8Array value);
@@ -201,6 +219,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Int16Array value);
@@ -209,6 +228,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Int32Array value);
@@ -217,6 +237,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Uint8Array value);
@@ -225,6 +246,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Uint16Array value);
@@ -233,6 +255,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Uint32Array value);
@@ -241,6 +264,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Uint8ClampedArray value);
@@ -249,6 +273,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Float32Array value);
@@ -257,6 +282,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull Float64Array value);
@@ -265,6 +291,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull DataView value);
@@ -273,6 +300,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull ArrayBuffer value);

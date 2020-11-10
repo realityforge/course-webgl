@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * See the examples for SubtleCrypto.importKey().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-EcKeyImportParams">The definition of 'SubtleCrypto.EcKeyImportParams' in the 'Web Cryptography API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

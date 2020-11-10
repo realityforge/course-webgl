@@ -20,6 +20,7 @@ import jsinterop.annotations.JsType;
  * The Crypto interface represents basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto">Crypto - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#crypto-interface">The definition of 'Crypto' in the 'Web Cryptography API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -35,6 +36,7 @@ public class Crypto {
    * The Crypto.subtle read-only property returns a SubtleCrypto which can then be used to perform low-level cryptographic operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle">Crypto.subtle - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-Crypto">The definition of 'Crypto.subtle' in the 'Web Cryptography API' specification.</a>
    */
   @JsProperty(
       name = "subtle"

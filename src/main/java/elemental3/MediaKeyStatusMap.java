@@ -23,6 +23,7 @@ import jsinterop.base.Any;
  * The MediaKeyStatusMap interface of the EncryptedMediaExtensions API is a read-only map of media key statuses by key IDs.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap">MediaKeyStatusMap - MDN</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface">The definition of 'MediaKeyStatusMap' in the 'Encrypted Media Extensions' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -38,6 +39,7 @@ public class MediaKeyStatusMap {
    * The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/size">MediaKeyStatusMap.size - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-size">The definition of 'size' in the 'Encrypted Media Extensions' specification.</a>
    */
   @JsProperty(
       name = "size"
@@ -48,6 +50,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull BufferSource keyId);
@@ -56,6 +59,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull ArrayBufferView keyId);
@@ -64,6 +68,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Int8Array keyId);
@@ -72,6 +77,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Int16Array keyId);
@@ -80,6 +86,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Int32Array keyId);
@@ -88,6 +95,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Uint8Array keyId);
@@ -96,6 +104,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Uint16Array keyId);
@@ -104,6 +113,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Uint32Array keyId);
@@ -112,6 +122,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Uint8ClampedArray keyId);
@@ -120,6 +131,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Float32Array keyId);
@@ -128,6 +140,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull Float64Array keyId);
@@ -136,6 +149,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull DataView keyId);
@@ -144,6 +158,7 @@ public class MediaKeyStatusMap {
    * The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @Nullable
   public native Any get(@Nonnull ArrayBuffer keyId);
@@ -152,6 +167,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull BufferSource keyId);
 
@@ -159,6 +175,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull ArrayBufferView keyId);
 
@@ -166,6 +183,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Int8Array keyId);
 
@@ -173,6 +191,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Int16Array keyId);
 
@@ -180,6 +199,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Int32Array keyId);
 
@@ -187,6 +207,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Uint8Array keyId);
 
@@ -194,6 +215,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Uint16Array keyId);
 
@@ -201,6 +223,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Uint32Array keyId);
 
@@ -208,6 +231,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Uint8ClampedArray keyId);
 
@@ -215,6 +239,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Float32Array keyId);
 
@@ -222,6 +247,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull Float64Array keyId);
 
@@ -229,6 +255,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull DataView keyId);
 
@@ -236,6 +263,7 @@ public class MediaKeyStatusMap {
    * The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has">MediaKeyStatusMap.has - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull ArrayBuffer keyId);
 }

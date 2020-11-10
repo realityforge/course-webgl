@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The SVGFETurbulenceElement interface corresponds to the feTurbulence element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement">SVGFETurbulenceElement - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFETurbulenceElement">The definition of 'SVGFETurbulenceElement' in the 'Filter Effects Module Level 1' specification.</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFETurbulenceElement">The definition of 'SVGFETurbulenceElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

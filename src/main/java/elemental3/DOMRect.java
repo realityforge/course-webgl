@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * A DOMRect represents a rectangle.
+ * A DOMRect describes the size and position of a rectangle.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect">DOMRect - MDN</a>
  */

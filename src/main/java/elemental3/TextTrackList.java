@@ -14,7 +14,7 @@ import jsinterop.base.JsArrayLike;
  * The TextTrackList interface is used to represent a list of the text tracks defined by the track element, with each track represented by a separate textTrack object in the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList">TextTrackList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#texttracklist">The definition of 'TexTrackList' in HTML Living Standard.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#texttracklist">The definition of 'TexTrackList' in the 'HTML Living Standard' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,7 +27,7 @@ public class TextTrackList extends EventTarget {
    * The TextTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new text track has been added to the media element whose text tracks the TextTrackList represents.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onaddtrack">TextTrackList.onaddtrack - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">The definition of 'TextTrackList: onaddtrack' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">The definition of 'TextTrackList: onaddtrack' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public TrackEventHandler onaddtrack;
@@ -36,7 +36,7 @@ public class TextTrackList extends EventTarget {
    * The TextTrackList property onchange is an event handler which is called when the change event occurs, indicating that a change has occurred on a TextTrack in the VideoTrackList.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onchange">TextTrackList.onchange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">The definition of 'TextTrackList: onchange' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">The definition of 'TextTrackList: onchange' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -45,7 +45,7 @@ public class TextTrackList extends EventTarget {
    * The TextTrackList onremovetrack event handler is called when the removetrack event occurs, indicating that a text track has been removed from the media element, and therefore also from the TextTrackList.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onremovetrack">TextTrackList.onremovetrack - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">The definition of 'TextTrackList: onremovetrack' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">The definition of 'TextTrackList: onremovetrack' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onremovetrack;
@@ -57,7 +57,7 @@ public class TextTrackList extends EventTarget {
    * The read-only TextTrackList property length returns the number of entries in the TextTrackList, each of which is a TextTrack representing one track in the media element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/length">TextTrackList.length - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttracklist-length">The definition of 'TextTrackList: length' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttracklist-length">The definition of 'TextTrackList: length' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "length"
@@ -68,7 +68,7 @@ public class TextTrackList extends EventTarget {
    * The TextTrackList method getTrackById() returns the first TextTrack object from the track list whose id matches the specified string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/getTrackById">TextTrackList.getTrackById - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttracklist-gettrackbyid">The definition of 'TextTrackList.getTrackById()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttracklist-gettrackbyid">The definition of 'TextTrackList.getTrackById()' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public native TextTrack getTrackById(@Nonnull String id);

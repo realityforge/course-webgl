@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
  * The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#the-navigator-object">The definition of 'the Navigator object' in HTML Living Standard.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#the-navigator-object">The definition of 'the Navigator object' in the 'HTML Living Standard' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -43,7 +43,7 @@ public class Navigator {
    * The value of the NavigatorID.appCodeName property is always &quot;Mozilla&quot;, in any browser. This property is kept only for compatibility purposes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appCodeName">Navigator.appCodeName - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-appcodename">The definition of 'NavigatorID.appCodeName' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-appcodename">The definition of 'NavigatorID.appCodeName' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "appCodeName"
@@ -55,7 +55,7 @@ public class Navigator {
    * The value of the NavigatorID.appName property is always &quot;Netscape&quot;, in any browser. This property is kept only for compatibility purposes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appName">Navigator.appName - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-appname">The definition of 'NavigatorID.appName' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-appname">The definition of 'NavigatorID.appName' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "appName"
@@ -67,7 +67,7 @@ public class Navigator {
    * Returns either &quot;4.0&quot; or a string representing version information about the browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appVersion">Navigator.appVersion - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-appversion">The definition of 'NavigatorID.appVersion' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-appversion">The definition of 'NavigatorID.appVersion' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "appVersion"
@@ -85,7 +85,7 @@ public class Navigator {
    * The Clipboard API adds to the Navigator interface the read-only clipboard property, which returns the Clipboard object used to read and write the clipboard's contents.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard">Navigator.clipboard - MDN</a>
-   * @see <a href="https://w3c.github.io/clipboard-apis/#navigator-clipboard">The definition of 'navigator.clipboard' in Clipboard API and events.</a>
+   * @see <a href="https://w3c.github.io/clipboard-apis/#navigator-clipboard">The definition of 'navigator.clipboard' in the 'Clipboard API and events' specification.</a>
    */
   @JsProperty(
       name = "clipboard"
@@ -97,7 +97,7 @@ public class Navigator {
    * navigator.cookieEnabled returns a Boolean value that indicates whether cookies are enabled or not.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled">Navigator.cookieEnabled - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-navigator-cookieenabled">The definition of 'Navigator.cookieEnabled' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-navigator-cookieenabled">The definition of 'Navigator.cookieEnabled' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "cookieEnabled"
@@ -120,7 +120,7 @@ public class Navigator {
    * The Navigator.geolocation read-only property returns a Geolocation object that gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation">Navigator.geolocation - MDN</a>
-   * @see <a href="https://w3c.github.io/geolocation-api/#dom-navigator-geolocation">The definition of 'Navigator.geolocation' in Geolocation API.</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-navigator-geolocation">The definition of 'Navigator.geolocation' in the 'Geolocation API' specification.</a>
    */
   @JsProperty(
       name = "geolocation"
@@ -132,7 +132,6 @@ public class Navigator {
    * The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency">NavigatorConcurrentHardware.hardwareConcurrency - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-hardwareconcurrency">The definition of 'navigator.hardwareConcurrency' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "hardwareConcurrency"
@@ -143,7 +142,7 @@ public class Navigator {
    * The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language">Navigator.language - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-language">The definition of 'NavigatorLanguage: language' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-language">The definition of 'NavigatorLanguage: language' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "language"
@@ -155,7 +154,7 @@ public class Navigator {
    * The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/languages">Navigator.languages - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-languages">The definition of 'NavigatorLanguage: languages' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-languages">The definition of 'NavigatorLanguage: languages' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "languages"
@@ -167,8 +166,8 @@ public class Navigator {
    * The maxTouchPoints read-only property of the Navigator interface returns the maximum number of simultaneous touch contact points are supported by the current device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/maxTouchPoints">Navigator.maxTouchPoints - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#extensions-to-the-navigator-interface">The definition of 'maxTouchPoints' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#extensions-to-the-navigator-interface">The definition of 'maxTouchPoints' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#extensions-to-the-navigator-interface">The definition of 'maxTouchPoints' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#extensions-to-the-navigator-interface">The definition of 'maxTouchPoints' in the 'Pointer Events' specification.</a>
    */
   @JsProperty(
       name = "maxTouchPoints"
@@ -179,7 +178,7 @@ public class Navigator {
    * The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices">Navigator.mediaDevices - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#mediadevices">The definition of 'NavigatorUserMedia.mediaDevices' in Media Capture and Streams.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#mediadevices">The definition of 'NavigatorUserMedia.mediaDevices' in the 'Media Capture and Streams' specification.</a>
    */
   @JsProperty(
       name = "mediaDevices"
@@ -191,7 +190,7 @@ public class Navigator {
    * Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes">NavigatorPlugins.mimeTypes - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-mimetypes">The definition of 'NavigatorPlugins.mimeTypes' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-mimetypes">The definition of 'NavigatorPlugins.mimeTypes' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "mimeTypes"
@@ -203,7 +202,7 @@ public class Navigator {
    * Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine">Navigator.onLine - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-navigator-online">The definition of 'navigator.onLine' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-navigator-online">The definition of 'navigator.onLine' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "onLine"
@@ -214,6 +213,7 @@ public class Navigator {
    * The Navigator.oscpu property returns a string that identifies the current operating system.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu">Navigator.oscpu - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-oscpu">The definition of 'NavigatorID: oscpu' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "oscpu"
@@ -225,7 +225,6 @@ public class Navigator {
    * The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions">Navigator.permissions - MDN</a>
-   * @see <a href="https://w3c.github.io/permissions/">Permissions</a>
    */
   @JsProperty(
       name = "permissions"
@@ -237,7 +236,7 @@ public class Navigator {
    * Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform">Navigator.platform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-platform">The definition of 'NavigatorID.platform' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-platform">The definition of 'NavigatorID.platform' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "platform"
@@ -249,7 +248,7 @@ public class Navigator {
    * Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/plugins">NavigatorPlugins.plugins - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-plugins">The definition of 'NavigatorPlugins.plugins' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-plugins">The definition of 'NavigatorPlugins.plugins' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "plugins"
@@ -261,7 +260,7 @@ public class Navigator {
    * The value of the NavigatorID.product property is always &quot;Gecko&quot;, in any browser. This property is kept only for compatibility purposes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/product">Navigator.product - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-product">The definition of 'NavigatorID.product' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-product">The definition of 'NavigatorID.product' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "product"
@@ -273,7 +272,7 @@ public class Navigator {
    * The Navigator.productSub read-only property returns the build number of the current browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub">Navigator.productSub - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-productsub">The definition of 'NavigatorID: productSub' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-productsub">The definition of 'NavigatorID: productSub' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "productSub"
@@ -285,7 +284,7 @@ public class Navigator {
    * The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/serviceWorker">Navigator.serviceWorker - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-serviceworker">The definition of 'navigator.serviceWorker' in Service Workers.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-serviceworker">The definition of 'navigator.serviceWorker' in the 'Service Workers' specification.</a>
    */
   @JsProperty(
       name = "serviceWorker"
@@ -297,7 +296,7 @@ public class Navigator {
    * The NavigatorStorage.storage read-only property returns the singleton StorageManager object used to access the overall storage capabilities of the browser for the current site or app.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage">NavigatorStorage.storage - MDN</a>
-   * @see <a href="https://storage.spec.whatwg.org/#navigatorstorage">The definition of 'navigator.storage' in Storage.</a>
+   * @see <a href="https://storage.spec.whatwg.org/#navigatorstorage">The definition of 'navigator.storage' in the 'Storage' specification.</a>
    */
   @JsProperty(
       name = "storage"
@@ -309,7 +308,7 @@ public class Navigator {
    * The NavigatorID.userAgent read-only property returns the user agent string for the current browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent">Navigator.userAgent - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-useragent">The definition of 'NavigatorID.userAgent' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-useragent">The definition of 'NavigatorID.userAgent' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "userAgent"
@@ -321,7 +320,7 @@ public class Navigator {
    * The value of the Navigator vendor property is always either &quot;Google Inc.&quot;, &quot;Apple Computer, Inc.&quot;, or (in Firefox) the empty string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor">Navigator.vendor - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-vendor">The definition of 'NavigatorID: vendor' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-vendor">The definition of 'NavigatorID: vendor' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "vendor"
@@ -333,7 +332,7 @@ public class Navigator {
    * The value of the Navigator.vendorSub property is always the empty string, in any browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendorSub">Navigator.vendorSub - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-vendorsub">The definition of 'NavigatorID: vendorSub' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-vendorsub">The definition of 'NavigatorID: vendorSub' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "vendorSub"
@@ -356,7 +355,7 @@ public class Navigator {
    * The webdriver read-only property of the navigator interface indicates whether the user agent is controlled by automation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver">Navigator.webdriver - MDN</a>
-   * @see <a href="https://w3c.github.io/webdriver/#dom-navigatorautomationinformation-webdriver">The definition of 'webdriver' in WebDriver.</a>
+   * @see <a href="https://w3c.github.io/webdriver/#dom-navigatorautomationinformation-webdriver">The definition of 'webdriver' in the 'WebDriver' specification.</a>
    */
   @JsProperty(
       name = "webdriver"
@@ -367,7 +366,7 @@ public class Navigator {
    * The read-only xr property provided by the Navigator or WorkerNavigator interface returns an XRSystem object which can be used to access the WebXR Device API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/xr">Navigator.xr - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#navigator-xr-attribute">The definition of 'Navigator.xr' in WebXR Device API.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#navigator-xr-attribute">The definition of 'Navigator.xr' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "xr"
@@ -379,7 +378,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nullable BodyInit data);
 
@@ -387,7 +386,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ReadableStream data);
 
@@ -395,7 +394,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull XMLHttpRequestBodyInit data);
 
@@ -403,7 +402,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Blob data);
 
@@ -411,7 +410,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull BufferSource data);
 
@@ -419,7 +418,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBufferView data);
 
@@ -427,7 +426,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Int8Array data);
 
@@ -435,7 +434,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Int16Array data);
 
@@ -443,7 +442,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Int32Array data);
 
@@ -451,7 +450,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint8Array data);
 
@@ -459,7 +458,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint16Array data);
 
@@ -467,7 +466,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint32Array data);
 
@@ -475,7 +474,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint8ClampedArray data);
 
@@ -483,7 +482,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Float32Array data);
 
@@ -491,7 +490,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Float64Array data);
 
@@ -499,7 +498,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull DataView data);
 
@@ -507,7 +506,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBuffer data);
 
@@ -515,7 +514,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull FormData data);
 
@@ -523,7 +522,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull URLSearchParams data);
 
@@ -531,7 +530,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull String data);
 
@@ -539,7 +538,7 @@ public class Navigator {
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in Beacon.</a>
+   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
   public native boolean sendBeacon(@Nonnull String url);
 
@@ -547,7 +546,7 @@ public class Navigator {
    * The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">The definition of 'requestMediaKeySystemAccess()' in Encrypted Media Extensions.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">The definition of 'requestMediaKeySystemAccess()' in the 'Encrypted Media Extensions' specification.</a>
    */
   @Nonnull
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
@@ -557,7 +556,7 @@ public class Navigator {
    * The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">The definition of 'requestMediaKeySystemAccess()' in Encrypted Media Extensions.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">The definition of 'requestMediaKeySystemAccess()' in the 'Encrypted Media Extensions' specification.</a>
    */
   @Nonnull
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
@@ -567,7 +566,7 @@ public class Navigator {
    * The Navigator.getGamepads() method returns an array of Gamepad objects, one for each gamepad connected to the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads">Navigator.getGamepads - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/">The definition of 'The Gamepad API specification' in Gamepad.</a>
+   * @see <a href="https://w3c.github.io/gamepad/">The definition of 'The Gamepad API specification' in the 'Gamepad' specification.</a>
    */
   @Nonnull
   public native JsArray<Gamepad> getGamepads();
@@ -608,7 +607,7 @@ public class Navigator {
    * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - MDN</a>
-   * @see <a href="https://w3c.github.io/web-share/#share-method">The definition of 'share()' in Web Share API.</a>
+   * @see <a href="https://w3c.github.io/web-share/#share-method">The definition of 'share()' in the 'Web Share API' specification.</a>
    */
   @Nonnull
   public native Promise<Void> share(@Nonnull ShareData data);
@@ -617,7 +616,7 @@ public class Navigator {
    * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - MDN</a>
-   * @see <a href="https://w3c.github.io/web-share/#share-method">The definition of 'share()' in Web Share API.</a>
+   * @see <a href="https://w3c.github.io/web-share/#share-method">The definition of 'share()' in the 'Web Share API' specification.</a>
    */
   @Nonnull
   public native Promise<Void> share();
@@ -626,7 +625,7 @@ public class Navigator {
    * The Navigator method registerProtocolHandler() lets web sites register their ability to open or handle particular URL schemes (aka protocols).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler">Navigator.registerProtocolHandler - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#custom-handlers">The definition of 'registerProtocolHandler()' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#custom-handlers">The definition of 'registerProtocolHandler()' in the 'HTML Living Standard' specification.</a>
    */
   public native void registerProtocolHandler(@Nonnull String scheme, @Nonnull String url);
 
@@ -636,7 +635,7 @@ public class Navigator {
    * The NavigatorID.taintEnabled() method always returns false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/taintEnabled">Navigator.taintEnabled - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-taintenabled">The definition of 'NavigatorID.taintEnabled' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-taintenabled">The definition of 'NavigatorID.taintEnabled' in the 'HTML Living Standard' specification.</a>
    */
   public native boolean taintEnabled();
 
@@ -644,7 +643,7 @@ public class Navigator {
    * This method indicates whether the current browser is Java-enabled or not.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/javaEnabled">NavigatorPlugins.javaEnabled - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-javaenabled">The definition of 'NavigatorPlugins.javaEnabled' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-javaenabled">The definition of 'NavigatorPlugins.javaEnabled' in the 'HTML Living Standard' specification.</a>
    */
   public native boolean javaEnabled();
 }

@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEDropShadowElement interface corresponds to the feDropShadow element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDropShadowElement">SVGFEDropShadowElement - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDropShadowElement">The definition of 'SVGFEDropShadowElement' in the 'Filter Effects Module Level 1' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

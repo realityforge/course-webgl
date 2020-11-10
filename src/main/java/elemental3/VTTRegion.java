@@ -9,6 +9,7 @@ import jsinterop.annotations.JsType;
  * The VTTRegion interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes a portion of the video to render a VTTCue onto.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VTTRegion">VTTRegion - MDN</a>
+ * @see <a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

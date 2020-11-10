@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">The definition of 'RTCOfferOptions' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">The definition of 'RTCOfferOptions' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
    * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">The definition of 'RTCOfferOptions.iceRestart' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">The definition of 'RTCOfferOptions.iceRestart' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsProperty(
       name = "iceRestart"
@@ -43,7 +43,7 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
    * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">The definition of 'RTCOfferOptions.iceRestart' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">The definition of 'RTCOfferOptions.iceRestart' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsProperty
   void setIceRestart(boolean iceRestart);
@@ -52,7 +52,7 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
    * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">The definition of 'RTCOfferOptions.iceRestart' in WebRTC 1.0: Real-time Communication Between Browsers.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">The definition of 'RTCOfferOptions.iceRestart' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   @JsOverlay
   @Nonnull

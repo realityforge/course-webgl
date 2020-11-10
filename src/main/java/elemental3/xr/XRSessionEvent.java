@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent">XRSessionEvent - MDN</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrsessionevent">The definition of 'XRSessionEvent' in the 'WebXR Device API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class XRSessionEvent extends Event {
    * The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent">XRSessionEvent.XRSessionEvent - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessionevent-xrsessionevent">The definition of 'XRSessionEvent() constructor' in the 'WebXR Device API' specification.</a>
    */
   public XRSessionEvent(@Nonnull final String type,
       @Nonnull final XRSessionEventInit eventInitDict) {
@@ -33,6 +35,7 @@ public class XRSessionEvent extends Event {
    * The read-only XRSessionEvent interface's session property indicates which XRSession the event is about.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session">XRSessionEvent.session - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessionevent-session">The definition of 'XRSessionEvent.session' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "session"

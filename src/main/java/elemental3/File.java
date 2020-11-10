@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The File interface provides information about files and allows JavaScript in a web page to access their content.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File">File - MDN</a>
+ * @see <a href="https://w3c.github.io/FileAPI/#file-section">The definition of 'The File interface' in the 'File API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,6 +24,7 @@ public class File extends Blob {
    * The File() constructor creates a new File object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/">File API</a>
    */
   public File(@Nonnull final JsArray<BlobPart> fileBits, @Nonnull final String fileName,
       @Nonnull final FilePropertyBag options) {
@@ -32,6 +34,7 @@ public class File extends Blob {
    * The File() constructor creates a new File object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/">File API</a>
    */
   public File(@Nonnull final BlobPart[] fileBits, @Nonnull final String fileName,
       @Nonnull final FilePropertyBag options) {
@@ -41,6 +44,7 @@ public class File extends Blob {
    * The File() constructor creates a new File object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/">File API</a>
    */
   public File(@Nonnull final JsArray<BlobPart> fileBits, @Nonnull final String fileName) {
   }
@@ -49,6 +53,7 @@ public class File extends Blob {
    * The File() constructor creates a new File object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/">File API</a>
    */
   public File(@Nonnull final BlobPart[] fileBits, @Nonnull final String fileName) {
   }
@@ -57,6 +62,7 @@ public class File extends Blob {
    * The File.lastModified read-only property provides the last modified date of the file as the number of milliseconds since the Unix epoch (January 1, 1970 at midnight). Files without a known last modified date return the current date.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/lastModified">File.lastModified - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#file-attrs">The definition of 'lastModified' in the 'File API' specification.</a>
    */
   @JsProperty(
       name = "lastModified"
@@ -67,6 +73,7 @@ public class File extends Blob {
    * Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/name">File.name - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#file-attrs">The definition of 'name' in the 'File API' specification.</a>
    */
   @JsProperty(
       name = "name"

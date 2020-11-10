@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * This interface also inherits properties from TextTrackCue.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue">VTTCue - MDN</a>
+ * @see <a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -54,6 +55,7 @@ public class VTTCue extends TextTrackCue {
    * The VTTCue() constructor creates and returns a new VTTCue object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/VTTCue">VTTCue.VTTCue - MDN</a>
+   * @see <a href="https://w3c.github.io/webvtt/#dom-vttcue-vttcue">The definition of 'VTTCue()' in the 'WebVTT: The Web Video Text Tracks Format' specification.</a>
    */
   public VTTCue(final double startTime, final double endTime, @Nonnull final String text) {
   }

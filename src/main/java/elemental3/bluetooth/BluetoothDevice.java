@@ -19,6 +19,7 @@ import jsinterop.base.Js;
  * The BluetoothDevice interface of the Web Bluetooth API represents a Bluetooth device inside a particular script execution environment.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice">BluetoothDevice - MDN</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice">The definition of 'BluetoothDevice' in the 'Web Bluetooth' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -52,6 +53,7 @@ public class BluetoothDevice extends EventTarget {
    * The BluetoothDevice.gatt read-only property returns a reference to the device's BluetoothRemoteGATTServer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/gatt">BluetoothDevice.gatt - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-gatt">The definition of 'gattServer' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "gatt"
@@ -63,6 +65,7 @@ public class BluetoothDevice extends EventTarget {
    * The BluetoothDevice.id read-only property returns a DOMString that uniquely identifies a device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/id">BluetoothDevice.id - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-id">The definition of 'id' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "id"
@@ -74,6 +77,7 @@ public class BluetoothDevice extends EventTarget {
    * The BluetoothDevice.name read-only property returns a DOMString that provides a human-readable name for the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name">BluetoothDevice.name - MDN</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-name">The definition of 'name' in the 'Web Bluetooth' specification.</a>
    */
   @JsProperty(
       name = "name"

@@ -15,6 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit">XRInputSourcesChangeEventInit - MDN</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrinputsourceschangeeventinit">The definition of 'XRInputSourcesChangeEventInit' in the 'WebXR Device API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,6 +35,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-added">The definition of 'XRInputSourcesChangeEventInit.added' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "added"
@@ -45,6 +47,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-added">The definition of 'XRInputSourcesChangeEventInit.added' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setAdded(@Nonnull JsArray<XRInputSource> added);
@@ -53,6 +56,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-added">The definition of 'XRInputSourcesChangeEventInit.added' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -65,6 +69,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed">XRInputSourcesChangeEventInit.removed - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-removed">The definition of 'XRInputSourcesChangeEventInit.removed' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "removed"
@@ -76,6 +81,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed">XRInputSourcesChangeEventInit.removed - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-removed">The definition of 'XRInputSourcesChangeEventInit.removed' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setRemoved(@Nonnull JsArray<XRInputSource> removed);
@@ -84,6 +90,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed">XRInputSourcesChangeEventInit.removed - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-removed">The definition of 'XRInputSourcesChangeEventInit.removed' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -96,6 +103,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session">XRInputSourcesChangeEventInit.session - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-session">The definition of 'XRInputSourcesChangeEventInit.session' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "session"
@@ -107,6 +115,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session">XRInputSourcesChangeEventInit.session - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-session">The definition of 'XRInputSourcesChangeEventInit.session' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setSession(@Nonnull XRSession session);
@@ -115,6 +124,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session">XRInputSourcesChangeEventInit.session - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-session">The definition of 'XRInputSourcesChangeEventInit.session' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull

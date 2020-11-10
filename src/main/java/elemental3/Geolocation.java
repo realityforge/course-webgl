@@ -9,6 +9,7 @@ import jsinterop.annotations.JsType;
  * The Geolocation interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">Geolocation - MDN</a>
+ * @see <a href="https://w3c.github.io/geolocation-api/#geolocation_interface">Geolocation API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -24,6 +25,7 @@ public class Geolocation {
    * The Geolocation.clearWatch() method is used to unregister location/error monitoring handlers previously installed using Geolocation.watchPosition().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/clearWatch">Geolocation.clearWatch - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/">Geolocation API</a>
    */
   public native void clearWatch(int watchId);
 
@@ -31,6 +33,7 @@ public class Geolocation {
    * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition">Geolocation.getCurrentPosition - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/">Geolocation API</a>
    */
   public native void getCurrentPosition(@Nonnull PositionCallback successCallback,
       @Nonnull PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
@@ -39,6 +42,7 @@ public class Geolocation {
    * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition">Geolocation.getCurrentPosition - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/">Geolocation API</a>
    */
   public native void getCurrentPosition(@Nonnull PositionCallback successCallback,
       @Nonnull PositionErrorCallback errorCallback);
@@ -47,6 +51,7 @@ public class Geolocation {
    * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition">Geolocation.getCurrentPosition - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/">Geolocation API</a>
    */
   public native void getCurrentPosition(@Nonnull PositionCallback successCallback);
 
@@ -54,6 +59,7 @@ public class Geolocation {
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">Geolocation.watchPosition - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">The definition of 'watchPosition()' in the 'Geolocation API' specification.</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback,
       @Nonnull PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
@@ -62,6 +68,7 @@ public class Geolocation {
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">Geolocation.watchPosition - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">The definition of 'watchPosition()' in the 'Geolocation API' specification.</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback,
       @Nonnull PositionErrorCallback errorCallback);
@@ -70,6 +77,7 @@ public class Geolocation {
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">Geolocation.watchPosition - MDN</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">The definition of 'watchPosition()' in the 'Geolocation API' specification.</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback);
 }

@@ -11,6 +11,9 @@ import jsinterop.annotations.JsType;
  * The Attr interface represents one of a DOM element's attributes as an object. In most DOM methods, you will directly retrieve the attribute as a string (e.g., Element.getAttribute()), but certain functions (e.g., Element.getAttributeNode()) or means of iterating return Attr types.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr">Attr - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-attr">The definition of 'Attr' in the 'DOM' specification.</a>
+ * @see <a href="https://www.w3.org/TR/dom/#interface-attr">The definition of 'Attr' in the 'DOM4' specification.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024">The definition of 'Attr' in the 'Document Object Model (DOM) Level 3 Core Specification' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,6 +32,7 @@ public class Attr extends Node {
    * The Attr.localName read-only property returns the local part of the qualified name of an attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/localName">Attr.localName - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-attr-localname">The definition of 'Attr.localName' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "localName"
@@ -46,6 +50,7 @@ public class Attr extends Node {
    * The Attr.namespaceURI read-only property returns the namespace URI of the attribute, or null if the element is not in a namespace.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/namespaceURI">Attr.namespaceURI - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-attr-namespaceuri">The definition of 'Attr: namespaceURI' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "namespaceURI"
@@ -63,6 +68,8 @@ public class Attr extends Node {
    * The Attr.prefix read-only property returns the namespace prefix of the specified attribute, or null if no prefix is specified.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/prefix">Attr.prefix - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-attr-prefix">The definition of 'Attr: prefix' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-attr-prefix">The definition of 'Attr.prefix' in the 'DOM4' specification.</a>
    */
   @JsProperty(
       name = "prefix"

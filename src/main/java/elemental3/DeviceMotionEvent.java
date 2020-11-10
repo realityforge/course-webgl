@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent">DeviceMotionEvent - MDN</a>
+ * @see <a href="https://w3c.github.io/deviceorientation/#devicemotionevent">The definition of 'DeviceMotionEvent' in the 'DeviceOrientation Event Specification' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -43,6 +44,7 @@ public class DeviceMotionEvent extends Event {
    * The acceleration property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/acceleration">DeviceMotionEvent.acceleration - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "acceleration"
@@ -54,6 +56,7 @@ public class DeviceMotionEvent extends Event {
    * The accelerationIncludingGravity property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2). Unlike DeviceMotionEvent.acceleration which compensates for the influence of gravity, its value is the sum of the acceleration of the device as induced by the user and the acceleration caused by gravity.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity">DeviceMotionEvent.accelerationIncludingGravity - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "accelerationIncludingGravity"
@@ -65,6 +68,7 @@ public class DeviceMotionEvent extends Event {
    * Returns the interval, in milliseconds, at which data is obtained from the underlaying hardware. You can use this to determine the granularity of motion events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/interval">DeviceMotionEvent.interval - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "interval"
@@ -75,6 +79,7 @@ public class DeviceMotionEvent extends Event {
    * Returns the rate at which the device is rotating around each of its axes in degrees per second.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/rotationRate">DeviceMotionEvent.rotationRate - MDN</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "rotationRate"

@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * See the examples for SubtleCrypto.generateKey().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesKeyGenParams">The definition of 'SubtleCrypto.AesKeyGenParams' in the 'Web Cryptography API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

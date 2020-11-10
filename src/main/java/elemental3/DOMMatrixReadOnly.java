@@ -13,6 +13,7 @@ import jsinterop.annotations.JsType;
  * The DOMMatrixReadOnly interface represents a read-only 4&times;4 matrix, suitable for 2D and 3D operations. The DOMMatrix interrface&mdash;which is based upon DOMMatrixReadOnly&mdash;adds mutability, allowing you to alter the matrix after creating it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly">DOMMatrixReadOnly - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,6 +26,7 @@ public class DOMMatrixReadOnly {
    * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   public DOMMatrixReadOnly(@Nonnull final String init) {
   }
@@ -33,6 +35,7 @@ public class DOMMatrixReadOnly {
    * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   public DOMMatrixReadOnly(@Nonnull final JsArray<Double> init) {
   }
@@ -41,6 +44,7 @@ public class DOMMatrixReadOnly {
    * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   public DOMMatrixReadOnly(@Nonnull final Double[] init) {
   }
@@ -49,6 +53,7 @@ public class DOMMatrixReadOnly {
    * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   public DOMMatrixReadOnly() {
   }
@@ -189,6 +194,7 @@ public class DOMMatrixReadOnly {
    * The flipX() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix flipped about the x-axis.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/flipX">DOMMatrixReadOnly.flipX - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-flipx">The definition of 'DOMMatrixReadOnly.flipX()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix flipX();
@@ -245,6 +251,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX,
@@ -254,6 +261,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX,
@@ -263,6 +271,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX);
@@ -271,6 +280,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ);
@@ -279,6 +289,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY);
@@ -287,6 +298,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale(double scaleX);
@@ -295,6 +307,7 @@ public class DOMMatrixReadOnly {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">The definition of 'DOMMatrixReadOnly.scale()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix scale();
@@ -354,6 +367,7 @@ public class DOMMatrixReadOnly {
    * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">The definition of 'DOMMatrixReadOnly.translate()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix translate(double tx, double ty, double tz);
@@ -362,6 +376,7 @@ public class DOMMatrixReadOnly {
    * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">The definition of 'DOMMatrixReadOnly.translate()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix translate(double tx, double ty);
@@ -370,6 +385,7 @@ public class DOMMatrixReadOnly {
    * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">The definition of 'DOMMatrixReadOnly.translate()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix translate(double tx);
@@ -378,6 +394,7 @@ public class DOMMatrixReadOnly {
    * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">The definition of 'DOMMatrixReadOnly.translate()' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
   @Nonnull
   public native DOMMatrix translate();

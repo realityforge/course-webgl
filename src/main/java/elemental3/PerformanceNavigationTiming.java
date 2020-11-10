@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming">PerformanceNavigationTiming - MDN</a>
+ * @see <a href="https://w3c.github.io/navigation-timing/#sec-PerformanceNavigationTiming">The definition of 'PerformanceNavigationTiming' in the 'Navigation Timing Level 2' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,6 +26,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The domComplete read-only property returns a timestamp representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to complete.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domComplete">PerformanceNavigationTiming.domComplete - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-domcomplete">The definition of 'domComplete' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "domComplete"
@@ -35,6 +37,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The domContentLoadedEventEnd read-only property returns a timestamp representing the time value equal to the time immediately after the current document's DOMContentLoaded event completes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd">PerformanceNavigationTiming.domContentLoadedEventEnd - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-domcontentloadedeventend">The definition of 'domContentLoadedEventEnd' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "domContentLoadedEventEnd"
@@ -45,6 +48,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The domContentLoadedEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent fires the DOMContentLoaded event at the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart">PerformanceNavigationTiming.domContentLoadedEventStart - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-domcontentloadedeventstart">The definition of 'domContentLoadedEventStart' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "domContentLoadedEventStart"
@@ -55,6 +59,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The domInteractive read-only property returns a timestamp representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to interactive.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domInteractive">PerformanceNavigationTiming.domInteractive - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-dominteractive">The definition of 'domInteractive' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "domInteractive"
@@ -65,6 +70,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The loadEventEnd read-only property returns a timestamp which is equal to the time when the load event of the current document is completed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd">PerformanceNavigationTiming.loadEventEnd - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-loadeventend">The definition of 'loadEventEnd' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "loadEventEnd"
@@ -75,6 +81,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The loadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the load event of the current document is fired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventStart">PerformanceNavigationTiming.loadEventStart - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-loadeventstart">The definition of 'loadEventStart' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "loadEventStart"
@@ -85,6 +92,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The redirectCount property returns a timestamp representing the number of redirects since the last non-redirect navigation under the current browsing context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/redirectCount">PerformanceNavigationTiming.redirectCount - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-redirectcount">The definition of 'redirectCount' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "redirectCount"
@@ -95,6 +103,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The type read-only property returns a string representing the type of navigation. The value must be one of the following:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type">PerformanceNavigationTiming.type - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-type">The definition of 'type' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "type"
@@ -107,6 +116,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The unloadEventEnd read-only property returns a timestamp representing the time value equal to the time immediately after the user agent finishes the unload event of the previous document. If there is no previous document, this property value is 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd">PerformanceNavigationTiming.unloadEventEnd - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-unloadeventend">The definition of 'unloadEventEnd' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "unloadEventEnd"
@@ -117,6 +127,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The unloadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent starts the unload event of the previous document. If there is no previous document, this property returns 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventStart">PerformanceNavigationTiming.unloadEventStart - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-unloadeventstart">The definition of 'unloadEventStart' in the 'Navigation Timing Level 2' specification.</a>
    */
   @JsProperty(
       name = "unloadEventStart"
@@ -127,6 +138,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * The toJSON() method is a serializer - it returns a JSON representation of the PerformanceNavigationTiming object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/toJSON">PerformanceNavigationTiming.toJSON - MDN</a>
+   * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-tojson">The definition of 'toJSON()' in the 'Navigation Timing Level 2' specification.</a>
    */
   @Nonnull
   public native Object toJSON();

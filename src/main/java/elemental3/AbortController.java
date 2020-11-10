@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController">AbortController - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-abortcontroller">The definition of 'AbortController' in the 'DOM' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -22,6 +23,7 @@ public class AbortController {
    * The AbortController() constructor creates a new AbortController object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/AbortController">AbortController.AbortController - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-abortcontroller-abortcontroller">The definition of 'AbortController()' in the 'DOM' specification.</a>
    */
   public AbortController() {
   }
@@ -30,6 +32,7 @@ public class AbortController {
    * The signal read-only property of the AbortController interface returns an AbortSignal object instance, which can be used to communicate with/abort a DOM request as desired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal">AbortController.signal - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-abortcontroller-signal">The definition of 'signal' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "signal"
@@ -41,6 +44,7 @@ public class AbortController {
    * The abort() method of the AbortController interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort fetch requests, consumption of any response Body, and streams.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort">AbortController.abort - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-abortcontroller-abort">The definition of 'abort()' in the 'DOM' specification.</a>
    */
   public native void abort();
 }

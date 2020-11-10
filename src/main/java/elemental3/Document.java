@@ -17,17 +17,17 @@ import jsinterop.base.JsPropertyMap;
  * The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-document">The definition of 'Document' in DOM.</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-document-object">The definition of 'Document' in HTML Living Standard.</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface">The definition of 'Document' in CSS Object Model (CSSOM) View Module.</a>
- * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface">The definition of 'Document' in Pointer Lock.</a>
- * @see <a href="https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface">The definition of 'Document' in Page Visibility (Second Edition).</a>
- * @see <a href="https://w3c.github.io/selection-api/#extensions-to-document-interface">The definition of 'Document' in Selection API.</a>
- * @see <a href="https://www.w3.org/TR/dom/#interface-document">The definition of 'Document' in DOM4.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/#i-Document">The definition of 'Document' in Document Object Model (DOM) Level 3 Core Specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator">The definition of 'XPathEvaluator' in Document Object Model (DOM) Level 3 XPath Specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#i-Document">The definition of 'Document' in Document Object Model (DOM) Level 2 Core Specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/#i-Document">The definition of 'Document' in Document Object Model (DOM) Level 1 Specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-document">The definition of 'Document' in the 'DOM' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-document-object">The definition of 'Document' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface">The definition of 'Document' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+ * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface">The definition of 'Document' in the 'Pointer Lock' specification.</a>
+ * @see <a href="https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface">The definition of 'Document' in the 'Page Visibility (Second Edition)' specification.</a>
+ * @see <a href="https://w3c.github.io/selection-api/#extensions-to-document-interface">The definition of 'Document' in the 'Selection API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/dom/#interface-document">The definition of 'Document' in the 'DOM4' specification.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/#i-Document">The definition of 'Document' in the 'Document Object Model (DOM) Level 3 Core Specification' specification.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator">The definition of 'XPathEvaluator' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification.</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#i-Document">The definition of 'Document' in the 'Document Object Model (DOM) Level 2 Core Specification' specification.</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/#i-Document">The definition of 'Document' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -56,9 +56,6 @@ public class Document extends Node {
    * The Document.body property represents the body or frameset node of the current document, or null if no such element exists.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/body">Document.body - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-body">The definition of 'Document.body' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/dom.html#dom-document-body">The definition of 'Document.body' in HTML 5.1.</a>
-   * @see <a href="https://www.w3.org/TR/html52/dom.html#dom-document-body">The definition of 'Document.body' in HTML5.</a>
    */
   @Nullable
   public HTMLElement body;
@@ -70,7 +67,7 @@ public class Document extends Node {
    * document.designMode controls whether the entire document is editable. Valid values are &quot;on&quot; and &quot;off&quot;. According to the specification, this property is meant to default to &quot;off&quot;. Firefox follows this standard. The earlier versions of Chrome and IE default to &quot;inherit&quot;. Starting in Chrome 43, the default is &quot;off&quot; and &quot;inherit&quot; is no longer supported. In IE6-10, the value is capitalized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode">Document.designMode - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#making-entire-documents-editable:-the-designmode-idl-attribute">The definition of 'designMode' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#making-entire-documents-editable:-the-designmode-idl-attribute">The definition of 'designMode' in the 'HTML Living Standard' specification.</a>
    */
   @Nonnull
   public String designMode;
@@ -79,7 +76,7 @@ public class Document extends Node {
    * The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/dir">Document.dir - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-dir">The definition of 'Document.dir' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-dir">The definition of 'Document.dir' in the 'HTML Living Standard' specification.</a>
    */
   @Nonnull
   public String dir;
@@ -88,7 +85,7 @@ public class Document extends Node {
    * The domain property of the Document interface gets/sets the domain portion of the origin of the current document, as used by the same-origin policy.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/domain">Document.domain - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction">The definition of 'document.domain' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction">The definition of 'document.domain' in the 'HTML Living Standard' specification.</a>
    */
   @Nonnull
   public String domain;
@@ -113,7 +110,6 @@ public class Document extends Node {
    * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onabort">Document.onabort - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onabort">The definition of 'onabort' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -122,7 +118,6 @@ public class Document extends Node {
    * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel">The definition of 'onanimationcancel' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationcancel;
@@ -131,7 +126,6 @@ public class Document extends Node {
    * The onanimationend property of the GlobalEventHandlers mixin is the EventHandler for processing animationend events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationend">The definition of 'onanimationend' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationend;
@@ -140,7 +134,6 @@ public class Document extends Node {
    * The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration">The definition of 'onanimationiteration' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationiteration;
@@ -149,7 +142,6 @@ public class Document extends Node {
    * An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart">The definition of 'onanimationstart' in CSS Animations.</a>
    */
   @Nullable
   public AnimationEventHandler onanimationstart;
@@ -158,7 +150,7 @@ public class Document extends Node {
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
-   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in UI Events.</a>
+   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in the 'UI Events' specification.</a>
    */
   @Nullable
   public EventHandler onauxclick;
@@ -167,7 +159,7 @@ public class Document extends Node {
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onblur">Document.onblur - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onblur;
@@ -176,7 +168,7 @@ public class Document extends Node {
    * The oncancel property of the GlobalEventHandlers mixin is an EventHandler for processing cancel events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler oncancel;
@@ -185,7 +177,6 @@ public class Document extends Node {
    * The oncanplay property of the GlobalEventHandlers mixin is the EventHandler for processing canplay events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplay">GlobalEventHandlers.oncanplay - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplay">The definition of 'oncanplay' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncanplay;
@@ -194,7 +185,6 @@ public class Document extends Node {
    * The oncanplaythrough property of the GlobalEventHandlers mixin is the EventHandler for processing canplaythrough events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough">GlobalEventHandlers.oncanplaythrough - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncanplaythrough">The definition of 'oncanplaythrough' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncanplaythrough;
@@ -203,7 +193,6 @@ public class Document extends Node {
    * The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onchange">Document.onchange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onchange">The definition of 'onchange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -212,7 +201,6 @@ public class Document extends Node {
    * The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onclick">Document.onclick - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick">The definition of 'onclick' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onclick;
@@ -221,7 +209,7 @@ public class Document extends Node {
    * The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onclose;
@@ -230,7 +218,7 @@ public class Document extends Node {
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/oncontextmenu">Document.oncontextmenu - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler oncontextmenu;
@@ -242,7 +230,6 @@ public class Document extends Node {
    * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncuechange">GlobalEventHandlers.oncuechange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oncuechange">The definition of 'oncuechange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oncuechange;
@@ -254,7 +241,7 @@ public class Document extends Node {
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/ondblclick">Document.ondblclick - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler ondblclick;
@@ -263,8 +250,8 @@ public class Document extends Node {
    * A global event handler for the drag event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag">GlobalEventHandlers.ondrag - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondrag;
@@ -273,8 +260,8 @@ public class Document extends Node {
    * A global event handler for the dragend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend">GlobalEventHandlers.ondragend - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondragend;
@@ -283,8 +270,8 @@ public class Document extends Node {
    * A global event handler for the dragenter event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter">GlobalEventHandlers.ondragenter - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondragenter;
@@ -293,8 +280,8 @@ public class Document extends Node {
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondragleave;
@@ -303,8 +290,8 @@ public class Document extends Node {
    * A global event handler for the dragover event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover">GlobalEventHandlers.ondragover - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondragover;
@@ -313,8 +300,8 @@ public class Document extends Node {
    * A global event handler for the dragstart event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart">GlobalEventHandlers.ondragstart - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondragstart;
@@ -323,8 +310,8 @@ public class Document extends Node {
    * A global event handler for the drop event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop">GlobalEventHandlers.ondrop - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in HTML 5.1.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in the 'HTML 5.1' specification.</a>
    */
   @Nullable
   public DragEventHandler ondrop;
@@ -333,7 +320,6 @@ public class Document extends Node {
    * The ondurationchange property of the GlobalEventHandlers mixin is the EventHandler for processing durationchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange">GlobalEventHandlers.ondurationchange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-ondurationchange">The definition of 'ondurationchange' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler ondurationchange;
@@ -342,7 +328,6 @@ public class Document extends Node {
    * The onemptied property sets and returns the event handler for the emptied event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onemptied">GlobalEventHandlers.onemptied - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onemptied">The definition of 'onemptied' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onemptied;
@@ -351,7 +336,6 @@ public class Document extends Node {
    * The onended property of the GlobalEventHandlers mixin is the EventHandler for processing ended events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onended">GlobalEventHandlers.onended - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onended">The definition of 'onended' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onended;
@@ -360,7 +344,7 @@ public class Document extends Node {
    * The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public OnErrorEventHandler onerror;
@@ -369,7 +353,7 @@ public class Document extends Node {
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfocus">Document.onfocus - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onfocus;
@@ -378,7 +362,7 @@ public class Document extends Node {
    * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onformdata;
@@ -387,7 +371,7 @@ public class Document extends Node {
    * The Document interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired immediately before a document transitions into or out of full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenchange">Document.onfullscreenchange - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange">The definition of 'onfullscreenchange' in Fullscreen API.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange">The definition of 'onfullscreenchange' in the 'Fullscreen API' specification.</a>
    */
   @Nullable
   public EventHandler onfullscreenchange;
@@ -396,7 +380,7 @@ public class Document extends Node {
    * The Document.onfullscreenerror property is an event handler for the fullscreenerror event that is sent to the  document when it fails to transition into full-screen mode after a prior call to Element.requestFullscreen().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenerror">Document.onfullscreenerror - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenerror">The definition of 'onfullscreenerror' in Fullscreen API.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenerror">The definition of 'onfullscreenerror' in the 'Fullscreen API' specification.</a>
    */
   @Nullable
   public EventHandler onfullscreenerror;
@@ -405,7 +389,7 @@ public class Document extends Node {
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in the 'Pointer Events &ndash; Level 2' specification.</a>
    */
   @Nullable
   public PointerEventHandler ongotpointercapture;
@@ -414,7 +398,7 @@ public class Document extends Node {
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/oninput">Document.oninput - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#ix-handler-oninput">The definition of 'oninput' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#ix-handler-oninput">The definition of 'oninput' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler oninput;
@@ -423,7 +407,6 @@ public class Document extends Node {
    * The oninvalid property of the GlobalEventHandlers mixin is an EventHandler that processes invalid events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">GlobalEventHandlers.oninvalid - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-oninvalid">The definition of 'oninvalid' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler oninvalid;
@@ -432,7 +415,7 @@ public class Document extends Node {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeydown">Document.onkeydown - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public KeyboardEventHandler onkeydown;
@@ -441,7 +424,7 @@ public class Document extends Node {
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeypress">Document.onkeypress - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -450,7 +433,7 @@ public class Document extends Node {
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeyup">Document.onkeyup - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public KeyboardEventHandler onkeyup;
@@ -459,7 +442,7 @@ public class Document extends Node {
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onload">Document.onload - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onload;
@@ -468,7 +451,6 @@ public class Document extends Node {
    * The onloadeddata property of the GlobalEventHandlers mixin is the EventHandler for processing loadeddata events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata">GlobalEventHandlers.onloadeddata - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadeddata">The definition of 'onloadeddata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadeddata;
@@ -477,7 +459,6 @@ public class Document extends Node {
    * The onloadedmetadata property of the GlobalEventHandlers mixin is the EventHandler for processing loadedmetadata events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata">GlobalEventHandlers.onloadedmetadata - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onloadedmetadata">The definition of 'onloadedmetadata' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onloadedmetadata;
@@ -486,7 +467,7 @@ public class Document extends Node {
    * The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onloadstart;
@@ -495,7 +476,7 @@ public class Document extends Node {
    * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in Pointer Events – Level 2.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in the 'Pointer Events &ndash; Level 2' specification.</a>
    */
   @Nullable
   public PointerEventHandler onlostpointercapture;
@@ -504,7 +485,6 @@ public class Document extends Node {
    * The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmousedown">Document.onmousedown - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousedown">The definition of 'onmousedown' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmousedown;
@@ -513,7 +493,6 @@ public class Document extends Node {
    * The onmouseenter property of the GlobalEventHandlers mixin is the EventHandler for processing mouseenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter">GlobalEventHandlers.onmouseenter - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseenter">The definition of 'onmouseenter' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseenter;
@@ -522,7 +501,6 @@ public class Document extends Node {
    * The onmouseleave property of the GlobalEventHandlers mixin is the EventHandler for processing mouseleave events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave">GlobalEventHandlers.onmouseleave - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onmouseleave">The definition of 'onmouseleave' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseleave;
@@ -531,7 +509,7 @@ public class Document extends Node {
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmousemove">Document.onmousemove - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onmousemove;
@@ -540,7 +518,6 @@ public class Document extends Node {
    * The onmouseout property of the GlobalEventHandlers mixin is an EventHandler that processes mouseout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmouseout">Document.onmouseout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseout">The definition of 'onmouseout' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseout;
@@ -549,7 +526,7 @@ public class Document extends Node {
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmouseover">Document.onmouseover - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onmouseover;
@@ -558,7 +535,6 @@ public class Document extends Node {
    * The onmouseup property of the GlobalEventHandlers mixin is an EventHandler that processes mouseup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onmouseup">Document.onmouseup - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseup">The definition of 'onmouseup' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onmouseup;
@@ -570,7 +546,6 @@ public class Document extends Node {
    * The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpause">GlobalEventHandlers.onpause - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onpause">The definition of 'onpause' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onpause;
@@ -579,7 +554,6 @@ public class Document extends Node {
    * The onplay property of the GlobalEventHandlers mixin is the EventHandler for processing play events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplay">GlobalEventHandlers.onplay - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onplay">The definition of 'onplay' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onplay;
@@ -588,7 +562,6 @@ public class Document extends Node {
    * The onplaying property of the GlobalEventHandlers mixin is the EventHandler for processing playing events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplaying">GlobalEventHandlers.onplaying - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onplaying">The definition of 'onplaying' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onplaying;
@@ -597,8 +570,8 @@ public class Document extends Node {
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointercancel;
@@ -607,8 +580,8 @@ public class Document extends Node {
    * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointerdown;
@@ -617,8 +590,8 @@ public class Document extends Node {
    * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointerenter;
@@ -627,8 +600,8 @@ public class Document extends Node {
    * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointerleave;
@@ -643,8 +616,8 @@ public class Document extends Node {
    * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointermove;
@@ -653,8 +626,8 @@ public class Document extends Node {
    * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointerout;
@@ -663,8 +636,8 @@ public class Document extends Node {
    * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointerover;
@@ -673,8 +646,8 @@ public class Document extends Node {
    * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in Pointer Events – Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in Pointer Events.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in the 'Pointer Events' specification.</a>
    */
   @Nullable
   public PointerEventHandler onpointerup;
@@ -692,7 +665,6 @@ public class Document extends Node {
    * The onreset property of the GlobalEventHandlers mixin is an EventHandler that processes reset events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onreset">Document.onreset - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onreset">The definition of 'onreset' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onreset;
@@ -701,7 +673,6 @@ public class Document extends Node {
    * The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onresize">Document.onresize - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onresize">The definition of 'onresize' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onresize;
@@ -710,8 +681,8 @@ public class Document extends Node {
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onscroll">Document.onscroll - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in Document Object Model (DOM) Level 3 Events Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -729,7 +700,6 @@ public class Document extends Node {
    * The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onselect">Document.onselect - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onselect">The definition of 'onselect' in HTML Living Standard.</a>
    */
   @Nullable
   public EventHandler onselect;
@@ -738,7 +708,7 @@ public class Document extends Node {
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onselectionchange">Document.onselectionchange - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in Selection API.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in the 'Selection API' specification.</a>
    */
   @Nullable
   public EventHandler onselectionchange;
@@ -747,7 +717,7 @@ public class Document extends Node {
    * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in Selection API.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in the 'Selection API' specification.</a>
    */
   @Nullable
   public EventHandler onselectstart;
@@ -762,7 +732,7 @@ public class Document extends Node {
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onsubmit">Document.onsubmit - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in the 'HTML Living Standard' specification.</a>
    */
   @Nullable
   public EventHandler onsubmit;
@@ -816,7 +786,6 @@ public class Document extends Node {
    * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitioncancel">The definition of 'ontransitioncancel' in CSS Transitions.</a>
    */
   @Nullable
   public TransitionEventHandler ontransitioncancel;
@@ -825,7 +794,6 @@ public class Document extends Node {
    * The ontransitionend property of the GlobalEventHandlers mixin is an EventHandler that processes transitionend events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitionend">The definition of 'ontransitionend' in CSS Transitions.</a>
    */
   @Nullable
   public TransitionEventHandler ontransitionend;
@@ -840,7 +808,7 @@ public class Document extends Node {
    * The Document.onvisibilitychange property represents the event handler that is called when a visibilitychange event reaches this object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onvisibilitychange">Document.onvisibilitychange - MDN</a>
-   * @see <a href="https://www.w3.org/TR/page-visibility/#onvisiblitychange-event-handler">The definition of 'onvisibilitychange' in Page Visibility (Second Edition).</a>
+   * @see <a href="https://www.w3.org/TR/page-visibility/#onvisiblitychange-event-handler">The definition of 'onvisibilitychange' in the 'Page Visibility (Second Edition)' specification.</a>
    */
   @Nullable
   public EventHandler onvisibilitychange;
@@ -867,7 +835,6 @@ public class Document extends Node {
    * The onwheel property of the GlobalEventHandlers mixin is an EventHandler that processes wheel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onwheel">The definition of 'onwheel' in HTML Living Standard.</a>
    */
   @Nullable
   public WheelEventHandler onwheel;
@@ -876,7 +843,7 @@ public class Document extends Node {
    * The document.title property gets or sets the current title of the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/title">Document.title - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#document.title">The definition of 'document.title' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#document.title">The definition of 'document.title' in the 'HTML Living Standard' specification.</a>
    */
   @Nonnull
   public String title;
@@ -893,7 +860,7 @@ public class Document extends Node {
    * The Document constructor creates a new Document object that is a web page loaded in the browser and serving as an entry point into the page's content.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/Document">Document.Document - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-document">The definition of 'Document' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-document">The definition of 'Document' in the 'DOM' specification.</a>
    */
   public Document() {
   }
@@ -902,7 +869,7 @@ public class Document extends Node {
    * The URL read-only property of the Document interface returns the document location as a string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/URL">Document.URL - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-url">The definition of 'Document.URL' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-url">The definition of 'Document.URL' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "URL"
@@ -914,7 +881,7 @@ public class Document extends Node {
    * The activeElement read-only property of the Document and ShadowRoot interfaces returns the Element within the DOM or shadow DOM tree that currently has focus.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">DocumentOrShadowRoot.activeElement - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-activeelement">The definition of 'activeElement' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-activeelement">The definition of 'activeElement' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "activeElement"
@@ -926,7 +893,7 @@ public class Document extends Node {
    * The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns all of the document's elements, accessible by order (like an array) and by ID (like a regular object).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/all">Document.all - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-all">The definition of 'all' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-all">The definition of 'all' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "all"
@@ -938,8 +905,8 @@ public class Document extends Node {
    * The anchors read-only property of the Document interface returns a list of all of the anchors in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/anchors">Document.anchors - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-anchors">The definition of 'Document.anchors' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272">The definition of 'Document.anchors' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-anchors">The definition of 'Document.anchors' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272">The definition of 'Document.anchors' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @JsProperty(
       name = "anchors"
@@ -951,8 +918,8 @@ public class Document extends Node {
    * The applets property of the Document interface returns a list of the applets within a document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/applets">Document.applets - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-applets">The definition of 'Document.applets' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862">The definition of 'Document.applets' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-applets">The definition of 'Document.applets' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862">The definition of 'Document.applets' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @JsProperty(
       name = "applets"
@@ -964,7 +931,7 @@ public class Document extends Node {
    * The Document.characterSet read-only property returns the character encoding of the document that it's currently rendered with.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/characterSet">Document.characterSet - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-characterset">The definition of 'characterSet' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-characterset">The definition of 'characterSet' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "characterSet"
@@ -982,8 +949,6 @@ public class Document extends Node {
    * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/childElementCount">Document.childElementCount - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-childelementcount">The definition of 'ParentNode.childElementCount' in DOM.</a>
-   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-childElementCount">The definition of 'ElementTraversal.childElementCount' in Element Traversal Specification.</a>
    */
   @JsProperty(
       name = "childElementCount"
@@ -994,7 +959,6 @@ public class Document extends Node {
    * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/children">Document.children - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-children">The definition of 'ParentNode.children' in DOM.</a>
    */
   @JsProperty(
       name = "children"
@@ -1006,7 +970,7 @@ public class Document extends Node {
    * The Document.compatMode read-only property indicates whether the document is rendered in Quirks mode or Standards mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/compatMode">Document.compatMode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-compatmode">The definition of 'compatMode' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-compatmode">The definition of 'compatMode' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "compatMode"
@@ -1018,7 +982,7 @@ public class Document extends Node {
    * The Document.contentType read-only property returns the MIME type that the document is being rendered as. This may come from HTTP headers or other sources of MIME information, and might be affected by automatic type conversions performed by either the browser or extensions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/contentType">Document.contentType - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-contenttype">The definition of 'Document.contentType' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-contenttype">The definition of 'Document.contentType' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "contentType"
@@ -1030,7 +994,7 @@ public class Document extends Node {
    * The Document.currentScript property returns the script element whose script is currently being processed and isn't a JavaScript module. (For modules use import.meta instead.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript">Document.currentScript - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-currentscript">The definition of 'Document.currentScript' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-currentscript">The definition of 'Document.currentScript' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "currentScript"
@@ -1042,8 +1006,8 @@ public class Document extends Node {
    * In browsers, document.defaultView returns the window object associated with a document, or null if none is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView">Document.defaultView - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-defaultview">The definition of 'Document.defaultView' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-document-defaultview">The definition of 'Document.defaultView' in HTML5.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-defaultview">The definition of 'Document.defaultView' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-document-defaultview">The definition of 'Document.defaultView' in the 'HTML5' specification.</a>
    */
   @JsProperty(
       name = "defaultView"
@@ -1055,7 +1019,7 @@ public class Document extends Node {
    * Returns the Document Type Declaration (DTD) associated with current document. The returned object implements the DocumentType interface. Use DOMImplementation.createDocumentType() to create a DocumentType.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/doctype">Document.doctype - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-doctype">The definition of 'Document: doctype' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-doctype">The definition of 'Document: doctype' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "doctype"
@@ -1067,7 +1031,7 @@ public class Document extends Node {
    * Document.documentElement returns the Element that is the root element of the document (for example, the html element for HTML documents).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement">Document.documentElement - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-documentelement">The definition of 'Document.documentElement' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-documentelement">The definition of 'Document.documentElement' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "documentElement"
@@ -1079,7 +1043,7 @@ public class Document extends Node {
    * The documentURI read-only property of the Document interface returns the document location as a string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/documentURI">Document.documentURI - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-documenturi">The definition of 'documentURI' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-documenturi">The definition of 'documentURI' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "documentURI"
@@ -1091,7 +1055,7 @@ public class Document extends Node {
    * The embeds read-only property of the Document interface returns a list of the embedded object elements within the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/embeds">Document.embeds - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-embeds">The definition of 'Document.embeds' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-embeds">The definition of 'Document.embeds' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "embeds"
@@ -1103,8 +1067,6 @@ public class Document extends Node {
    * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/firstElementChild">Document.firstElementChild - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-firstelementchild">The definition of 'ParentNode.firstElementChild' in DOM.</a>
-   * @see <a href="https://www.w3.org/TR/ElementTraversal/#attribute-firstElementChild">The definition of 'ElementTraversal.firstElementChild' in Element Traversal Specification.</a>
    */
   @JsProperty(
       name = "firstElementChild"
@@ -1116,8 +1078,8 @@ public class Document extends Node {
    * The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/forms">Document.forms - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-forms">The definition of 'Document.forms' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064">The definition of 'Document.forms' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-forms">The definition of 'Document.forms' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064">The definition of 'Document.forms' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @JsProperty(
       name = "forms"
@@ -1129,7 +1091,7 @@ public class Document extends Node {
    * The obsolete Document interface's fullscreen read-only property reports whether or not the document is currently displaying content in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreen">Document.fullscreen - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-fullscreen">The definition of 'Document.fullscreen' in Fullscreen API.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-fullscreen">The definition of 'Document.fullscreen' in the 'Fullscreen API' specification.</a>
    */
   @JsProperty(
       name = "fullscreen"
@@ -1140,7 +1102,7 @@ public class Document extends Node {
    * The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement">DocumentOrShadowRoot.fullscreenElement - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-fullscreenelement">The definition of 'Document.fullscreenElement' in Fullscreen API.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-fullscreenelement">The definition of 'Document.fullscreenElement' in the 'Fullscreen API' specification.</a>
    */
   @JsProperty(
       name = "fullscreenElement"
@@ -1152,7 +1114,7 @@ public class Document extends Node {
    * The read-only fullscreenEnabled property on the Document interface indicates whether or not full-screen mode is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenEnabled">Document.fullscreenEnabled - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-fullscreenenabled">The definition of 'Document.fullscreenEnabled' in Fullscreen API.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-fullscreenenabled">The definition of 'Document.fullscreenEnabled' in the 'Fullscreen API' specification.</a>
    */
   @JsProperty(
       name = "fullscreenEnabled"
@@ -1163,9 +1125,9 @@ public class Document extends Node {
    * The head read-only property of the Document interface returns the head element of the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/head">Document.head - MDN</a>
-   * @see <a href="https://www.w3.org/TR/html51/dom.html#dom-document-head">The definition of 'Document.head' in HTML 5.1.</a>
-   * @see <a href="https://www.w3.org/TR/html52/dom.html#dom-document-head">The definition of 'Document.head' in HTML5.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-head">The definition of 'Document.head' in HTML Living Standard.</a>
+   * @see <a href="https://www.w3.org/TR/html51/dom.html#dom-document-head">The definition of 'Document.head' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html52/dom.html#dom-document-head">The definition of 'Document.head' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-head">The definition of 'Document.head' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "head"
@@ -1177,7 +1139,7 @@ public class Document extends Node {
    * The Document.hidden read-only property returns a Boolean value indicating if the page is considered hidden or not.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hidden">Document.hidden - MDN</a>
-   * @see <a href="https://www.w3.org/TR/page-visibility/#dom-document-hidden">The definition of 'Document.hidden' in Page Visibility (Second Edition).</a>
+   * @see <a href="https://www.w3.org/TR/page-visibility/#dom-document-hidden">The definition of 'Document.hidden' in the 'Page Visibility (Second Edition)' specification.</a>
    */
   @JsProperty(
       name = "hidden"
@@ -1188,8 +1150,8 @@ public class Document extends Node {
    * The images read-only property of the Document interface returns a collection of the images in the current HTML document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/images">Document.images - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-images">The definition of 'Document.images' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117">The definition of 'Document.images' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-images">The definition of 'Document.images' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117">The definition of 'Document.images' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @JsProperty(
       name = "images"
@@ -1201,7 +1163,6 @@ public class Document extends Node {
    * The Document.implementation property returns a DOMImplementation object associated with the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/implementation">Document.implementation - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-implementation">The definition of 'document.implementation' in DOM.</a>
    */
   @JsProperty(
       name = "implementation"
@@ -1219,7 +1180,6 @@ public class Document extends Node {
    * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/lastElementChild">Document.lastElementChild - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-lastelementchild">The definition of 'ParentNode.lastElementChild' in DOM.</a>
    */
   @JsProperty(
       name = "lastElementChild"
@@ -1231,7 +1191,7 @@ public class Document extends Node {
    * The lastModified property of the Document interface returns a string containing the date and time on which the current document was last modified.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified">Document.lastModified - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-lastmodified">The definition of 'document.lastModified' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-lastmodified">The definition of 'document.lastModified' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "lastModified"
@@ -1243,8 +1203,8 @@ public class Document extends Node {
    * The links read-only property of the Document interface returns a collection of all area elements and a elements in a document with a value for the href attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/links">Document.links - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-links">The definition of 'Document.links' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7068919">The definition of 'document.links' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-links">The definition of 'Document.links' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7068919">The definition of 'document.links' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @JsProperty(
       name = "links"
@@ -1256,8 +1216,8 @@ public class Document extends Node {
    * The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/location">Document.location - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-location-interface">The definition of 'Document.location' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-location-interface">The definition of 'Document.location' in HTML5.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-location-interface">The definition of 'Document.location' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-location-interface">The definition of 'Document.location' in the 'HTML5' specification.</a>
    */
   @JsProperty(
       name = "location"
@@ -1269,7 +1229,7 @@ public class Document extends Node {
    * The plugins read-only property of the Document interface returns an HTMLCollection object containing one or more HTMLEmbedElements representing the embed elements in the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/plugins">Document.plugins - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-plugins">The definition of 'Document.plugins' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-plugins">The definition of 'Document.plugins' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "plugins"
@@ -1281,7 +1241,7 @@ public class Document extends Node {
    * The pointerLockElement property of the Document and ShadowRoot interfaces provides the element set as the target for mouse events while the pointer is locked. It is null if lock is pending, pointer is unlocked, or the target is in another document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement">DocumentOrShadowRoot.pointerLockElement - MDN</a>
-   * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-documentorshadowroot-mixin">The definition of 'pointerLockElement' in Pointer Lock.</a>
+   * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-documentorshadowroot-mixin">The definition of 'pointerLockElement' in the 'Pointer Lock' specification.</a>
    */
   @JsProperty(
       name = "pointerLockElement"
@@ -1293,9 +1253,9 @@ public class Document extends Node {
    * The Document.readyState property describes the loading state of the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState">Document.readyState - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#current-document-readiness">The definition of 'Document readiness' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html51/#current-document-readiness">The definition of 'Document readiness' in HTML 5.1.</a>
-   * @see <a href="https://www.w3.org/TR/html52/#current-document-readiness">The definition of 'Document readiness' in HTML5.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#current-document-readiness">The definition of 'Document readiness' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html51/#current-document-readiness">The definition of 'Document readiness' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html52/#current-document-readiness">The definition of 'Document readiness' in the 'HTML5' specification.</a>
    */
   @JsProperty(
       name = "readyState"
@@ -1308,7 +1268,6 @@ public class Document extends Node {
    * The Document.referrer property returns the URI of the page that linked to this page.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">Document.referrer - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-referrer-dev">The definition of 'document.referrer' in HTML Living Standard.</a>
    */
   @JsProperty(
       name = "referrer"
@@ -1326,7 +1285,7 @@ public class Document extends Node {
    * The scripts property of the Document interface returns a list of the script elements in the document. The returned object is an HTMLCollection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scripts">Document.scripts - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-scripts">The definition of 'Document.scripts' in HTML Living Standard.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-scripts">The definition of 'Document.scripts' in the 'HTML Living Standard' specification.</a>
    */
   @JsProperty(
       name = "scripts"
@@ -1338,7 +1297,7 @@ public class Document extends Node {
    * The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement">Document.scrollingElement - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-document-scrollingelement">The definition of 'scrollingElement' in CSS Object Model (CSSOM) View Module.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-document-scrollingelement">The definition of 'scrollingElement' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
    */
   @JsProperty(
       name = "scrollingElement"
@@ -1350,7 +1309,7 @@ public class Document extends Node {
    * The styleSheets read-only property of the DocumentOrShadowRoot interface returns a StyleSheetList of CSSStyleSheet objects, for stylesheets explicitly linked into or embedded in a document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets">DocumentOrShadowRoot.styleSheets - MDN</a>
-   * @see <a href="https://w3c.github.io/webcomponents/spec/shadow/#extensions-to-the-documentorshadowroot-mixin">The definition of 'DocumentOrShadowRoot' in Shadow DOM.</a>
+   * @see <a href="https://w3c.github.io/webcomponents/spec/shadow/#extensions-to-the-documentorshadowroot-mixin">The definition of 'DocumentOrShadowRoot' in the 'Shadow DOM' specification.</a>
    */
   @JsProperty(
       name = "styleSheets"
@@ -1362,7 +1321,7 @@ public class Document extends Node {
    * The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/timeline">Document.timeline - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-document-timeline">The definition of 'document.timeline' in Web Animations.</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-document-timeline">The definition of 'document.timeline' in the 'Web Animations' specification.</a>
    */
   @JsProperty(
       name = "timeline"
@@ -1374,7 +1333,7 @@ public class Document extends Node {
    * The Document.visibilityState read-only property returns the visibility of the document, that is in which context this element is now visible. It is useful to know if the document is in the background or an invisible tab, or only loaded for pre-rendering.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState">Document.visibilityState - MDN</a>
-   * @see <a href="https://www.w3.org/TR/page-visibility/#visibility-states-and-the-visibilitystate-enum">The definition of 'Document.visibilityState' in Page Visibility (Second Edition).</a>
+   * @see <a href="https://www.w3.org/TR/page-visibility/#visibility-states-and-the-visibilitystate-enum">The definition of 'Document.visibilityState' in the 'Page Visibility (Second Edition)' specification.</a>
    */
   @JsProperty(
       name = "visibilityState"
@@ -1387,7 +1346,6 @@ public class Document extends Node {
    * Document.adoptNode() transfers a node from another document into the method's document. The adopted node and its subtree is removed from its original document (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/adoptNode">Document.adoptNode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-adoptnode">The definition of 'document.adoptNode' in DOM.</a>
    */
   @Nonnull
   public native Node adoptNode(@Nonnull Node node);
@@ -1396,10 +1354,6 @@ public class Document extends Node {
    * The Document.createAttribute() method creates a new attribute node, and returns it. The object created a node implementing the Attr interface. The DOM does not enforce what sort of attributes can be added to a particular element in this manner.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttribute">Document.createAttribute - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createattribute">The definition of 'Document.createAttribute()' in DOM.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1084891198">The definition of 'Document.createAttribute()' in Document Object Model (DOM) Level 3 Core Specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1084891198">The definition of 'Document.createAttribute()' in Document Object Model (DOM) Level 2 Core Specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1084891198">The definition of 'Document.createAttribute()' in Document Object Model (DOM) Level 1 Specification.</a>
    */
   @Nonnull
   public native Attr createAttribute(@Nonnull String localName);
@@ -1411,7 +1365,7 @@ public class Document extends Node {
    * createCDATASection() creates a new CDATA section node, and returns it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createCDATASection">Document.createCDATASection - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createcdatasection">The definition of 'document.createCDATASection' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createcdatasection">The definition of 'document.createCDATASection' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native CDATASection createCDATASection(@Nonnull String data);
@@ -1420,7 +1374,7 @@ public class Document extends Node {
    * createComment() creates a new comment node, and returns it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createComment">Document.createComment - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createcomment">The definition of 'document.createComment' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createcomment">The definition of 'document.createComment' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Comment createComment(@Nonnull String data);
@@ -1429,7 +1383,7 @@ public class Document extends Node {
    * Creates a new empty DocumentFragment into which DOM nodes can be added to build an offscreen DOM tree.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment">Document.createDocumentFragment - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createdocumentfragment">The definition of 'Document.createDocumentFragment()' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createdocumentfragment">The definition of 'Document.createDocumentFragment()' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native DocumentFragment createDocumentFragment();
@@ -1438,7 +1392,7 @@ public class Document extends Node {
    * In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">The definition of 'Document.createElement' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">The definition of 'Document.createElement' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Element createElement(@Nonnull String localName, @Nonnull String options);
@@ -1447,7 +1401,7 @@ public class Document extends Node {
    * In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">The definition of 'Document.createElement' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">The definition of 'Document.createElement' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Element createElement(@Nonnull String localName,
@@ -1457,7 +1411,7 @@ public class Document extends Node {
    * In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">The definition of 'Document.createElement' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">The definition of 'Document.createElement' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Element createElement(@Nonnull String localName);
@@ -1466,7 +1420,7 @@ public class Document extends Node {
    * Creates an element with the specified namespace URI and qualified name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS">Document.createElementNS - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelementns">The definition of 'Document.createElementNS()' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelementns">The definition of 'Document.createElementNS()' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Element createElementNS(@Nullable String namespace, @Nonnull String qualifiedName,
@@ -1476,7 +1430,7 @@ public class Document extends Node {
    * Creates an element with the specified namespace URI and qualified name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS">Document.createElementNS - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelementns">The definition of 'Document.createElementNS()' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelementns">The definition of 'Document.createElementNS()' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Element createElementNS(@Nullable String namespace, @Nonnull String qualifiedName,
@@ -1486,7 +1440,7 @@ public class Document extends Node {
    * Creates an element with the specified namespace URI and qualified name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS">Document.createElementNS - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelementns">The definition of 'Document.createElementNS()' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelementns">The definition of 'Document.createElementNS()' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Element createElementNS(@Nullable String namespace, @Nonnull String qualifiedName);
@@ -1495,7 +1449,7 @@ public class Document extends Node {
    * Creates an event of the type specified. The returned object should be first initialized and can then be passed to EventTarget.dispatchEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent">Document.createEvent - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createevent">The definition of 'document.createEvent' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createevent">The definition of 'document.createEvent' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Event createEvent(@Nonnull String interface_);
@@ -1529,11 +1483,11 @@ public class Document extends Node {
    * createProcessingInstruction() generates a new processing instruction node and returns it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createProcessingInstruction">Document.createProcessingInstruction - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createprocessinginstruction">The definition of 'createProcessingInstruction()' in DOM.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-document-createprocessinginstruction">The definition of 'createProcessingInstruction()' in DOM4.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-135944439">The definition of 'createProcessingInstruction()' in Document Object Model (DOM) Level 3 Core Specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-135944439">The definition of 'createProcessingInstruction()' in Document Object Model (DOM) Level 2 Core Specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-135944439">The definition of 'createProcessingInstruction()' in Document Object Model (DOM) Level 1 Specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createprocessinginstruction">The definition of 'createProcessingInstruction()' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-document-createprocessinginstruction">The definition of 'createProcessingInstruction()' in the 'DOM4' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-135944439">The definition of 'createProcessingInstruction()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-135944439">The definition of 'createProcessingInstruction()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-135944439">The definition of 'createProcessingInstruction()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
    */
   @Nonnull
   public native ProcessingInstruction createProcessingInstruction(@Nonnull String target,
@@ -1543,7 +1497,6 @@ public class Document extends Node {
    * The Document.createRange() method returns a new Range object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createRange">Document.createRange - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createrange">The definition of 'document.createRange' in DOM.</a>
    */
   @Nonnull
   public native Range createRange();
@@ -1552,7 +1505,7 @@ public class Document extends Node {
    * Creates a new Text node. This method can be used to escape HTML characters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode">Document.createTextNode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtextnode">The definition of 'Document: createTextNode' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtextnode">The definition of 'Document: createTextNode' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native Text createTextNode(@Nonnull String data);
@@ -1561,6 +1514,8 @@ public class Document extends Node {
    * The Document.createTreeWalker() creator method returns a newly created TreeWalker object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTreeWalker">Document.createTreeWalker - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtreewalker">The definition of 'Document.createTreeWalker' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker">The definition of 'Document.createTreeWalker' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
    */
   @Nonnull
   public native TreeWalker createTreeWalker(@Nonnull Node root, int whatToShow,
@@ -1570,6 +1525,8 @@ public class Document extends Node {
    * The Document.createTreeWalker() creator method returns a newly created TreeWalker object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTreeWalker">Document.createTreeWalker - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtreewalker">The definition of 'Document.createTreeWalker' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker">The definition of 'Document.createTreeWalker' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
    */
   @Nonnull
   public native TreeWalker createTreeWalker(@Nonnull Node root, int whatToShow);
@@ -1578,6 +1535,8 @@ public class Document extends Node {
    * The Document.createTreeWalker() creator method returns a newly created TreeWalker object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTreeWalker">Document.createTreeWalker - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtreewalker">The definition of 'Document.createTreeWalker' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker">The definition of 'Document.createTreeWalker' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
    */
   @Nonnull
   public native TreeWalker createTreeWalker(@Nonnull Node root);
@@ -1586,7 +1545,7 @@ public class Document extends Node {
    * returns an array-like object of all child elements which have all of the given class name(s).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">Document.getElementsByClassName - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbyclassname">The definition of 'document.getElementsByClassName' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbyclassname">The definition of 'document.getElementsByClassName' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native HTMLCollection getElementsByClassName(@Nonnull String classNames);
@@ -1595,7 +1554,7 @@ public class Document extends Node {
    * returns an HTMLCollection of elements with the given tag name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName">Document.getElementsByTagName - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbytagname">The definition of 'document.getElementsByTagName' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbytagname">The definition of 'document.getElementsByTagName' in the 'DOM' specification.</a>
    */
   @Nonnull
   public native HTMLCollection getElementsByTagName(@Nonnull String qualifiedName);
@@ -1604,7 +1563,6 @@ public class Document extends Node {
    * Returns a list of elements with the given tag name belonging to the given namespace. The complete document is searched, including the root node.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagNameNS">Document.getElementsByTagNameNS - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbytagnamens">The definition of 'document.getElementsByTagNameNS' in DOM.</a>
    */
   @Nonnull
   public native HTMLCollection getElementsByTagNameNS(@Nullable String namespace,
@@ -1614,8 +1572,8 @@ public class Document extends Node {
    * The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode">Document.importNode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-importnode">The definition of 'document.importNode()' in DOM.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode">The definition of 'document.importNode()' in Document Object Model (DOM) Level 2 Core Specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-importnode">The definition of 'document.importNode()' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode">The definition of 'document.importNode()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification.</a>
    */
   @Nonnull
   public native Node importNode(@Nonnull Node node, boolean deep);
@@ -1624,8 +1582,8 @@ public class Document extends Node {
    * The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode">Document.importNode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-document-importnode">The definition of 'document.importNode()' in DOM.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode">The definition of 'document.importNode()' in Document Object Model (DOM) Level 2 Core Specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-document-importnode">The definition of 'document.importNode()' in the 'DOM' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode">The definition of 'document.importNode()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification.</a>
    */
   @Nonnull
   public native Node importNode(@Nonnull Node node);
@@ -1643,7 +1601,7 @@ public class Document extends Node {
    * The exitPointerLock() method asynchronously releases a pointer lock previously requested through Element.requestPointerLock.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitPointerLock">Document.exitPointerLock - MDN</a>
-   * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface">The definition of 'Document' in Pointer Lock.</a>
+   * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface">The definition of 'Document' in the 'Pointer Lock' specification.</a>
    */
   public native void exitPointerLock();
 
@@ -1663,7 +1621,7 @@ public class Document extends Node {
    * The Document method exitFullscreen() requests that the element on this document which is currently being presented in full-screen mode be taken out of full-screen mode, restoring the previous state of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen">Document.exitFullscreen - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-exitfullscreen">The definition of 'Document.exitFullscreen()' in Fullscreen API.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dom-document-exitfullscreen">The definition of 'Document.exitFullscreen()' in the 'Fullscreen API' specification.</a>
    */
   @Nonnull
   public native Promise<Void> exitFullscreen();
@@ -1672,8 +1630,8 @@ public class Document extends Node {
    * The Document.close() method finishes writing to a document, opened with Document.open().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/close">Document.close - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-close">The definition of 'document.close()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567">The definition of 'document.close()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-close">The definition of 'document.close()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567">The definition of 'document.close()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   public native void close();
 
@@ -1706,8 +1664,8 @@ public class Document extends Node {
    * The getElementsByName() method of the Document object returns a NodeList Collection of elements with a given name in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName">Document.getElementsByName - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-getelementsbyname">The definition of 'Document.getElementsByName()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259">The definition of 'Document.getElementsByName()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-getelementsbyname">The definition of 'Document.getElementsByName()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259">The definition of 'Document.getElementsByName()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @Nonnull
   public native NodeList getElementsByName(@Nonnull String elementName);
@@ -1716,7 +1674,6 @@ public class Document extends Node {
    * The hasFocus() method of the Document interface returns a Boolean value indicating whether the document or any element inside the document has focus. This method can be used to determine whether the active element in a document has focus.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus">Document.hasFocus - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-hasfocus">The definition of 'Document.hasFocus()' in HTML Living Standard.</a>
    */
   public native boolean hasFocus();
 
@@ -1724,8 +1681,8 @@ public class Document extends Node {
    * The Document.open() method opens a document for writing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @Nonnull
   public native Document open(@Nonnull String unused1, @Nonnull String unused2);
@@ -1734,8 +1691,8 @@ public class Document extends Node {
    * The Document.open() method opens a document for writing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @Nonnull
   public native Document open(@Nonnull String unused1);
@@ -1744,8 +1701,8 @@ public class Document extends Node {
    * The Document.open() method opens a document for writing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @Nonnull
   public native Document open();
@@ -1754,8 +1711,8 @@ public class Document extends Node {
    * The Document.open() method opens a document for writing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">The definition of 'document.open()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">The definition of 'document.open()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   @Nullable
   public native Window open(@Nonnull String url, @Nonnull String name, @Nonnull String features);
@@ -1787,8 +1744,8 @@ public class Document extends Node {
    * The Document.write() method writes a string of text to a document stream opened by document.open().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write">Document.write - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-write">The definition of 'document.write(...)' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634">The definition of 'document.write(...)' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-write">The definition of 'document.write(...)' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634">The definition of 'document.write(...)' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   public native void write(@Nonnull String... text);
 
@@ -1796,8 +1753,8 @@ public class Document extends Node {
    * Writes a string of text followed by a newline character to a document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln">Document.writeln - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-writeln">The definition of 'document.writeln()' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-35318390">The definition of 'document.writeln()' in Document Object Model (DOM) Level 2 HTML Specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-writeln">The definition of 'document.writeln()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-35318390">The definition of 'document.writeln()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
    */
   public native void writeln(@Nonnull String... text);
 
@@ -1850,7 +1807,7 @@ public class Document extends Node {
    * The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">Document.querySelector - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselector">The definition of 'document.querySelector()' in DOM.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselector">The definition of 'document.querySelector()' in the 'DOM' specification.</a>
    */
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
@@ -1859,10 +1816,10 @@ public class Document extends Node {
    * The Document method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">Document.querySelectorAll - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in DOM.</a>
-   * @see <a href="https://dev.w3.org/2006/webapi/selectors-api2/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in Selectors API Level 2.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in DOM4.</a>
-   * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">The definition of 'document.querySelector()' in Selectors API Level 1.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in the 'DOM' specification.</a>
+   * @see <a href="https://dev.w3.org/2006/webapi/selectors-api2/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in the 'Selectors API Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-parentnode-queryselectorall">The definition of 'ParentNode.querySelectorAll()' in the 'DOM4' specification.</a>
+   * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">The definition of 'document.querySelector()' in the 'Selectors API Level 1' specification.</a>
    */
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
@@ -1902,7 +1859,7 @@ public class Document extends Node {
    * Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createNSResolver">Document.createNSResolver - MDN</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver">The definition of 'document.createNSResolver' in Document Object Model (DOM) Level 3 XPath Specification.</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver">The definition of 'document.createNSResolver' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification.</a>
    */
   @Nonnull
   public native XPathNSResolver createNSResolver(@Nonnull Node nodeResolver);
@@ -1911,6 +1868,7 @@ public class Document extends Node {
    * Returns an XPathResult based on an XPath expression and other given parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">The definition of 'Document.evaluate' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification.</a>
    */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
@@ -1920,6 +1878,7 @@ public class Document extends Node {
    * Returns an XPathResult based on an XPath expression and other given parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">The definition of 'Document.evaluate' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification.</a>
    */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
@@ -1929,6 +1888,7 @@ public class Document extends Node {
    * Returns an XPathResult based on an XPath expression and other given parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">The definition of 'Document.evaluate' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification.</a>
    */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
@@ -1938,6 +1898,7 @@ public class Document extends Node {
    * Returns an XPathResult based on an XPath expression and other given parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate">Document.evaluate - MDN</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">The definition of 'Document.evaluate' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification.</a>
    */
   @Nonnull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode);
@@ -1946,10 +1907,6 @@ public class Document extends Node {
    * The Document method getElementById() returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Document.getElementById - MDN</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#method-getElementById">The definition of 'getElementById' in Document Object Model (DOM) Level 1 Specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId">The definition of 'getElementById' in Document Object Model (DOM) Level 2 Core Specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-getElBId">The definition of 'getElementById' in Document Object Model (DOM) Level 3 Core Specification.</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-nonelementparentnode-getelementbyid">The definition of 'getElementById' in DOM.</a>
    */
   @Nullable
   public native Element getElementById(@Nonnull String elementId);

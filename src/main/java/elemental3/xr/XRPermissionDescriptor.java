@@ -17,6 +17,7 @@ import jsinterop.base.JsPropertyMap;
  * User permissions in the WebXR Device API are managed using the Permissions API. To that end, the XRPermissionDescriptor dictionary is used to describe the WebXR features the app needs to use, as well as those features it would like ot use if permision is granted.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor">XRPermissionDescriptor - MDN</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrpermissiondescriptor">The definition of 'XRPermissionDescriptor' in the 'WebXR Device API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -35,6 +36,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The mode property of the XRPermissionDescriptor dictionary is a string taken from the XRSessionMode enumerated type, specifying which Web XR session mode (inline, immersive-vr, or immersive-ar) the described permissions will be used for.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/mode">XRPermissionDescriptor.mode - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-mode">The definition of 'XRPermissionDescriptor.mode' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "mode"
@@ -46,6 +48,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The mode property of the XRPermissionDescriptor dictionary is a string taken from the XRSessionMode enumerated type, specifying which Web XR session mode (inline, immersive-vr, or immersive-ar) the described permissions will be used for.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/mode">XRPermissionDescriptor.mode - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-mode">The definition of 'XRPermissionDescriptor.mode' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setMode(@XRSessionMode @Nonnull String mode);
@@ -54,6 +57,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The mode property of the XRPermissionDescriptor dictionary is a string taken from the XRSessionMode enumerated type, specifying which Web XR session mode (inline, immersive-vr, or immersive-ar) the described permissions will be used for.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/mode">XRPermissionDescriptor.mode - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-mode">The definition of 'XRPermissionDescriptor.mode' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -66,6 +70,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/optionalFeatures">XRPermissionDescriptor.optionalFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures">The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "optionalFeatures"
@@ -76,6 +81,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/optionalFeatures">XRPermissionDescriptor.optionalFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures">The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
@@ -84,6 +90,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/optionalFeatures">XRPermissionDescriptor.optionalFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures">The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -96,6 +103,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/optionalFeatures">XRPermissionDescriptor.optionalFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures">The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   default void setOptionalFeatures(@Nonnull final Any... optionalFeatures) {
@@ -106,6 +114,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/optionalFeatures">XRPermissionDescriptor.optionalFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures">The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -118,6 +127,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures">XRPermissionDescriptor.requiredFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures">The definition of 'XRPermissionDescriptor.requiredFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty(
       name = "requiredFeatures"
@@ -128,6 +138,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures">XRPermissionDescriptor.requiredFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures">The definition of 'XRPermissionDescriptor.requiredFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsProperty
   void setRequiredFeatures(@Nonnull JsArray<Any> requiredFeatures);
@@ -136,6 +147,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures">XRPermissionDescriptor.requiredFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures">The definition of 'XRPermissionDescriptor.requiredFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull
@@ -148,6 +160,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures">XRPermissionDescriptor.requiredFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures">The definition of 'XRPermissionDescriptor.requiredFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   default void setRequiredFeatures(@Nonnull final Any... requiredFeatures) {
@@ -158,6 +171,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures">XRPermissionDescriptor.requiredFeatures - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures">The definition of 'XRPermissionDescriptor.requiredFeatures' in the 'WebXR Device API' specification.</a>
    */
   @JsOverlay
   @Nonnull

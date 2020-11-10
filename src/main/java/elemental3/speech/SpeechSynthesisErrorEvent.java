@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The SpeechSynthesisErrorEvent interface of the Web Speech API contains information about any errors that occur while processing SpeechSynthesisUtterance objects in the speech service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent">SpeechSynthesisErrorEvent - MDN</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechsynthesiserrorevent">The definition of 'SpeechSynthesisErrorEvent' in the 'Web Speech API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,6 +28,7 @@ public class SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
    * The error property of the SpeechSynthesisErrorEvent interface returns an error code indicating what has gone wrong with a speech synthesis attempt.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error">SpeechSynthesisErrorEvent.error - MDN</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesiserrorevent-error">The definition of 'error' in the 'Web Speech API' specification.</a>
    */
   @JsProperty(
       name = "error"

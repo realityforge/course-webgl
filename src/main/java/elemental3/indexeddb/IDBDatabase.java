@@ -20,6 +20,8 @@ import jsinterop.base.Js;
  * The IDBDatabase interface of the IndexedDB API provides a connection to a database; you can use an IDBDatabase object to open a transaction on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase">IDBDatabase - MDN</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbdatabase">The definition of 'IDBDatabase' in the 'Indexed Database API 2.0' specification.</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#database-interface">The definition of 'IDBDatabase' in the 'Indexed Database API Draft' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,6 +34,8 @@ public class IDBDatabase extends EventTarget {
    * The onabort event handler of the IDBDatabase interface handles the abort event, fired when a transaction is aborted and bubbles up to the connection object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onabort">IDBDatabase.onabort - MDN</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onabort">The definition of 'onabort' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onabort">The definition of 'onabort' in the 'Indexed Database API Draft' specification.</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -40,6 +44,7 @@ public class IDBDatabase extends EventTarget {
    * A function which is called when the close event is fired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onclose">IDBDatabase.onclose - MDN</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onclose">The definition of 'onclose' in the 'Indexed Database API Draft' specification.</a>
    */
   @Nullable
   public EventHandler onclose;
@@ -48,6 +53,8 @@ public class IDBDatabase extends EventTarget {
    * The onerror event handler of the IDBDatabase interface handles the error event, fired when a request returns an error and bubbles up to the connection object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onerror">IDBDatabase.onerror - MDN</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onerror">The definition of 'onerror' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onerror">The definition of 'onerror' in the 'Indexed Database API Draft' specification.</a>
    */
   @Nullable
   public EventHandler onerror;
@@ -56,6 +63,8 @@ public class IDBDatabase extends EventTarget {
    * This example shows an IDBOpenDBRequest.onupgradeneeded block that creates a new object store; it also includes onerror and onabort functions to handle non-success cases, and an onversionchange function to notify when a database structure change has occurred.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onversionchange">IDBDatabase.onversionchange - MDN</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onversionchange">The definition of 'onversionchange' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onversionchange">The definition of 'onversionchange' in the 'Indexed Database API Draft' specification.</a>
    */
   @Nullable
   public EventHandler onversionchange;
@@ -67,6 +76,8 @@ public class IDBDatabase extends EventTarget {
    * A DOMString containing the name of the connected database.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/name">IDBDatabase.name - MDN</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-name">The definition of 'name' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-name">The definition of 'name' in the 'Indexed Database API Draft' specification.</a>
    */
   @JsProperty(
       name = "name"
@@ -78,6 +89,8 @@ public class IDBDatabase extends EventTarget {
    * A DOMStringList containing a list of the names of the object stores currently in the connected database.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames">IDBDatabase.objectStoreNames - MDN</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-objectstorenames">The definition of 'objectStoreNames' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-objectstorenames">The definition of 'objectStoreNames' in the 'Indexed Database API Draft' specification.</a>
    */
   @JsProperty(
       name = "objectStoreNames"
@@ -89,6 +102,8 @@ public class IDBDatabase extends EventTarget {
    * An integer containing the version of the connected database.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/version">IDBDatabase.version - MDN</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-version">The definition of 'version' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-version">The definition of 'version' in the 'Indexed Database API Draft' specification.</a>
    */
   @JsProperty(
       name = "version"

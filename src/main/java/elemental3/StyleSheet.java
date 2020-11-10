@@ -11,8 +11,6 @@ import jsinterop.annotations.JsType;
  * An object implementing the StyleSheet interface represents a single style sheet. CSS style sheets will further implement the more specialized CSSStyleSheet interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet">StyleSheet - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#stylesheet">The definition of 'StyleSheet' in CSS Object Model (CSSOM).</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet">The definition of 'StyleSheet' in Document Object Model (DOM) Level 2 Style Specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,8 +23,6 @@ public class StyleSheet {
    * The disabled property of the StyleSheet interface determines whether the style sheet is prevented from applying to the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled">StyleSheet.disabled - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-disabled">The definition of 'StyleSheet.disabled' in CSS Object Model (CSSOM).</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet-disabled">The definition of 'StyleSheet.disabled' in Document Object Model (DOM) Level 2 Style Specification.</a>
    */
   public boolean disabled;
 
@@ -37,7 +33,7 @@ public class StyleSheet {
    * The href property of the StyleSheet interface returns the location of the style sheet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/href">StyleSheet.href - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-href">The definition of 'StyleSheet: href' in CSS Object Model (CSSOM).</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-href">The definition of 'StyleSheet: href' in the 'CSS Object Model (CSSOM)' specification.</a>
    */
   @JsProperty(
       name = "href"
@@ -49,7 +45,6 @@ public class StyleSheet {
    * The media property of the StyleSheet interface specifies the intended destination media for style information. It is a read-only, array-like MediaList object and can be removed with deleteMedium() and added with appendMedium().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/media">StyleSheet.media - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-media">The definition of 'StyleSheet: media' in CSS Object Model (CSSOM).</a>
    */
   @JsProperty(
       name = "media"
@@ -61,7 +56,6 @@ public class StyleSheet {
    * The ownerNode property of the StyleSheet interface returns the node that associates this style sheet with the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/ownerNode">StyleSheet.ownerNode - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-ownernode">The definition of 'StyleSheet: ownerNode' in CSS Object Model (CSSOM).</a>
    */
   @JsProperty(
       name = "ownerNode"
@@ -73,7 +67,7 @@ public class StyleSheet {
    * The parentStyleSheet property of the StyleSheet interface returns the style sheet, if any, that is including the given style sheet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/parentStyleSheet">StyleSheet.parentStyleSheet - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-parentstylesheet">The definition of 'StyleSheet: parentStyleSheet' in CSS Object Model (CSSOM).</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-parentstylesheet">The definition of 'StyleSheet: parentStyleSheet' in the 'CSS Object Model (CSSOM)' specification.</a>
    */
   @JsProperty(
       name = "parentStyleSheet"
@@ -85,7 +79,7 @@ public class StyleSheet {
    * The title property of the StyleSheet interface returns the advisory title of the current style sheet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/title">StyleSheet.title - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-title">The definition of 'StyleSheet: title' in CSS Object Model (CSSOM).</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-title">The definition of 'StyleSheet: title' in the 'CSS Object Model (CSSOM)' specification.</a>
    */
   @JsProperty(
       name = "title"
@@ -97,7 +91,7 @@ public class StyleSheet {
    * The type property of the StyleSheet interface specifies the style sheet language for the given style sheet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/type">StyleSheet.type - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-type">The definition of 'StyleSheet: type' in CSS Object Model (CSSOM).</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-stylesheet-type">The definition of 'StyleSheet: type' in the 'CSS Object Model (CSSOM)' specification.</a>
    */
   @JsProperty(
       name = "type"

@@ -13,6 +13,7 @@ import jsinterop.base.Any;
  * The CustomEvent interface represents events initialized by an application for any purpose.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">CustomEvent - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-customevent">The definition of 'CustomEvent' in the 'DOM' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,6 +26,7 @@ public class CustomEvent extends Event {
    * The CustomEvent() constructor creates a new CustomEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent.CustomEvent - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-customevent">The definition of 'CustomEvent()' in the 'DOM' specification.</a>
    */
   public CustomEvent(@Nonnull final String type, @Nonnull final CustomEventInit eventInitDict) {
     super( null );
@@ -34,6 +36,7 @@ public class CustomEvent extends Event {
    * The CustomEvent() constructor creates a new CustomEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent.CustomEvent - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-customevent">The definition of 'CustomEvent()' in the 'DOM' specification.</a>
    */
   public CustomEvent(@Nonnull final String type) {
     super( null );
@@ -43,6 +46,7 @@ public class CustomEvent extends Event {
    * The detail readonly property of the CustomEvent interface returns any data passed when initializing the event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail">CustomEvent.detail - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-detail">The definition of 'detail' in the 'DOM' specification.</a>
    */
   @JsProperty(
       name = "detail"
@@ -54,6 +58,7 @@ public class CustomEvent extends Event {
    * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-initcustomevent">The definition of 'CustomEvent' in the 'DOM' specification.</a>
    */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @DoNotAutobox @Nullable Object detail);
@@ -62,6 +67,7 @@ public class CustomEvent extends Event {
    * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-initcustomevent">The definition of 'CustomEvent' in the 'DOM' specification.</a>
    */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable);
 
@@ -69,6 +75,7 @@ public class CustomEvent extends Event {
    * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-initcustomevent">The definition of 'CustomEvent' in the 'DOM' specification.</a>
    */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles);
 
@@ -76,6 +83,7 @@ public class CustomEvent extends Event {
    * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-customevent-initcustomevent">The definition of 'CustomEvent' in the 'DOM' specification.</a>
    */
   public native void initCustomEvent(@Nonnull String type);
 }

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The ReportingObserverOptions dictionary of the Reporting API allows options to be set in the constructor when creating a ReportingObserver.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserverOptions">ReportingObserverOptions - MDN</a>
- * @see <a href="https://w3c.github.io/reporting/#dictdef-reportingobserveroptions">The definition of 'ReportingObserverOptions' in Reporting API.</a>
+ * @see <a href="https://w3c.github.io/reporting/#dictdef-reportingobserveroptions">The definition of 'ReportingObserverOptions' in the 'Reporting API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,9 +11,9 @@ import jsinterop.annotations.JsType;
  * The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of output elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmloutputelement">The definition of 'HTMLOutputElement' in HTML Living Standard.</a>
- * @see <a href="https://www.w3.org/TR/html51/forms.html#the-output-element">The definition of 'HTMLOutputElement' in HTML 5.1.</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-output-element">The definition of 'HTMLOutputElement' in HTML5.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmloutputelement">The definition of 'HTMLOutputElement' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://www.w3.org/TR/html51/forms.html#the-output-element">The definition of 'HTMLOutputElement' in the 'HTML 5.1' specification.</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-output-element">The definition of 'HTMLOutputElement' in the 'HTML5' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -50,8 +50,8 @@ public class HTMLOutputElement extends HTMLElement {
    * The HTMLOutputElement.labels read-only property returns a NodeList of the label elements associated with the output element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/labels">HTMLOutputElement.labels - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in HTML5.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML5' specification.</a>
    */
   @JsProperty(
       name = "labels"

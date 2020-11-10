@@ -10,9 +10,9 @@ import jsinterop.annotations.JsType;
  * The HTML meter elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of meter elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement">HTMLMeterElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlmeterelement">The definition of 'HTMLMeterElement' in HTML Living Standard.</a>
- * @see <a href="https://www.w3.org/TR/html51/forms.html#the-meter-element">The definition of 'HTMLMeterElement' in HTML 5.1.</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-meter-element">The definition of 'HTMLMeterElement' in HTML5.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlmeterelement">The definition of 'HTMLMeterElement' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://www.w3.org/TR/html51/forms.html#the-meter-element">The definition of 'HTMLMeterElement' in the 'HTML 5.1' specification.</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-meter-element">The definition of 'HTMLMeterElement' in the 'HTML5' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,8 +40,8 @@ public class HTMLMeterElement extends HTMLElement {
    * The HTMLMeterElement.labels read-only property returns a NodeList of the label elements associated with the meter element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/labels">HTMLMeterElement.labels - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in HTML Living Standard.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in HTML5.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML5' specification.</a>
    */
   @JsProperty(
       name = "labels"

@@ -24,6 +24,7 @@ import jsinterop.base.JsPropertyMap;
  * The Pbkdf2Params dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the PBKDF2 algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params">The definition of 'SubtleCrypto.Pbkdf2Params' in the 'Web Cryptography API' specification.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
