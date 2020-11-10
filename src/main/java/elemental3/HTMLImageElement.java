@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.promise.Promise;
+import elemental3.gl.TexImageSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "HTMLImageElement"
 )
-public class HTMLImageElement extends HTMLElement {
+public class HTMLImageElement extends HTMLElement implements TexImageSource {
   @Nonnull
   public String align;
 

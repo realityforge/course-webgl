@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.promise.Promise;
+import elemental3.gl.TexImageSource;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "OffscreenCanvas"
 )
-public class OffscreenCanvas extends EventTarget implements Transferable {
+public class OffscreenCanvas extends EventTarget implements TexImageSource, Transferable {
   /**
    * The height property returns and sets the height of an OffscreenCanvas object.
    *

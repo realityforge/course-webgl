@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.gl.TexImageSource;
 import elemental3.gl.WebGLContextAttributes;
 import elemental3.gl.WebGLContextEventListener;
 import javaemul.internal.annotations.DoNotAutobox;
@@ -24,7 +25,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "HTMLCanvasElement"
 )
-public class HTMLCanvasElement extends HTMLElement {
+public class HTMLCanvasElement extends HTMLElement implements TexImageSource {
   /**
    * The HTMLCanvasElement.height property is a positive integer reflecting the height HTML attribute of the canvas element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of 150 is used.
    *

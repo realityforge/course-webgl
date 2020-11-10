@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.gl.TexImageSource;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmap"
 )
-public class ImageBitmap implements Transferable {
+public class ImageBitmap implements TexImageSource, Transferable {
   protected ImageBitmap() {
   }
 

@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.Uint8ClampedArray;
+import elemental3.gl.TexImageSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageData"
 )
-public class ImageData {
+public class ImageData implements TexImageSource {
   /**
    * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
    *

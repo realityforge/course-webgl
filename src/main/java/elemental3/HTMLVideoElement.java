@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.gl.TexImageSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "HTMLVideoElement"
 )
-public class HTMLVideoElement extends HTMLMediaElement {
+public class HTMLVideoElement extends HTMLMediaElement implements TexImageSource {
   public int height;
 
   public boolean playsInline;
