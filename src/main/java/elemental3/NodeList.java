@@ -1,7 +1,12 @@
 package elemental3;
 
+import elemental2.core.JsArray;
+import elemental2.core.JsIterator;
+import elemental2.core.JsIteratorIterable;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -22,8 +27,31 @@ import jsinterop.annotations.JsType;
     name = "NodeList"
 )
 public class NodeList {
+  @JsType(
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "Array"
+  )
+  public static final class Entry
+    extends JsArray<Object>
+  {
+    @JsOverlay
+    public final int index()
+    {
+      return getAtAsAny(  0 ).asInt();
+    }
+    @JsOverlay
+    public final Node value()
+    {
+      return (Node) getAt( 1 );
+    }
+  }
+
   protected NodeList() {
   }
+
+  @Nonnull
+  public native JsIterator<Entry> entries();
 
   /**
    * The NodeList.length property returns the number of items in a NodeList.
