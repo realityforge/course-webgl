@@ -51,6 +51,8 @@ fragUV = uv; }
 
 ## References
 
+* [Learn Webgl](http://learnwebgl.brown37.net/index.html)
+
 * [WebGL2 Fundamentals](https://webgl2fundamentals.org/) - a great learning resource.
 
 * [WebGL Academy](http://www.webglacademy.com/) - a great learning resource. I should walk
