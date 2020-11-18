@@ -44,6 +44,24 @@ public class XRInputSourceArray {
   }
 
   /**
+   * The keys() method in the XRInputSourceArray interface returns a JavaScript iterator which can then be used to iterate over the keys used to reference each item in the array of input sources.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys">XRInputSourceArray.keys - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Double> keys();
+
+  /**
+   * The XRInputSourceArray method  values() returns a JavaScript iterator that can walk over the list of XRInputSource objects contained in the array, from first to last.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values">XRInputSourceArray.values - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<XRInputSource> values();
+
+  /**
    * The XRInputSourceArray interface's entries() method returns a JavaScript iterator which can then be used to iterate over the key/value pairs in the input source array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries">XRInputSourceArray.entries - MDN</a>

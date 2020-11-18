@@ -50,6 +50,22 @@ public class NodeList {
   public native Node item(int index);
 
   /**
+   * The NodeList.keys() method returns an iterator allowing to go through all keys contained in this object. The keys are unsigned integer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/keys">NodeList.keys - MDN</a>
+   */
+  @Nonnull
+  public native JsIterator<Double> keys();
+
+  /**
+   * The NodeList.values() method returns an iterator allowing to go through all values contained in this object. The values are Node objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/values">NodeList.values - MDN</a>
+   */
+  @Nonnull
+  public native JsIterator<Node> values();
+
+  /**
    * The NodeList.entries() method returns an iterator allowing to go through all key/value pairs contained in this object. The values are Node objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/entries">NodeList.entries - MDN</a>
