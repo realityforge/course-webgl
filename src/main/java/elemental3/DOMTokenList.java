@@ -1,8 +1,11 @@
 package elemental3;
 
+import elemental2.core.JsArray;
+import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -107,4 +110,31 @@ public class DOMTokenList {
    */
   @Nullable
   public native String item(int index);
+
+  /**
+   * The DOMTokenList.entries() method returns an iterator allowing you to go through all key/value pairs contained in this object. The values are DOMString objects, each representing a single token.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/entries">DOMTokenList.entries - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'entries() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    public final int index() {
+      return getAtAsAny( 0 ).asInt();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final String value() {
+      return getAtAsAny( 0 ).cast();
+    }
+  }
 }

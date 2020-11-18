@@ -1,6 +1,5 @@
 package elemental3;
 
-import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

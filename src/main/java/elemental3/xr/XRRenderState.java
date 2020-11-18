@@ -38,7 +38,6 @@ public class XRRenderState {
    * The depthFar read-only property of the XRRenderState interface returns the distance in meters of the far clip plane from the viewer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthFar">XRRenderState.depthFar - MDN</a>
-   * @see <a href="">The definition of 'XRRenderState.depthFar' in the 'Unknown' specification.</a>
    */
   @JsProperty(
       name = "depthFar"
@@ -49,7 +48,6 @@ public class XRRenderState {
    * The depthNear read-only property of the XRRenderState interface returns the distance in meters of the near clip plane from the viewer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthNear">XRRenderState.depthNear - MDN</a>
-   * @see <a href="">The definition of 'XRRenderState.depthNear' in the 'Unknown' specification.</a>
    */
   @JsProperty(
       name = "depthNear"

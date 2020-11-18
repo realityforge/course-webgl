@@ -2,7 +2,6 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental2.core.JsIterator;
-import elemental2.core.JsIteratorIterable;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -27,31 +26,8 @@ import jsinterop.annotations.JsType;
     name = "NodeList"
 )
 public class NodeList {
-  @JsType(
-    isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "Array"
-  )
-  public static final class Entry
-    extends JsArray<Object>
-  {
-    @JsOverlay
-    public final int index()
-    {
-      return getAtAsAny(  0 ).asInt();
-    }
-    @JsOverlay
-    public final Node value()
-    {
-      return (Node) getAt( 1 );
-    }
-  }
-
   protected NodeList() {
   }
-
-  @Nonnull
-  public native JsIterator<Entry> entries();
 
   /**
    * The NodeList.length property returns the number of items in a NodeList.
@@ -72,4 +48,30 @@ public class NodeList {
    */
   @Nullable
   public native Node item(int index);
+
+  /**
+   * The NodeList.entries() method returns an iterator allowing to go through all key/value pairs contained in this object. The values are Node objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/entries">NodeList.entries - MDN</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    public final int index() {
+      return getAtAsAny( 0 ).asInt();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final Node value() {
+      return getAtAsAny( 0 ).cast();
+    }
+  }
 }

@@ -1,5 +1,7 @@
 package elemental3.xr;
 
+import elemental2.core.JsArray;
+import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -39,5 +41,32 @@ public class XRInputSourceArray {
   @Nonnull
   public final XRInputSource getAt(final int index) {
     return Js.<JsArrayLike<XRInputSource>>cast( this ).getAt( index );
+  }
+
+  /**
+   * The XRInputSourceArray interface's entries() method returns a JavaScript iterator which can then be used to iterate over the key/value pairs in the input source array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries">XRInputSourceArray.entries - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    public final int index() {
+      return getAtAsAny( 0 ).asInt();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final XRInputSource value() {
+      return getAtAsAny( 0 ).cast();
+    }
   }
 }

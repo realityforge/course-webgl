@@ -1,7 +1,5 @@
 package elemental3.bluetooth;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -12,8 +10,10 @@ import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
+import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
+import elemental3.DataView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

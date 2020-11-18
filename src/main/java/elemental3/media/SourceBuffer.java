@@ -1,7 +1,5 @@
 package elemental3.media;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -11,9 +9,11 @@ import elemental2.core.Uint16Array;
 import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
+import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.AudioTrackList;
 import elemental3.BufferSource;
+import elemental3.DataView;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
 import elemental3.TextTrackList;

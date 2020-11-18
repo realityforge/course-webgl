@@ -1,8 +1,8 @@
 package elemental3.audio;
 
-import elemental2.core.ArrayBuffer;
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import elemental3.ArrayBuffer;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
 import javax.annotation.Generated;

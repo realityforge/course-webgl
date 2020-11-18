@@ -1,7 +1,5 @@
 package elemental3.rtc;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -12,9 +10,11 @@ import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental3.AddEventListenerOptions;
+import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.BinaryType;
 import elemental3.Blob;
+import elemental3.DataView;
 import elemental3.EventHandler;
 import elemental3.EventListener;
 import elemental3.EventListenerOptions;
