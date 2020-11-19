@@ -112,7 +112,7 @@ public class NodeList {
     @JsOverlay
     @Nonnull
     public final Node value() {
-      return getAtAsAny( 0 ).cast();
+      return getAtAsAny( 1 ).cast();
     }
   }
 

@@ -1,9 +1,12 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -120,4 +123,74 @@ public class FormData {
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata-set">The definition of 'set()' in the 'XMLHttpRequest' specification.</a>
    */
   public native void set(@Nonnull String name, @Nonnull Blob blobValue);
+
+  /**
+   * The FormData.keys() method returns an iterator allowing to go through all keys contained in this object. The keys are USVString objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/keys">FormData.keys - MDN</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">The definition of 'keys() (as iterator&lt;&gt;)' in the 'XMLHttpRequest' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<String> keys();
+
+  /**
+   * The FormData.values() method returns an iterator allowing to go through all values contained in this object. The values are USVString or Blob objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/values">FormData.values - MDN</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">The definition of 'values() (as iterator&lt;&gt;)' in the 'XMLHttpRequest' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<FormDataEntryValue> values();
+
+  /**
+   * The FormData.entries() method returns an iterator allowing to go through all key/value pairs contained in this object. The key of each pair is a USVString object; the value either a USVString, or a Blob.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/entries">FormData.entries - MDN</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">The definition of 'entries() (as iterator&lt;&gt;)' in the 'XMLHttpRequest' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  public native void forEach(@Nonnull ForEachCallback callback);
+
+  public native void forEach(@Nonnull ForEachCallback2 callback);
+
+  public native void forEach(@Nonnull ForEachCallback3 callback);
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    @Nonnull
+    public final String key() {
+      return getAtAsAny( 0 ).cast();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final FormDataEntryValue value() {
+      return getAtAsAny( 0 ).cast();
+    }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(@Nonnull FormDataEntryValue value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(@Nonnull FormDataEntryValue value, String key);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(@Nonnull FormDataEntryValue value, String key, @Nonnull FormData iterable);
+  }
 }

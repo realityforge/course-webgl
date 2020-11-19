@@ -1,9 +1,12 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
@@ -123,4 +126,92 @@ public class URLSearchParams {
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-sort">The definition of 'sort()' in the 'URL' specification.</a>
    */
   public native void sort();
+
+  /**
+   * The keys() method of the URLSearchParams interface returns an iterator allowing iteration through all keys contained in this object. The keys are USVString objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/keys">URLSearchParams.keys - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">The definition of 'keys() (see &quot;iterable&quot;)' in the 'URL' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<String> keys();
+
+  /**
+   * The values() method of the URLsearchParams interface returns an iterator allowing iteration through all values contained in this object. The values are USVString objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/values">URLSearchParams.values - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">The definition of 'values() (see &quot;iterable&quot;)' in the 'URL' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<String> values();
+
+  /**
+   * The entries() method of the URLSearchParams interface returns an iterator allowing iteration through all key/value pairs contained in this object. The key and value of each pair are USVString objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/entries">URLSearchParams.entries - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">The definition of 'entries() (see &quot;iterable&quot;)' in the 'URL' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  /**
+   * The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach">URLSearchParams.forEach - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">The definition of 'forEach() (see &quot;iterable&quot;)' in the 'URL' specification.</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback callback);
+
+  /**
+   * The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach">URLSearchParams.forEach - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">The definition of 'forEach() (see &quot;iterable&quot;)' in the 'URL' specification.</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback2 callback);
+
+  /**
+   * The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach">URLSearchParams.forEach - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">The definition of 'forEach() (see &quot;iterable&quot;)' in the 'URL' specification.</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback3 callback);
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    @Nonnull
+    public final String key() {
+      return getAtAsAny( 0 ).cast();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final String value() {
+      return getAtAsAny( 0 ).cast();
+    }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(@Nonnull String value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(@Nonnull String value, String key);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(@Nonnull String value, String key, @Nonnull URLSearchParams iterable);
+  }
 }

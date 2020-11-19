@@ -109,7 +109,7 @@ public class XRInputSourceArray {
     @JsOverlay
     @Nonnull
     public final XRInputSource value() {
-      return getAtAsAny( 0 ).cast();
+      return getAtAsAny( 1 ).cast();
     }
   }
 

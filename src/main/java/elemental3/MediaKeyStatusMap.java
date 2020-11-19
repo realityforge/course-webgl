@@ -5,6 +5,8 @@ import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
 import elemental2.core.Int32Array;
 import elemental2.core.Int8Array;
+import elemental2.core.JsArray;
+import elemental2.core.JsIterator;
 import elemental2.core.Uint16Array;
 import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
@@ -12,6 +14,8 @@ import elemental2.core.Uint8ClampedArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -264,4 +268,92 @@ public class MediaKeyStatusMap {
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   public native boolean has(@Nonnull ArrayBuffer keyId);
+
+  /**
+   * The keys property of the MediaKeyStatusMap interface returns a new Iterator object, containing keys for each element in the status map, in insertion order
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/keys">MediaKeyStatusMap.keys - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
+   */
+  @Nonnull
+  public native JsIterator<BufferSource> keys();
+
+  /**
+   * The values property of the MediaKeyStatusMap interface returns a new Iterator object, containing values for each element in the status map, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/values">MediaKeyStatusMap.values - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
+   */
+  @Nonnull
+  public native JsIterator<String> values();
+
+  /**
+   * The entries() read-only property of the MediaKeyStatusMap interface returns a new Iterator object, containing an array of [key, value] pairs for each element in the status map, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/entries">MediaKeyStatusMap.entries - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  /**
+   * The forEach property of the MediaKeyStatusMap interface calls callback once for each key-value pair in the status map, in insertion order. If an argument is present it will be passed to the callback.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach">MediaKeyStatusMap.forEach - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback callback);
+
+  /**
+   * The forEach property of the MediaKeyStatusMap interface calls callback once for each key-value pair in the status map, in insertion order. If an argument is present it will be passed to the callback.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach">MediaKeyStatusMap.forEach - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback2 callback);
+
+  /**
+   * The forEach property of the MediaKeyStatusMap interface calls callback once for each key-value pair in the status map, in insertion order. If an argument is present it will be passed to the callback.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach">MediaKeyStatusMap.forEach - MDN</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback3 callback);
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    @Nonnull
+    public final BufferSource key() {
+      return getAtAsAny( 0 ).cast();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final String value() {
+      return getAtAsAny( 0 ).cast();
+    }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(@Nonnull String value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(@Nonnull String value, BufferSource key);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(@Nonnull String value, BufferSource key, @Nonnull MediaKeyStatusMap iterable);
+  }
 }
