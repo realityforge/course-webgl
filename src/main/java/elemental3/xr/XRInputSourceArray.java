@@ -4,6 +4,7 @@ import elemental2.core.JsArray;
 import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -70,6 +71,12 @@ public class XRInputSourceArray {
   @Nonnull
   public native JsIterator<Entry> entries();
 
+  public native void forEach(@Nonnull ForEachCallback callback);
+
+  public native void forEach(@Nonnull ForEachCallback2 callback);
+
+  public native void forEach(@Nonnull ForEachCallback3 callback);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -86,5 +93,23 @@ public class XRInputSourceArray {
     public final XRInputSource value() {
       return getAtAsAny( 0 ).cast();
     }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(@Nonnull XRInputSource value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(@Nonnull XRInputSource value, int index);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(@Nonnull XRInputSource value, int index, @Nonnull XRInputSourceArray iterable);
   }
 }

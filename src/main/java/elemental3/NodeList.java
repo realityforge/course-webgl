@@ -5,6 +5,7 @@ import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -73,6 +74,12 @@ public class NodeList {
   @Nonnull
   public native JsIterator<Entry> entries();
 
+  public native void forEach(@Nonnull ForEachCallback callback);
+
+  public native void forEach(@Nonnull ForEachCallback2 callback);
+
+  public native void forEach(@Nonnull ForEachCallback3 callback);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -89,5 +96,23 @@ public class NodeList {
     public final Node value() {
       return getAtAsAny( 0 ).cast();
     }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(@Nonnull Node value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(@Nonnull Node value, int index);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(@Nonnull Node value, int index, @Nonnull NodeList iterable);
   }
 }
