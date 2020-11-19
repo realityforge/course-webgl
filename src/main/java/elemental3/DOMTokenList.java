@@ -139,10 +139,28 @@ public class DOMTokenList {
   @Nonnull
   public native JsIterator<Entry> entries();
 
+  /**
+   * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback callback);
 
+  /**
+   * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback2 callback);
 
+  /**
+   * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback3 callback);
 
   @JsType(

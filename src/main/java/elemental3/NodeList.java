@@ -74,10 +74,28 @@ public class NodeList {
   @Nonnull
   public native JsIterator<Entry> entries();
 
+  /**
+   * The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach">NodeList.forEach - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#es-forEach">The definition of 'forEach' in the 'Web IDL' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback callback);
 
+  /**
+   * The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach">NodeList.forEach - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#es-forEach">The definition of 'forEach' in the 'Web IDL' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback2 callback);
 
+  /**
+   * The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach">NodeList.forEach - MDN</a>
+   * @see <a href="https://heycam.github.io/webidl/#es-forEach">The definition of 'forEach' in the 'Web IDL' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback3 callback);
 
   @JsType(

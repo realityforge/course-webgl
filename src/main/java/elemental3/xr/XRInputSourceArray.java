@@ -71,10 +71,28 @@ public class XRInputSourceArray {
   @Nonnull
   public native JsIterator<Entry> entries();
 
+  /**
+   * The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach">XRInputSourceArray.forEach - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback callback);
 
+  /**
+   * The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach">XRInputSourceArray.forEach - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback2 callback);
 
+  /**
+   * The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach">XRInputSourceArray.forEach - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   */
   public native void forEach(@Nonnull ForEachCallback3 callback);
 
   @JsType(
