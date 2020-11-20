@@ -1,7 +1,7 @@
 package elemental3.audio;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Uint8Array;
+import elemental3.Float32Array;
+import elemental3.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

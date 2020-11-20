@@ -1,7 +1,9 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +27,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ArrayBuffer"
 )
-public class ArrayBuffer {
+public class ArrayBuffer implements Transferable {
   /**
    * The ArrayBuffer() constructor is used to create ArrayBuffer objects.
    *
@@ -38,13 +40,21 @@ public class ArrayBuffer {
   /**
    * The byteLength accessor property represents the length of an ArrayBuffer in bytes.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength">SharedArrayBuffer.byteLength - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength">ArrayBuffer.byteLength - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-arraybuffer.prototype.bytelength">ArrayBuffer.prototype.byteLength - ECMA</a>
    */
   @JsProperty(
       name = "byteLength"
   )
   public native int byteLength();
+
+  /**
+   * The ArrayBuffer.isView() method determines whether the passed value is one of the ArrayBuffer views, such as typed array objects or a DataView.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView">ArrayBuffer.isView - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-arraybuffer.isview">ArrayBuffer.isView - ECMA</a>
+   */
+  public static native boolean isView(@DoNotAutobox @Nullable Object value);
 
   /**
    * The slice() method returns a new ArrayBuffer whose contents are a copy of this ArrayBuffer's bytes from begin, inclusive, up to end, exclusive.

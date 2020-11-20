@@ -1,7 +1,5 @@
 package elemental3;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
 import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

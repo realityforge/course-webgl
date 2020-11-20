@@ -1,6 +1,6 @@
 package elemental3.xr;
 
-import elemental2.core.Float32Array;
+import elemental3.Float32Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

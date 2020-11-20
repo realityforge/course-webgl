@@ -1,15 +1,6 @@
 package elemental3;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
 import elemental2.core.JsArray;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -239,86 +230,6 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
    */
   public native void send(@Nonnull ArrayBufferView data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Int8Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Int16Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Int32Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Uint8Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Uint16Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Uint32Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Uint8ClampedArray data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Float32Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull Float64Array data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">The definition of 'WebSocket: send' in the 'HTML Living Standard' specification.</a>
-   */
-  public native void send(@Nonnull DataView data);
 
   @JsOverlay
   public final void addCloseListener(@Nonnull final CloseEventListener callback,

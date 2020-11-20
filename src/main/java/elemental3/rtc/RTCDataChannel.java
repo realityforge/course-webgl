@@ -1,20 +1,10 @@
 package elemental3.rtc;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental3.AddEventListenerOptions;
 import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.BinaryType;
 import elemental3.Blob;
-import elemental3.DataView;
 import elemental3.EventHandler;
 import elemental3.EventListener;
 import elemental3.EventListenerOptions;
@@ -269,86 +259,6 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
    */
   public native void send(@Nonnull ArrayBufferView data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Int8Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Int16Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Int32Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Uint8Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Uint16Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Uint32Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Uint8ClampedArray data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Float32Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull Float64Array data);
-
-  /**
-   * The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send">The definition of 'RTCDataChannel.send()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
-   */
-  public native void send(@Nonnull DataView data);
 
   @JsOverlay
   public final void addErrorListener(@Nonnull final RTCErrorEventListener callback,

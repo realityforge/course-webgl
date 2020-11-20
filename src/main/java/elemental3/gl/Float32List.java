@@ -1,7 +1,7 @@
 package elemental3.gl;
 
-import elemental2.core.Float32Array;
 import elemental2.core.JsArray;
+import elemental3.Float32Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

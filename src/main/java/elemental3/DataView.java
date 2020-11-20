@@ -3,6 +3,7 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -16,7 +17,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DataView"
 )
-public class DataView {
+public class DataView implements ArrayBufferView {
   /**
    * The DataView() constructor is used to create DataView objects.
    *
@@ -66,13 +67,29 @@ public class DataView {
   public DataView(@Nonnull final SharedArrayBuffer buffer) {
   }
 
+  @JsProperty(
+      name = "buffer"
+  )
+  @Nonnull
+  public native ArrayBuffer buffer();
+
+  @JsProperty(
+      name = "byteLength"
+  )
+  public native int byteLength();
+
+  @JsProperty(
+      name = "byteOffset"
+  )
+  public native int byteOffset();
+
   public native byte getInt8(int byteOffset);
 
-  public native int getUint8(int byteOffset);
+  public native short getUint8(int byteOffset);
 
-  public native int getInt16(int byteOffset, boolean littleEndian);
+  public native short getInt16(int byteOffset, boolean littleEndian);
 
-  public native int getInt16(int byteOffset);
+  public native short getInt16(int byteOffset);
 
   public native int getUint16(int byteOffset, boolean littleEndian);
 

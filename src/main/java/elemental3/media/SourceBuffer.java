@@ -1,19 +1,9 @@
 package elemental3.media;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.AudioTrackList;
 import elemental3.BufferSource;
-import elemental3.DataView;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
 import elemental3.TextTrackList;
@@ -173,86 +163,6 @@ public class SourceBuffer extends EventTarget {
    * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
    */
   public native void appendBuffer(@Nonnull ArrayBufferView data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Int8Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Int16Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Int32Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Uint8Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Uint16Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Uint32Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Uint8ClampedArray data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Float32Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull Float64Array data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull DataView data);
 
   /**
    * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.

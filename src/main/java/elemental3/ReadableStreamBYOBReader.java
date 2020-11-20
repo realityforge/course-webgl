@@ -1,14 +1,5 @@
 package elemental3;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -36,36 +27,6 @@ public class ReadableStreamBYOBReader {
 
   @Nonnull
   public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull ArrayBufferView view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Int8Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Int16Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Int32Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Uint8Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Uint16Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Uint32Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Uint8ClampedArray view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Float32Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull Float64Array view);
-
-  @Nonnull
-  public native Promise<ReadableStreamBYOBReadResult> read(@Nonnull DataView view);
 
   public native void releaseLock();
 

@@ -1,14 +1,5 @@
 package elemental3;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -292,86 +283,6 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
    */
   public native void send(@Nonnull ArrayBufferView body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Int8Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Int16Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Int32Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Uint8Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Uint16Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Uint32Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Uint8ClampedArray body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Float32Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull Float64Array body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull DataView body);
 
   /**
    * The XMLHttpRequest method send() sends the request to the server.
