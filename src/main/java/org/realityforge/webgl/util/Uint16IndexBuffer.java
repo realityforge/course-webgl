@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class Uint16IndexBuffer
-  extends IndexBuffer<Uint16Array>
+  extends IndexBuffer
 {
   public Uint16IndexBuffer( @Nonnull final Uint16Array data )
   {

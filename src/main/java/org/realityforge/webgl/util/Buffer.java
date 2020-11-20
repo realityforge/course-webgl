@@ -1,6 +1,5 @@
 package org.realityforge.webgl.util;
 
-import elemental2.core.TypedArray;
 import elemental3.ArrayBufferView;
 import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
@@ -10,12 +9,11 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.base.Js;
 
-public abstract class Buffer<T extends TypedArray>
+public abstract class Buffer
 {
   @Nonnull
-  private final T _data;
+  private final ArrayBufferView _data;
   @BufferTargetType
   private final int _target;
   @UsageType
@@ -30,7 +28,7 @@ public abstract class Buffer<T extends TypedArray>
   @Nullable
   private WebGLBuffer _buffer;
 
-  protected Buffer( @Nonnull final T data,
+  protected Buffer( @Nonnull final ArrayBufferView data,
                     @BufferTargetType final int target,
                     @UsageType final int usage,
                     @VertexDimensions final int dimension,
@@ -54,7 +52,7 @@ public abstract class Buffer<T extends TypedArray>
   }
 
   @Nonnull
-  public T getData()
+  public ArrayBufferView getData()
   {
     return _data;
   }
@@ -108,8 +106,7 @@ public abstract class Buffer<T extends TypedArray>
     _buffer = gl.createBuffer();
     assert null != _buffer;
     bind( gl );
-    //TODO: Rework webtack to remove this unchecked cast
-    gl.bufferData( _target, Js.<ArrayBufferView>uncheckedCast( _data ), _usage );
+    gl.bufferData( _target, _data, _usage );
   }
 
   public void bind( @Nonnull final WebGL2RenderingContext gl )

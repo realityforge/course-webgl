@@ -10,7 +10,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class Float32Buffer
-  extends Buffer<Float32Array>
+  extends Buffer
 {
   public Float32Buffer( @Nonnull final WebGL2RenderingContext gl,
                         @Nonnull final Float32Array data,

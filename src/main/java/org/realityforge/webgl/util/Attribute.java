@@ -10,7 +10,7 @@ public final class Attribute
    * The data and layout of data.
    */
   @Nonnull
-  private final Buffer<?> _buffer;
+  private final Buffer _buffer;
   /**
    * The location/index of attribute in the program. This can either be specified in
    * the shader definition or looked up at runtime. Specifying the value in the shader source
@@ -18,19 +18,19 @@ public final class Attribute
    */
   private int _location;
 
-  public Attribute( @Nonnull final Buffer<?> buffer )
+  public Attribute( @Nonnull final Buffer buffer )
   {
     this( buffer, WebGL2RenderingContext.INVALID_INDEX );
   }
 
-  public Attribute( @Nonnull final Buffer<?> buffer, final int location )
+  public Attribute( @Nonnull final Buffer buffer, final int location )
   {
     _buffer = Objects.requireNonNull( buffer );
     _location = location;
   }
 
   @Nonnull
-  public Buffer<?> getBuffer()
+  public Buffer getBuffer()
   {
     return _buffer;
   }

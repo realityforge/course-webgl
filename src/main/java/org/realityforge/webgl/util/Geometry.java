@@ -16,7 +16,7 @@ public final class Geometry
   @Nonnull
   private final Attribute[] _attributes;
   @Nullable
-  private final IndexBuffer<?> _indexBuffer;
+  private final IndexBuffer _indexBuffer;
   @Nullable
   private WebGLVertexArrayObject _vertexArrayObject;
 
@@ -28,7 +28,7 @@ public final class Geometry
   public Geometry( @DrawPrimitiveType final int mode,
                    final int offset,
                    final int count,
-                   @Nullable final IndexBuffer<?> indexBuffer,
+                   @Nullable final IndexBuffer indexBuffer,
                    @Nonnull final Attribute... attributes )
   {
     _mode = mode;
