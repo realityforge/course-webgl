@@ -667,7 +667,7 @@ public class CanvasRenderingContext2D {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash">CanvasRenderingContext2D.setLineDash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-setlinedash">The definition of 'CanvasRenderingContext2D.setLineDash' in the 'HTML Living Standard' specification.</a>
    */
-  public native void setLineDash(@Nonnull Double[] segments);
+  public native void setLineDash(@Nonnull double[] segments);
 
   /**
    * The CanvasRenderingContext2D.drawFocusIfNeeded() method of the Canvas 2D API draws a focus ring around the current or given path, if the specified element is focused.

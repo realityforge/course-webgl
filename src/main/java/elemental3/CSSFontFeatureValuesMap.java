@@ -26,7 +26,7 @@ public class CSSFontFeatureValuesMap {
 
   public native void set(@Nonnull String featureValueName, @Nonnull JsArray<Double> values);
 
-  public native void set(@Nonnull String featureValueName, @Nonnull Double[] values);
+  public native void set(@Nonnull String featureValueName, @Nonnull double[] values);
 
   @JsProperty(
       name = "size"

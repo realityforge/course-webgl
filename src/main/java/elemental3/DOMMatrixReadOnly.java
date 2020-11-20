@@ -44,7 +44,7 @@ public class DOMMatrixReadOnly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
-  public DOMMatrixReadOnly(@Nonnull final Double[] init) {
+  public DOMMatrixReadOnly(@Nonnull final double[] init) {
   }
 
   /**

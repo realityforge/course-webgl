@@ -58,7 +58,7 @@ public class Float64Array implements ArrayBufferView {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array">Float64Array.Float64Array - MDN</a>
    */
-  public Float64Array(@Nonnull final Double[] array) {
+  public Float64Array(@Nonnull final double[] array) {
   }
 
   /**
@@ -116,11 +116,11 @@ public class Float64Array implements ArrayBufferView {
 
   public native void set(@Nonnull JsArray<Double> array, int offset);
 
-  public native void set(@Nonnull Double[] array, int offset);
+  public native void set(@Nonnull double[] array, int offset);
 
   public native void set(@Nonnull JsArray<Double> array);
 
-  public native void set(@Nonnull Double[] array);
+  public native void set(@Nonnull double[] array);
 
   @Nonnull
   public native Float64Array subarray(int start, int end);

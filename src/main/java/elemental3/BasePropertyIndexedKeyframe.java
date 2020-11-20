@@ -147,13 +147,13 @@ public interface BasePropertyIndexedKeyframe {
   }
 
   @JsOverlay
-  default void setOffset(@Nonnull final Double... offset) {
+  default void setOffset(@Nonnull final double... offset) {
     setOffset( DoubleOrDoubleArrayUnion.of( offset ) );
   }
 
   @JsOverlay
   @Nonnull
-  default BasePropertyIndexedKeyframe offset(@Nonnull final Double... offset) {
+  default BasePropertyIndexedKeyframe offset(@Nonnull final double... offset) {
     setOffset( offset );
     return this;
   }

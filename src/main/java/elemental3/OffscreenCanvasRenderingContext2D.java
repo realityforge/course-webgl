@@ -187,7 +187,7 @@ public class OffscreenCanvasRenderingContext2D {
 
   public native void setLineDash(@Nonnull JsArray<Double> segments);
 
-  public native void setLineDash(@Nonnull Double[] segments);
+  public native void setLineDash(@Nonnull double[] segments);
 
   public native void arc(double x, double y, double radius, double startAngle, double endAngle,
       boolean anticlockwise);

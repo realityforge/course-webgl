@@ -29,7 +29,7 @@ public interface VibratePattern {
 
   @JsOverlay
   @Nonnull
-  static VibratePattern of(@Nonnull final Double[] value) {
+  static VibratePattern of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
 }

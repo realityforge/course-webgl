@@ -76,13 +76,13 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   }
 
   @JsOverlay
-  default void setOutputChannelCount(@Nonnull final Double... outputChannelCount) {
+  default void setOutputChannelCount(@Nonnull final double... outputChannelCount) {
     setOutputChannelCount( Js.<JsArray<Double>>uncheckedCast( outputChannelCount ) );
   }
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions outputChannelCount(@Nonnull final Double... outputChannelCount) {
+  default AudioWorkletNodeOptions outputChannelCount(@Nonnull final double... outputChannelCount) {
     setOutputChannelCount( outputChannelCount );
     return this;
   }

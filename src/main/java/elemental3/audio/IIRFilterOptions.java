@@ -26,7 +26,7 @@ public interface IIRFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  static IIRFilterOptions create(@Nonnull final Double[] feedback,
+  static IIRFilterOptions create(@Nonnull final double[] feedback,
       @Nonnull final JsArray<Double> feedforward) {
     return Js.<IIRFilterOptions>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
   }
@@ -34,14 +34,14 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   static IIRFilterOptions create(@Nonnull final JsArray<Double> feedback,
-      @Nonnull final Double[] feedforward) {
+      @Nonnull final double[] feedforward) {
     return Js.<IIRFilterOptions>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
   }
 
   @JsOverlay
   @Nonnull
-  static IIRFilterOptions create(@Nonnull final Double[] feedback,
-      @Nonnull final Double[] feedforward) {
+  static IIRFilterOptions create(@Nonnull final double[] feedback,
+      @Nonnull final double[] feedforward) {
     return Js.<IIRFilterOptions>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
   }
 
@@ -62,13 +62,13 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   }
 
   @JsOverlay
-  default void setFeedback(@Nonnull final Double... feedback) {
+  default void setFeedback(@Nonnull final double... feedback) {
     setFeedback( Js.<JsArray<Double>>uncheckedCast( feedback ) );
   }
 
   @JsOverlay
   @Nonnull
-  default IIRFilterOptions feedback(@Nonnull final Double... feedback) {
+  default IIRFilterOptions feedback(@Nonnull final double... feedback) {
     setFeedback( feedback );
     return this;
   }
@@ -90,13 +90,13 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   }
 
   @JsOverlay
-  default void setFeedforward(@Nonnull final Double... feedforward) {
+  default void setFeedforward(@Nonnull final double... feedforward) {
     setFeedforward( Js.<JsArray<Double>>uncheckedCast( feedforward ) );
   }
 
   @JsOverlay
   @Nonnull
-  default IIRFilterOptions feedforward(@Nonnull final Double... feedforward) {
+  default IIRFilterOptions feedforward(@Nonnull final double... feedforward) {
     setFeedforward( feedforward );
     return this;
   }

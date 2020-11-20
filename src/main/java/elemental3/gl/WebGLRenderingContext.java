@@ -1091,7 +1091,7 @@ public class WebGLRenderingContext {
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1100,7 +1100,7 @@ public class WebGLRenderingContext {
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List v);
 
@@ -1109,7 +1109,7 @@ public class WebGLRenderingContext {
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1118,7 +1118,7 @@ public class WebGLRenderingContext {
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List v);
 
@@ -1127,7 +1127,7 @@ public class WebGLRenderingContext {
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1136,7 +1136,7 @@ public class WebGLRenderingContext {
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List v);
 
@@ -1145,7 +1145,7 @@ public class WebGLRenderingContext {
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1154,7 +1154,7 @@ public class WebGLRenderingContext {
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Double[] v);
+  public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List value);
@@ -1166,7 +1166,7 @@ public class WebGLRenderingContext {
       @Nonnull JsArray<Double> value);
 
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull Double[] value);
+      @Nonnull double[] value);
 
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List value);
@@ -1178,7 +1178,7 @@ public class WebGLRenderingContext {
       @Nonnull JsArray<Double> value);
 
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull Double[] value);
+      @Nonnull double[] value);
 
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List value);
@@ -1190,7 +1190,7 @@ public class WebGLRenderingContext {
       @Nonnull JsArray<Double> value);
 
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull Double[] value);
+      @Nonnull double[] value);
 
   /**
    * The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active.
@@ -2170,7 +2170,7 @@ public class WebGLRenderingContext {
 
   public native void vertexAttrib1fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib1fv(int index, @Nonnull Double[] values);
+  public native void vertexAttrib1fv(int index, @Nonnull double[] values);
 
   public native void vertexAttrib2f(int index, float x, float y);
 
@@ -2180,7 +2180,7 @@ public class WebGLRenderingContext {
 
   public native void vertexAttrib2fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib2fv(int index, @Nonnull Double[] values);
+  public native void vertexAttrib2fv(int index, @Nonnull double[] values);
 
   public native void vertexAttrib3f(int index, float x, float y, float z);
 
@@ -2190,7 +2190,7 @@ public class WebGLRenderingContext {
 
   public native void vertexAttrib3fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib3fv(int index, @Nonnull Double[] values);
+  public native void vertexAttrib3fv(int index, @Nonnull double[] values);
 
   public native void vertexAttrib4f(int index, float x, float y, float z, float w);
 
@@ -2200,7 +2200,7 @@ public class WebGLRenderingContext {
 
   public native void vertexAttrib4fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib4fv(int index, @Nonnull Double[] values);
+  public native void vertexAttrib4fv(int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.

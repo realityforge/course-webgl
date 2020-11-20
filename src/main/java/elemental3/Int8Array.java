@@ -70,7 +70,7 @@ public class Int8Array implements ArrayBufferView {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array">Int8Array.Int8Array - MDN</a>
    */
-  public Int8Array(@Nonnull final Double[] array) {
+  public Int8Array(@Nonnull final double[] array) {
   }
 
   /**
@@ -128,11 +128,11 @@ public class Int8Array implements ArrayBufferView {
 
   public native void set(@Nonnull JsArray<Double> array, int offset);
 
-  public native void set(@Nonnull Double[] array, int offset);
+  public native void set(@Nonnull double[] array, int offset);
 
   public native void set(@Nonnull JsArray<Double> array);
 
-  public native void set(@Nonnull Double[] array);
+  public native void set(@Nonnull double[] array);
 
   @Nonnull
   public native Int8Array subarray(int start, int end);

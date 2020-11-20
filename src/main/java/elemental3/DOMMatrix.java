@@ -87,7 +87,7 @@ public class DOMMatrix extends DOMMatrixReadOnly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrix' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
-  public DOMMatrix(@Nonnull final Double[] init) {
+  public DOMMatrix(@Nonnull final double[] init) {
   }
 
   /**

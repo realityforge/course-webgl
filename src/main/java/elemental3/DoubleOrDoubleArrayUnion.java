@@ -29,7 +29,7 @@ public interface DoubleOrDoubleArrayUnion {
 
   @JsOverlay
   @Nonnull
-  static DoubleOrDoubleArrayUnion of(@Nonnull final Double[] value) {
+  static DoubleOrDoubleArrayUnion of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
 }

@@ -57,7 +57,7 @@ public class Uint8ClampedArray implements ArrayBufferView {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
    */
-  public Uint8ClampedArray(@Nonnull final Double[] array) {
+  public Uint8ClampedArray(@Nonnull final double[] array) {
   }
 
   /**
@@ -116,11 +116,11 @@ public class Uint8ClampedArray implements ArrayBufferView {
 
   public native void set(@Nonnull JsArray<Double> array, int offset);
 
-  public native void set(@Nonnull Double[] array, int offset);
+  public native void set(@Nonnull double[] array, int offset);
 
   public native void set(@Nonnull JsArray<Double> array);
 
-  public native void set(@Nonnull Double[] array);
+  public native void set(@Nonnull double[] array);
 
   @Nonnull
   public native Uint8ClampedArray subarray(int start, int end);

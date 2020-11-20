@@ -57,7 +57,7 @@ public class Int16Array implements ArrayBufferView {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
    */
-  public Int16Array(@Nonnull final Double[] array) {
+  public Int16Array(@Nonnull final double[] array) {
   }
 
   /**
@@ -115,11 +115,11 @@ public class Int16Array implements ArrayBufferView {
 
   public native void set(@Nonnull JsArray<Double> array, int offset);
 
-  public native void set(@Nonnull Double[] array, int offset);
+  public native void set(@Nonnull double[] array, int offset);
 
   public native void set(@Nonnull JsArray<Double> array);
 
-  public native void set(@Nonnull Double[] array);
+  public native void set(@Nonnull double[] array);
 
   @Nonnull
   public native Int16Array subarray(int start, int end);

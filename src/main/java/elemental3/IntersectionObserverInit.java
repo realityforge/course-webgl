@@ -105,13 +105,13 @@ public interface IntersectionObserverInit {
   }
 
   @JsOverlay
-  default void setThreshold(@Nonnull final Double... threshold) {
+  default void setThreshold(@Nonnull final double... threshold) {
     setThreshold( DoubleOrDoubleArrayUnion.of( threshold ) );
   }
 
   @JsOverlay
   @Nonnull
-  default IntersectionObserverInit threshold(@Nonnull final Double... threshold) {
+  default IntersectionObserverInit threshold(@Nonnull final double... threshold) {
     setThreshold( threshold );
     return this;
   }

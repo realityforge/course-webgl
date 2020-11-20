@@ -276,13 +276,13 @@ public interface NotificationOptions {
   }
 
   @JsOverlay
-  default void setVibrate(@Nonnull final Double... vibrate) {
+  default void setVibrate(@Nonnull final double... vibrate) {
     setVibrate( VibratePattern.of( vibrate ) );
   }
 
   @JsOverlay
   @Nonnull
-  default NotificationOptions vibrate(@Nonnull final Double... vibrate) {
+  default NotificationOptions vibrate(@Nonnull final double... vibrate) {
     setVibrate( vibrate );
     return this;
   }

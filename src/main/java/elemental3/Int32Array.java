@@ -37,7 +37,7 @@ public class Int32Array implements ArrayBufferView {
   public Int32Array(@Nonnull final JsArray<Double> array) {
   }
 
-  public Int32Array(@Nonnull final Double[] array) {
+  public Int32Array(@Nonnull final double[] array) {
   }
 
   public Int32Array(@Nonnull final ArrayBuffer buffer, final int byteOffset, final int length) {
@@ -80,11 +80,11 @@ public class Int32Array implements ArrayBufferView {
 
   public native void set(@Nonnull JsArray<Double> array, int offset);
 
-  public native void set(@Nonnull Double[] array, int offset);
+  public native void set(@Nonnull double[] array, int offset);
 
   public native void set(@Nonnull JsArray<Double> array);
 
-  public native void set(@Nonnull Double[] array);
+  public native void set(@Nonnull double[] array);
 
   @Nonnull
   public native Int32Array subarray(int start, int end);

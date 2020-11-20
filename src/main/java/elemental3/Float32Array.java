@@ -57,7 +57,7 @@ public class Float32Array implements ArrayBufferView {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    */
-  public Float32Array(@Nonnull final Double[] array) {
+  public Float32Array(@Nonnull final double[] array) {
   }
 
   /**
@@ -115,11 +115,11 @@ public class Float32Array implements ArrayBufferView {
 
   public native void set(@Nonnull JsArray<Double> array, int offset);
 
-  public native void set(@Nonnull Double[] array, int offset);
+  public native void set(@Nonnull double[] array, int offset);
 
   public native void set(@Nonnull JsArray<Double> array);
 
-  public native void set(@Nonnull Double[] array);
+  public native void set(@Nonnull double[] array);
 
   @Nonnull
   public native Float32Array subarray(int start, int end);

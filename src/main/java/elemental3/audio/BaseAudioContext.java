@@ -243,7 +243,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
   @Nonnull
-  public native IIRFilterNode createIIRFilter(@Nonnull Double[] feedforward,
+  public native IIRFilterNode createIIRFilter(@Nonnull double[] feedforward,
       @Nonnull JsArray<Double> feedback);
 
   /**
@@ -253,7 +253,7 @@ public class BaseAudioContext extends EventTarget {
    */
   @Nonnull
   public native IIRFilterNode createIIRFilter(@Nonnull JsArray<Double> feedforward,
-      @Nonnull Double[] feedback);
+      @Nonnull double[] feedback);
 
   /**
    * The createIIRFilter() method of the BaseAudioContext interface creates an IIRFilterNode, which represents a general infinite impulse response (IIR) filter which can be configured to serve as various types of filter.
@@ -261,8 +261,8 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
   @Nonnull
-  public native IIRFilterNode createIIRFilter(@Nonnull Double[] feedforward,
-      @Nonnull Double[] feedback);
+  public native IIRFilterNode createIIRFilter(@Nonnull double[] feedforward,
+      @Nonnull double[] feedback);
 
   /**
    * The createOscillator() method of the BaseAudioContext interface creates an OscillatorNode, a source representing a periodic waveform. It basically generates a constant tone.
@@ -299,7 +299,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">The definition of 'createPeriodicWave' in the 'Web Audio API' specification.</a>
    */
   @Nonnull
-  public native PeriodicWave createPeriodicWave(@Nonnull Double[] real,
+  public native PeriodicWave createPeriodicWave(@Nonnull double[] real,
       @Nonnull JsArray<Double> imag, @Nonnull PeriodicWaveConstraints constraints);
 
   /**
@@ -310,7 +310,7 @@ public class BaseAudioContext extends EventTarget {
    */
   @Nonnull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
-      @Nonnull Double[] imag, @Nonnull PeriodicWaveConstraints constraints);
+      @Nonnull double[] imag, @Nonnull PeriodicWaveConstraints constraints);
 
   /**
    * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.
@@ -319,7 +319,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">The definition of 'createPeriodicWave' in the 'Web Audio API' specification.</a>
    */
   @Nonnull
-  public native PeriodicWave createPeriodicWave(@Nonnull Double[] real, @Nonnull Double[] imag,
+  public native PeriodicWave createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag,
       @Nonnull PeriodicWaveConstraints constraints);
 
   /**
@@ -339,7 +339,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">The definition of 'createPeriodicWave' in the 'Web Audio API' specification.</a>
    */
   @Nonnull
-  public native PeriodicWave createPeriodicWave(@Nonnull Double[] real,
+  public native PeriodicWave createPeriodicWave(@Nonnull double[] real,
       @Nonnull JsArray<Double> imag);
 
   /**
@@ -350,7 +350,7 @@ public class BaseAudioContext extends EventTarget {
    */
   @Nonnull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
-      @Nonnull Double[] imag);
+      @Nonnull double[] imag);
 
   /**
    * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.
@@ -359,7 +359,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">The definition of 'createPeriodicWave' in the 'Web Audio API' specification.</a>
    */
   @Nonnull
-  public native PeriodicWave createPeriodicWave(@Nonnull Double[] real, @Nonnull Double[] imag);
+  public native PeriodicWave createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag);
 
   /**
    * A ScriptProcessorNode.

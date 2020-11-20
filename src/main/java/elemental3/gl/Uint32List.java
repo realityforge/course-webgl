@@ -30,7 +30,7 @@ public interface Uint32List {
 
   @JsOverlay
   @Nonnull
-  static Uint32List of(@Nonnull final Double[] value) {
+  static Uint32List of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
 }

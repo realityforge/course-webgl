@@ -510,7 +510,7 @@ public class Navigator {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
    * @see <a href="https://dev.w3.org/2009/dap/vibration/">Vibration API</a>
    */
-  public native boolean vibrate(@Nonnull Double[] pattern);
+  public native boolean vibrate(@Nonnull double[] pattern);
 
   /**
    * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.
