@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Uint8ClampedArray"
 )
-public class Uint8ClampedArray implements ArrayBufferView {
+public class Uint8ClampedArray implements IntegerTypedArray, ArrayBufferView {
   @JsOverlay
   public static final int BYTES_PER_ELEMENT = 1;
 

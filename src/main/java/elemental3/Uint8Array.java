@@ -23,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Uint8Array"
 )
-public class Uint8Array implements ArrayBufferView {
+public class Uint8Array implements IntegerTypedArray, ArrayBufferView {
   @JsOverlay
   public static final int BYTES_PER_ELEMENT = 1;
 
