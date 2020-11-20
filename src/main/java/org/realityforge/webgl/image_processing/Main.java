@@ -1,7 +1,7 @@
 package org.realityforge.webgl.image_processing;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental2.core.Float32Array;
+import elemental3.Float32Array;
 import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLButtonElement;

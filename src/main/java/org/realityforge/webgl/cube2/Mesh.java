@@ -1,6 +1,6 @@
 package org.realityforge.webgl.cube2;
 
-import elemental2.core.Float32Array;
+import elemental3.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;

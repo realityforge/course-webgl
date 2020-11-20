@@ -1,8 +1,8 @@
 package org.realityforge.webgl.webglacademy.l7;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental2.core.Float32Array;
-import elemental2.core.Uint32Array;
+import elemental3.Float32Array;
+import elemental3.Uint32Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.Response;

@@ -1,6 +1,6 @@
 package org.realityforge.webgl.util;
 
-import elemental2.core.Float32Array;
+import elemental3.Float32Array;
 import javax.annotation.Nonnull;
 import org.joml.Matrix4d;
 

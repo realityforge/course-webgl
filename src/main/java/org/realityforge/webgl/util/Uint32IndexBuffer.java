@@ -1,6 +1,6 @@
 package org.realityforge.webgl.util;
 
-import elemental2.core.Uint32Array;
+import elemental3.Uint32Array;
 import elemental3.gl.UsageType;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
