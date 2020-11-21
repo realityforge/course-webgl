@@ -1,11 +1,10 @@
 package org.realityforge.webgl.util;
 
-import elemental3.Float32Array;
-import elemental3.Uint16Array;
-import elemental3.promise.Promise;
 import elemental3.Console;
+import elemental3.Float32Array;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
+import elemental3.Uint16Array;
 import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
 import elemental3.gl.GLSL;
@@ -21,6 +20,7 @@ import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
+import elemental3.promise.Promise;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Any;

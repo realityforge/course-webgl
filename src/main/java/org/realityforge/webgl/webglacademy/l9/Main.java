@@ -8,7 +8,6 @@ import elemental3.HTMLCanvasElement;
 import elemental3.HTMLElement;
 import elemental3.RenderContextType;
 import elemental3.StringOrCanvasGradientOrCanvasPatternUnion;
-import elemental3.Window;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLTexture;

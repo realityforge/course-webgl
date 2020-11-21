@@ -2,10 +2,10 @@ package org.realityforge.webgl.webglacademy.l7;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Float32Array;
-import elemental3.Uint32Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.Response;
+import elemental3.Uint32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;

@@ -1,13 +1,12 @@
 package org.realityforge.webgl.webglacademy.l14;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Float32Array;
 import elemental3.Document;
+import elemental3.Float32Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.HTMLElement;
 import elemental3.HTMLVideoElement;
-import elemental3.Window;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLTexture;

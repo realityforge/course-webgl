@@ -2,9 +2,9 @@ package org.realityforge.webgl.glslfs.tiling;
 
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Float32Array;
-import elemental3.Uint16Array;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
+import elemental3.Uint16Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;

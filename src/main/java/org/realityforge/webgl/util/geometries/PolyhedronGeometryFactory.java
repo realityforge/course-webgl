@@ -1,7 +1,7 @@
 package org.realityforge.webgl.util.geometries;
 
-import elemental3.Float32Array;
 import elemental2.core.JsArray;
+import elemental3.Float32Array;
 import elemental3.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
 import elemental3.gl.WebGL2RenderingContext;

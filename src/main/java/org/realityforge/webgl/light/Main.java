@@ -3,7 +3,6 @@ package org.realityforge.webgl.light;
 import com.google.gwt.core.client.EntryPoint;
 import elemental3.Document;
 import elemental3.Global;
-import elemental3.GlobalWindow;
 import elemental3.HTMLCanvasElement;
 import elemental3.KeyboardEvent;
 import elemental3.gl.WebGL2RenderingContext;
