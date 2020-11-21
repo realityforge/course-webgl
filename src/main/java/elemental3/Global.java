@@ -4034,7 +4034,7 @@ public final class Global {
   }
 
   @Nonnull
-  public static MathNamespace math() {
+  public static JsMathNamespace math() {
     return globalThis().math();
   }
 

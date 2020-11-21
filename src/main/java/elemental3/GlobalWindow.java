@@ -44,7 +44,7 @@ public final class GlobalWindow extends Window {
       name = "Math"
   )
   @Nonnull
-  public native MathNamespace math();
+  public native JsMathNamespace math();
 
   @JsProperty(
       name = "Atomics"
