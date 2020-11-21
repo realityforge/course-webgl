@@ -2,7 +2,7 @@ package org.realityforge.webgl.util;
 
 import elemental3.Float32Array;
 import elemental3.Uint16Array;
-import elemental2.promise.Promise;
+import elemental3.promise.Promise;
 import elemental3.Console;
 import elemental3.HTMLImageElement;
 import elemental3.Image;

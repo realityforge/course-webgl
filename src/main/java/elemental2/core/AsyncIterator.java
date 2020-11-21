@@ -1,6 +1,6 @@
 package elemental2.core;
 
-import elemental2.promise.Promise;
+import elemental3.promise.Promise;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
