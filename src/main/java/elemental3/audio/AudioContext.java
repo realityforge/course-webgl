@@ -1,9 +1,9 @@
 package elemental3.audio;
 
-import elemental2.promise.Promise;
 import elemental3.HTMLMediaElement;
 import elemental3.media.MediaStream;
 import elemental3.media.MediaStreamTrack;
+import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

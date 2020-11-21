@@ -1,10 +1,10 @@
 package elemental3.wasm;
 
-import elemental2.promise.Promise;
 import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import elemental3.Response;
+import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

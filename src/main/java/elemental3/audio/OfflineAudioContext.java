@@ -1,8 +1,8 @@
 package elemental3.audio;
 
-import elemental2.promise.Promise;
 import elemental3.AddEventListenerOptions;
 import elemental3.EventListenerOptions;
+import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

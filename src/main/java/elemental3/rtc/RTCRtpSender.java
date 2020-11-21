@@ -1,8 +1,8 @@
 package elemental3.rtc;
 
-import elemental2.promise.Promise;
 import elemental3.media.MediaStream;
 import elemental3.media.MediaStreamTrack;
+import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

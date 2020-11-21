@@ -41,6 +41,12 @@ public final class GlobalWindow extends Window {
   public native WebAssemblyNamespace webAssembly();
 
   @JsProperty(
+      name = "Math"
+  )
+  @Nonnull
+  public native MathNamespace math();
+
+  @JsProperty(
       name = "Atomics"
   )
   @Nonnull

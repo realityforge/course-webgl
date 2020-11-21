@@ -1,7 +1,7 @@
 package elemental3;
 
-import elemental2.promise.Promise;
 import elemental3.gl.TexImageSource;
+import elemental3.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
