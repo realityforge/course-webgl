@@ -25,4 +25,4 @@ artifacts:
   braincheck: org.realityforge.braincheck:braincheck:jar:1.29.0
 
   guava: com.google.guava:guava:jar:r09
-  guava_gwt: com.google.guava:guava:jar:gwt:r09
+  guava_gwt: com.google.guava:guava:jar:r09
