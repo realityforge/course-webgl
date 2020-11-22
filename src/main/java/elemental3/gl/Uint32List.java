@@ -1,6 +1,6 @@
 package elemental3.gl;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import elemental3.core.Uint32Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

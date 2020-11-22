@@ -1,11 +1,11 @@
 package elemental3.speech;
 
-import elemental2.core.JsArray;
 import elemental3.AddEventListenerOptions;
 import elemental3.EventHandler;
 import elemental3.EventListener;
 import elemental3.EventListenerOptions;
 import elemental3.EventTarget;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

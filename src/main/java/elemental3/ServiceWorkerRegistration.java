@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import elemental3.notifications.GetNotificationOptions;
 import elemental3.notifications.Notification;
 import elemental3.notifications.NotificationOptions;

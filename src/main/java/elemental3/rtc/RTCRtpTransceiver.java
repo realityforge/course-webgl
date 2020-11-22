@@ -1,6 +1,6 @@
 package elemental3.rtc;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

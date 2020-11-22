@@ -1,8 +1,8 @@
 package elemental3;
 
-import elemental2.core.JsArray;
 import elemental3.core.Float32Array;
 import elemental3.core.Float64Array;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

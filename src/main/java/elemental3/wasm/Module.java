@@ -1,8 +1,8 @@
 package elemental3.wasm;
 
-import elemental2.core.JsArray;
 import elemental3.core.ArrayBuffer;
 import elemental3.core.BufferSource;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

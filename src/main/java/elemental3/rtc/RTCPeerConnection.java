@@ -1,6 +1,5 @@
 package elemental3.rtc;
 
-import elemental2.core.JsArray;
 import elemental3.AddEventListenerOptions;
 import elemental3.AlgorithmIdentifier;
 import elemental3.EventHandler;
@@ -8,6 +7,7 @@ import elemental3.EventListener;
 import elemental3.EventListenerOptions;
 import elemental3.EventTarget;
 import elemental3.VoidFunction;
+import elemental3.core.JsArray;
 import elemental3.media.MediaStream;
 import elemental3.media.MediaStreamTrack;
 import elemental3.promise.Promise;

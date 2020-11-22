@@ -1,7 +1,7 @@
 package elemental3.indexeddb;
 
-import elemental2.core.JsArray;
 import elemental3.StringOrStringArrayUnion;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

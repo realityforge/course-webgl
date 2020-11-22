@@ -1,6 +1,6 @@
 package elemental3.rtc;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import elemental3.media.MediaStreamTrack;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;

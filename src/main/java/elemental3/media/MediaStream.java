@@ -1,9 +1,9 @@
 package elemental3.media;
 
-import elemental2.core.JsArray;
 import elemental3.AddEventListenerOptions;
 import elemental3.EventListenerOptions;
 import elemental3.EventTarget;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

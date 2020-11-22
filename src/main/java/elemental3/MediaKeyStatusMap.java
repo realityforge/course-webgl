@@ -1,8 +1,8 @@
 package elemental3;
 
-import elemental2.core.JsArray;
-import elemental2.core.JsIterator;
 import elemental3.core.BufferSource;
+import elemental3.core.JsArray;
+import elemental3.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

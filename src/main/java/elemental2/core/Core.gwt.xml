@@ -1,5 +1,0 @@
-<module>
-  <source path=""/>
-  <inherits name="jsinterop.base.Base"/>
-  <inherits name="elemental3.Elemental3"/>
-</module>

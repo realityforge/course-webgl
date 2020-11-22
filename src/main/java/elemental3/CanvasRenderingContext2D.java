@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import elemental3.svg.SVGImageElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

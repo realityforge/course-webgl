@@ -1,10 +1,10 @@
 package elemental3.gl;
 
-import elemental2.core.JsArray;
 import elemental3.core.ArrayBufferView;
 import elemental3.core.BufferSource;
 import elemental3.core.Float32Array;
 import elemental3.core.Int32Array;
+import elemental3.core.JsArray;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

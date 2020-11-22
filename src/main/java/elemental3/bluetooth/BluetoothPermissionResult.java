@@ -1,7 +1,7 @@
 package elemental3.bluetooth;
 
-import elemental2.core.JsArray;
 import elemental3.PermissionStatus;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
