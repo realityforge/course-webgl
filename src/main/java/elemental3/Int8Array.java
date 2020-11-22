@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Int8Array"
 )
-public class Int8Array implements IntegerTypedArray, ArrayBufferView {
+public class Int8Array implements IntegerTypedArray {
   /**
    * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
    *

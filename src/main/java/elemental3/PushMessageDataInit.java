@@ -22,18 +22,6 @@ public interface PushMessageDataInit {
 
   @JsOverlay
   @Nonnull
-  static PushMessageDataInit of(@Nonnull final ArrayBufferView value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PushMessageDataInit of(@Nonnull final ArrayBuffer value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
   static PushMessageDataInit of(@Nonnull final String value) {
     return Js.cast( value );
   }

@@ -2,8 +2,6 @@ package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
 import elemental3.AddEventListenerOptions;
-import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import elemental3.DataView;
 import elemental3.EventHandler;
@@ -188,41 +186,11 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull BufferSource value);
 
-  /**
-   * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> writeValue(@Nonnull ArrayBufferView value);
-
-  /**
-   * The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> writeValue(@Nonnull ArrayBuffer value);
-
   @Nonnull
   public native Promise<Void> writeValueWithResponse(@Nonnull BufferSource value);
 
   @Nonnull
-  public native Promise<Void> writeValueWithResponse(@Nonnull ArrayBufferView value);
-
-  @Nonnull
-  public native Promise<Void> writeValueWithResponse(@Nonnull ArrayBuffer value);
-
-  @Nonnull
   public native Promise<Void> writeValueWithoutResponse(@Nonnull BufferSource value);
-
-  @Nonnull
-  public native Promise<Void> writeValueWithoutResponse(@Nonnull ArrayBufferView value);
-
-  @Nonnull
-  public native Promise<Void> writeValueWithoutResponse(@Nonnull ArrayBuffer value);
 
   @JsOverlay
   public final void addCharacteristicvaluechangedListener(

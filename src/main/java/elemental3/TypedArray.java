@@ -10,5 +10,5 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface BufferSource {
+public interface TypedArray extends ArrayBufferView {
 }

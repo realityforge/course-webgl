@@ -28,18 +28,6 @@ public interface AesGcmParams extends Algorithm {
     return Js.<AesGcmParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
   }
 
-  @JsOverlay
-  @Nonnull
-  static AesGcmParams create(@Nonnull final String name, @Nonnull final ArrayBufferView iv) {
-    return Js.<AesGcmParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static AesGcmParams create(@Nonnull final String name, @Nonnull final ArrayBuffer iv) {
-    return Js.<AesGcmParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
-  }
-
   @JsProperty(
       name = "additionalData"
   )
@@ -51,30 +39,6 @@ public interface AesGcmParams extends Algorithm {
   @JsOverlay
   @Nonnull
   default AesGcmParams additionalData(@Nonnull final BufferSource additionalData) {
-    setAdditionalData( additionalData );
-    return this;
-  }
-
-  @JsOverlay
-  default void setAdditionalData(@Nonnull final ArrayBufferView additionalData) {
-    setAdditionalData( BufferSource.of( additionalData ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams additionalData(@Nonnull final ArrayBufferView additionalData) {
-    setAdditionalData( additionalData );
-    return this;
-  }
-
-  @JsOverlay
-  default void setAdditionalData(@Nonnull final ArrayBuffer additionalData) {
-    setAdditionalData( BufferSource.of( additionalData ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams additionalData(@Nonnull final ArrayBuffer additionalData) {
     setAdditionalData( additionalData );
     return this;
   }
@@ -91,30 +55,6 @@ public interface AesGcmParams extends Algorithm {
   @JsOverlay
   @Nonnull
   default AesGcmParams iv(@Nonnull final BufferSource iv) {
-    setIv( iv );
-    return this;
-  }
-
-  @JsOverlay
-  default void setIv(@Nonnull final ArrayBufferView iv) {
-    setIv( BufferSource.of( iv ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams iv(@Nonnull final ArrayBufferView iv) {
-    setIv( iv );
-    return this;
-  }
-
-  @JsOverlay
-  default void setIv(@Nonnull final ArrayBuffer iv) {
-    setIv( BufferSource.of( iv ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams iv(@Nonnull final ArrayBuffer iv) {
     setIv( iv );
     return this;
   }

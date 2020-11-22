@@ -91,30 +91,6 @@ public interface RequestInit {
   }
 
   @JsOverlay
-  default void setBody(@Nonnull final ArrayBufferView body) {
-    setBody( BodyInit.of( body ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final ArrayBufferView body) {
-    setBody( body );
-    return this;
-  }
-
-  @JsOverlay
-  default void setBody(@Nonnull final ArrayBuffer body) {
-    setBody( BodyInit.of( body ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final ArrayBuffer body) {
-    setBody( body );
-    return this;
-  }
-
-  @JsOverlay
   default void setBody(@Nonnull final FormData body) {
     setBody( BodyInit.of( body ) );
   }

@@ -28,18 +28,6 @@ public interface AesCbcParams extends Algorithm {
     return Js.<AesCbcParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
   }
 
-  @JsOverlay
-  @Nonnull
-  static AesCbcParams create(@Nonnull final String name, @Nonnull final ArrayBufferView iv) {
-    return Js.<AesCbcParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static AesCbcParams create(@Nonnull final String name, @Nonnull final ArrayBuffer iv) {
-    return Js.<AesCbcParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
-  }
-
   @JsProperty(
       name = "iv"
   )
@@ -52,30 +40,6 @@ public interface AesCbcParams extends Algorithm {
   @JsOverlay
   @Nonnull
   default AesCbcParams iv(@Nonnull final BufferSource iv) {
-    setIv( iv );
-    return this;
-  }
-
-  @JsOverlay
-  default void setIv(@Nonnull final ArrayBufferView iv) {
-    setIv( BufferSource.of( iv ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesCbcParams iv(@Nonnull final ArrayBufferView iv) {
-    setIv( iv );
-    return this;
-  }
-
-  @JsOverlay
-  default void setIv(@Nonnull final ArrayBuffer iv) {
-    setIv( BufferSource.of( iv ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesCbcParams iv(@Nonnull final ArrayBuffer iv) {
     setIv( iv );
     return this;
   }

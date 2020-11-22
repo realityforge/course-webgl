@@ -23,20 +23,6 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
     return Js.<PublicKeyCredentialUserEntity>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
   }
 
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialUserEntity create(@Nonnull final String name,
-      @Nonnull final String displayName, @Nonnull final ArrayBufferView id) {
-    return Js.<PublicKeyCredentialUserEntity>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialUserEntity create(@Nonnull final String name,
-      @Nonnull final String displayName, @Nonnull final ArrayBuffer id) {
-    return Js.<PublicKeyCredentialUserEntity>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
-  }
-
   @JsProperty(
       name = "displayName"
   )
@@ -65,30 +51,6 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
   @JsOverlay
   @Nonnull
   default PublicKeyCredentialUserEntity id(@Nonnull final BufferSource id) {
-    setId( id );
-    return this;
-  }
-
-  @JsOverlay
-  default void setId(@Nonnull final ArrayBufferView id) {
-    setId( BufferSource.of( id ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialUserEntity id(@Nonnull final ArrayBufferView id) {
-    setId( id );
-    return this;
-  }
-
-  @JsOverlay
-  default void setId(@Nonnull final ArrayBuffer id) {
-    setId( BufferSource.of( id ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialUserEntity id(@Nonnull final ArrayBuffer id) {
     setId( id );
     return this;
   }

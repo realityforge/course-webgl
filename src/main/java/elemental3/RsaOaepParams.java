@@ -44,30 +44,6 @@ public interface RsaOaepParams extends Algorithm {
   }
 
   @JsOverlay
-  default void setLabel(@Nonnull final ArrayBufferView label) {
-    setLabel( BufferSource.of( label ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RsaOaepParams label(@Nonnull final ArrayBufferView label) {
-    setLabel( label );
-    return this;
-  }
-
-  @JsOverlay
-  default void setLabel(@Nonnull final ArrayBuffer label) {
-    setLabel( BufferSource.of( label ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RsaOaepParams label(@Nonnull final ArrayBuffer label) {
-    setLabel( label );
-    return this;
-  }
-
-  @JsOverlay
   @Nonnull
   @Override
   default RsaOaepParams name(@Nonnull final String name) {

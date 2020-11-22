@@ -1,7 +1,5 @@
 package elemental3.bluetooth;
 
-import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -40,30 +38,6 @@ public interface BluetoothDataFilterInit {
     return this;
   }
 
-  @JsOverlay
-  default void setDataPrefix(@Nonnull final ArrayBufferView dataPrefix) {
-    setDataPrefix( BufferSource.of( dataPrefix ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothDataFilterInit dataPrefix(@Nonnull final ArrayBufferView dataPrefix) {
-    setDataPrefix( dataPrefix );
-    return this;
-  }
-
-  @JsOverlay
-  default void setDataPrefix(@Nonnull final ArrayBuffer dataPrefix) {
-    setDataPrefix( BufferSource.of( dataPrefix ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothDataFilterInit dataPrefix(@Nonnull final ArrayBuffer dataPrefix) {
-    setDataPrefix( dataPrefix );
-    return this;
-  }
-
   @JsProperty(
       name = "mask"
   )
@@ -75,30 +49,6 @@ public interface BluetoothDataFilterInit {
   @JsOverlay
   @Nonnull
   default BluetoothDataFilterInit mask(@Nonnull final BufferSource mask) {
-    setMask( mask );
-    return this;
-  }
-
-  @JsOverlay
-  default void setMask(@Nonnull final ArrayBufferView mask) {
-    setMask( BufferSource.of( mask ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothDataFilterInit mask(@Nonnull final ArrayBufferView mask) {
-    setMask( mask );
-    return this;
-  }
-
-  @JsOverlay
-  default void setMask(@Nonnull final ArrayBuffer mask) {
-    setMask( BufferSource.of( mask ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothDataFilterInit mask(@Nonnull final ArrayBuffer mask) {
     setMask( mask );
     return this;
   }

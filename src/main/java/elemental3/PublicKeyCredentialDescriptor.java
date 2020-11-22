@@ -24,20 +24,6 @@ public interface PublicKeyCredentialDescriptor {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialDescriptor create(@Nonnull final ArrayBufferView id,
-      @PublicKeyCredentialType @Nonnull final String type) {
-    return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialDescriptor create(@Nonnull final ArrayBuffer id,
-      @PublicKeyCredentialType @Nonnull final String type) {
-    return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
-  }
-
   @JsProperty(
       name = "id"
   )
@@ -50,30 +36,6 @@ public interface PublicKeyCredentialDescriptor {
   @JsOverlay
   @Nonnull
   default PublicKeyCredentialDescriptor id(@Nonnull final BufferSource id) {
-    setId( id );
-    return this;
-  }
-
-  @JsOverlay
-  default void setId(@Nonnull final ArrayBufferView id) {
-    setId( BufferSource.of( id ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialDescriptor id(@Nonnull final ArrayBufferView id) {
-    setId( id );
-    return this;
-  }
-
-  @JsOverlay
-  default void setId(@Nonnull final ArrayBuffer id) {
-    setId( BufferSource.of( id ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialDescriptor id(@Nonnull final ArrayBuffer id) {
     setId( id );
     return this;
   }

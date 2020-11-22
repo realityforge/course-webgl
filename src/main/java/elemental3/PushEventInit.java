@@ -50,30 +50,6 @@ public interface PushEventInit extends ExtendableEventInit {
   }
 
   @JsOverlay
-  default void setData(@Nonnull final ArrayBufferView data) {
-    setData( PushMessageDataInit.of( data ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PushEventInit data(@Nonnull final ArrayBufferView data) {
-    setData( data );
-    return this;
-  }
-
-  @JsOverlay
-  default void setData(@Nonnull final ArrayBuffer data) {
-    setData( PushMessageDataInit.of( data ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PushEventInit data(@Nonnull final ArrayBuffer data) {
-    setData( data );
-    return this;
-  }
-
-  @JsOverlay
   default void setData(@Nonnull final String data) {
     setData( PushMessageDataInit.of( data ) );
   }

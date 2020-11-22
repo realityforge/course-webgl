@@ -1,7 +1,5 @@
 package elemental3.wasm;
 
-import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import elemental3.Global;
 import elemental3.Response;
@@ -30,26 +28,6 @@ public final class WebAssembly {
   }
 
   /**
-   * The WebAssembly.compile() function compiles WebAssembly binary code into a WebAssembly.Module object. This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiate() function should be used).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile">WebAssembly.compile - MDN</a>
-   */
-  @Nonnull
-  public static Promise<Module> compile(@Nonnull ArrayBufferView bytes) {
-    return namespace().compile(bytes);
-  }
-
-  /**
-   * The WebAssembly.compile() function compiles WebAssembly binary code into a WebAssembly.Module object. This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiate() function should be used).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile">WebAssembly.compile - MDN</a>
-   */
-  @Nonnull
-  public static Promise<Module> compile(@Nonnull ArrayBuffer bytes) {
-    return namespace().compile(bytes);
-  }
-
-  /**
    * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
@@ -66,49 +44,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
    */
   @Nonnull
-  public static Promise<WebAssemblyInstantiatedSource> instantiate(@Nonnull ArrayBufferView bytes,
-      @Nonnull Object importObject) {
-    return namespace().instantiate(bytes, importObject);
-  }
-
-  /**
-   * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
-   */
-  @Nonnull
-  public static Promise<WebAssemblyInstantiatedSource> instantiate(@Nonnull ArrayBuffer bytes,
-      @Nonnull Object importObject) {
-    return namespace().instantiate(bytes, importObject);
-  }
-
-  /**
-   * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
-   */
-  @Nonnull
   public static Promise<WebAssemblyInstantiatedSource> instantiate(@Nonnull BufferSource bytes) {
-    return namespace().instantiate(bytes);
-  }
-
-  /**
-   * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
-   */
-  @Nonnull
-  public static Promise<WebAssemblyInstantiatedSource> instantiate(@Nonnull ArrayBufferView bytes) {
-    return namespace().instantiate(bytes);
-  }
-
-  /**
-   * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
-   */
-  @Nonnull
-  public static Promise<WebAssemblyInstantiatedSource> instantiate(@Nonnull ArrayBuffer bytes) {
     return namespace().instantiate(bytes);
   }
 
@@ -139,24 +75,6 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate">WebAssembly.validate - MDN</a>
    */
   public static boolean validate(@Nonnull BufferSource bytes) {
-    return namespace().validate(bytes);
-  }
-
-  /**
-   * The WebAssembly.validate() function validates a given typed array of WebAssembly binary code, returning whether the bytes form a valid wasm module (true) or not (false).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate">WebAssembly.validate - MDN</a>
-   */
-  public static boolean validate(@Nonnull ArrayBufferView bytes) {
-    return namespace().validate(bytes);
-  }
-
-  /**
-   * The WebAssembly.validate() function validates a given typed array of WebAssembly binary code, returning whether the bytes form a valid wasm module (true) or not (false).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate">WebAssembly.validate - MDN</a>
-   */
-  public static boolean validate(@Nonnull ArrayBuffer bytes) {
     return namespace().validate(bytes);
   }
 

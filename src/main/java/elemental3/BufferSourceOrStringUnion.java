@@ -22,18 +22,6 @@ public interface BufferSourceOrStringUnion {
 
   @JsOverlay
   @Nonnull
-  static BufferSourceOrStringUnion of(@Nonnull final ArrayBufferView value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static BufferSourceOrStringUnion of(@Nonnull final ArrayBuffer value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
   static BufferSourceOrStringUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }

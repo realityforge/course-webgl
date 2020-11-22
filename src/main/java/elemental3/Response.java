@@ -74,24 +74,6 @@ public class Response {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
    */
-  public Response(@Nonnull final ArrayBufferView body, @Nonnull final ResponseInit init) {
-  }
-
-  /**
-   * The Response() constructor creates a new Response object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
-   */
-  public Response(@Nonnull final ArrayBuffer body, @Nonnull final ResponseInit init) {
-  }
-
-  /**
-   * The Response() constructor creates a new Response object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
-   */
   public Response(@Nonnull final FormData body, @Nonnull final ResponseInit init) {
   }
 
@@ -156,24 +138,6 @@ public class Response {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
    */
   public Response(@Nonnull final BufferSource body) {
-  }
-
-  /**
-   * The Response() constructor creates a new Response object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
-   */
-  public Response(@Nonnull final ArrayBufferView body) {
-  }
-
-  /**
-   * The Response() constructor creates a new Response object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
-   */
-  public Response(@Nonnull final ArrayBuffer body) {
   }
 
   /**

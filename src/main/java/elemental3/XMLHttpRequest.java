@@ -282,22 +282,6 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
    */
-  public native void send(@Nonnull ArrayBufferView body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
-  public native void send(@Nonnull ArrayBuffer body);
-
-  /**
-   * The XMLHttpRequest method send() sends the request to the server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
-   */
   public native void send(@Nonnull FormData body);
 
   /**

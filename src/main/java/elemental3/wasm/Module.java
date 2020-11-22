@@ -2,7 +2,6 @@ package elemental3.wasm;
 
 import elemental2.core.JsArray;
 import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,12 +21,6 @@ import jsinterop.annotations.JsType;
 )
 public class Module {
   public Module(@Nonnull final BufferSource bytes) {
-  }
-
-  public Module(@Nonnull final ArrayBufferView bytes) {
-  }
-
-  public Module(@Nonnull final ArrayBuffer bytes) {
   }
 
   @Nonnull

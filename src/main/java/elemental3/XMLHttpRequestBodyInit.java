@@ -28,18 +28,6 @@ public interface XMLHttpRequestBodyInit {
 
   @JsOverlay
   @Nonnull
-  static XMLHttpRequestBodyInit of(@Nonnull final ArrayBufferView value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static XMLHttpRequestBodyInit of(@Nonnull final ArrayBuffer value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
   static XMLHttpRequestBodyInit of(@Nonnull final FormData value) {
     return Js.cast( value );
   }

@@ -34,43 +34,7 @@ public interface PublicKeyCredentialCreationOptions {
 
   @JsOverlay
   @Nonnull
-  static PublicKeyCredentialCreationOptions create(@Nonnull final ArrayBufferView challenge,
-      @Nonnull final JsArray<PublicKeyCredentialParameters> pubKeyCredParams,
-      @Nonnull final PublicKeyCredentialRpEntity rp,
-      @Nonnull final PublicKeyCredentialUserEntity user) {
-    return Js.<PublicKeyCredentialCreationOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialCreationOptions create(@Nonnull final ArrayBuffer challenge,
-      @Nonnull final JsArray<PublicKeyCredentialParameters> pubKeyCredParams,
-      @Nonnull final PublicKeyCredentialRpEntity rp,
-      @Nonnull final PublicKeyCredentialUserEntity user) {
-    return Js.<PublicKeyCredentialCreationOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
-  }
-
-  @JsOverlay
-  @Nonnull
   static PublicKeyCredentialCreationOptions create(@Nonnull final BufferSource challenge,
-      @Nonnull final PublicKeyCredentialParameters[] pubKeyCredParams,
-      @Nonnull final PublicKeyCredentialRpEntity rp,
-      @Nonnull final PublicKeyCredentialUserEntity user) {
-    return Js.<PublicKeyCredentialCreationOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialCreationOptions create(@Nonnull final ArrayBufferView challenge,
-      @Nonnull final PublicKeyCredentialParameters[] pubKeyCredParams,
-      @Nonnull final PublicKeyCredentialRpEntity rp,
-      @Nonnull final PublicKeyCredentialUserEntity user) {
-    return Js.<PublicKeyCredentialCreationOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialCreationOptions create(@Nonnull final ArrayBuffer challenge,
       @Nonnull final PublicKeyCredentialParameters[] pubKeyCredParams,
       @Nonnull final PublicKeyCredentialRpEntity rp,
       @Nonnull final PublicKeyCredentialUserEntity user) {
@@ -176,54 +140,6 @@ public interface PublicKeyCredentialCreationOptions {
   @JsOverlay
   @Nonnull
   default PublicKeyCredentialCreationOptions challenge(@Nonnull final BufferSource challenge) {
-    setChallenge( challenge );
-    return this;
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  default void setChallenge(@Nonnull final ArrayBufferView challenge) {
-    setChallenge( BufferSource.of( challenge ) );
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialCreationOptions challenge(@Nonnull final ArrayBufferView challenge) {
-    setChallenge( challenge );
-    return this;
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  default void setChallenge(@Nonnull final ArrayBuffer challenge) {
-    setChallenge( BufferSource.of( challenge ) );
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialCreationOptions challenge(@Nonnull final ArrayBuffer challenge) {
     setChallenge( challenge );
     return this;
   }

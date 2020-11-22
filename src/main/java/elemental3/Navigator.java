@@ -409,22 +409,6 @@ public class Navigator {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
    * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBufferView data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBuffer data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull FormData data);
 
   /**

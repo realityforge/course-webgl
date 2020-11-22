@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ArrayBuffer"
 )
-public class ArrayBuffer implements Transferable {
+public class ArrayBuffer implements BufferSource, Transferable {
   /**
    * The ArrayBuffer() constructor is used to create ArrayBuffer objects.
    *

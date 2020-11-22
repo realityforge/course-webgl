@@ -1,7 +1,6 @@
 package elemental3.gl;
 
 import elemental2.core.JsArray;
-import elemental3.ArrayBuffer;
 import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import elemental3.Float32Array;
@@ -963,26 +962,6 @@ public class WebGLRenderingContext {
   public native void bufferData(int target, @Nullable BufferSource data, int usage);
 
   /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in the 'OpenGL ES 3.0' specification.</a>
-   */
-  public native void bufferData(int target, @Nonnull ArrayBufferView data, int usage);
-
-  /**
-   * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in the 'OpenGL ES 3.0' specification.</a>
-   */
-  public native void bufferData(int target, @Nonnull ArrayBuffer data, int usage);
-
-  /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
@@ -991,26 +970,6 @@ public class WebGLRenderingContext {
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
    */
   public native void bufferSubData(int target, int offset, @Nonnull BufferSource data);
-
-  /**
-   * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
-   */
-  public native void bufferSubData(int target, int offset, @Nonnull ArrayBufferView data);
-
-  /**
-   * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
-   */
-  public native void bufferSubData(int target, int offset, @Nonnull ArrayBuffer data);
 
   public native void compressedTexImage2D(int target, int level, int internalformat, int width,
       int height, int border, @Nonnull ArrayBufferView data);

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Float64Array"
 )
-public class Float64Array implements ArrayBufferView {
+public class Float64Array implements TypedArray {
   @JsOverlay
   public static final int BYTES_PER_ELEMENT = 8;
 

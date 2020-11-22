@@ -97,26 +97,6 @@ public class MediaKeySession extends EventTarget {
       @Nonnull BufferSource initData);
 
   /**
-   * The MediaKeySession.generateRequest() method returns a Promise after generating a media request based on initialization data.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/generateRequest">MediaKeySession.generateRequest - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-generaterequest">The definition of 'generateRequest()' in the 'Encrypted Media Extensions' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> generateRequest(@Nonnull String initDataType,
-      @Nonnull ArrayBufferView initData);
-
-  /**
-   * The MediaKeySession.generateRequest() method returns a Promise after generating a media request based on initialization data.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/generateRequest">MediaKeySession.generateRequest - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-generaterequest">The definition of 'generateRequest()' in the 'Encrypted Media Extensions' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> generateRequest(@Nonnull String initDataType,
-      @Nonnull ArrayBuffer initData);
-
-  /**
    * The MediaKeySession.load() method returns a Promise that resolves to a boolean value after loading data for a specified session object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/load">MediaKeySession.load - MDN</a>
@@ -142,22 +122,4 @@ public class MediaKeySession extends EventTarget {
    */
   @Nonnull
   public native Promise<Void> update(@Nonnull BufferSource response);
-
-  /**
-   * The MediaKeySession.update() method loads messages and licenses to the CDM, and then returns a Promise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/update">MediaKeySession.update - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-update">The definition of 'update()' in the 'Encrypted Media Extensions' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> update(@Nonnull ArrayBufferView response);
-
-  /**
-   * The MediaKeySession.update() method loads messages and licenses to the CDM, and then returns a Promise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/update">MediaKeySession.update - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-update">The definition of 'update()' in the 'Encrypted Media Extensions' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> update(@Nonnull ArrayBuffer response);
 }

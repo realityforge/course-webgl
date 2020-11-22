@@ -29,18 +29,6 @@ public interface PublicKeyCredentialRequestOptions {
     return Js.<PublicKeyCredentialRequestOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge );
   }
 
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialRequestOptions create(@Nonnull final ArrayBufferView challenge) {
-    return Js.<PublicKeyCredentialRequestOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static PublicKeyCredentialRequestOptions create(@Nonnull final ArrayBuffer challenge) {
-    return Js.<PublicKeyCredentialRequestOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge );
-  }
-
   /**
    * allowCredentials is an optional property of the PublicKeyCredentialRequestOptions dictionary which indicates the existing credentials acceptable for retrieval. This is an Array of credential descriptors.
    *
@@ -131,54 +119,6 @@ public interface PublicKeyCredentialRequestOptions {
   @JsOverlay
   @Nonnull
   default PublicKeyCredentialRequestOptions challenge(@Nonnull final BufferSource challenge) {
-    setChallenge( challenge );
-    return this;
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  default void setChallenge(@Nonnull final ArrayBufferView challenge) {
-    setChallenge( BufferSource.of( challenge ) );
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialRequestOptions challenge(@Nonnull final ArrayBufferView challenge) {
-    setChallenge( challenge );
-    return this;
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  default void setChallenge(@Nonnull final ArrayBuffer challenge) {
-    setChallenge( BufferSource.of( challenge ) );
-  }
-
-  /**
-   * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialRequestOptions challenge(@Nonnull final ArrayBuffer challenge) {
     setChallenge( challenge );
     return this;
   }

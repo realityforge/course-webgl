@@ -40,18 +40,6 @@ public interface BodyInit {
 
   @JsOverlay
   @Nonnull
-  static BodyInit of(@Nonnull final ArrayBufferView value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static BodyInit of(@Nonnull final ArrayBuffer value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
   static BodyInit of(@Nonnull final FormData value) {
     return Js.cast( value );
   }

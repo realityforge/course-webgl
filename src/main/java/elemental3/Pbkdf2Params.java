@@ -43,48 +43,6 @@ public interface Pbkdf2Params extends Algorithm {
     return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
   }
 
-  @JsOverlay
-  @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
-      final int iterations, @Nonnull final ArrayBufferView salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final Object hash,
-      final int iterations, @Nonnull final ArrayBufferView salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final String hash,
-      final int iterations, @Nonnull final ArrayBufferView salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
-      final int iterations, @Nonnull final ArrayBuffer salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final Object hash,
-      final int iterations, @Nonnull final ArrayBuffer salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final String hash,
-      final int iterations, @Nonnull final ArrayBuffer salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
-  }
-
   @JsProperty(
       name = "hash"
   )
@@ -152,30 +110,6 @@ public interface Pbkdf2Params extends Algorithm {
   @JsOverlay
   @Nonnull
   default Pbkdf2Params salt(@Nonnull final BufferSource salt) {
-    setSalt( salt );
-    return this;
-  }
-
-  @JsOverlay
-  default void setSalt(@Nonnull final ArrayBufferView salt) {
-    setSalt( BufferSource.of( salt ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default Pbkdf2Params salt(@Nonnull final ArrayBufferView salt) {
-    setSalt( salt );
-    return this;
-  }
-
-  @JsOverlay
-  default void setSalt(@Nonnull final ArrayBuffer salt) {
-    setSalt( BufferSource.of( salt ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default Pbkdf2Params salt(@Nonnull final ArrayBuffer salt) {
     setSalt( salt );
     return this;
   }

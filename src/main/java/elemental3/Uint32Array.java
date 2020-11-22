@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Uint32Array"
 )
-public class Uint32Array implements IntegerTypedArray, ArrayBufferView {
+public class Uint32Array implements IntegerTypedArray {
   @JsOverlay
   public static final int BYTES_PER_ELEMENT = 4;
 

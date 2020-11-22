@@ -1,7 +1,5 @@
 package elemental3.bluetooth;
 
-import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.BufferSource;
 import elemental3.DataView;
 import elemental3.promise.Promise;
@@ -81,22 +79,4 @@ public class BluetoothRemoteGATTDescriptor {
    */
   @Nonnull
   public native Promise<Void> writeValue(@Nonnull BufferSource value);
-
-  /**
-   * The BluetoothRemoteGATTDescriptor.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue">BluetoothRemoteGATTDescriptor.writeValue - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> writeValue(@Nonnull ArrayBufferView value);
-
-  /**
-   * The BluetoothRemoteGATTDescriptor.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue">BluetoothRemoteGATTDescriptor.writeValue - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-writevalue">The definition of 'writeValue()' in the 'Web Bluetooth' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Void> writeValue(@Nonnull ArrayBuffer value);
 }

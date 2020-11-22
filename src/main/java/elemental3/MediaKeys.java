@@ -48,22 +48,4 @@ public class MediaKeys {
    */
   @Nonnull
   public native Promise<Boolean> setServerCertificate(@Nonnull BufferSource serverCertificate);
-
-  /**
-   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeys-setservercertificate">The definition of 'setServerCertificate()' in the 'Encrypted Media Extensions' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Boolean> setServerCertificate(@Nonnull ArrayBufferView serverCertificate);
-
-  /**
-   * The MediaKeys.setServerCertificate() method provides a server certificate to be used to encrypt messages to the license server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate">MediaKeys.setServerCertificate - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeys-setservercertificate">The definition of 'setServerCertificate()' in the 'Encrypted Media Extensions' specification.</a>
-   */
-  @Nonnull
-  public native Promise<Boolean> setServerCertificate(@Nonnull ArrayBuffer serverCertificate);
 }

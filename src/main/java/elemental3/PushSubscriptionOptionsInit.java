@@ -46,32 +46,6 @@ public interface PushSubscriptionOptionsInit {
   }
 
   @JsOverlay
-  default void setApplicationServerKey(@Nonnull final ArrayBufferView applicationServerKey) {
-    setApplicationServerKey( BufferSourceOrStringUnion.of( applicationServerKey ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionOptionsInit applicationServerKey(
-      @Nonnull final ArrayBufferView applicationServerKey) {
-    setApplicationServerKey( applicationServerKey );
-    return this;
-  }
-
-  @JsOverlay
-  default void setApplicationServerKey(@Nonnull final ArrayBuffer applicationServerKey) {
-    setApplicationServerKey( BufferSourceOrStringUnion.of( applicationServerKey ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionOptionsInit applicationServerKey(
-      @Nonnull final ArrayBuffer applicationServerKey) {
-    setApplicationServerKey( applicationServerKey );
-    return this;
-  }
-
-  @JsOverlay
   default void setApplicationServerKey(@Nonnull final String applicationServerKey) {
     setApplicationServerKey( BufferSourceOrStringUnion.of( applicationServerKey ) );
   }

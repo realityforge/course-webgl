@@ -1,7 +1,5 @@
 package elemental3.media;
 
-import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.AudioTrackList;
 import elemental3.BufferSource;
 import elemental3.EventHandler;
@@ -155,22 +153,6 @@ public class SourceBuffer extends EventTarget {
    * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
    */
   public native void appendBuffer(@Nonnull BufferSource data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull ArrayBufferView data);
-
-  /**
-   * The appendBuffer() method of the SourceBuffer interface appends media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer">SourceBuffer.appendBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-appendbuffer">The definition of 'appendBuffer()' in the 'Media Source Extensions' specification.</a>
-   */
-  public native void appendBuffer(@Nonnull ArrayBuffer data);
 
   /**
    * The remove() method of the SourceBuffer interface removes media segments within a specific time range from the SourceBuffer. This method can only be called when SourceBuffer.updating equals false. If SourceBuffer.updating is not equal to false, call SourceBuffer.abort().

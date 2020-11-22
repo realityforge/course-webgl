@@ -22,18 +22,6 @@ public interface BlobPart {
 
   @JsOverlay
   @Nonnull
-  static BlobPart of(@Nonnull final ArrayBufferView value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static BlobPart of(@Nonnull final ArrayBuffer value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
   static BlobPart of(@Nonnull final Blob value) {
     return Js.cast( value );
   }

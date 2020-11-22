@@ -29,20 +29,6 @@ public interface AesCtrParams extends Algorithm {
     return Js.<AesCtrParams>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
   }
 
-  @JsOverlay
-  @Nonnull
-  static AesCtrParams create(@Nonnull final String name, @Nonnull final ArrayBufferView counter,
-      final short length) {
-    return Js.<AesCtrParams>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static AesCtrParams create(@Nonnull final String name, @Nonnull final ArrayBuffer counter,
-      final short length) {
-    return Js.<AesCtrParams>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
-  }
-
   @JsProperty(
       name = "counter"
   )
@@ -55,30 +41,6 @@ public interface AesCtrParams extends Algorithm {
   @JsOverlay
   @Nonnull
   default AesCtrParams counter(@Nonnull final BufferSource counter) {
-    setCounter( counter );
-    return this;
-  }
-
-  @JsOverlay
-  default void setCounter(@Nonnull final ArrayBufferView counter) {
-    setCounter( BufferSource.of( counter ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesCtrParams counter(@Nonnull final ArrayBufferView counter) {
-    setCounter( counter );
-    return this;
-  }
-
-  @JsOverlay
-  default void setCounter(@Nonnull final ArrayBuffer counter) {
-    setCounter( BufferSource.of( counter ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AesCtrParams counter(@Nonnull final ArrayBuffer counter) {
     setCounter( counter );
     return this;
   }
