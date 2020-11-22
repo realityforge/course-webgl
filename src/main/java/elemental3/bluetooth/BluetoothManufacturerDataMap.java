@@ -1,7 +1,7 @@
 package elemental3.bluetooth;
 
 import elemental2.core.JsIterator;
-import elemental3.DataView;
+import elemental3.core.DataView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

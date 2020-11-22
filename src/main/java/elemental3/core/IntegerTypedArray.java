@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.core;
 
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
@@ -10,5 +10,5 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface TypedArray extends ArrayBufferView {
+public interface IntegerTypedArray extends TypedArray {
 }

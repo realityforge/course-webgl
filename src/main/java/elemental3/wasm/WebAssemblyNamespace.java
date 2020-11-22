@@ -1,7 +1,7 @@
 package elemental3.wasm;
 
-import elemental3.BufferSource;
 import elemental3.Response;
+import elemental3.core.BufferSource;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

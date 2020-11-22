@@ -1,10 +1,10 @@
 package org.realityforge.webgl.util;
 
 import elemental3.Console;
-import elemental3.Float32Array;
 import elemental3.HTMLImageElement;
 import elemental3.Image;
-import elemental3.Uint16Array;
+import elemental3.core.Float32Array;
+import elemental3.core.Uint16Array;
 import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
 import elemental3.gl.GLSL;

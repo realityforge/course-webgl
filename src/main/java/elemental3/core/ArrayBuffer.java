@@ -1,5 +1,6 @@
-package elemental3;
+package elemental3.core;
 
+import elemental3.Transferable;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer.
  * <p>It is an array of bytes, often referred to in other languages as a "byte array". You cannot
  * directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array
- * objects or a {@link elemental3.DataView} object which represents the buffer in a specific format, and use
+ * objects or a {@link elemental3.core.DataView} object which represents the buffer in a specific format, and use
  * that to read and write the contents of the buffer.</p>
  * <p>The ArrayBuffer() constructor creates a new ArrayBuffer of the given length in bytes. You can
  * also get an array buffer from existing data, for example from a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Base64 string</a>

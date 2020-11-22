@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.core.ArrayBufferView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

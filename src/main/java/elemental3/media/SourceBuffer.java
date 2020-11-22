@@ -1,12 +1,12 @@
 package elemental3.media;
 
 import elemental3.AudioTrackList;
-import elemental3.BufferSource;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
 import elemental3.TextTrackList;
 import elemental3.TimeRanges;
 import elemental3.VideoTrackList;
+import elemental3.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

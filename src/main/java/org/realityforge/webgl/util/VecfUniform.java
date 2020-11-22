@@ -1,6 +1,6 @@
 package org.realityforge.webgl.util;
 
-import elemental3.Float32Array;
+import elemental3.core.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import java.util.Objects;

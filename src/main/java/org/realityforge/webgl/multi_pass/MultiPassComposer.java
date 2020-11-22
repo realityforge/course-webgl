@@ -1,6 +1,6 @@
 package org.realityforge.webgl.multi_pass;
 
-import elemental3.ArrayBufferView;
+import elemental3.core.ArrayBufferView;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLTexture;
 import java.util.Objects;

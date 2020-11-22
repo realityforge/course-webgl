@@ -1,6 +1,6 @@
 package org.realityforge.webgl.util;
 
-import elemental3.ArrayBufferView;
+import elemental3.core.ArrayBufferView;
 import elemental3.gl.DrawElementDataType;
 import elemental3.gl.UsageType;
 import elemental3.gl.WebGL2RenderingContext;

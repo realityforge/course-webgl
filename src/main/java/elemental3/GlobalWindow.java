@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.core.AtomicsNamespace;
 import elemental3.wasm.WebAssemblyNamespace;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

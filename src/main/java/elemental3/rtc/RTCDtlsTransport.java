@@ -1,9 +1,9 @@
 package elemental3.rtc;
 
 import elemental2.core.JsArray;
-import elemental3.ArrayBuffer;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
+import elemental3.core.ArrayBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

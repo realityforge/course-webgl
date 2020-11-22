@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import elemental3.core.BufferSource;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental3.bluetooth.Bluetooth;
+import elemental3.core.BufferSource;
 import elemental3.media.MediaDevices;
 import elemental3.promise.Promise;
 import elemental3.xr.XRSystem;

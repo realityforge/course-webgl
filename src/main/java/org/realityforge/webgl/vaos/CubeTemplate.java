@@ -1,6 +1,6 @@
 package org.realityforge.webgl.vaos;
 
-import elemental3.Float32Array;
+import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;

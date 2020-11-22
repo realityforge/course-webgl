@@ -2,11 +2,11 @@ package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
 import elemental3.AddEventListenerOptions;
-import elemental3.BufferSource;
-import elemental3.DataView;
 import elemental3.EventHandler;
 import elemental3.EventListenerOptions;
 import elemental3.EventTarget;
+import elemental3.core.BufferSource;
+import elemental3.core.DataView;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

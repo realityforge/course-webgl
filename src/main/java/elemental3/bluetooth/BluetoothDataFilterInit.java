@@ -1,6 +1,6 @@
 package elemental3.bluetooth;
 
-import elemental3.BufferSource;
+import elemental3.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

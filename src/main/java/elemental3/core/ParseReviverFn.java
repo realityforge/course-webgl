@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.core;
 
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;

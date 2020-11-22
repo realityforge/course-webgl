@@ -1,6 +1,8 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import elemental3.core.ArrayBuffer;
+import elemental3.core.ArrayBufferView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

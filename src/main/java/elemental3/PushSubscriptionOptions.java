@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental3.core.ArrayBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;

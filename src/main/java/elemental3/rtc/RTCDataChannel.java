@@ -1,8 +1,6 @@
 package elemental3.rtc;
 
 import elemental3.AddEventListenerOptions;
-import elemental3.ArrayBuffer;
-import elemental3.ArrayBufferView;
 import elemental3.BinaryType;
 import elemental3.Blob;
 import elemental3.EventHandler;
@@ -11,6 +9,8 @@ import elemental3.EventListenerOptions;
 import elemental3.EventTarget;
 import elemental3.MessageEventHandler;
 import elemental3.MessageEventListener;
+import elemental3.core.ArrayBuffer;
+import elemental3.core.ArrayBufferView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

@@ -1,7 +1,7 @@
 package org.realityforge.webgl.webglacademy.l11;
 
-import elemental3.Float32Array;
-import elemental3.Uint16Array;
+import elemental3.core.Float32Array;
+import elemental3.core.Uint16Array;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;

@@ -1,6 +1,6 @@
 package org.realityforge.webgl.util;
 
-import elemental3.Float32Array;
+import elemental3.core.Float32Array;
 import elemental3.gl.BufferTargetType;
 import elemental3.gl.UsageType;
 import elemental3.gl.VertexDimensions;

@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.core;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
