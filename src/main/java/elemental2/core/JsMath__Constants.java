@@ -3,8 +3,9 @@ package elemental2.core;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name = "Math", namespace = JsPackage.GLOBAL)
-class JsMath__Constants {
+@JsType( isNative = true, name = "Math", namespace = JsPackage.GLOBAL )
+class JsMath__Constants
+{
   static double E;
   static double LN10;
   static double LN2;

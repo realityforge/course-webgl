@@ -7,11 +7,13 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
-@JsType(isNative = true, name = "IIterableResult", namespace = JsPackage.GLOBAL)
-public interface JsIIterableResult<VALUE> {
+@JsType( isNative = true, name = "IIterableResult", namespace = JsPackage.GLOBAL )
+public interface JsIIterableResult<VALUE>
+{
   @JsOverlay
-  static JsIIterableResult create() {
-    return Js.uncheckedCast(JsPropertyMap.of());
+  static JsIIterableResult create()
+  {
+    return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
   @JsProperty
@@ -21,8 +23,8 @@ public interface JsIIterableResult<VALUE> {
   boolean isDone();
 
   @JsProperty
-  void setDone(boolean done);
+  void setDone( boolean done );
 
   @JsProperty
-  void setValue(VALUE value);
+  void setValue( VALUE value );
 }

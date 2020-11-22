@@ -8,21 +8,25 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
-@JsType(isNative = true, namespace = JsPackage.GLOBAL)
-public interface ObjectPropertyDescriptor<THIS> {
+@JsType( isNative = true, namespace = JsPackage.GLOBAL )
+public interface ObjectPropertyDescriptor<THIS>
+{
   @JsFunction
-  public interface GetFn {
+  interface GetFn
+  {
     Object onInvoke();
   }
 
   @JsFunction
-  public interface SetFn {
-    void onInvoke(Object p0);
+  interface SetFn
+  {
+    void onInvoke( Object p0 );
   }
 
   @JsOverlay
-  static ObjectPropertyDescriptor create() {
-    return Js.uncheckedCast(JsPropertyMap.of());
+  static ObjectPropertyDescriptor create()
+  {
+    return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
   @JsProperty
@@ -44,20 +48,20 @@ public interface ObjectPropertyDescriptor<THIS> {
   boolean isWritable();
 
   @JsProperty
-  void setConfigurable(boolean configurable);
+  void setConfigurable( boolean configurable );
 
   @JsProperty
-  void setEnumerable(boolean enumerable);
+  void setEnumerable( boolean enumerable );
 
   @JsProperty
-  void setGet( GetFn get);
+  void setGet( GetFn get );
 
   @JsProperty
-  void setSet( SetFn set);
+  void setSet( SetFn set );
 
   @JsProperty
-  void setValue(Object value);
+  void setValue( Object value );
 
   @JsProperty
-  void setWritable(boolean writable);
+  void setWritable( boolean writable );
 }

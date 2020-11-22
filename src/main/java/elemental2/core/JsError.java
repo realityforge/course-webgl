@@ -5,22 +5,25 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(isNative = true, name = "Error", namespace = JsPackage.GLOBAL)
-public class JsError {
+@JsType( isNative = true, name = "Error", namespace = JsPackage.GLOBAL )
+public class JsError
+{
   public static double stackTraceLimit;
 
-  public static native void captureStackTrace(JsObject error, Function constructor);
+  public static native void captureStackTrace( JsObject error, Function constructor );
 
-  public static native void captureStackTrace(JsObject error);
+  public static native void captureStackTrace( JsObject error );
 
   @JsOverlay
-  public static final void captureStackTrace(Object error, Function constructor) {
-    captureStackTrace(Js.<JsObject>uncheckedCast(error), constructor);
+  public static final void captureStackTrace( Object error, Function constructor )
+  {
+    captureStackTrace( Js.uncheckedCast( error ), constructor );
   }
 
   @JsOverlay
-  public static final void captureStackTrace(Object error) {
-    captureStackTrace(Js.<JsObject>uncheckedCast(error));
+  public static final void captureStackTrace( Object error )
+  {
+    captureStackTrace( Js.uncheckedCast( error ) );
   }
 
   public String description;
@@ -31,11 +34,19 @@ public class JsError {
   public Object sourceURL;
   public String stack;
 
-  public JsError() {}
+  public JsError()
+  {
+  }
 
-  public JsError(Object message, Object file, Object line) {}
+  public JsError( Object message, Object file, Object line )
+  {
+  }
 
-  public JsError(Object message, Object file) {}
+  public JsError( Object message, Object file )
+  {
+  }
 
-  public JsError(Object message) {}
+  public JsError( Object message )
+  {
+  }
 }

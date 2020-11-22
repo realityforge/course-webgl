@@ -4,8 +4,9 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name = "RegExp", namespace = JsPackage.GLOBAL)
-public class JsRegExp {
+@JsType( isNative = true, name = "RegExp", namespace = JsPackage.GLOBAL )
+public class JsRegExp
+{
   public static String $1;
   public static String $2;
   public static String $3;
@@ -28,22 +29,28 @@ public class JsRegExp {
   public String source;
   public boolean sticky;
 
-  public JsRegExp() {}
+  public JsRegExp()
+  {
+  }
 
-  public JsRegExp(Object pattern, Object flags) {}
+  public JsRegExp( Object pattern, Object flags )
+  {
+  }
 
-  public JsRegExp(Object pattern) {}
+  public JsRegExp( Object pattern )
+  {
+  }
 
   @Deprecated
-  public native void compile(String pattern, Object flags);
+  public native void compile( String pattern, Object flags );
 
   @Deprecated
-  public native void compile(String pattern);
+  public native void compile( String pattern );
 
-  public native RegExpResult exec(String str);
+  public native RegExpResult exec( String str );
 
-  public native boolean test(String str);
+  public native boolean test( String str );
 
-  @JsMethod(name = "toString")
+  @JsMethod( name = "toString" )
   public native String toString_();
 }

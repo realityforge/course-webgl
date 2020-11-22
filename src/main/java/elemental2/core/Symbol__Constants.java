@@ -3,8 +3,9 @@ package elemental2.core;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name = "Symbol", namespace = JsPackage.GLOBAL)
-class Symbol__Constants {
+@JsType( isNative = true, name = "Symbol", namespace = JsPackage.GLOBAL )
+class Symbol__Constants
+{
   static Object asyncIterator;
   static Object hasInstance;
   static Object isConcatSpreadable;

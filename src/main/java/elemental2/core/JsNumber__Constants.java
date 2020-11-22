@@ -3,8 +3,9 @@ package elemental2.core;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name = "Number", namespace = JsPackage.GLOBAL)
-class JsNumber__Constants {
+@JsType( isNative = true, name = "Number", namespace = JsPackage.GLOBAL )
+class JsNumber__Constants
+{
   static double EPSILON;
   static double MAX_SAFE_INTEGER;
   static double MAX_VALUE;
