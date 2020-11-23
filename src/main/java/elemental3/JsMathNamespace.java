@@ -2,6 +2,7 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,6 +19,30 @@ import jsinterop.annotations.JsType;
     name = "Math"
 )
 public final class JsMathNamespace {
+  @JsOverlay
+  public static final double E = 2.7182818284590452354;
+
+  @JsOverlay
+  public static final double LN10 = 2.302585092994046;
+
+  @JsOverlay
+  public static final double LN2 = 0.6931471805599453;
+
+  @JsOverlay
+  public static final double LOG10E = 0.4342944819032518;
+
+  @JsOverlay
+  public static final double LOG2E = 1.4426950408889634;
+
+  @JsOverlay
+  public static final double PI = 3.1415926535897932;
+
+  @JsOverlay
+  public static final double SQRT1_2 = 0.7071067811865476;
+
+  @JsOverlay
+  public static final double SQRT2 = 1.4142135623730951;
+
   private JsMathNamespace() {
   }
 

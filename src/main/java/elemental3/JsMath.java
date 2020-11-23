@@ -2,6 +2,7 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 
 /**
  * Math is a built-in object that has properties and methods for mathematical constants and functions. It&rsquo;s not a function object.
@@ -11,6 +12,30 @@ import javax.annotation.Nonnull;
  */
 @Generated("org.realityforge.webtack")
 public final class JsMath {
+  @JsOverlay
+  public static final double E = JsMathNamespace.E;
+
+  @JsOverlay
+  public static final double LN10 = JsMathNamespace.LN10;
+
+  @JsOverlay
+  public static final double LN2 = JsMathNamespace.LN2;
+
+  @JsOverlay
+  public static final double LOG10E = JsMathNamespace.LOG10E;
+
+  @JsOverlay
+  public static final double LOG2E = JsMathNamespace.LOG2E;
+
+  @JsOverlay
+  public static final double PI = JsMathNamespace.PI;
+
+  @JsOverlay
+  public static final double SQRT1_2 = JsMathNamespace.SQRT1_2;
+
+  @JsOverlay
+  public static final double SQRT2 = JsMathNamespace.SQRT2;
+
   private JsMath() {
   }
 
