@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.core;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,28 +20,28 @@ import jsinterop.annotations.JsType;
 )
 public final class JsMathNamespace {
   @JsOverlay
-  public static final double E = 2.7182818284590452354;
+  public static final double E = Constants.E;
 
   @JsOverlay
-  public static final double LN10 = 2.302585092994046;
+  public static final double LN10 = Constants.LN10;
 
   @JsOverlay
-  public static final double LN2 = 0.6931471805599453;
+  public static final double LN2 = Constants.LN2;
 
   @JsOverlay
-  public static final double LOG10E = 0.4342944819032518;
+  public static final double LOG10E = Constants.LOG10E;
 
   @JsOverlay
-  public static final double LOG2E = 1.4426950408889634;
+  public static final double LOG2E = Constants.LOG2E;
 
   @JsOverlay
-  public static final double PI = 3.1415926535897932;
+  public static final double PI = Constants.PI;
 
   @JsOverlay
-  public static final double SQRT1_2 = 0.7071067811865476;
+  public static final double SQRT1_2 = Constants.SQRT1_2;
 
   @JsOverlay
-  public static final double SQRT2 = 1.4142135623730951;
+  public static final double SQRT2 = Constants.SQRT2;
 
   private JsMathNamespace() {
   }
@@ -341,4 +341,35 @@ public final class JsMathNamespace {
    * @see <a href="https://tc39.es/ecma262/#sec-math.trunc">The definition of 'Math.trunc' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public native int trunc(double x);
+
+  @JsType(
+      isNative = true,
+      name = "Math",
+      namespace = JsPackage.GLOBAL
+  )
+  private static final class Constants {
+    @JsOverlay
+    private static double E;
+
+    @JsOverlay
+    private static double LN10;
+
+    @JsOverlay
+    private static double LN2;
+
+    @JsOverlay
+    private static double LOG10E;
+
+    @JsOverlay
+    private static double LOG2E;
+
+    @JsOverlay
+    private static double PI;
+
+    @JsOverlay
+    private static double SQRT1_2;
+
+    @JsOverlay
+    private static double SQRT2;
+  }
 }

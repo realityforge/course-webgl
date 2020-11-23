@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental3.core.AtomicsNamespace;
 import elemental3.core.JsArray;
+import elemental3.core.JsMathNamespace;
 import elemental3.indexeddb.IDBFactory;
 import elemental3.promise.Promise;
 import elemental3.speech.SpeechSynthesis;
