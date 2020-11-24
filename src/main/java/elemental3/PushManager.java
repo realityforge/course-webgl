@@ -34,7 +34,7 @@ public class PushManager {
       name = "supportedContentEncodings"
   )
   @Nonnull
-  public native JsArray<String> supportedContentEncodings();
+  public static native JsArray<String> supportedContentEncodings();
 
   /**
    * The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription.

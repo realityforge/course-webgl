@@ -182,7 +182,7 @@ public class Notification extends EventTarget {
   @JsProperty(
       name = "maxActions"
   )
-  public native int maxActions();
+  public static native int maxActions();
 
   /**
    * The permission read-only property of the Notification interface indicates the current permission granted by the user for the current origin to display web notifications.
@@ -195,7 +195,7 @@ public class Notification extends EventTarget {
   )
   @Nonnull
   @NotificationPermission
-  public native String permission();
+  public static native String permission();
 
   /**
    * The renotify read-only property of the Notification interface specifies whether the user should be notified after a new notification replaces an old one, as specified in the renotify option of the Notification() constructor.

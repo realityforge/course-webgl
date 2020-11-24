@@ -1,50 +1,124 @@
 package elemental3.core;
 
+import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType( isNative = true, namespace = JsPackage.GLOBAL )
-public class Symbol
-{
-  @JsOverlay
-  public static final Object asyncIterator = Symbol__Constants.asyncIterator;
-  @JsOverlay
-  public static final Object hasInstance = Symbol__Constants.hasInstance;
-  @JsOverlay
-  public static final Object isConcatSpreadable = Symbol__Constants.isConcatSpreadable;
-  @JsOverlay
-  public static final Object iterator = Symbol__Constants.iterator;
-  @JsOverlay
-  public static final Object match = Symbol__Constants.match;
-  @JsOverlay
-  public static final Object matchAll = Symbol__Constants.matchAll;
-  @JsOverlay
-  public static final Object replace = Symbol__Constants.replace;
-  @JsOverlay
-  public static final Object search = Symbol__Constants.search;
-  @JsOverlay
-  public static final Object species = Symbol__Constants.species;
-  @JsOverlay
-  public static final Object toPrimitive = Symbol__Constants.toPrimitive;
-  @JsOverlay
-  public static final Object toStringTag = Symbol__Constants.toStringTag;
-  @JsOverlay
-  public static final Object unscopables = Symbol__Constants.unscopables;
-
-  @JsMethod( name = "for" )
-  public static native Object for_( String sym );
-
-  public static native String keyFor( Object sym );
-
-  public String description;
-
-  public Symbol()
-  {
+/**
+ * The data type symbol is a primitive data type. The Symbol() function returns a value of type symbol, has static properties that expose several members of built-in objects, has static methods that expose the global symbol registry, and resembles a built-in object class, but is incomplete as a constructor because it does not support the syntax &quot;new Symbol()&quot;.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-symbol-objects">The definition of 'Symbol' in the 'ECMAScript (ECMA-262)' specification.</a>
+ */
+@Generated("org.realityforge.webtack")
+@JsType(
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "Symbol"
+)
+public class Symbol {
+  protected Symbol() {
   }
 
-  public Symbol( Object description )
-  {
-  }
+  @JsProperty(
+      name = "asyncIterator"
+  )
+  @Nonnull
+  public static native Symbol asyncIterator();
+
+  @JsProperty(
+      name = "hasInstance"
+  )
+  @Nonnull
+  public static native Symbol hasInstance();
+
+  @JsProperty(
+      name = "isConcatSpreadable"
+  )
+  @Nonnull
+  public static native Symbol isConcatSpreadable();
+
+  @JsProperty(
+      name = "iterator"
+  )
+  @Nonnull
+  public static native Symbol iterator();
+
+  @JsProperty(
+      name = "match"
+  )
+  @Nonnull
+  public static native Symbol match();
+
+  @JsProperty(
+      name = "matchAll"
+  )
+  @Nonnull
+  public static native Symbol matchAll();
+
+  @JsProperty(
+      name = "replace"
+  )
+  @Nonnull
+  public static native Symbol replace();
+
+  @JsProperty(
+      name = "search"
+  )
+  @Nonnull
+  public static native Symbol search();
+
+  @JsProperty(
+      name = "species"
+  )
+  @Nonnull
+  public static native Symbol species();
+
+  @JsProperty(
+      name = "split"
+  )
+  @Nonnull
+  public static native Symbol split();
+
+  @JsProperty(
+      name = "toPrimitive"
+  )
+  @Nonnull
+  public static native Symbol toPrimitive();
+
+  @JsProperty(
+      name = "toStringTag"
+  )
+  @Nonnull
+  public static native Symbol toStringTag();
+
+  @JsProperty(
+      name = "unscopables"
+  )
+  @Nonnull
+  public static native Symbol unscopables();
+
+  @JsMethod(
+      name = "for"
+  )
+  @Nonnull
+  public static native Symbol for_(@Nonnull String key);
+
+  /**
+   * The Symbol.keyFor(sym) method retrieves a shared symbol key from the global symbol registry for the given symbol.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/keyFor">Symbol.keyFor - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-symbol.keyfor">The definition of 'Symbol.keyFor' in the 'ECMAScript (ECMA-262)' specification.</a>
+   */
+  @Nonnull
+  public static native String keyFor(@Nonnull Symbol symbol);
+
+  @JsMethod(
+      name = "toString"
+  )
+  @Nonnull
+  public native String toString_();
 }
