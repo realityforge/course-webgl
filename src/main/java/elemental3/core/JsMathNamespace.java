@@ -1,7 +1,6 @@
 package elemental3.core;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -141,14 +140,6 @@ public final class JsMathNamespace {
    * @see <a href="https://tc39.es/ecma262/#sec-math.cos">The definition of 'Math.cos' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public native double cos(double x);
-
-  /**
-   * The Math.cos() static function returns the cosine of the specified angle, which must be specified in radians. This value is
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos">Math.cos - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-math.cos">The definition of 'Math.cos' in the 'ECMAScript (ECMA-262)' specification.</a>
-   */
-  public native double cos(@Nonnull String x);
 
   /**
    * The Math.cosh() function returns the hyperbolic cosine of a number, that can be expressed using the constant e:

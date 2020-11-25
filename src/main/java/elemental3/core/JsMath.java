@@ -161,16 +161,6 @@ public final class JsMath {
   }
 
   /**
-   * The Math.cos() static function returns the cosine of the specified angle, which must be specified in radians. This value is
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos">Math.cos - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-math.cos">The definition of 'Math.cos' in the 'ECMAScript (ECMA-262)' specification.</a>
-   */
-  public static double cos(@Nonnull String x) {
-    return namespace().cos(x);
-  }
-
-  /**
    * The Math.cosh() function returns the hyperbolic cosine of a number, that can be expressed using the constant e:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cosh">Math.cosh - MDN</a>
