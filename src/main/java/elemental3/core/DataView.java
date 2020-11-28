@@ -83,6 +83,11 @@ public class DataView implements ArrayBufferView {
   )
   public native int byteOffset();
 
+  @JsProperty(
+      name = "length"
+  )
+  public native int length();
+
   public native byte getInt8(int byteOffset);
 
   public native short getUint8(int byteOffset);

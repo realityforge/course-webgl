@@ -24,8 +24,21 @@ import jsinterop.annotations.JsType;
     name = "Uint8ClampedArray"
 )
 public class Uint8ClampedArray implements IntegerTypedArray {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   @JsOverlay
   public static final int BYTES_PER_ELEMENT = 1;
+
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  @JsOverlay
+  public static final String name = "Uint8ClampedArray";
 
   /**
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -104,6 +117,32 @@ public class Uint8ClampedArray implements IntegerTypedArray {
       name = "length"
   )
   public native int length();
+
+  /**
+   * The TypedArray.of() method creates a new typed array from a variable number of arguments. This method is nearly the same as Array.of().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of">TypedArray.of - MDN</a>
+   */
+  @Nonnull
+  public static native Uint8ClampedArray of(short... element);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  @Nonnull
+  public native Uint8ClampedArray copyWithin(int target, int start, int end);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  @Nonnull
+  public native Uint8ClampedArray copyWithin(int target, int start);
 
   public native short get(int index);
 

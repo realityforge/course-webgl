@@ -117,6 +117,32 @@ public class Int8Array implements IntegerTypedArray {
   )
   public native int length();
 
+  /**
+   * The TypedArray.of() method creates a new typed array from a variable number of arguments. This method is nearly the same as Array.of().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of">TypedArray.of - MDN</a>
+   */
+  @Nonnull
+  public static native Int8Array of(byte... element);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  @Nonnull
+  public native Int8Array copyWithin(int target, int start, int end);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  @Nonnull
+  public native Int8Array copyWithin(int target, int start);
+
   public native byte get(int index);
 
   public native void set(int index, byte value);
