@@ -2,6 +2,7 @@ package elemental3.core;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -128,8 +129,8 @@ public class Uint16Array implements IntegerTypedArray {
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">Typed%TypedArray%.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-%typedarray%.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @Nonnull
   public native Uint16Array copyWithin(int target, int start, int end);
@@ -137,8 +138,8 @@ public class Uint16Array implements IntegerTypedArray {
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">Typed%TypedArray%.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-%typedarray%.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @Nonnull
   public native Uint16Array copyWithin(int target, int start);
@@ -161,4 +162,10 @@ public class Uint16Array implements IntegerTypedArray {
 
   @Nonnull
   public native Uint16Array subarray(int start, int end);
+
+  @JsMethod(
+      name = "toString"
+  )
+  @Nonnull
+  public native String toString_();
 }

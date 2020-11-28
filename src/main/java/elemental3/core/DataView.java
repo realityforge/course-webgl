@@ -2,6 +2,7 @@ package elemental3.core;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -143,4 +144,10 @@ public class DataView implements ArrayBufferView {
   public native void setFloat64(int byteOffset, double value, boolean littleEndian);
 
   public native void setFloat64(int byteOffset, double value);
+
+  @JsMethod(
+      name = "toString"
+  )
+  @Nonnull
+  public native String toString_();
 }
