@@ -1,52 +1,74 @@
 package elemental3.core;
 
-import jsinterop.annotations.JsOverlay;
+import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
-@JsType( name = "Error", isNative = true, namespace = JsPackage.GLOBAL )
-public class JsError
-{
-  public static double stackTraceLimit;
-
-  public static native void captureStackTrace( JsObject error, JsFunction constructor );
-
-  public static native void captureStackTrace( JsObject error );
-
-  @JsOverlay
-  public static final void captureStackTrace( Object error, JsFunction constructor )
-  {
-    captureStackTrace( Js.uncheckedCast( error ), constructor );
+/**
+ * Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-error-objects">The definition of 'Error' in the 'ECMAScript (ECMA-262)' specification.</a>
+ */
+@Generated("org.realityforge.webtack")
+@JsType(
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "Error"
+)
+public class JsError {
+  /**
+   * The Error constructor creates an error object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-error-constructor">Error() - ECMA</a>
+   */
+  public JsError(@Nonnull final String message) {
   }
 
-  @JsOverlay
-  public static final void captureStackTrace( Object error )
-  {
-    captureStackTrace( Js.uncheckedCast( error ) );
+  /**
+   * The Error constructor creates an error object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error">Error() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-error-constructor">Error() - ECMA</a>
+   */
+  public JsError() {
   }
 
-  public String description;
-  public String fileName;
-  public double lineNumber;
-  public String message;
-  public String name;
-  public Object sourceURL;
-  public String stack;
+  /**
+   * The message property is a human-readable description of the error.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/message">Error.message - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-error.prototype.message">The definition of 'Error.prototype.message' in the 'ECMAScript (ECMA-262)' specification.</a>
+   */
+  @JsProperty(
+      name = "message"
+  )
+  @Nonnull
+  public native String message();
 
-  public JsError()
-  {
-  }
+  /**
+   * The name property represents a name for the type of error. The initial value is &quot;Error&quot;.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name">Error.name - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-error.prototype.name">The definition of 'Error.prototype.name' in the 'ECMAScript (ECMA-262)' specification.</a>
+   */
+  @JsProperty(
+      name = "name"
+  )
+  @Nonnull
+  public native String name();
 
-  public JsError( Object message, Object file, Object line )
-  {
-  }
-
-  public JsError( Object message, Object file )
-  {
-  }
-
-  public JsError( Object message )
-  {
-  }
+  /**
+   * The non-standard stack property of Error objects offer a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">Error.stack - MDN</a>
+   */
+  @JsProperty(
+      name = "stack"
+  )
+  @Nonnull
+  public native String stack();
 }
