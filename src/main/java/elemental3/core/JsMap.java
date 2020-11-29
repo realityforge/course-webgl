@@ -6,7 +6,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@SuppressWarnings( "unused" )
 @JsType( isNative = true, name = "Map", namespace = JsPackage.GLOBAL )
 public class JsMap<KEY, VALUE>
   implements JsIterable<JsArray<JsMap.JsIterableTypeParameterArrayUnionType<KEY, VALUE>>>
