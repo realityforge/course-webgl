@@ -143,21 +143,18 @@ public class JsObject
     return defineProperties( Js.uncheckedCast( obj ), Js.uncheckedCast( props ) );
   }
 
-  public static native JsObject defineProperty(
-    JsObject obj, DefinePropertyPropUnionType prop, JsObject descriptor );
+  public static native JsObject defineProperty( JsObject obj, DefinePropertyPropUnionType prop, JsObject descriptor );
 
   @JsOverlay
   public static JsObject defineProperty( JsObject obj, Object prop, JsObject descriptor )
   {
-    return defineProperty(
-      obj, Js.<DefinePropertyPropUnionType>uncheckedCast( prop ), descriptor );
+    return defineProperty( obj, Js.<DefinePropertyPropUnionType>uncheckedCast( prop ), descriptor );
   }
 
   @JsOverlay
   public static JsObject defineProperty( JsObject obj, String prop, JsObject descriptor )
   {
-    return defineProperty(
-      obj, Js.<DefinePropertyPropUnionType>uncheckedCast( prop ), descriptor );
+    return defineProperty( obj, Js.<DefinePropertyPropUnionType>uncheckedCast( prop ), descriptor );
   }
 
   @JsOverlay
@@ -171,32 +168,28 @@ public class JsObject
   @JsOverlay
   public static JsObject defineProperty( Object obj, Object prop, Object descriptor )
   {
-    return defineProperty(
-      Js.uncheckedCast( obj ), prop, Js.uncheckedCast( descriptor ) );
+    return defineProperty( Js.uncheckedCast( obj ), prop, Js.uncheckedCast( descriptor ) );
   }
 
   @JsOverlay
   public static JsObject defineProperty( Object obj, String prop, Object descriptor )
   {
-    return defineProperty(
-      Js.uncheckedCast( obj ), prop, Js.uncheckedCast( descriptor ) );
+    return defineProperty( Js.uncheckedCast( obj ), prop, Js.uncheckedCast( descriptor ) );
   }
 
-  public static native <T> JsArray<JsArray<EntriesArrayArrayUnionType<T>>> entries(
-    JsPropertyMap<T> obj );
+  public static native <T> JsArray<JsArray<EntriesArrayArrayUnionType<T>>> entries( JsPropertyMap<T> obj );
 
   public static native <T> T freeze( T obj );
 
   public static native JsObject fromEntries( JsIterable<Object> iter );
 
-  public static native <T> ObjectPropertyDescriptor getOwnPropertyDescriptor(
-    T obj, GetOwnPropertyDescriptorPropUnionType prop );
+  public static native <T> ObjectPropertyDescriptor getOwnPropertyDescriptor( T obj,
+                                                                              GetOwnPropertyDescriptorPropUnionType prop );
 
   @JsOverlay
   public static <T> ObjectPropertyDescriptor getOwnPropertyDescriptor( T obj, Object prop )
   {
-    return getOwnPropertyDescriptor(
-      obj, Js.<GetOwnPropertyDescriptorPropUnionType>uncheckedCast( prop ) );
+    return getOwnPropertyDescriptor( obj, Js.<GetOwnPropertyDescriptorPropUnionType>uncheckedCast( prop ) );
   }
 
   @JsOverlay
