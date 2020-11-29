@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsArrayLike;
 
+@SuppressWarnings( "unused" )
 @JsType( name = "Array", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsArray<T>
   implements JsIterable<T>, JsArrayLike<T>
@@ -36,6 +37,7 @@ public class JsArray<T>
       return Js.cast( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isDouble()
     {
@@ -69,18 +71,6 @@ public class JsArray<T>
 
   @JsFunction
   public interface FindIndexPredicateFn<T>
-  {
-    boolean onInvoke( T p0, int p1, JsArray<T> p2 );
-
-    @JsOverlay
-    default boolean onInvoke( T p0, int p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArray<T>>uncheckedCast( p2 ) );
-    }
-  }
-
-  @JsFunction
-  public interface FindPredicateFn<T>
   {
     boolean onInvoke( T p0, int p1, JsArray<T> p2 );
 
@@ -130,6 +120,7 @@ public class JsArray<T>
       return Js.asString( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -161,6 +152,7 @@ public class JsArray<T>
         return Js.cast( this );
       }
 
+      @SuppressWarnings( "ConstantConditions" )
       @JsOverlay
       default boolean isString()
       {

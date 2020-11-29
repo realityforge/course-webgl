@@ -6,6 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
+@SuppressWarnings( "unused" )
 @JsType( isNative = true, name = "Map", namespace = JsPackage.GLOBAL )
 public class JsMap<KEY, VALUE>
   implements JsIterable<JsArray<JsMap.JsIterableTypeParameterArrayUnionType<KEY, VALUE>>>
@@ -14,7 +15,7 @@ public class JsMap<KEY, VALUE>
   public interface ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>
   {
     @JsOverlay
-    static ConstructorIterableJsIterableTypeParameterArrayUnionType of( Object o )
+    static <KEY, VALUE> ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE> of( Object o )
     {
       return Js.cast( o );
     }
@@ -36,7 +37,7 @@ public class JsMap<KEY, VALUE>
   public interface ConstructorIterableUnionType<KEY, VALUE>
   {
     @JsOverlay
-    static ConstructorIterableUnionType of( Object o )
+    static <KEY, VALUE> ConstructorIterableUnionType<KEY, VALUE> of( Object o )
     {
       return Js.cast( o );
     }
@@ -68,7 +69,7 @@ public class JsMap<KEY, VALUE>
   public interface EntriesJsIteratorIterableTypeParameterArrayUnionType<KEY, VALUE>
   {
     @JsOverlay
-    static EntriesJsIteratorIterableTypeParameterArrayUnionType of( Object o )
+    static <KEY, VALUE> EntriesJsIteratorIterableTypeParameterArrayUnionType<KEY, VALUE> of( Object o )
     {
       return Js.cast( o );
     }
@@ -96,7 +97,7 @@ public class JsMap<KEY, VALUE>
   public interface JsIterableTypeParameterArrayUnionType<KEY, VALUE>
   {
     @JsOverlay
-    static JsIterableTypeParameterArrayUnionType of( Object o )
+    static <KEY, VALUE> JsIterableTypeParameterArrayUnionType<KEY, VALUE> of( Object o )
     {
       return Js.cast( o );
     }
