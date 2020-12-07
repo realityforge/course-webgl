@@ -1,7 +1,6 @@
 package org.realityforge.webgl.util;
 
 import elemental3.core.ArrayBufferView;
-import elemental3.gl.BufferTargetType;
 import elemental3.gl.DataType;
 import elemental3.gl.UsageType;
 import elemental3.gl.VertexDimensions;
@@ -14,8 +13,6 @@ public abstract class Buffer
 {
   @Nonnull
   private final ArrayBufferView _data;
-  @BufferTargetType
-  private final int _target;
   @UsageType
   private final int _usage;
   @VertexDimensions
@@ -29,7 +26,6 @@ public abstract class Buffer
   private WebGLBuffer _buffer;
 
   protected Buffer( @Nonnull final ArrayBufferView data,
-                    @BufferTargetType final int target,
                     @UsageType final int usage,
                     @VertexDimensions final int dimension,
                     @DataType final int type,
@@ -41,7 +37,6 @@ public abstract class Buffer
     assert dimension > 0 && dimension <= 4;
     assert stride >= 0 && stride <= 255;
     _data = data;
-    _target = target;
     _usage = usage;
     _dimension = dimension;
     _type = type;
@@ -55,12 +50,6 @@ public abstract class Buffer
   public ArrayBufferView getData()
   {
     return _data;
-  }
-
-  @BufferTargetType
-  public int getTarget()
-  {
-    return _target;
   }
 
   @UsageType
@@ -106,12 +95,12 @@ public abstract class Buffer
     _buffer = gl.createBuffer();
     assert null != _buffer;
     bind( gl );
-    gl.bufferData( _target, _data, _usage );
+    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER, _data, _usage );
   }
 
   public void bind( @Nonnull final WebGL2RenderingContext gl )
   {
     assert null != _buffer;
-    gl.bindBuffer( _target, _buffer );
+    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, _buffer );
   }
 }

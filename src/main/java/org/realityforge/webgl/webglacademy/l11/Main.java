@@ -123,7 +123,6 @@ public final class Main
         final Float32Array vertices = new Float32Array( asset.getVertices() );
         final Float32Buffer positionBuffer =
           new Float32Buffer( vertices,
-                             WebGL2RenderingContext.ARRAY_BUFFER,
                              WebGL2RenderingContext.STATIC_DRAW,
                              3,
                              false,
@@ -131,7 +130,6 @@ public final class Main
                              0 );
         final Float32Buffer normalBuffer =
           new Float32Buffer( vertices,
-                             WebGL2RenderingContext.ARRAY_BUFFER,
                              WebGL2RenderingContext.STATIC_DRAW,
                              3,
                              false,
@@ -139,7 +137,6 @@ public final class Main
                              4 * 3 );
         final Float32Buffer uvBuffer =
           new Float32Buffer( vertices,
-                             WebGL2RenderingContext.ARRAY_BUFFER,
                              WebGL2RenderingContext.STATIC_DRAW,
                              2,
                              false,
