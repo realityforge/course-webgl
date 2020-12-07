@@ -49,6 +49,16 @@ fragUV = uv; }
   3. Normal
   4. UV Coordinates
 
+* Use TextureAtlas to merge multiple textures.
+* Use specialized shaders so that can draw multiple mesh. Transforms are uploaded in a buffer and
+  object ids are used to select the mesh and the transform. So a single draw command can result in
+  multiple mesh draws with multiple transforms. Probably not needed if WEB_GL_multidraw extension
+  enabled
+
+* Add OCULUS_multiview2 so one command pipeline can be used to render twice
+  - See https://developer.mozilla.org/en-US/docs/Web/API/OVR_multiview2
+  - See https://developer.oculus.com/documentation/oculus-browser/browser-multiview/#using-multiview-in-webgl-20
+
 ## References
 
 * [Learn Webgl](http://learnwebgl.brown37.net/index.html)
