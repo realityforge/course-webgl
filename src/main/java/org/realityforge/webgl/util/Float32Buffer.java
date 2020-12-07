@@ -4,9 +4,7 @@ import elemental3.core.Float32Array;
 import elemental3.gl.UsageType;
 import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLBuffer;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public final class Float32Buffer
   extends Buffer
@@ -21,7 +19,7 @@ public final class Float32Buffer
 
   public Float32Buffer( @Nonnull final Float32Array data, @VertexDimensions final int dimension )
   {
-    this( data, WebGL2RenderingContext.STATIC_DRAW, dimension, false, 0, 0, null );
+    this( data, WebGL2RenderingContext.STATIC_DRAW, dimension, false, 0, 0 );
   }
 
   public Float32Buffer( @Nonnull final Float32Array data,
@@ -31,17 +29,6 @@ public final class Float32Buffer
                         final int stride,
                         final int offset )
   {
-    this( data, usage, dimension, normalized, stride, offset, null );
-  }
-
-  public Float32Buffer( @Nonnull final Float32Array data,
-                        @UsageType final int usage,
-                        @VertexDimensions final int dimension,
-                        final boolean normalized,
-                        final int stride,
-                        final int offset,
-                        @Nullable final WebGLBuffer buffer )
-  {
-    super( data, usage, dimension, WebGL2RenderingContext.FLOAT, normalized, stride, offset, buffer );
+    super( data, usage, dimension, WebGL2RenderingContext.FLOAT, normalized, stride, offset, null );
   }
 }
