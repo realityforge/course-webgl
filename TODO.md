@@ -61,6 +61,10 @@ fragUV = uv; }
 
 ## References
 
+* [gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline)
+
+* [meshoptimizer](https://github.com/zeux/meshoptimizer)
+
 * [Learn Webgl](http://learnwebgl.brown37.net/index.html)
 
 * [WebGL2 Fundamentals](https://webgl2fundamentals.org/) - a great learning resource.
