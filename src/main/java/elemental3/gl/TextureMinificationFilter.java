@@ -17,4 +17,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface TextureMinificationFilter {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.LINEAR == value || WebGL2RenderingContext.NEAREST == value || WebGL2RenderingContext.NEAREST_MIPMAP_NEAREST == value || WebGL2RenderingContext.LINEAR_MIPMAP_NEAREST == value || WebGL2RenderingContext.NEAREST_MIPMAP_LINEAR == value || WebGL2RenderingContext.LINEAR_MIPMAP_LINEAR == value;
+    }
+  }
 }

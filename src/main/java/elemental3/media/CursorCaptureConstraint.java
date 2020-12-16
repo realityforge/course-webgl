@@ -19,4 +19,17 @@ public @interface CursorCaptureConstraint {
 
   @Nonnull
   String never = "never";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CursorCaptureConstraint.always.equals( value ) || CursorCaptureConstraint.motion.equals( value ) || CursorCaptureConstraint.never.equals( value );
+    }
+  }
 }

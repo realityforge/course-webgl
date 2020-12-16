@@ -22,4 +22,17 @@ public @interface PlaybackDirection {
 
   @Nonnull
   String reverse = "reverse";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return PlaybackDirection.alternate.equals( value ) || PlaybackDirection.alternate_reverse.equals( value ) || PlaybackDirection.normal.equals( value ) || PlaybackDirection.reverse.equals( value );
+    }
+  }
 }

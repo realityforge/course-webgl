@@ -22,4 +22,17 @@ public @interface VideoFacingModeEnum {
 
   @Nonnull
   String user = "user";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return VideoFacingModeEnum.environment.equals( value ) || VideoFacingModeEnum.left.equals( value ) || VideoFacingModeEnum.right.equals( value ) || VideoFacingModeEnum.user.equals( value );
+    }
+  }
 }

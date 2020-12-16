@@ -34,4 +34,17 @@ public @interface RTCErrorDetailTypeIdp {
 
   @Nonnull
   String idp_token_invalid = "idp-token-invalid";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCErrorDetailTypeIdp.idp_bad_script_failure.equals( value ) || RTCErrorDetailTypeIdp.idp_execution_failure.equals( value ) || RTCErrorDetailTypeIdp.idp_load_failure.equals( value ) || RTCErrorDetailTypeIdp.idp_need_login.equals( value ) || RTCErrorDetailTypeIdp.idp_timeout.equals( value ) || RTCErrorDetailTypeIdp.idp_tls_failure.equals( value ) || RTCErrorDetailTypeIdp.idp_token_expired.equals( value ) || RTCErrorDetailTypeIdp.idp_token_invalid.equals( value );
+    }
+  }
 }

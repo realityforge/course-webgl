@@ -23,4 +23,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface NodeType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return Node.ELEMENT_NODE == value || Node.ATTRIBUTE_NODE == value || Node.TEXT_NODE == value || Node.CDATA_SECTION_NODE == value || Node.ENTITY_REFERENCE_NODE == value || Node.ENTITY_NODE == value || Node.PROCESSING_INSTRUCTION_NODE == value || Node.COMMENT_NODE == value || Node.DOCUMENT_NODE == value || Node.DOCUMENT_TYPE_NODE == value || Node.DOCUMENT_FRAGMENT_NODE == value || Node.NOTATION_NODE == value;
+    }
+  }
 }

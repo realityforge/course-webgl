@@ -13,4 +13,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface Texture3DTargetType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.TEXTURE_3D == value || WebGL2RenderingContext.TEXTURE_2D_ARRAY == value;
+    }
+  }
 }

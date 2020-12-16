@@ -19,4 +19,17 @@ public @interface PremultiplyAlpha {
 
   @Nonnull
   String premultiply = "premultiply";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return PremultiplyAlpha.default_.equals( value ) || PremultiplyAlpha.none.equals( value ) || PremultiplyAlpha.premultiply.equals( value );
+    }
+  }
 }

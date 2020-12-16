@@ -25,4 +25,17 @@ public @interface RTCStatsIceCandidatePairState {
 
   @Nonnull
   String waiting = "waiting";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCStatsIceCandidatePairState.failed.equals( value ) || RTCStatsIceCandidatePairState.frozen.equals( value ) || RTCStatsIceCandidatePairState.in_progress.equals( value ) || RTCStatsIceCandidatePairState.succeeded.equals( value ) || RTCStatsIceCandidatePairState.waiting.equals( value );
+    }
+  }
 }

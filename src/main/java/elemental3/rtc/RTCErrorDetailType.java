@@ -31,4 +31,17 @@ public @interface RTCErrorDetailType {
 
   @Nonnull
   String sdp_syntax_error = "sdp-syntax-error";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCErrorDetailType.data_channel_failure.equals( value ) || RTCErrorDetailType.dtls_failure.equals( value ) || RTCErrorDetailType.fingerprint_failure.equals( value ) || RTCErrorDetailType.hardware_encoder_error.equals( value ) || RTCErrorDetailType.hardware_encoder_not_available.equals( value ) || RTCErrorDetailType.sctp_failure.equals( value ) || RTCErrorDetailType.sdp_syntax_error.equals( value );
+    }
+  }
 }

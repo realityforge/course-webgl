@@ -25,4 +25,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface BlendFactor {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.ZERO == value || WebGL2RenderingContext.ONE == value || WebGL2RenderingContext.SRC_COLOR == value || WebGL2RenderingContext.DST_COLOR == value || WebGL2RenderingContext.ONE_MINUS_DST_COLOR == value || WebGL2RenderingContext.SRC_ALPHA == value || WebGL2RenderingContext.ONE_MINUS_SRC_ALPHA == value || WebGL2RenderingContext.DST_ALPHA == value || WebGL2RenderingContext.ONE_MINUS_DST_ALPHA == value || WebGL2RenderingContext.CONSTANT_COLOR == value || WebGL2RenderingContext.ONE_MINUS_CONSTANT_COLOR == value || WebGL2RenderingContext.CONSTANT_ALPHA == value || WebGL2RenderingContext.ONE_MINUS_CONSTANT_ALPHA == value || WebGL2RenderingContext.SRC_ALPHA_SATURATE == value;
+    }
+  }
 }

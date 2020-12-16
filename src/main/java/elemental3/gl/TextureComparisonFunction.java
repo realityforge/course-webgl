@@ -19,4 +19,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface TextureComparisonFunction {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.LEQUAL == value || WebGL2RenderingContext.GEQUAL == value || WebGL2RenderingContext.LESS == value || WebGL2RenderingContext.GREATER == value || WebGL2RenderingContext.EQUAL == value || WebGL2RenderingContext.NOTEQUAL == value || WebGL2RenderingContext.ALWAYS == value || WebGL2RenderingContext.NEVER == value;
+    }
+  }
 }

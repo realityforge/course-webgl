@@ -45,4 +45,17 @@ public @interface ScopeType {
    */
   @Nonnull
   String rowgroup = "rowgroup";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ScopeType.auto.equals( value ) || ScopeType.col.equals( value ) || ScopeType.colgroup.equals( value ) || ScopeType.row.equals( value ) || ScopeType.rowgroup.equals( value );
+    }
+  }
 }

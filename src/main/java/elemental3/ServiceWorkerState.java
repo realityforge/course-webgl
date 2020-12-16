@@ -28,4 +28,17 @@ public @interface ServiceWorkerState {
 
   @Nonnull
   String redundant = "redundant";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ServiceWorkerState.activated.equals( value ) || ServiceWorkerState.activating.equals( value ) || ServiceWorkerState.installed.equals( value ) || ServiceWorkerState.installing.equals( value ) || ServiceWorkerState.parsed.equals( value ) || ServiceWorkerState.redundant.equals( value );
+    }
+  }
 }

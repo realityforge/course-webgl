@@ -16,4 +16,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface HTMLMediaElementReadyState {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return HTMLMediaElement.HAVE_NOTHING == value || HTMLMediaElement.HAVE_CURRENT_DATA == value || HTMLMediaElement.HAVE_METADATA == value || HTMLMediaElement.HAVE_FUTURE_DATA == value || HTMLMediaElement.HAVE_ENOUGH_DATA == value;
+    }
+  }
 }

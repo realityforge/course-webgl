@@ -19,4 +19,17 @@ public @interface PresentationStyle {
 
   @Nonnull
   String unspecified = "unspecified";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return PresentationStyle.attachment.equals( value ) || PresentationStyle.inline.equals( value ) || PresentationStyle.unspecified.equals( value );
+    }
+  }
 }

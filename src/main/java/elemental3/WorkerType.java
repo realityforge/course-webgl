@@ -16,4 +16,17 @@ public @interface WorkerType {
 
   @Nonnull
   String module = "module";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return WorkerType.classic.equals( value ) || WorkerType.module.equals( value );
+    }
+  }
 }

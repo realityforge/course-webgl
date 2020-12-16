@@ -15,4 +15,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface WebSocketReadyState {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebSocket.CONNECTING == value || WebSocket.OPEN == value || WebSocket.CLOSING == value || WebSocket.CLOSED == value;
+    }
+  }
 }

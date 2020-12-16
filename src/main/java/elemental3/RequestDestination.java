@@ -70,4 +70,17 @@ public @interface RequestDestination {
 
   @Nonnull
   String xslt = "xslt";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RequestDestination.other.equals( value ) || RequestDestination.audio.equals( value ) || RequestDestination.audioworklet.equals( value ) || RequestDestination.document.equals( value ) || RequestDestination.embed.equals( value ) || RequestDestination.font.equals( value ) || RequestDestination.frame.equals( value ) || RequestDestination.iframe.equals( value ) || RequestDestination.image.equals( value ) || RequestDestination.manifest.equals( value ) || RequestDestination.object.equals( value ) || RequestDestination.paintworklet.equals( value ) || RequestDestination.report.equals( value ) || RequestDestination.script.equals( value ) || RequestDestination.sharedworker.equals( value ) || RequestDestination.style.equals( value ) || RequestDestination.track.equals( value ) || RequestDestination.video.equals( value ) || RequestDestination.worker.equals( value ) || RequestDestination.xslt.equals( value );
+    }
+  }
 }

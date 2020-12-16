@@ -19,4 +19,17 @@ public @interface WebGLPowerPreference {
 
   @Nonnull
   String low_power = "low-power";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return WebGLPowerPreference.default_.equals( value ) || WebGLPowerPreference.high_performance.equals( value ) || WebGLPowerPreference.low_power.equals( value );
+    }
+  }
 }

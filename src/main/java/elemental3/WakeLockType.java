@@ -13,4 +13,17 @@ import org.intellij.lang.annotations.MagicConstant;
 public @interface WakeLockType {
   @Nonnull
   String screen = "screen";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return WakeLockType.screen.equals( value );
+    }
+  }
 }

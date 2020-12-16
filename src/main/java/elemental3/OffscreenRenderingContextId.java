@@ -22,4 +22,17 @@ public @interface OffscreenRenderingContextId {
 
   @Nonnull
   String webgl2 = "webgl2";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return OffscreenRenderingContextId._2d.equals( value ) || OffscreenRenderingContextId.bitmaprenderer.equals( value ) || OffscreenRenderingContextId.webgl.equals( value ) || OffscreenRenderingContextId.webgl2.equals( value );
+    }
+  }
 }

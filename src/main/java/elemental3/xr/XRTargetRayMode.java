@@ -19,4 +19,17 @@ public @interface XRTargetRayMode {
 
   @Nonnull
   String tracked_pointer = "tracked-pointer";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return XRTargetRayMode.gaze.equals( value ) || XRTargetRayMode.screen.equals( value ) || XRTargetRayMode.tracked_pointer.equals( value );
+    }
+  }
 }

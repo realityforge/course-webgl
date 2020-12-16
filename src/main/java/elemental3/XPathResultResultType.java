@@ -21,4 +21,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface XPathResultResultType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return XPathResult.ANY_TYPE == value || XPathResult.STRING_TYPE == value || XPathResult.NUMBER_TYPE == value || XPathResult.BOOLEAN_TYPE == value || XPathResult.UNORDERED_NODE_ITERATOR_TYPE == value || XPathResult.ORDERED_NODE_ITERATOR_TYPE == value || XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE == value || XPathResult.ORDERED_NODE_SNAPSHOT_TYPE == value || XPathResult.ANY_UNORDERED_NODE_TYPE == value || XPathResult.FIRST_ORDERED_NODE_TYPE == value;
+    }
+  }
 }

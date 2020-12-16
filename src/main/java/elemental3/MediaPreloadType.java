@@ -31,4 +31,17 @@ public @interface MediaPreloadType {
    */
   @Nonnull
   String none = "none";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return MediaPreloadType.auto.equals( value ) || MediaPreloadType.metadata.equals( value ) || MediaPreloadType.none.equals( value );
+    }
+  }
 }

@@ -25,4 +25,17 @@ public @interface XRReferenceSpaceType {
 
   @Nonnull
   String viewer = "viewer";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return XRReferenceSpaceType.bounded_floor.equals( value ) || XRReferenceSpaceType.local.equals( value ) || XRReferenceSpaceType.local_floor.equals( value ) || XRReferenceSpaceType.unbounded.equals( value ) || XRReferenceSpaceType.viewer.equals( value );
+    }
+  }
 }

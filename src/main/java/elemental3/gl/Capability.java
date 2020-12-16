@@ -21,4 +21,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface Capability {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.BLEND == value || WebGL2RenderingContext.CULL_FACE == value || WebGL2RenderingContext.DEPTH_TEST == value || WebGL2RenderingContext.DITHER == value || WebGL2RenderingContext.POLYGON_OFFSET_FILL == value || WebGL2RenderingContext.SAMPLE_ALPHA_TO_COVERAGE == value || WebGL2RenderingContext.SAMPLE_COVERAGE == value || WebGL2RenderingContext.SCISSOR_TEST == value || WebGL2RenderingContext.STENCIL_TEST == value || WebGL2RenderingContext.RASTERIZER_DISCARD == value;
+    }
+  }
 }

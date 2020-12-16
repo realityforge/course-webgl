@@ -19,4 +19,17 @@ public @interface UserVerificationRequirement {
 
   @Nonnull
   String required = "required";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return UserVerificationRequirement.discouraged.equals( value ) || UserVerificationRequirement.preferred.equals( value ) || UserVerificationRequirement.required.equals( value );
+    }
+  }
 }

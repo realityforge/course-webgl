@@ -22,4 +22,17 @@ public @interface ResizeQuality {
 
   @Nonnull
   String pixelated = "pixelated";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ResizeQuality.high.equals( value ) || ResizeQuality.low.equals( value ) || ResizeQuality.medium.equals( value ) || ResizeQuality.pixelated.equals( value );
+    }
+  }
 }

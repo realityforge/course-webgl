@@ -40,4 +40,17 @@ public @interface RenderContextType {
    */
   @Nonnull
   String webgl2 = "webgl2";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RenderContextType._2d.equals( value ) || RenderContextType.bitmaprenderer.equals( value ) || RenderContextType.webgl.equals( value ) || RenderContextType.webgl2.equals( value );
+    }
+  }
 }

@@ -19,4 +19,17 @@ public @interface AudioContextLatencyCategory {
 
   @Nonnull
   String playback = "playback";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AudioContextLatencyCategory.balanced.equals( value ) || AudioContextLatencyCategory.interactive.equals( value ) || AudioContextLatencyCategory.playback.equals( value );
+    }
+  }
 }

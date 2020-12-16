@@ -19,4 +19,17 @@ public @interface ReadyState {
 
   @Nonnull
   String open = "open";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ReadyState.closed.equals( value ) || ReadyState.ended.equals( value ) || ReadyState.open.equals( value );
+    }
+  }
 }

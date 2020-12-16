@@ -22,4 +22,17 @@ public @interface SelectionMode {
 
   @Nonnull
   String start = "start";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return SelectionMode.end.equals( value ) || SelectionMode.preserve.equals( value ) || SelectionMode.select.equals( value ) || SelectionMode.start.equals( value );
+    }
+  }
 }

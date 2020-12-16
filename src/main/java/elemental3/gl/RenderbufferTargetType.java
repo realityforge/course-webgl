@@ -10,4 +10,16 @@ import org.intellij.lang.annotations.MagicConstant;
     intValues = WebGL2RenderingContext.RENDERBUFFER
 )
 public @interface RenderbufferTargetType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.RENDERBUFFER == value;
+    }
+  }
 }

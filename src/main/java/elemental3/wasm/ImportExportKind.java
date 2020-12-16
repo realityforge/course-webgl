@@ -22,4 +22,17 @@ public @interface ImportExportKind {
 
   @Nonnull
   String table = "table";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ImportExportKind.function.equals( value ) || ImportExportKind.global.equals( value ) || ImportExportKind.memory.equals( value ) || ImportExportKind.table.equals( value );
+    }
+  }
 }

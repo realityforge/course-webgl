@@ -25,4 +25,17 @@ public @interface RTCDtlsTransportState {
 
   @Nonnull
   String new_ = "new";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCDtlsTransportState.closed.equals( value ) || RTCDtlsTransportState.connected.equals( value ) || RTCDtlsTransportState.connecting.equals( value ) || RTCDtlsTransportState.failed.equals( value ) || RTCDtlsTransportState.new_.equals( value );
+    }
+  }
 }

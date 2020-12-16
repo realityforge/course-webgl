@@ -25,4 +25,17 @@ public @interface DOMParserSupportedType {
 
   @Nonnull
   String text_xml = "text/xml";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return DOMParserSupportedType.application_xhtml_xml.equals( value ) || DOMParserSupportedType.application_xml.equals( value ) || DOMParserSupportedType.image_svg_xml.equals( value ) || DOMParserSupportedType.text_html.equals( value ) || DOMParserSupportedType.text_xml.equals( value );
+    }
+  }
 }

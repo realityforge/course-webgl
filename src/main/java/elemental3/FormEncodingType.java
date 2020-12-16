@@ -31,4 +31,17 @@ public @interface FormEncodingType {
    */
   @Nonnull
   String text_plain = "text/plain";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return FormEncodingType.urlencoded.equals( value ) || FormEncodingType.multipart_form_data.equals( value ) || FormEncodingType.text_plain.equals( value );
+    }
+  }
 }

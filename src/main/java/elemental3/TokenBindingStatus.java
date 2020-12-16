@@ -16,4 +16,17 @@ public @interface TokenBindingStatus {
 
   @Nonnull
   String supported = "supported";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return TokenBindingStatus.present.equals( value ) || TokenBindingStatus.supported.equals( value );
+    }
+  }
 }

@@ -19,4 +19,17 @@ public @interface RTCIceGatheringState {
 
   @Nonnull
   String new_ = "new";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCIceGatheringState.complete.equals( value ) || RTCIceGatheringState.gathering.equals( value ) || RTCIceGatheringState.new_.equals( value );
+    }
+  }
 }

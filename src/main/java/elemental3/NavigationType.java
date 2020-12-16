@@ -22,4 +22,17 @@ public @interface NavigationType {
 
   @Nonnull
   String reload = "reload";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return NavigationType.back_forward.equals( value ) || NavigationType.navigate.equals( value ) || NavigationType.prerender.equals( value ) || NavigationType.reload.equals( value );
+    }
+  }
 }

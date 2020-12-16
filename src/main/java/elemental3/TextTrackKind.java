@@ -25,4 +25,17 @@ public @interface TextTrackKind {
 
   @Nonnull
   String subtitles = "subtitles";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return TextTrackKind.captions.equals( value ) || TextTrackKind.chapters.equals( value ) || TextTrackKind.descriptions.equals( value ) || TextTrackKind.metadata.equals( value ) || TextTrackKind.subtitles.equals( value );
+    }
+  }
 }

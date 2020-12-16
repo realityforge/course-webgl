@@ -14,4 +14,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface FileReaderReadyState {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return FileReader.EMPTY == value || FileReader.LOADING == value || FileReader.DONE == value;
+    }
+  }
 }

@@ -18,4 +18,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface DrawPrimitiveType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.POINTS == value || WebGL2RenderingContext.LINE_STRIP == value || WebGL2RenderingContext.LINE_LOOP == value || WebGL2RenderingContext.LINES == value || WebGL2RenderingContext.TRIANGLE_STRIP == value || WebGL2RenderingContext.TRIANGLE_FAN == value || WebGL2RenderingContext.TRIANGLES == value;
+    }
+  }
 }

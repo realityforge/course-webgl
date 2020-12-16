@@ -372,4 +372,17 @@ public @interface AutocompleteType {
    */
   @Nonnull
   String work = "work";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AutocompleteType.additional_name.equals( value ) || AutocompleteType.address_level1.equals( value ) || AutocompleteType.address_level2.equals( value ) || AutocompleteType.address_level3.equals( value ) || AutocompleteType.address_level4.equals( value ) || AutocompleteType.address_line1.equals( value ) || AutocompleteType.address_line2.equals( value ) || AutocompleteType.address_line3.equals( value ) || AutocompleteType.bday.equals( value ) || AutocompleteType.bday_day.equals( value ) || AutocompleteType.bday_month.equals( value ) || AutocompleteType.bday_year.equals( value ) || AutocompleteType.cc_additional_name.equals( value ) || AutocompleteType.cc_csc.equals( value ) || AutocompleteType.cc_exp.equals( value ) || AutocompleteType.cc_exp_month.equals( value ) || AutocompleteType.cc_exp_year.equals( value ) || AutocompleteType.cc_family_name.equals( value ) || AutocompleteType.cc_given_name.equals( value ) || AutocompleteType.cc_name.equals( value ) || AutocompleteType.cc_number.equals( value ) || AutocompleteType.cc_type.equals( value ) || AutocompleteType.country.equals( value ) || AutocompleteType.country_name.equals( value ) || AutocompleteType.current_password.equals( value ) || AutocompleteType.email.equals( value ) || AutocompleteType.family_name.equals( value ) || AutocompleteType.fax.equals( value ) || AutocompleteType.given_name.equals( value ) || AutocompleteType.home.equals( value ) || AutocompleteType.honorific_prefix.equals( value ) || AutocompleteType.honorific_suffix.equals( value ) || AutocompleteType.impp.equals( value ) || AutocompleteType.language.equals( value ) || AutocompleteType.mobile.equals( value ) || AutocompleteType.name.equals( value ) || AutocompleteType.new_password.equals( value ) || AutocompleteType.nickname.equals( value ) || AutocompleteType.off.equals( value ) || AutocompleteType.on.equals( value ) || AutocompleteType.one_time_code.equals( value ) || AutocompleteType.organization.equals( value ) || AutocompleteType.organization_title.equals( value ) || AutocompleteType.pager.equals( value ) || AutocompleteType.photo.equals( value ) || AutocompleteType.postal_code.equals( value ) || AutocompleteType.sex.equals( value ) || AutocompleteType.street_address.equals( value ) || AutocompleteType.tel.equals( value ) || AutocompleteType.tel_area_code.equals( value ) || AutocompleteType.tel_country_code.equals( value ) || AutocompleteType.tel_extension.equals( value ) || AutocompleteType.tel_local.equals( value ) || AutocompleteType.tel_national.equals( value ) || AutocompleteType.transaction_amount.equals( value ) || AutocompleteType.transaction_currency.equals( value ) || AutocompleteType.url.equals( value ) || AutocompleteType.username.equals( value ) || AutocompleteType.work.equals( value );
+    }
+  }
 }

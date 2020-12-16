@@ -49,4 +49,17 @@ public @interface AutocapitalizeType {
    */
   @Nonnull
   String words = "words";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AutocapitalizeType.characters.equals( value ) || AutocapitalizeType.none.equals( value ) || AutocapitalizeType.off.equals( value ) || AutocapitalizeType.on.equals( value ) || AutocapitalizeType.sentences.equals( value ) || AutocapitalizeType.words.equals( value );
+    }
+  }
 }

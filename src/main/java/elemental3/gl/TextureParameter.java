@@ -23,4 +23,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface TextureParameter {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.TEXTURE_MAG_FILTER == value || WebGL2RenderingContext.TEXTURE_MIN_FILTER == value || WebGL2RenderingContext.TEXTURE_WRAP_S == value || WebGL2RenderingContext.TEXTURE_WRAP_T == value || EXT_texture_filter_anisotropic.TEXTURE_MAX_ANISOTROPY_EXT == value || WebGL2RenderingContext.TEXTURE_BASE_LEVEL == value || WebGL2RenderingContext.TEXTURE_COMPARE_FUNC == value || WebGL2RenderingContext.TEXTURE_COMPARE_MODE == value || WebGL2RenderingContext.TEXTURE_MAX_LEVEL == value || WebGL2RenderingContext.TEXTURE_MAX_LOD == value || WebGL2RenderingContext.TEXTURE_MIN_LOD == value || WebGL2RenderingContext.TEXTURE_WRAP_R == value;
+    }
+  }
 }

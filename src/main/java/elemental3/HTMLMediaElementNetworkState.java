@@ -15,4 +15,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface HTMLMediaElementNetworkState {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return HTMLMediaElement.NETWORK_EMPTY == value || HTMLMediaElement.NETWORK_IDLE == value || HTMLMediaElement.NETWORK_LOADING == value || HTMLMediaElement.NETWORK_NO_SOURCE == value;
+    }
+  }
 }

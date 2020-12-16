@@ -17,4 +17,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface DataType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.BYTE == value || WebGL2RenderingContext.UNSIGNED_BYTE == value || WebGL2RenderingContext.SHORT == value || WebGL2RenderingContext.UNSIGNED_SHORT == value || WebGL2RenderingContext.FLOAT == value || WebGL2RenderingContext.HALF_FLOAT == value;
+    }
+  }
 }

@@ -14,4 +14,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface DrawElementDataType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.UNSIGNED_BYTE == value || WebGL2RenderingContext.UNSIGNED_SHORT == value || WebGL2RenderingContext.UNSIGNED_INT == value;
+    }
+  }
 }

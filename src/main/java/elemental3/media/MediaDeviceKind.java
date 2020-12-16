@@ -19,4 +19,17 @@ public @interface MediaDeviceKind {
 
   @Nonnull
   String videoinput = "videoinput";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return MediaDeviceKind.audioinput.equals( value ) || MediaDeviceKind.audiooutput.equals( value ) || MediaDeviceKind.videoinput.equals( value );
+    }
+  }
 }

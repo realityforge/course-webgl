@@ -46,4 +46,17 @@ public @interface SpeechSynthesisErrorCode {
 
   @Nonnull
   String voice_unavailable = "voice-unavailable";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return SpeechSynthesisErrorCode.audio_busy.equals( value ) || SpeechSynthesisErrorCode.audio_hardware.equals( value ) || SpeechSynthesisErrorCode.canceled.equals( value ) || SpeechSynthesisErrorCode.interrupted.equals( value ) || SpeechSynthesisErrorCode.invalid_argument.equals( value ) || SpeechSynthesisErrorCode.language_unavailable.equals( value ) || SpeechSynthesisErrorCode.network.equals( value ) || SpeechSynthesisErrorCode.not_allowed.equals( value ) || SpeechSynthesisErrorCode.synthesis_failed.equals( value ) || SpeechSynthesisErrorCode.synthesis_unavailable.equals( value ) || SpeechSynthesisErrorCode.text_too_long.equals( value ) || SpeechSynthesisErrorCode.voice_unavailable.equals( value );
+    }
+  }
 }

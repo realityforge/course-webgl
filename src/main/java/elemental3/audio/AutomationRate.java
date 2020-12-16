@@ -16,4 +16,17 @@ public @interface AutomationRate {
 
   @Nonnull
   String k_rate = "k-rate";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AutomationRate.a_rate.equals( value ) || AutomationRate.k_rate.equals( value );
+    }
+  }
 }

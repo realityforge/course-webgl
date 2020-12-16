@@ -22,4 +22,17 @@ public @interface IDBCursorDirection {
 
   @Nonnull
   String prevunique = "prevunique";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return IDBCursorDirection.next.equals( value ) || IDBCursorDirection.nextunique.equals( value ) || IDBCursorDirection.prev.equals( value ) || IDBCursorDirection.prevunique.equals( value );
+    }
+  }
 }

@@ -22,4 +22,17 @@ public @interface FrameType {
 
   @Nonnull
   String top_level = "top-level";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return FrameType.auxiliary.equals( value ) || FrameType.nested.equals( value ) || FrameType.none.equals( value ) || FrameType.top_level.equals( value );
+    }
+  }
 }

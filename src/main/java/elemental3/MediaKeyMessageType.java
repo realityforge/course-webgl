@@ -22,4 +22,17 @@ public @interface MediaKeyMessageType {
 
   @Nonnull
   String license_request = "license-request";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return MediaKeyMessageType.individualization_request.equals( value ) || MediaKeyMessageType.license_release.equals( value ) || MediaKeyMessageType.license_renewal.equals( value ) || MediaKeyMessageType.license_request.equals( value );
+    }
+  }
 }

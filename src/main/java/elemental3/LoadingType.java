@@ -29,4 +29,17 @@ public @interface LoadingType {
    */
   @Nonnull
   String lazy = "lazy";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return LoadingType.eager.equals( value ) || LoadingType.lazy.equals( value );
+    }
+  }
 }

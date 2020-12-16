@@ -28,4 +28,17 @@ public @interface WrapType {
    */
   @Nonnull
   String soft = "soft";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return WrapType.hard.equals( value ) || WrapType.soft.equals( value );
+    }
+  }
 }

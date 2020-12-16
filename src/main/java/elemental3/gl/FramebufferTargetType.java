@@ -14,4 +14,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface FramebufferTargetType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.FRAMEBUFFER == value || WebGL2RenderingContext.DRAW_FRAMEBUFFER == value || WebGL2RenderingContext.READ_FRAMEBUFFER == value;
+    }
+  }
 }

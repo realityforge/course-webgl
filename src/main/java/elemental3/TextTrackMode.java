@@ -19,4 +19,17 @@ public @interface TextTrackMode {
 
   @Nonnull
   String showing = "showing";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return TextTrackMode.disabled.equals( value ) || TextTrackMode.hidden.equals( value ) || TextTrackMode.showing.equals( value );
+    }
+  }
 }

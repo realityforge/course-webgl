@@ -16,4 +16,17 @@ public @interface PanningModelType {
 
   @Nonnull
   String equalpower = "equalpower";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return PanningModelType.HRTF.equals( value ) || PanningModelType.equalpower.equals( value );
+    }
+  }
 }

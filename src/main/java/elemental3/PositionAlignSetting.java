@@ -22,4 +22,17 @@ public @interface PositionAlignSetting {
 
   @Nonnull
   String line_right = "line-right";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return PositionAlignSetting.auto.equals( value ) || PositionAlignSetting.center.equals( value ) || PositionAlignSetting.line_left.equals( value ) || PositionAlignSetting.line_right.equals( value );
+    }
+  }
 }

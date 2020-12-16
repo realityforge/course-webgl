@@ -17,4 +17,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface ApplicationCacheStatus {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return ApplicationCache.UNCACHED == value || ApplicationCache.IDLE == value || ApplicationCache.CHECKING == value || ApplicationCache.DOWNLOADING == value || ApplicationCache.UPDATEREADY == value || ApplicationCache.OBSOLETE == value;
+    }
+  }
 }

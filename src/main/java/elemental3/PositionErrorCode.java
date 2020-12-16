@@ -14,4 +14,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface PositionErrorCode {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return PositionError.PERMISSION_DENIED == value || PositionError.POSITION_UNAVAILABLE == value || PositionError.TIMEOUT == value;
+    }
+  }
 }

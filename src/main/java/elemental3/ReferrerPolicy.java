@@ -63,4 +63,17 @@ public @interface ReferrerPolicy {
    */
   @Nonnull
   String unsafe_url = "unsafe-url";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ReferrerPolicy.no_referrer.equals( value ) || ReferrerPolicy.no_referrer_when_downgrade.equals( value ) || ReferrerPolicy.origin.equals( value ) || ReferrerPolicy.origin_when_cross_origin.equals( value ) || ReferrerPolicy.same_origin.equals( value ) || ReferrerPolicy.strict_origin.equals( value ) || ReferrerPolicy.strict_origin_when_cross_origin.equals( value ) || ReferrerPolicy.unsafe_url.equals( value );
+    }
+  }
 }

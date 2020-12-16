@@ -16,4 +16,17 @@ public @interface DevicePermissionState {
 
   @Nonnull
   String granted = "granted";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return DevicePermissionState.denied.equals( value ) || DevicePermissionState.granted.equals( value );
+    }
+  }
 }

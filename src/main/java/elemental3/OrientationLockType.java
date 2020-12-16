@@ -34,4 +34,17 @@ public @interface OrientationLockType {
 
   @Nonnull
   String portrait_secondary = "portrait-secondary";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return OrientationLockType.any.equals( value ) || OrientationLockType.landscape.equals( value ) || OrientationLockType.landscape_primary.equals( value ) || OrientationLockType.landscape_secondary.equals( value ) || OrientationLockType.natural.equals( value ) || OrientationLockType.portrait.equals( value ) || OrientationLockType.portrait_primary.equals( value ) || OrientationLockType.portrait_secondary.equals( value );
+    }
+  }
 }

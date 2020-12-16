@@ -16,4 +16,17 @@ public @interface RTCCodecType {
 
   @Nonnull
   String encode = "encode";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCCodecType.decode.equals( value ) || RTCCodecType.encode.equals( value );
+    }
+  }
 }

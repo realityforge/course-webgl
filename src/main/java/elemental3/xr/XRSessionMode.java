@@ -19,4 +19,17 @@ public @interface XRSessionMode {
 
   @Nonnull
   String inline = "inline";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return XRSessionMode.immersive_ar.equals( value ) || XRSessionMode.immersive_vr.equals( value ) || XRSessionMode.inline.equals( value );
+    }
+  }
 }

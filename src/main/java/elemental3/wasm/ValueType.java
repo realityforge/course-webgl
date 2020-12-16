@@ -22,4 +22,17 @@ public @interface ValueType {
 
   @Nonnull
   String i64 = "i64";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ValueType.f32.equals( value ) || ValueType.f64.equals( value ) || ValueType.i32.equals( value ) || ValueType.i64.equals( value );
+    }
+  }
 }

@@ -18,4 +18,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface Texture2DSurfaceTargetType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.TEXTURE_2D == value || WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X == value || WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_X == value || WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Y == value || WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Y == value || WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Z == value || WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Z == value;
+    }
+  }
 }

@@ -25,4 +25,17 @@ public @interface FillMode {
 
   @Nonnull
   String none = "none";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return FillMode.auto.equals( value ) || FillMode.backwards.equals( value ) || FillMode.both.equals( value ) || FillMode.forwards.equals( value ) || FillMode.none.equals( value );
+    }
+  }
 }

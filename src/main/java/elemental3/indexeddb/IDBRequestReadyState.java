@@ -16,4 +16,17 @@ public @interface IDBRequestReadyState {
 
   @Nonnull
   String pending = "pending";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return IDBRequestReadyState.done.equals( value ) || IDBRequestReadyState.pending.equals( value );
+    }
+  }
 }

@@ -15,4 +15,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface HTMLTrackElementReadyState {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return HTMLTrackElement.NONE == value || HTMLTrackElement.LOADING == value || HTMLTrackElement.LOADED == value || HTMLTrackElement.ERROR == value;
+    }
+  }
 }

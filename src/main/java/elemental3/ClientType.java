@@ -22,4 +22,17 @@ public @interface ClientType {
 
   @Nonnull
   String worker = "worker";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ClientType.all.equals( value ) || ClientType.sharedworker.equals( value ) || ClientType.window.equals( value ) || ClientType.worker.equals( value );
+    }
+  }
 }

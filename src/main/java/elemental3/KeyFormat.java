@@ -22,4 +22,17 @@ public @interface KeyFormat {
 
   @Nonnull
   String spki = "spki";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return KeyFormat.jwk.equals( value ) || KeyFormat.pkcs8.equals( value ) || KeyFormat.raw.equals( value ) || KeyFormat.spki.equals( value );
+    }
+  }
 }

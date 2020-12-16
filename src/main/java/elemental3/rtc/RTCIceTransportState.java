@@ -31,4 +31,17 @@ public @interface RTCIceTransportState {
 
   @Nonnull
   String new_ = "new";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCIceTransportState.checking.equals( value ) || RTCIceTransportState.closed.equals( value ) || RTCIceTransportState.completed.equals( value ) || RTCIceTransportState.connected.equals( value ) || RTCIceTransportState.disconnected.equals( value ) || RTCIceTransportState.failed.equals( value ) || RTCIceTransportState.new_.equals( value );
+    }
+  }
 }

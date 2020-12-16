@@ -16,4 +16,17 @@ public @interface AuthenticatorAttachment {
 
   @Nonnull
   String platform = "platform";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AuthenticatorAttachment.cross_platform.equals( value ) || AuthenticatorAttachment.platform.equals( value );
+    }
+  }
 }

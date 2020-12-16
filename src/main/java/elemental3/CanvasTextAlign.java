@@ -25,4 +25,17 @@ public @interface CanvasTextAlign {
 
   @Nonnull
   String start = "start";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CanvasTextAlign.center.equals( value ) || CanvasTextAlign.end.equals( value ) || CanvasTextAlign.left.equals( value ) || CanvasTextAlign.right.equals( value ) || CanvasTextAlign.start.equals( value );
+    }
+  }
 }

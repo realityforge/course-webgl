@@ -19,4 +19,17 @@ public @interface DocumentReadyState {
 
   @Nonnull
   String loading = "loading";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return DocumentReadyState.complete.equals( value ) || DocumentReadyState.interactive.equals( value ) || DocumentReadyState.loading.equals( value );
+    }
+  }
 }

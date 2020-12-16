@@ -22,4 +22,17 @@ public @interface AtomicWaitResult {
 
   @Nonnull
   String timed_out = "timed-out";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AtomicWaitResult.not_equal.equals( value ) || AtomicWaitResult.ok.equals( value ) || AtomicWaitResult.timed_out.equals( value );
+    }
+  }
 }

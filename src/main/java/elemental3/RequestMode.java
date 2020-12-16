@@ -22,4 +22,17 @@ public @interface RequestMode {
 
   @Nonnull
   String same_origin = "same-origin";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RequestMode.cors.equals( value ) || RequestMode.navigate.equals( value ) || RequestMode.no_cors.equals( value ) || RequestMode.same_origin.equals( value );
+    }
+  }
 }

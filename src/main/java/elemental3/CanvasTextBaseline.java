@@ -28,4 +28,17 @@ public @interface CanvasTextBaseline {
 
   @Nonnull
   String top = "top";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CanvasTextBaseline.alphabetic.equals( value ) || CanvasTextBaseline.bottom.equals( value ) || CanvasTextBaseline.hanging.equals( value ) || CanvasTextBaseline.ideographic.equals( value ) || CanvasTextBaseline.middle.equals( value ) || CanvasTextBaseline.top.equals( value );
+    }
+  }
 }

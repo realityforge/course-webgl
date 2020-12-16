@@ -20,4 +20,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface UsageType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.STATIC_DRAW == value || WebGL2RenderingContext.DYNAMIC_DRAW == value || WebGL2RenderingContext.STREAM_DRAW == value || WebGL2RenderingContext.STATIC_READ == value || WebGL2RenderingContext.DYNAMIC_READ == value || WebGL2RenderingContext.STREAM_READ == value || WebGL2RenderingContext.STATIC_COPY == value || WebGL2RenderingContext.DYNAMIC_COPY == value || WebGL2RenderingContext.STREAM_COPY == value;
+    }
+  }
 }

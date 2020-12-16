@@ -73,4 +73,17 @@ public @interface RTCStatsType {
 
   @Nonnull
   String transport = "transport";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCStatsType.candidate_pair.equals( value ) || RTCStatsType.certificate.equals( value ) || RTCStatsType.codec.equals( value ) || RTCStatsType.csrc.equals( value ) || RTCStatsType.data_channel.equals( value ) || RTCStatsType.ice_server.equals( value ) || RTCStatsType.inbound_rtp.equals( value ) || RTCStatsType.local_candidate.equals( value ) || RTCStatsType.media_source.equals( value ) || RTCStatsType.outbound_rtp.equals( value ) || RTCStatsType.peer_connection.equals( value ) || RTCStatsType.receiver.equals( value ) || RTCStatsType.remote_candidate.equals( value ) || RTCStatsType.remote_inbound_rtp.equals( value ) || RTCStatsType.remote_outbound_rtp.equals( value ) || RTCStatsType.sctp_transport.equals( value ) || RTCStatsType.sender.equals( value ) || RTCStatsType.stream.equals( value ) || RTCStatsType.track.equals( value ) || RTCStatsType.transceiver.equals( value ) || RTCStatsType.transport.equals( value );
+    }
+  }
 }

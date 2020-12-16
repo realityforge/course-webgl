@@ -15,4 +15,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface MediaErrorCode {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return MediaError.MEDIA_ERR_ABORTED == value || MediaError.MEDIA_ERR_NETWORK == value || MediaError.MEDIA_ERR_DECODE == value || MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED == value;
+    }
+  }
 }

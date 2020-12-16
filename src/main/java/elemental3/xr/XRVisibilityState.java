@@ -19,4 +19,17 @@ public @interface XRVisibilityState {
 
   @Nonnull
   String visible_blurred = "visible-blurred";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return XRVisibilityState.hidden.equals( value ) || XRVisibilityState.visible.equals( value ) || XRVisibilityState.visible_blurred.equals( value );
+    }
+  }
 }

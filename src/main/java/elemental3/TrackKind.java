@@ -49,4 +49,17 @@ public @interface TrackKind {
    */
   @Nonnull
   String subtitles = "subtitles";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return TrackKind.captions.equals( value ) || TrackKind.chapters.equals( value ) || TrackKind.descriptions.equals( value ) || TrackKind.metadata.equals( value ) || TrackKind.subtitles.equals( value );
+    }
+  }
 }

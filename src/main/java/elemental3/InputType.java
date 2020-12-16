@@ -154,4 +154,17 @@ public @interface InputType {
    */
   @Nonnull
   String week = "week";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return InputType.button.equals( value ) || InputType.checkbox.equals( value ) || InputType.color.equals( value ) || InputType.date.equals( value ) || InputType.datetime_local.equals( value ) || InputType.email.equals( value ) || InputType.file.equals( value ) || InputType.hidden.equals( value ) || InputType.image.equals( value ) || InputType.month.equals( value ) || InputType.number.equals( value ) || InputType.password.equals( value ) || InputType.radio.equals( value ) || InputType.range.equals( value ) || InputType.reset.equals( value ) || InputType.search.equals( value ) || InputType.submit.equals( value ) || InputType.tel.equals( value ) || InputType.text.equals( value ) || InputType.time.equals( value ) || InputType.url.equals( value ) || InputType.week.equals( value );
+    }
+  }
 }

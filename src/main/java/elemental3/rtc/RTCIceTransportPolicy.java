@@ -16,4 +16,17 @@ public @interface RTCIceTransportPolicy {
 
   @Nonnull
   String relay = "relay";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCIceTransportPolicy.all.equals( value ) || RTCIceTransportPolicy.relay.equals( value );
+    }
+  }
 }

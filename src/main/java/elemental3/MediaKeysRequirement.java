@@ -19,4 +19,17 @@ public @interface MediaKeysRequirement {
 
   @Nonnull
   String required = "required";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return MediaKeysRequirement.not_allowed.equals( value ) || MediaKeysRequirement.optional.equals( value ) || MediaKeysRequirement.required.equals( value );
+    }
+  }
 }

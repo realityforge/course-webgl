@@ -22,4 +22,17 @@ public @interface RTCDataChannelState {
 
   @Nonnull
   String open = "open";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCDataChannelState.closed.equals( value ) || RTCDataChannelState.closing.equals( value ) || RTCDataChannelState.connecting.equals( value ) || RTCDataChannelState.open.equals( value );
+    }
+  }
 }

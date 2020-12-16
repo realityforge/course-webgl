@@ -25,4 +25,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface CSSRuleType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return CSSRule.STYLE_RULE == value || CSSRule.CHARSET_RULE == value || CSSRule.IMPORT_RULE == value || CSSRule.MEDIA_RULE == value || CSSRule.FONT_FACE_RULE == value || CSSRule.PAGE_RULE == value || CSSRule.KEYFRAMES_RULE == value || CSSRule.KEYFRAME_RULE == value || CSSRule.MARGIN_RULE == value || CSSRule.NAMESPACE_RULE == value || CSSRule.COUNTER_STYLE_RULE == value || CSSRule.SUPPORTS_RULE == value || CSSRule.FONT_FEATURE_VALUES_RULE == value || CSSRule.FONT_PALETTE_VALUES_RULE == value;
+    }
+  }
 }

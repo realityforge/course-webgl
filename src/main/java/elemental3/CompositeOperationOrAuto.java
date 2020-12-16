@@ -22,4 +22,17 @@ public @interface CompositeOperationOrAuto {
 
   @Nonnull
   String replace = "replace";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CompositeOperationOrAuto.accumulate.equals( value ) || CompositeOperationOrAuto.add.equals( value ) || CompositeOperationOrAuto.auto.equals( value ) || CompositeOperationOrAuto.replace.equals( value );
+    }
+  }
 }

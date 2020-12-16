@@ -16,4 +16,17 @@ public @interface ShadowRootMode {
 
   @Nonnull
   String open = "open";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ShadowRootMode.closed.equals( value ) || ShadowRootMode.open.equals( value );
+    }
+  }
 }

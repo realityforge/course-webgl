@@ -19,4 +19,17 @@ public @interface CanvasDirection {
 
   @Nonnull
   String rtl = "rtl";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CanvasDirection.inherit.equals( value ) || CanvasDirection.ltr.equals( value ) || CanvasDirection.rtl.equals( value );
+    }
+  }
 }

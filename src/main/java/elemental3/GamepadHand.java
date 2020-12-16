@@ -19,4 +19,17 @@ public @interface GamepadHand {
 
   @Nonnull
   String right = "right";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return GamepadHand.other.equals( value ) || GamepadHand.left.equals( value ) || GamepadHand.right.equals( value );
+    }
+  }
 }

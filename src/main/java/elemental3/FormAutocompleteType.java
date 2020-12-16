@@ -25,4 +25,17 @@ public @interface FormAutocompleteType {
    */
   @Nonnull
   String on = "on";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return FormAutocompleteType.off.equals( value ) || FormAutocompleteType.on.equals( value );
+    }
+  }
 }

@@ -19,4 +19,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface BufferTargetType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.ARRAY_BUFFER == value || WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER == value || WebGL2RenderingContext.COPY_READ_BUFFER == value || WebGL2RenderingContext.COPY_WRITE_BUFFER == value || WebGL2RenderingContext.TRANSFORM_FEEDBACK_BUFFER == value || WebGL2RenderingContext.UNIFORM_BUFFER == value || WebGL2RenderingContext.PIXEL_PACK_BUFFER == value || WebGL2RenderingContext.PIXEL_UNPACK_BUFFER == value;
+    }
+  }
 }

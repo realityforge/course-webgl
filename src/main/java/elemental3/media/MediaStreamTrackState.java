@@ -16,4 +16,17 @@ public @interface MediaStreamTrackState {
 
   @Nonnull
   String live = "live";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return MediaStreamTrackState.ended.equals( value ) || MediaStreamTrackState.live.equals( value );
+    }
+  }
 }

@@ -34,4 +34,17 @@ public @interface KeyUsage {
 
   @Nonnull
   String wrapKey = "wrapKey";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return KeyUsage.decrypt.equals( value ) || KeyUsage.deriveBits.equals( value ) || KeyUsage.deriveKey.equals( value ) || KeyUsage.encrypt.equals( value ) || KeyUsage.sign.equals( value ) || KeyUsage.unwrapKey.equals( value ) || KeyUsage.verify.equals( value ) || KeyUsage.wrapKey.equals( value );
+    }
+  }
 }

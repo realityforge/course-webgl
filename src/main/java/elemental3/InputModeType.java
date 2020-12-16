@@ -72,4 +72,17 @@ public @interface InputModeType {
    */
   @Nonnull
   String url = "url";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return InputModeType.decimal.equals( value ) || InputModeType.email.equals( value ) || InputModeType.none.equals( value ) || InputModeType.numeric.equals( value ) || InputModeType.search.equals( value ) || InputModeType.tel.equals( value ) || InputModeType.text.equals( value ) || InputModeType.url.equals( value );
+    }
+  }
 }

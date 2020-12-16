@@ -19,4 +19,17 @@ public @interface CanPlayTypeResult {
 
   @Nonnull
   String probably = "probably";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CanPlayTypeResult.negative.equals( value ) || CanPlayTypeResult.maybe.equals( value ) || CanPlayTypeResult.probably.equals( value );
+    }
+  }
 }

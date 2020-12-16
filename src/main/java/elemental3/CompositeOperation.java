@@ -19,4 +19,17 @@ public @interface CompositeOperation {
 
   @Nonnull
   String replace = "replace";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CompositeOperation.accumulate.equals( value ) || CompositeOperation.add.equals( value ) || CompositeOperation.replace.equals( value );
+    }
+  }
 }

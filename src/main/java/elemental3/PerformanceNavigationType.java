@@ -15,4 +15,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface PerformanceNavigationType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return PerformanceNavigation.TYPE_NAVIGATE == value || PerformanceNavigation.TYPE_RELOAD == value || PerformanceNavigation.TYPE_BACK_FORWARD == value || PerformanceNavigation.TYPE_RESERVED == value;
+    }
+  }
 }

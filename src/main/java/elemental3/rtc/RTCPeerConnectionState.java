@@ -28,4 +28,17 @@ public @interface RTCPeerConnectionState {
 
   @Nonnull
   String new_ = "new";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCPeerConnectionState.closed.equals( value ) || RTCPeerConnectionState.connected.equals( value ) || RTCPeerConnectionState.connecting.equals( value ) || RTCPeerConnectionState.disconnected.equals( value ) || RTCPeerConnectionState.failed.equals( value ) || RTCPeerConnectionState.new_.equals( value );
+    }
+  }
 }

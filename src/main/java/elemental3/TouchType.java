@@ -16,4 +16,17 @@ public @interface TouchType {
 
   @Nonnull
   String stylus = "stylus";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return TouchType.direct.equals( value ) || TouchType.stylus.equals( value );
+    }
+  }
 }

@@ -19,4 +19,17 @@ public @interface IDBTransactionMode {
 
   @Nonnull
   String versionchange = "versionchange";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return IDBTransactionMode.readonly.equals( value ) || IDBTransactionMode.readwrite.equals( value ) || IDBTransactionMode.versionchange.equals( value );
+    }
+  }
 }

@@ -25,4 +25,17 @@ public @interface AlignSetting {
 
   @Nonnull
   String start = "start";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AlignSetting.center.equals( value ) || AlignSetting.end.equals( value ) || AlignSetting.left.equals( value ) || AlignSetting.right.equals( value ) || AlignSetting.start.equals( value );
+    }
+  }
 }

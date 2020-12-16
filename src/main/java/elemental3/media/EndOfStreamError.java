@@ -16,4 +16,17 @@ public @interface EndOfStreamError {
 
   @Nonnull
   String network = "network";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return EndOfStreamError.decode.equals( value ) || EndOfStreamError.network.equals( value );
+    }
+  }
 }

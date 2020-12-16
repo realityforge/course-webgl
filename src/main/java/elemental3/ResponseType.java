@@ -28,4 +28,17 @@ public @interface ResponseType {
 
   @Nonnull
   String opaqueredirect = "opaqueredirect";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return ResponseType.basic.equals( value ) || ResponseType.cors.equals( value ) || ResponseType.default_.equals( value ) || ResponseType.error.equals( value ) || ResponseType.opaque.equals( value ) || ResponseType.opaqueredirect.equals( value );
+    }
+  }
 }

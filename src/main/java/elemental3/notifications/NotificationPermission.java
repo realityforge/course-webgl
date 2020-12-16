@@ -19,4 +19,17 @@ public @interface NotificationPermission {
 
   @Nonnull
   String granted = "granted";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return NotificationPermission.default_.equals( value ) || NotificationPermission.denied.equals( value ) || NotificationPermission.granted.equals( value );
+    }
+  }
 }

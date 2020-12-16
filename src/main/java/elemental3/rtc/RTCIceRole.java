@@ -19,4 +19,17 @@ public @interface RTCIceRole {
 
   @Nonnull
   String unknown = "unknown";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCIceRole.controlled.equals( value ) || RTCIceRole.controlling.equals( value ) || RTCIceRole.unknown.equals( value );
+    }
+  }
 }

@@ -19,4 +19,17 @@ public @interface DistanceModelType {
 
   @Nonnull
   String linear = "linear";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return DistanceModelType.exponential.equals( value ) || DistanceModelType.inverse.equals( value ) || DistanceModelType.linear.equals( value );
+    }
+  }
 }

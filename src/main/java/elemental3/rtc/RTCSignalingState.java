@@ -28,4 +28,17 @@ public @interface RTCSignalingState {
 
   @Nonnull
   String stable = "stable";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCSignalingState.closed.equals( value ) || RTCSignalingState.have_local_offer.equals( value ) || RTCSignalingState.have_local_pranswer.equals( value ) || RTCSignalingState.have_remote_offer.equals( value ) || RTCSignalingState.have_remote_pranswer.equals( value ) || RTCSignalingState.stable.equals( value );
+    }
+  }
 }

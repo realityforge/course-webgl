@@ -16,4 +16,17 @@ public @interface RTCIceComponent {
 
   @Nonnull
   String rtp = "rtp";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCIceComponent.rtcp.equals( value ) || RTCIceComponent.rtp.equals( value );
+    }
+  }
 }

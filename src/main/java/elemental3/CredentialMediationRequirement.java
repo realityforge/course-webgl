@@ -19,4 +19,17 @@ public @interface CredentialMediationRequirement {
 
   @Nonnull
   String silent = "silent";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return CredentialMediationRequirement.optional.equals( value ) || CredentialMediationRequirement.required.equals( value ) || CredentialMediationRequirement.silent.equals( value );
+    }
+  }
 }

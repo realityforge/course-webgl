@@ -25,4 +25,17 @@ public @interface RTCRtpTransceiverDirection {
 
   @Nonnull
   String stopped = "stopped";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RTCRtpTransceiverDirection.inactive.equals( value ) || RTCRtpTransceiverDirection.recvonly.equals( value ) || RTCRtpTransceiverDirection.sendonly.equals( value ) || RTCRtpTransceiverDirection.sendrecv.equals( value ) || RTCRtpTransceiverDirection.stopped.equals( value );
+    }
+  }
 }

@@ -13,4 +13,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface ShaderType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.VERTEX_SHADER == value || WebGL2RenderingContext.FRAGMENT_SHADER == value;
+    }
+  }
 }

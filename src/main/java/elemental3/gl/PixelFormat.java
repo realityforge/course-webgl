@@ -19,4 +19,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface PixelFormat {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WebGL2RenderingContext.RGB == value || WebGL2RenderingContext.RGBA == value || WebGL2RenderingContext.RED == value || WebGL2RenderingContext.RED_INTEGER == value || WebGL2RenderingContext.RG == value || WebGL2RenderingContext.RG_INTEGER == value || WebGL2RenderingContext.RGB_INTEGER == value || WebGL2RenderingContext.RGBA_INTEGER == value;
+    }
+  }
 }

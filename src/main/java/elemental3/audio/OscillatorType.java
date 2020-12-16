@@ -25,4 +25,17 @@ public @interface OscillatorType {
 
   @Nonnull
   String triangle = "triangle";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return OscillatorType.custom.equals( value ) || OscillatorType.sawtooth.equals( value ) || OscillatorType.sine.equals( value ) || OscillatorType.square.equals( value ) || OscillatorType.triangle.equals( value );
+    }
+  }
 }

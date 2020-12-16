@@ -16,4 +16,17 @@ public @interface MediaKeySessionType {
 
   @Nonnull
   String temporary = "temporary";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return MediaKeySessionType.persistent_license.equals( value ) || MediaKeySessionType.temporary.equals( value );
+    }
+  }
 }

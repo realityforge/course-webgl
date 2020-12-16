@@ -19,4 +19,17 @@ public @interface XRHandedness {
 
   @Nonnull
   String right = "right";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return XRHandedness.left.equals( value ) || XRHandedness.none.equals( value ) || XRHandedness.right.equals( value );
+    }
+  }
 }

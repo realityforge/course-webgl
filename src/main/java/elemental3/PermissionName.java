@@ -70,4 +70,17 @@ public @interface PermissionName {
 
   @Nonnull
   String speaker = "speaker";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return PermissionName.accelerometer.equals( value ) || PermissionName.ambient_light_sensor.equals( value ) || PermissionName.background_fetch.equals( value ) || PermissionName.background_sync.equals( value ) || PermissionName.bluetooth.equals( value ) || PermissionName.camera.equals( value ) || PermissionName.clipboard_read.equals( value ) || PermissionName.clipboard_write.equals( value ) || PermissionName.device_info.equals( value ) || PermissionName.display_capture.equals( value ) || PermissionName.geolocation.equals( value ) || PermissionName.gyroscope.equals( value ) || PermissionName.magnetometer.equals( value ) || PermissionName.microphone.equals( value ) || PermissionName.midi.equals( value ) || PermissionName.nfc.equals( value ) || PermissionName.notifications.equals( value ) || PermissionName.persistent_storage.equals( value ) || PermissionName.push.equals( value ) || PermissionName.speaker.equals( value );
+    }
+  }
 }

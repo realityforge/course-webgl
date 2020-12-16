@@ -14,4 +14,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface WheelEventDeltaMode {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return WheelEvent.DOM_DELTA_PIXEL == value || WheelEvent.DOM_DELTA_LINE == value || WheelEvent.DOM_DELTA_PAGE == value;
+    }
+  }
 }

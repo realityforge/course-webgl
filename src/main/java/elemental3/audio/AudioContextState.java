@@ -19,4 +19,17 @@ public @interface AudioContextState {
 
   @Nonnull
   String suspended = "suspended";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return AudioContextState.closed.equals( value ) || AudioContextState.running.equals( value ) || AudioContextState.suspended.equals( value );
+    }
+  }
 }

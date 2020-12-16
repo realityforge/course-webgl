@@ -15,4 +15,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface RangeCompareType {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return Range.START_TO_START == value || Range.START_TO_END == value || Range.END_TO_END == value || Range.END_TO_START == value;
+    }
+  }
 }

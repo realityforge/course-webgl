@@ -28,4 +28,17 @@ public @interface RequestCache {
 
   @Nonnull
   String reload = "reload";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return RequestCache.default_.equals( value ) || RequestCache.force_cache.equals( value ) || RequestCache.no_cache.equals( value ) || RequestCache.no_store.equals( value ) || RequestCache.only_if_cached.equals( value ) || RequestCache.reload.equals( value );
+    }
+  }
 }

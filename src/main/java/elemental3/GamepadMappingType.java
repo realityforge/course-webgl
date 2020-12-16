@@ -16,4 +16,17 @@ public @interface GamepadMappingType {
 
   @Nonnull
   String standard = "standard";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return GamepadMappingType.unknown.equals( value ) || GamepadMappingType.standard.equals( value );
+    }
+  }
 }

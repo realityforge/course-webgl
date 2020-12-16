@@ -19,4 +19,17 @@ public @interface DirectionSetting {
 
   @Nonnull
   String rl = "rl";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return DirectionSetting.horizontal.equals( value ) || DirectionSetting.lr.equals( value ) || DirectionSetting.rl.equals( value );
+    }
+  }
 }
