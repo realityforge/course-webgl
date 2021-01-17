@@ -1,6 +1,5 @@
 <module rename-to='example'>
   <inherits name='org.realityforge.webgl.Webgl'/>
-  <inherits name="org.joml.JOML"/>
 
   <entry-point class='org.realityforge.webgl.cube.Main'/>
 
