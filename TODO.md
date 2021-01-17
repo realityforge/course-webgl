@@ -1,7 +1,15 @@
 
 ## Actions
 
+Adopt UBOs as described in https://www.youtube.com/watch?v=bdIZ2ZloXEA
+
 * Vertex shaders should be in files named `X.vert` while fragment shaders are in files named `X.frag`
+
+* Incorporate
+    - https://github.com/stackgl/gl-vao
+    - https://github.com/stackgl/gl-buffer
+
+* Alternatively imitate https://luma.gl/docs/api-reference/webgl/buffer
 
 * Remove Buffer subclasses and instead use factory methods to create buffers.
 
@@ -62,6 +70,8 @@ fragUV = uv; }
 ## References
 
 * [gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline)
+
+https://github.com/KhronosGroup/glTF-Tutorials
 
 * [meshoptimizer](https://github.com/zeux/meshoptimizer)
 
