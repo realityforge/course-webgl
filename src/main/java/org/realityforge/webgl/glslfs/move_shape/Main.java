@@ -13,7 +13,7 @@ import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.MathUtil;
@@ -114,7 +114,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    _projectionMatrix.perspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, VERTEX_SHADER_SOURCE );
     final WebGLShader fragmentShader =
@@ -170,15 +170,15 @@ public final class Main
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    _modelMatrix.translation( 0, 0, -1 );
+    _modelMatrix.setTranslation( 0, 0, -1 );
 
-    _viewMatrix.identity();
+    _viewMatrix.setIdentity();
 
     gl.useProgram( _program );
     gl.bindVertexArray( _vertexArrayObject );
-    gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( _modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( _viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( _projectionMatrix ) );
+    gl.uniformMatrix4fv( _modelMatrixLocation, false, new Float32Array( _modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _viewMatrixLocation, false, new Float32Array( _viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _projectionMatrixLocation, false, new Float32Array( _projectionMatrix.toArray() ) );
     gl.uniform2f( _resolutionLocation, canvas.width, canvas.height );
     gl.uniform1f( _timeLocation, ( System.currentTimeMillis() - _startedAt ) / 1000F );
 

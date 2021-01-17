@@ -1,15 +1,15 @@
 package org.realityforge.webgl.multi_pass;
 
+import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
-import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Uniform;
 
 /**
@@ -64,9 +64,9 @@ abstract class Object3D
                          @Nonnull final Matrix4d viewMatrix,
                          @Nonnull final Matrix4d projectionMatrix )
   {
-    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
 
     assert null != _geometry;
     _geometry.draw();

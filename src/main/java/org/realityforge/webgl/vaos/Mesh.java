@@ -5,7 +5,8 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Camera;
@@ -99,11 +100,11 @@ final class Mesh
     final Vector3f lightPosition = light.getPosition();
     gl.uniform3f( _lightPosition.getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
 
-    final Vector3f cameraPosition = camera.getPosition();
+    final Vector3d cameraPosition = camera.getPosition();
     gl.uniform3f( _cameraPosition.getLocation(),
-                  cameraPosition.x,
-                  cameraPosition.y,
-                  cameraPosition.z );
+                  (float) cameraPosition.x,
+                  (float) cameraPosition.y,
+                  (float) cameraPosition.z );
 
     super.render( gl, modelMatrix, viewMatrix, projectionMatrix );
   }

@@ -11,7 +11,7 @@ import elemental3.gl.WebGLRenderbuffer;
 import elemental3.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
@@ -76,7 +76,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
     final Geometry geometry =
       CuboidGeometryFactory.create( WebGL2RenderingContext.TRIANGLES,
@@ -178,17 +178,17 @@ public final class Main
   // Run the application logic/ non-rendering logic
   private void simulation()
   {
-    _innerBoxModelMatrix.translation( 0, 1, -20 );
+    _innerBoxModelMatrix.setTranslation( 0, 1, -20 );
     _innerBoxModelMatrix.rotateZ( _angle );
     _innerBoxModelMatrix.rotateY( _angle * 2 );
     _innerBoxModelMatrix.rotateX( 0.15 );
 
-    _modelMatrix.translation( 0, 1, -20 );
+    _modelMatrix.setTranslation( 0, 1, -20 );
     _modelMatrix.rotateY( _angle );
     _modelMatrix.rotateX( 0.25 );
     _angle += 0.005;
 
-    _viewMatrix.identity();
+    _viewMatrix.setIdentity();
   }
 
   private void renderToTexture( @Nonnull final WebGL2RenderingContext gl )

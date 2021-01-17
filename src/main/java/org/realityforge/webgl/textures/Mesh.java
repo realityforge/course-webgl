@@ -1,5 +1,6 @@
 package org.realityforge.webgl.textures;
 
+import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
@@ -7,11 +8,10 @@ import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.MathUtil;
 
 final class Mesh
 {
@@ -77,9 +77,9 @@ final class Mesh
                @Nonnull final Matrix4d projectionMatrix )
   {
     gl.useProgram( _program );
-    gl.uniformMatrix4fv( _modelMatrixLocation, false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrixLocation, false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrixLocation, false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniformMatrix4fv( _modelMatrixLocation, false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _viewMatrixLocation, false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _projectionMatrixLocation, false, new Float32Array( projectionMatrix.toArray() ) );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }

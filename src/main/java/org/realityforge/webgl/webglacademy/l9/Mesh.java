@@ -1,15 +1,15 @@
 package org.realityforge.webgl.webglacademy.l9;
 
+import elemental3.core.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
-import org.realityforge.webgl.util.MathUtil;
 
 final class Mesh
 {
@@ -33,9 +33,10 @@ final class Mesh
     appState.useProgram( _material.getProgram() );
 
     final WebGL2RenderingContext gl = appState.gl();
-    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false,
+                         new Float32Array( projectionMatrix.toArray() ) );
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, texture );
     gl.uniform1i( _material.getTextureLocation(), 0 );

@@ -9,7 +9,7 @@ import elemental3.core.Uint32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
@@ -108,7 +108,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
     Global
       .fetch( "assets/dragon.json" )
@@ -202,12 +202,12 @@ public final class Main
       gl.enable( WebGL2RenderingContext.CULL_FACE );
       gl.frontFace( WebGL2RenderingContext.CCW );
 
-      _modelMatrix.translation( 0, -4, -20 );
+      _modelMatrix.setTranslation( 0, -4, -20 );
       _modelMatrix.scale( 0.5 );
       _modelMatrix.rotateY( _angle );
       _modelMatrix.rotateX( 0.25 );
 
-      _viewMatrix.identity();
+      _viewMatrix.setIdentity();
 
       _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix );
       gl.flush();

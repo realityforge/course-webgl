@@ -1,18 +1,19 @@
 package org.realityforge.webgl.light;
 
+import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Uniform;
 
 final class Mesh
@@ -99,16 +100,16 @@ final class Mesh
                @Nonnull final Light light,
                @Nonnull final Camera camera )
   {
-    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
     final Vector3f color = light.getColor();
     gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
     final Vector3f lightPosition = light.getPosition();
     gl.uniform3f( _lightPosition.getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
 
-    final Vector3f eye = camera.getPosition();
-    gl.uniform3f( _cameraPosition.getLocation(), eye.x, eye.y, eye.z );
+    final Vector3d eye = camera.getPosition();
+    gl.uniform3f( _cameraPosition.getLocation(), (float) eye.x, (float) eye.y, (float) eye.z );
 
     gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
   }

@@ -6,7 +6,7 @@ import elemental3.HTMLCanvasElement;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
@@ -67,7 +67,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
@@ -91,11 +91,11 @@ public final class Main
       gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-      _modelMatrix.translation( 0, 0, -7 );
+      _modelMatrix.setTranslation( 0, 0, -7 );
       _modelMatrix.rotateY( c_angle );
       _modelMatrix.rotateX( 0.25 );
 
-      _viewMatrix.identity();
+      _viewMatrix.setIdentity();
 
       final float time = ( ( System.currentTimeMillis() - startedAt ) / 100.0F ) / (float) ( 2 * Math.PI );
       _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, time );

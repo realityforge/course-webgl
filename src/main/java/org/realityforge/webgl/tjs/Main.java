@@ -7,7 +7,8 @@ import elemental3.HTMLCanvasElement;
 import elemental3.KeyboardEvent;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Camera;
@@ -50,7 +51,10 @@ public final class Main
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
     _camera.getProjection()
-      .setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+      .getProjectionMatrix().setPerspective( MathUtil.degreesToRadians( 45 ),
+                                             CanvasUtil.getAspect( canvas ),
+                                             0.1,
+                                             10.0 );
 
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
@@ -171,25 +175,25 @@ public final class Main
 
       // ModelMatrix should be calculated in the simulation loop rather than render loop
       // but they are effectively the same in out app so we can just recalculate in render loop
-      _modelMatrix.translation( 0, 0, -7 );
+      _modelMatrix.setTranslation( 0, 0, -7 );
       _modelMatrix.rotateY( _angle );
       _modelMatrix.rotateX( 0.25 );
 
       _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-      _modelMatrix.translation( 3, 0, -7 );
+      _modelMatrix.setTranslation( 3, 0, -7 );
       _modelMatrix.rotateY( _angle );
       _modelMatrix.rotateX( 0.25 );
 
       _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-      _modelMatrix.translation( -3, 0, -7 );
+      _modelMatrix.setTranslation( -3, 0, -7 );
       _modelMatrix.rotateY( _angle );
       _modelMatrix.rotateX( 0.25 );
 
       _mesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light, _camera );
 
-      _modelMatrix.translation( position.x, position.y, position.z );
+      _modelMatrix.setTranslation( position.x, position.y, position.z );
       _modelMatrix.scale( 0.2 );
 
       _lightMesh.render( gl, _modelMatrix, viewMatrix, projectionMatrix, _light );
@@ -202,8 +206,8 @@ public final class Main
   private void updateCamera()
   {
     _camera.computeDirection();
-    final Vector3f direction = _camera.getDirection();
-    final Vector3f position = _camera.getPosition();
+    final Vector3d direction = _camera.getDirection();
+    final Vector3d position = _camera.getPosition();
     if ( _forwardPressed )
     {
       position.add( direction.dup().mul( 0.1F ) );
@@ -216,13 +220,13 @@ public final class Main
     {
       // Calculate the "right" vector (We assume our view has no roll and thus can just use yaw) and
       // after right vector is calculated then use direction to calculate movement
-      position.add( new Vector3f( -1 * (float) Math.sin( _camera.getYaw() ),
+      position.add( new Vector3d( -1 * (float) Math.sin( _camera.getYaw() ),
                                   0,
                                   (float) Math.cos( _camera.getYaw() ) ).mul( -0.1F ) );
     }
     if ( _rightPressed )
     {
-      position.add( new Vector3f( -1 * (float) Math.sin( _camera.getYaw() ),
+      position.add( new Vector3d( -1 * (float) Math.sin( _camera.getYaw() ),
                                   0,
                                   (float) Math.cos( _camera.getYaw() ) ).mul( 0.1F ) );
     }

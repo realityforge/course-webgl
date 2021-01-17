@@ -7,7 +7,7 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.CanvasUtil;
@@ -285,7 +285,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    _projectionMatrix.perspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 1, 10000 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 1, 10000 );
 
     appState.in( () -> {
       // This dynamic composition of shaders should be done at compile time
@@ -323,11 +323,11 @@ public final class Main
       gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
       gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-      _modelMatrix.translation( 0, 0, -100 );
+      _modelMatrix.setTranslation( 0, 0, -100 );
       _modelMatrix.rotateY( 0 );
       _modelMatrix.rotateX( 0.25 );
 
-      _viewMatrix.identity();
+      _viewMatrix.setIdentity();
 
       final float time = ( System.currentTimeMillis() - startedAt ) * 0.00025F;
       _mesh.render( _modelMatrix, _viewMatrix, _projectionMatrix, _texture, time );

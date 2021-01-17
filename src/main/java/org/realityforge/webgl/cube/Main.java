@@ -5,7 +5,7 @@ import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
 
@@ -28,7 +28,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
 
-    _projectionMatrix.perspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     _mesh = CubeTemplate.create( gl );
     _mesh.sendToGpu( gl );
@@ -44,14 +44,14 @@ public final class Main
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );
 
-    _modelMatrix.translation( 0, 0, -7 );
-    _modelMatrix.rotateY( c_angle );
+    _modelMatrix.setTranslation(  0, 0, -7 );
+    _modelMatrix.rotateY( c_angle / 4.0 );
     _modelMatrix.rotateX( 0.25 );
 
-    _viewMatrix.identity();
+    _viewMatrix.setIdentity();
 
     gl.useProgram( _mesh.getMaterial().getProgram() );
-    _mesh.setUniforms( gl, this._modelMatrix, this._viewMatrix, this._projectionMatrix );
+    _mesh.setUniforms( gl, _modelMatrix, _viewMatrix, _projectionMatrix );
 
     c_angle += 0.1;
 

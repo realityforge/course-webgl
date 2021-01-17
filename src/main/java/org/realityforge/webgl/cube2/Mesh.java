@@ -4,11 +4,10 @@ import elemental3.core.Float32Array;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
+import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.vecmath.Vector4d;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.MathUtil;
 
 final class Mesh
 {
@@ -36,9 +35,10 @@ final class Mesh
                     @Nonnull final Vector4d[] colors,
                     @Nonnull final Vector3f offsets )
   {
-    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, MathUtil.toFloat32Array( modelMatrix ) );
-    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, MathUtil.toFloat32Array( viewMatrix ) );
-    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false, MathUtil.toFloat32Array( projectionMatrix ) );
+    gl.uniformMatrix4fv( _material.getModelMatrixLocation(), false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _material.getViewMatrixLocation(), false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _material.getProjectionMatrixLocation(), false,
+                         new Float32Array( projectionMatrix.toArray() ) );
     gl.uniform4fv( _material.getColorsLocation1(), new Float32Array( colors[ 0 ].toArray() ) );
     gl.uniform4fv( _material.getColorsLocation2(), new Float32Array( colors[ 1 ].toArray() ) );
     gl.uniform4fv( _material.getColorsLocation3(), new Float32Array( colors[ 2 ].toArray() ) );

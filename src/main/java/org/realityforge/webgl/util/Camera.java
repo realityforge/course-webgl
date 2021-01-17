@@ -2,8 +2,8 @@ package org.realityforge.webgl.util;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.joml.Matrix4d;
-import org.realityforge.vecmath.Vector3f;
+import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector3d;
 
 public final class Camera
 {
@@ -16,13 +16,13 @@ public final class Camera
   private final Matrix4d _viewMatrix = new Matrix4d();
   // Position of the eye
   @Nonnull
-  private final Vector3f _position = new Vector3f( 0, 0, 0 );
+  private final Vector3d _position = new Vector3d( 0, 0, 0 );
   // Position of the target we are looking at
   @Nonnull
-  private final Vector3f _direction = new Vector3f( 0, 0, -1.0F );
+  private final Vector3d _direction = new Vector3d( 0, 0, -1.0F );
   // The up vector
   @Nonnull
-  private final Vector3f _up = new Vector3f( 0, 1, 0 );
+  private final Vector3d _up = new Vector3d( 0, 1, 0 );
   private double _pitch = 0.0;
   private double _yaw = -Math.PI / 2.0;
 
@@ -43,19 +43,19 @@ public final class Camera
   }
 
   @Nonnull
-  public Vector3f getPosition()
+  public Vector3d getPosition()
   {
     return _position;
   }
 
   @Nonnull
-  public Vector3f getDirection()
+  public Vector3d getDirection()
   {
     return _direction;
   }
 
   @Nonnull
-  public Vector3f getUp()
+  public Vector3d getUp()
   {
     return _up;
   }
@@ -68,16 +68,8 @@ public final class Camera
 
   public void updateViewMatrix()
   {
-    _viewMatrix.identity();
-    _viewMatrix.lookAt( _position.x,
-                        _position.y,
-                        _position.z,
-                        _position.dup().add( _direction ).x,
-                        _position.dup().add( _direction ).y,
-                        _position.dup().add( _direction ).z,
-                        _up.x,
-                        _up.y,
-                        _up.z );
+    _viewMatrix.setIdentity();
+    _viewMatrix.lookAt( _position, _position.dup().add( _direction ), _up );
   }
 
   public double getPitch()
