@@ -4,7 +4,8 @@ import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.v2.Accessor;
 
 final class CubeTemplate
 {
@@ -208,9 +209,10 @@ final class CubeTemplate
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
     return new Mesh( gl,
-                     new Float32Buffer( new Float32Array( POSITIONS ), 3 ),
-                     new Float32Buffer( new Float32Array( COLORS ), 4 ),
-                     new Float32Buffer( new Float32Array( TEXTURE_COORDINATES ), 2 ),
+                     new Buffer( new Float32Array( POSITIONS ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ),
+                     new Buffer( new Float32Array( COLORS ), new Accessor( 4, WebGL2RenderingContext.FLOAT ) ),
+                     new Buffer( new Float32Array( TEXTURE_COORDINATES ),
+                                 new Accessor( 2, WebGL2RenderingContext.FLOAT ) ),
                      VERTEX_SHADER_SOURCE,
                      FRAGMENT_SHADER_SOURCE );
   }

@@ -4,15 +4,17 @@ import elemental3.core.JsArray;
 import elemental3.core.Float32Array;
 import elemental3.core.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
+import elemental3.gl.WebGL2RenderingContext;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.intellij.lang.annotations.MagicConstant;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.Uint16IndexBuffer;
+import org.realityforge.webgl.util.v2.Accessor;
 
 /**
  * This file was extracted from https://github.com/mrdoob/three.js/blob/1040b5c9718eeb1b011b770ba56217ced3ca6bcc/src/geometries/BoxBufferGeometry.js
@@ -92,14 +94,14 @@ public final class CuboidGeometryFactory
     buildPlane( 0, 1, 2, -1, -1, width, height, -depth, widthSegments, heightSegments, 5 );
 
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Float32Buffer( new Float32Array( _vertices ), 3 ) ) );
+    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Float32Buffer( new Float32Array( _normals ), 3 ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Float32Buffer( new Float32Array( _uvs ), 2 ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

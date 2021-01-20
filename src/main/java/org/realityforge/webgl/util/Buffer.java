@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webgl.util.v2.Accessor;
 
-public abstract class Buffer
+public final class Buffer
 {
   @Nonnull
   private final ArrayBufferView _data;
@@ -20,7 +20,12 @@ public abstract class Buffer
   @Nullable
   private WebGLBuffer _buffer;
 
-  protected Buffer( @Nonnull final ArrayBufferView data, @UsageType final int usage, @Nonnull final Accessor accessor )
+  public Buffer( @Nonnull final ArrayBufferView data, @Nonnull final Accessor accessor )
+  {
+    this( data, WebGL2RenderingContext.STATIC_DRAW, accessor );
+  }
+
+  public Buffer( @Nonnull final ArrayBufferView data, @UsageType final int usage, @Nonnull final Accessor accessor )
   {
     _data = Objects.requireNonNull( data );
     _usage = usage;

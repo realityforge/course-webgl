@@ -14,12 +14,13 @@ import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.BoolUniform;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.CanvasUtil;
-import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.FloatUniform;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.TextureUniform;
 import org.realityforge.webgl.util.VecfUniform;
+import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Main
   implements EntryPoint
@@ -149,10 +150,12 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final Float32Buffer positionsBuffer = new Float32Buffer( new Float32Array( positions ), 2 );
+    final Buffer positionsBuffer =
+      new Buffer( new Float32Array( positions ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) );
     final Attribute a_position =
       new Attribute( positionsBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
-    final Float32Buffer textureCoordinatesBuffer = new Float32Buffer( new Float32Array( textureCoordinates ), 2 );
+    final Buffer textureCoordinatesBuffer = new Buffer( new Float32Array( textureCoordinates ), new Accessor(
+      2, WebGL2RenderingContext.FLOAT ) );
     final Attribute a_textureCoordinate =
       new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 

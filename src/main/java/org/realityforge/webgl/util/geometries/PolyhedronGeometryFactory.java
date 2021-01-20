@@ -1,7 +1,7 @@
 package org.realityforge.webgl.util.geometries;
 
-import elemental3.core.JsArray;
 import elemental3.core.Float32Array;
+import elemental3.core.JsArray;
 import elemental3.core.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
 import elemental3.gl.WebGL2RenderingContext;
@@ -15,9 +15,10 @@ import org.intellij.lang.annotations.MagicConstant;
 import org.realityforge.vecmath.Vector2d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.Uint16IndexBuffer;
+import org.realityforge.webgl.util.v2.Accessor;
 
 /**
  * This file was extracted from https://github.com/mrdoob/three.js/blob/1040b5c9718eeb1b011b770ba56217ced3ca6bcc/src/geometries/PolyhedronBufferGeometry.js
@@ -145,14 +146,14 @@ public final class PolyhedronGeometryFactory
 
     // build non-indexed geometry
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Float32Buffer( new Float32Array( _vertices ), 3 ) ) );
+    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Float32Buffer( new Float32Array( _normals ), 3 ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Float32Buffer( new Float32Array( _uvs ), 2 ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

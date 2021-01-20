@@ -11,7 +11,7 @@ import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Camera;
-import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.Uniform;
@@ -35,10 +35,10 @@ final class Mesh
   private boolean _uploaded;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Float32Buffer positionAttribute,
-        @Nonnull final Float32Buffer normalsAttribute,
-        @Nonnull final Float32Buffer colorAttribute,
-        @Nonnull final Float32Buffer textureCoordinatesAttribute,
+        @Nonnull final Buffer positionAttribute,
+        @Nonnull final Buffer normalsAttribute,
+        @Nonnull final Buffer colorAttribute,
+        @Nonnull final Buffer textureCoordinatesAttribute,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {

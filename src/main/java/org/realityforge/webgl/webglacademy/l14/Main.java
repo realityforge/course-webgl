@@ -13,10 +13,11 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.CanvasUtil;
-import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
+import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Main
   implements EntryPoint
@@ -100,8 +101,10 @@ public final class Main
       };
     final Geometry geometry =
       new Geometry( 6,
-                    new Attribute( new Float32Buffer( new Float32Array( positionData ), 2 ) ),
-                    new Attribute( new Float32Buffer( new Float32Array( uvData ), 2 ) ) );
+                    new Attribute( new Buffer( new Float32Array( positionData ),
+                                               new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) ),
+                    new Attribute( new Buffer( new Float32Array( uvData ),
+                                               new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
       GL.loadImage( "assets/palette_modified.jpg" )

@@ -11,7 +11,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Float32Buffer;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.GL;
 
 final class Mesh
@@ -23,11 +23,11 @@ final class Mesh
   @Nonnull
   private final Attribute _textureCoordinate;
   @Nonnull
-  private final Float32Buffer _positionBuffer;
+  private final Buffer _positionBuffer;
   @Nonnull
-  private final Float32Buffer _colorBuffer;
+  private final Buffer _colorBuffer;
   @Nonnull
-  private final Float32Buffer _textureCoordinatesBuffer;
+  private final Buffer _textureCoordinatesBuffer;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -44,9 +44,9 @@ final class Mesh
   private final WebGLUniformLocation _textureData1Location;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Float32Buffer positionBuffer,
-        @Nonnull final Float32Buffer colorBuffer,
-        @Nonnull final Float32Buffer textureCoordinatesBuffer,
+        @Nonnull final Buffer positionBuffer,
+        @Nonnull final Buffer colorBuffer,
+        @Nonnull final Buffer textureCoordinatesBuffer,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {

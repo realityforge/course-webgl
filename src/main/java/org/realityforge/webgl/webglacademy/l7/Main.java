@@ -13,8 +13,8 @@ import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
+import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.CanvasUtil;
-import org.realityforge.webgl.util.Float32Buffer;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Scene;
@@ -120,18 +120,18 @@ public final class Main
         // -  floats for uv coordinates
         final int stride = 4 * ( 3 + 3 + 2 );
         final Float32Array vertices = new Float32Array( asset.getVertices() );
-        final Float32Buffer positionBuffer =
-          new Float32Buffer( vertices,
-                             WebGL2RenderingContext.STATIC_DRAW,
-                             new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
-        final Float32Buffer normalBuffer =
-          new Float32Buffer( vertices,
-                             WebGL2RenderingContext.STATIC_DRAW,
-                             new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
-        final Float32Buffer uvBuffer =
-          new Float32Buffer( vertices,
-                             WebGL2RenderingContext.STATIC_DRAW,
-                             new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
+        final Buffer positionBuffer =
+          new Buffer( vertices,
+                      WebGL2RenderingContext.STATIC_DRAW,
+                      new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
+        final Buffer normalBuffer =
+          new Buffer( vertices,
+                      WebGL2RenderingContext.STATIC_DRAW,
+                      new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
+        final Buffer uvBuffer =
+          new Buffer( vertices,
+                      WebGL2RenderingContext.STATIC_DRAW,
+                      new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
         final Geometry geometry =
           new Geometry( WebGL2RenderingContext.TRIANGLES,
                         0,
