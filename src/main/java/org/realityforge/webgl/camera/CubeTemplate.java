@@ -208,9 +208,9 @@ final class CubeTemplate
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
     return new Mesh( gl,
-                     new Float32Buffer( gl, new Float32Array( POSITIONS ), 3 ),
-                     new Float32Buffer( gl, new Float32Array( COLORS ), 4 ),
-                     new Float32Buffer( gl, new Float32Array( TEXTURE_COORDINATES ), 2 ),
+                     new Float32Buffer( new Float32Array( POSITIONS ), 3 ),
+                     new Float32Buffer( new Float32Array( COLORS ), 4 ),
+                     new Float32Buffer( new Float32Array( TEXTURE_COORDINATES ), 2 ),
                      VERTEX_SHADER_SOURCE,
                      FRAGMENT_SHADER_SOURCE );
   }
