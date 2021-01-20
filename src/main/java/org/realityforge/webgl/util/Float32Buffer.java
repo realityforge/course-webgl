@@ -19,6 +19,6 @@ public final class Float32Buffer
                         @UsageType final int usage,
                         @Nonnull final Accessor accessor )
   {
-    super( data, usage, accessor, null );
+    super( data, usage, accessor );
   }
 }

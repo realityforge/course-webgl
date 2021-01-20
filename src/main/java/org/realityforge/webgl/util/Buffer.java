@@ -20,15 +20,11 @@ public abstract class Buffer
   @Nullable
   private WebGLBuffer _buffer;
 
-  protected Buffer( @Nonnull final ArrayBufferView data,
-                    @UsageType final int usage,
-                    @Nonnull final Accessor accessor,
-                    @Nullable final WebGLBuffer buffer )
+  protected Buffer( @Nonnull final ArrayBufferView data, @UsageType final int usage, @Nonnull final Accessor accessor )
   {
     _data = Objects.requireNonNull( data );
     _usage = usage;
     _accessor = Objects.requireNonNull( accessor );
-    _buffer = buffer;
   }
 
   @Nonnull
