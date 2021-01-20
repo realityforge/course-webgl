@@ -90,12 +90,12 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
+    final Float32Buffer positionsBuffer = new Float32Buffer( new Float32Array( positions ), 2 );
     final Attribute a_position =
-      new Attribute( new Float32Buffer( _gl, new Float32Array( positions ), 2 ),
-                     GL.getAttribLocation( _gl, program, "a_position" ) );
+      new Attribute( positionsBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
+    final Float32Buffer textureCoordinatesBuffer = new Float32Buffer( new Float32Array( textureCoordinates ), 2 );
     final Attribute a_textureCoordinate =
-      new Attribute( new Float32Buffer( _gl, new Float32Array( textureCoordinates ), 2 ),
-                     GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
+      new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
     u_image = new TextureUniform( _gl, program, "u_image", "img/4KSample.jpg", 0 );
     u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
@@ -104,6 +104,8 @@ public final class Main
     // Start using the program for all vertexes pass through gl until the program is changed
     _gl.useProgram( program );
 
+    positionsBuffer.uploadToGpu( _gl );
+    textureCoordinatesBuffer.uploadToGpu( _gl );
     a_position.sendToGpu( _gl );
     a_textureCoordinate.sendToGpu( _gl );
 

@@ -10,14 +10,6 @@ import org.realityforge.webgl.util.v2.Accessor;
 public final class Float32Buffer
   extends Buffer
 {
-  public Float32Buffer( @Nonnull final WebGL2RenderingContext gl,
-                        @Nonnull final Float32Array data,
-                        @VertexDimensions final int dimension )
-  {
-    this( data, dimension );
-    uploadToGpu( gl );
-  }
-
   public Float32Buffer( @Nonnull final Float32Array data, @VertexDimensions final int dimension )
   {
     this( data, WebGL2RenderingContext.STATIC_DRAW, new Accessor( dimension, WebGL2RenderingContext.FLOAT ) );

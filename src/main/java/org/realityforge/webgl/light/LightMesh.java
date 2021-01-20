@@ -5,6 +5,7 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
+import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
@@ -27,6 +28,8 @@ final class LightMesh
   private final Uniform _projectionMatrix;
   @Nonnull
   private final Uniform _color;
+  @Nonnull
+  private final Float32Buffer _positionAttribute;
 
   LightMesh( @Nonnull final WebGL2RenderingContext gl,
              @Nonnull final Float32Buffer positionAttribute,
@@ -46,6 +49,7 @@ final class LightMesh
     _projectionMatrix = new Uniform( gl, program, "projectionMatrix" );
     _color = new Uniform( gl, program, "color" );
 
+    _positionAttribute = Objects.requireNonNull( positionAttribute );
     _position = new Attribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
   }
 
@@ -72,6 +76,7 @@ final class LightMesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
+    _positionAttribute.uploadToGpu( gl );
     _position.sendToGpu( gl );
   }
 }

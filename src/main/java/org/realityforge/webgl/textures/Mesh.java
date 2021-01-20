@@ -7,6 +7,7 @@ import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
 import elemental3.gl.WebGLUniformLocation;
+import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.Attribute;
@@ -21,6 +22,12 @@ final class Mesh
   private final Attribute _color;
   @Nonnull
   private final Attribute _textureCoordinate;
+  @Nonnull
+  private final Float32Buffer _positionBuffer;
+  @Nonnull
+  private final Float32Buffer _colorBuffer;
+  @Nonnull
+  private final Float32Buffer _textureCoordinatesBuffer;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -37,9 +44,9 @@ final class Mesh
   private final WebGLUniformLocation _textureData1Location;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Float32Buffer positionAttribute,
-        @Nonnull final Float32Buffer colorAttribute,
-        @Nonnull final Float32Buffer textureCoordinatesAttribute,
+        @Nonnull final Float32Buffer positionBuffer,
+        @Nonnull final Float32Buffer colorBuffer,
+        @Nonnull final Float32Buffer textureCoordinatesBuffer,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
@@ -60,9 +67,12 @@ final class Mesh
     _textureData0Location = GL.getUniformLocation( gl, _program, "textureData0" );
     _textureData1Location = GL.getUniformLocation( gl, _program, "textureData1" );
 
-    _position = new Attribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
-    _color = new Attribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
-    _textureCoordinate = new Attribute( textureCoordinatesAttribute,
+    _positionBuffer = Objects.requireNonNull( positionBuffer );
+    _colorBuffer = Objects.requireNonNull( colorBuffer );
+    _textureCoordinatesBuffer = Objects.requireNonNull( textureCoordinatesBuffer );
+    _position = new Attribute( positionBuffer, GL.getAttribLocation( gl, program, "position" ) );
+    _color = new Attribute( colorBuffer, GL.getAttribLocation( gl, program, "color" ) );
+    _textureCoordinate = new Attribute( textureCoordinatesBuffer,
                                         GL.getAttribLocation( gl, program, "textureCoordinate" ) );
   }
 
@@ -86,6 +96,10 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
+    _positionBuffer.uploadToGpu( gl );
+    _colorBuffer.uploadToGpu( gl );
+    _textureCoordinatesBuffer.uploadToGpu( gl );
+
     // Tell GPU to load position data into program from out buffer
     _position.sendToGpu( gl );
     _color.sendToGpu( gl );

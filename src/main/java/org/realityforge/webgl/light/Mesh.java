@@ -6,6 +6,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLTexture;
+import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3d;
@@ -26,6 +27,14 @@ final class Mesh
   private final Attribute _color;
   @Nonnull
   private final Attribute _textureCoordinate;
+  @Nonnull
+  private final Float32Buffer _positionAttribute;
+  @Nonnull
+  private final Float32Buffer _normalsAttribute;
+  @Nonnull
+  private final Float32Buffer _colorAttribute;
+  @Nonnull
+  private final Float32Buffer _textureCoordinatesAttribute;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -75,6 +84,10 @@ final class Mesh
     _lightPosition = new Uniform( gl, program, "lightPosition" );
     _cameraPosition = new Uniform( gl, program, "cameraPosition" );
 
+    _positionAttribute = Objects.requireNonNull( positionAttribute );
+    _normalsAttribute = Objects.requireNonNull( normalsAttribute );
+    _colorAttribute = Objects.requireNonNull( colorAttribute );
+    _textureCoordinatesAttribute = Objects.requireNonNull( textureCoordinatesAttribute );
     _position = new Attribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
     _normal = new Attribute( normalsAttribute, GL.getAttribLocation( gl, program, "normal" ) );
     _color = new Attribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
@@ -116,6 +129,10 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
+    _positionAttribute.uploadToGpu( gl );
+    _normalsAttribute.uploadToGpu( gl );
+    _colorAttribute.uploadToGpu( gl );
+    _textureCoordinatesAttribute.uploadToGpu( gl );
     _position.sendToGpu( gl );
     _normal.sendToGpu( gl );
     _color.sendToGpu( gl );
