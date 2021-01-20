@@ -38,7 +38,7 @@ public final class Geometry
     _attributes = Objects.requireNonNull( attributes );
   }
 
-  public void uploadToCpu()
+  public void uploadToGpu()
   {
     final AppState appState = AppState.get();
     appState.in( () -> {

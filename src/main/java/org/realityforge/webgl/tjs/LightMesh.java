@@ -30,7 +30,7 @@ final class LightMesh
     final Geometry geometry = new Geometry( 36, new Attribute( positionAttribute ) );
     setGeometry( geometry );
     geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
-    geometry.uploadToCpu();
+    geometry.uploadToGpu();
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,

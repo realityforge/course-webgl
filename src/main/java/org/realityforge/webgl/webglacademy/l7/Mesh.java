@@ -79,7 +79,7 @@ final class Mesh
     gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
     gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture );
     gl.uniform1i( _material.getTextureLocation(), 0 );
-    _geometry.uploadToCpu();
+    _geometry.uploadToGpu();
     _uploaded = true;
   }
 

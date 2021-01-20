@@ -47,6 +47,6 @@ final class Mesh
 
     _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
     _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "uv" ) );
-    _geometry.uploadToCpu();
+    _geometry.uploadToGpu();
   }
 }

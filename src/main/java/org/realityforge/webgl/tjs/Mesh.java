@@ -65,7 +65,7 @@ final class Mesh
     geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "normal" ) );
     geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );
     geometry.getAttribute( 3 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
-    geometry.uploadToCpu();
+    geometry.uploadToGpu();
 
   }
 
