@@ -19,6 +19,7 @@ import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Scene;
 import org.realityforge.webgl.util.Uint32IndexBuffer;
+import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Main
   implements EntryPoint
@@ -122,24 +123,15 @@ public final class Main
         final Float32Buffer positionBuffer =
           new Float32Buffer( vertices,
                              WebGL2RenderingContext.STATIC_DRAW,
-                             3,
-                             false,
-                             stride,
-                             0 );
+                             new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
         final Float32Buffer normalBuffer =
           new Float32Buffer( vertices,
                              WebGL2RenderingContext.STATIC_DRAW,
-                             3,
-                             false,
-                             stride,
-                             4 * 3 );
+                             new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
         final Float32Buffer uvBuffer =
           new Float32Buffer( vertices,
                              WebGL2RenderingContext.STATIC_DRAW,
-                             2,
-                             false,
-                             stride,
-                             4 * ( 3 + 3 ) );
+                             new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
         final Geometry geometry =
           new Geometry( WebGL2RenderingContext.TRIANGLES,
                         0,

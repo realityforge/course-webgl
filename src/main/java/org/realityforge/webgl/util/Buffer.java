@@ -1,13 +1,13 @@
 package org.realityforge.webgl.util;
 
 import elemental3.core.ArrayBufferView;
-import elemental3.gl.DataType;
 import elemental3.gl.UsageType;
-import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
+import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webgl.util.v2.Accessor;
 
 public abstract class Buffer
 {
@@ -15,34 +15,19 @@ public abstract class Buffer
   private final ArrayBufferView _data;
   @UsageType
   private final int _usage;
-  @VertexDimensions
-  private final int _dimension;
-  @DataType
-  private final int _type;
-  private final boolean _normalized;
-  private final int _stride;
-  private final int _offset;
+  @Nonnull
+  private final Accessor _accessor;
   @Nullable
   private WebGLBuffer _buffer;
 
   protected Buffer( @Nonnull final ArrayBufferView data,
                     @UsageType final int usage,
-                    @VertexDimensions final int dimension,
-                    @DataType final int type,
-                    final boolean normalized,
-                    final int stride,
-                    final int offset,
+                    @Nonnull final Accessor accessor,
                     @Nullable final WebGLBuffer buffer )
   {
-    assert dimension > 0 && dimension <= 4;
-    assert stride >= 0 && stride <= 255;
-    _data = data;
+    _data = Objects.requireNonNull( data );
     _usage = usage;
-    _dimension = dimension;
-    _type = type;
-    _normalized = normalized;
-    _stride = stride;
-    _offset = offset;
+    _accessor = Objects.requireNonNull( accessor );
     _buffer = buffer;
   }
 
@@ -58,31 +43,10 @@ public abstract class Buffer
     return _usage;
   }
 
-  @VertexDimensions
-  public int getDimension()
+  @Nonnull
+  public Accessor getAccessor()
   {
-    return _dimension;
-  }
-
-  @DataType
-  public int getType()
-  {
-    return _type;
-  }
-
-  public boolean isNormalized()
-  {
-    return _normalized;
-  }
-
-  public int getStride()
-  {
-    return _stride;
-  }
-
-  public int getOffset()
-  {
-    return _offset;
+    return _accessor;
   }
 
   public boolean isBufferOnGpu()

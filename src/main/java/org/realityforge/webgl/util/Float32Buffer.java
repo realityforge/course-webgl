@@ -5,6 +5,7 @@ import elemental3.gl.UsageType;
 import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Float32Buffer
   extends Buffer
@@ -19,16 +20,13 @@ public final class Float32Buffer
 
   public Float32Buffer( @Nonnull final Float32Array data, @VertexDimensions final int dimension )
   {
-    this( data, WebGL2RenderingContext.STATIC_DRAW, dimension, false, 0, 0 );
+    this( data, WebGL2RenderingContext.STATIC_DRAW, new Accessor( dimension, WebGL2RenderingContext.FLOAT ) );
   }
 
   public Float32Buffer( @Nonnull final Float32Array data,
                         @UsageType final int usage,
-                        @VertexDimensions final int dimension,
-                        final boolean normalized,
-                        final int stride,
-                        final int offset )
+                        @Nonnull final Accessor accessor )
   {
-    super( data, usage, dimension, WebGL2RenderingContext.FLOAT, normalized, stride, offset, null );
+    super( data, usage, accessor, null );
   }
 }

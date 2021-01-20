@@ -3,6 +3,7 @@ package org.realityforge.webgl.util;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Attribute
 {
@@ -57,11 +58,12 @@ public final class Attribute
     assert isLocationValid();
     gl.enableVertexAttribArray( _location );
     _buffer.bind( gl );
+    final Accessor accessor = _buffer.getAccessor();
     gl.vertexAttribPointer( _location,
-                            _buffer.getDimension(),
-                            _buffer.getType(),
-                            _buffer.isNormalized(),
-                            _buffer.getStride(),
-                            _buffer.getOffset() );
+                            accessor.getDimension(),
+                            accessor.getType(),
+                            accessor.isNormalized(),
+                            accessor.getStride(),
+                            accessor.getOffset() );
   }
 }
