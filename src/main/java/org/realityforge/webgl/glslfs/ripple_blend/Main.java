@@ -101,12 +101,9 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final Buffer positionBuffer =
-      new Buffer( new Float32Array( positions ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) );
-    final Attribute a_position =
-      new Attribute( positionBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
-    final Buffer textureCoordinatesBuffer = new Buffer( new Float32Array( textureCoordinates ), new Accessor(
-      2, WebGL2RenderingContext.FLOAT ) );
+    final Buffer positionBuffer = new Buffer( new Float32Array( positions ), new Accessor( 2 ) );
+    final Attribute a_position = new Attribute( positionBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
+    final Buffer textureCoordinatesBuffer = new Buffer( new Float32Array( textureCoordinates ), new Accessor( 2 ) );
     final Attribute a_textureCoordinate =
       new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 

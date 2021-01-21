@@ -146,14 +146,14 @@ public final class PolyhedronGeometryFactory
 
     // build non-indexed geometry
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
+    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3 ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

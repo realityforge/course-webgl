@@ -94,14 +94,14 @@ public final class CuboidGeometryFactory
     buildPlane( 0, 1, 2, -1, -1, width, height, -depth, widthSegments, heightSegments, 5 );
 
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
+    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3, WebGL2RenderingContext.FLOAT ) ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3 ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) ) );
+      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

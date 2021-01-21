@@ -19,9 +19,22 @@ public final class Accessor
   private final int _stride;
   private final int _offset;
 
+  public Accessor( @VertexDimensions final int dimension )
+  {
+    this( dimension, WebGL2RenderingContext.FLOAT );
+  }
+
   public Accessor( @VertexDimensions final int dimension, @DataType final int type )
   {
-    this( dimension, type, false, 0, 0 );
+    this( dimension, type, 0, 0 );
+  }
+
+  public Accessor( @VertexDimensions final int dimension,
+                   @DataType final int type,
+                   final int stride,
+                   final int offset )
+  {
+    this( dimension, type, false, stride, offset );
   }
 
   public Accessor( @VertexDimensions final int dimension,

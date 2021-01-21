@@ -26,7 +26,7 @@ final class BackgroundMesh
   BackgroundMesh( @Nonnull final WebGL2RenderingContext gl )
   {
     final Attribute positionData =
-      new Attribute( new Buffer( new Float32Array( new double[]{ -1, 1, -1, -1, 1, -1, 1, 1 } ), new Accessor( 2, WebGL2RenderingContext.FLOAT ) ) );
+      new Attribute( new Buffer( new Float32Array( new double[]{ -1, 1, -1, -1, 1, -1, 1, 1 } ), new Accessor( 2 ) ) );
     final Uint16IndexBuffer indexBuffer = new Uint16IndexBuffer( new Uint16Array( new double[]{ 0, 1, 2, 0, 2, 3 } ) );
     _geometry = new Geometry( WebGL2RenderingContext.TRIANGLES, 0, 6, indexBuffer, positionData );
     _material = new BackgroundMaterial( gl );
