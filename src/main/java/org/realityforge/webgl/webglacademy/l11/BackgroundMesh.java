@@ -11,7 +11,7 @@ import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
-import org.realityforge.webgl.util.Uint16IndexBuffer;
+import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.v2.Accessor;
 
 final class BackgroundMesh
@@ -29,7 +29,8 @@ final class BackgroundMesh
       new Attribute( new Buffer( gl,
                                  new Float32Array( new double[]{ -1, 1, -1, -1, 1, -1, 1, 1 } ),
                                  new Accessor( 2 ) ) );
-    final Uint16IndexBuffer indexBuffer = new Uint16IndexBuffer( new Uint16Array( new double[]{ 0, 1, 2, 0, 2, 3 } ) );
+    final IndexBuffer indexBuffer =
+      new IndexBuffer( gl, new Uint16Array( new double[]{ 0, 1, 2, 0, 2, 3 } ), WebGL2RenderingContext.UNSIGNED_SHORT );
     _geometry = new Geometry( WebGL2RenderingContext.TRIANGLES, 0, 6, indexBuffer, positionData );
     _material = new BackgroundMaterial( gl );
     GL.loadImage( "assets/background.png" ).thenAccept( image -> {

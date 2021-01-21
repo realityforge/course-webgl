@@ -17,7 +17,7 @@ import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.Geometry;
-import org.realityforge.webgl.util.Uint16IndexBuffer;
+import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.v2.Accessor;
 
 /**
@@ -156,7 +156,7 @@ public final class PolyhedronGeometryFactory
     _geometry = new Geometry( mode,
                               0,
                               _indexes.length,
-                              new Uint16IndexBuffer( new Uint16Array( _indexes ) ),
+                              new IndexBuffer( gl, new Uint16Array( _indexes ), WebGL2RenderingContext.UNSIGNED_SHORT ),
                               attributes.toArray( new Attribute[ 0 ] ) );
   }
 

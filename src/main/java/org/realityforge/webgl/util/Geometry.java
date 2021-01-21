@@ -56,7 +56,7 @@ public final class Geometry
 
     if ( null != _indexBuffer )
     {
-      _indexBuffer.bind( gl );
+      _indexBuffer.bind();
     }
 
     for ( final Attribute attribute : _attributes )
@@ -85,10 +85,9 @@ public final class Geometry
 
   private void uploadBuffers( @Nonnull final AppState appState )
   {
-    final WebGL2RenderingContext gl = appState.gl();
     if ( null != _indexBuffer )
     {
-      _indexBuffer.uploadToGpu( gl );
+      _indexBuffer.uploadToGpu();
     }
     for ( final Attribute attribute : _attributes )
     {

@@ -13,7 +13,7 @@ import org.intellij.lang.annotations.MagicConstant;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.Geometry;
-import org.realityforge.webgl.util.Uint16IndexBuffer;
+import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.v2.Accessor;
 
 /**
@@ -110,7 +110,7 @@ public final class CuboidGeometryFactory
     _geometry = new Geometry( mode,
                               0,
                               _indices.length,
-                              new Uint16IndexBuffer( new Uint16Array( _indices ) ),
+                              new IndexBuffer( gl, new Uint16Array( _indices ), WebGL2RenderingContext.UNSIGNED_SHORT ),
                               attributes.toArray( new Attribute[ 0 ] ) );
   }
 

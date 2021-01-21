@@ -16,9 +16,9 @@ import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.Buffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Geometry;
+import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Scene;
-import org.realityforge.webgl.util.Uint32IndexBuffer;
 import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Main
@@ -140,7 +140,9 @@ public final class Main
           new Geometry( WebGL2RenderingContext.TRIANGLES,
                         0,
                         asset.getIndices().length,
-                        new Uint32IndexBuffer( new Uint32Array( asset.getIndices() ) ),
+                        new IndexBuffer( gl,
+                                         new Uint32Array( asset.getIndices() ),
+                                         WebGL2RenderingContext.UNSIGNED_INT ),
                         new Attribute( positionBuffer ),
                         new Attribute( normalBuffer ),
                         new Attribute( uvBuffer ) );
