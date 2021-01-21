@@ -56,7 +56,7 @@ public final class Buffer
 
   public boolean isBufferOnGpu()
   {
-    return isResourceCreated();
+    return hasHandle();
   }
 
   public void uploadToGpu()

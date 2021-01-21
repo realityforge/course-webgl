@@ -30,7 +30,7 @@ public abstract class Resource<T>
     return _gl;
   }
 
-  public boolean isResourceCreated()
+  protected boolean hasHandle()
   {
     return null != _handle;
   }
@@ -50,7 +50,7 @@ public abstract class Resource<T>
   @Override
   public void dispose()
   {
-    if ( isResourceCreated() )
+    if ( hasHandle() )
     {
       final T handle = getHandle();
       setHandle( null );

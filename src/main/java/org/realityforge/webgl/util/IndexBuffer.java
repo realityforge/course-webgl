@@ -55,7 +55,7 @@ public final class IndexBuffer
 
   public boolean isBufferOnGpu()
   {
-    return isResourceCreated();
+    return hasHandle();
   }
 
   public void uploadToGpu()
