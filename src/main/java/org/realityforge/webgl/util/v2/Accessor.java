@@ -9,7 +9,7 @@ public final class Accessor
   private final int _dimension;
   @DataType
   private final int _type;
-  private final boolean _normalized;
+  private final boolean _normalize;
   private final int _stride;
   private final int _offset;
 
@@ -20,7 +20,7 @@ public final class Accessor
 
   public Accessor( @VertexDimensions final int dimension,
                    @DataType final int type,
-                   final boolean normalized,
+                   final boolean normalize,
                    final int stride,
                    final int offset )
   {
@@ -30,7 +30,7 @@ public final class Accessor
     DataType.Validator.assertValid( type );
     _dimension = dimension;
     _type = type;
-    _normalized = normalized;
+    _normalize = normalize;
     _stride = stride;
     _offset = offset;
   }
@@ -47,9 +47,9 @@ public final class Accessor
     return _type;
   }
 
-  public boolean isNormalized()
+  public boolean shouldNormalize()
   {
-    return _normalized;
+    return _normalize;
   }
 
   public int getStride()

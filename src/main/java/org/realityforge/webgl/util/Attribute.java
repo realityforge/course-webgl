@@ -62,7 +62,7 @@ public final class Attribute
     gl.vertexAttribPointer( _location,
                             accessor.getDimension(),
                             accessor.getType(),
-                            accessor.isNormalized(),
+                            accessor.shouldNormalize(),
                             accessor.getStride(),
                             accessor.getOffset() );
   }
