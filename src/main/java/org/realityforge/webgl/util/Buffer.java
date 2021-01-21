@@ -73,4 +73,10 @@ public final class Buffer
   {
     gl().bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, getHandle() );
   }
+
+  @Override
+  protected void disposeResource( @Nonnull final WebGLBuffer handle )
+  {
+    gl().deleteBuffer( handle );
+  }
 }

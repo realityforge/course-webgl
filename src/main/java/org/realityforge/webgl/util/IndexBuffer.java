@@ -72,4 +72,10 @@ public final class IndexBuffer
   {
     gl().bindBuffer( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, getHandle() );
   }
+
+  @Override
+  protected void disposeResource( @Nonnull final WebGLBuffer handle )
+  {
+    gl().deleteBuffer( handle );
+  }
 }
