@@ -25,30 +25,30 @@ public abstract class Resource<T>
   }
 
   @Nonnull
-  protected WebGL2RenderingContext gl()
+  protected final WebGL2RenderingContext gl()
   {
     return _gl;
   }
 
-  protected boolean hasHandle()
+  protected final boolean hasHandle()
   {
     return null != _handle;
   }
 
   @Nonnull
-  protected T getHandle()
+  protected final T getHandle()
   {
     assert null != _handle;
     return _handle;
   }
 
-  protected void setHandle( @Nullable final T handle )
+  protected final void setHandle( @Nullable final T handle )
   {
     _handle = handle;
   }
 
   @Override
-  public void dispose()
+  public final void dispose()
   {
     if ( hasHandle() )
     {
