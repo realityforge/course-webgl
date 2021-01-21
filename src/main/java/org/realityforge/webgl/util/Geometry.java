@@ -95,7 +95,7 @@ public final class Geometry
       // TODO: Maybe we should assume attribute is valid by here
       if ( attribute.isLocationValid() )
       {
-        attribute.getBuffer().uploadToGpu( gl );
+        attribute.getBuffer().uploadToGpu();
       }
     }
   }

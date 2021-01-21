@@ -99,12 +99,12 @@ public final class Main
         0, 1, 0, 0, 1, 0,
         1, 1, 0, 1, 1, 0
       };
-    final Geometry geometry =
-      new Geometry( 6,
-                    new Attribute( new Buffer( new Float32Array( positionData ), new Accessor( 2 ) ) ),
-                    new Attribute( new Buffer( new Float32Array( uvData ), new Accessor( 2 ) ) ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
+      final Geometry geometry =
+        new Geometry( 6,
+                      new Attribute( new Buffer( gl, new Float32Array( positionData ), new Accessor( 2 ) ) ),
+                      new Attribute( new Buffer( gl, new Float32Array( uvData ), new Accessor( 2 ) ) ) );
       GL.loadImage( "assets/palette_modified.jpg" )
         .thenAccept( image -> _palette = GL.prepareTexture( gl,
                                                             image,

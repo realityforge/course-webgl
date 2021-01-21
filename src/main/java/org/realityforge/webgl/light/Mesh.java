@@ -12,8 +12,8 @@ import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Uniform;
 
@@ -129,10 +129,10 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    _positionAttribute.uploadToGpu( gl );
-    _normalsAttribute.uploadToGpu( gl );
-    _colorAttribute.uploadToGpu( gl );
-    _textureCoordinatesAttribute.uploadToGpu( gl );
+    _positionAttribute.uploadToGpu();
+    _normalsAttribute.uploadToGpu();
+    _colorAttribute.uploadToGpu();
+    _textureCoordinatesAttribute.uploadToGpu();
     _position.sendToGpu( gl );
     _normal.sendToGpu( gl );
     _color.sendToGpu( gl );

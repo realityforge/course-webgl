@@ -57,7 +57,7 @@ public final class Attribute
   {
     assert isLocationValid();
     gl.enableVertexAttribArray( _location );
-    _buffer.bind( gl );
+    _buffer.bind();
     final Accessor accessor = _buffer.getAccessor();
     gl.vertexAttribPointer( _location,
                             accessor.getDimension(),

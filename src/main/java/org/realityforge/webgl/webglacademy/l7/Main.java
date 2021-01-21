@@ -114,6 +114,7 @@ public final class Main
       .then( Response::json )
       .thenAccept( data -> appState.in( () -> {
         final Asset asset = data.cast();
+        final WebGL2RenderingContext gl = appState.gl();
         //Vertices are laid out as:
         // - 3 floats for position vertex,
         // - 3 floats for vertex normal,
@@ -121,17 +122,20 @@ public final class Main
         final int stride = 4 * ( 3 + 3 + 2 );
         final Float32Array vertices = new Float32Array( asset.getVertices() );
         final Buffer positionBuffer =
-          new Buffer( vertices,
+          new Buffer( gl,
+                      vertices,
                       WebGL2RenderingContext.STATIC_DRAW,
-                      new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
+                      new Accessor( 3, WebGL2RenderingContext.FLOAT, stride, 0 ) );
         final Buffer normalBuffer =
-          new Buffer( vertices,
+          new Buffer( gl,
+                      vertices,
                       WebGL2RenderingContext.STATIC_DRAW,
-                      new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
+                      new Accessor( 3, WebGL2RenderingContext.FLOAT, stride, 4 * 3 ) );
         final Buffer uvBuffer =
-          new Buffer( vertices,
+          new Buffer( gl,
+                      vertices,
                       WebGL2RenderingContext.STATIC_DRAW,
-                      new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
+                      new Accessor( 2, WebGL2RenderingContext.FLOAT, stride, 4 * ( 3 + 3 ) ) );
         final Geometry geometry =
           new Geometry( WebGL2RenderingContext.TRIANGLES,
                         0,
@@ -140,7 +144,6 @@ public final class Main
                         new Attribute( positionBuffer ),
                         new Attribute( normalBuffer ),
                         new Attribute( uvBuffer ) );
-        final WebGL2RenderingContext gl = appState.gl();
         _mesh = new Mesh( gl, geometry, new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
       } ) );
 

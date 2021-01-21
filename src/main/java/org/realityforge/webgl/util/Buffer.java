@@ -6,10 +6,10 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Buffer
+  extends Resource<WebGLBuffer>
 {
   @Nonnull
   private final ArrayBufferView _data;
@@ -17,16 +17,20 @@ public final class Buffer
   private final int _usage;
   @Nonnull
   private final Accessor _accessor;
-  @Nullable
-  private WebGLBuffer _buffer;
 
-  public Buffer( @Nonnull final ArrayBufferView data, @Nonnull final Accessor accessor )
+  public Buffer( @Nonnull final WebGL2RenderingContext gl,
+                 @Nonnull final ArrayBufferView data,
+                 @Nonnull final Accessor accessor )
   {
-    this( data, WebGL2RenderingContext.STATIC_DRAW, accessor );
+    this( gl, data, WebGL2RenderingContext.STATIC_DRAW, accessor );
   }
 
-  public Buffer( @Nonnull final ArrayBufferView data, @UsageType final int usage, @Nonnull final Accessor accessor )
+  public Buffer( @Nonnull final WebGL2RenderingContext gl,
+                 @Nonnull final ArrayBufferView data,
+                 @UsageType final int usage,
+                 @Nonnull final Accessor accessor )
   {
+    super( gl );
     _data = Objects.requireNonNull( data );
     _usage = usage;
     _accessor = Objects.requireNonNull( accessor );
@@ -52,20 +56,19 @@ public final class Buffer
 
   public boolean isBufferOnGpu()
   {
-    return null != _buffer;
+    return isResourceCreated();
   }
 
-  public void uploadToGpu( @Nonnull final WebGL2RenderingContext gl )
+  public void uploadToGpu()
   {
-    _buffer = gl.createBuffer();
-    assert null != _buffer;
-    bind( gl );
+    final WebGL2RenderingContext gl = gl();
+    setHandle( gl.createBuffer() );
+    bind();
     gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER, _data, _usage );
   }
 
-  public void bind( @Nonnull final WebGL2RenderingContext gl )
+  public void bind()
   {
-    assert null != _buffer;
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, _buffer );
+    gl().bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, getHandle() );
   }
 }

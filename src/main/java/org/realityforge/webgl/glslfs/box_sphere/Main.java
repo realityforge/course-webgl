@@ -71,7 +71,7 @@ public final class Main
 
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
-      _mesh = new Mesh( CuboidGeometryFactory.create( WebGL2RenderingContext.LINE_LOOP, 2, 2, 2, 5, 5, 5 ),
+      _mesh = new Mesh( CuboidGeometryFactory.create( gl, WebGL2RenderingContext.LINE_LOOP, 2, 2, 2, 5, 5, 5 ),
                         new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
       _mesh.sendToGpu( gl );
     } );

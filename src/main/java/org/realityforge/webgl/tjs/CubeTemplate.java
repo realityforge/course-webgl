@@ -324,7 +324,7 @@ final class CubeTemplate
   public static LightMesh createLightCube( @Nonnull final WebGL2RenderingContext gl )
   {
     return new LightMesh( gl,
-                          new Buffer( new Float32Array( POSITIONS ), new Accessor( 3 ) ),
+                          new Buffer( gl, new Float32Array( POSITIONS ), new Accessor( 3 ) ),
                           LIGHT_VERTEX_SHADER_SOURCE,
                           LIGHT_FRAGMENT_SHADER_SOURCE );
   }
@@ -333,10 +333,10 @@ final class CubeTemplate
   public static Mesh create( @Nonnull final WebGL2RenderingContext gl )
   {
     return new Mesh( gl,
-                     new Buffer( new Float32Array( POSITIONS ), new Accessor( 3 ) ),
-                     new Buffer( new Float32Array( VERTEX_NORMALS ), new Accessor( 3 ) ),
-                     new Buffer( new Float32Array( COLORS ), new Accessor( 4 ) ),
-                     new Buffer( new Float32Array( TEXTURE_COORDINATES ), new Accessor( 2 ) ),
+                     new Buffer( gl, new Float32Array( POSITIONS ), new Accessor( 3 ) ),
+                     new Buffer( gl, new Float32Array( VERTEX_NORMALS ), new Accessor( 3 ) ),
+                     new Buffer( gl, new Float32Array( COLORS ), new Accessor( 4 ) ),
+                     new Buffer( gl, new Float32Array( TEXTURE_COORDINATES ), new Accessor( 2 ) ),
                      VERTEX_SHADER_SOURCE,
                      FRAGMENT_SHADER_SOURCE );
   }

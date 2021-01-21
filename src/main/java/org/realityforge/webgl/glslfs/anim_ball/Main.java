@@ -97,7 +97,8 @@ public final class Main
         @GLSL
         final String vertexShaderSource = "#version 300 es\n" + shaderPrefix + VERTEX_SHADER_SOURCE;
         final WebGL2RenderingContext gl = appState.gl();
-        _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
+        _mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( gl,
+                                                                       WebGL2RenderingContext.TRIANGLES,
                                                                        1,
                                                                        4,
                                                                        PolyhedronGeometryFactory.UVS |

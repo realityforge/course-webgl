@@ -78,17 +78,18 @@ public final class Main
 
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
-    final Geometry geometry =
-      CuboidGeometryFactory.create( WebGL2RenderingContext.TRIANGLES,
-                                    5,
-                                    5,
-                                    5,
-                                    1,
-                                    1,
-                                    1,
-                                    CuboidGeometryFactory.UVS );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
+      final Geometry geometry =
+        CuboidGeometryFactory.create( gl,
+                                      WebGL2RenderingContext.TRIANGLES,
+                                      5,
+                                      5,
+                                      5,
+                                      1,
+                                      1,
+                                      1,
+                                      CuboidGeometryFactory.UVS );
       GL.loadTexture( gl, "img/StoreLogo.png" ).thenAccept( texture -> _texture = texture );
 
       _mesh = new Mesh( geometry, new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );

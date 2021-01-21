@@ -46,13 +46,16 @@ public final class PolyhedronGeometryFactory
   private final Geometry _geometry;
 
   @Nonnull
-  public static Geometry createIsocahedron( final double radius, final int detail )
+  public static Geometry createIsocahedron( @Nonnull final WebGL2RenderingContext gl,
+                                            final double radius,
+                                            final int detail )
   {
-    return createIsocahedron( WebGL2RenderingContext.TRIANGLES, radius, detail, 0 );
+    return createIsocahedron( gl, WebGL2RenderingContext.TRIANGLES, radius, detail, 0 );
   }
 
   @Nonnull
-  public static Geometry createIsocahedron( @DrawPrimitiveType final int mode,
+  public static Geometry createIsocahedron( @Nonnull final WebGL2RenderingContext gl,
+                                            @DrawPrimitiveType final int mode,
                                             final double radius,
                                             final int detail,
                                             @MagicConstant( flags = { NORMALS, UVS } ) final int options )
@@ -72,39 +75,34 @@ public final class PolyhedronGeometryFactory
       3, 9, 4, 3, 4, 2, 3, 2, 6, 3, 6, 8, 3, 8, 9,
       4, 9, 5, 2, 4, 11, 6, 2, 10, 8, 6, 7, 9, 8, 1
     };
-    return create( mode, vertices, indices, radius, detail, options );
+    return create( gl, mode, vertices, indices, radius, detail, options );
   }
 
   @Nonnull
-  public static Geometry create( @DrawPrimitiveType final int mode,
-                                 @Nonnull double[] vertices,
-                                 @Nonnull int[] indices )
-  {
-    return create( mode, vertices, indices, 1.0, 0 );
-  }
-
-  @Nonnull
-  public static Geometry create( @DrawPrimitiveType final int mode,
+  public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
+                                 @DrawPrimitiveType final int mode,
                                  @Nonnull double[] vertices,
                                  @Nonnull int[] indices,
                                  final double radius,
                                  final int detail )
   {
-    return create( mode, vertices, indices, radius, detail, 0 );
+    return create( gl, mode, vertices, indices, radius, detail, 0 );
   }
 
   @Nonnull
-  public static Geometry create( @DrawPrimitiveType final int mode,
+  public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
+                                 @DrawPrimitiveType final int mode,
                                  @Nonnull double[] vertices,
                                  @Nonnull int[] indices,
                                  final double radius,
                                  final int detail,
                                  @MagicConstant( flags = { NORMALS, UVS } ) final int options )
   {
-    return new PolyhedronGeometryFactory( mode, vertices, indices, radius, detail, options )._geometry;
+    return new PolyhedronGeometryFactory( gl, mode, vertices, indices, radius, detail, options )._geometry;
   }
 
-  private PolyhedronGeometryFactory( @DrawPrimitiveType final int mode,
+  private PolyhedronGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
+                                     @DrawPrimitiveType final int mode,
                                      @Nonnull double[] vertices,
                                      @Nonnull int[] indices,
                                      final double radius,
@@ -146,14 +144,14 @@ public final class PolyhedronGeometryFactory
 
     // build non-indexed geometry
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
+    attributes.add( new Attribute( new Buffer( gl, new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3 ) ) ) );
+      attributes.add( new Attribute( new Buffer( gl, new Float32Array( _normals ), new Accessor( 3 ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
+      attributes.add( new Attribute( new Buffer( gl, new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

@@ -1,7 +1,7 @@
 package org.realityforge.webgl.util.geometries;
 
-import elemental3.core.JsArray;
 import elemental3.core.Float32Array;
+import elemental3.core.JsArray;
 import elemental3.core.Uint16Array;
 import elemental3.gl.DrawPrimitiveType;
 import elemental3.gl.WebGL2RenderingContext;
@@ -42,7 +42,8 @@ public final class CuboidGeometryFactory
   private final Geometry _geometry;
 
   @Nonnull
-  public static Geometry create( @DrawPrimitiveType final int mode,
+  public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
+                                 @DrawPrimitiveType final int mode,
                                  final double width,
                                  final double height,
                                  final double depth,
@@ -50,11 +51,12 @@ public final class CuboidGeometryFactory
                                  final int heightSegments,
                                  final int depthSegments )
   {
-    return create( mode, width, height, depth, widthSegments, heightSegments, depthSegments, 0 );
+    return create( gl, mode, width, height, depth, widthSegments, heightSegments, depthSegments, 0 );
   }
 
   @Nonnull
-  public static Geometry create( @DrawPrimitiveType final int mode,
+  public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
+                                 @DrawPrimitiveType final int mode,
                                  final double width,
                                  final double height,
                                  final double depth,
@@ -63,7 +65,8 @@ public final class CuboidGeometryFactory
                                  final int depthSegments,
                                  @MagicConstant( flags = { NORMALS, UVS } ) final int options )
   {
-    return new CuboidGeometryFactory( mode,
+    return new CuboidGeometryFactory( gl,
+                                      mode,
                                       width,
                                       height,
                                       depth,
@@ -74,7 +77,8 @@ public final class CuboidGeometryFactory
       ._geometry;
   }
 
-  private CuboidGeometryFactory( @DrawPrimitiveType final int mode,
+  private CuboidGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
+                                 @DrawPrimitiveType final int mode,
                                  final double width,
                                  final double height,
                                  final double depth,
@@ -94,14 +98,14 @@ public final class CuboidGeometryFactory
     buildPlane( 0, 1, 2, -1, -1, width, height, -depth, widthSegments, heightSegments, 5 );
 
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Buffer( new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
+    attributes.add( new Attribute( new Buffer( gl, new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _normals ), new Accessor( 3 ) ) ) );
+      attributes.add( new Attribute( new Buffer( gl, new Float32Array( _normals ), new Accessor( 3 ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Buffer( new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
+      attributes.add( new Attribute( new Buffer( gl, new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

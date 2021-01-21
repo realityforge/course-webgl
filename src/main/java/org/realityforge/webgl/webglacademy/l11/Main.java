@@ -122,16 +122,20 @@ public final class Main
         // -  floats for uv coordinates
         final int stride = 4 * ( 3 + 3 + 2 );
         final Float32Array vertices = new Float32Array( asset.getVertices() );
+        final WebGL2RenderingContext gl = appState.gl();
         final Buffer positionBuffer =
-          new Buffer( vertices,
+          new Buffer( gl,
+                      vertices,
                       WebGL2RenderingContext.STATIC_DRAW,
                       new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
         final Buffer normalBuffer =
-          new Buffer( vertices,
+          new Buffer( gl,
+                      vertices,
                       WebGL2RenderingContext.STATIC_DRAW,
                       new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
         final Buffer uvBuffer =
-          new Buffer( vertices,
+          new Buffer( gl,
+                      vertices,
                       WebGL2RenderingContext.STATIC_DRAW,
                       new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
         final Geometry geometry =
@@ -142,7 +146,6 @@ public final class Main
                         new Attribute( positionBuffer ),
                         new Attribute( normalBuffer ),
                         new Attribute( uvBuffer ) );
-        final WebGL2RenderingContext gl = appState.gl();
         _mesh = new Mesh( gl, geometry, new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE ) );
       } ) );
 

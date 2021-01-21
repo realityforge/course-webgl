@@ -290,7 +290,8 @@ public final class Main
     appState.in( () -> {
       // This dynamic composition of shaders should be done at compile time
       final WebGL2RenderingContext gl = appState.gl();
-      final Mesh mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( WebGL2RenderingContext.TRIANGLES,
+      final Mesh mesh = new Mesh( PolyhedronGeometryFactory.createIsocahedron( gl,
+                                                                               WebGL2RenderingContext.TRIANGLES,
                                                                                20,
                                                                                20,
                                                                                PolyhedronGeometryFactory.NORMALS ),

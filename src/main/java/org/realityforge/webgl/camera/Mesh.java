@@ -60,9 +60,9 @@ final class Mesh
     _color = new Attribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
     _textureCoordinate = new Attribute( textureCoordinatesAttribute,
                                         GL.getAttribLocation( gl, program, "textureCoordinate" ) );
-    positionAttribute.uploadToGpu( gl );
-    colorAttribute.uploadToGpu( gl );
-    textureCoordinatesAttribute.uploadToGpu( gl );
+    positionAttribute.uploadToGpu();
+    colorAttribute.uploadToGpu();
+    textureCoordinatesAttribute.uploadToGpu();
   }
 
   boolean areTexturesLoaded()

@@ -101,9 +101,10 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final Buffer positionBuffer = new Buffer( new Float32Array( positions ), new Accessor( 2 ) );
+    final Buffer positionBuffer = new Buffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
     final Attribute a_position = new Attribute( positionBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
-    final Buffer textureCoordinatesBuffer = new Buffer( new Float32Array( textureCoordinates ), new Accessor( 2 ) );
+    final Buffer textureCoordinatesBuffer =
+      new Buffer( _gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
     final Attribute a_textureCoordinate =
       new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 
@@ -118,8 +119,8 @@ public final class Main
     // Start using the program for all vertexes pass through gl until the program is changed
     _gl.useProgram( program );
 
-    positionBuffer.uploadToGpu( _gl );
-    textureCoordinatesBuffer.uploadToGpu( _gl );
+    positionBuffer.uploadToGpu();
+    textureCoordinatesBuffer.uploadToGpu();
     a_position.sendToGpu( _gl );
     a_textureCoordinate.sendToGpu( _gl );
 
