@@ -27,6 +27,8 @@ public final class Accessor
     assert dimension > 0 && dimension <= 4;
     assert stride >= 0 && stride <= 255;
     assert offset >= 0;
+    // Normalize should only be set to true for integer data types
+    assert !normalize || ( WebGL2RenderingContext.FLOAT != type && WebGL2RenderingContext.HALF_FLOAT != type );
     DataType.Validator.assertValid( type );
     _dimension = dimension;
     _type = type;
