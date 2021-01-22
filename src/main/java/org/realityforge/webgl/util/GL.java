@@ -6,7 +6,7 @@ import elemental3.Image;
 import elemental3.core.Float32Array;
 import elemental3.core.Uint16Array;
 import elemental3.gl.BufferTargetType;
-import elemental3.gl.DataType;
+import elemental3.gl.AttributeDataType;
 import elemental3.gl.GLSL;
 import elemental3.gl.ShaderType;
 import elemental3.gl.TextureMagnificationFilter;
@@ -68,7 +68,7 @@ public final class GL
                                 final int index,
                                 @BufferTargetType final int target,
                                 @VertexDimensions final int size,
-                                @DataType final int type,
+                                @AttributeDataType final int type,
                                 final int stride,
                                 final int offset )
   {

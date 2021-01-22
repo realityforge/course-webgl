@@ -16,7 +16,7 @@ import org.intellij.lang.annotations.MagicConstant;
         WebGL2RenderingContext.HALF_FLOAT
     }
 )
-public @interface DataType {
+public @interface AttributeDataType {
   final class Validator {
     private Validator() {
     }

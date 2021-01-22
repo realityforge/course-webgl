@@ -13,7 +13,7 @@ public final class Accessor
 {
   @VertexDimensions
   private final int _componentCount;
-  @DataType
+  @AttributeDataType
   private final int _componentType;
   private final boolean _normalize;
   private final int _stride;
@@ -24,13 +24,13 @@ public final class Accessor
     this( componentCount, WebGL2RenderingContext.FLOAT );
   }
 
-  public Accessor( @VertexDimensions final int componentCount, @DataType final int componentType )
+  public Accessor( @VertexDimensions final int componentCount, @AttributeDataType final int componentType )
   {
     this( componentCount, componentType, 0, 0 );
   }
 
   public Accessor( @VertexDimensions final int componentCount,
-                   @DataType final int componentType,
+                   @AttributeDataType final int componentType,
                    final int stride,
                    final int offset )
   {
@@ -38,7 +38,7 @@ public final class Accessor
   }
 
   public Accessor( @VertexDimensions final int componentCount,
-                   @DataType final int componentType,
+                   @AttributeDataType final int componentType,
                    final boolean normalize,
                    final int stride,
                    final int offset )
@@ -49,7 +49,7 @@ public final class Accessor
     // Normalize should only be set to true for integer data types
     assert !normalize || ( WebGL2RenderingContext.FLOAT != componentType &&
                            WebGL2RenderingContext.HALF_FLOAT != componentType );
-    DataType.Validator.assertValid( componentType );
+    AttributeDataType.Validator.assertValid( componentType );
     _componentCount = componentCount;
     _componentType = componentType;
     _normalize = normalize;
@@ -69,7 +69,7 @@ public final class Accessor
   /**
    * @return the data type of each component in the vertex attribute.
    */
-  @DataType
+  @AttributeDataType
   public int getComponentType()
   {
     return _componentType;
