@@ -1,5 +1,11 @@
 package org.realityforge.webgl.util.v2;
 
+import elemental3.core.Float32Array;
+import elemental3.core.Int16Array;
+import elemental3.core.Int8Array;
+import elemental3.core.Uint16Array;
+import elemental3.core.Uint8Array;
+import elemental3.gl.AttributeDataType;
 import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
 
@@ -54,6 +60,9 @@ public final class Accessor
     _normalize = normalize;
     _stride = stride;
     _offset = offset;
+    assert 0 == stride || stride >= getBytesPerVertex() :
+      "Stride must be 0 or be greater the the bytesPerVertex. " +
+      "stride=" + stride + " bytesPerVertex=" + getBytesPerVertex();
   }
 
   /**
@@ -103,5 +112,50 @@ public final class Accessor
   public int getOffset()
   {
     return _offset;
+  }
+
+  /**
+   * Return the number of bytes used to represent each component.
+   *
+   * @return the number of bytes used to represent each component.
+   */
+  public int getBytesPerComponent()
+  {
+    if ( WebGL2RenderingContext.FLOAT == _componentType )
+    {
+      return Float32Array.BYTES_PER_ELEMENT;
+    }
+    else if ( WebGL2RenderingContext.UNSIGNED_SHORT == _componentType )
+    {
+      return Uint16Array.BYTES_PER_ELEMENT;
+    }
+    else if ( WebGL2RenderingContext.UNSIGNED_BYTE == _componentType )
+    {
+      return Uint8Array.BYTES_PER_ELEMENT;
+    }
+    else if ( WebGL2RenderingContext.BYTE == _componentType )
+    {
+      return Int8Array.BYTES_PER_ELEMENT;
+    }
+    else if ( WebGL2RenderingContext.SHORT == _componentType )
+    {
+      return Int16Array.BYTES_PER_ELEMENT;
+    }
+    else
+    {
+      assert WebGL2RenderingContext.HALF_FLOAT == _componentType;
+      return Float32Array.BYTES_PER_ELEMENT / 2;
+    }
+  }
+
+  /**
+   * Returns the number of bytes per "vertex" attribute.
+   * This is based on the component type and component count and ignores stride.
+   *
+   * @return the number of bytes per "vertex" attribute.
+   */
+  public int getBytesPerVertex()
+  {
+    return getBytesPerComponent() * _componentCount;
   }
 }
