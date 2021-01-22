@@ -1,6 +1,5 @@
 package org.realityforge.webgl.util.v2;
 
-import elemental3.gl.DataType;
 import elemental3.gl.VertexDimensions;
 import elemental3.gl.WebGL2RenderingContext;
 
