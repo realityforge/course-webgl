@@ -60,8 +60,8 @@ public final class Attribute
     _buffer.bind();
     final Accessor accessor = _buffer.getAccessor();
     gl.vertexAttribPointer( _location,
-                            accessor.getDimension(),
-                            accessor.getType(),
+                            accessor.getComponentCount(),
+                            accessor.getComponentType(),
                             accessor.shouldNormalize(),
                             accessor.getStride(),
                             accessor.getOffset() );

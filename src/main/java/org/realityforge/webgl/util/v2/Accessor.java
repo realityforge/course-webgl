@@ -12,45 +12,46 @@ import elemental3.gl.WebGL2RenderingContext;
 public final class Accessor
 {
   @VertexDimensions
-  private final int _dimension;
+  private final int _componentCount;
   @DataType
-  private final int _type;
+  private final int _componentType;
   private final boolean _normalize;
   private final int _stride;
   private final int _offset;
 
-  public Accessor( @VertexDimensions final int dimension )
+  public Accessor( @VertexDimensions final int componentCount )
   {
-    this( dimension, WebGL2RenderingContext.FLOAT );
+    this( componentCount, WebGL2RenderingContext.FLOAT );
   }
 
-  public Accessor( @VertexDimensions final int dimension, @DataType final int type )
+  public Accessor( @VertexDimensions final int componentCount, @DataType final int componentType )
   {
-    this( dimension, type, 0, 0 );
+    this( componentCount, componentType, 0, 0 );
   }
 
-  public Accessor( @VertexDimensions final int dimension,
-                   @DataType final int type,
+  public Accessor( @VertexDimensions final int componentCount,
+                   @DataType final int componentType,
                    final int stride,
                    final int offset )
   {
-    this( dimension, type, false, stride, offset );
+    this( componentCount, componentType, false, stride, offset );
   }
 
-  public Accessor( @VertexDimensions final int dimension,
-                   @DataType final int type,
+  public Accessor( @VertexDimensions final int componentCount,
+                   @DataType final int componentType,
                    final boolean normalize,
                    final int stride,
                    final int offset )
   {
-    assert dimension > 0 && dimension <= 4;
+    assert componentCount > 0 && componentCount <= 4;
     assert stride >= 0 && stride <= 255;
     assert offset >= 0;
     // Normalize should only be set to true for integer data types
-    assert !normalize || ( WebGL2RenderingContext.FLOAT != type && WebGL2RenderingContext.HALF_FLOAT != type );
-    DataType.Validator.assertValid( type );
-    _dimension = dimension;
-    _type = type;
+    assert !normalize || ( WebGL2RenderingContext.FLOAT != componentType &&
+                           WebGL2RenderingContext.HALF_FLOAT != componentType );
+    DataType.Validator.assertValid( componentType );
+    _componentCount = componentCount;
+    _componentType = componentType;
     _normalize = normalize;
     _stride = stride;
     _offset = offset;
@@ -60,18 +61,18 @@ public final class Accessor
    * @return the number of components per vertex attribute.
    */
   @VertexDimensions
-  public int getDimension()
+  public int getComponentCount()
   {
-    return _dimension;
+    return _componentCount;
   }
 
   /**
    * @return the data type of each component in the vertex attribute.
    */
   @DataType
-  public int getType()
+  public int getComponentType()
   {
-    return _type;
+    return _componentType;
   }
 
   /**
