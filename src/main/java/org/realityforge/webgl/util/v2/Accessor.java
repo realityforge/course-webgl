@@ -99,7 +99,7 @@ public final class Accessor
   }
 
   /**
-   * @return the offset in bytes of the first component in the vertex attribute buffer. Must be a multiple of the byte length of type.
+   * @return the offset in bytes of the first vertex attribute in the vertex attribute buffer. Must be a multiple of the byte length of type.
    */
   public int getOffset()
   {
