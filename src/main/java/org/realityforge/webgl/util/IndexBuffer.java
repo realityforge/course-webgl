@@ -53,11 +53,6 @@ public final class IndexBuffer
     return _type;
   }
 
-  public boolean isBufferOnGpu()
-  {
-    return hasHandle();
-  }
-
   public void uploadToGpu()
   {
     final WebGL2RenderingContext gl = gl();
