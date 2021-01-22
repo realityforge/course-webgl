@@ -4,10 +4,8 @@ import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webgl.util.v2.Disposable;
 
 public abstract class Resource<T>
-  implements Disposable
 {
   /**
    * GL context to which this resource belongs.
@@ -30,7 +28,7 @@ public abstract class Resource<T>
     return _gl;
   }
 
-  protected final boolean hasHandle()
+  public final boolean isAllocated()
   {
     return null != _handle;
   }
@@ -47,21 +45,34 @@ public abstract class Resource<T>
     _handle = handle;
   }
 
-  @Override
-  public final void dispose()
+  public void allocate()
   {
-    if ( hasHandle() )
+    release();
+    setHandle( allocateResource() );
+  }
+
+  public final void release()
+  {
+    if ( isAllocated() )
     {
       final T handle = getHandle();
       setHandle( null );
-      disposeResource( handle );
+      releaseResource( handle );
     }
   }
 
   /**
-   * Actually perform the dispose of the underlying resource.
+   * Allocate the underlying resource.
+   *
+   * @return the resource handle.
+   */
+  @Nonnull
+  protected abstract T allocateResource();
+
+  /**
+   * Actually perform the release of the underlying resource.
    *
    * @param handle the resource handle.
    */
-  protected abstract void disposeResource( @Nonnull T handle );
+  protected abstract void releaseResource( @Nonnull T handle );
 }
