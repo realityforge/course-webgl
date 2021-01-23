@@ -42,7 +42,7 @@ public final class Geometry
   {
     final AppState appState = AppState.get();
     appState.in( () -> {
-      uploadBuffers( appState );
+      uploadBuffers();
       buildVertexArrayObject( appState );
     } );
   }
@@ -83,7 +83,7 @@ public final class Geometry
     _vertexArrayObject = vertexArrayObject;
   }
 
-  private void uploadBuffers( @Nonnull final AppState appState )
+  private void uploadBuffers()
   {
     if ( null != _indexBuffer )
     {
