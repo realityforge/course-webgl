@@ -16,10 +16,12 @@ public abstract class Resource<T>
   private final WebGL2RenderingContext _gl;
   @Nullable
   private T _handle;
+  private final boolean _isBindEnabled;
 
-  protected Resource( @Nonnull final WebGL2RenderingContext gl )
+  protected Resource( @Nonnull final WebGL2RenderingContext gl, final boolean isBindEnabled )
   {
     _gl = Objects.requireNonNull( gl );
+    _isBindEnabled = isBindEnabled;
   }
 
   @Nonnull
@@ -43,6 +45,21 @@ public abstract class Resource<T>
   protected final void setHandle( @Nullable final T handle )
   {
     _handle = handle;
+  }
+
+  public boolean isBindEnabled()
+  {
+    return _isBindEnabled;
+  }
+
+  public void bind()
+  {
+    assert !isBindEnabled() : "bind() invoked on a resource that does not return true from isBindEnabled()";
+  }
+
+  public void unbind()
+  {
+    assert !isBindEnabled() : "unbind() invoked on a resource that does not return true from isBindEnabled()";
   }
 
   /**

@@ -29,7 +29,7 @@ public final class IndexBuffer
                       @UsageType final int usage,
                       @DrawElementDataType final int type )
   {
-    super( gl );
+    super( gl, true );
     _data = data;
     _usage = usage;
     _type = type;
@@ -53,12 +53,13 @@ public final class IndexBuffer
     return _type;
   }
 
-
+  @Override
   public void bind()
   {
     gl().bindBuffer( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, getHandle() );
   }
 
+  @Override
   public void unbind()
   {
     gl().bindBuffer( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, null );

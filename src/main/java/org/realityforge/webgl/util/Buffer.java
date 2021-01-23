@@ -30,7 +30,7 @@ public final class Buffer
                  @UsageType final int usage,
                  @Nonnull final Accessor accessor )
   {
-    super( gl );
+    super( gl, true );
     _data = Objects.requireNonNull( data );
     _usage = usage;
     _accessor = Objects.requireNonNull( accessor );
@@ -54,11 +54,13 @@ public final class Buffer
     return _accessor;
   }
 
+  @Override
   public void bind()
   {
     gl().bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, getHandle() );
   }
 
+  @Override
   public void unbind()
   {
     gl().bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, null );
