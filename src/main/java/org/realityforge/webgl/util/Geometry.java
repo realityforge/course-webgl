@@ -87,14 +87,14 @@ public final class Geometry
   {
     if ( null != _indexBuffer )
     {
-      _indexBuffer.uploadToGpu();
+      _indexBuffer.allocate();
     }
     for ( final Attribute attribute : _attributes )
     {
       // TODO: Maybe we should assume attribute is valid by here
       if ( attribute.isLocationValid() )
       {
-        attribute.getBuffer().uploadToGpu();
+        attribute.getBuffer().allocate();
       }
     }
   }

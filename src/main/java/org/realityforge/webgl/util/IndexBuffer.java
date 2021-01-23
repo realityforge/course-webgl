@@ -53,13 +53,6 @@ public final class IndexBuffer
     return _type;
   }
 
-  public void uploadToGpu()
-  {
-    allocate();
-    final WebGL2RenderingContext gl = gl();
-    gl.bindBuffer( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, getHandle() );
-    gl.bufferData( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, _data, _usage );
-  }
 
   public void bind()
   {
@@ -75,8 +68,11 @@ public final class IndexBuffer
   @Override
   protected WebGLBuffer allocateResource()
   {
-    final WebGLBuffer buffer = gl().createBuffer();
+    final WebGL2RenderingContext gl = gl();
+    final WebGLBuffer buffer = gl.createBuffer();
     assert null != buffer;
+    gl.bindBuffer( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, getHandle() );
+    gl.bufferData( WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, _data, _usage );
     return buffer;
   }
 

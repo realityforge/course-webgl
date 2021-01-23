@@ -119,8 +119,8 @@ public final class Main
     // Start using the program for all vertexes pass through gl until the program is changed
     _gl.useProgram( program );
 
-    positionBuffer.uploadToGpu();
-    textureCoordinatesBuffer.uploadToGpu();
+    positionBuffer.allocate();
+    textureCoordinatesBuffer.allocate();
     a_position.sendToGpu( _gl );
     a_textureCoordinate.sendToGpu( _gl );
 

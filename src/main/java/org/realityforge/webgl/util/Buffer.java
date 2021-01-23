@@ -54,14 +54,6 @@ public final class Buffer
     return _accessor;
   }
 
-  public void uploadToGpu()
-  {
-    allocate();
-    final WebGL2RenderingContext gl = gl();
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, getHandle() );
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER, _data, _usage );
-  }
-
   public void bind()
   {
     gl().bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, getHandle() );
@@ -76,8 +68,11 @@ public final class Buffer
   @Override
   protected WebGLBuffer allocateResource()
   {
-    final WebGLBuffer buffer = gl().createBuffer();
+    final WebGL2RenderingContext gl = gl();
+    final WebGLBuffer buffer = gl.createBuffer();
     assert null != buffer;
+    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, buffer );
+    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER, _data, _usage );
     return buffer;
   }
 

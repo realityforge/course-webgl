@@ -129,10 +129,11 @@ final class Mesh
 
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
-    _positionAttribute.uploadToGpu();
-    _normalsAttribute.uploadToGpu();
-    _colorAttribute.uploadToGpu();
-    _textureCoordinatesAttribute.uploadToGpu();
+    _positionAttribute.allocate();
+    _normalsAttribute.allocate();
+    _colorAttribute.allocate();
+    _textureCoordinatesAttribute.allocate();
+
     _position.sendToGpu( gl );
     _normal.sendToGpu( gl );
     _color.sendToGpu( gl );
