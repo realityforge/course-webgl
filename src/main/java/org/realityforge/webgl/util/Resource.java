@@ -45,12 +45,20 @@ public abstract class Resource<T>
     _handle = handle;
   }
 
+  /**
+   * Allocate the underlying resource on the GPU and transfer data required to
+   * initialize the resource. If a resource is already allocated then the existing
+   * resource is {@link #release() released} and a new resource is allocated.
+   */
   public void allocate()
   {
     release();
     setHandle( allocateResource() );
   }
 
+  /**
+   * If a resource has been allocated then deallocate the resource.
+   */
   public final void release()
   {
     if ( isAllocated() )
