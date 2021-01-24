@@ -11,6 +11,7 @@ import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
+import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.AttributeBuffer;
@@ -19,7 +20,6 @@ import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Scene;
-import org.realityforge.webgl.util.Accessor;
 
 public final class Main
   implements EntryPoint

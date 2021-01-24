@@ -91,7 +91,8 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final AttributeBuffer positionsBuffer = new AttributeBuffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
+    final AttributeBuffer positionsBuffer =
+      new AttributeBuffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
     final Attribute a_position = new Attribute( positionsBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
     final AttributeBuffer textureCoordinatesBuffer =
       new AttributeBuffer( _gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );

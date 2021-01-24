@@ -24,7 +24,7 @@ public final class IndexBuffer
                       @UsageType final int usage,
                       @DrawElementDataType final int type )
   {
-    super( gl, data, usage,WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER );
+    super( gl, data, usage, WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER );
     DrawElementDataType.Validator.assertValid( type );
     _type = type;
   }

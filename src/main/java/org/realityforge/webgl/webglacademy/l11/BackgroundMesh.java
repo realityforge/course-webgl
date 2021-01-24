@@ -6,13 +6,13 @@ import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
-import org.realityforge.webgl.util.Accessor;
 
 final class BackgroundMesh
 {
