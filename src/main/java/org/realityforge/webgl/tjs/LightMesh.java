@@ -8,7 +8,7 @@ import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.Uniform;
@@ -20,7 +20,7 @@ final class LightMesh
   private final Uniform _color;
 
   LightMesh( @Nonnull final WebGL2RenderingContext gl,
-             @Nonnull final Buffer positionAttribute,
+             @Nonnull final AttributeBuffer positionAttribute,
              @GLSL @Nonnull final String vertexShaderSource,
              @GLSL @Nonnull final String fragmentShaderSource )
   {

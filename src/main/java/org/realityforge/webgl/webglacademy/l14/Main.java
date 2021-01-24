@@ -13,7 +13,7 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
@@ -103,8 +103,8 @@ public final class Main
       final WebGL2RenderingContext gl = appState.gl();
       final Geometry geometry =
         new Geometry( 6,
-                      new Attribute( new Buffer( gl, new Float32Array( positionData ), new Accessor( 2 ) ) ),
-                      new Attribute( new Buffer( gl, new Float32Array( uvData ), new Accessor( 2 ) ) ) );
+                      new Attribute( new AttributeBuffer( gl, new Float32Array( positionData ), new Accessor( 2 ) ) ),
+                      new Attribute( new AttributeBuffer( gl, new Float32Array( uvData ), new Accessor( 2 ) ) ) );
       GL.loadImage( "assets/palette_modified.jpg" )
         .thenAccept( image -> _palette = GL.prepareTexture( gl,
                                                             image,

@@ -8,7 +8,7 @@ import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
@@ -26,9 +26,9 @@ final class BackgroundMesh
   BackgroundMesh( @Nonnull final WebGL2RenderingContext gl )
   {
     final Attribute positionData =
-      new Attribute( new Buffer( gl,
-                                 new Float32Array( new double[]{ -1, 1, -1, -1, 1, -1, 1, 1 } ),
-                                 new Accessor( 2 ) ) );
+      new Attribute( new AttributeBuffer( gl,
+                                          new Float32Array( new double[]{ -1, 1, -1, -1, 1, -1, 1, 1 } ),
+                                          new Accessor( 2 ) ) );
     final IndexBuffer indexBuffer =
       new IndexBuffer( gl, new Uint16Array( new double[]{ 0, 1, 2, 0, 2, 3 } ), WebGL2RenderingContext.UNSIGNED_SHORT );
     _geometry = new Geometry( WebGL2RenderingContext.TRIANGLES, 0, 6, indexBuffer, positionData );

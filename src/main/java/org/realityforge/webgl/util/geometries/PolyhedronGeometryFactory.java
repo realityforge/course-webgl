@@ -15,7 +15,7 @@ import org.intellij.lang.annotations.MagicConstant;
 import org.realityforge.vecmath.Vector2d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.v2.Accessor;
@@ -144,14 +144,14 @@ public final class PolyhedronGeometryFactory
 
     // build non-indexed geometry
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new Buffer( gl, new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
+    attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
-      attributes.add( new Attribute( new Buffer( gl, new Float32Array( _normals ), new Accessor( 3 ) ) ) );
+      attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _normals ), new Accessor( 3 ) ) ) );
     }
     if ( null != _uvs )
     {
-      attributes.add( new Attribute( new Buffer( gl, new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
+      attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _uvs ), new Accessor( 2 ) ) ) );
     }
     _geometry = new Geometry( mode,
                               0,

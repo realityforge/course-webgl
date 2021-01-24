@@ -8,7 +8,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.v2.Accessor;
 
-public final class Buffer
+public final class AttributeBuffer
   extends Resource<WebGLBuffer>
 {
   @Nonnull
@@ -18,17 +18,17 @@ public final class Buffer
   @Nonnull
   private final Accessor _accessor;
 
-  public Buffer( @Nonnull final WebGL2RenderingContext gl,
-                 @Nonnull final ArrayBufferView data,
-                 @Nonnull final Accessor accessor )
+  public AttributeBuffer( @Nonnull final WebGL2RenderingContext gl,
+                          @Nonnull final ArrayBufferView data,
+                          @Nonnull final Accessor accessor )
   {
     this( gl, data, WebGL2RenderingContext.STATIC_DRAW, accessor );
   }
 
-  public Buffer( @Nonnull final WebGL2RenderingContext gl,
-                 @Nonnull final ArrayBufferView data,
-                 @UsageType final int usage,
-                 @Nonnull final Accessor accessor )
+  public AttributeBuffer( @Nonnull final WebGL2RenderingContext gl,
+                          @Nonnull final ArrayBufferView data,
+                          @UsageType final int usage,
+                          @Nonnull final Accessor accessor )
   {
     super( gl, true );
     _data = Objects.requireNonNull( data );

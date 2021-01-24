@@ -11,7 +11,7 @@ import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.TextureUniform;
@@ -91,10 +91,10 @@ public final class Main
     final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
     assert null != program;
 
-    final Buffer positionsBuffer = new Buffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
+    final AttributeBuffer positionsBuffer = new AttributeBuffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
     final Attribute a_position = new Attribute( positionsBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
-    final Buffer textureCoordinatesBuffer =
-      new Buffer( _gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
+    final AttributeBuffer textureCoordinatesBuffer =
+      new AttributeBuffer( _gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
     final Attribute a_textureCoordinate =
       new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
 

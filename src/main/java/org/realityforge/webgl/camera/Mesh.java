@@ -8,7 +8,7 @@ import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.TextureUniform;
 import org.realityforge.webgl.util.Uniform;
@@ -35,9 +35,9 @@ final class Mesh
   private final TextureUniform _textureData1;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Buffer positionAttribute,
-        @Nonnull final Buffer colorAttribute,
-        @Nonnull final Buffer textureCoordinatesAttribute,
+        @Nonnull final AttributeBuffer positionAttribute,
+        @Nonnull final AttributeBuffer colorAttribute,
+        @Nonnull final AttributeBuffer textureCoordinatesAttribute,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {

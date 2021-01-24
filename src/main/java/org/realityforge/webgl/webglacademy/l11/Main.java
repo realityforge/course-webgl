@@ -13,7 +13,7 @@ import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.AppState;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
@@ -123,21 +123,21 @@ public final class Main
         final int stride = 4 * ( 3 + 3 + 2 );
         final Float32Array vertices = new Float32Array( asset.getVertices() );
         final WebGL2RenderingContext gl = appState.gl();
-        final Buffer positionBuffer =
-          new Buffer( gl,
-                      vertices,
-                      WebGL2RenderingContext.STATIC_DRAW,
-                      new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
-        final Buffer normalBuffer =
-          new Buffer( gl,
-                      vertices,
-                      WebGL2RenderingContext.STATIC_DRAW,
-                      new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
-        final Buffer uvBuffer =
-          new Buffer( gl,
-                      vertices,
-                      WebGL2RenderingContext.STATIC_DRAW,
-                      new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
+        final AttributeBuffer positionBuffer =
+          new AttributeBuffer( gl,
+                               vertices,
+                               WebGL2RenderingContext.STATIC_DRAW,
+                               new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 0 ) );
+        final AttributeBuffer normalBuffer =
+          new AttributeBuffer( gl,
+                               vertices,
+                               WebGL2RenderingContext.STATIC_DRAW,
+                               new Accessor( 3, WebGL2RenderingContext.FLOAT, false, stride, 4 * 3 ) );
+        final AttributeBuffer uvBuffer =
+          new AttributeBuffer( gl,
+                               vertices,
+                               WebGL2RenderingContext.STATIC_DRAW,
+                               new Accessor( 2, WebGL2RenderingContext.FLOAT, false, stride, 4 * ( 3 + 3 ) ) );
         final Geometry geometry =
           new Geometry( WebGL2RenderingContext.TRIANGLES,
                         0,

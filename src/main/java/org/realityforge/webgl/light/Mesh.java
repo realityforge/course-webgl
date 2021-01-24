@@ -12,7 +12,7 @@ import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.Buffer;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Uniform;
@@ -28,13 +28,13 @@ final class Mesh
   @Nonnull
   private final Attribute _textureCoordinate;
   @Nonnull
-  private final Buffer _positionAttribute;
+  private final AttributeBuffer _positionAttribute;
   @Nonnull
-  private final Buffer _normalsAttribute;
+  private final AttributeBuffer _normalsAttribute;
   @Nonnull
-  private final Buffer _colorAttribute;
+  private final AttributeBuffer _colorAttribute;
   @Nonnull
-  private final Buffer _textureCoordinatesAttribute;
+  private final AttributeBuffer _textureCoordinatesAttribute;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -57,10 +57,10 @@ final class Mesh
   private final Uniform _cameraPosition;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final Buffer positionAttribute,
-        @Nonnull final Buffer normalsAttribute,
-        @Nonnull final Buffer colorAttribute,
-        @Nonnull final Buffer textureCoordinatesAttribute,
+        @Nonnull final AttributeBuffer positionAttribute,
+        @Nonnull final AttributeBuffer normalsAttribute,
+        @Nonnull final AttributeBuffer colorAttribute,
+        @Nonnull final AttributeBuffer textureCoordinatesAttribute,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
