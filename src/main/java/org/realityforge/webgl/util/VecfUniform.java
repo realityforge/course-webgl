@@ -14,7 +14,7 @@ public final class VecfUniform
   public VecfUniform( @Nonnull final WebGL2RenderingContext gl,
                       @Nonnull final WebGLProgram program,
                       @Nonnull final String name,
-                      final Float32Array values )
+                      @Nonnull final Float32Array values )
   {
     super( gl, program, name );
     _values = Objects.requireNonNull( values );
