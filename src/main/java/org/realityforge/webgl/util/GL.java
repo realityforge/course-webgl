@@ -82,10 +82,9 @@ public final class GL
                                             @GLSL @Nonnull final String vertexShaderSource,
                                             @GLSL @Nonnull final String fragmentShaderSource )
   {
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
+    final WebGLShader vertexShader = createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
     assert null != vertexShader;
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
+    final WebGLShader fragmentShader = createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
     assert null != fragmentShader;
     return createProgram( gl, vertexShader, fragmentShader );
   }
@@ -205,13 +204,13 @@ public final class GL
                                                    @Nonnull final String src,
                                                    final boolean flipYCoord )
   {
-    return loadTexture( src, image -> GL.prepareTexture( gl,
-                                                         image,
-                                                         flipYCoord,
-                                                         WebGL2RenderingContext.LINEAR,
-                                                         WebGL2RenderingContext.LINEAR,
-                                                         WebGL2RenderingContext.CLAMP_TO_EDGE,
-                                                         WebGL2RenderingContext.CLAMP_TO_EDGE ) );
+    return loadTexture( src, image -> prepareTexture( gl,
+                                                      image,
+                                                      flipYCoord,
+                                                      WebGL2RenderingContext.LINEAR,
+                                                      WebGL2RenderingContext.LINEAR,
+                                                      WebGL2RenderingContext.CLAMP_TO_EDGE,
+                                                      WebGL2RenderingContext.CLAMP_TO_EDGE ) );
   }
 
   public interface PrepareTextureFn
