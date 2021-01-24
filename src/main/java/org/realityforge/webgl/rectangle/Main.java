@@ -38,6 +38,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
     CanvasUtil.resize( gl, canvas );
 
     gl.clearColor( 0, 0, 0, 1 );
@@ -57,6 +58,5 @@ public final class Main
 
     gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
 }
