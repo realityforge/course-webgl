@@ -74,6 +74,17 @@ public abstract class Resource<T>
   }
 
   /**
+   * Allocate the underlying resource unless it has already been allocated.
+   */
+  public void allocateIfNecessary()
+  {
+    if ( !isAllocated() )
+    {
+      allocate();
+    }
+  }
+
+  /**
    * If a resource has been allocated then deallocate the resource.
    */
   public final void release()

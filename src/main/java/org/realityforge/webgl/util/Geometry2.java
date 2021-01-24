@@ -58,11 +58,11 @@ public final class Geometry2
     // Upload the buffers ... outside the scope of the VAO
     if ( null != _indexBuffer )
     {
-      _indexBuffer.allocate();
+      _indexBuffer.allocateIfNecessary();
     }
     for ( final Attribute attribute : _attributes )
     {
-      attribute.getBuffer().allocate();
+      attribute.getBuffer().allocateIfNecessary();
     }
 
     final WebGL2RenderingContext gl = gl();
