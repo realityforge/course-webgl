@@ -55,7 +55,7 @@ public final class Geometry2
   @Override
   protected WebGLVertexArrayObject allocateResource()
   {
-    // Upload the buffers .., outside the scope of the VAO
+    // Upload the buffers ... outside the scope of the VAO
     if ( null != _indexBuffer )
     {
       _indexBuffer.allocate();
