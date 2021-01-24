@@ -77,6 +77,6 @@ final class LightMesh
   void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
   {
     _positionAttribute.allocate();
-    _position.sendToGpu( gl );
+    _position.sendToGpu();
   }
 }

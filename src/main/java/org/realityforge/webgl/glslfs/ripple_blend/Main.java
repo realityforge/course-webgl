@@ -121,8 +121,8 @@ public final class Main
 
     positionBuffer.allocate();
     textureCoordinatesBuffer.allocate();
-    a_position.sendToGpu( _gl );
-    a_textureCoordinate.sendToGpu( _gl );
+    a_position.sendToGpu();
+    a_textureCoordinate.sendToGpu();
 
     Global.requestAnimationFrame( t -> renderFrame( canvas ) );
   }

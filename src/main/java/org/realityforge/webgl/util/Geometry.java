@@ -64,7 +64,7 @@ public final class Geometry
       // TODO: Maybe we should assume attribute is valid by here
       if ( attribute.isLocationValid() )
       {
-        attribute.sendToGpu( gl );
+        attribute.sendToGpu();
       }
     }
     appState.bindVertexArrayObject( null );

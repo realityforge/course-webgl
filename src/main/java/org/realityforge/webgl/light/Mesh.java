@@ -134,10 +134,10 @@ final class Mesh
     _colorAttribute.allocate();
     _textureCoordinatesAttribute.allocate();
 
-    _position.sendToGpu( gl );
-    _normal.sendToGpu( gl );
-    _color.sendToGpu( gl );
-    _textureCoordinate.sendToGpu( gl );
+    _position.sendToGpu();
+    _normal.sendToGpu();
+    _color.sendToGpu();
+    _textureCoordinate.sendToGpu();
 
     gl.useProgram( _program );
 

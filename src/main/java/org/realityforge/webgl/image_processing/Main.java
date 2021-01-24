@@ -176,8 +176,8 @@ public final class Main
 
     positionsBuffer.allocate();
     textureCoordinatesBuffer.allocate();
-    a_position.sendToGpu( _gl );
-    a_textureCoordinate.sendToGpu( _gl );
+    a_position.sendToGpu();
+    a_textureCoordinate.sendToGpu();
     u_isGrayscale.sendToGpu( _gl );
     u_isInverse.sendToGpu( _gl );
     u_isKernel.sendToGpu( _gl );

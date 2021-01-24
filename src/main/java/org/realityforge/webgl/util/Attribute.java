@@ -52,9 +52,10 @@ public final class Attribute
     _location = location;
   }
 
-  public void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
+  public void sendToGpu()
   {
     assert isLocationValid();
+    final WebGL2RenderingContext gl = _buffer.gl();
     gl.enableVertexAttribArray( _location );
     _buffer.bind();
     final Accessor accessor = _buffer.getAccessor();
