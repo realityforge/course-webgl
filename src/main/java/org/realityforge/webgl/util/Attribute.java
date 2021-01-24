@@ -3,7 +3,6 @@ package org.realityforge.webgl.util;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.v2.Accessor;
 
 public final class Attribute
 {

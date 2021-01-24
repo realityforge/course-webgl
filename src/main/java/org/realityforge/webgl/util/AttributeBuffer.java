@@ -5,7 +5,6 @@ import elemental3.gl.UsageType;
 import elemental3.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.v2.Accessor;
 
 public final class AttributeBuffer
   extends Buffer

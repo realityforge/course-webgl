@@ -15,7 +15,7 @@ import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
-import org.realityforge.webgl.util.v2.Accessor;
+import org.realityforge.webgl.util.Accessor;
 
 public final class Main
   implements EntryPoint

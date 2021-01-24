@@ -20,7 +20,7 @@ import org.realityforge.webgl.util.FloatUniform;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.TextureUniform;
 import org.realityforge.webgl.util.VecfUniform;
-import org.realityforge.webgl.util.v2.Accessor;
+import org.realityforge.webgl.util.Accessor;
 
 public final class Main
   implements EntryPoint

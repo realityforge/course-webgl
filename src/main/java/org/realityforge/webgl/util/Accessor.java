@@ -1,4 +1,4 @@
-package org.realityforge.webgl.util.v2;
+package org.realityforge.webgl.util;
 
 import elemental3.core.Float32Array;
 import elemental3.core.Int16Array;

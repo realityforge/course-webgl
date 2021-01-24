@@ -19,7 +19,7 @@ import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.util.Scene;
-import org.realityforge.webgl.util.v2.Accessor;
+import org.realityforge.webgl.util.Accessor;
 
 public final class Main
   implements EntryPoint

@@ -5,7 +5,7 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.AttributeBuffer;
-import org.realityforge.webgl.util.v2.Accessor;
+import org.realityforge.webgl.util.Accessor;
 
 final class CubeTemplate
 {

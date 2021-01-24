@@ -14,7 +14,7 @@ import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
-import org.realityforge.webgl.util.v2.Accessor;
+import org.realityforge.webgl.util.Accessor;
 
 /**
  * This file was extracted from https://github.com/mrdoob/three.js/blob/1040b5c9718eeb1b011b770ba56217ced3ca6bcc/src/geometries/BoxBufferGeometry.js

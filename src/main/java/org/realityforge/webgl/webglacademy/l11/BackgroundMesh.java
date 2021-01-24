@@ -12,7 +12,7 @@ import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry;
 import org.realityforge.webgl.util.IndexBuffer;
-import org.realityforge.webgl.util.v2.Accessor;
+import org.realityforge.webgl.util.Accessor;
 
 final class BackgroundMesh
 {
