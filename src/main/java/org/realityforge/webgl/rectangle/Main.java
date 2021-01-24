@@ -13,7 +13,7 @@ import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.Attribute;
 import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
-import org.realityforge.webgl.util.Geometry;
+import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.MathUtil;
 
@@ -97,7 +97,7 @@ public final class Main
   private final Matrix4d _viewMatrix = new Matrix4d();
   @Nonnull
   private final Matrix4d _projectionMatrix = new Matrix4d();
-  private Geometry _geometry;
+  private Geometry2 _geometry;
   private Material _material;
 
   @Override
@@ -109,21 +109,21 @@ public final class Main
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     _geometry =
-      new Geometry( WebGL2RenderingContext.TRIANGLES,
-                    0,
-                    6,
-                    new IndexBuffer( gl, new Uint16Array( INDEXES ), WebGL2RenderingContext.UNSIGNED_SHORT ),
-                    new Attribute( new AttributeBuffer( gl,
-                                                        new Float32Array( POSITIONS ),
-                                                        new Accessor( 3 ) ) ),
-                    new Attribute( new AttributeBuffer( gl,
-                                                        new Float32Array( COLORS ),
-                                                        new Accessor( 4 ) ) ) );
-    _geometry.uploadToGpu();
-
+      new Geometry2( gl,
+                     WebGL2RenderingContext.TRIANGLES,
+                     0,
+                     6,
+                     new IndexBuffer( gl, new Uint16Array( INDEXES ), WebGL2RenderingContext.UNSIGNED_SHORT ),
+                     new Attribute( new AttributeBuffer( gl,
+                                                         new Float32Array( POSITIONS ),
+                                                         new Accessor( 3 ) ) ),
+                     new Attribute( new AttributeBuffer( gl,
+                                                         new Float32Array( COLORS ),
+                                                         new Accessor( 4 ) ) ) );
     _material = new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
     _geometry.getAttribute( 0 ).setLocation( _material.getPositionIndex() );
     _geometry.getAttribute( 1 ).setLocation( _material.getColorIndex() );
+    _geometry.allocate();
 
     Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
