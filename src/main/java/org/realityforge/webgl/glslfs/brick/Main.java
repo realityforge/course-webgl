@@ -7,15 +7,18 @@ import elemental3.core.Float32Array;
 import elemental3.core.Uint16Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
 import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
-import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.webgl.util.Accessor;
+import org.realityforge.webgl.util.Attribute;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.Geometry2;
+import org.realityforge.webgl.util.IndexBuffer;
 import org.realityforge.webgl.util.MathUtil;
 
 public final class Main
@@ -98,7 +101,7 @@ public final class Main
   private WebGLUniformLocation _viewMatrixLocation;
   private WebGLUniformLocation _projectionMatrixLocation;
   private WebGLUniformLocation _resolutionLocation;
-  private WebGLVertexArrayObject _vertexArrayObject;
+  private Geometry2 _geometry;
 
   @Override
   public void onModuleLoad()
@@ -121,33 +124,18 @@ public final class Main
     _projectionMatrixLocation = GL.getUniformLocation( gl, _program, "projectionMatrix" );
     _resolutionLocation = GL.getUniformLocation( gl, _program, "u_resolution" );
 
-    final int positionIndex = gl.getAttribLocation( _program, "position" );
-    final WebGLVertexArrayObject vertexArrayObject = gl.createVertexArray();
-    assert null != vertexArrayObject;
-    // A bound vertexArrayObject will record the subsequent binds
-    gl.bindVertexArray( vertexArrayObject );
-
-    _vertexArrayObject = vertexArrayObject;
-
-    // The ELEMENT_ARRAY_BUFFER is accessed later "magically" via drawElements call
-    GL.prepareBuffer( gl,
-                      WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER,
-                      WebGL2RenderingContext.STATIC_DRAW,
-                      new Uint16Array( INDEXES ) );
-    final WebGLBuffer positionBuffer = GL.prepareBuffer( gl,
-                                                         WebGL2RenderingContext.ARRAY_BUFFER,
-                                                         WebGL2RenderingContext.STATIC_DRAW,
-                                                         new Float32Array( POSITIONS ) );
-    // Tell GPU to load position data into program from out buffer
-    GL.sendToGpu( gl,
-                  positionBuffer,
-                  positionIndex,
-                  WebGL2RenderingContext.ARRAY_BUFFER,
-                  3,
-                  WebGL2RenderingContext.FLOAT,
-                  0,
-                  0 );
-    gl.bindVertexArray( null );
+    _geometry = new Geometry2( gl,
+                               WebGL2RenderingContext.TRIANGLES,
+                               0,
+                               6,
+                               new IndexBuffer( gl,
+                                                new Uint16Array( INDEXES ),
+                                                WebGL2RenderingContext.UNSIGNED_SHORT ),
+                               new Attribute( new AttributeBuffer( gl,
+                                                                   new Float32Array( POSITIONS ),
+                                                                   new Accessor( 3 ) ),
+                                              GL.getAttribLocation( gl, _program, "position" ) ) );
+    _geometry.allocate();
 
     Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
@@ -166,12 +154,11 @@ public final class Main
     _viewMatrix.setIdentity();
 
     gl.useProgram( _program );
-    gl.bindVertexArray( _vertexArrayObject );
     gl.uniformMatrix4fv( _modelMatrixLocation, false, new Float32Array( _modelMatrix.toArray() ) );
     gl.uniformMatrix4fv( _viewMatrixLocation, false, new Float32Array( _viewMatrix.toArray() ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, new Float32Array( _projectionMatrix.toArray() ) );
     gl.uniform2f( _resolutionLocation, canvas.width, canvas.height );
 
-    gl.drawElements( WebGL2RenderingContext.TRIANGLES, 6, WebGL2RenderingContext.UNSIGNED_SHORT, 0 );
+    _geometry.draw();
   }
 }
