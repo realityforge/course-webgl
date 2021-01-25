@@ -2130,7 +2130,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawElements.xml">The definition of 'glDrawElements' in the 'OpenGL ES 2.0' specification.</a>
    */
   public native void drawElements(@DrawPrimitiveType int mode, int count,
-      @DrawElementDataType int type, int offset);
+      @DrawElementsDataType int type, int offset);
 
   /**
    * The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.
@@ -4926,7 +4926,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawElementsInstanced.xhtml">The definition of 'glDrawElementsInstanced' in the 'OpenGL ES 3.0' specification.</a>
    */
   public native void drawElementsInstanced(@DrawPrimitiveType int mode, int count,
-      @DrawElementDataType int type, int offset, int instanceCount);
+      @DrawElementsDataType int type, int offset, int instanceCount);
 
   /**
    * The WebGL2RenderingContext.drawRangeElements() method of the WebGL API renders primitives from array data in a given range.
@@ -4936,7 +4936,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawRangeElements.xhtml">The definition of 'glDrawRangeElements' in the 'OpenGL ES 3.0' specification.</a>
    */
   public native void drawRangeElements(@DrawPrimitiveType int mode, int start, int end, int count,
-      @DrawElementDataType int type, int offset);
+      @DrawElementsDataType int type, int offset);
 
   /**
    * The WebGL2RenderingContext.endQuery() method of the WebGL 2 API marks the end of a given query target.

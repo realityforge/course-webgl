@@ -13,7 +13,7 @@ import org.intellij.lang.annotations.MagicConstant;
         WebGL2RenderingContext.UNSIGNED_INT
     }
 )
-public @interface DrawElementDataType {
+public @interface DrawElementsDataType {
   final class Validator {
     private Validator() {
     }
