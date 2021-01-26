@@ -35,7 +35,7 @@ public final class PolyhedronGeometryFactory
   public static final int UVS = 0x02;
   // We use JsArray of doubles as this will autogrow and contains native js numbers
   @Nonnull
-  private JsArray<Double> _vertices = new JsArray<>();
+  private JsArray<Double> _positions = new JsArray<>();
   @Nonnull
   private final JsArray<Double> _indexes = new JsArray<>();
   @Nullable
@@ -103,7 +103,7 @@ public final class PolyhedronGeometryFactory
 
   private PolyhedronGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
                                      @DrawPrimitiveType final int mode,
-                                     @Nonnull double[] vertices,
+                                     @Nonnull double[] positions,
                                      @Nonnull int[] indices,
                                      final double radius,
                                      final int detail,
@@ -112,7 +112,7 @@ public final class PolyhedronGeometryFactory
     _uvs = UVS == ( UVS & options ) ? new JsArray<>() : null;
 
     // the subdivision creates the vertex buffer data
-    subdivide( vertices, indices, detail );
+    subdivide( positions, indices, detail );
 
     // all vertices should lie on a conceptual sphere with a given radius
     applyRadius( radius );
@@ -131,20 +131,20 @@ public final class PolyhedronGeometryFactory
       {
         // flat normals
         _normals = new JsArray<>();
-        _normals.setLength( _vertices.length );
+        _normals.setLength( _positions.length );
         computeVertexNormals();
       }
       else
       {
         // smooth normals
-        _normals = _vertices.slice();
+        _normals = _positions.slice();
         normalizeNormals();
       }
     }
 
     // build non-indexed geometry
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
+    attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _positions ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
       attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _normals ), new Accessor( 3 ) ) ) );
@@ -175,9 +175,9 @@ public final class PolyhedronGeometryFactory
     final double precision = Math.pow( 10, precisionPoints );
 
     final Vector3d v = new Vector3d();
-    for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
+    for ( int i = 0, iEnd = _positions.length; i < iEnd; i += 3 )
     {
-      getVector3d( _vertices, i, v );
+      getVector3d( _positions, i, v );
 
       final String key =
         Math.round( v.x * precision ) + "_" + Math.round( v.y * precision ) + "_" + Math.round( v.z * precision );
@@ -193,7 +193,7 @@ public final class PolyhedronGeometryFactory
 
       _indexes.push( index );
     }
-    _vertices = newVertices;
+    _positions = newVertices;
   }
 
   private void subdivide( @Nonnull double[] vertices,
@@ -279,13 +279,13 @@ public final class PolyhedronGeometryFactory
   {
     final Vector3d vertex = new Vector3d();
     // iterate over the entire buffer and apply the radius to each vertex
-    for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
+    for ( int i = 0, iEnd = _positions.length; i < iEnd; i += 3 )
     {
-      getVector3d( _vertices, i, vertex );
+      getVector3d( _positions, i, vertex );
 
       vertex.normalize().mul( radius );
 
-      setVector3d( _vertices, i, vertex );
+      setVector3d( _positions, i, vertex );
     }
   }
 
@@ -293,9 +293,9 @@ public final class PolyhedronGeometryFactory
   {
     assert null != _uvs;
     final Vector3d vertex = new Vector3d();
-    for ( int i = 0, iEnd = _vertices.length; i < iEnd; i += 3 )
+    for ( int i = 0, iEnd = _positions.length; i < iEnd; i += 3 )
     {
-      getVector3d( _vertices, i, vertex );
+      getVector3d( _positions, i, vertex );
 
       final double u = azimuth( vertex ) / 2 / Math.PI + 0.5;
       final double v = inclination( vertex ) / Math.PI + 0.5;
@@ -318,11 +318,11 @@ public final class PolyhedronGeometryFactory
     final Vector2d uvB = new Vector2d();
     final Vector2d uvC = new Vector2d();
 
-    for ( int i = 0, j = 0, iEnd = _vertices.length; i < iEnd; i += 9, j += 6 )
+    for ( int i = 0, j = 0, iEnd = _positions.length; i < iEnd; i += 9, j += 6 )
     {
-      a.set( _vertices.getAt( i ), _vertices.getAt( i + 1 ), _vertices.getAt( i + 2 ) );
-      b.set( _vertices.getAt( i + 3 ), _vertices.getAt( i + 4 ), _vertices.getAt( i + 5 ) );
-      c.set( _vertices.getAt( i + 6 ), _vertices.getAt( i + 7 ), _vertices.getAt( i + 8 ) );
+      a.set( _positions.getAt( i ), _positions.getAt( i + 1 ), _positions.getAt( i + 2 ) );
+      b.set( _positions.getAt( i + 3 ), _positions.getAt( i + 4 ), _positions.getAt( i + 5 ) );
+      c.set( _positions.getAt( i + 6 ), _positions.getAt( i + 7 ), _positions.getAt( i + 8 ) );
 
       uvA.set( _uvs.getAt( j ), _uvs.getAt( j + 1 ) );
       uvB.set( _uvs.getAt( j + 2 ), _uvs.getAt( j + 3 ) );
@@ -405,7 +405,7 @@ public final class PolyhedronGeometryFactory
 
     for ( int i = 0, iEnd = _normals.length; i < iEnd; i += 1 )
     {
-      _normals.setAt( i, _vertices.getAt( i ) );
+      _normals.setAt( i, _positions.getAt( i ) );
     }
     final Vector3d pA = new Vector3d();
     final Vector3d pB = new Vector3d();
@@ -414,9 +414,9 @@ public final class PolyhedronGeometryFactory
     for ( int i = 0, iEnd = _normals.length - 9; i < iEnd; i += 3 )
     {
       // Load three vertexes to form triangle
-      getVector3d( _vertices, i, pA );
-      getVector3d( _vertices, i + 3, pB );
-      getVector3d( _vertices, i + 6, pC );
+      getVector3d( _positions, i, pA );
+      getVector3d( _positions, i + 3, pB );
+      getVector3d( _positions, i + 6, pC );
 
       // Compute normal to face
       cb.cross( pC.sub( pB ), pA.sub( pB ) );
@@ -444,7 +444,7 @@ public final class PolyhedronGeometryFactory
 
   private void pushVertex( @Nonnull final Vector3d vertex )
   {
-    _vertices.push( vertex.x, vertex.y, vertex.z );
+    _positions.push( vertex.x, vertex.y, vertex.z );
   }
 
   private void setVector3d( @Nonnull final JsArray<Double> array, final int position, @Nonnull final Vector3d vector )

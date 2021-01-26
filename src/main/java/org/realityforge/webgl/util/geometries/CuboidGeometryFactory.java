@@ -33,7 +33,7 @@ public final class CuboidGeometryFactory
   @Nonnull
   private final JsArray<Double> _indices = new JsArray<>();
   @Nonnull
-  private final JsArray<Double> _vertices = new JsArray<>();
+  private final JsArray<Double> _positions = new JsArray<>();
   @Nullable
   private final JsArray<Double> _normals;
   @Nullable
@@ -98,7 +98,7 @@ public final class CuboidGeometryFactory
     buildPlane( 0, 1, 2, -1, -1, width, height, -depth, widthSegments, heightSegments, 5 );
 
     final List<Attribute> attributes = new ArrayList<>();
-    attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _vertices ), new Accessor( 3 ) ) ) );
+    attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _positions ), new Accessor( 3 ) ) ) );
     if ( null != _normals )
     {
       attributes.add( new Attribute( new AttributeBuffer( gl, new Float32Array( _normals ), new Accessor( 3 ) ) ) );
@@ -155,7 +155,7 @@ public final class CuboidGeometryFactory
         vector[ wIndex ] = depthHalf;
 
         // now apply vector to vertex buffer
-        _vertices.push( vector[ 0 ], vector[ 1 ], vector[ 2 ] );
+        _positions.push( vector[ 0 ], vector[ 1 ], vector[ 2 ] );
 
         if ( null != _normals )
         {
