@@ -1,7 +1,6 @@
 package org.realityforge.webgl.glslfs.ripple_blend;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
@@ -25,14 +24,14 @@ public final class Main
   private WebGLUniformLocation u_time;
   private WebGLUniformLocation u_image1;
   private WebGLUniformLocation u_image2;
-  private WebGL2RenderingContext _gl;
   private final long startedAt = System.currentTimeMillis();
+  private HTMLCanvasElement _canvas;
 
   @Override
   public void onModuleLoad()
   {
-    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
-    _gl = CanvasUtil.getWebGL2RenderingContext( canvas );
+    _canvas = CanvasUtil.createCanvas();
+    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( _canvas );
 
     final double[] positions = prepareRectVec2( -1.0, -1.0, 1.0, 1.0 );
     final double[] textureCoordinates = prepareRectVec2( 0.0, 0.0, 1.0, 1.0 );
@@ -88,60 +87,58 @@ public final class Main
       "  color = vec4(mix(color2, color1, fade).rgb, 1.0);\n" +
       "}\n";
 
-    final WebGLProgram program = GL.createProgram( _gl, vertexShaderSource, fragmentShaderSource );
+    final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
 
-    final AttributeBuffer positionBuffer = new AttributeBuffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
-    final Attribute a_position = new Attribute( positionBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
+    final AttributeBuffer positionBuffer = new AttributeBuffer( gl, new Float32Array( positions ), new Accessor( 2 ) );
+    final Attribute a_position = new Attribute( positionBuffer, GL.getAttribLocation( gl, program, "a_position" ) );
     final AttributeBuffer textureCoordinatesBuffer =
-      new AttributeBuffer( _gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
+      new AttributeBuffer( gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
     final Attribute a_textureCoordinate =
-      new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
+      new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( gl, program, "a_textureCoordinate" ) );
 
-    GL.loadTexture( _gl, "img/sa1.jpg" ).thenAccept( texture -> _texture1 = texture );
-    GL.loadTexture( _gl, "img/sa2.jpg" ).thenAccept( texture -> _texture2 = texture );
+    GL.loadTexture( gl, "img/sa1.jpg" ).thenAccept( texture -> _texture1 = texture );
+    GL.loadTexture( gl, "img/sa2.jpg" ).thenAccept( texture -> _texture2 = texture );
 
-    u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
-    u_time = GL.getUniformLocation( _gl, program, "u_time" );
-    u_image1 = GL.getUniformLocation( _gl, program, "u_image1" );
-    u_image2 = GL.getUniformLocation( _gl, program, "u_image2" );
+    u_resolution = GL.getUniformLocation( gl, program, "u_resolution" );
+    u_time = GL.getUniformLocation( gl, program, "u_time" );
+    u_image1 = GL.getUniformLocation( gl, program, "u_image1" );
+    u_image2 = GL.getUniformLocation( gl, program, "u_image2" );
 
     // Start using the program for all vertexes pass through gl until the program is changed
-    _gl.useProgram( program );
+    gl.useProgram( program );
 
     positionBuffer.allocate();
     textureCoordinatesBuffer.allocate();
     a_position.sendToGpu();
     a_textureCoordinate.sendToGpu();
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
+    CanvasUtil.renderLoop( _canvas, gl, this::renderFrame );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
     if ( null == _texture1 || null == _texture2 )
     {
       return;
     }
-    CanvasUtil.resize( _gl, canvas );
 
-    _gl.clearColor( 0, 0, 0, 1 );
-    _gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
+    gl.clearColor( 0, 0, 0, 1 );
+    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
 
-    _gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
-    _gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
-    _gl.uniform1i( u_image1, 0 );
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture1 );
+    gl.uniform1i( u_image1, 0 );
 
-    _gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + 1 );
-    _gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
-    _gl.uniform1i( u_image2, 1 );
+    gl.activeTexture( WebGL2RenderingContext.TEXTURE0 + 1 );
+    gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture2 );
+    gl.uniform1i( u_image2, 1 );
 
     final float time = ( ( System.currentTimeMillis() - startedAt ) / 50.0F ) / (float) ( 2 * Math.PI );
-    _gl.uniform1f( u_time, time );
-    _gl.uniform2f( u_resolution, canvas.width, canvas.height );
+    gl.uniform1f( u_time, time );
+    gl.uniform2f( u_resolution, _canvas.width, _canvas.height );
 
-    _gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 6 );
+    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 6 );
   }
 
   @SuppressWarnings( "SameParameterValue" )

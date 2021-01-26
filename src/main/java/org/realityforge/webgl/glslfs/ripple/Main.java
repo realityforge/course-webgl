@@ -1,7 +1,6 @@
 package org.realityforge.webgl.glslfs.ripple;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
@@ -22,14 +21,14 @@ public final class Main
   private TextureUniform u_image;
   private WebGLUniformLocation u_resolution;
   private WebGLUniformLocation u_time;
-  private WebGL2RenderingContext _gl;
   private final long startedAt = System.currentTimeMillis();
+  private HTMLCanvasElement _canvas;
 
   @Override
   public void onModuleLoad()
   {
-    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
-    _gl = CanvasUtil.getWebGL2RenderingContext( canvas );
+    _canvas = CanvasUtil.createCanvas();
+    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( _canvas );
 
     final double[] positions = prepareRectVec2( -1.0, -1.0, 1.0, 1.0 );
     final double[] textureCoordinates = prepareRectVec2( 0.0, 0.0, 1.0, 1.0 );
@@ -78,53 +77,51 @@ public final class Main
       "  color = vec4(texture(u_image, vec2(1.0) - st).rgb, 1.0);\n" +
       "}\n";
 
-    final WebGLProgram program = GL.createProgram( _gl, vertexShaderSource, fragmentShaderSource );
+    final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
 
     final AttributeBuffer positionsBuffer =
-      new AttributeBuffer( _gl, new Float32Array( positions ), new Accessor( 2 ) );
-    final Attribute a_position = new Attribute( positionsBuffer, GL.getAttribLocation( _gl, program, "a_position" ) );
+      new AttributeBuffer( gl, new Float32Array( positions ), new Accessor( 2 ) );
+    final Attribute a_position = new Attribute( positionsBuffer, GL.getAttribLocation( gl, program, "a_position" ) );
     final AttributeBuffer textureCoordinatesBuffer =
-      new AttributeBuffer( _gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
+      new AttributeBuffer( gl, new Float32Array( textureCoordinates ), new Accessor( 2 ) );
     final Attribute a_textureCoordinate =
-      new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( _gl, program, "a_textureCoordinate" ) );
+      new Attribute( textureCoordinatesBuffer, GL.getAttribLocation( gl, program, "a_textureCoordinate" ) );
 
-    u_image = new TextureUniform( _gl, program, "u_image", "img/4KSample.jpg", 0 );
-    u_resolution = GL.getUniformLocation( _gl, program, "u_resolution" );
-    u_time = GL.getUniformLocation( _gl, program, "u_time" );
+    u_image = new TextureUniform( gl, program, "u_image", "img/4KSample.jpg", 0 );
+    u_resolution = GL.getUniformLocation( gl, program, "u_resolution" );
+    u_time = GL.getUniformLocation( gl, program, "u_time" );
 
     // Start using the program for all vertexes pass through gl until the program is changed
-    _gl.useProgram( program );
+    gl.useProgram( program );
 
     positionsBuffer.allocate();
     textureCoordinatesBuffer.allocate();
     a_position.sendToGpu();
     a_textureCoordinate.sendToGpu();
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
+    CanvasUtil.renderLoop( _canvas, gl, this::renderFrame );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
     if ( !u_image.isReady() )
     {
       return;
     }
     else
     {
-      u_image.sendToGpu( _gl );
+      u_image.sendToGpu( gl );
     }
-    CanvasUtil.resize( _gl, canvas );
 
-    _gl.clearColor( 0, 0, 0, 1 );
-    _gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
+    gl.clearColor( 0, 0, 0, 1 );
+    gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
 
     final float time = ( ( System.currentTimeMillis() - startedAt ) / 50.0F ) / (float) ( 2 * Math.PI );
-    _gl.uniform1f( u_time, time );
-    _gl.uniform2f( u_resolution, canvas.width, canvas.height );
+    gl.uniform1f( u_time, time );
+    gl.uniform2f( u_resolution, _canvas.width, _canvas.height );
 
-    _gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 6 );
+    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 6 );
   }
 
   @SuppressWarnings( "SameParameterValue" )

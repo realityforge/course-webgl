@@ -201,7 +201,7 @@ public final class Main
     document.addKeydownListener( this::onKeyDown );
     document.addKeyupListener( this::onKeyUp );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    CanvasUtil.renderLoop( canvas, gl, this::renderFrame );
   }
 
   private void onKeyDown( @Nonnull final KeyboardEvent event )
@@ -280,10 +280,8 @@ public final class Main
     }
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    CanvasUtil.resize( gl, canvas );
     if ( null == _mesh.getTexture1() || null == _mesh.getTexture2() )
     {
       return;

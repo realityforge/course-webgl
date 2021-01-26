@@ -175,7 +175,7 @@ public final class Main
     u_kernelWeight.sendToGpu( _gl );
     u_kernel.sendToGpu( _gl );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
+    CanvasUtil.renderLoop( canvas, _gl, this::renderFrame );
   }
 
   private void updateMode( final boolean greyScale,
@@ -193,9 +193,8 @@ public final class Main
     u_isColorPalette.sendToGpu( _gl );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas )
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas ) );
     if ( !u_image.isReady() || !u_colorPalette.isReady() )
     {
       return;
@@ -205,7 +204,6 @@ public final class Main
       u_image.sendToGpu( _gl );
       u_colorPalette.sendToGpu( _gl );
     }
-    CanvasUtil.resize( _gl, canvas );
 
     _gl.clearColor( 0, 0, 0, 1 );
     _gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );

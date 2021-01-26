@@ -1,7 +1,6 @@
 package org.realityforge.webgl.glslfs.texture_fire;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.core.Float32Array;
 import elemental3.core.Uint16Array;
@@ -132,14 +131,15 @@ public final class Main
   private final long startedAt = System.currentTimeMillis();
   private WebGLTexture _texture;
   private boolean _sentToCPU;
+  private HTMLCanvasElement _canvas;
 
   @Override
   public void onModuleLoad()
   {
-    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
-    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( canvas );
+    _canvas = CanvasUtil.createCanvas();
+    final WebGL2RenderingContext gl = CanvasUtil.getWebGL2RenderingContext( _canvas );
 
-    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( _canvas ), 0.1, 10.0 );
 
     final WebGLProgram program = GL.createProgram( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
     assert null != program;
@@ -181,12 +181,11 @@ public final class Main
                   0 );
     gl.bindVertexArray( null );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    CanvasUtil.renderLoop( _canvas, gl, this::renderFrame );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
     if ( null == _texture )
     {
       return;
@@ -199,7 +198,6 @@ public final class Main
       gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, _texture );
       gl.uniform1i( _textureLocation, 0 );
     }
-    CanvasUtil.resize( gl, canvas );
 
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
@@ -214,7 +212,7 @@ public final class Main
     gl.uniformMatrix4fv( _modelMatrixLocation, false, new Float32Array( _modelMatrix.toArray() ) );
     gl.uniformMatrix4fv( _viewMatrixLocation, false, new Float32Array( _viewMatrix.toArray() ) );
     gl.uniformMatrix4fv( _projectionMatrixLocation, false, new Float32Array( _projectionMatrix.toArray() ) );
-    gl.uniform2f( _resolutionLocation, canvas.width, canvas.height );
+    gl.uniform2f( _resolutionLocation, _canvas.width, _canvas.height );
     final float time = ( ( System.currentTimeMillis() - startedAt ) / 50.0F ) / (float) ( 2 * Math.PI );
     gl.uniform1f( _timeLocation, time );
 

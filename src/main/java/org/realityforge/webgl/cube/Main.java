@@ -1,7 +1,6 @@
 package org.realityforge.webgl.cube;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Global;
 import elemental3.HTMLCanvasElement;
 import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
@@ -87,14 +86,11 @@ public final class Main
     _geometry.getAttribute( 1 ).setLocation( _material.getColorIndex() );
     _geometry.allocate();
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    CanvasUtil.renderLoop( canvas, gl, this::renderFrame );
   }
 
-  private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
+  private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
-    CanvasUtil.resize( gl, canvas );
-
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT | WebGL2RenderingContext.DEPTH_BUFFER_BIT );
     gl.enable( WebGL2RenderingContext.DEPTH_TEST );

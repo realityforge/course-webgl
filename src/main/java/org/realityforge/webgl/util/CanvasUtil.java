@@ -8,6 +8,7 @@ import elemental3.HTMLElement;
 import elemental3.RenderContextType;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsFunction;
 
 public final class CanvasUtil
 {
@@ -24,6 +25,30 @@ public final class CanvasUtil
     assert null != body;
     body.appendChild( canvas );
     return canvas;
+  }
+
+  @JsFunction
+  public interface RenderFunction
+  {
+    void renderFrame( @Nonnull WebGL2RenderingContext gl );
+  }
+
+  public static void renderLoop( @Nonnull final HTMLCanvasElement canvas,
+                                 @Nonnull final WebGL2RenderingContext gl,
+                                 @Nonnull final RenderFunction renderFunction )
+  {
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl, renderFunction ) );
+    CanvasUtil.resize( gl, canvas );
+    renderFunction.renderFrame( gl );
+  }
+
+  private static void renderFrame( @Nonnull final HTMLCanvasElement canvas,
+                                   @Nonnull final WebGL2RenderingContext gl,
+                                   @Nonnull final RenderFunction renderFunction )
+  {
+    Global.requestAnimationFrame( t -> renderFrame( canvas, gl, renderFunction ) );
+    CanvasUtil.resize( gl, canvas );
+    renderFunction.renderFrame( gl );
   }
 
   public static void resize( @Nonnull final WebGL2RenderingContext gl, @Nonnull final HTMLCanvasElement canvas )
