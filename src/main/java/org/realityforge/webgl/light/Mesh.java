@@ -10,30 +10,15 @@ import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
-import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.Uniform;
 
 final class Mesh
 {
   @Nonnull
-  private final Attribute _position;
-  @Nonnull
-  private final Attribute _normal;
-  @Nonnull
-  private final Attribute _color;
-  @Nonnull
-  private final Attribute _textureCoordinate;
-  @Nonnull
-  private final AttributeBuffer _positionAttribute;
-  @Nonnull
-  private final AttributeBuffer _normalsAttribute;
-  @Nonnull
-  private final AttributeBuffer _colorAttribute;
-  @Nonnull
-  private final AttributeBuffer _textureCoordinatesAttribute;
+  private final Geometry2 _geometry;
   private WebGLTexture _texture1;
   private WebGLTexture _texture2;
   @Nonnull
@@ -56,10 +41,7 @@ final class Mesh
   private final Uniform _cameraPosition;
 
   Mesh( @Nonnull final WebGL2RenderingContext gl,
-        @Nonnull final AttributeBuffer positionAttribute,
-        @Nonnull final AttributeBuffer normalsAttribute,
-        @Nonnull final AttributeBuffer colorAttribute,
-        @Nonnull final AttributeBuffer textureCoordinatesAttribute,
+        @Nonnull final Geometry2 geometry,
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
@@ -78,26 +60,17 @@ final class Mesh
     _lightPosition = new Uniform( gl, program, "lightPosition" );
     _cameraPosition = new Uniform( gl, program, "cameraPosition" );
 
-    _positionAttribute = Objects.requireNonNull( positionAttribute );
-    _normalsAttribute = Objects.requireNonNull( normalsAttribute );
-    _colorAttribute = Objects.requireNonNull( colorAttribute );
-    _textureCoordinatesAttribute = Objects.requireNonNull( textureCoordinatesAttribute );
-    _position = new Attribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
-    _normal = new Attribute( normalsAttribute, GL.getAttribLocation( gl, program, "normal" ) );
-    _color = new Attribute( colorAttribute, GL.getAttribLocation( gl, program, "color" ) );
-    _textureCoordinate = new Attribute( textureCoordinatesAttribute,
-                                        GL.getAttribLocation( gl, program, "textureCoordinate" ) );
+    _geometry = Objects.requireNonNull( geometry );
+    _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    _geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
+    _geometry.getAttribute( 3 ).setLocation( GL.getAttribLocation( gl, program, "normal" ) );
   }
 
   @Nonnull
   WebGLProgram getProgram()
   {
     return _program;
-  }
-
-  boolean areTexturesLoaded()
-  {
-    return null != _texture1 && null != _texture2;
   }
 
   void render( @Nonnull final WebGL2RenderingContext gl,
@@ -107,35 +80,81 @@ final class Mesh
                @Nonnull final Light light,
                @Nonnull final Camera camera )
   {
-    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
-    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
-    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
+    gl.uniformMatrix4fv( getModelMatrix().getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( getViewMatrix().getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( getProjectionMatrix().getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
     final Vector3f color = light.getColor();
-    gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
+    gl.uniform3f( getLightColor().getLocation(), color.x, color.y, color.z );
     final Vector3f lightPosition = light.getPosition();
-    gl.uniform3f( _lightPosition.getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
+    gl.uniform3f( getLightPosition().getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
 
     final Vector3d eye = camera.getPosition();
-    gl.uniform3f( _cameraPosition.getLocation(), (float) eye.x, (float) eye.y, (float) eye.z );
+    gl.uniform3f( getCameraPosition().getLocation(), (float) eye.x, (float) eye.y, (float) eye.z );
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
+    _geometry.draw();
   }
 
-  void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
+  @Nonnull
+  Geometry2 getGeometry()
   {
-    _positionAttribute.allocate();
-    _normalsAttribute.allocate();
-    _colorAttribute.allocate();
-    _textureCoordinatesAttribute.allocate();
+    return _geometry;
+  }
 
-    _position.sendToGpu();
-    _normal.sendToGpu();
-    _color.sendToGpu();
-    _textureCoordinate.sendToGpu();
+  WebGLTexture getTexture1()
+  {
+    return _texture1;
+  }
 
-    gl.useProgram( _program );
+  WebGLTexture getTexture2()
+  {
+    return _texture2;
+  }
 
-    GL.bindTexture( gl, _textureData0, _texture1, 0 );
-    GL.bindTexture( gl, _textureData1, _texture2, 1 );
+  @Nonnull
+  Uniform getModelMatrix()
+  {
+    return _modelMatrix;
+  }
+
+  @Nonnull
+  Uniform getViewMatrix()
+  {
+    return _viewMatrix;
+  }
+
+  @Nonnull
+  Uniform getProjectionMatrix()
+  {
+    return _projectionMatrix;
+  }
+
+  @Nonnull
+  Uniform getTextureData0()
+  {
+    return _textureData0;
+  }
+
+  @Nonnull
+  Uniform getTextureData1()
+  {
+    return _textureData1;
+  }
+
+  @Nonnull
+  Uniform getLightColor()
+  {
+    return _lightColor;
+  }
+
+  @Nonnull
+  Uniform getLightPosition()
+  {
+    return _lightPosition;
+  }
+
+  @Nonnull
+  Uniform getCameraPosition()
+  {
+    return _cameraPosition;
   }
 }

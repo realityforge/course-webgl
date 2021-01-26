@@ -1,22 +1,16 @@
 package org.realityforge.webgl.light;
 
-import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.vecmath.Matrix4d;
-import org.realityforge.vecmath.Vector3f;
-import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.Uniform;
 
 final class LightMesh
 {
-  @Nonnull
-  private final Attribute _position;
   @Nonnull
   private final WebGLProgram _program;
   @Nonnull
@@ -28,10 +22,10 @@ final class LightMesh
   @Nonnull
   private final Uniform _color;
   @Nonnull
-  private final AttributeBuffer _positionAttribute;
+  private final Geometry2 _geometry;
 
   LightMesh( @Nonnull final WebGL2RenderingContext gl,
-             @Nonnull final AttributeBuffer positionAttribute,
+             @Nonnull final Geometry2 geometry,
              @GLSL @Nonnull final String vertexShaderSource,
              @GLSL @Nonnull final String fragmentShaderSource )
   {
@@ -43,8 +37,9 @@ final class LightMesh
     _projectionMatrix = new Uniform( gl, program, "projectionMatrix" );
     _color = new Uniform( gl, program, "color" );
 
-    _positionAttribute = Objects.requireNonNull( positionAttribute );
-    _position = new Attribute( positionAttribute, GL.getAttribLocation( gl, program, "position" ) );
+    _geometry = Objects.requireNonNull( geometry );
+    _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    _geometry.allocate();
   }
 
   @Nonnull
@@ -53,24 +48,33 @@ final class LightMesh
     return _program;
   }
 
-  void render( @Nonnull final WebGL2RenderingContext gl,
-               @Nonnull final Matrix4d modelMatrix,
-               @Nonnull final Matrix4d viewMatrix,
-               @Nonnull final Matrix4d projectionMatrix,
-               @Nonnull final Light light )
+  @Nonnull
+  Uniform getColor()
   {
-    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
-    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
-    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
-    final Vector3f color = light.getColor();
-    gl.uniform3f( _color.getLocation(), color.x, color.y, color.z );
-
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 36 );
+    return _color;
   }
 
-  void sendToGpu( @Nonnull final WebGL2RenderingContext gl )
+  @Nonnull
+  Uniform getProjectionMatrix()
   {
-    _positionAttribute.allocate();
-    _position.sendToGpu();
+    return _projectionMatrix;
+  }
+
+  @Nonnull
+  Uniform getViewMatrix()
+  {
+    return _viewMatrix;
+  }
+
+  @Nonnull
+  Uniform getModelMatrix()
+  {
+    return _modelMatrix;
+  }
+
+  @Nonnull
+  Geometry2 getGeometry()
+  {
+    return _geometry;
   }
 }
