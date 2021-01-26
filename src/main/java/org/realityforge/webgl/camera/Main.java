@@ -235,8 +235,6 @@ public final class Main
     // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
     updateCamera();
 
-    _camera.updateViewMatrix();
-
     gl.useProgram( _material.getProgram() );
     gl.uniformMatrix4fv( _material.getModelMatrix().getLocation(), false, new Float32Array( _modelMatrix.toArray() ) );
     gl.uniformMatrix4fv( _material.getViewMatrix().getLocation(),
@@ -294,5 +292,6 @@ public final class Main
     {
       _camera.setYaw( _camera.getYaw() + 0.02 );
     }
+    _camera.updateViewMatrix();
   }
 }
