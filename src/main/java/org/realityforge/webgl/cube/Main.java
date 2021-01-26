@@ -8,106 +8,14 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
-import org.realityforge.webgl.util.Accessor;
-import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.geometries.CubeGeometryFactory;
 
 public final class Main
   implements EntryPoint
 {
-  // Vertices position data
-  private static final double[] POSITIONS = new double[]
-    {
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, -0.5, 0.5,
-
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, 0.5, 0.5,
-
-      0.5, 0.5, 0.5,
-      0.5, 0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5
-    };
-  // Vertices color data in RGBA form
-  private static final double[] COLORS = new double[]
-    {
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0 // Left face
-    };
   // The vertex shader that will be run for every vertex
   @GLSL
   @Nonnull
@@ -173,14 +81,8 @@ public final class Main
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
     _material = new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
-    _geometry = new Geometry2( gl,
-                               36,
-                               new Attribute( new AttributeBuffer( gl,
-                                                                   new Float32Array( POSITIONS ),
-                                                                   new Accessor( 3 ) ) ),
-                               new Attribute( new AttributeBuffer( gl,
-                                                                   new Float32Array( COLORS ),
-                                                                   new Accessor( 4 ) ) ) );
+    _geometry = CubeGeometryFactory.create( gl, 0.5 );
+    //TODO: Fix these so we don't have to magically know indexes
     _geometry.getAttribute( 0 ).setLocation( _material.getPositionIndex() );
     _geometry.getAttribute( 1 ).setLocation( _material.getColorIndex() );
     _geometry.allocate();

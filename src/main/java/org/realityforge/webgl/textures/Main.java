@@ -97,7 +97,7 @@ public final class Main
     _material = new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
 
     final WebGLProgram program = _material.getProgram();
-    _geometry = CubeGeometryFactory.create( gl, WebGL2RenderingContext.TRIANGLES, 0.5 );
+    _geometry = CubeGeometryFactory.create( gl, 0.5 );
     //TODO: Fix these so we don't have to magically know indexes
     _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
     _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );

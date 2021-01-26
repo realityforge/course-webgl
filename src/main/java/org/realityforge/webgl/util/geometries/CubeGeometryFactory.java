@@ -36,20 +36,17 @@ public final class CubeGeometryFactory
 
   @Nonnull
   public static Geometry2 create( @Nonnull final WebGL2RenderingContext gl,
-                                  @DrawPrimitiveType final int mode,
                                   final double length )
   {
-    return create( gl, mode, length, UVS | COLORS );
+    return create( gl, length, UVS | COLORS );
   }
 
   @Nonnull
   public static Geometry2 create( @Nonnull final WebGL2RenderingContext gl,
-                                  @DrawPrimitiveType final int mode,
                                   final double length,
                                   @MagicConstant( flags = { UVS, COLORS } ) final int options )
   {
-    return new CubeGeometryFactory( gl, mode, length, options )
-      ._geometry;
+    return new CubeGeometryFactory( gl, WebGL2RenderingContext.TRIANGLES, length, options )._geometry;
   }
 
   private CubeGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
