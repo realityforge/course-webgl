@@ -6,15 +6,21 @@ import elemental3.HTMLCanvasElement;
 import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
+import org.realityforge.webgl.util.Accessor;
+import org.realityforge.webgl.util.Attribute;
+import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
+import org.realityforge.webgl.util.Geometry2;
 
 public class Main
   implements EntryPoint
 {
+  private WebGLProgram _program;
+  private Geometry2 _geometry;
+
   @Override
   public void onModuleLoad()
   {
@@ -82,46 +88,22 @@ public class Main
       "  finalColor = fcolor;" +
       "}\n";
 
-    // Create a GPU resource for position data
-    final WebGLBuffer positionBuffer = gl.createBuffer();
-    // Bind a gate between CPU and GPU
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
-
-    // Send data via ARRAY_BUFFER gate and whatever it is bound to which is a buffer in this case
-    // The last parameter is a hint indicating that this data is static and the CPU will not update it often
-    // which means that the GPU can store it close to where it is used without worrying about latency to update
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER,
-                   new Float32Array( positions ),
-                   WebGL2RenderingContext.STATIC_DRAW );
-
-    final WebGLBuffer colorBuffer = gl.createBuffer();
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
-    gl.bufferData( WebGL2RenderingContext.ARRAY_BUFFER,
-                   new Float32Array( colors ),
-                   WebGL2RenderingContext.STATIC_DRAW );
-
     final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
+    _program = program;
 
-    // Start using the program for all vertexes pass through gl until the program is changed
-    gl.useProgram( program );
-
-    // Tell GPU to load position data into program from out buffer
-    final int positionAttribLocation = GL.getAttribLocation( gl, program, "position" );
-    gl.enableVertexAttribArray( positionAttribLocation );
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, positionBuffer );
-    gl.vertexAttribPointer( positionAttribLocation,
-      /* the number of values to take for each vertex*/3,
-      /* Each value is a float */ WebGL2RenderingContext.FLOAT,
-      /* Not normalized */ false,
-      /* 0 stride is a special signal to gl to indicate that the next value immediately follows */ 0,
-      /* no offset so start at the start of the buffer */ 0 );
-
-    // Tell GPU to load color data into program from out buffer
-    final int colorAttribLocation = GL.getAttribLocation( gl, program, "color" );
-    gl.enableVertexAttribArray( colorAttribLocation );
-    gl.bindBuffer( WebGL2RenderingContext.ARRAY_BUFFER, colorBuffer );
-    gl.vertexAttribPointer( colorAttribLocation, 4, WebGL2RenderingContext.FLOAT, false, 0, 0 );
+    _geometry =
+      new Geometry2( gl,
+                     3,
+                     new Attribute( new AttributeBuffer( gl,
+                                                         new Float32Array( positions ),
+                                                         new Accessor( 3 ) ),
+                                    GL.getAttribLocation( gl, program, "position" ) ),
+                     new Attribute( new AttributeBuffer( gl,
+                                                         new Float32Array( colors ),
+                                                         new Accessor( 4 ) ),
+                                    GL.getAttribLocation( gl, program, "color" ) ) );
+    _geometry.allocate();
 
     Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
   }
@@ -134,6 +116,8 @@ public class Main
     gl.clearColor( 0, 0, 0, 1 );
     gl.clear( WebGL2RenderingContext.COLOR_BUFFER_BIT );
 
-    gl.drawArrays( WebGL2RenderingContext.TRIANGLES, 0, 3 );
+    gl.useProgram( _program );
+    _geometry.draw();
+    gl.useProgram( null );
   }
 }
