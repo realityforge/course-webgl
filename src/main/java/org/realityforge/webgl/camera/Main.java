@@ -12,14 +12,12 @@ import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3d;
-import org.realityforge.webgl.util.Accessor;
-import org.realityforge.webgl.util.Attribute;
-import org.realityforge.webgl.util.AttributeBuffer;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.geometries.CubeGeometryFactory;
 
 public final class Main
   implements EntryPoint
@@ -28,141 +26,6 @@ public final class Main
   public static final int KEY_DOWN = 40;
   public static final int KEY_LEFT = 37;
   public static final int KEY_RIGHT = 39;
-  // Vertices position data
-  private static final double[] POSITIONS = new double[]
-    {
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, -0.5, 0.5,
-
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, -0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, 0.5, 0.5,
-
-      0.5, 0.5, 0.5,
-      0.5, 0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, 0.5, 0.5,
-
-      -0.5, -0.5, -0.5,
-      0.5, -0.5, -0.5,
-      0.5, -0.5, 0.5,
-      0.5, -0.5, 0.5,
-      -0.5, -0.5, 0.5,
-      -0.5, -0.5, -0.5,
-
-      -0.5, 0.5, -0.5,
-      0.5, 0.5, -0.5,
-      0.5, 0.5, 0.5,
-      0.5, 0.5, 0.5,
-      -0.5, 0.5, 0.5,
-      -0.5, 0.5, -0.5
-    };
-  // Vertices color data in RGBA form
-  private static final double[] COLORS = new double[]
-    {
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-      1.0, 0.0, 0.0, 1.0, // Front face
-
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-      0.0, 1.0, 0.0, 1.0, // Back face
-
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-      0.0, 0.0, 1.0, 1.0, // Top face
-
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-      1.0, 1.0, 0.0, 1.0, // Bottom face
-
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-      1.0, 0.0, 1.0, 1.0, // Right face
-
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0, // Left face
-      0.0, 1.0, 1.0, 1.0 // Left face
-    };
-  private static final double[] TEXTURE_COORDINATES = new double[]
-    {
-      0.0, 1.0,
-      1.0, 1.0,
-      1.0, 0.0,
-      1.0, 0.0,
-      0.0, 0.0,
-      0.0, 1.0,
-
-      0.0, 1.0,
-      1.0, 1.0,
-      1.0, 0.0,
-      1.0, 0.0,
-      0.0, 0.0,
-      0.0, 1.0,
-
-      1.0, 1.0,
-      1.0, 0.0,
-      0.0, 0.0,
-      0.0, 0.0,
-      0.0, 1.0,
-      1.0, 1.0,
-
-      1.0, 1.0,
-      1.0, 0.0,
-      0.0, 0.0,
-      0.0, 0.0,
-      0.0, 1.0,
-      1.0, 1.0,
-
-      0.0, 0.0,
-      1.0, 0.0,
-      1.0, 1.0,
-      1.0, 1.0,
-      0.0, 1.0,
-      0.0, 0.0,
-
-      0.0, 0.0,
-      1.0, 0.0,
-      1.0, 1.0,
-      1.0, 1.0,
-      0.0, 1.0,
-      0.0, 0.0
-    };
-  // The vertex shader that will be run for every vertex
   @GLSL
   @Nonnull
   private static final String VERTEX_SHADER_SOURCE =
@@ -250,18 +113,11 @@ public final class Main
 
     _material = new Material( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
     final WebGLProgram program = _material.getProgram();
-    _geometry = new Geometry2( gl,
-                               36,
-                               new Attribute( new AttributeBuffer( gl,
-                                                                   new Float32Array( POSITIONS ),
-                                                                   new Accessor( 3 ) ),
-                                              GL.getAttribLocation( gl, program, "position" ) ),
-                               new Attribute( new AttributeBuffer( gl, new Float32Array( COLORS ), new Accessor( 4 ) ),
-                                              GL.getAttribLocation( gl, program, "color" ) ),
-                               new Attribute( new AttributeBuffer( gl,
-                                                                   new Float32Array( TEXTURE_COORDINATES ),
-                                                                   new Accessor( 2 ) ),
-                                              GL.getAttribLocation( gl, program, "textureCoordinate" ) ) );
+    _geometry = CubeGeometryFactory.create( gl, 0.5 );
+    //TODO: Fix these so we don't have to magically know indexes
+    _geometry.getAttribute( 0 ).setLocation( GL.getAttribLocation( gl, program, "position" ) );
+    _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );
+    _geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
 
     final Document document = Global.document();
     document.addKeydownListener( this::onKeyDown );
