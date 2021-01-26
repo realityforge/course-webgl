@@ -4,7 +4,6 @@ import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.Attribute;
@@ -41,12 +40,7 @@ final class Mesh
         @GLSL @Nonnull final String vertexShaderSource,
         @GLSL @Nonnull final String fragmentShaderSource )
   {
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
-    assert null != vertexShader;
-    assert null != fragmentShader;
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
     _program = program;
     _modelMatrix = new Uniform( gl, program, "modelMatrix" );

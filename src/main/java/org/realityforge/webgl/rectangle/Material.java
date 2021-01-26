@@ -25,12 +25,7 @@ final class Material
             @GLSL @Nonnull final String vertexShaderSource,
             @GLSL @Nonnull final String fragmentShaderSource )
   {
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
-    assert null != vertexShader;
-    assert null != fragmentShader;
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
     _program = program;
     _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );

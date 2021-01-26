@@ -9,7 +9,6 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import elemental3.gl.WebGLVertexArrayObject;
 import javax.annotation.Nonnull;
@@ -120,12 +119,7 @@ public final class Main
 
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, VERTEX_SHADER_SOURCE );
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, FRAGMENT_SHADER_SOURCE );
-    assert null != vertexShader;
-    assert null != fragmentShader;
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE );
     assert null != program;
     _program = program;
     _modelMatrixLocation = GL.getUniformLocation( gl, _program, "modelMatrix" );

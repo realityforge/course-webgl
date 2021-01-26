@@ -3,7 +3,6 @@ package org.realityforge.webgl.webglacademy.l11;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLShader;
 import elemental3.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.GL;
@@ -42,11 +41,7 @@ final class BackgroundMaterial
 
   BackgroundMaterial( @Nonnull final WebGL2RenderingContext gl )
   {
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, VERTEX_SHADER );
-    final WebGLShader fragmentShader = GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, FRAGMENT_SHADER );
-    assert null != vertexShader;
-    assert null != fragmentShader;
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( gl, VERTEX_SHADER, FRAGMENT_SHADER );
     assert null != program;
     _program = program;
     _textureLocation = GL.getUniformLocation( gl, _program, "u_textureData" );

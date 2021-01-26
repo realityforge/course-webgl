@@ -90,9 +90,9 @@ public final class GL
   }
 
   @Nullable
-  public static WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
-                                            @Nonnull final WebGLShader vertexShader,
-                                            @Nonnull final WebGLShader fragmentShader )
+  private static WebGLProgram createProgram( @Nonnull final WebGL2RenderingContext gl,
+                                             @Nonnull final WebGLShader vertexShader,
+                                             @Nonnull final WebGLShader fragmentShader )
   {
     final WebGLProgram program = gl.createProgram();
     assert null != program;
@@ -115,9 +115,9 @@ public final class GL
   }
 
   @Nullable
-  public static WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
-                                          @ShaderType final int type,
-                                          @GLSL @Nonnull final String source )
+  private static WebGLShader createShader( @Nonnull final WebGL2RenderingContext gl,
+                                           @ShaderType final int type,
+                                           @GLSL @Nonnull final String source )
   {
     final WebGLShader shader = gl.createShader( type );
     assert null != shader;

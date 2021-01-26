@@ -8,7 +8,6 @@ import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLBuffer;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
@@ -101,16 +100,7 @@ public class Main
                    new Float32Array( colors ),
                    WebGL2RenderingContext.STATIC_DRAW );
 
-    // Build and compile the vertex shader
-    final WebGLShader vertexShader = GL.createShader( gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
-    assert null != vertexShader;
-
-    final WebGLShader fragmentShader =
-      GL.createShader( gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
-    assert null != fragmentShader;
-
-    // Combine the shaders into a program
-    final WebGLProgram program = GL.createProgram( gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
 
     // Start using the program for all vertexes pass through gl until the program is changed

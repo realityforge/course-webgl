@@ -10,7 +10,6 @@ import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLShader;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.Attribute;
@@ -138,16 +137,7 @@ public final class Main
       "  }\n" +
       "}\n";
 
-    // Build and compile the vertex shader
-    final WebGLShader vertexShader = GL.createShader( _gl, WebGL2RenderingContext.VERTEX_SHADER, vertexShaderSource );
-    assert null != vertexShader;
-
-    final WebGLShader fragmentShader =
-      GL.createShader( _gl, WebGL2RenderingContext.FRAGMENT_SHADER, fragmentShaderSource );
-    assert null != fragmentShader;
-
-    // Combine the shaders into a program
-    final WebGLProgram program = GL.createProgram( _gl, vertexShader, fragmentShader );
+    final WebGLProgram program = GL.createProgram( _gl, vertexShaderSource, fragmentShaderSource );
     assert null != program;
 
     final AttributeBuffer positionsBuffer =
