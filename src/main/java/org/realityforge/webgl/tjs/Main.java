@@ -147,10 +147,10 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
       CanvasUtil.resize( gl, canvas );
-      Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
       if ( !_mesh.areTexturesLoaded() )
       {
         return;

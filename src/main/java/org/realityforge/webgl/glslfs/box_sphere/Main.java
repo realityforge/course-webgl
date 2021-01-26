@@ -81,6 +81,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
+    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
 
@@ -102,7 +103,5 @@ public final class Main
 
       c_angle += 0.01;
     } );
-
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 }

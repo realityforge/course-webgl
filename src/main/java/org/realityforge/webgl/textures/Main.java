@@ -37,8 +37,8 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final WebGL2RenderingContext gl )
   {
-    CanvasUtil.resize( gl, canvas );
     Global.requestAnimationFrame( t -> renderFrame( canvas, gl ) );
+    CanvasUtil.resize( gl, canvas );
     if ( !_mesh.areTexturesLoaded() )
     {
       return;
