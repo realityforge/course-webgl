@@ -14,6 +14,8 @@ public final class Geometry2
   private final int _mode;
   private final int _offset;
   private final int _count;
+  // 0 implies that the geometry is not setup to be instances, >1 indicates the maximum number of instances possible
+  private final int _maxInstances;
   @Nonnull
   private final Attribute[] _attributes;
   @Nullable
@@ -31,10 +33,27 @@ public final class Geometry2
                     @Nullable final IndexBuffer indexBuffer,
                     @Nonnull final Attribute... attributes )
   {
+    this( gl, mode, offset, count, 0, indexBuffer, attributes );
+  }
+
+  public Geometry2( @Nonnull final WebGL2RenderingContext gl,
+                    @DrawPrimitiveType final int mode,
+                    final int offset,
+                    final int count,
+                    final int maxInstances,
+                    @Nullable final IndexBuffer indexBuffer,
+                    @Nonnull final Attribute... attributes )
+  {
     super( gl, true );
+    DrawPrimitiveType.Validator.assertValid( mode );
+    assert offset >= 0 : "Offset must not be negative";
+    assert count > 0 : "Count must be greater than 0";
+    assert maxInstances >= 0 : "Max instance count must not be negative";
+    assert attributes.length > 0 : "At least one attribute must be supplied";
     _mode = mode;
     _offset = offset;
     _count = count;
+    _maxInstances = maxInstances;
     _indexBuffer = indexBuffer;
     _attributes = Objects.requireNonNull( attributes );
   }
@@ -97,9 +116,15 @@ public final class Geometry2
     return _attributes[ index ];
   }
 
+  public boolean isInstanced()
+  {
+    return 0 != _maxInstances;
+  }
+
   public void draw()
   {
     assert isAllocated();
+    assert !isInstanced();
     bind();
 
     final WebGL2RenderingContext gl = gl();
@@ -110,6 +135,25 @@ public final class Geometry2
     else
     {
       gl.drawElements( _mode, _count, _indexBuffer.getType(), _offset );
+    }
+    unbind();
+  }
+
+  public void drawInstanced( final int instanceCount )
+  {
+    assert isAllocated();
+    assert isInstanced();
+    assert instanceCount <= _maxInstances : "Instance count must be below or equal to maxInstanceCount";
+    bind();
+
+    final WebGL2RenderingContext gl = gl();
+    if ( null == _indexBuffer )
+    {
+      gl.drawArraysInstanced( _mode, _offset, _count, instanceCount );
+    }
+    else
+    {
+      gl.drawElementsInstanced( _mode, _count, _indexBuffer.getType(), _offset, instanceCount );
     }
     unbind();
   }
