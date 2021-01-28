@@ -80,16 +80,16 @@ final class Mesh
                @Nonnull final Light light,
                @Nonnull final Camera camera )
   {
-    gl.uniformMatrix4fv( getModelMatrix().getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
-    gl.uniformMatrix4fv( getViewMatrix().getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
-    gl.uniformMatrix4fv( getProjectionMatrix().getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _modelMatrix.getLocation(), false, new Float32Array( modelMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _viewMatrix.getLocation(), false, new Float32Array( viewMatrix.toArray() ) );
+    gl.uniformMatrix4fv( _projectionMatrix.getLocation(), false, new Float32Array( projectionMatrix.toArray() ) );
     final Vector3f color = light.getColor();
-    gl.uniform3f( getLightColor().getLocation(), color.x, color.y, color.z );
+    gl.uniform3f( _lightColor.getLocation(), color.x, color.y, color.z );
     final Vector3f lightPosition = light.getPosition();
-    gl.uniform3f( getLightPosition().getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
+    gl.uniform3f( _lightPosition.getLocation(), lightPosition.x, lightPosition.y, lightPosition.z );
 
     final Vector3d eye = camera.getPosition();
-    gl.uniform3f( getCameraPosition().getLocation(), (float) eye.x, (float) eye.y, (float) eye.z );
+    gl.uniform3f( _cameraPosition.getLocation(), (float) eye.x, (float) eye.y, (float) eye.z );
 
     _geometry.draw();
   }
@@ -111,24 +111,6 @@ final class Mesh
   }
 
   @Nonnull
-  Uniform getModelMatrix()
-  {
-    return _modelMatrix;
-  }
-
-  @Nonnull
-  Uniform getViewMatrix()
-  {
-    return _viewMatrix;
-  }
-
-  @Nonnull
-  Uniform getProjectionMatrix()
-  {
-    return _projectionMatrix;
-  }
-
-  @Nonnull
   Uniform getTextureData0()
   {
     return _textureData0;
@@ -138,23 +120,5 @@ final class Mesh
   Uniform getTextureData1()
   {
     return _textureData1;
-  }
-
-  @Nonnull
-  Uniform getLightColor()
-  {
-    return _lightColor;
-  }
-
-  @Nonnull
-  Uniform getLightPosition()
-  {
-    return _lightPosition;
-  }
-
-  @Nonnull
-  Uniform getCameraPosition()
-  {
-    return _cameraPosition;
   }
 }
