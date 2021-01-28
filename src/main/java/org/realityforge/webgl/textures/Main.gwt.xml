@@ -1,7 +1,0 @@
-<module rename-to='example'>
-  <inherits name='org.realityforge.webgl.Webgl'/>
-
-  <entry-point class='org.realityforge.webgl.textures.Main'/>
-
-  <source path=''/>
-</module>
