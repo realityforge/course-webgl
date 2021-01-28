@@ -4,28 +4,23 @@ import com.google.gwt.core.client.EntryPoint;
 import elemental3.Document;
 import elemental3.Global;
 import elemental3.HTMLCanvasElement;
-import elemental3.KeyboardEvent;
 import elemental3.core.Float32Array;
 import elemental3.gl.GLSL;
 import elemental3.gl.WebGL2RenderingContext;
 import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
-import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Camera;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.MathUtil;
+import org.realityforge.webgl.util.controls.FirsPersonControl;
 import org.realityforge.webgl.util.geometries.CubeGeometryFactory;
 
 public final class Main
   implements EntryPoint
 {
-  public static final int KEY_UP = 38;
-  public static final int KEY_DOWN = 40;
-  public static final int KEY_LEFT = 37;
-  public static final int KEY_RIGHT = 39;
   @GLSL
   @Nonnull
   private static final String VERTEX_SHADER_SOURCE =
@@ -90,14 +85,7 @@ public final class Main
   private Geometry2 _geometry;
   private double _angle;
   private boolean _sentToGpu;
-  private boolean _forwardPressed;
-  private boolean _backwardPressed;
-  private boolean _leftPressed;
-  private boolean _rightPressed;
-  private boolean _pitchUpPressed;
-  private boolean _pitchDownPressed;
-  private boolean _yawLeftPressed;
-  private boolean _yawRightPressed;
+  private FirsPersonControl _control;
 
   @Override
   public void onModuleLoad()
@@ -120,86 +108,9 @@ public final class Main
     _geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
 
     final Document document = Global.document();
-    document.addKeydownListener( this::onKeyDown );
-    document.addKeyupListener( this::onKeyUp );
+    _control = new FirsPersonControl( _camera, document );
 
     CanvasUtil.renderLoop( canvas, gl, this::renderFrame );
-  }
-
-  private void onKeyDown( @Nonnull final KeyboardEvent event )
-  {
-    final String key = event.key();
-    final int keyCode = event.keyCode();
-    if ( "w".equals( key ) || KEY_UP == keyCode )
-    {
-      _forwardPressed = true;
-    }
-    else if ( "s".equals( key ) || KEY_DOWN == keyCode )
-    {
-      _backwardPressed = true;
-    }
-    else if ( "a".equals( key ) || KEY_LEFT == keyCode )
-    {
-      _leftPressed = true;
-    }
-    else if ( "d".equals( key ) || KEY_RIGHT == keyCode )
-    {
-      _rightPressed = true;
-    }
-    else if ( "y".equals( key ) )
-    {
-      _pitchUpPressed = true;
-    }
-    else if ( "h".equals( key ) )
-    {
-      _pitchDownPressed = true;
-    }
-    else if ( "g".equals( key ) )
-    {
-      _yawLeftPressed = true;
-    }
-    else if ( "j".equals( key ) )
-    {
-      _yawRightPressed = true;
-    }
-  }
-
-  private void onKeyUp( @Nonnull final KeyboardEvent event )
-  {
-    final String key = event.key();
-    final int keyCode = event.keyCode();
-    if ( "w".equals( key ) || KEY_UP == keyCode )
-    {
-      _forwardPressed = false;
-    }
-    else if ( "s".equals( key ) || KEY_DOWN == keyCode )
-    {
-      _backwardPressed = false;
-    }
-    else if ( "a".equals( key ) || KEY_LEFT == keyCode )
-    {
-      _leftPressed = false;
-    }
-    else if ( "d".equals( key ) || KEY_RIGHT == keyCode )
-    {
-      _rightPressed = false;
-    }
-    else if ( "y".equals( key ) )
-    {
-      _pitchUpPressed = false;
-    }
-    else if ( "h".equals( key ) )
-    {
-      _pitchDownPressed = false;
-    }
-    else if ( "g".equals( key ) )
-    {
-      _yawLeftPressed = false;
-    }
-    else if ( "j".equals( key ) )
-    {
-      _yawRightPressed = false;
-    }
   }
 
   private void renderFrame( @Nonnull final WebGL2RenderingContext gl )
@@ -231,7 +142,7 @@ public final class Main
     _modelMatrix.rotateX( 0.25 );
 
     // UpdateCamera should be done in the sim loop ... but we are inlining in render loop
-    updateCamera();
+    _control.updateCamera();
 
     gl.useProgram( _material.getProgram() );
     gl.uniformMatrix4fv( _material.getModelMatrix().getLocation(), false, new Float32Array( _modelMatrix.toArray() ) );
@@ -245,51 +156,5 @@ public final class Main
     _geometry.draw();
 
     _angle += 0.01;
-  }
-
-  private void updateCamera()
-  {
-    _camera.computeDirection();
-    final Vector3d direction = _camera.getDirection();
-    final Vector3d position = _camera.getPosition();
-    if ( _forwardPressed )
-    {
-      position.add( direction.dup().mul( 0.1F ) );
-    }
-    if ( _backwardPressed )
-    {
-      position.add( direction.dup().mul( -0.1F ) );
-    }
-    if ( _leftPressed )
-    {
-      // Calculate the "right" vector (We assume our view has no roll and thus can just use yaw) and
-      // after right vector is calculated then use direction to calculate movement
-      position.add( new Vector3d( -1 * (float) Math.sin( _camera.getYaw() ),
-                                  0,
-                                  (float) Math.cos( _camera.getYaw() ) ).mul( -0.1F ) );
-    }
-    if ( _rightPressed )
-    {
-      position.add( new Vector3d( -1 * (float) Math.sin( _camera.getYaw() ),
-                                  0,
-                                  (float) Math.cos( _camera.getYaw() ) ).mul( 0.1F ) );
-    }
-    if ( _pitchUpPressed )
-    {
-      _camera.setPitch( _camera.getPitch() + 0.02 );
-    }
-    if ( _pitchDownPressed )
-    {
-      _camera.setPitch( _camera.getPitch() - 0.02 );
-    }
-    if ( _yawLeftPressed )
-    {
-      _camera.setYaw( _camera.getYaw() - 0.02 );
-    }
-    if ( _yawRightPressed )
-    {
-      _camera.setYaw( _camera.getYaw() + 0.02 );
-    }
-    _camera.updateViewMatrix();
   }
 }
