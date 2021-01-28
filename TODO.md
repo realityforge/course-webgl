@@ -1,6 +1,8 @@
 
 ## Actions
 
+* Asset loaders so that shaders and images can be loaded asynchronously and not included inline.
+
 Adopt UBOs as described in https://www.youtube.com/watch?v=bdIZ2ZloXEA
 
 * Use gl.bindAttribLocation(  ); and semantic flags for attribute intents. Probably grab semantic intents from
