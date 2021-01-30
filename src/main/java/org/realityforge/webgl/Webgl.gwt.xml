@@ -5,7 +5,6 @@
   <inherits name='elemental3.Elemental3'/>
   <inherits name='org.realityforge.vecmath.VecmathDev'/>
 
-  <source path='annotations'/>
   <source path='util'/>
   <public path='public'/>
 </module>
