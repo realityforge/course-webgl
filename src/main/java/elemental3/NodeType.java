@@ -27,8 +27,14 @@ public @interface NodeType {
     private Validator() {
     }
 
+    @NodeType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@NodeType annotated value must be one of [Node.ELEMENT_NODE, Node.ATTRIBUTE_NODE, Node.TEXT_NODE, Node.CDATA_SECTION_NODE, Node.ENTITY_REFERENCE_NODE, Node.ENTITY_NODE, Node.PROCESSING_INSTRUCTION_NODE, Node.COMMENT_NODE, Node.DOCUMENT_NODE, Node.DOCUMENT_TYPE_NODE, Node.DOCUMENT_FRAGMENT_NODE, Node.NOTATION_NODE] but is " + value;
     }
 
     public static boolean isValid(final int value) {

@@ -19,8 +19,14 @@ public @interface KeyboardEventLocation {
     private Validator() {
     }
 
+    @KeyboardEventLocation
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@KeyboardEventLocation annotated value must be one of [KeyboardEvent.DOM_KEY_LOCATION_STANDARD, KeyboardEvent.DOM_KEY_LOCATION_LEFT, KeyboardEvent.DOM_KEY_LOCATION_RIGHT, KeyboardEvent.DOM_KEY_LOCATION_NUMPAD] but is " + value;
     }
 
     public static boolean isValid(final int value) {

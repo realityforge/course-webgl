@@ -17,8 +17,14 @@ public @interface Texture2DTargetType {
     private Validator() {
     }
 
+    @Texture2DTargetType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@Texture2DTargetType annotated value must be one of [WebGL2RenderingContext.TEXTURE_2D, WebGL2RenderingContext.TEXTURE_CUBE_MAP] but is " + value;
     }
 
     public static boolean isValid(final int value) {

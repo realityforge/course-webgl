@@ -20,8 +20,14 @@ public @interface XMLHttpRequestReadyState {
     private Validator() {
     }
 
+    @XMLHttpRequestReadyState
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@XMLHttpRequestReadyState annotated value must be one of [XMLHttpRequest.UNSENT, XMLHttpRequest.OPENED, XMLHttpRequest.HEADERS_RECEIVED, XMLHttpRequest.LOADING, XMLHttpRequest.DONE] but is " + value;
     }
 
     public static boolean isValid(final int value) {

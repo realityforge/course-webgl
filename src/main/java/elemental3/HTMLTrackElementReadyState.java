@@ -19,8 +19,14 @@ public @interface HTMLTrackElementReadyState {
     private Validator() {
     }
 
+    @HTMLTrackElementReadyState
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@HTMLTrackElementReadyState annotated value must be one of [HTMLTrackElement.NONE, HTMLTrackElement.LOADING, HTMLTrackElement.LOADED, HTMLTrackElement.ERROR] but is " + value;
     }
 
     public static boolean isValid(final int value) {

@@ -18,8 +18,14 @@ public @interface TextureWrapMode {
     private Validator() {
     }
 
+    @TextureWrapMode
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@TextureWrapMode annotated value must be one of [WebGL2RenderingContext.REPEAT, WebGL2RenderingContext.CLAMP_TO_EDGE, WebGL2RenderingContext.MIRRORED_REPEAT] but is " + value;
     }
 
     public static boolean isValid(final int value) {

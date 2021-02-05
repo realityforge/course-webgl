@@ -33,8 +33,14 @@ public @interface TexelDataType {
     private Validator() {
     }
 
+    @TexelDataType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@TexelDataType annotated value must be one of [WebGL2RenderingContext.UNSIGNED_BYTE, WebGL2RenderingContext.UNSIGNED_SHORT, WebGL2RenderingContext.UNSIGNED_SHORT_5_6_5, WebGL2RenderingContext.UNSIGNED_SHORT_4_4_4_4, WebGL2RenderingContext.UNSIGNED_SHORT_5_5_5_1, WebGL2RenderingContext.BYTE, WebGL2RenderingContext.SHORT, WebGL2RenderingContext.UNSIGNED_INT, WEBGL_depth_texture.UNSIGNED_INT_24_8_WEBGL, WebGL2RenderingContext.INT, WebGL2RenderingContext.HALF_FLOAT, OES_texture_half_float.HALF_FLOAT_OES, WebGL2RenderingContext.FLOAT, WebGL2RenderingContext.UNSIGNED_INT_2_10_10_10_REV, WebGL2RenderingContext.UNSIGNED_INT_10F_11F_11F_REV, WebGL2RenderingContext.UNSIGNED_INT_5_9_9_9_REV, WebGL2RenderingContext.UNSIGNED_INT_24_8, WebGL2RenderingContext.FLOAT_32_UNSIGNED_INT_24_8_REV] but is " + value;
     }
 
     public static boolean isValid(final int value) {

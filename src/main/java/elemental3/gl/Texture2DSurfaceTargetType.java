@@ -22,8 +22,14 @@ public @interface Texture2DSurfaceTargetType {
     private Validator() {
     }
 
+    @Texture2DSurfaceTargetType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@Texture2DSurfaceTargetType annotated value must be one of [WebGL2RenderingContext.TEXTURE_2D, WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X, WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_X, WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Y, WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Y, WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Z, WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Z] but is " + value;
     }
 
     public static boolean isValid(final int value) {

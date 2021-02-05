@@ -17,8 +17,14 @@ public @interface Winding {
     private Validator() {
     }
 
+    @Winding
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@Winding annotated value must be one of [WebGL2RenderingContext.CW, WebGL2RenderingContext.CCW] but is " + value;
     }
 
     public static boolean isValid(final int value) {

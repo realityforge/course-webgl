@@ -18,8 +18,14 @@ public @interface DrawElementsDataType {
     private Validator() {
     }
 
+    @DrawElementsDataType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@DrawElementsDataType annotated value must be one of [WebGL2RenderingContext.UNSIGNED_BYTE, WebGL2RenderingContext.UNSIGNED_SHORT, WebGL2RenderingContext.UNSIGNED_INT] but is " + value;
     }
 
     public static boolean isValid(final int value) {

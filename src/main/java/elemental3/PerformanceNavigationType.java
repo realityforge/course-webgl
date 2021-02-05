@@ -19,8 +19,14 @@ public @interface PerformanceNavigationType {
     private Validator() {
     }
 
+    @PerformanceNavigationType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@PerformanceNavigationType annotated value must be one of [PerformanceNavigation.TYPE_NAVIGATE, PerformanceNavigation.TYPE_RELOAD, PerformanceNavigation.TYPE_BACK_FORWARD, PerformanceNavigation.TYPE_RESERVED] but is " + value;
     }
 
     public static boolean isValid(final int value) {

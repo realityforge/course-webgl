@@ -29,8 +29,14 @@ public @interface ReadableTextureParameter {
     private Validator() {
     }
 
+    @ReadableTextureParameter
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@ReadableTextureParameter annotated value must be one of [WebGL2RenderingContext.TEXTURE_MAG_FILTER, WebGL2RenderingContext.TEXTURE_MIN_FILTER, WebGL2RenderingContext.TEXTURE_WRAP_S, WebGL2RenderingContext.TEXTURE_WRAP_T, EXT_texture_filter_anisotropic.TEXTURE_MAX_ANISOTROPY_EXT, WebGL2RenderingContext.TEXTURE_BASE_LEVEL, WebGL2RenderingContext.TEXTURE_COMPARE_FUNC, WebGL2RenderingContext.TEXTURE_COMPARE_MODE, WebGL2RenderingContext.TEXTURE_IMMUTABLE_FORMAT, WebGL2RenderingContext.TEXTURE_IMMUTABLE_LEVELS, WebGL2RenderingContext.TEXTURE_MAX_LEVEL, WebGL2RenderingContext.TEXTURE_MAX_LOD, WebGL2RenderingContext.TEXTURE_MIN_LOD, WebGL2RenderingContext.TEXTURE_WRAP_R] but is " + value;
     }
 
     public static boolean isValid(final int value) {

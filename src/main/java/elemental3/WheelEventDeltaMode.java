@@ -18,8 +18,14 @@ public @interface WheelEventDeltaMode {
     private Validator() {
     }
 
+    @WheelEventDeltaMode
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@WheelEventDeltaMode annotated value must be one of [WheelEvent.DOM_DELTA_PIXEL, WheelEvent.DOM_DELTA_LINE, WheelEvent.DOM_DELTA_PAGE] but is " + value;
     }
 
     public static boolean isValid(final int value) {

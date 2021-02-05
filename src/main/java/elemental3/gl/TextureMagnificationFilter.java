@@ -17,8 +17,14 @@ public @interface TextureMagnificationFilter {
     private Validator() {
     }
 
+    @TextureMagnificationFilter
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@TextureMagnificationFilter annotated value must be one of [WebGL2RenderingContext.LINEAR, WebGL2RenderingContext.NEAREST] but is " + value;
     }
 
     public static boolean isValid(final int value) {

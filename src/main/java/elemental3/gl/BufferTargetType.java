@@ -23,8 +23,14 @@ public @interface BufferTargetType {
     private Validator() {
     }
 
+    @BufferTargetType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@BufferTargetType annotated value must be one of [WebGL2RenderingContext.ARRAY_BUFFER, WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER, WebGL2RenderingContext.COPY_READ_BUFFER, WebGL2RenderingContext.COPY_WRITE_BUFFER, WebGL2RenderingContext.TRANSFORM_FEEDBACK_BUFFER, WebGL2RenderingContext.UNIFORM_BUFFER, WebGL2RenderingContext.PIXEL_PACK_BUFFER, WebGL2RenderingContext.PIXEL_UNPACK_BUFFER] but is " + value;
     }
 
     public static boolean isValid(final int value) {

@@ -19,8 +19,14 @@ public @interface EventPhase {
     private Validator() {
     }
 
+    @EventPhase
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@EventPhase annotated value must be one of [Event.NONE, Event.CAPTURING_PHASE, Event.AT_TARGET, Event.BUBBLING_PHASE] but is " + value;
     }
 
     public static boolean isValid(final int value) {

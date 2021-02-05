@@ -29,8 +29,14 @@ public @interface CSSRuleType {
     private Validator() {
     }
 
+    @CSSRuleType
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@CSSRuleType annotated value must be one of [CSSRule.STYLE_RULE, CSSRule.CHARSET_RULE, CSSRule.IMPORT_RULE, CSSRule.MEDIA_RULE, CSSRule.FONT_FACE_RULE, CSSRule.PAGE_RULE, CSSRule.KEYFRAMES_RULE, CSSRule.KEYFRAME_RULE, CSSRule.MARGIN_RULE, CSSRule.NAMESPACE_RULE, CSSRule.COUNTER_STYLE_RULE, CSSRule.SUPPORTS_RULE, CSSRule.FONT_FEATURE_VALUES_RULE, CSSRule.FONT_PALETTE_VALUES_RULE] but is " + value;
     }
 
     public static boolean isValid(final int value) {
