@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -35,6 +36,11 @@ public @interface TextureComparisonFunction {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.LEQUAL == value || WebGL2RenderingContext.GEQUAL == value || WebGL2RenderingContext.LESS == value || WebGL2RenderingContext.GREATER == value || WebGL2RenderingContext.EQUAL == value || WebGL2RenderingContext.NOTEQUAL == value || WebGL2RenderingContext.ALWAYS == value || WebGL2RenderingContext.NEVER == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.LEQUAL == value ? "LEQUAL" : WebGL2RenderingContext.GEQUAL == value ? "GEQUAL" : WebGL2RenderingContext.LESS == value ? "LESS" : WebGL2RenderingContext.GREATER == value ? "GREATER" : WebGL2RenderingContext.EQUAL == value ? "EQUAL" : WebGL2RenderingContext.NOTEQUAL == value ? "NOTEQUAL" : WebGL2RenderingContext.ALWAYS == value ? "ALWAYS" : WebGL2RenderingContext.NEVER == value ? "NEVER" : "Unknown value " + value;
     }
   }
 }

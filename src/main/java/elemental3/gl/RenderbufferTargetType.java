@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -26,6 +27,11 @@ public @interface RenderbufferTargetType {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.RENDERBUFFER == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.RENDERBUFFER == value ? "RENDERBUFFER" : "Unknown value " + value;
     }
   }
 }

@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -30,6 +31,11 @@ public @interface FramebufferTargetType {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.FRAMEBUFFER == value || WebGL2RenderingContext.DRAW_FRAMEBUFFER == value || WebGL2RenderingContext.READ_FRAMEBUFFER == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.FRAMEBUFFER == value ? "FRAMEBUFFER" : WebGL2RenderingContext.DRAW_FRAMEBUFFER == value ? "DRAW_FRAMEBUFFER" : WebGL2RenderingContext.READ_FRAMEBUFFER == value ? "READ_FRAMEBUFFER" : "Unknown value " + value;
     }
   }
 }

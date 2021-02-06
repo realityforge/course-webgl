@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -30,6 +31,11 @@ public @interface FileReaderReadyState {
 
     public static boolean isValid(final int value) {
       return FileReader.EMPTY == value || FileReader.LOADING == value || FileReader.DONE == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return FileReader.EMPTY == value ? "EMPTY" : FileReader.LOADING == value ? "LOADING" : FileReader.DONE == value ? "DONE" : "Unknown value " + value;
     }
   }
 }

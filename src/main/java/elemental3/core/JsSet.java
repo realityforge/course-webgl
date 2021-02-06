@@ -1,87 +1,177 @@
 package elemental3.core;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
+/**
+ * The Set object lets you store unique values of any type, whether primitive values or object references.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-set-objects">Set Objects - ECMA</a>
+ */
 @JsType( name = "Set", isNative = true, namespace = JsPackage.GLOBAL )
-public class JsSet<VALUE>
-  implements JsIterable<VALUE>
+public class JsSet<T>
+  implements JsIterable<T>
 {
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface ConstructorIterableUnionType<VALUE>
-  {
-    @JsOverlay
-    static <T> ConstructorIterableUnionType<T> of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default JsArray<VALUE> asJsArray()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default JsIterable<VALUE> asJsIterable()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default boolean isJsArray()
-    {
-      return this instanceof JsArray;
-    }
-  }
-
-  @JsFunction
-  public interface ForEachCallbackFn<VALUE>
-  {
-    Object onInvoke( VALUE p0, VALUE p1, JsSet<? extends VALUE> p2 );
-  }
-
-  public int size;
-
+  /**
+   * The Set constructor lets you create Set objects that store unique values of any type, whether primitive values or object references.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set Constructor - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-set-constructor">Set Constructor - ECMA</a>
+   */
   public JsSet()
   {
   }
 
-  public JsSet( ConstructorIterableUnionType<VALUE> iterable )
+  /**
+   * The Set constructor lets you create Set objects that store unique values of any type, whether primitive values or object references.
+   *
+   * @param values the iterable that will have all of it's elements added to the Set.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set Constructor - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-set-constructor">Set Constructor - ECMA</a>
+   */
+  public JsSet( @Nonnull JsIterable<T> values )
   {
   }
 
-  public JsSet( JsArray<VALUE> iterable )
+  /**
+   * The Set constructor lets you create Set objects that store unique values of any type, whether primitive values or object references.
+   *
+   * @param values the array that will have all of it's elements added to the Set.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set Constructor - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-set-constructor">Set Constructor - ECMA</a>
+   */
+  public JsSet( @Nonnull T[] values )
   {
   }
 
-  public JsSet( JsIterable<VALUE> iterable )
-  {
-  }
+  /**
+   * The size accessor property returns the number of (unique) elements in a Set object.
+   *
+   * @return an integer representing how many entries the Set object has.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size">Set.prototype.size - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.size">Set.prototype.size - ECMA</a>
+   */
+  @JsProperty( name = "size" )
+  public native int size();
 
-  public JsSet( VALUE[] iterable )
-  {
-  }
+  /**
+   * The add() method appends a new element with a specified value to the end of a Set object.
+   *
+   * @param value the value of the element to add to the Set object.
+   * @return the set.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add">Set.prototype.add - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.add">Set.prototype.add - ECMA</a>
+   */
+  @Nonnull
+  public native JsSet<T> add( @Nullable T value );
 
-  public native JsSet<VALUE> add( VALUE value );
-
+  /**
+   * The clear() method removes all elements from a Set object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear">Set.prototype.clear - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.clear">Set.prototype.clear - ECMA</a>
+   */
   public native void clear();
 
-  public native boolean delete( VALUE value );
+  /**
+   * The delete() method removes a specified value from a Set object, if it is in the set.
+   *
+   * @param value the value to remove from the set object.
+   * @return true if value was already in the set, otherwise false.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete">Set.prototype.delete - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.delete">Set.prototype.delete - ECMA</a>
+   */
+  public native boolean delete( @Nullable T value );
 
-  public native JsIteratorIterable<JsArray<VALUE>> entries();
+  /**
+   * The forEach() method executes a provided function once for each value in the Set object, in insertion order.
+   *
+   * @param forEachCallback the function to execute for each element.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">Set.prototype.forEach - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.foreach">Set.prototype.forEach - ECMA</a>
+   */
+  public native void forEach( @Nonnull ForEachCallback<T> forEachCallback );
 
-  public native <THIS> Object forEach(
-    ForEachCallbackFn<? super VALUE> callback, THIS thisArg );
+  /**
+   * The forEach() method executes a provided function once for each value in the Set object, in insertion order.
+   *
+   * @param forEachCallback the function to execute for each element.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">Set.prototype.forEach - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.foreach">Set.prototype.forEach - ECMA</a>
+   */
+  public native void forEach( @Nonnull ForEachCallback2<T> forEachCallback );
 
-  public native Object forEach( ForEachCallbackFn<? super VALUE> callback );
+  /**
+   * The forEach() method executes a provided function once for each value in the Set object, in insertion order.
+   *
+   * @param forEachCallback the function to execute for each element.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">Set.prototype.forEach - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.foreach">Set.prototype.forEach - ECMA</a>
+   */
+  public native void forEach( @Nonnull ForEachCallback3<T> forEachCallback );
 
-  public native boolean has( VALUE value );
+  /**
+   * The has() method returns a boolean indicating whether an element with the specified value exists in a Set object or not.
+   *
+   * @return the value to test for presence in the Set object.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has">Set.prototype.has - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.has">Set.prototype.has - ECMA</a>
+   */
+  public native boolean has( @Nullable T value );
 
-  public native JsIteratorIterable<VALUE> keys();
+  /**
+   * The entries() method returns a new Iterator object that contains an array of <code>[value, value]</code> for each element in the Set object, in insertion order.
+   *
+   * @return a new iterator object that contains an array of <code>[value, value]</code> for each element in the given Set, in insertion order.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/entries">Set.prototype.entries - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.entries">Set.prototype.entries - ECMA</a>
+   */
+  @Nonnull
+  public native JsIteratorIterable<JsArray<T>> entries();
 
-  public native JsIteratorIterable<VALUE> values();
+  /**
+   * The keys() method returns a new iterator object that contains the values for each element in the Set object in insertion order.
+   *
+   * @return a new iterator object containing the values for each element in the given Set, in insertion order.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/keys">Set.prototype.keys - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.keys">Set.prototype.keys - ECMA</a>
+   */
+  @Nonnull
+  public native JsIteratorIterable<T> keys();
+
+  /**
+   * The values() method returns a new iterator object that contains the values for each element in the Set object in insertion order.
+   *
+   * @return a new iterator object containing the values for each element in the given Set, in insertion order.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values">Set.prototype.values - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.values">Set.prototype.values - ECMA</a>
+   */
+  @Nonnull
+  public native JsIteratorIterable<T> values();
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback<T>
+  {
+    void item( T value );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2<T>
+  {
+    void item( T value, T key );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3<T>
+  {
+    void item( T value, T key, @Nonnull JsSet<T> array );
+  }
 }

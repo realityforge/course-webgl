@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -33,6 +34,11 @@ public @interface TextureMinificationFilter {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.LINEAR == value || WebGL2RenderingContext.NEAREST == value || WebGL2RenderingContext.NEAREST_MIPMAP_NEAREST == value || WebGL2RenderingContext.LINEAR_MIPMAP_NEAREST == value || WebGL2RenderingContext.NEAREST_MIPMAP_LINEAR == value || WebGL2RenderingContext.LINEAR_MIPMAP_LINEAR == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.LINEAR == value ? "LINEAR" : WebGL2RenderingContext.NEAREST == value ? "NEAREST" : WebGL2RenderingContext.NEAREST_MIPMAP_NEAREST == value ? "NEAREST_MIPMAP_NEAREST" : WebGL2RenderingContext.LINEAR_MIPMAP_NEAREST == value ? "LINEAR_MIPMAP_NEAREST" : WebGL2RenderingContext.NEAREST_MIPMAP_LINEAR == value ? "NEAREST_MIPMAP_LINEAR" : WebGL2RenderingContext.LINEAR_MIPMAP_LINEAR == value ? "LINEAR_MIPMAP_LINEAR" : "Unknown value " + value;
     }
   }
 }

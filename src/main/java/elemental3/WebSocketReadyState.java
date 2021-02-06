@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -31,6 +32,11 @@ public @interface WebSocketReadyState {
 
     public static boolean isValid(final int value) {
       return WebSocket.CONNECTING == value || WebSocket.OPEN == value || WebSocket.CLOSING == value || WebSocket.CLOSED == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebSocket.CONNECTING == value ? "CONNECTING" : WebSocket.OPEN == value ? "OPEN" : WebSocket.CLOSING == value ? "CLOSING" : WebSocket.CLOSED == value ? "CLOSED" : "Unknown value " + value;
     }
   }
 }

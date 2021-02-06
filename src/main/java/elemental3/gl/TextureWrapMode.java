@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -30,6 +31,11 @@ public @interface TextureWrapMode {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.REPEAT == value || WebGL2RenderingContext.CLAMP_TO_EDGE == value || WebGL2RenderingContext.MIRRORED_REPEAT == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.REPEAT == value ? "REPEAT" : WebGL2RenderingContext.CLAMP_TO_EDGE == value ? "CLAMP_TO_EDGE" : WebGL2RenderingContext.MIRRORED_REPEAT == value ? "MIRRORED_REPEAT" : "Unknown value " + value;
     }
   }
 }

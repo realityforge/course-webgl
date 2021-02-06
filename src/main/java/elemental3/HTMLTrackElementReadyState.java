@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -31,6 +32,11 @@ public @interface HTMLTrackElementReadyState {
 
     public static boolean isValid(final int value) {
       return HTMLTrackElement.NONE == value || HTMLTrackElement.LOADING == value || HTMLTrackElement.LOADED == value || HTMLTrackElement.ERROR == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return HTMLTrackElement.NONE == value ? "NONE" : HTMLTrackElement.LOADING == value ? "LOADING" : HTMLTrackElement.LOADED == value ? "LOADED" : HTMLTrackElement.ERROR == value ? "ERROR" : "Unknown value " + value;
     }
   }
 }

@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -33,6 +34,11 @@ public @interface ApplicationCacheStatus {
 
     public static boolean isValid(final int value) {
       return ApplicationCache.UNCACHED == value || ApplicationCache.IDLE == value || ApplicationCache.CHECKING == value || ApplicationCache.DOWNLOADING == value || ApplicationCache.UPDATEREADY == value || ApplicationCache.OBSOLETE == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return ApplicationCache.UNCACHED == value ? "UNCACHED" : ApplicationCache.IDLE == value ? "IDLE" : ApplicationCache.CHECKING == value ? "CHECKING" : ApplicationCache.DOWNLOADING == value ? "DOWNLOADING" : ApplicationCache.UPDATEREADY == value ? "UPDATEREADY" : ApplicationCache.OBSOLETE == value ? "OBSOLETE" : "Unknown value " + value;
     }
   }
 }

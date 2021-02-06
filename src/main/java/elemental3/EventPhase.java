@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -31,6 +32,11 @@ public @interface EventPhase {
 
     public static boolean isValid(final int value) {
       return Event.NONE == value || Event.CAPTURING_PHASE == value || Event.AT_TARGET == value || Event.BUBBLING_PHASE == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return Event.NONE == value ? "NONE" : Event.CAPTURING_PHASE == value ? "CAPTURING_PHASE" : Event.AT_TARGET == value ? "AT_TARGET" : Event.BUBBLING_PHASE == value ? "BUBBLING_PHASE" : "Unknown value " + value;
     }
   }
 }

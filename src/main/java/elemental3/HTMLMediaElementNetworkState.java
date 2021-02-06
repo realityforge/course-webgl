@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -31,6 +32,11 @@ public @interface HTMLMediaElementNetworkState {
 
     public static boolean isValid(final int value) {
       return HTMLMediaElement.NETWORK_EMPTY == value || HTMLMediaElement.NETWORK_IDLE == value || HTMLMediaElement.NETWORK_LOADING == value || HTMLMediaElement.NETWORK_NO_SOURCE == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return HTMLMediaElement.NETWORK_EMPTY == value ? "NETWORK_EMPTY" : HTMLMediaElement.NETWORK_IDLE == value ? "NETWORK_IDLE" : HTMLMediaElement.NETWORK_LOADING == value ? "NETWORK_LOADING" : HTMLMediaElement.NETWORK_NO_SOURCE == value ? "NETWORK_NO_SOURCE" : "Unknown value " + value;
     }
   }
 }

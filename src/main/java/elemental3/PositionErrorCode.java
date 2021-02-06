@@ -2,6 +2,7 @@ package elemental3;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -30,6 +31,11 @@ public @interface PositionErrorCode {
 
     public static boolean isValid(final int value) {
       return PositionError.PERMISSION_DENIED == value || PositionError.POSITION_UNAVAILABLE == value || PositionError.TIMEOUT == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return PositionError.PERMISSION_DENIED == value ? "PERMISSION_DENIED" : PositionError.POSITION_UNAVAILABLE == value ? "POSITION_UNAVAILABLE" : PositionError.TIMEOUT == value ? "TIMEOUT" : "Unknown value " + value;
     }
   }
 }

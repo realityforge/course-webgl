@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -38,6 +39,11 @@ public @interface TextureFormat {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.RGB == value || WebGL2RenderingContext.RGBA == value || WebGL2RenderingContext.LUMINANCE_ALPHA == value || WebGL2RenderingContext.LUMINANCE == value || WebGL2RenderingContext.ALPHA == value || WebGL2RenderingContext.RED == value || WebGL2RenderingContext.RED_INTEGER == value || WebGL2RenderingContext.RG == value || WebGL2RenderingContext.RG_INTEGER == value || WebGL2RenderingContext.RGB_INTEGER == value || WebGL2RenderingContext.RGBA_INTEGER == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.RGB == value ? "RGB" : WebGL2RenderingContext.RGBA == value ? "RGBA" : WebGL2RenderingContext.LUMINANCE_ALPHA == value ? "LUMINANCE_ALPHA" : WebGL2RenderingContext.LUMINANCE == value ? "LUMINANCE" : WebGL2RenderingContext.ALPHA == value ? "ALPHA" : WebGL2RenderingContext.RED == value ? "RED" : WebGL2RenderingContext.RED_INTEGER == value ? "RED_INTEGER" : WebGL2RenderingContext.RG == value ? "RG" : WebGL2RenderingContext.RG_INTEGER == value ? "RG_INTEGER" : WebGL2RenderingContext.RGB_INTEGER == value ? "RGB_INTEGER" : WebGL2RenderingContext.RGBA_INTEGER == value ? "RGBA_INTEGER" : "Unknown value " + value;
     }
   }
 }

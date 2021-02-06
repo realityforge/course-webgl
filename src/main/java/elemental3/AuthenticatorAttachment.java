@@ -21,6 +21,12 @@ public @interface AuthenticatorAttachment {
     private Validator() {
     }
 
+    @AuthenticatorAttachment
+    public static String cast(final String value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(@Nonnull final String value) {
       assert isValid( value );
     }

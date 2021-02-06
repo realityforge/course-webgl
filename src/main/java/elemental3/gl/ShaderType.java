@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -29,6 +30,11 @@ public @interface ShaderType {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.VERTEX_SHADER == value || WebGL2RenderingContext.FRAGMENT_SHADER == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.VERTEX_SHADER == value ? "VERTEX_SHADER" : WebGL2RenderingContext.FRAGMENT_SHADER == value ? "FRAGMENT_SHADER" : "Unknown value " + value;
     }
   }
 }

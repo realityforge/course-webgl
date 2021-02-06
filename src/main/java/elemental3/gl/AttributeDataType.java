@@ -2,6 +2,7 @@ package elemental3.gl;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -33,6 +34,11 @@ public @interface AttributeDataType {
 
     public static boolean isValid(final int value) {
       return WebGL2RenderingContext.BYTE == value || WebGL2RenderingContext.UNSIGNED_BYTE == value || WebGL2RenderingContext.SHORT == value || WebGL2RenderingContext.UNSIGNED_SHORT == value || WebGL2RenderingContext.FLOAT == value || WebGL2RenderingContext.HALF_FLOAT == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return WebGL2RenderingContext.BYTE == value ? "BYTE" : WebGL2RenderingContext.UNSIGNED_BYTE == value ? "UNSIGNED_BYTE" : WebGL2RenderingContext.SHORT == value ? "SHORT" : WebGL2RenderingContext.UNSIGNED_SHORT == value ? "UNSIGNED_SHORT" : WebGL2RenderingContext.FLOAT == value ? "FLOAT" : WebGL2RenderingContext.HALF_FLOAT == value ? "HALF_FLOAT" : "Unknown value " + value;
     }
   }
 }
