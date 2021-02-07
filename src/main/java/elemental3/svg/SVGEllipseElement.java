@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGEllipseElement interface provides access to the properties of ellipse elements.
+ * The SVGEllipseElement interface provides access to the properties of &lt;ellipse&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement">SVGEllipseElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGEllipseElement">The definition of 'SVGEllipseElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGEllipseElement">The definition of 'SVGEllipseElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGEllipseElement">SVGEllipseElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGEllipseElement">SVGEllipseElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

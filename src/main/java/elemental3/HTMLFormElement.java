@@ -12,11 +12,11 @@ import jsinterop.base.JsArrayLike;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The HTMLFormElement interface represents a form element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
+ * The HTMLFormElement interface represents a &lt;form&gt; element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlformelement">The definition of 'HTMLFormElement' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#htmlformelement">The definition of 'HTMLFormElement' in the 'HTML5' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlformelement">HTMLFormElement - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#htmlformelement">HTMLFormElement - HTML5</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -99,8 +99,8 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement property elements returns an HTMLFormControlsCollection listing all the form controls contained in the form element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements">HTMLFormElement.elements - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-elements">The definition of 'HTMLFormElement.elements' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479">The definition of 'HTMLFormElement.elements' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-elements">HTMLFormElement.elements - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479">HTMLFormElement.elements - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   @JsProperty(
       name = "elements"
@@ -130,8 +130,8 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement.reportValidity() method returns true if the element's child controls satisfy their validation constraints. When false is returned, cancelable invalid events are fired for each invalid child and validation problems are reported to the user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity">HTMLFormElement.reportValidity - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-cva-reportvalidity">The definition of 'HTMLFormElement.reportValidity()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/semantics.html#the-constraint-validation-api">The definition of 'HTMLFormElement.reportValidity()' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-cva-reportvalidity">HTMLFormElement.reportValidity() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/semantics.html#the-constraint-validation-api">HTMLFormElement.reportValidity() - HTML 5.1</a>
    */
   public native boolean reportValidity();
 
@@ -139,7 +139,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit">HTMLFormElement.requestSubmit - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-requestsubmit">The definition of 'requestSubmit()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-requestsubmit">requestSubmit() - HTML Living Standard</a>
    */
   public native void requestSubmit(@Nullable HTMLElement submitter);
 
@@ -147,7 +147,7 @@ public class HTMLFormElement extends HTMLElement {
    * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit">HTMLFormElement.requestSubmit - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-requestsubmit">The definition of 'requestSubmit()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-form-requestsubmit">requestSubmit() - HTML Living Standard</a>
    */
   public native void requestSubmit();
 

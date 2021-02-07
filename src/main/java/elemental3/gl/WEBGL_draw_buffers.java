@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_draw_buffers extension is part of the WebGL API and enables a fragment shader to write to several textures, which is useful for deferred shading, for example.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers">WEBGL_draw_buffers - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">The definition of 'WEBGL_draw_buffers' in the 'WEBGL_draw_buffers' specification.</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">WEBGL_draw_buffers - WEBGL_draw_buffers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -129,8 +129,8 @@ public class WEBGL_draw_buffers {
    * The WEBGL_draw_buffers.drawBuffersWEBGL() method is part of the WebGL API and allows you to define the draw buffers to which all fragment colors are written.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers/drawBuffersWEBGL">WEBGL_draw_buffers.drawBuffersWEBGL - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">The definition of 'WEBGL_draw_buffers' in the 'WEBGL_draw_buffers' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">The definition of 'glDrawBuffers' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">WEBGL_draw_buffers - WEBGL_draw_buffers</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">glDrawBuffers - OpenGL ES 3.0</a>
    */
   public native void drawBuffersWEBGL(@Nonnull JsArray<Double> buffers);
 
@@ -138,8 +138,8 @@ public class WEBGL_draw_buffers {
    * The WEBGL_draw_buffers.drawBuffersWEBGL() method is part of the WebGL API and allows you to define the draw buffers to which all fragment colors are written.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers/drawBuffersWEBGL">WEBGL_draw_buffers.drawBuffersWEBGL - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">The definition of 'WEBGL_draw_buffers' in the 'WEBGL_draw_buffers' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">The definition of 'glDrawBuffers' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">WEBGL_draw_buffers - WEBGL_draw_buffers</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">glDrawBuffers - OpenGL ES 3.0</a>
    */
   public native void drawBuffersWEBGL(@Nonnull double[] buffers);
 }

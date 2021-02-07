@@ -11,13 +11,13 @@ import jsinterop.base.Js;
 import jsinterop.base.JsArrayLike;
 
 /**
- * The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
+ * The HTMLSelectElement interface represents a &lt;select&gt; HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlselectelement">The definition of 'HTMLSelectElement' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#htmlselectelement">The definition of 'HTMLSelectElement' in the 'HTML5' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-94282980">The definition of 'HTMLSelectElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-94282980">The definition of 'HTMLSelectElement' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlselectelement">HTMLSelectElement - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#htmlselectelement">HTMLSelectElement - HTML5</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-94282980">HTMLSelectElement - Document Object Model (DOM) Level 2 HTML Specification</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-94282980">HTMLSelectElement - Document Object Model (DOM) Level 1 Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,8 +34,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled">HTMLSelectElement.disabled - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fe-disabled">The definition of 'disabled' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-disabled">The definition of 'HTMLSelectElement' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fe-disabled">disabled - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-disabled">HTMLSelectElement - HTML5</a>
    */
   public boolean disabled;
 
@@ -52,8 +52,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.selectedIndex is a long that reflects the index of the first or last selected option element, depending on the value of multiple. The value -1 indicates that no element is selected.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedIndex">HTMLSelectElement.selectedIndex - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-selectedindex">The definition of 'HTMLSelectElement' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-selectedindex">The definition of 'HTMLSelectElement' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-selectedindex">HTMLSelectElement - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-selectedindex">HTMLSelectElement - HTML5</a>
    */
   public int selectedIndex;
 
@@ -69,8 +69,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.form read-only property returns a HTMLFormElement representing the form that this element is associated with. If the element is not associated with of a form element, then it returns null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/form">HTMLSelectElement.form - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fae-form">The definition of 'form' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-form">The definition of 'HTMLSelectElement' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-fae-form">form - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-form">HTMLSelectElement - HTML5</a>
    */
   @JsProperty(
       name = "form"
@@ -82,8 +82,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.labels read-only property returns a NodeList of the label elements associated with the select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/labels">HTMLSelectElement.labels - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">labels - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">labels - HTML5</a>
    */
   @JsProperty(
       name = "labels"
@@ -95,8 +95,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.options read-only property returns a HTMLOptionsCollection of the option elements contained by the select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/options">HTMLSelectElement.options - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-options">The definition of 'options' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#htmlselectelement">The definition of 'options' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-options">options - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#htmlselectelement">options - HTML5</a>
    */
   @JsProperty(
       name = "options"
@@ -108,8 +108,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The read-only HTMLSelectElement property selectedOptions contains a list of the option elements contained within the select element that are currently selected. The list of selected options is an HTMLCollection object with one entry per currently selected option.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions">HTMLSelectElement.selectedOptions - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#dom-select-selectedoptions">The definition of 'HTMLSelectElement.selectedOptions' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-selectedoptions">The definition of 'HTMLSelectElement.selectedOptions' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#dom-select-selectedoptions">HTMLSelectElement.selectedOptions - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-selectedoptions">HTMLSelectElement.selectedOptions - HTML5</a>
    */
   @JsProperty(
       name = "selectedOptions"
@@ -121,10 +121,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.type read-only property returns the form control's type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/type">HTMLSelectElement.type - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-type">The definition of 'HTMLSelectElement' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-type">The definition of 'HTMLSelectElement' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-58783172">The definition of 'HTMLSelectElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-58783172">The definition of 'HTMLSelectElement' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-type">HTMLSelectElement - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-type">HTMLSelectElement - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-58783172">HTMLSelectElement - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-58783172">HTMLSelectElement - Document Object Model (DOM) Level 1 Specification</a>
    */
   @JsProperty(
       name = "type"
@@ -153,10 +153,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add">HTMLSelectElement.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">HTMLSelectElement.add() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">HTMLSelectElement.add() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void add(@Nonnull HTMLOptionElement element, @Nonnull HTMLElement before);
 
@@ -164,10 +164,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add">HTMLSelectElement.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">HTMLSelectElement.add() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">HTMLSelectElement.add() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void add(@Nonnull HTMLOptGroupElement element, @Nonnull HTMLElement before);
 
@@ -175,10 +175,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add">HTMLSelectElement.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">HTMLSelectElement.add() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">HTMLSelectElement.add() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void add(@Nonnull HTMLOptionElement element, int before);
 
@@ -186,10 +186,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add">HTMLSelectElement.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">HTMLSelectElement.add() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">HTMLSelectElement.add() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void add(@Nonnull HTMLOptGroupElement element, int before);
 
@@ -197,10 +197,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add">HTMLSelectElement.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">HTMLSelectElement.add() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">HTMLSelectElement.add() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void add(@Nonnull HTMLOptionElement element);
 
@@ -208,10 +208,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add">HTMLSelectElement.add - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">The definition of 'HTMLSelectElement.add()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">The definition of 'HTMLSelectElement.add()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-add">HTMLSelectElement.add() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-add">HTMLSelectElement.add() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106">HTMLSelectElement.add() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void add(@Nonnull HTMLOptGroupElement element);
 
@@ -219,8 +219,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.checkValidity() method checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable invalid event at the element, and then returns false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity">HTMLSelectElement.checkValidity - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-cva-checkvalidity">The definition of 'HTMLSelectElement.checkValidity()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-cva-checkvalidity">The definition of 'HTMLSelectElement.checkValidity()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-cva-checkvalidity">HTMLSelectElement.checkValidity() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-cva-checkvalidity">HTMLSelectElement.checkValidity() - HTML5</a>
    */
   public native boolean checkValidity();
 
@@ -228,8 +228,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.namedItem() method returns the HTMLOptionElement corresponding to the HTMLOptionElement whose name or id match the specified name, or null if no option matches.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/namedItem">HTMLSelectElement.namedItem - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-nameditem">The definition of 'HTMLSelectElement.namedItem()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-nameditem">The definition of 'HTMLSelectElement.namedItem()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-nameditem">HTMLSelectElement.namedItem() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-nameditem">HTMLSelectElement.namedItem() - HTML5</a>
    */
   @Nullable
   public native HTMLOptionElement namedItem(@Nonnull String name);
@@ -238,10 +238,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.remove() method removes the element at the specified index from the options collection for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/remove">HTMLSelectElement.remove - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-remove">The definition of 'HTMLSelectElement.remove()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-remove">The definition of 'HTMLSelectElement.remove()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33404570">The definition of 'HTMLSelectElement.remove()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33404570">The definition of 'HTMLSelectElement.remove()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-remove">HTMLSelectElement.remove() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-remove">HTMLSelectElement.remove() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33404570">HTMLSelectElement.remove() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33404570">HTMLSelectElement.remove() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void remove();
 
@@ -249,10 +249,10 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.remove() method removes the element at the specified index from the options collection for this select element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/remove">HTMLSelectElement.remove - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-remove">The definition of 'HTMLSelectElement.remove()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-remove">The definition of 'HTMLSelectElement.remove()' in the 'HTML5' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33404570">The definition of 'HTMLSelectElement.remove()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
-   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33404570">The definition of 'HTMLSelectElement.remove()' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-remove">HTMLSelectElement.remove() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-remove">HTMLSelectElement.remove() - HTML5</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33404570">HTMLSelectElement.remove() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33404570">HTMLSelectElement.remove() - Document Object Model (DOM) Level 1 Specification</a>
    */
   public native void remove(int index);
 
@@ -262,8 +262,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.setCustomValidity() method sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does not have a custom validity error.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity">HTMLSelectElement.setCustomValidity - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-cva-setcustomvalidity">The definition of 'HTMLSelectElement.setCustomValidity()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-cva-setcustomvalidity">The definition of 'HTMLSelectElement.setCustomValidity()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-cva-setcustomvalidity">HTMLSelectElement.setCustomValidity() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-cva-setcustomvalidity">HTMLSelectElement.setCustomValidity() - HTML5</a>
    */
   public native void setCustomValidity(@Nonnull String error);
 
@@ -271,8 +271,8 @@ public class HTMLSelectElement extends HTMLElement {
    * The HTMLSelectElement.item() method returns the Element corresponding to the HTMLOptionElement whose position in the options list corresponds to the index given in the parameter, or null if there are none.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/item">HTMLSelectElement.item - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-item">The definition of 'HTMLSelectElement.item()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-item">The definition of 'HTMLSelectElement.item()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-item">HTMLSelectElement.item() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-item">HTMLSelectElement.item() - HTML5</a>
    */
   @Nullable
   public native Element item(int index);

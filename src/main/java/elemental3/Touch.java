@@ -10,8 +10,8 @@ import jsinterop.annotations.JsType;
  * The Touch interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch">Touch - MDN</a>
- * @see <a href="https://w3c.github.io/touch-events/#touch-interface">The definition of 'Touch' in the 'Touch Events &ndash; Level 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/touch-events/#touch-interface">The definition of 'Touch' in the 'Touch Events' specification.</a>
+ * @see <a href="https://w3c.github.io/touch-events/#touch-interface">Touch - Touch Events &ndash; Level 2</a>
+ * @see <a href="https://www.w3.org/TR/touch-events/#touch-interface">Touch - Touch Events</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

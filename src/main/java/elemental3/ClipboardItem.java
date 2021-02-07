@@ -10,10 +10,10 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.
+ * The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem">ClipboardItem - MDN</a>
- * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">The definition of 'ClipboardItem' in the 'Clipboard API and events' specification.</a>
+ * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">ClipboardItem - Clipboard API and events</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -50,7 +50,7 @@ public class ClipboardItem {
    * The read-only types property of the ClipboardItem interface returns an Array of MIME types available within the ClipboardItem
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/types">ClipboardItem.types - MDN</a>
-   * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">The definition of 'ClipboardItem' in the 'Clipboard API and events' specification.</a>
+   * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">ClipboardItem - Clipboard API and events</a>
    */
   @JsProperty(
       name = "types"
@@ -71,7 +71,7 @@ public class ClipboardItem {
    * The getType() method of the ClipboardItem interface returns a Promise that resolves with a Blob of the requested  MIME type or an error if the MIME type is not found.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/getType">ClipboardItem.getType - MDN</a>
-   * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">The definition of 'ClipboardItem' in the 'Clipboard API and events' specification.</a>
+   * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">ClipboardItem - Clipboard API and events</a>
    */
   @Nonnull
   public native Promise<Blob> getType(@Nonnull String type);

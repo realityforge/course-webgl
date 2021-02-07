@@ -30,7 +30,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.ondataavailable event handler (part of the MediaStream Recording API) handles the dataavailable event, letting you run code in response to Blob data being made available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ondataavailable">MediaRecorder.ondataavailable - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-ondataavailable">The definition of 'MediaRecorder.ondataavailable' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-ondataavailable">MediaRecorder.ondataavailable - MediaStream Recording</a>
    */
   @Nullable
   public EventHandler ondataavailable;
@@ -39,7 +39,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder interface's onerror event handler is called by the MediaStream Recording API when an error occurs. You can provide an event handler to deal with errors that occur while creating or using a media recorder
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onerror">MediaRecorder.onerror - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onerror">The definition of 'MediaRecorder.onerror' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onerror">MediaRecorder.onerror - MediaStream Recording</a>
    */
   @Nullable
   public MediaRecorderErrorEventHandler onerror;
@@ -48,7 +48,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.onpause event handler (part of the MediaRecorder API) handles the pause event, allowing you to run code in response to the media recording being paused.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onpause">MediaRecorder.onpause - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onpause">The definition of 'MediaRecorder.onpause' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onpause">MediaRecorder.onpause - MediaStream Recording</a>
    */
   @Nullable
   public EventHandler onpause;
@@ -57,7 +57,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.onresume event handler (part of the MediaRecorder API) handles the resume event, allowing you to run code in response to the media recording being resumed after pausing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onresume">MediaRecorder.onresume - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onresume">The definition of 'MediaRecorder.onresume' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onresume">MediaRecorder.onresume - MediaStream Recording</a>
    */
   @Nullable
   public EventHandler onresume;
@@ -66,7 +66,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.onstartevent handler (part of the MediaRecorder API) handles the start event, allowing you to run code in response to media recording being started by a MediaRecorder.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstart">MediaRecorder.onstart - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onstart">The definition of 'MediaRecorder.onstart' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onstart">MediaRecorder.onstart - MediaStream Recording</a>
    */
   @Nullable
   public EventHandler onstart;
@@ -75,7 +75,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.onstop event handler (part of the MediaRecorder API) handles the stop event, allowing you to run code in response to media recording via a MediaRecorder being stopped.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstop">MediaRecorder.onstop - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onstop">The definition of 'MediaRecorder.onstop' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onstop">MediaRecorder.onstop - MediaStream Recording</a>
    */
   @Nullable
   public EventHandler onstop;
@@ -110,7 +110,7 @@ public class MediaRecorder extends EventTarget {
    * The audioBitsPerSecond read-only property of the MediaRecorder interface returns the audio encoding bit rate in use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/audioBitsPerSecond">MediaRecorder.audioBitsPerSecond - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-audiobitspersecond">The definition of 'audioBitsPerSecond' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-audiobitspersecond">audioBitsPerSecond - MediaStream Recording</a>
    */
   @JsProperty(
       name = "audioBitsPerSecond"
@@ -121,7 +121,7 @@ public class MediaRecorder extends EventTarget {
    * The mimeType read-only property returns the MIME media type that was specified when creating the MediaRecorder object, or, if none was specified, which was chosen by the browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/mimeType">MediaRecorder.mimeType - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-mimetype">The definition of 'MediaRecorder.mimeType' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-mimetype">MediaRecorder.mimeType - MediaStream Recording</a>
    */
   @JsProperty(
       name = "mimeType"
@@ -133,7 +133,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.state read-only property returns the current state of the current MediaRecorder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/state">MediaRecorder.state - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-state">The definition of 'MediaRecorder.state' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-state">MediaRecorder.state - MediaStream Recording</a>
    */
   @JsProperty(
       name = "state"
@@ -146,7 +146,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.stream read-only property returns the stream that was passed into the MediaRecorder() constructor when the MediaRecorder was created.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stream">MediaRecorder.stream - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-stream">The definition of 'MediaRecorder.stream' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-stream">MediaRecorder.stream - MediaStream Recording</a>
    */
   @JsProperty(
       name = "stream"
@@ -158,7 +158,7 @@ public class MediaRecorder extends EventTarget {
    * The videoBitsPerSecond read-only property of the MediaRecorder interface returns the video encoding bit rate in use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/videoBitsPerSecond">MediaRecorder.videoBitsPerSecond - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-videobitspersecond">The definition of 'videoBitsPerSecond' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-videobitspersecond">videoBitsPerSecond - MediaStream Recording</a>
    */
   @JsProperty(
       name = "videoBitsPerSecond"
@@ -169,7 +169,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.isTypeSupported() static method returns a Boolean which is true if the MIME type specified is one the user agent should be able to successfully record.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/isTypeSupported">MediaRecorder.isTypeSupported - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-istypesupported">The definition of 'isTypeSupported()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-istypesupported">isTypeSupported() - MediaStream Recording</a>
    */
   public static native boolean isTypeSupported(@Nonnull String type);
 
@@ -177,7 +177,7 @@ public class MediaRecorder extends EventTarget {
    * The Media.pause() method (part of the MediaRecorder API) is used to pause recording of media streams.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/pause">MediaRecorder.pause - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-pause">The definition of 'MediaRecorder.pause()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-pause">MediaRecorder.pause() - MediaStream Recording</a>
    */
   public native void pause();
 
@@ -185,7 +185,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.requestData() method (part of the MediaRecorder API) is used to raise a dataavailable event containing a Blob object of the captured media as it was when the method was called.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/requestData">MediaRecorder.requestData - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-requestdata">The definition of 'MediaRecorder.requestData()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-requestdata">MediaRecorder.requestData() - MediaStream Recording</a>
    */
   public native void requestData();
 
@@ -193,7 +193,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.resume() method (part of the MediaRecorder API) is used to resume media recording when it has been previously paused.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume">MediaRecorder.resume - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-resume">The definition of 'MediaRecorder.resume()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-resume">MediaRecorder.resume() - MediaStream Recording</a>
    */
   public native void resume();
 
@@ -201,7 +201,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder method start(), which is part of the MediaStream Recording API, begins recording media into one or more Blob objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/start">MediaRecorder.start - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-start">The definition of 'MediaRecorder.start()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-start">MediaRecorder.start() - MediaStream Recording</a>
    */
   public native void start(int timeslice);
 
@@ -209,7 +209,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder method start(), which is part of the MediaStream Recording API, begins recording media into one or more Blob objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/start">MediaRecorder.start - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-start">The definition of 'MediaRecorder.start()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-start">MediaRecorder.start() - MediaStream Recording</a>
    */
   public native void start();
 
@@ -217,7 +217,7 @@ public class MediaRecorder extends EventTarget {
    * The MediaRecorder.stop() method (part of the MediaRecorder API) is used to stop media capture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop">MediaRecorder.stop - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-stop">The definition of 'MediaRecorder.stop()' in the 'MediaStream Recording' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-stop">MediaRecorder.stop() - MediaStream Recording</a>
    */
   public native void stop();
 

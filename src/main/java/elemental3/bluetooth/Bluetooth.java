@@ -20,7 +20,7 @@ import jsinterop.base.Js;
  * The Bluetooth interface of the Web Bluetooth API returns a Promise to a BluetoothDevice object with the specified options.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth">Bluetooth - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">The definition of 'Bluetooth' in the 'Web Bluetooth' specification.</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">Bluetooth - Web Bluetooth</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -36,7 +36,7 @@ public class Bluetooth extends EventTarget {
    * The onavailabilitychanged property of the Bluetooth interface is an EventHandler that processes availabilitychanged events that fire when the Bluetooth system as a whole becomes available or unavailable to the User Agent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/onavailabilitychanged">Bluetooth.onavailabilitychanged - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">The definition of 'Bluetooth' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">Bluetooth - Web Bluetooth</a>
    */
   @Nullable
   public EventHandler onavailabilitychanged;
@@ -63,7 +63,7 @@ public class Bluetooth extends EventTarget {
    * The Bluetooth.referringDevice attribute of the Bluetooth interface returns a BluetoothDevice if the current document was opened in response to an instruction sent by this device and null otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice">Bluetooth.referringDevice - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-referringdevice">The definition of 'referringDevice' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-referringdevice">referringDevice - Web Bluetooth</a>
    */
   @JsProperty(
       name = "referringDevice"
@@ -75,7 +75,7 @@ public class Bluetooth extends EventTarget {
    * The getAvailability() method of Bluetooth interface of Web Bluetooth API interface exposes the Bluetooth capabilities of the current device. For a returns a Boolean which is true if the deveice has a Bluetooth adapter and false otherwise (unless user configured User Agent not to expose a real value).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getAvailability">Bluetooth.getAvailability - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getavailability">The definition of 'getAvailability()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getavailability">getAvailability() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<Boolean> getAvailability();
@@ -84,7 +84,7 @@ public class Bluetooth extends EventTarget {
    * The getDevices() method of Bluetooth interface of Web Bluetooth API exposes the Bluetooth devices this origin is allowed to access. This method does not display any permission prompts.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices">Bluetooth.getDevices - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getdevices">The definition of 'getDevices()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getdevices">getDevices() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothDevice>> getDevices();
@@ -93,7 +93,7 @@ public class Bluetooth extends EventTarget {
    * The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice">Bluetooth.requestDevice - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice">The definition of 'requestDevice()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice">requestDevice() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothDevice> requestDevice(@Nonnull RequestDeviceOptions options);
@@ -102,7 +102,7 @@ public class Bluetooth extends EventTarget {
    * The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice">Bluetooth.requestDevice - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice">The definition of 'requestDevice()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice">requestDevice() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothDevice> requestDevice();

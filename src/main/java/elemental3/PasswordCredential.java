@@ -41,7 +41,7 @@ public class PasswordCredential extends Credential {
    * The iconURL read-only property of the PasswordCredential interface returns a USVString containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/iconURL">PasswordCredential.iconURL - MDN</a>
-   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-iconurl">The definition of 'iconURL' in the 'Credential Management Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-iconurl">iconURL - Credential Management Level 1</a>
    */
   @JsProperty(
       name = "iconURL"
@@ -53,7 +53,7 @@ public class PasswordCredential extends Credential {
    * The name read-only property of the PasswordCredential interface returns a USVSTring containing a human-readable public name for display in a credential chooser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/name">PasswordCredential.name - MDN</a>
-   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-name">The definition of 'name' in the 'Credential Management Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-name">name - Credential Management Level 1</a>
    */
   @JsProperty(
       name = "name"
@@ -65,7 +65,7 @@ public class PasswordCredential extends Credential {
    * The password read-only property of the PasswordCredential interface returns a USVString containing the password of the credential.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/password">PasswordCredential.password - MDN</a>
-   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-passwordcredential-password">The definition of 'password' in the 'Credential Management Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-passwordcredential-password">password - Credential Management Level 1</a>
    */
   @JsProperty(
       name = "password"

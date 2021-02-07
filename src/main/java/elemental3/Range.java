@@ -11,10 +11,10 @@ import jsinterop.annotations.JsType;
  * The Range interface represents a fragment of a document that can contain nodes and parts of text nodes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range">Range - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-range">The definition of 'Range' in the 'DOM' specification.</a>
- * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-range-interface">The definition of 'Extensions to Range' in the 'DOM Parsing and Serialization' specification.</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface">The definition of 'Extensions to Range' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Interface">The definition of 'Range' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-range">Range - DOM</a>
+ * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-range-interface">Extensions to Range - DOM Parsing and Serialization</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface">Extensions to Range - CSS Object Model (CSSOM) View Module</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Interface">Range - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -47,8 +47,8 @@ public class Range extends AbstractRange {
    * The Range.commonAncestorContainer read-only property returns the deepest &mdash; or furthest down the document tree &mdash; Node that contains both boundary points of the Range. This means that if Range.startContainer and Range.endContainer both refer to the same node, this node is the common ancestor container.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/commonAncestorContainer">Range.commonAncestorContainer - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-commonancestorcontainer">The definition of 'Range.commonAncestorContainer' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-commonParent">The definition of 'Range.commonAncestorContainer' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-commonancestorcontainer">Range.commonAncestorContainer - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-commonParent">Range.commonAncestorContainer - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   @JsProperty(
       name = "commonAncestorContainer"
@@ -76,8 +76,8 @@ public class Range extends AbstractRange {
    * The Range.collapse() method collapses the Range to one of its boundary points.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse">Range.collapse - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-collapse">The definition of 'Range.collapse()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-collapse">The definition of 'Range.collapse()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-collapse">Range.collapse() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-collapse">Range.collapse() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void collapse(boolean toStart);
 
@@ -85,8 +85,8 @@ public class Range extends AbstractRange {
    * The Range.collapse() method collapses the Range to one of its boundary points.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse">Range.collapse - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-collapse">The definition of 'Range.collapse()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-collapse">The definition of 'Range.collapse()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-collapse">Range.collapse() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-collapse">Range.collapse() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void collapse();
 
@@ -108,8 +108,8 @@ public class Range extends AbstractRange {
    * The Range.deleteContents() method removes the contents of the Range from the Document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/deleteContents">Range.deleteContents - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-deletecontents">The definition of 'Range.deleteContents()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-deleteContents">The definition of 'Range.deleteContents()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-deletecontents">Range.deleteContents() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-deleteContents">Range.deleteContents() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void deleteContents();
 
@@ -117,8 +117,8 @@ public class Range extends AbstractRange {
    * The Range.detach() method does nothing. It used to disable the Range object and enable the browser to release associated resources. The method has been kept for compatibility.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/detach">Range.detach - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-detach">The definition of 'Range.detach()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-detach">The definition of 'Range.detach()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-detach">Range.detach() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-detach">Range.detach() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void detach();
 
@@ -126,8 +126,8 @@ public class Range extends AbstractRange {
    * The Range.extractContents() method moves contents of the Range from the document tree into a DocumentFragment.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents">Range.extractContents - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-extractcontents">The definition of 'Range.extractContents()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-extractContents">The definition of 'Range.extractContents()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-extractcontents">Range.extractContents() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-extractContents">Range.extractContents() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   @Nonnull
   public native DocumentFragment extractContents();
@@ -136,8 +136,8 @@ public class Range extends AbstractRange {
    * The Range.insertNode() method inserts a node at the start of the Range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode">Range.insertNode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-insertnode">The definition of 'Range.insertNode()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-insertNode">The definition of 'Range.insertNode()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-insertnode">Range.insertNode() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-insertNode">Range.insertNode() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void insertNode(@Nonnull Node node);
 
@@ -159,8 +159,8 @@ public class Range extends AbstractRange {
    * The Range.selectNode() method sets the Range to contain the Node and its contents. The parent Node of the start and end of the Range will be the same as the parent of the referenceNode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/selectNode">Range.selectNode - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-selectnode">The definition of 'Range.selectNode()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-selectNode">The definition of 'Range.selectNode()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-selectnode">Range.selectNode() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-selectNode">Range.selectNode() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void selectNode(@Nonnull Node node);
 
@@ -168,8 +168,8 @@ public class Range extends AbstractRange {
    * The Range.selectNodeContents() method sets the Range to contain the contents of a Node.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/selectNodeContents">Range.selectNodeContents - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-selectnodecontents">The definition of 'Range.selectNodeContents()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-selectNodeContents">The definition of 'Range.selectNodeContents()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-selectnodecontents">Range.selectNodeContents() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-selectNodeContents">Range.selectNodeContents() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void selectNodeContents(@Nonnull Node node);
 
@@ -177,8 +177,8 @@ public class Range extends AbstractRange {
    * The Range.setEnd() method sets the end position of a Range to be located at the given offset into the specified node x.Setting the end point above (higher in the document) than the start point will result in a collapsed range with the start and end points both set to the specified end position.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setEnd">Range.setEnd - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setend">The definition of 'Range.setEnd()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setEnd">The definition of 'Range.setEnd()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setend">Range.setEnd() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setEnd">Range.setEnd() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void setEnd(@Nonnull Node node, int offset);
 
@@ -186,8 +186,8 @@ public class Range extends AbstractRange {
    * The Range.setEndAfter() method sets the end position of a Range relative to another Node. The parent Node of end of the Range will be the same as that for the referenceNode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setEndAfter">Range.setEndAfter - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setendafter">The definition of 'Range.setEndAfter()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setEndAfter">The definition of 'Range.setEndAfter()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setendafter">Range.setEndAfter() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setEndAfter">Range.setEndAfter() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void setEndAfter(@Nonnull Node node);
 
@@ -202,8 +202,8 @@ public class Range extends AbstractRange {
    * The Range.setStart() method sets the start position of a Range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStart">Range.setStart - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setstart">The definition of 'Range.setStart()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setStart">The definition of 'Range.setStart()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setstart">Range.setStart() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setStart">Range.setStart() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void setStart(@Nonnull Node node, int offset);
 
@@ -218,8 +218,8 @@ public class Range extends AbstractRange {
    * The Range.setStartBefore() method sets the start position of a Range relative to another Node. The parent Node of the start of the Range will be the same as that for the referenceNode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStartBefore">Range.setStartBefore - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setstartbefore">The definition of 'Range.setStartBefore()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-setStartBefore">The definition of 'Range.setStartBefore()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-setstartbefore">Range.setStartBefore() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-setStartBefore">Range.setStartBefore() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void setStartBefore(@Nonnull Node node);
 
@@ -227,8 +227,8 @@ public class Range extends AbstractRange {
    * The Range.surroundContents() method moves content of the Range into a new node, placing the new node at the start of the specified range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/surroundContents">Range.surroundContents - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-range-surroundcontents">The definition of 'Range.surroundContents()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-surroundContents">The definition of 'Range.surroundContents()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-range-surroundcontents">Range.surroundContents() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-surroundContents">Range.surroundContents() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   public native void surroundContents(@Nonnull Node newParent);
 

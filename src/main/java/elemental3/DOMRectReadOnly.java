@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly">DOMRectReadOnly - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">DOMRectReadOnly - Geometry Interfaces Module Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -62,7 +63,7 @@ public class DOMRectReadOnly {
    * The bottom read-only property of the DOMRectReadOnly interface returns the bottom coordinate value of the DOMRect. (Has the same value as y + height, or y if height is negative.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/bottom">DOMRectReadOnly.bottom - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-bottom">The definition of 'bottom' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-bottom">bottom - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "bottom"
@@ -73,7 +74,7 @@ public class DOMRectReadOnly {
    * The height read-only property of the DOMRectReadOnly interface represents the height of the DOMRect.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/height">DOMRectReadOnly.height - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-height">The definition of 'height' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-height">height - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "height"
@@ -84,7 +85,7 @@ public class DOMRectReadOnly {
    * The left read-only property of the DOMRectReadOnly interface returns the left coordinate value of the DOMRect. (Has the same value as x, or x + width if width is negative.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/left">DOMRectReadOnly.left - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-left">The definition of 'left' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-left">left - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "left"
@@ -95,7 +96,7 @@ public class DOMRectReadOnly {
    * The right read-only property of the DOMRectReadOnly interface returns the right coordinate value of the DOMRect. (Has the same value as x + width, or x if width is negative.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/right">DOMRectReadOnly.right - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-right">The definition of 'right' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-right">right - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "right"
@@ -106,7 +107,7 @@ public class DOMRectReadOnly {
    * The top read-only property of the DOMRectReadOnly interface returns the top coordinate value of the DOMRect. (Has the same value as y, or y + height if height is negative.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/top">DOMRectReadOnly.top - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-top">The definition of 'top' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-top">top - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "top"
@@ -117,7 +118,7 @@ public class DOMRectReadOnly {
    * The width read-only property of the DOMRectReadOnly interface represents the width of the DOMRect.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/width">DOMRectReadOnly.width - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-width">The definition of 'width' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-width">width - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "width"
@@ -138,7 +139,7 @@ public class DOMRectReadOnly {
    * The y read-only property of the DOMRectReadOnly interface represents the y coordinate of the DOMRect's origin.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/y">DOMRectReadOnly.y - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-y">The definition of 'y' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrectreadonly-y">y - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "y"
@@ -149,7 +150,7 @@ public class DOMRectReadOnly {
    * The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect">DOMRectReadOnly.fromRect - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrect-fromrect">The definition of 'fromRect()' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrect-fromrect">fromRect() - Geometry Interfaces Module Level 1</a>
    */
   @Nonnull
   public static native DOMRectReadOnly fromRect(@Nonnull DOMRectInit other);
@@ -158,7 +159,7 @@ public class DOMRectReadOnly {
    * The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect">DOMRectReadOnly.fromRect - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrect-fromrect">The definition of 'fromRect()' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrect-fromrect">fromRect() - Geometry Interfaces Module Level 1</a>
    */
   @Nonnull
   public static native DOMRectReadOnly fromRect();

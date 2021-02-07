@@ -19,7 +19,7 @@ import jsinterop.base.Js;
  * The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport">RTCIceTransport - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport">The definition of 'RTCIceTransport' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport">RTCIceTransport - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public class RTCIceTransport extends EventTarget {
    * The ongatheringstatechange event handler for the RTCIceTransport interface specifies an event handler that is to be called when the gatheringstatechange event occurs on the transport.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/ongatheringstatechange">RTCIceTransport.ongatheringstatechange - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-ongatheringstatechange">The definition of 'RTCIceTransport.ongatheringstatechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-ongatheringstatechange">RTCIceTransport.ongatheringstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public EventHandler ongatheringstatechange;
@@ -41,7 +41,7 @@ public class RTCIceTransport extends EventTarget {
    * The RTCIceTransport interface's onselectedcandidatepairchange event handler specifies a function to be called to handle the selectedcandidatepairchange event, which is fired when the ICE agent selects a new candidate pair to be used for the connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange">RTCIceTransport.onselectedcandidatepairchange - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onselectedcandidatepairchange">The definition of 'RTCIceTransport.onselectedcandidatepairchange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onselectedcandidatepairchange">RTCIceTransport.onselectedcandidatepairchange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public EventHandler onselectedcandidatepairchange;
@@ -50,7 +50,7 @@ public class RTCIceTransport extends EventTarget {
    * The onstatechange event handler for the RTCIceTransport interface is a property which specifies a function to serve as the EventHandler for the statechange event that is fired whenever the transport's state changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onstatechange">RTCIceTransport.onstatechange - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onstatechange">The definition of 'RTCIceTransport.onstatechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onstatechange">RTCIceTransport.onstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public EventHandler onstatechange;
@@ -62,7 +62,7 @@ public class RTCIceTransport extends EventTarget {
    * The read-only RTCIceTransport property component specifies whether the object is serving to transport RTP or RTCP. The value is one of the strings in RTCIceComponent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/component">RTCIceTransport.component - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-icetransport-component">The definition of 'RTCIceTransport.component' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-icetransport-component">RTCIceTransport.component - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "component"
@@ -75,7 +75,7 @@ public class RTCIceTransport extends EventTarget {
    * The read-only RTCIceTransport property gatheringState returns a DOMString from the enumerated type RTCIceGathererState that indicates what gathering state the ICE agent is currently in: &quot;new&quot;, &quot;gathering&quot;, or &quot;complete&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringState">RTCIceTransport.gatheringState - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-icetransport-gatheringstate">The definition of 'RTCIceTransport.gatheringState' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-icetransport-gatheringstate">RTCIceTransport.gatheringState - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "gatheringState"
@@ -88,7 +88,7 @@ public class RTCIceTransport extends EventTarget {
    * The read-only RTCIceTransport property role indicates which ICE role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/role">RTCIceTransport.role - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-icetransport-role">The definition of 'RTCIceTransport.role' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-icetransport-role">RTCIceTransport.role - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "role"
@@ -101,7 +101,7 @@ public class RTCIceTransport extends EventTarget {
    * The read-only RTCIceTransport property state returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/state">RTCIceTransport.state - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicetransportstate">The definition of 'RTCIceTransportState' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicetransportstate">RTCIceTransportState - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "state"
@@ -114,7 +114,7 @@ public class RTCIceTransport extends EventTarget {
    * The RTCIceTransport method getLocalCandidates() returns an array of RTCIceCandidate objects, one for each of the candidates that have been gathered by the local device during the current ICE agent session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates">RTCIceTransport.getLocalCandidates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalcandidates">The definition of 'RTCIceCandidate.getLocalCandidates()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalcandidates">RTCIceCandidate.getLocalCandidates() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nonnull
   public native JsArray<RTCIceCandidate> getLocalCandidates();
@@ -123,7 +123,7 @@ public class RTCIceTransport extends EventTarget {
    * The RTCIceTransport method getLocalParameters() returns an RTCIceParameters object which provides information uniquely identifying the local peer for the duration of the ICE session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters">RTCIceTransport.getLocalParameters - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalparameters">The definition of 'RTCIceTransport.getLocalParameters' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalparameters">RTCIceTransport.getLocalParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public native RTCIceParameters getLocalParameters();
@@ -132,7 +132,7 @@ public class RTCIceTransport extends EventTarget {
    * The RTCIceTransport method getRemoteCandidates() returns an array which contains one RTCIceCandidate for each of the candidates that have been received from the remote peer so far during the current ICE gathering session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteCandidates">RTCIceTransport.getRemoteCandidates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremotecandidates">The definition of 'RTCIceCandidate.getRemoteCandidates()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremotecandidates">RTCIceCandidate.getRemoteCandidates() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nonnull
   public native JsArray<RTCIceCandidate> getRemoteCandidates();
@@ -141,7 +141,7 @@ public class RTCIceTransport extends EventTarget {
    * The RTCIceTransport method getRemoteParameters() returns an RTCIceParameters object which provides information uniquely identifying the remote peer for the duration of the ICE session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteParameters">RTCIceTransport.getRemoteParameters - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremoteparameters">The definition of 'RTCIceTransport.getRemoteParameters' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremoteparameters">RTCIceTransport.getRemoteParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public native RTCIceParameters getRemoteParameters();
@@ -150,7 +150,7 @@ public class RTCIceTransport extends EventTarget {
    * The RTCIceTransport method getSelectedCandidatePair() returns an RTCIceCandidatePair object containing the current best-choice pair of ICE candidates describing the configuration of the endpoints of the transport.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair">RTCIceTransport.getSelectedCandidatePair - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getselectedcandidatepair">The definition of 'RTCIceTransport.getSelectedCandidatePair()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getselectedcandidatepair">RTCIceTransport.getSelectedCandidatePair() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public native RTCIceCandidatePair getSelectedCandidatePair();

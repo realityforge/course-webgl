@@ -11,10 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * See the examples for SubtleCrypto.deriveKey().
+ * A DOMString representing the digest algorithm to use. This may be one of:
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams">The definition of 'SubtleCrypto.HkdfParams' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams">SubtleCrypto.HkdfParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

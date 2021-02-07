@@ -13,6 +13,7 @@ import jsinterop.base.JsArrayLike;
  * This interface inherits the methods of its parent, HTMLCollection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionsCollection">HTMLOptionsCollection - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#the-htmloptionscollection-interface">HTMLOptionsCollection - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

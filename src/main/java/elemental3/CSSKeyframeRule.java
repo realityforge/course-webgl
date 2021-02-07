@@ -7,9 +7,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The CSSKeyframeRule interface describes an object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE).
+ * The CSSKeyframeRule interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a @keyframes at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframeRule">CSSKeyframeRule - MDN</a>
+ * @see <a href="https://drafts.csswg.org/css-animations-1/#interface-csskeyframerule">CSSKeyframeRule - CSS Animations Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

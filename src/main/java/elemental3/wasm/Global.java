@@ -12,6 +12,7 @@ import jsinterop.base.Any;
  * A WebAssembly.Global object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more WebAssembly.Module instances. This allows dynamic linking of multiple modules.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global">WebAssembly.Global - MDN</a>
+ * @see <a href="https://webassembly.github.io/spec/js-api/#globals">WebAssembly.Global() - WebAssembly JavaScript Interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

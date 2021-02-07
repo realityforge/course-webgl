@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation">PerformanceNavigation - MDN</a>
- * @see <a href="https://www.w3.org/TR/navigation-timing/#performancenavigation">The definition of 'PerformanceNavigation' in the 'Navigation Timing' specification.</a>
+ * @see <a href="https://www.w3.org/TR/navigation-timing/#performancenavigation">PerformanceNavigation - Navigation Timing</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -39,7 +39,7 @@ public class PerformanceNavigation {
    * The legacy PerformanceNavigation.redirectCount read-only property returns an unsigned short representing the number of REDIRECTs done before reaching the page.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/redirectCount">PerformanceNavigation.redirectCount - MDN</a>
-   * @see <a href="https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-redirectcount">The definition of 'PerformanceNavigation.redirectCount' in the 'Navigation Timing' specification.</a>
+   * @see <a href="https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-redirectcount">PerformanceNavigation.redirectCount - Navigation Timing</a>
    */
   @JsProperty(
       name = "redirectCount"
@@ -50,7 +50,7 @@ public class PerformanceNavigation {
    * The legacy PerformanceNavigation.type read-only property returns an unsigned short containing a constant describing how the navigation to this page was done. Possible values are:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/type">PerformanceNavigation.type - MDN</a>
-   * @see <a href="https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-type">The definition of 'PerformanceNavigation.type' in the 'Navigation Timing' specification.</a>
+   * @see <a href="https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-type">PerformanceNavigation.type - Navigation Timing</a>
    */
   @JsProperty(
       name = "type"

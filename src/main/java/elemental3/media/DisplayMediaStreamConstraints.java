@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The DisplayMediaStreamConstraints dictionary is used to specify whether or not to include video and/or audio tracks in the MediaStream to be returned by getDisplayMedia(), as well as what type of processing must be applied to the tracks.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints">DisplayMediaStreamConstraints - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints">The definition of 'DisplayMediaStreamConstraints' in the 'Screen Capture' specification.</a>
+ * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints">DisplayMediaStreamConstraints - Screen Capture</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio">DisplayMediaStreamConstraints.audio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsProperty(
       name = "audio"
@@ -43,7 +43,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio">DisplayMediaStreamConstraints.audio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsProperty
   void setAudio(@Nonnull BooleanOrMediaTrackConstraintsUnion audio);
@@ -52,7 +52,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio">DisplayMediaStreamConstraints.audio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsOverlay
   default void setAudio(final boolean audio) {
@@ -63,7 +63,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio">DisplayMediaStreamConstraints.audio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsOverlay
   @Nonnull
@@ -76,7 +76,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio">DisplayMediaStreamConstraints.audio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsOverlay
   default void setAudio(@Nonnull final MediaTrackConstraints audio) {
@@ -87,7 +87,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio">DisplayMediaStreamConstraints.audio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsOverlay
   @Nonnull
@@ -100,7 +100,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video">DisplayMediaStreamConstraints.video - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsProperty(
       name = "video"
@@ -111,7 +111,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video">DisplayMediaStreamConstraints.video - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsProperty
   void setVideo(@Nonnull BooleanOrMediaTrackConstraintsUnion video);
@@ -120,7 +120,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video">DisplayMediaStreamConstraints.video - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsOverlay
   default void setVideo(final boolean video) {
@@ -131,7 +131,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video">DisplayMediaStreamConstraints.video - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsOverlay
   @Nonnull
@@ -144,7 +144,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video">DisplayMediaStreamConstraints.video - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsOverlay
   default void setVideo(@Nonnull final MediaTrackConstraints video) {
@@ -155,7 +155,7 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video">DisplayMediaStreamConstraints.video - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification.</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsOverlay
   @Nonnull

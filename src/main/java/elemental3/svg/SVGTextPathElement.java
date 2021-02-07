@@ -8,11 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGTextPathElement interface corresponds to the textPath element.
+ * The SVGTextPathElement interface corresponds to the &lt;textPath&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement">SVGTextPathElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPathElement">The definition of 'SVGTextPathElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTextPathElement">The definition of 'SVGTextPathElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPathElement">SVGTextPathElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTextPathElement">SVGTextPathElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

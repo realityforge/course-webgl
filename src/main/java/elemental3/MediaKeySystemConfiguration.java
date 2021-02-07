@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration">MediaKeySystemConfiguration - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary">The definition of 'MediaKeySystemConfiguration' in the 'Encrypted Media Extensions' specification.</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary">MediaKeySystemConfiguration - Encrypted Media Extensions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,7 +33,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">The definition of 'audioCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">audioCapabilities - Encrypted Media Extensions</a>
    */
   @JsProperty(
       name = "audioCapabilities"
@@ -44,7 +44,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">The definition of 'audioCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">audioCapabilities - Encrypted Media Extensions</a>
    */
   @JsProperty
   void setAudioCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> audioCapabilities);
@@ -53,7 +53,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">The definition of 'audioCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">audioCapabilities - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -67,7 +67,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">The definition of 'audioCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">audioCapabilities - Encrypted Media Extensions</a>
    */
   @JsOverlay
   default void setAudioCapabilities(
@@ -79,7 +79,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">The definition of 'audioCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">audioCapabilities - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -93,7 +93,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">The definition of 'distinctiveIdentifier' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">distinctiveIdentifier - Encrypted Media Extensions</a>
    */
   @JsProperty(
       name = "distinctiveIdentifier"
@@ -105,7 +105,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">The definition of 'distinctiveIdentifier' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">distinctiveIdentifier - Encrypted Media Extensions</a>
    */
   @JsProperty
   void setDistinctiveIdentifier(@MediaKeysRequirement @Nonnull String distinctiveIdentifier);
@@ -114,7 +114,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">The definition of 'distinctiveIdentifier' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">distinctiveIdentifier - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -128,7 +128,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">The definition of 'initDataTypes' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">initDataTypes - Encrypted Media Extensions</a>
    */
   @JsProperty(
       name = "initDataTypes"
@@ -139,7 +139,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">The definition of 'initDataTypes' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">initDataTypes - Encrypted Media Extensions</a>
    */
   @JsProperty
   void setInitDataTypes(@Nonnull JsArray<String> initDataTypes);
@@ -148,7 +148,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">The definition of 'initDataTypes' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">initDataTypes - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -161,7 +161,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">The definition of 'initDataTypes' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">initDataTypes - Encrypted Media Extensions</a>
    */
   @JsOverlay
   default void setInitDataTypes(@Nonnull final String... initDataTypes) {
@@ -172,7 +172,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">The definition of 'initDataTypes' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">initDataTypes - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -200,7 +200,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">The definition of 'persistentState' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">persistentState - Encrypted Media Extensions</a>
    */
   @JsProperty(
       name = "persistentState"
@@ -212,7 +212,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">The definition of 'persistentState' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">persistentState - Encrypted Media Extensions</a>
    */
   @JsProperty
   void setPersistentState(@MediaKeysRequirement @Nonnull String persistentState);
@@ -221,7 +221,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">The definition of 'persistentState' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">persistentState - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -262,7 +262,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">The definition of 'videoCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">videoCapabilities - Encrypted Media Extensions</a>
    */
   @JsProperty(
       name = "videoCapabilities"
@@ -273,7 +273,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">The definition of 'videoCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">videoCapabilities - Encrypted Media Extensions</a>
    */
   @JsProperty
   void setVideoCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> videoCapabilities);
@@ -282,7 +282,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">The definition of 'videoCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">videoCapabilities - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull
@@ -296,7 +296,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">The definition of 'videoCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">videoCapabilities - Encrypted Media Extensions</a>
    */
   @JsOverlay
   default void setVideoCapabilities(
@@ -308,7 +308,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">The definition of 'videoCapabilities' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">videoCapabilities - Encrypted Media Extensions</a>
    */
   @JsOverlay
   @Nonnull

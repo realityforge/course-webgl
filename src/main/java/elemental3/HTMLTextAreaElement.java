@@ -8,13 +8,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of textarea elements.
+ * The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of &lt;textarea&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmltextareaelement">The definition of 'HTMLTextAreaElement' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-textarea-element">The definition of 'HTMLTextAreaElement' in the 'HTML5' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-24874179">The definition of 'HTMLTextAreaElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-24874179">The definition of 'HTMLTextAreaElement' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmltextareaelement">HTMLTextAreaElement - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-textarea-element">HTMLTextAreaElement - HTML5</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-24874179">HTMLTextAreaElement - Document Object Model (DOM) Level 2 HTML Specification</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-24874179">HTMLTextAreaElement - Document Object Model (DOM) Level 1 Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -79,8 +79,8 @@ public class HTMLTextAreaElement extends HTMLElement {
    * The HTMLTextAreaElement.labels read-only property returns a NodeList of the label elements associated with the textarea element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/labels">HTMLTextAreaElement.labels - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">labels - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">labels - HTML5</a>
    */
   @JsProperty(
       name = "labels"

@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * An object of this type is returned by the files property of the HTML input element; this lets you access the list of files selected with the input type=&quot;file&quot; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage.
+ * An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileList">FileList - MDN</a>
- * @see <a href="https://w3c.github.io/FileAPI/#filelist-section">The definition of 'FileList' in the 'File API' specification.</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#concept-input-type-file-selected">The definition of 'selected files' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://w3c.github.io/FileAPI/#filelist-section">FileList - File API</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#concept-input-type-file-selected">selected files - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

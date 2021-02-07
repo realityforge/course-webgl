@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The PermissionStatus interface of the Permissions API provides the state of an object and an event handler for monitoring changes to said state.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus">PermissionStatus - MDN</a>
+ * @see <a href="https://w3c.github.io/permissions/#status-of-a-permission">PermissionStatus - Permissions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

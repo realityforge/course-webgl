@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams">AesCtrParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams">The definition of 'SubtleCrypto.AesCtrParams' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams">SubtleCrypto.AesCtrParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

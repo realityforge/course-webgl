@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The ProcessingInstruction interface represents a processing instruction; that is, a Node which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction">ProcessingInstruction - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#processinginstruction">ProcessingInstruction - DOM</a>
+ * @see <a href="https://www.w3.org/TR/xml/#sec-pi">XML specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

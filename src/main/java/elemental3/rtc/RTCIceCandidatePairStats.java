@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">The definition of 'RTCIceCandidatePairStats' in Identifiers for WebRTC's Statistics API.</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">RTCIceCandidatePairStats - Identifiers for WebRTC's Statistics API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -464,7 +464,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in the 'Identifiers for WebRTC's Statistics API' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty(
       name = "lastResponseTimestamp"
@@ -475,7 +475,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in the 'Identifiers for WebRTC's Statistics API' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
   void setLastResponseTimestamp(double lastResponseTimestamp);
@@ -484,7 +484,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in the 'Identifiers for WebRTC's Statistics API' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp">RTCIceCandidatePairStats.lastResponseTimestamp - Identifiers for WebRTC's Statistics API</a>
    */
   @JsOverlay
   @Nonnull
@@ -497,7 +497,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">The definition of 'RTCIceCandidatePairStats.localCandidateId' in the 'Identifiers for WebRTC's Statistics API' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty(
       name = "localCandidateId"
@@ -509,7 +509,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">The definition of 'RTCIceCandidatePairStats.localCandidateId' in the 'Identifiers for WebRTC's Statistics API' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
   void setLocalCandidateId(@Nonnull String localCandidateId);
@@ -518,7 +518,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">The definition of 'RTCIceCandidatePairStats.localCandidateId' in the 'Identifiers for WebRTC's Statistics API' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsOverlay
   @Nonnull
@@ -1055,7 +1055,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">The definition of 'RTCStats.id' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -1069,7 +1069,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">The definition of 'RTCStats.timestamp' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">RTCStats.timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -1083,7 +1083,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">The definition of 'RTCStats.type' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull

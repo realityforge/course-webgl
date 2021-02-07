@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The ConstrainDOMString dictionary is used to specify a constraint for a property whose value is a string. It allows you to specify one or more exact string values from which one must be the parameter's value, or a set of ideal values which should be used if possible. You can also specify a single string (or an array of strings) which the user agent will do its best to match once all more stringent constraints have been applied.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstrainDOMStringParameters">ConstrainDOMStringParameters - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-constraindomstring">The definition of 'ConstrainDOMString' in the 'Media Capture and Streams' specification.</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#dom-constraindomstring">ConstrainDOMString - Media Capture and Streams</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -13,6 +13,7 @@ import jsinterop.base.Js;
  * The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface">EventSource - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +35,7 @@ public class EventSource extends EventTarget {
    * The onerror property of the EventSource interface is an EventHandler called when an error occurs and the error event is dispatched on an EventSource object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onerror">EventSource.onerror - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onerror">The definition of 'onerror' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onerror">onerror - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onerror;
@@ -43,7 +44,7 @@ public class EventSource extends EventTarget {
    * The onmessage property of the EventSource interface is an EventHandler called when a message event is received, that is when a message is coming from the source.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onmessage">EventSource.onmessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onmessage">The definition of 'onmessage' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onmessage">onmessage - HTML Living Standard</a>
    */
   @Nullable
   public MessageEventHandler onmessage;
@@ -52,7 +53,7 @@ public class EventSource extends EventTarget {
    * The onopen property of the EventSource interface is an EventHandler called when an open event is received, that is when the connection was just opened.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onopen">EventSource.onopen - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onopen">The definition of 'onopen' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onopen">onopen - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onopen;
@@ -61,7 +62,7 @@ public class EventSource extends EventTarget {
    * The EventSource() constructor returns a newly-created EventSource, which represents a remote resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource">EventSource.EventSource - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource">The definition of 'EventSource()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource">EventSource() - HTML Living Standard</a>
    */
   public EventSource(@Nonnull final String url,
       @Nonnull final EventSourceInit eventSourceInitDict) {
@@ -71,7 +72,7 @@ public class EventSource extends EventTarget {
    * The EventSource() constructor returns a newly-created EventSource, which represents a remote resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource">EventSource.EventSource - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource">The definition of 'EventSource()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource">EventSource() - HTML Living Standard</a>
    */
   public EventSource(@Nonnull final String url) {
   }
@@ -80,7 +81,7 @@ public class EventSource extends EventTarget {
    * The readyState read-only property of the EventSource interface returns a number representing the state of the connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/readyState">EventSource.readyState - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-readystate">The definition of 'readyState' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-readystate">readyState - HTML Living Standard</a>
    */
   @JsProperty(
       name = "readyState"
@@ -92,7 +93,7 @@ public class EventSource extends EventTarget {
    * The url read-only property of the EventSource interface returns a DOMString representing the URL of the source.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/url">EventSource.url - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-url">The definition of 'url' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-url">url - HTML Living Standard</a>
    */
   @JsProperty(
       name = "url"
@@ -104,7 +105,7 @@ public class EventSource extends EventTarget {
    * The withCredentials read-only property of the EventSource interface returns a Boolean indicating whether the EventSource object was instantiated with CORS credentials set.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/withCredentials">EventSource.withCredentials - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-withcredentials">The definition of 'withCredentials' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-withcredentials">withCredentials - HTML Living Standard</a>
    */
   @JsProperty(
       name = "withCredentials"
@@ -115,7 +116,7 @@ public class EventSource extends EventTarget {
    * The close() method of the EventSource interface closes the connection, if one is made, and sets the EventSource.readyState attribute to 2 (closed).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close">EventSource.close - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-close">The definition of 'close()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-close">close() - HTML Living Standard</a>
    */
   public native void close();
 

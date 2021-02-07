@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGPatternElement interface corresponds to the pattern element.
+ * The SVGPatternElement interface corresponds to the &lt;pattern&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPatternElement">SVGPatternElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGPatternElement">The definition of 'SVGPatternElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGPatternElement">The definition of 'SVGPatternElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGPatternElement">SVGPatternElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGPatternElement">SVGPatternElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

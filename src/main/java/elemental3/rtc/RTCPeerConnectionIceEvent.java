@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceevent">The definition of 'RTCPeerConnectionIceEvent' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceevent">RTCPeerConnectionIceEvent - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,7 +25,7 @@ public class RTCPeerConnectionIceEvent extends Event {
    * The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-constructor">The definition of 'RTCPeerConnectionIceEvent()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-constructor">RTCPeerConnectionIceEvent() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   public RTCPeerConnectionIceEvent(@Nonnull final String type,
       @Nonnull final RTCPeerConnectionIceEventInit eventInitDict) {
@@ -36,7 +36,7 @@ public class RTCPeerConnectionIceEvent extends Event {
    * The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-constructor">The definition of 'RTCPeerConnectionIceEvent()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-constructor">RTCPeerConnectionIceEvent() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   public RTCPeerConnectionIceEvent(@Nonnull final String type) {
     super( null );
@@ -46,7 +46,7 @@ public class RTCPeerConnectionIceEvent extends Event {
    * The read-only candidate property of the RTCPeerConnectionIceEvent interface returns the RTCIceCandidate associated with the event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate">RTCPeerConnectionIceEvent.candidate - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-candidate">The definition of 'RTCPeerConnectionIceEvent.candidate' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-candidate">RTCPeerConnectionIceEvent.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "candidate"

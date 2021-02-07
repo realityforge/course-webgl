@@ -17,7 +17,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit">RTCTrackEventInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">The definition of 'RTCTrackEventInit' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">RTCTrackEventInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -37,7 +37,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">The definition of 'RTCTrackEventInit.receiver' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">RTCTrackEventInit.receiver - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "receiver"
@@ -49,7 +49,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">The definition of 'RTCTrackEventInit.receiver' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">RTCTrackEventInit.receiver - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setReceiver(@Nonnull RTCRtpReceiver receiver);
@@ -58,7 +58,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">The definition of 'RTCTrackEventInit.receiver' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">RTCTrackEventInit.receiver - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -71,7 +71,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">The definition of 'RTCTrackEventInit.streams' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">RTCTrackEventInit.streams - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "streams"
@@ -82,7 +82,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">The definition of 'RTCTrackEventInit.streams' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">RTCTrackEventInit.streams - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setStreams(@Nonnull JsArray<MediaStream> streams);
@@ -91,7 +91,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">The definition of 'RTCTrackEventInit.streams' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">RTCTrackEventInit.streams - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -104,7 +104,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">The definition of 'RTCTrackEventInit.streams' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">RTCTrackEventInit.streams - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   default void setStreams(@Nonnull final MediaStream... streams) {
@@ -115,7 +115,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams">RTCTrackEventInit.streams - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">The definition of 'RTCTrackEventInit.streams' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">RTCTrackEventInit.streams - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -128,7 +128,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">The definition of 'RTCTrackEventInit.track' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">RTCTrackEventInit.track - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "track"
@@ -140,7 +140,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">The definition of 'RTCTrackEventInit.track' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">RTCTrackEventInit.track - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setTrack(@Nonnull MediaStreamTrack track);
@@ -149,7 +149,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">The definition of 'RTCTrackEventInit.track' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">RTCTrackEventInit.track - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull

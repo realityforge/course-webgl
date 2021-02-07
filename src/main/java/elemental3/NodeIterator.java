@@ -11,6 +11,8 @@ import jsinterop.annotations.JsType;
  * The NodeIterator interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator">NodeIterator - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#nodeiterator">NodeIterator - DOM</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Iterator-overview">NodeIterator - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,8 +28,8 @@ public class NodeIterator {
    * The NodeIterator.filter read-only method returns a NodeFilter object, that is an object implement an acceptNode(node) method, used to screen nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/filter">NodeIterator.filter - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-nodeiterator-filter">The definition of 'NodeIterator.filter' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator-filter">The definition of 'NodeIterator.filter' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-nodeiterator-filter">NodeIterator.filter - DOM</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator-filter">NodeIterator.filter - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
   @JsProperty(
       name = "filter"

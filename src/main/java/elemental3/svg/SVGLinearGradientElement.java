@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGLinearGradientElement interface corresponds to the linearGradient element.
+ * The SVGLinearGradientElement interface corresponds to the &lt;linearGradient&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement">SVGLinearGradientElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGLinearGradientElement">The definition of 'SVGLinearGradientElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGLinearGradientElement">The definition of 'SVGLinearGradientElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGLinearGradientElement">SVGLinearGradientElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGLinearGradientElement">SVGLinearGradientElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

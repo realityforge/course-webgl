@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The TransformStream interface of the Streams API represents a set of transformable data.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStream">TransformStream - MDN</a>
- * @see <a href="https://streams.spec.whatwg.org/#ts-class">The definition of 'TransformStream' in the 'Streams' specification.</a>
+ * @see <a href="https://streams.spec.whatwg.org/#ts-class">TransformStream - Streams</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

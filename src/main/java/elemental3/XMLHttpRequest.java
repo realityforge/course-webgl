@@ -134,7 +134,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest.responseXML read-only property returns a Document containing the HTML or XML retrieved by the request; or null if the request was unsuccessful, has not yet been sent, or if the data can't be parsed as XML or HTML.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseXML">XMLHttpRequest.responseXML - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-responsexml-attribute">The definition of 'responseXML' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-responsexml-attribute">responseXML - XMLHttpRequest</a>
    */
   @JsProperty(
       name = "responseXML"
@@ -189,7 +189,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method getAllResponseHeaders() returns all the response headers, separated by CRLF, as a string, or returns null if no response has been received.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders">XMLHttpRequest.getAllResponseHeaders - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-getallresponseheaders()-method">The definition of 'getAllResponseHeaders()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-getallresponseheaders()-method">getAllResponseHeaders() - XMLHttpRequest</a>
    */
   @Nonnull
   public native String getAllResponseHeaders();
@@ -198,7 +198,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method getResponseHeader() returns the string containing the text of a particular header's value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getResponseHeader">XMLHttpRequest.getResponseHeader - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#dom-xmlhttprequest-getresponseheader">The definition of 'getResponseHeader()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#dom-xmlhttprequest-getresponseheader">getResponseHeader() - XMLHttpRequest</a>
    */
   @Nullable
   public native String getResponseHeader(@Nonnull String name);
@@ -207,7 +207,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open">XMLHttpRequest.open - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">The definition of 'open()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">open() - XMLHttpRequest</a>
    */
   public native void open(@Nonnull String method, @Nonnull String url);
 
@@ -215,7 +215,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open">XMLHttpRequest.open - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">The definition of 'open()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">open() - XMLHttpRequest</a>
    */
   public native void open(@Nonnull String method, @Nonnull String url, boolean async,
       @Nullable String username, @Nullable String password);
@@ -224,7 +224,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open">XMLHttpRequest.open - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">The definition of 'open()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">open() - XMLHttpRequest</a>
    */
   public native void open(@Nonnull String method, @Nonnull String url, boolean async,
       @Nullable String username);
@@ -233,7 +233,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open">XMLHttpRequest.open - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">The definition of 'open()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-open()-method">open() - XMLHttpRequest</a>
    */
   public native void open(@Nonnull String method, @Nonnull String url, boolean async);
 
@@ -241,7 +241,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method overrideMimeType() specifies a MIME type other than the one provided by the server to be used instead when interpreting the data being transferred in a request.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/overrideMimeType">XMLHttpRequest.overrideMimeType - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-overridemimetype()-method">The definition of 'overrideMimeType()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-overridemimetype()-method">overrideMimeType() - XMLHttpRequest</a>
    */
   public native void overrideMimeType(@Nonnull String mime);
 
@@ -249,7 +249,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull Document body);
 
@@ -257,7 +257,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull XMLHttpRequestBodyInit body);
 
@@ -265,7 +265,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull Blob body);
 
@@ -273,7 +273,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull BufferSource body);
 
@@ -281,7 +281,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull FormData body);
 
@@ -289,7 +289,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull URLSearchParams body);
 
@@ -297,7 +297,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send(@Nonnull String body);
 
@@ -305,7 +305,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method send() sends the request to the server.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">XMLHttpRequest.send - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">The definition of 'send()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-send()-method">send() - XMLHttpRequest</a>
    */
   public native void send();
 
@@ -313,7 +313,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * The XMLHttpRequest method setRequestHeader() sets the value of an HTTP request header. When using setRequestHeader(), you must call it after calling open(), but before calling send(). If this method is called several times with the same header, the values are merged into one single request header.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader">XMLHttpRequest.setRequestHeader - MDN</a>
-   * @see <a href="https://xhr.spec.whatwg.org/#the-setrequestheader()-method">The definition of 'setRequestHeader()' in the 'XMLHttpRequest' specification.</a>
+   * @see <a href="https://xhr.spec.whatwg.org/#the-setrequestheader()-method">setRequestHeader() - XMLHttpRequest</a>
    */
   public native void setRequestHeader(@Nonnull String name, @Nonnull String value);
 

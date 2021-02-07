@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">The definition of 'RTCIceCandidateInit' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">RTCIceCandidateInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,7 +33,7 @@ public interface RTCIceCandidateInit {
    * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">The definition of 'RTCIceCandidateInit.candidate' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">RTCIceCandidateInit.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "candidate"
@@ -44,7 +44,7 @@ public interface RTCIceCandidateInit {
    * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">The definition of 'RTCIceCandidateInit.candidate' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">RTCIceCandidateInit.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setCandidate(@Nonnull String candidate);
@@ -53,7 +53,7 @@ public interface RTCIceCandidateInit {
    * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">The definition of 'RTCIceCandidateInit.candidate' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">RTCIceCandidateInit.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -66,7 +66,7 @@ public interface RTCIceCandidateInit {
    * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">The definition of 'RTCIceCandidateInit.sdpMLineIndex' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">RTCIceCandidateInit.sdpMLineIndex - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "sdpMLineIndex"
@@ -78,7 +78,7 @@ public interface RTCIceCandidateInit {
    * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">The definition of 'RTCIceCandidateInit.sdpMLineIndex' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">RTCIceCandidateInit.sdpMLineIndex - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setSdpMLineIndex(@Nullable Double sdpMLineIndex);
@@ -87,7 +87,7 @@ public interface RTCIceCandidateInit {
    * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">The definition of 'RTCIceCandidateInit.sdpMLineIndex' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">RTCIceCandidateInit.sdpMLineIndex - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -131,7 +131,7 @@ public interface RTCIceCandidateInit {
    * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">The definition of 'RTCIceCandidateInit.usernameFragment' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "usernameFragment"
@@ -143,7 +143,7 @@ public interface RTCIceCandidateInit {
    * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">The definition of 'RTCIceCandidateInit.usernameFragment' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setUsernameFragment(@Nullable String usernameFragment);
@@ -152,7 +152,7 @@ public interface RTCIceCandidateInit {
    * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">The definition of 'RTCIceCandidateInit.usernameFragment' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull

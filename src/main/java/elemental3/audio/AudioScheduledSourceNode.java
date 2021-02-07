@@ -16,6 +16,7 @@ import jsinterop.base.Js;
  * The AudioScheduledSourceNode interface&mdash;part of the Web Audio API&mdash;is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the start() and stop() methods, as well as the onended event handler.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode">AudioScheduledSourceNode - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioScheduledSourceNode">AudioScheduledSourceNode - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,7 +29,7 @@ public class AudioScheduledSourceNode extends AudioNode {
    * The onended event handler for the AudioScheduledSourceNode interface specifies an EventHandler to be executed when the ended event occurs on the node. This event is sent to the node when the concrete interface (such as AudioBufferSourceNode, OscillatorNode, or ConstantSourceNode) determines that it has stopped playing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/onended">AudioScheduledSourceNode.onended - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended">The definition of 'onended' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended">onended - Web Audio API</a>
    */
   @Nullable
   public EventHandler onended;
@@ -40,7 +41,7 @@ public class AudioScheduledSourceNode extends AudioNode {
    * The start() method on AudioScheduledSourceNode schedules a sound to begin playback at the specified time. If no time is specified, then the sound begins playing immediately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start">AudioScheduledSourceNode.start - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-start">The definition of 'start()' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-start">start() - Web Audio API</a>
    */
   public native void start(double when);
 
@@ -48,7 +49,7 @@ public class AudioScheduledSourceNode extends AudioNode {
    * The start() method on AudioScheduledSourceNode schedules a sound to begin playback at the specified time. If no time is specified, then the sound begins playing immediately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start">AudioScheduledSourceNode.start - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-start">The definition of 'start()' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-start">start() - Web Audio API</a>
    */
   public native void start();
 
@@ -56,7 +57,7 @@ public class AudioScheduledSourceNode extends AudioNode {
    * The stop() method on AudioScheduledSourceNode schedules a sound to cease playback at the specified time. If no time is specified, then the sound stops playing immediately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop">AudioScheduledSourceNode.stop - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-stop">The definition of 'stop()' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-stop">stop() - Web Audio API</a>
    */
   public native void stop(double when);
 
@@ -64,7 +65,7 @@ public class AudioScheduledSourceNode extends AudioNode {
    * The stop() method on AudioScheduledSourceNode schedules a sound to cease playback at the specified time. If no time is specified, then the sound stops playing immediately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop">AudioScheduledSourceNode.stop - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-stop">The definition of 'stop()' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-stop">stop() - Web Audio API</a>
    */
   public native void stop();
 

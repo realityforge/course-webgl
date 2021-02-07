@@ -10,10 +10,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The RTCRtpReceiveParameters dictionary, based upon the RTCRtpParameters dictionary, is returned by the the RTCRtpReceiver method getParameters(). It describes the parameters being used by the receiver's RTP connection to the remote peer.
+ * The RTCRtpReceiveParameters dictionary, based upon the RTCRtpParameters dictionary, is returned by the RTCRtpReceiver method getParameters(). It describes the parameters being used by the receiver's RTP connection to the remote peer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiveParameters">RTCRtpReceiveParameters - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiveparameters">The definition of 'RTCRtpReceiveParameters' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiveparameters">RTCRtpReceiveParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

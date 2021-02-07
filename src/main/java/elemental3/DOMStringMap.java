@@ -12,7 +12,7 @@ import jsinterop.base.JsPropertyMap;
  * The DOMStringMap interface is used for the HTMLElement.dataset attribute, to represent data for custom attributes added to elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap">DOMStringMap - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#domstringmap">The definition of 'DOMStringMap' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#domstringmap">DOMStringMap - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

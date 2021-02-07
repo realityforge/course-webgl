@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The ServiceWorkerContainer interface of the Service Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer">ServiceWorkerContainer - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkercontainer">The definition of 'ServiceWorkerContainer' in the 'Service Workers' specification.</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkercontainer">ServiceWorkerContainer - Service Workers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +29,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The oncontrollerchange property of the ServiceWorkerContainer interface is an event handler fired whenever a controllerchange event occurs &mdash; when the document's associated ServiceWorkerRegistration acquires a new active worker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange">ServiceWorkerContainer.oncontrollerchange - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-oncontrollerchange">The definition of 'ServiceWorkerContainer: oncontrollerchange' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-oncontrollerchange">ServiceWorkerContainer: oncontrollerchange - Service Workers</a>
    */
   @Nullable
   public EventHandler oncontrollerchange;
@@ -38,7 +38,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The onmessage property of the ServiceWorkerContainer interface is an event handler fired whenever a message event occurs &mdash; when incoming messages are received to the ServiceWorkerContainer object (e.g., via a Client.postMessage() call).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/onmessage">ServiceWorkerContainer.onmessage - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onmessage">The definition of 'ServiceWorkerContainer: onmessage' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onmessage">ServiceWorkerContainer: onmessage - Service Workers</a>
    */
   @Nullable
   public MessageEventHandler onmessage;
@@ -53,7 +53,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The controller read-only property of the ServiceWorkerContainer interface returns a ServiceWorker object if its state is activating or activated (the same object returned by ServiceWorkerRegistration.active). This property returns null if the request is a force refresh (Shift + refresh) or if there is no active worker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller">ServiceWorkerContainer.controller - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-controller">The definition of 'ServiceWorkerRegistration.controller' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-controller">ServiceWorkerRegistration.controller - Service Workers</a>
    */
   @JsProperty(
       name = "controller"
@@ -65,7 +65,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The ready read-only property of the ServiceWorkerContainer interface provides a way of delaying code execution until a service worker is active. It returns a Promise that will never reject, and which waits indefinitely until the ServiceWorkerRegistration associated with the current page has an active worker. Once that condition is met, it resolves with the ServiceWorkerRegistration.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/ready">ServiceWorkerContainer.ready - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-ready">The definition of 'ServiceWorkerRegistration.ready' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-ready">ServiceWorkerRegistration.ready - Service Workers</a>
    */
   @JsProperty(
       name = "ready"
@@ -77,7 +77,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration">The definition of 'ServiceWorkerContainer: getRegistration' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration">ServiceWorkerContainer: getRegistration - Service Workers</a>
    */
   @Nonnull
   public native Promise<Any> getRegistration(@Nonnull String clientURL);
@@ -86,7 +86,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration">The definition of 'ServiceWorkerContainer: getRegistration' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration">ServiceWorkerContainer: getRegistration - Service Workers</a>
    */
   @Nonnull
   public native Promise<Any> getRegistration();
@@ -95,7 +95,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The getRegistrations() method of the ServiceWorkerContainer interface gets all ServiceWorkerRegistrations associated with a ServiceWorkerContainer, in an array. The method returns a Promise that resolves to an array of ServiceWorkerRegistration.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistrations">ServiceWorkerContainer.getRegistrations - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-getRegistrations">The definition of 'getRegistrations()' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-getRegistrations">getRegistrations() - Service Workers</a>
    */
   @Nonnull
   public native Promise<JsArray<ServiceWorkerRegistration>> getRegistrations();
@@ -104,7 +104,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register">ServiceWorkerContainer.register - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">The definition of 'ServiceWorkerContainer: register' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">ServiceWorkerContainer: register - Service Workers</a>
    */
   @Nonnull
   public native Promise<ServiceWorkerRegistration> register(@Nonnull String scriptURL,
@@ -114,7 +114,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register">ServiceWorkerContainer.register - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">The definition of 'ServiceWorkerContainer: register' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">ServiceWorkerContainer: register - Service Workers</a>
    */
   @Nonnull
   public native Promise<ServiceWorkerRegistration> register(@Nonnull String scriptURL);
@@ -123,7 +123,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * The startMessages() method of the ServiceWorkerContainer interface explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via Client.postMessage()). This can be used to react to sent messages earlier, even before that page's content has finished loading.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/startMessages">ServiceWorkerContainer.startMessages - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-startmessages">The definition of 'ServiceWorkerContainer: startMessages()' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-startmessages">ServiceWorkerContainer: startMessages() - Service Workers</a>
    */
   public native void startMessages();
 

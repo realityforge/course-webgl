@@ -13,7 +13,7 @@ import jsinterop.base.Js;
  * The AbortSignal interface represents a signal object that allows you to communicate with a DOM request (such as a Fetch) and abort it if required via an AbortController object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal">AbortSignal - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-AbortSignal">The definition of 'AbortSignal' in the 'DOM' specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-AbortSignal">AbortSignal - DOM</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,7 +26,7 @@ public class AbortSignal extends EventTarget {
    * The onabort read-only property of the FetchSignal interface is an event handler Invoked when an abort event fires, i.e. when the fetch request(s) the signal is communicating with is/are aborted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/onabort">AbortSignal.onabort - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-abortsignal-aborted">The definition of 'onabort' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-abortsignal-aborted">onabort - DOM</a>
    */
   @Nullable
   public EventHandler onabort;
@@ -38,7 +38,7 @@ public class AbortSignal extends EventTarget {
    * The aborted read-only property returns a Boolean that indicates whether the DOM request(s) the signal is communicating with is/are aborted (true) or not (false).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/aborted">AbortSignal.aborted - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-abortsignal-onabort">The definition of 'onabort' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-abortsignal-onabort">onabort - DOM</a>
    */
   @JsProperty(
       name = "aborted"

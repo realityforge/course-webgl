@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent">DeviceMotionEvent - MDN</a>
- * @see <a href="https://w3c.github.io/deviceorientation/#devicemotionevent">The definition of 'DeviceMotionEvent' in the 'DeviceOrientation Event Specification' specification.</a>
+ * @see <a href="https://w3c.github.io/deviceorientation/#devicemotionevent">DeviceMotionEvent - DeviceOrientation Event Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

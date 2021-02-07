@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The AesGcmParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-GCM algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams">AesGcmParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams">The definition of 'SubtleCrypto.AesGcmParams' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams">SubtleCrypto.AesGcmParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -8,11 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGAngle interface is used to represent a value that can be an angle or number value. An SVGAngle reflected through the animVal attribute is always read only.
+ * The SVGAngle interface is used to represent a value that can be an &lt;angle&gt; or &lt;number&gt; value. An SVGAngle reflected through the animVal attribute is always read only.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle">SVGAngle - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle">The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAngle">The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle">SVGElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAngle">SVGElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

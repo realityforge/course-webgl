@@ -8,11 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGScriptElement interface corresponds to the SVG script element.
+ * The SVGScriptElement interface corresponds to the SVG &lt;script&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement">SVGScriptElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/interact.html#InterfaceSVGScriptElement">The definition of 'SVGScriptElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/script.html#InterfaceSVGScriptElement">The definition of 'SVGScriptElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/interact.html#InterfaceSVGScriptElement">SVGScriptElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/script.html#InterfaceSVGScriptElement">SVGScriptElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

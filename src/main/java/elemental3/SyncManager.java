@@ -8,10 +8,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The SyncManager interface of the the ServiceWorker API provides an interface for registering and listing sync registrations.
+ * The SyncManager interface of the ServiceWorker API provides an interface for registering and listing sync registrations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SyncManager">SyncManager - MDN</a>
- * @see <a href="https://wicg.github.io/background-sync/spec/#sync-manager-interface">The definition of 'SyncManager' in the 'Web Background Synchronization' specification.</a>
+ * @see <a href="https://wicg.github.io/background-sync/spec/#sync-manager-interface">SyncManager - Web Background Synchronization</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

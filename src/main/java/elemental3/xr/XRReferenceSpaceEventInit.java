@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The XRReferenceSpaceEventInit dictionary is used when calling the XRReferenceSpaceEvent() constructor to provide the values for its properties. Since the properties are read-only, this is the only opportunity available to set their values.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit">XRReferenceSpaceEventInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrreferencespaceeventinit">The definition of 'XRReferenceSpaceEventInit' in the 'WebXR Device API' specification.</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrreferencespaceeventinit">XRReferenceSpaceEventInit - WebXR Device API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +34,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace">XRReferenceSpaceEventInit.referenceSpace - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">The definition of 'XRReferenceSpaceEventInit.referenceSpace' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">XRReferenceSpaceEventInit.referenceSpace - WebXR Device API</a>
    */
   @JsProperty(
       name = "referenceSpace"
@@ -46,7 +46,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace">XRReferenceSpaceEventInit.referenceSpace - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">The definition of 'XRReferenceSpaceEventInit.referenceSpace' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">XRReferenceSpaceEventInit.referenceSpace - WebXR Device API</a>
    */
   @JsProperty
   void setReferenceSpace(@Nonnull XRReferenceSpace referenceSpace);
@@ -55,7 +55,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace">XRReferenceSpaceEventInit.referenceSpace - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">The definition of 'XRReferenceSpaceEventInit.referenceSpace' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">XRReferenceSpaceEventInit.referenceSpace - WebXR Device API</a>
    */
   @JsOverlay
   @Nonnull
@@ -68,7 +68,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform">XRReferenceSpaceEventInit.transform - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">The definition of 'XRReferenceSpaceEventInit.transform' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">XRReferenceSpaceEventInit.transform - WebXR Device API</a>
    */
   @JsProperty(
       name = "transform"
@@ -80,7 +80,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform">XRReferenceSpaceEventInit.transform - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">The definition of 'XRReferenceSpaceEventInit.transform' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">XRReferenceSpaceEventInit.transform - WebXR Device API</a>
    */
   @JsProperty
   void setTransform(@Nullable XRRigidTransform transform);
@@ -89,7 +89,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform">XRReferenceSpaceEventInit.transform - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">The definition of 'XRReferenceSpaceEventInit.transform' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">XRReferenceSpaceEventInit.transform - WebXR Device API</a>
    */
   @JsOverlay
   @Nonnull

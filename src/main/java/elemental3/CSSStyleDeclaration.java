@@ -11,8 +11,8 @@ import jsinterop.annotations.JsType;
  * The CSSStyleDeclaration interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration">CSSStyleDeclaration - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface">The definition of 'CSSStyleDeclaration' in the 'CSS Object Model (CSSOM)' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">The definition of 'CSSStyleDeclaration' in the 'Document Object Model (DOM) Level 2 Style Specification' specification.</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface">CSSStyleDeclaration - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">CSSStyleDeclaration - Document Object Model (DOM) Level 2 Style Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,8 +34,8 @@ public class CSSStyleDeclaration {
    * The read-only property returns an integer that represents the number of style declarations in this CSS declaration block.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/length">CSSStyleDeclaration.length - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-length">The definition of 'CSSStyleDeclaration.length' in the 'CSS Object Model (CSSOM)' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">The definition of 'CSSStyleDeclaration' in the 'Document Object Model (DOM) Level 2 Style Specification' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-length">CSSStyleDeclaration.length - CSS Object Model (CSSOM)</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">CSSStyleDeclaration - Document Object Model (DOM) Level 2 Style Specification</a>
    */
   @JsProperty(
       name = "length"

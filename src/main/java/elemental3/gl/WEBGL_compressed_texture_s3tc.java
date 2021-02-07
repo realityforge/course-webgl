@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_compressed_texture_s3tc extension is part of the WebGL API and exposes four S3TC compressed texture formats.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_s3tc">WEBGL_compressed_texture_s3tc - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/">The definition of 'WEBGL_compressed_texture_s3tc' in the 'WEBGL_compressed_texture_s3tc' specification.</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/">WEBGL_compressed_texture_s3tc - WEBGL_compressed_texture_s3tc</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

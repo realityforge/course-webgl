@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The WebAssembly.Memory object is a resizable ArrayBuffer or SharedArrayBuffer that holds the raw bytes of memory accessed by a WebAssembly Instance.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">WebAssembly.Memory - MDN</a>
+ * @see <a href="https://webassembly.github.io/spec/js-api/#memories">Memory - WebAssembly JavaScript Interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

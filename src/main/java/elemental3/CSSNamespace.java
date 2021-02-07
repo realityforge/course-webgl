@@ -9,9 +9,9 @@ import jsinterop.annotations.JsType;
  * The CSS interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS">CSS - MDN</a>
- * @see <a href="https://drafts.css-houdini.org/css-paint-api-1/#dom-css-paintworklet">The definition of 'paintWorklet' in the 'CSS Painting API Level 1' specification.</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-css.escape()-method">The definition of 'CSS' in the 'CSS Object Model (CSSOM)' specification.</a>
- * @see <a href="https://drafts.csswg.org/css-conditional-3/#the-css-interface">The definition of 'CSS' in the 'CSS Conditional Rules Module Level 3' specification.</a>
+ * @see <a href="https://drafts.css-houdini.org/css-paint-api-1/#dom-css-paintworklet">paintWorklet - CSS Painting API Level 1</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-css.escape()-method">CSS - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://drafts.csswg.org/css-conditional-3/#the-css-interface">CSS - CSS Conditional Rules Module Level 3</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

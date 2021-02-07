@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The RTCDtlsTransport interface provides access to information about the Datagram Transport Layer Security (DTLS) transport over which a RTCPeerConnection's RTP and RTCP packets are sent and received by its RTCRtpSender and RTCRtpReceiver objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport">RTCDtlsTransport - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport">The definition of 'RTCDtlsTransport' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport">RTCDtlsTransport - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -37,7 +37,7 @@ public class RTCDtlsTransport extends EventTarget {
    * The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport">RTCDtlsTransport.iceTransport - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport-icetransport">The definition of 'RTCDtlsTransport.iceTransport' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport-icetransport">RTCDtlsTransport.iceTransport - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "iceTransport"
@@ -49,7 +49,7 @@ public class RTCDtlsTransport extends EventTarget {
    * The state read-only property of the RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport state.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/state">RTCDtlsTransport.state - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport-state">The definition of 'RTCDtlsTransport.state' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport-state">RTCDtlsTransport.state - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "state"

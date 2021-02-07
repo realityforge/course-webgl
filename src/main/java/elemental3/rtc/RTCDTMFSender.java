@@ -13,10 +13,10 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface.
+ * The RTCDTMFSender interface provides a mechanism for transmitting DTMF codes on a WebRTC RTCPeerConnection. You gain access to the connection's RTCDTMFSender through the RTCRtpSender.dtmf property on the audio track you wish to send DTMF with.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender">RTCDTMFSender - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdtmfsender">The definition of 'RTCDTMFSender' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdtmfsender">RTCDTMFSender - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +29,7 @@ public class RTCDTMFSender extends EventTarget {
    * The ontonechange property of the RTCDTMFSender interface is used to set the event handler for the tonechange event, which is sent to the RTCDTMFSender each time a tone begins or ends. The event handler receives as input a single parameter of type RTCDTMFToneChangeEvent, which describes the change.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/ontonechange">RTCDTMFSender.ontonechange - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtmfsender-ontonechange">The definition of 'ontonechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtmfsender-ontonechange">ontonechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nullable
   public RTCDTMFToneChangeEventHandler ontonechange;
@@ -46,7 +46,7 @@ public class RTCDTMFSender extends EventTarget {
    * The RTCDTMFSender interface's toneBuffer property returns a string containing a list of the DTMF tones currently queued for sending to the remote peer over the RTCPeerConnection. To place tones into the buffer, call insertDTMF().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer">RTCDTMFSender.toneBuffer - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-tonebuffer">The definition of 'RTCDTMFSender.toneBuffer' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-tonebuffer">RTCDTMFSender.toneBuffer - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "toneBuffer"
@@ -58,7 +58,7 @@ public class RTCDTMFSender extends EventTarget {
    * The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF">RTCDTMFSender.insertDTMF - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF">The definition of 'RTCDTMFSender.insertDTMF()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF">RTCDTMFSender.insertDTMF() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   public native void insertDTMF(@Nonnull String tones, int duration, int interToneGap);
 
@@ -66,7 +66,7 @@ public class RTCDTMFSender extends EventTarget {
    * The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF">RTCDTMFSender.insertDTMF - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF">The definition of 'RTCDTMFSender.insertDTMF()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF">RTCDTMFSender.insertDTMF() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   public native void insertDTMF(@Nonnull String tones, int duration);
 
@@ -74,7 +74,7 @@ public class RTCDTMFSender extends EventTarget {
    * The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF">RTCDTMFSender.insertDTMF - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF">The definition of 'RTCDTMFSender.insertDTMF()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF">RTCDTMFSender.insertDTMF() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   public native void insertDTMF(@Nonnull String tones);
 

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API's XRBoundedReferenceSpace interface describes a virtual world reference space which has preset boundaries. This extends XRReferenceSpace, which describes an essentially unrestricted space around the viewer's position.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace">XRBoundedReferenceSpace - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrboundedreferencespace-interface">The definition of 'XRBoundedReferenceSpace' in the 'WebXR Device API' specification.</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrboundedreferencespace-interface">XRBoundedReferenceSpace - WebXR Device API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,7 +28,7 @@ public class XRBoundedReferenceSpace extends XRReferenceSpace {
    * The read-only XRBoundedReferenceSpace property boundsGeometry is an array of DOMPointReadOnly objects which specifies the points making up a polygon inside which the viewer is allowed to move.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace/boundsGeometry">XRBoundedReferenceSpace.boundsGeometry - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrboundedreferencespace-boundsgeometry">The definition of 'boundsGeometry' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrboundedreferencespace-boundsgeometry">boundsGeometry - WebXR Device API</a>
    */
   @JsProperty(
       name = "boundsGeometry"

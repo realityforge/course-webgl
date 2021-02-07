@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">The definition of 'PublicKeyCredentialCreationOptions dictionary' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+ * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">PublicKeyCredentialCreationOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,7 +46,7 @@ public interface PublicKeyCredentialCreationOptions {
    * attestation is an optional property of the PublicKeyCredentialCreationOptions dictionary. This is a string whose value indicates the preference regarding the attestation transport, between the authenticator, the client and the relying party.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/attestation">PublicKeyCredentialCreationOptions.attestation - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">The definition of 'attestation' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">attestation - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "attestation"
@@ -58,7 +58,7 @@ public interface PublicKeyCredentialCreationOptions {
    * attestation is an optional property of the PublicKeyCredentialCreationOptions dictionary. This is a string whose value indicates the preference regarding the attestation transport, between the authenticator, the client and the relying party.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/attestation">PublicKeyCredentialCreationOptions.attestation - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">The definition of 'attestation' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">attestation - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setAttestation(@AttestationConveyancePreference @Nonnull String attestation);
@@ -67,7 +67,7 @@ public interface PublicKeyCredentialCreationOptions {
    * attestation is an optional property of the PublicKeyCredentialCreationOptions dictionary. This is a string whose value indicates the preference regarding the attestation transport, between the authenticator, the client and the relying party.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/attestation">PublicKeyCredentialCreationOptions.attestation - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">The definition of 'attestation' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">attestation - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -81,7 +81,7 @@ public interface PublicKeyCredentialCreationOptions {
    * authenticatorSelection, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object giving criteria to filter out the authenticators to be used for the creation operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection">PublicKeyCredentialCreationOptions.authenticatorSelection - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">The definition of 'authenticatorSelection' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">authenticatorSelection - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "authenticatorSelection"
@@ -92,7 +92,7 @@ public interface PublicKeyCredentialCreationOptions {
    * authenticatorSelection, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object giving criteria to filter out the authenticators to be used for the creation operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection">PublicKeyCredentialCreationOptions.authenticatorSelection - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">The definition of 'authenticatorSelection' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">authenticatorSelection - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setAuthenticatorSelection(@Nonnull AuthenticatorSelectionCriteria authenticatorSelection);
@@ -101,7 +101,7 @@ public interface PublicKeyCredentialCreationOptions {
    * authenticatorSelection, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object giving criteria to filter out the authenticators to be used for the creation operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection">PublicKeyCredentialCreationOptions.authenticatorSelection - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">The definition of 'authenticatorSelection' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">authenticatorSelection - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -115,7 +115,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "challenge"
@@ -127,7 +127,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setChallenge(@Nonnull BufferSource challenge);
@@ -136,7 +136,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -149,7 +149,7 @@ public interface PublicKeyCredentialCreationOptions {
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials">PublicKeyCredentialCreationOptions.excludeCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">The definition of 'excludeCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">excludeCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "excludeCredentials"
@@ -160,7 +160,7 @@ public interface PublicKeyCredentialCreationOptions {
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials">PublicKeyCredentialCreationOptions.excludeCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">The definition of 'excludeCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">excludeCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setExcludeCredentials(@Nonnull JsArray<PublicKeyCredentialDescriptor> excludeCredentials);
@@ -169,7 +169,7 @@ public interface PublicKeyCredentialCreationOptions {
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials">PublicKeyCredentialCreationOptions.excludeCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">The definition of 'excludeCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">excludeCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -183,7 +183,7 @@ public interface PublicKeyCredentialCreationOptions {
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials">PublicKeyCredentialCreationOptions.excludeCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">The definition of 'excludeCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">excludeCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   default void setExcludeCredentials(
@@ -195,7 +195,7 @@ public interface PublicKeyCredentialCreationOptions {
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials">PublicKeyCredentialCreationOptions.excludeCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">The definition of 'excludeCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">excludeCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -209,7 +209,7 @@ public interface PublicKeyCredentialCreationOptions {
    * extensions, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object providing the client extensions and their input values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/extensions">PublicKeyCredentialCreationOptions.extensions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">The definition of 'extensions' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "extensions"
@@ -220,7 +220,7 @@ public interface PublicKeyCredentialCreationOptions {
    * extensions, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object providing the client extensions and their input values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/extensions">PublicKeyCredentialCreationOptions.extensions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">The definition of 'extensions' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setExtensions(@Nonnull AuthenticationExtensionsClientInputs extensions);
@@ -229,7 +229,7 @@ public interface PublicKeyCredentialCreationOptions {
    * extensions, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object providing the client extensions and their input values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/extensions">PublicKeyCredentialCreationOptions.extensions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">The definition of 'extensions' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -243,7 +243,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">The definition of 'pubKeyCredParams' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "pubKeyCredParams"
@@ -255,7 +255,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">The definition of 'pubKeyCredParams' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setPubKeyCredParams(@Nonnull JsArray<PublicKeyCredentialParameters> pubKeyCredParams);
@@ -264,7 +264,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">The definition of 'pubKeyCredParams' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -278,7 +278,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">The definition of 'pubKeyCredParams' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   default void setPubKeyCredParams(
@@ -290,7 +290,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">The definition of 'pubKeyCredParams' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -304,7 +304,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The rp property of the PublicKeyCredentialCreationOptions dictionary is an object describing the relying party which requested the credential creation (via navigator.credentials.create()).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/rp">PublicKeyCredentialCreationOptions.rp - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">The definition of 'rp' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">rp - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "rp"
@@ -316,7 +316,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The rp property of the PublicKeyCredentialCreationOptions dictionary is an object describing the relying party which requested the credential creation (via navigator.credentials.create()).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/rp">PublicKeyCredentialCreationOptions.rp - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">The definition of 'rp' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">rp - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setRp(@Nonnull PublicKeyCredentialRpEntity rp);
@@ -325,7 +325,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The rp property of the PublicKeyCredentialCreationOptions dictionary is an object describing the relying party which requested the credential creation (via navigator.credentials.create()).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/rp">PublicKeyCredentialCreationOptions.rp - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">The definition of 'rp' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">rp - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -338,7 +338,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The timeout property, of the PublicKeyCredentialCreationOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the creation operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/timeout">PublicKeyCredentialCreationOptions.timeout - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout">The definition of 'timeout' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout">timeout - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "timeout"
@@ -349,7 +349,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The timeout property, of the PublicKeyCredentialCreationOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the creation operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/timeout">PublicKeyCredentialCreationOptions.timeout - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout">The definition of 'timeout' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout">timeout - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setTimeout(int timeout);
@@ -358,7 +358,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The timeout property, of the PublicKeyCredentialCreationOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the creation operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/timeout">PublicKeyCredentialCreationOptions.timeout - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout">The definition of 'timeout' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout">timeout - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -371,7 +371,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The user property of the PublicKeyCredentialCreationOptions dictionary is an object describing the user account for which the credentials are generated (via navigator.credentials.create()).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/user">PublicKeyCredentialCreationOptions.user - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">The definition of 'user' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">user - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "user"
@@ -383,7 +383,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The user property of the PublicKeyCredentialCreationOptions dictionary is an object describing the user account for which the credentials are generated (via navigator.credentials.create()).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/user">PublicKeyCredentialCreationOptions.user - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">The definition of 'user' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">user - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setUser(@Nonnull PublicKeyCredentialUserEntity user);
@@ -392,7 +392,7 @@ public interface PublicKeyCredentialCreationOptions {
    * The user property of the PublicKeyCredentialCreationOptions dictionary is an object describing the user account for which the credentials are generated (via navigator.credentials.create()).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/user">PublicKeyCredentialCreationOptions.user - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">The definition of 'user' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">user - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull

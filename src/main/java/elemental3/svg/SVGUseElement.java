@@ -8,11 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGUseElement interface corresponds to the use element.
+ * The SVGUseElement interface corresponds to the &lt;use&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement">SVGUseElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGUseElement">The definition of 'SVGUseElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGUseElement">The definition of 'SVGUseElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGUseElement">SVGUseElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGUseElement">SVGUseElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

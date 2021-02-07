@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions">PublicKeyCredentialRequestOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions">The definition of 'PublicKeyCredentialRequestOptions dictionary' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+ * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions">PublicKeyCredentialRequestOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +34,7 @@ public interface PublicKeyCredentialRequestOptions {
    * allowCredentials is an optional property of the PublicKeyCredentialRequestOptions dictionary which indicates the existing credentials acceptable for retrieval. This is an Array of credential descriptors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/allowCredentials">PublicKeyCredentialRequestOptions.allowCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">The definition of 'allowCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">allowCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "allowCredentials"
@@ -45,7 +45,7 @@ public interface PublicKeyCredentialRequestOptions {
    * allowCredentials is an optional property of the PublicKeyCredentialRequestOptions dictionary which indicates the existing credentials acceptable for retrieval. This is an Array of credential descriptors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/allowCredentials">PublicKeyCredentialRequestOptions.allowCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">The definition of 'allowCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">allowCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setAllowCredentials(@Nonnull JsArray<PublicKeyCredentialDescriptor> allowCredentials);
@@ -54,7 +54,7 @@ public interface PublicKeyCredentialRequestOptions {
    * allowCredentials is an optional property of the PublicKeyCredentialRequestOptions dictionary which indicates the existing credentials acceptable for retrieval. This is an Array of credential descriptors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/allowCredentials">PublicKeyCredentialRequestOptions.allowCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">The definition of 'allowCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">allowCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -68,7 +68,7 @@ public interface PublicKeyCredentialRequestOptions {
    * allowCredentials is an optional property of the PublicKeyCredentialRequestOptions dictionary which indicates the existing credentials acceptable for retrieval. This is an Array of credential descriptors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/allowCredentials">PublicKeyCredentialRequestOptions.allowCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">The definition of 'allowCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">allowCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   default void setAllowCredentials(
@@ -80,7 +80,7 @@ public interface PublicKeyCredentialRequestOptions {
    * allowCredentials is an optional property of the PublicKeyCredentialRequestOptions dictionary which indicates the existing credentials acceptable for retrieval. This is an Array of credential descriptors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/allowCredentials">PublicKeyCredentialRequestOptions.allowCredentials - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">The definition of 'allowCredentials' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials">allowCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -94,7 +94,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "challenge"
@@ -106,7 +106,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setChallenge(@Nonnull BufferSource challenge);
@@ -115,7 +115,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -128,7 +128,7 @@ public interface PublicKeyCredentialRequestOptions {
    * extensions, an optional property of the PublicKeyCredentialRequestOptions dictionary, is an object providing the client extensions and their input values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/extensions">PublicKeyCredentialRequestOptions.extensions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">The definition of 'extensions' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "extensions"
@@ -139,7 +139,7 @@ public interface PublicKeyCredentialRequestOptions {
    * extensions, an optional property of the PublicKeyCredentialRequestOptions dictionary, is an object providing the client extensions and their input values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/extensions">PublicKeyCredentialRequestOptions.extensions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">The definition of 'extensions' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setExtensions(@Nonnull AuthenticationExtensionsClientInputs extensions);
@@ -148,7 +148,7 @@ public interface PublicKeyCredentialRequestOptions {
    * extensions, an optional property of the PublicKeyCredentialRequestOptions dictionary, is an object providing the client extensions and their input values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/extensions">PublicKeyCredentialRequestOptions.extensions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">The definition of 'extensions' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -162,7 +162,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be &quot;example.com&quot; but not &quot;bar.org&quot; or &quot;baz.example.com&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">PublicKeyCredentialRequestOptions.rpId - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid">The definition of 'rpId' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid">rpId - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "rpId"
@@ -173,7 +173,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be &quot;example.com&quot; but not &quot;bar.org&quot; or &quot;baz.example.com&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">PublicKeyCredentialRequestOptions.rpId - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid">The definition of 'rpId' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid">rpId - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setRpId(@Nonnull String rpId);
@@ -182,7 +182,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be &quot;example.com&quot; but not &quot;bar.org&quot; or &quot;baz.example.com&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">PublicKeyCredentialRequestOptions.rpId - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid">The definition of 'rpId' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid">rpId - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -195,7 +195,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The timeout property, of the PublicKeyCredentialRequestOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the retrieval operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/timeout">PublicKeyCredentialRequestOptions.timeout - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-timeout">The definition of 'timeout' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-timeout">timeout - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "timeout"
@@ -206,7 +206,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The timeout property, of the PublicKeyCredentialRequestOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the retrieval operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/timeout">PublicKeyCredentialRequestOptions.timeout - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-timeout">The definition of 'timeout' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-timeout">timeout - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setTimeout(int timeout);
@@ -215,7 +215,7 @@ public interface PublicKeyCredentialRequestOptions {
    * The timeout property, of the PublicKeyCredentialRequestOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the retrieval operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/timeout">PublicKeyCredentialRequestOptions.timeout - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-timeout">The definition of 'timeout' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-timeout">timeout - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -228,7 +228,7 @@ public interface PublicKeyCredentialRequestOptions {
    * userVerification is an optional property of the PublicKeyCredentialRequestOptions. This is a string which indicates how the user verification should be part of the authentication process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/userVerification">PublicKeyCredentialRequestOptions.userVerification - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">The definition of 'userVerification' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">userVerification - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty(
       name = "userVerification"
@@ -240,7 +240,7 @@ public interface PublicKeyCredentialRequestOptions {
    * userVerification is an optional property of the PublicKeyCredentialRequestOptions. This is a string which indicates how the user verification should be part of the authentication process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/userVerification">PublicKeyCredentialRequestOptions.userVerification - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">The definition of 'userVerification' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">userVerification - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
   void setUserVerification(@UserVerificationRequirement @Nonnull String userVerification);
@@ -249,7 +249,7 @@ public interface PublicKeyCredentialRequestOptions {
    * userVerification is an optional property of the PublicKeyCredentialRequestOptions. This is a string which indicates how the user verification should be part of the authentication process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/userVerification">PublicKeyCredentialRequestOptions.userVerification - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">The definition of 'userVerification' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification.</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">userVerification - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsOverlay
   @Nonnull

@@ -12,8 +12,8 @@ import jsinterop.base.Any;
  * The ErrorEvent interface represents events providing information related to errors in scripts or in files.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent">ErrorEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#the-errorevent-interface">The definition of 'ErrorEvent' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/webappapis.html#the-errorevent-interface">The definition of 'ErrorEvent' in the 'HTML5' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#the-errorevent-interface">ErrorEvent - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/webappapis.html#the-errorevent-interface">ErrorEvent - HTML5</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

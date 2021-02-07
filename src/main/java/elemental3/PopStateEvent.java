@@ -12,7 +12,7 @@ import jsinterop.base.Any;
  * PopStateEvent is an event handler for the popstate event on the window.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent">PopStateEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#popstateevent">The definition of 'PopStateEvent' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#popstateevent">PopStateEvent - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

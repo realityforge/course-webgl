@@ -10,9 +10,9 @@ import jsinterop.annotations.JsType;
  * The PointerEvent interface represents the state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent">PointerEvent - MDN</a>
- * @see <a href="https://w3c.github.io/pointerevents/#pointerevent-interface">The definition of 'PointerEvent' in the 'Pointer Events &ndash; Level 3' specification.</a>
- * @see <a href="https://www.w3.org/TR/pointerevents2/#pointerevent-interface">The definition of 'PointerEvent' in the 'Pointer Events &ndash; Level 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/pointerevents1/#pointerevent-interface">The definition of 'PointerEvent' in the 'Pointer Events' specification.</a>
+ * @see <a href="https://w3c.github.io/pointerevents/#pointerevent-interface">PointerEvent - Pointer Events &ndash; Level 3</a>
+ * @see <a href="https://www.w3.org/TR/pointerevents2/#pointerevent-interface">PointerEvent - Pointer Events &ndash; Level 2</a>
+ * @see <a href="https://www.w3.org/TR/pointerevents1/#pointerevent-interface">PointerEvent - Pointer Events</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -43,8 +43,8 @@ public class PointerEvent extends MouseEvent {
    * The height read-only property of the PointerEvent interface represents the height of the pointer's contact geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer device (for example a finger), for a given pointer, each event may produce a different value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/height">PointerEvent.height - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-height">The definition of 'height' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-height">The definition of 'height' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-height">height - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-height">height - Pointer Events</a>
    */
   @JsProperty(
       name = "height"
@@ -55,8 +55,8 @@ public class PointerEvent extends MouseEvent {
    * The isPrimary read-only property of the PointerEvent interface indicates whether or not the pointer device that created the event is the primary pointer. It returns true if the pointer that caused the event to be fired is the primary device and returns false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/isPrimary">PointerEvent.isPrimary - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-isprimary">The definition of 'isPrimary' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-isPrimary">The definition of 'isPrimary' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-isprimary">isPrimary - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-isPrimary">isPrimary - Pointer Events</a>
    */
   @JsProperty(
       name = "isPrimary"
@@ -67,8 +67,8 @@ public class PointerEvent extends MouseEvent {
    * The pointerId read-only property of the PointerEvent interface is an identifier assigned to a given pointer event. The identifier is unique, being different from the identifiers of all other active pointer events. Since the value may be randomly generated, it is not guaranteed to convey any particular meaning.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId">PointerEvent.pointerId - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointerid">The definition of 'pointerId' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerId">The definition of 'pointerId' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointerid">pointerId - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerId">pointerId - Pointer Events</a>
    */
   @JsProperty(
       name = "pointerId"
@@ -79,9 +79,9 @@ public class PointerEvent extends MouseEvent {
    * The pointerType read-only property of the PointerEvent interface indicates the device type (mouse, pen, or touch) that caused a given pointer event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerType">PointerEvent.pointerType - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerType">The definition of 'pointerType' in the 'Pointer Events' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointertype">The definition of 'pointerType' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface">The definition of 'MouseEvent' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerType">pointerType - Pointer Events</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointertype">pointerType - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface">MouseEvent - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty(
       name = "pointerType"
@@ -93,8 +93,8 @@ public class PointerEvent extends MouseEvent {
    * The pressure read-only property of the PointerEvent interface indicates the normalized pressure of the pointer input.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pressure">PointerEvent.pressure - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pressure">The definition of 'pressure' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pressure">The definition of 'pressure' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pressure">pressure - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pressure">pressure - Pointer Events</a>
    */
   @JsProperty(
       name = "pressure"
@@ -105,7 +105,7 @@ public class PointerEvent extends MouseEvent {
    * The tangentialPressure read-only property of the PointerEvent interface represents the normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tangentialPressure">PointerEvent.tangentialPressure - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tangentialpressure">The definition of 'tangentialPressure' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tangentialpressure">tangentialPressure - Pointer Events &ndash; Level 2</a>
    */
   @JsProperty(
       name = "tangentialPressure"
@@ -116,8 +116,8 @@ public class PointerEvent extends MouseEvent {
    * The tiltX read-only property of the PointerEvent interface is the angle (in degrees) between the Y-Z plane of the pointer and the screen. This property is typically only useful for a pen/stylus pointer type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tiltX">PointerEvent.tiltX - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tiltx">The definition of 'tiltX' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-tiltX">The definition of 'tiltX' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tiltx">tiltX - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-tiltX">tiltX - Pointer Events</a>
    */
   @JsProperty(
       name = "tiltX"
@@ -128,8 +128,8 @@ public class PointerEvent extends MouseEvent {
    * The tiltY read-only property of the PointerEvent interface is the angle (in degrees) between the X-Z plane of the pointer and the screen. This property is typically only useful for a pen/stylus pointer type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tiltY">PointerEvent.tiltY - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tilty">The definition of 'tiltY' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-tiltY">The definition of 'tiltY' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tilty">tiltY - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-tiltY">tiltY - Pointer Events</a>
    */
   @JsProperty(
       name = "tiltY"
@@ -140,7 +140,7 @@ public class PointerEvent extends MouseEvent {
    * The twist read-only property of the PointerEvent interface represents the clockwise rotation of the pointer (e.g., pen stylus) around its major axis, in degrees.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/twist">PointerEvent.twist - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-twist">The definition of 'twist' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-twist">twist - Pointer Events &ndash; Level 2</a>
    */
   @JsProperty(
       name = "twist"
@@ -151,8 +151,8 @@ public class PointerEvent extends MouseEvent {
    * The width read-only property of the PointerEvent interface represents the width of the pointer's contact geometry along the x-axis, measured in CSS pixels. Depending on the source of the pointer device (such as a finger), for a given pointer, each event may produce a different value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/width">PointerEvent.width - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-width">The definition of 'width' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-width">The definition of 'width' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-pointerevent-width">width - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-width">width - Pointer Events</a>
    */
   @JsProperty(
       name = "width"

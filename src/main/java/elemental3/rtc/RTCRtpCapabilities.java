@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtpCapabilities dictionary is a data type used to describe the capabilities of an RTCRtpSender or RTCRtpReceiver in response to a call to the RTCRtpSender.getCapabilities() or RTCRtpReceiver.getCapabilities() static functions, both of which return an array of RTCRtpCapabilities objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCapabilities">RTCRtpCapabilities - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpcapabilities">The definition of 'RTCRtpCapabilities' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpcapabilities">RTCRtpCapabilities - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

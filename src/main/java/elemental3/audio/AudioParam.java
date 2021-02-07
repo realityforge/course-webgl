@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Web Audio API's AudioParam interface represents an audio-related parameter, usually a parameter of an AudioNode (such as GainNode.gain).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam">AudioParam - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioParam">The definition of 'AudioParam' in the 'Web Audio API' specification.</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioParam">AudioParam - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,7 +28,7 @@ public class AudioParam {
    * The Web Audio API's AudioParam interface property value gets or sets the value of this AudioParam at the current time.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/value">AudioParam.value - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-value">The definition of 'value' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-value">value - Web Audio API</a>
    */
   public float value;
 
@@ -39,7 +39,7 @@ public class AudioParam {
    * The defaultValue read-only property of the AudioParam interface represents the initial value of the attributes as defined by the specific AudioNode creating the AudioParam.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/defaultValue">AudioParam.defaultValue - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-defaultvalue">The definition of 'defaultValue' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-defaultvalue">defaultValue - Web Audio API</a>
    */
   @JsProperty(
       name = "defaultValue"
@@ -50,7 +50,7 @@ public class AudioParam {
    * The maxValue read-only property of the AudioParam interface represents the maximum possible value for the parameter's nominal (effective) range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/maxValue">AudioParam.maxValue - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-maxvalue">The definition of 'maxValue' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-maxvalue">maxValue - Web Audio API</a>
    */
   @JsProperty(
       name = "maxValue"
@@ -61,7 +61,7 @@ public class AudioParam {
    * The minValue read-only property of the AudioParam interface represents the minimum possible value for the parameter's nominal (effective) range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/minValue">AudioParam.minValue - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-minvalue">The definition of 'minValue' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-minvalue">minValue - Web Audio API</a>
    */
   @JsProperty(
       name = "minValue"
@@ -72,7 +72,7 @@ public class AudioParam {
    * The cancelAndHoldAtTime() property of the AudioParam interface cancels all scheduled future changes to the AudioParam but holds its value at a given time until further changes are made using other methods.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelAndHoldAtTime">AudioParam.cancelAndHoldAtTime - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelandholdattime">The definition of 'cancelAndHoldAtTime()' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelandholdattime">cancelAndHoldAtTime() - Web Audio API</a>
    */
   @Nonnull
   public native AudioParam cancelAndHoldAtTime(double cancelTime);
@@ -113,7 +113,7 @@ public class AudioParam {
    * The setValueAtTime() method of the AudioParam interface schedules an instant change to the AudioParam value at a precise time, as measured against AudioContext.currentTime. The new value is given in the value parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime">AudioParam.setValueAtTime - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-setvalueattime">The definition of 'setValueAtTime' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-setvalueattime">setValueAtTime - Web Audio API</a>
    */
   @Nonnull
   public native AudioParam setValueAtTime(float value, double startTime);

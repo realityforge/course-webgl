@@ -12,11 +12,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our To-do Notifications app (view example live.)
+ * The IDBObjectStore interface of the IndexedDB API represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore">IDBObjectStore - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbobjectstore">The definition of 'IDBObjectStore' in the 'Indexed Database API 2.0' specification.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#object-store-interface">The definition of 'IDBObjectStore' in the 'Indexed Database API Draft' specification.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbobjectstore">IDBObjectStore - Indexed Database API 2.0</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#object-store-interface">IDBObjectStore - Indexed Database API 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -124,8 +124,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex">IDBObjectStore.createIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath,
@@ -135,8 +135,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex">IDBObjectStore.createIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath,
@@ -146,8 +146,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex">IDBObjectStore.createIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath,
@@ -157,8 +157,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex">IDBObjectStore.createIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
@@ -167,8 +167,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex">IDBObjectStore.createIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
@@ -177,8 +177,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex">IDBObjectStore.createIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">The definition of 'createIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
@@ -195,8 +195,8 @@ public class IDBObjectStore {
    * Note that this method must be called only from a VersionChange transaction mode callback. Note that this method synchronously modifies the IDBObjectStore.indexNames property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/deleteIndex">IDBObjectStore.deleteIndex - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-deleteindex">The definition of 'deleteIndex()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-deleteindex">The definition of 'deleteIndex()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-deleteindex">deleteIndex() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-deleteindex">deleteIndex() - Indexed Database API Draft</a>
    */
   public native void deleteIndex(@Nonnull String name);
 
@@ -204,8 +204,8 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get">IDBObjectStore.get - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-get">The definition of 'get()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-get">The definition of 'get()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-get">get() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-get">get() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest get(@DoNotAutobox @Nullable Object query);
@@ -214,7 +214,7 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">The definition of 'getAll()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">getAll() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query, int count);
@@ -223,7 +223,7 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">The definition of 'getAll()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">getAll() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query);
@@ -232,7 +232,7 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">The definition of 'getAll()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">getAll() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getAll();
@@ -241,7 +241,7 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">The definition of 'getAllKeys()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">getAllKeys() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query, int count);
@@ -250,7 +250,7 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">The definition of 'getAllKeys()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">getAllKeys() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query);
@@ -259,7 +259,7 @@ public class IDBObjectStore {
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">The definition of 'getAllKeys()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">getAllKeys() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getAllKeys();
@@ -268,7 +268,7 @@ public class IDBObjectStore {
    * If a key is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getKey">IDBObjectStore.getKey - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getkey">The definition of 'getKey()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getkey">getKey() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest getKey(@DoNotAutobox @Nullable Object query);
@@ -310,8 +310,8 @@ public class IDBObjectStore {
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor">IDBObjectStore.openKeyCursor - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">The definition of 'openKeyCursor()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">The definition of 'openKeyCursor()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query,
@@ -321,8 +321,8 @@ public class IDBObjectStore {
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor">IDBObjectStore.openKeyCursor - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">The definition of 'openKeyCursor()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">The definition of 'openKeyCursor()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query);
@@ -331,8 +331,8 @@ public class IDBObjectStore {
    * To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor">IDBObjectStore.openKeyCursor - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">The definition of 'openKeyCursor()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">The definition of 'openKeyCursor()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBRequest openKeyCursor();

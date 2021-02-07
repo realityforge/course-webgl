@@ -10,11 +10,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is bounded; if it has no bounds, it is unbounded. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:
+ * The IDBKeyRange interface of the IndexedDB API represents a continuous interval over some data type that is used for keys. Records can be retrieved from IDBObjectStore and IDBIndex objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A&ndash;Z.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange">IDBKeyRange - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbkeyrange">The definition of 'IDBKeyRange' in the 'Indexed Database API 2.0' specification.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#keyrange">The definition of 'IDBKeyRange' in the 'Indexed Database API Draft' specification.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbkeyrange">IDBKeyRange - Indexed Database API 2.0</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#keyrange">IDBKeyRange - Indexed Database API 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

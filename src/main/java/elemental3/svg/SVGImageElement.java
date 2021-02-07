@@ -8,11 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGImageElement interface corresponds to the image element.
+ * The SVGImageElement interface corresponds to the &lt;image&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement">SVGImageElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/embedded.html#InterfaceSVGImageElement">The definition of 'SVGImageElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGImageElement">The definition of 'SVGImageElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/embedded.html#InterfaceSVGImageElement">SVGImageElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGImageElement">SVGImageElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +31,7 @@ public class SVGImageElement extends SVGGraphicsElement {
    * The height read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the height attribute of the given image element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/height">SVGImageElement.height - MDN</a>
-   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__height">The definition of 'height' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
+   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__height">height - Scalable Vector Graphics (SVG) 2</a>
    */
   @JsProperty(
       name = "height"
@@ -49,8 +49,8 @@ public class SVGImageElement extends SVGGraphicsElement {
    * The preserveAspectRatio read-only property of the SVGImageElement interface returns an SVGAnimatedPreserveAspectRatio corresponding to the preserveAspectRatio attribute of the given image element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/preserveAspectRatio">SVGImageElement.preserveAspectRatio - MDN</a>
-   * @see <a href="https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute">The definition of 'preserveAspectRatio' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute">The definition of 'preserveAspectRatio' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+   * @see <a href="https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute">preserveAspectRatio - Scalable Vector Graphics (SVG) 2</a>
+   * @see <a href="https://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute">preserveAspectRatio - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
    */
   @JsProperty(
       name = "preserveAspectRatio"
@@ -62,7 +62,7 @@ public class SVGImageElement extends SVGGraphicsElement {
    * The width read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the width attribute of the given image element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/width">SVGImageElement.width - MDN</a>
-   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__width">The definition of 'width' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
+   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__width">width - Scalable Vector Graphics (SVG) 2</a>
    */
   @JsProperty(
       name = "width"
@@ -74,7 +74,7 @@ public class SVGImageElement extends SVGGraphicsElement {
    * The x read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the x attribute of the given image element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/x">SVGImageElement.x - MDN</a>
-   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__x">The definition of 'x' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
+   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__x">x - Scalable Vector Graphics (SVG) 2</a>
    */
   @JsProperty(
       name = "x"
@@ -86,7 +86,7 @@ public class SVGImageElement extends SVGGraphicsElement {
    * The y read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the y attribute of the given image element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/y">SVGImageElement.y - MDN</a>
-   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__y">The definition of 'y' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
+   * @see <a href="https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__y">y - Scalable Vector Graphics (SVG) 2</a>
    */
   @JsProperty(
       name = "y"

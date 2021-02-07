@@ -10,10 +10,10 @@ import jsinterop.annotations.JsType;
  * The DocumentType interface represents a Node containing a doctype.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType">DocumentType - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#documenttype">The definition of 'DocumentType' in the 'DOM' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-412266927">The definition of 'DocumentType' in the 'Document Object Model (DOM) Level 3 Core Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-412266927">The definition of 'DocumentType' in the 'Document Object Model (DOM) Level 2 Core Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-412266927">The definition of 'DocumentType' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#documenttype">DocumentType - DOM</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-412266927">DocumentType - Document Object Model (DOM) Level 3 Core Specification</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-412266927">DocumentType - Document Object Model (DOM) Level 2 Core Specification</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-412266927">DocumentType - Document Object Model (DOM) Level 1 Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -75,7 +75,7 @@ public class DocumentType extends Node {
    * The ChildNode.remove() method removes the object from the tree it belongs to.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/remove">DocumentType.remove - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-childnode-remove">The definition of 'ChildNode.remove' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-childnode-remove">ChildNode.remove - DOM</a>
    */
   public native void remove();
 

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement">CSSPseudoElement - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface">The definition of 'CSSPseudoElement' in the 'CSS Pseudo-Elements Level 4' specification.</a>
+ * @see <a href="https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface">CSSPseudoElement - CSS Pseudo-Elements Level 4</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,7 +28,7 @@ public class CSSPseudoElement extends EventTarget {
    * The element read-only property of the CSSPseudoElement interface returns a reference to the originating element of the pseudo-element, in other words its parent element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/element">CSSPseudoElement.element - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-element">The definition of 'element' in the 'CSS Pseudo-Elements Level 4' specification.</a>
+   * @see <a href="https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-element">element - CSS Pseudo-Elements Level 4</a>
    */
   @JsProperty(
       name = "element"
@@ -40,7 +40,7 @@ public class CSSPseudoElement extends EventTarget {
    * The type read-only property of the CSSPseudoElement interface returns the type of the pseudo-element as a string, represented in the form of a CSS selector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/type">CSSPseudoElement.type - MDN</a>
-   * @see <a href="https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-type">The definition of 'type' in the 'CSS Pseudo-Elements Level 4' specification.</a>
+   * @see <a href="https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-type">type - CSS Pseudo-Elements Level 4</a>
    */
   @JsProperty(
       name = "type"

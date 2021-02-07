@@ -9,10 +9,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The ImageData interface represents the underlying pixel data of an area of a canvas element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData().
+ * The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">ImageData - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">The definition of 'ImageData' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">ImageData - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

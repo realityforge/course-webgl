@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The Screen interface represents a screen, usually the one on which the current window is being rendered, and is obtained using window.screen.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen">Screen - MDN</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#the-screen-interface">Screen - CSS Object Model (CSSOM) View Module</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -35,7 +36,7 @@ public class Screen {
    * The Screen.availWidth property returns the amount of horizontal space (in pixels) available to the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/availWidth">Screen.availWidth - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-availwidth">The definition of 'Screen.availWidth' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-availwidth">Screen.availWidth - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty(
       name = "availWidth"
@@ -66,7 +67,7 @@ public class Screen {
    * The orientation read-only property of the Screen interface returns the current orientation of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation">Screen.orientation - MDN</a>
-   * @see <a href="https://w3c.github.io/screen-orientation/#dom-screen-orientation">The definition of 'orientation' in the 'Screen Orientation API' specification.</a>
+   * @see <a href="https://w3c.github.io/screen-orientation/#dom-screen-orientation">orientation - Screen Orientation API</a>
    */
   @JsProperty(
       name = "orientation"
@@ -78,7 +79,7 @@ public class Screen {
    * Returns the bit depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/pixelDepth">Screen.pixelDepth - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-pixeldepth">The definition of 'Screen.pixelDepth' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-screen-pixeldepth">Screen.pixelDepth - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty(
       name = "pixelDepth"

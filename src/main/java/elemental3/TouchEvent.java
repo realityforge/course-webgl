@@ -10,8 +10,8 @@ import jsinterop.annotations.JsType;
  * The TouchEvent interface represents an UIEvent which is sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">TouchEvent - MDN</a>
- * @see <a href="https://w3c.github.io/touch-events/#touchevent-interface">The definition of 'TouchEvent' in the 'Touch Events &ndash; Level 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/touch-events/#touchevent-interface">The definition of 'TouchEvent' in the 'Touch Events' specification.</a>
+ * @see <a href="https://w3c.github.io/touch-events/#touchevent-interface">TouchEvent - Touch Events &ndash; Level 2</a>
+ * @see <a href="https://www.w3.org/TR/touch-events/#touchevent-interface">TouchEvent - Touch Events</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

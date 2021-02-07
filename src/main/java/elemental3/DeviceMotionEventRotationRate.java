@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * A DeviceMotionEventRotationRate object provides information about the rate at which the device is rotating around all three axes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate">DeviceMotionEventRotationRate - MDN</a>
- * @see <a href="https://w3c.github.io/deviceorientation/#devicemotioneventrotationrate">The definition of 'DeviceMotionEventRotationRate' in the 'DeviceOrientation Event Specification' specification.</a>
+ * @see <a href="https://w3c.github.io/deviceorientation/#devicemotioneventrotationrate">DeviceMotionEventRotationRate - DeviceOrientation Event Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,7 +26,7 @@ public class DeviceMotionEventRotationRate {
    * This property indicates the rate of rotation around the Z axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha">DeviceMotionEventRotationRate.alpha - MDN</a>
-   * @see <a href="https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-alpha">The definition of 'DeviceMotionEventRotationRate: alpha' in the 'DeviceOrientation Event Specification' specification.</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-alpha">DeviceMotionEventRotationRate: alpha - DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "alpha"
@@ -38,7 +38,7 @@ public class DeviceMotionEventRotationRate {
    * This property indicates the rate of rotation around the X axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta">DeviceMotionEventRotationRate.beta - MDN</a>
-   * @see <a href="https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-beta">The definition of 'DeviceMotionEventRotationRate: beta' in the 'DeviceOrientation Event Specification' specification.</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-beta">DeviceMotionEventRotationRate: beta - DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "beta"
@@ -50,7 +50,7 @@ public class DeviceMotionEventRotationRate {
    * This property indicates the rate of rotation around the Y axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma">DeviceMotionEventRotationRate.gamma - MDN</a>
-   * @see <a href="https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-gamma">The definition of 'DeviceMotionEventRotationRate: gamma' in the 'DeviceOrientation Event Specification' specification.</a>
+   * @see <a href="https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-gamma">DeviceMotionEventRotationRate: gamma - DeviceOrientation Event Specification</a>
    */
   @JsProperty(
       name = "gamma"

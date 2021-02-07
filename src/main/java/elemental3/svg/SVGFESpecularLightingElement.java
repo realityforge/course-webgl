@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGFESpecularLightingElement interface corresponds to the feSpecularLighting element.
+ * The SVGFESpecularLightingElement interface corresponds to the &lt;feSpecularLighting&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement">SVGFESpecularLightingElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpecularLightingElement">The definition of 'SVGFESpecularLightingElement' in the 'Filter Effects Module Level 1' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFESpecularLightingElement">The definition of 'SVGFESpecularLightingElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpecularLightingElement">SVGFESpecularLightingElement - Filter Effects Module Level 1</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFESpecularLightingElement">SVGFESpecularLightingElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

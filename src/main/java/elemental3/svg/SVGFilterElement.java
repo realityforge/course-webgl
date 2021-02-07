@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGFilterElement interface provides access to the properties of filter elements, as well as methods to manipulate them.
+ * The SVGFilterElement interface provides access to the properties of &lt;filter&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement">SVGFilterElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFilterElement">The definition of 'SVGFilterElement' in the 'Filter Effects Module Level 1' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFilterElement">The definition of 'SVGFilterElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFilterElement">SVGFilterElement - Filter Effects Module Level 1</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFilterElement">SVGFilterElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

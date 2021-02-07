@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The MediaStreamTrackAudioSourceOptions dictionary is used when specifying options to the MediaStreamTrackAudioSourceNode() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions">MediaStreamTrackAudioSourceOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamtrackaudiosourceoptions">The definition of 'MediaStreamTrackAudioSourceOptions' in the 'Web Audio API' specification.</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamtrackaudiosourceoptions">MediaStreamTrackAudioSourceOptions - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +34,7 @@ public interface MediaStreamTrackAudioSourceOptions {
    * The MediaStreamTrackAudioSourceOptions dictionary's mediaStreamTrack property must contain a reference to the MediaStreamTrack from which the MediaStreamTrackAudioSourceNode being created using the MediaStreamTrackAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack">MediaStreamTrackAudioSourceOptions.mediaStreamTrack - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">The definition of 'MediaStreamTrackAudioSourceOptions.mediaStream' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">MediaStreamTrackAudioSourceOptions.mediaStream - Web Audio API</a>
    */
   @JsProperty(
       name = "mediaStreamTrack"
@@ -46,7 +46,7 @@ public interface MediaStreamTrackAudioSourceOptions {
    * The MediaStreamTrackAudioSourceOptions dictionary's mediaStreamTrack property must contain a reference to the MediaStreamTrack from which the MediaStreamTrackAudioSourceNode being created using the MediaStreamTrackAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack">MediaStreamTrackAudioSourceOptions.mediaStreamTrack - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">The definition of 'MediaStreamTrackAudioSourceOptions.mediaStream' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">MediaStreamTrackAudioSourceOptions.mediaStream - Web Audio API</a>
    */
   @JsProperty
   void setMediaStreamTrack(@Nonnull MediaStreamTrack mediaStreamTrack);
@@ -55,7 +55,7 @@ public interface MediaStreamTrackAudioSourceOptions {
    * The MediaStreamTrackAudioSourceOptions dictionary's mediaStreamTrack property must contain a reference to the MediaStreamTrack from which the MediaStreamTrackAudioSourceNode being created using the MediaStreamTrackAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack">MediaStreamTrackAudioSourceOptions.mediaStreamTrack - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">The definition of 'MediaStreamTrackAudioSourceOptions.mediaStream' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">MediaStreamTrackAudioSourceOptions.mediaStream - Web Audio API</a>
    */
   @JsOverlay
   @Nonnull

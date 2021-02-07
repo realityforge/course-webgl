@@ -17,11 +17,11 @@ import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 /**
- * The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the IDBRequest instance.
+ * The IDBRequest interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest">IDBRequest - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbrequest">The definition of 'IDBRequest' in the 'Indexed Database API 2.0' specification.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#request-api">The definition of 'IDBRequest' in the 'Indexed Database API Draft' specification.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbrequest">IDBRequest - Indexed Database API 2.0</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#request-api">IDBRequest - Indexed Database API 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,8 +34,8 @@ public class IDBRequest extends EventTarget {
    * The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. Also included at the bottom is an onerror function that reports what the error was if the request fails. For a full working example, see our To-do Notifications app (view example live.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onerror">IDBRequest.onerror - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onerror">The definition of 'onerror' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-onerror">The definition of 'onerror' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onerror">onerror - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-onerror">onerror - Indexed Database API Draft</a>
    */
   @Nullable
   public EventHandler onerror;
@@ -44,8 +44,8 @@ public class IDBRequest extends EventTarget {
    * The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. For a full working example, see our To-do Notifications app (view example live.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onsuccess">IDBRequest.onsuccess - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onsuccess">The definition of 'onsuccess' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-onsuccess">The definition of 'onsuccess' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onsuccess">onsuccess - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-onsuccess">onsuccess - Indexed Database API Draft</a>
    */
   @Nullable
   public EventHandler onsuccess;
@@ -57,8 +57,8 @@ public class IDBRequest extends EventTarget {
    * A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The following error codes are returned under certain conditions:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/error">IDBRequest.error - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-error">The definition of 'error' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-error">The definition of 'error' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-error">error - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-error">error - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "error"
@@ -70,8 +70,8 @@ public class IDBRequest extends EventTarget {
    * The IDBRequestReadyState of the request, which takes one of the following two values:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/readyState">IDBRequest.readyState - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-readystate">The definition of 'readyState' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-readystate">The definition of 'readyState' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-readystate">readyState - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-readystate">readyState - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "readyState"
@@ -84,8 +84,8 @@ public class IDBRequest extends EventTarget {
    * any
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/result">IDBRequest.result - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-result">The definition of 'result' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-result">The definition of 'result' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-result">result - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-result">result - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "result"
@@ -97,8 +97,8 @@ public class IDBRequest extends EventTarget {
    * An object representing the source of the request, such as an IDBIndex, IDBObjectStore or IDBCursor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/source">IDBRequest.source - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-source">The definition of 'source' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-source">The definition of 'source' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-source">source - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-source">source - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "source"
@@ -110,8 +110,8 @@ public class IDBRequest extends EventTarget {
    * An IDBTransaction.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/transaction">IDBRequest.transaction - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-transaction">The definition of 'transaction' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-transaction">The definition of 'transaction' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-transaction">transaction - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-transaction">transaction - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "transaction"

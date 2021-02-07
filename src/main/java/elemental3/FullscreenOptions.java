@@ -31,7 +31,7 @@ public interface FullscreenOptions {
    * The FullscreenOptions dictionary's navigationUI property is used when calling requestFullscreen() to specify to what extent the user agent should include its standard user interface while the element is presented in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions/navigationUI">FullscreenOptions.navigationUI - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">The definition of 'FullscreenOptions' in the 'Fullscreen API' specification.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">FullscreenOptions - Fullscreen API</a>
    */
   @JsProperty(
       name = "navigationUI"
@@ -43,7 +43,7 @@ public interface FullscreenOptions {
    * The FullscreenOptions dictionary's navigationUI property is used when calling requestFullscreen() to specify to what extent the user agent should include its standard user interface while the element is presented in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions/navigationUI">FullscreenOptions.navigationUI - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">The definition of 'FullscreenOptions' in the 'Fullscreen API' specification.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">FullscreenOptions - Fullscreen API</a>
    */
   @JsProperty
   void setNavigationUI(@FullscreenNavigationUI @Nonnull String navigationUI);
@@ -52,7 +52,7 @@ public interface FullscreenOptions {
    * The FullscreenOptions dictionary's navigationUI property is used when calling requestFullscreen() to specify to what extent the user agent should include its standard user interface while the element is presented in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions/navigationUI">FullscreenOptions.navigationUI - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">The definition of 'FullscreenOptions' in the 'Fullscreen API' specification.</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">FullscreenOptions - Fullscreen API</a>
    */
   @JsOverlay
   @Nonnull

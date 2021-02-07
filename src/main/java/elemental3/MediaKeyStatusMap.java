@@ -17,7 +17,7 @@ import jsinterop.base.Any;
  * The MediaKeyStatusMap interface of the EncryptedMediaExtensions API is a read-only map of media key statuses by key IDs.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap">MediaKeyStatusMap - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface">The definition of 'MediaKeyStatusMap' in the 'Encrypted Media Extensions' specification.</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface">MediaKeyStatusMap - Encrypted Media Extensions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,7 +33,7 @@ public class MediaKeyStatusMap {
    * The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/size">MediaKeyStatusMap.size - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-size">The definition of 'size' in the 'Encrypted Media Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-size">size - Encrypted Media Extensions</a>
    */
   @JsProperty(
       name = "size"

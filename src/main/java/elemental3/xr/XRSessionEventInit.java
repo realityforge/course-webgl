@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit">XRSessionEventInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit">The definition of 'XRSessionEventInit' in the 'WebXR Device API' specification.</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit">XRSessionEventInit - WebXR Device API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,7 +33,7 @@ public interface XRSessionEventInit extends EventInit {
    * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">The definition of 'XRSessionEventInit.session' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
    */
   @JsProperty(
       name = "session"
@@ -45,7 +45,7 @@ public interface XRSessionEventInit extends EventInit {
    * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">The definition of 'XRSessionEventInit.session' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
    */
   @JsProperty
   void setSession(@Nonnull XRSession session);
@@ -54,7 +54,7 @@ public interface XRSessionEventInit extends EventInit {
    * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">The definition of 'XRSessionEventInit.session' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
    */
   @JsOverlay
   @Nonnull

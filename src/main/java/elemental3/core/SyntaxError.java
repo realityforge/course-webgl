@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The SyntaxError object represents an error when trying to interpret syntactically invalid code. It is thrown when the JavaScript engine encounters tokens or token order that does not conform to the syntax of the language when parsing code.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError - MDN</a>
- * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-syntaxerror">The definition of 'SyntaxError' in the 'ECMAScript (ECMA-262)' specification.</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-syntaxerror">SyntaxError - ECMAScript (ECMA-262)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

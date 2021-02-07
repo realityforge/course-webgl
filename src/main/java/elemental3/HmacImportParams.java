@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The HmacImportParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.importKey() or SubtleCrypto.unwrapKey(), when generating a key for the HMAC algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HmacImportParams">HmacImportParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacImportParams">The definition of 'SubtleCrypto.HmacImportParams' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacImportParams">SubtleCrypto.HmacImportParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

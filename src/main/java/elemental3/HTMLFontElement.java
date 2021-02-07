@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * Implements the document object model (DOM) representation of the font element. The HTML Font Element font defines the font size, font face and color of text.
+ * Implements the document object model (DOM) representation of the font element. The HTML Font Element &lt;font&gt; defines the font size, font face and color of text.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement">HTMLFontElement - MDN</a>
  */

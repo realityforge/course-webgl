@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The MimeType interface provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MimeType">MimeType - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#mimetype">The definition of 'MimeType' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#mimetype">MimeType - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

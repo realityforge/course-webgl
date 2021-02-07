@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrrenderstateinit">The definition of 'XRRenderStateInit' in the 'WebXR Device API' specification.</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrrenderstateinit">XRRenderStateInit - WebXR Device API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

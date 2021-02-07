@@ -16,7 +16,7 @@ import jsinterop.base.JsArrayLike;
  * The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList">SourceBufferList - MDN</a>
- * @see <a href="https://w3c.github.io/media-source/#sourcebufferlist">The definition of 'SourceBufferList' in the 'Media Source Extensions' specification.</a>
+ * @see <a href="https://w3c.github.io/media-source/#sourcebufferlist">SourceBufferList - Media Source Extensions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -38,7 +38,7 @@ public class SourceBufferList extends EventTarget {
    * The length read-only property of the SourceBufferList interface returns the number of SourceBuffer objects in the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList/length">SourceBufferList.length - MDN</a>
-   * @see <a href="https://w3c.github.io/media-source/#idl-def-sourcebufferlist-length">The definition of 'length' in the 'Media Source Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/media-source/#idl-def-sourcebufferlist-length">length - Media Source Extensions</a>
    */
   @JsProperty(
       name = "length"

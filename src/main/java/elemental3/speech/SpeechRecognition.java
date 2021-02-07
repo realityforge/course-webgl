@@ -17,7 +17,7 @@ import jsinterop.base.Js;
  * The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition">SpeechRecognition - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-section">The definition of 'SpeechRecognition' in the 'Web Speech API' specification.</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-section">SpeechRecognition - Web Speech API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -30,7 +30,7 @@ public class SpeechRecognition extends EventTarget {
    * The continuous property of the SpeechRecognition interface controls whether continuous results are returned for each recognition, or only a single result.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous">SpeechRecognition.continuous - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-continuous">The definition of 'continuous' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-continuous">continuous - Web Speech API</a>
    */
   public boolean continuous;
 
@@ -38,7 +38,7 @@ public class SpeechRecognition extends EventTarget {
    * The grammars property of the SpeechRecognition interface returns and sets a collection of SpeechGrammar objects that represent the grammars that will be understood by the current SpeechRecognition.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars">SpeechRecognition.grammars - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-grammars">The definition of 'grammars' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-grammars">grammars - Web Speech API</a>
    */
   @Nonnull
   public SpeechGrammarList grammars;
@@ -47,7 +47,7 @@ public class SpeechRecognition extends EventTarget {
    * The interimResults property of the SpeechRecognition interface controls whether interim results should be returned (true) or not (false.) Interim results are results that are not yet final (e.g. the SpeechRecognitionResult.isFinal property is false.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults">SpeechRecognition.interimResults - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-interimresults">The definition of 'interimResults' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-interimresults">interimResults - Web Speech API</a>
    */
   public boolean interimResults;
 
@@ -55,7 +55,7 @@ public class SpeechRecognition extends EventTarget {
    * The lang property of the SpeechRecognition interface returns and sets the language of the current SpeechRecognition. If not specified, this defaults to the HTML lang attribute value, or the user agent's language setting if that isn't set either.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang">SpeechRecognition.lang - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-lang">The definition of 'lang' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-lang">lang - Web Speech API</a>
    */
   @Nonnull
   public String lang;
@@ -64,7 +64,7 @@ public class SpeechRecognition extends EventTarget {
    * The maxAlternatives property of the SpeechRecognition interface sets the maximum number of SpeechRecognitionAlternatives provided per SpeechRecognitionResult.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives">SpeechRecognition.maxAlternatives - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-maxalternatives">The definition of 'maxAlternatives' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-maxalternatives">maxAlternatives - Web Speech API</a>
    */
   public int maxAlternatives;
 
@@ -72,7 +72,7 @@ public class SpeechRecognition extends EventTarget {
    * The onaudioend property of the SpeechRecognition interface represents an event handler that will run when the user agent has finished capturing audio (when the audioend event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudioend">SpeechRecognition.onaudioend - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onaudioend">The definition of 'onaudioend' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onaudioend">onaudioend - Web Speech API</a>
    */
   @Nullable
   public EventHandler onaudioend;
@@ -81,7 +81,7 @@ public class SpeechRecognition extends EventTarget {
    * The onaudiostart property of the SpeechRecognition interface represents an event handler that will run when the user agent has started to capture audio (when the audiostart event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudiostart">SpeechRecognition.onaudiostart - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onaudiostart">The definition of 'onaudiostart' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onaudiostart">onaudiostart - Web Speech API</a>
    */
   @Nullable
   public EventHandler onaudiostart;
@@ -90,7 +90,7 @@ public class SpeechRecognition extends EventTarget {
    * The onend property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has disconnected (when the end event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onend">SpeechRecognition.onend - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onend">The definition of 'onend' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onend">onend - Web Speech API</a>
    */
   @Nullable
   public EventHandler onend;
@@ -99,7 +99,7 @@ public class SpeechRecognition extends EventTarget {
    * The onerror property of the SpeechRecognition interface represents an event handler that will run when a speech recognition error occurs (when the error event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror">SpeechRecognition.onerror - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onerror">The definition of 'onerror' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onerror">onerror - Web Speech API</a>
    */
   @Nullable
   public SpeechRecognitionErrorEventHandler onerror;
@@ -108,7 +108,7 @@ public class SpeechRecognition extends EventTarget {
    * The onnomatch property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a final result with no significant recognition (when the nomatch event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch">SpeechRecognition.onnomatch - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onnomatch">The definition of 'onnomatch' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onnomatch">onnomatch - Web Speech API</a>
    */
   @Nullable
   public SpeechRecognitionEventHandler onnomatch;
@@ -117,7 +117,7 @@ public class SpeechRecognition extends EventTarget {
    * The onresult property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a result &mdash; a word or phrase has been positively recognized and this has been communicated back to the app (when the result event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult">SpeechRecognition.onresult - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onresult">The definition of 'onresult' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onresult">onresult - Web Speech API</a>
    */
   @Nullable
   public SpeechRecognitionEventHandler onresult;
@@ -126,7 +126,7 @@ public class SpeechRecognition extends EventTarget {
    * The onsoundend property of the SpeechRecognition interface represents an event handler that will run when any sound &mdash; recognisable speech or not &mdash; has stopped being detected (when the soundend event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundend">SpeechRecognition.onsoundend - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundend">The definition of 'onsoundend' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundend">onsoundend - Web Speech API</a>
    */
   @Nullable
   public EventHandler onsoundend;
@@ -135,7 +135,7 @@ public class SpeechRecognition extends EventTarget {
    * The onsoundstart property of the SpeechRecognition interface represents an event handler that will run when any sound &mdash; recognisable speech or not &mdash; has been detected (when the soundstart event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundstart">SpeechRecognition.onsoundstart - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundstart">The definition of 'onsoundstart' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundstart">onsoundstart - Web Speech API</a>
    */
   @Nullable
   public EventHandler onsoundstart;
@@ -144,7 +144,7 @@ public class SpeechRecognition extends EventTarget {
    * The onspeechend property of the SpeechRecognition interface represents an event handler that will run when speech recognised by the speech recognition service has stopped being detected (when the speechend event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend">SpeechRecognition.onspeechend - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onspeechend">The definition of 'onspeechend' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onspeechend">onspeechend - Web Speech API</a>
    */
   @Nullable
   public EventHandler onspeechend;
@@ -153,7 +153,7 @@ public class SpeechRecognition extends EventTarget {
    * The onspeechstart property of the SpeechRecognition interface represents an event handler that will run when sound recognised by the speech recognition service as speech has been detected (when the speechstart event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechstart">SpeechRecognition.onspeechstart - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onspeechstart">The definition of 'onspeechstart' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onspeechstart">onspeechstart - Web Speech API</a>
    */
   @Nullable
   public EventHandler onspeechstart;
@@ -162,7 +162,7 @@ public class SpeechRecognition extends EventTarget {
    * The onstart property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition (when the start event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onstart">SpeechRecognition.onstart - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onstart">The definition of 'onstart' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onstart">onstart - Web Speech API</a>
    */
   @Nullable
   public EventHandler onstart;
@@ -171,7 +171,7 @@ public class SpeechRecognition extends EventTarget {
    * The SpeechRecognition() constructor creates a new SpeechRecognition object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition">SpeechRecognition.SpeechRecognition - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-speechrecognition">The definition of 'SpeechRecognition()' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-speechrecognition">SpeechRecognition() - Web Speech API</a>
    */
   public SpeechRecognition() {
   }
@@ -180,7 +180,7 @@ public class SpeechRecognition extends EventTarget {
    * The abort() method of the Web Speech API stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a SpeechRecognitionResult.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/abort">SpeechRecognition.abort - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-abort">The definition of 'abort()' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-abort">abort() - Web Speech API</a>
    */
   public native void abort();
 
@@ -188,7 +188,7 @@ public class SpeechRecognition extends EventTarget {
    * The start() method of the Web Speech API starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start">SpeechRecognition.start - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-start">The definition of 'start()' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-start">start() - Web Speech API</a>
    */
   public native void start();
 
@@ -196,7 +196,7 @@ public class SpeechRecognition extends EventTarget {
    * The stop() method of the Web Speech API stops the speech recognition service from listening to incoming audio, and attempts to return a SpeechRecognitionResult using the audio captured so far.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop">SpeechRecognition.stop - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-stop">The definition of 'stop()' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-stop">stop() - Web Speech API</a>
    */
   public native void stop();
 

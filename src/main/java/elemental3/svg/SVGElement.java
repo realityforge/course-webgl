@@ -22,8 +22,8 @@ import jsinterop.annotations.JsType;
  * All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement">SVGElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement">The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGElement">The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement">SVGElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGElement">SVGElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -81,7 +81,7 @@ public class SVGElement extends Element {
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
-   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in the 'UI Events' specification.</a>
+   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">onauxclick - UI Events</a>
    */
   @Nullable
   public MouseEventHandler onauxclick;
@@ -90,7 +90,7 @@ public class SVGElement extends Element {
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onblur">SVGElement.onblur - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">onblur - HTML Living Standard</a>
    */
   @Nullable
   public FocusEventHandler onblur;
@@ -99,7 +99,7 @@ public class SVGElement extends Element {
    * The oncancel property of the GlobalEventHandlers mixin is an EventHandler for processing cancel events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">oncancel - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler oncancel;
@@ -140,7 +140,7 @@ public class SVGElement extends Element {
    * The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">onclose - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onclose;
@@ -149,7 +149,7 @@ public class SVGElement extends Element {
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/oncontextmenu">SVGElement.oncontextmenu - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">oncontextmenu - HTML Living Standard</a>
    */
   @Nullable
   public MouseEventHandler oncontextmenu;
@@ -172,7 +172,7 @@ public class SVGElement extends Element {
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/ondblclick">SVGElement.ondblclick - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">ondblclick - HTML Living Standard</a>
    */
   @Nullable
   public MouseEventHandler ondblclick;
@@ -181,8 +181,8 @@ public class SVGElement extends Element {
    * A global event handler for the drag event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag">GlobalEventHandlers.ondrag - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">ondrag - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">ondrag - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondrag;
@@ -191,8 +191,8 @@ public class SVGElement extends Element {
    * A global event handler for the dragend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend">GlobalEventHandlers.ondragend - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">ondragend - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">ondragend - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondragend;
@@ -201,8 +201,8 @@ public class SVGElement extends Element {
    * A global event handler for the dragenter event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter">GlobalEventHandlers.ondragenter - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">ondragenter - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">ondragenter - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondragenter;
@@ -211,8 +211,8 @@ public class SVGElement extends Element {
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">ondragleave - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">ondragleave - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondragleave;
@@ -221,8 +221,8 @@ public class SVGElement extends Element {
    * A global event handler for the dragover event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover">GlobalEventHandlers.ondragover - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">ondragover - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">ondragover - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondragover;
@@ -231,8 +231,8 @@ public class SVGElement extends Element {
    * A global event handler for the dragstart event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart">GlobalEventHandlers.ondragstart - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">ondragstart - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">ondragstart - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondragstart;
@@ -241,8 +241,8 @@ public class SVGElement extends Element {
    * A global event handler for the drop event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop">GlobalEventHandlers.ondrop - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">ondrop - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">ondrop - HTML 5.1</a>
    */
   @Nullable
   public EventHandler ondrop;
@@ -275,7 +275,7 @@ public class SVGElement extends Element {
    * The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">onerror - HTML Living Standard</a>
    */
   @Nullable
   public OnErrorEventHandler onerror;
@@ -284,7 +284,7 @@ public class SVGElement extends Element {
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onfocus">SVGElement.onfocus - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">onfocus - HTML Living Standard</a>
    */
   @Nullable
   public FocusEventHandler onfocus;
@@ -293,7 +293,7 @@ public class SVGElement extends Element {
    * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">onformdata - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onformdata;
@@ -302,7 +302,7 @@ public class SVGElement extends Element {
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">ongotpointercapture - Pointer Events &ndash; Level 2</a>
    */
   @Nullable
   public EventHandler ongotpointercapture;
@@ -311,7 +311,7 @@ public class SVGElement extends Element {
    * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/oninput">SVGElement.oninput - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#ix-handler-oninput">The definition of 'oninput' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#ix-handler-oninput">oninput - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler oninput;
@@ -328,7 +328,7 @@ public class SVGElement extends Element {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onkeydown">SVGElement.onkeydown - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">onkeydown - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onkeydown;
@@ -337,7 +337,7 @@ public class SVGElement extends Element {
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onkeypress">SVGElement.onkeypress - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">onkeypress - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onkeypress;
@@ -346,7 +346,7 @@ public class SVGElement extends Element {
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onkeyup">SVGElement.onkeyup - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">onkeyup - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onkeyup;
@@ -355,7 +355,7 @@ public class SVGElement extends Element {
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onload">SVGElement.onload - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">onload - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onload;
@@ -380,7 +380,7 @@ public class SVGElement extends Element {
    * The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">onloadstart - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onloadstart;
@@ -389,7 +389,7 @@ public class SVGElement extends Element {
    * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">onlostpointercapture - Pointer Events &ndash; Level 2</a>
    */
   @Nullable
   public EventHandler onlostpointercapture;
@@ -422,7 +422,7 @@ public class SVGElement extends Element {
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmousemove">SVGElement.onmousemove - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">onmousemove - HTML Living Standard</a>
    */
   @Nullable
   public MouseEventHandler onmousemove;
@@ -439,7 +439,7 @@ public class SVGElement extends Element {
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmouseover">SVGElement.onmouseover - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">onmouseover - HTML Living Standard</a>
    */
   @Nullable
   public MouseEventHandler onmouseover;
@@ -483,8 +483,8 @@ public class SVGElement extends Element {
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">onpointercancel - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">onpointercancel - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointercancel;
@@ -493,8 +493,8 @@ public class SVGElement extends Element {
    * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">onpointerdown - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">onpointerdown - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointerdown;
@@ -503,8 +503,8 @@ public class SVGElement extends Element {
    * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">onpointerenter - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">onpointerenter - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointerenter;
@@ -513,8 +513,8 @@ public class SVGElement extends Element {
    * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">onpointerleave - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">onpointerleave - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointerleave;
@@ -523,8 +523,8 @@ public class SVGElement extends Element {
    * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">onpointermove - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">onpointermove - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointermove;
@@ -533,8 +533,8 @@ public class SVGElement extends Element {
    * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">onpointerout - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">onpointerout - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointerout;
@@ -543,8 +543,8 @@ public class SVGElement extends Element {
    * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">onpointerover - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">onpointerover - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointerover;
@@ -553,8 +553,8 @@ public class SVGElement extends Element {
    * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">onpointerup - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">onpointerup - Pointer Events</a>
    */
   @Nullable
   public EventHandler onpointerup;
@@ -585,8 +585,8 @@ public class SVGElement extends Element {
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onscroll">SVGElement.onscroll - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">onscroll - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">onscroll - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   @Nullable
   public EventHandler onscroll;
@@ -612,7 +612,7 @@ public class SVGElement extends Element {
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in the 'Selection API' specification.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">GlobalEventHandlers.onselectionchange - Selection API</a>
    */
   @Nullable
   public EventHandler onselectionchange;
@@ -621,7 +621,7 @@ public class SVGElement extends Element {
    * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in the 'Selection API' specification.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">GlobalEventHandlers.onselectstart - Selection API</a>
    */
   @Nullable
   public EventHandler onselectstart;
@@ -636,7 +636,7 @@ public class SVGElement extends Element {
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onsubmit">SVGElement.onsubmit - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">onsubmit - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onsubmit;
@@ -761,9 +761,9 @@ public class SVGElement extends Element {
    * The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to custom data attributes (data-*) on elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset">SVGElement.dataset - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-dataset">The definition of 'HTMLElement.dataset' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/dom.html#dom-dataset">The definition of 'HTMLElement.dataset' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/dom.html#dom-dataset">The definition of 'HTMLElement.dataset' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#dom-dataset">HTMLElement.dataset - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/dom.html#dom-dataset">HTMLElement.dataset - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/dom.html#dom-dataset">HTMLElement.dataset - HTML5</a>
    */
   @JsProperty(
       name = "dataset"

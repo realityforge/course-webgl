@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The WebAssembly.Table() object is a JavaScript wrapper object &mdash; an array-like structure representing a WebAssembly Table, which stores function references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table">WebAssembly.Table - MDN</a>
+ * @see <a href="https://webassembly.github.io/spec/js-api/#tables">Table - WebAssembly JavaScript Interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

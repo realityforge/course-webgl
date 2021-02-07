@@ -11,11 +11,11 @@ import jsinterop.annotations.JsType;
  * The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment">DocumentFragment - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment">The definition of 'DocumentFragment' in the 'DOM' specification.</a>
- * @see <a href="https://www.w3.org/TR/selectors-api/#the-apis">The definition of 'DocumentFragment' in the 'Selectors API Level 1' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-B63ED1A3">The definition of 'DocumentFragment' in the 'Document Object Model (DOM) Level 3 Core Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-B63ED1A3">The definition of 'DocumentFragment' in the 'Document Object Model (DOM) Level 2 Core Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3">The definition of 'DocumentFragment' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment">DocumentFragment - DOM</a>
+ * @see <a href="https://www.w3.org/TR/selectors-api/#the-apis">DocumentFragment - Selectors API Level 1</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-B63ED1A3">DocumentFragment - Document Object Model (DOM) Level 3 Core Specification</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-B63ED1A3">DocumentFragment - Document Object Model (DOM) Level 2 Core Specification</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3">DocumentFragment - Document Object Model (DOM) Level 1 Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -115,7 +115,7 @@ public class DocumentFragment extends Node {
    * The DocumentFragment.querySelectorAll() method returns a NodeList of elements within the DocumentFragment (using depth-first pre-order traversal of the document's nodes) that matches the specified group of selectors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll">DocumentFragment.querySelectorAll - MDN</a>
-   * @see <a href="https://www.w3.org/TR/selectors-api/#queryselector">The definition of 'DocumentFragment.querySelectorAll' in the 'Selectors API Level 1' specification.</a>
+   * @see <a href="https://www.w3.org/TR/selectors-api/#queryselector">DocumentFragment.querySelectorAll - Selectors API Level 1</a>
    */
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);

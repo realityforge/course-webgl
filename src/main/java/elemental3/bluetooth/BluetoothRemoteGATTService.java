@@ -20,7 +20,7 @@ import jsinterop.base.Js;
  * The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService">BluetoothRemoteGATTService - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattservice">The definition of 'BluetoothRemoteGATTService' in the 'Web Bluetooth' specification.</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattservice">BluetoothRemoteGATTService - Web Bluetooth</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -48,7 +48,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.device read-only property returns information about a Bluetooth device through an instance of BluetoothDevice.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device">BluetoothRemoteGATTService.device - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-device">The definition of 'device' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-device">device - Web Bluetooth</a>
    */
   @JsProperty(
       name = "device"
@@ -60,7 +60,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.isPrimary read-only property returns a Boolean that indicates whether this is a primary service. If it is not a primary service, it is a secondary service.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary">BluetoothRemoteGATTService.isPrimary - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-isprimary">The definition of 'isPrimary' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-isprimary">isPrimary - Web Bluetooth</a>
    */
   @JsProperty(
       name = "isPrimary"
@@ -71,7 +71,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.uuid read-only property returns a DOMString representing the UUID of this service.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid">BluetoothRemoteGATTService.uuid - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-uuid">The definition of 'uuid' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-uuid">uuid - Web Bluetooth</a>
    */
   @JsProperty(
       name = "uuid"
@@ -83,7 +83,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">The definition of 'getCharacteristic()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">getCharacteristic() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
@@ -93,7 +93,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">The definition of 'getCharacteristic()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">getCharacteristic() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
@@ -103,7 +103,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">The definition of 'getCharacteristic()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">getCharacteristic() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(int characteristic);
@@ -112,7 +112,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">The definition of 'getCharacteristics()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
@@ -122,7 +122,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">The definition of 'getCharacteristics()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
@@ -132,7 +132,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">The definition of 'getCharacteristics()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
@@ -142,7 +142,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">The definition of 'getCharacteristics()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics();
@@ -151,7 +151,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">The definition of 'getIncludedService()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">getIncludedService() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(
@@ -161,7 +161,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">The definition of 'getIncludedService()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">getIncludedService() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
@@ -170,7 +170,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">The definition of 'getIncludedService()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">getIncludedService() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(int service);
@@ -179,7 +179,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">The definition of 'getIncludedServices()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
@@ -189,7 +189,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">The definition of 'getIncludedServices()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
@@ -199,7 +199,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">The definition of 'getIncludedServices()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);
@@ -208,7 +208,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
-   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">The definition of 'getIncludedServices()' in the 'Web Bluetooth' specification.</a>
+   * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();

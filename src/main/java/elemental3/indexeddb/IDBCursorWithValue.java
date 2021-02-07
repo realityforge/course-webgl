@@ -11,8 +11,8 @@ import jsinterop.base.Any;
  * The IDBCursorWithValue interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue">IDBCursorWithValue - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue">The definition of 'IDBCursorWithValue' in the 'Indexed Database API 2.0' specification.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#idbcursorwithvalue">The definition of 'IDBCursorWithValue' in the 'Indexed Database API Draft' specification.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue">IDBCursorWithValue - Indexed Database API 2.0</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue">IDBCursorWithValue - Indexed Database API 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,8 +28,8 @@ public class IDBCursorWithValue extends IDBCursor {
    * The value of the current cursor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue/value">IDBCursorWithValue.value - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbcursor-source">The definition of 'source' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#database-interface">The definition of 'IDBDatabase' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbcursor-source">source - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#database-interface">IDBDatabase - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "value"

@@ -29,7 +29,7 @@ public class Notification extends EventTarget {
    * The onclick property of the Notification interface specifies an event listener to receive click events. These events occur when the user clicks on a displayed Notification.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/onclick">Notification.onclick - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-onclick">The definition of 'onclick' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-onclick">onclick - Notifications API</a>
    */
   @Nullable
   public EventHandler onclick;
@@ -46,7 +46,7 @@ public class Notification extends EventTarget {
    * The onerror property of the Notification interface specifies an event listener to receive error events. These events occur when something goes wrong with a Notification (in many cases an error preventing the notification from being displayed.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/onerror">Notification.onerror - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-onerror">The definition of 'onerror' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-onerror">onerror - Notifications API</a>
    */
   @Nullable
   public EventHandler onerror;
@@ -63,7 +63,7 @@ public class Notification extends EventTarget {
    * The Notification() constructor creates a new Notification object instance, which represents a user notification.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification">Notification.Notification - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-notification">The definition of 'Notification() constructor' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-notification">Notification() constructor - Notifications API</a>
    */
   public Notification(@Nonnull final String title, @Nonnull final NotificationOptions options) {
   }
@@ -72,7 +72,7 @@ public class Notification extends EventTarget {
    * The Notification() constructor creates a new Notification object instance, which represents a user notification.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification">Notification.Notification - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-notification">The definition of 'Notification() constructor' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-notification">Notification() constructor - Notifications API</a>
    */
   public Notification(@Nonnull final String title) {
   }
@@ -81,7 +81,7 @@ public class Notification extends EventTarget {
    * The actions read-only property of the Notification interface returns the list of NotificationAction objects set using the actions option when creating the notification using the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/actions">Notification.actions - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-actions">The definition of 'actions' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-actions">actions - Notifications API</a>
    */
   @JsProperty(
       name = "actions"
@@ -93,7 +93,7 @@ public class Notification extends EventTarget {
    * The badge property of the Notification interface returns the URL of the image used to represent the notification when there is not enough space to display the notification itself.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/badge">Notification.badge - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-badge">The definition of 'badge' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-badge">badge - Notifications API</a>
    */
   @JsProperty(
       name = "badge"
@@ -105,7 +105,7 @@ public class Notification extends EventTarget {
    * The body read-only property of the Notification interface indicates the body string of the notification, as specified in the body option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/body">Notification.body - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-body">The definition of 'body' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-body">body - Notifications API</a>
    */
   @JsProperty(
       name = "body"
@@ -117,7 +117,7 @@ public class Notification extends EventTarget {
    * The data read-only property of the Notification interface returns a structured clone of the notification's data, as specified in the data option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/data">Notification.data - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-data">The definition of 'data' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-data">data - Notifications API</a>
    */
   @JsProperty(
       name = "data"
@@ -141,7 +141,7 @@ public class Notification extends EventTarget {
    * The icon read-only property of the Notification interface contains the URL of an icon to be displayed as part of the notification, as specified in the icon option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/icon">Notification.icon - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-icon">The definition of 'icon' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-icon">icon - Notifications API</a>
    */
   @JsProperty(
       name = "icon"
@@ -153,7 +153,7 @@ public class Notification extends EventTarget {
    * The image read-only property of the Notification interface contains the URL of an image to be displayed as part of the notification
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/image">Notification.image - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#image-resource">The definition of 'image' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#image-resource">image - Notifications API</a>
    */
   @JsProperty(
       name = "image"
@@ -165,7 +165,7 @@ public class Notification extends EventTarget {
    * The lang read-only property of the Notification interface indicates the language used in the notification, as specified in the lang option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang">Notification.lang - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-lang">The definition of 'lang' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-lang">lang - Notifications API</a>
    */
   @JsProperty(
       name = "lang"
@@ -188,7 +188,7 @@ public class Notification extends EventTarget {
    * The permission read-only property of the Notification interface indicates the current permission granted by the user for the current origin to display web notifications.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/permission">Notification.permission - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-permission">The definition of 'permission' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-permission">permission - Notifications API</a>
    */
   @JsProperty(
       name = "permission"
@@ -201,7 +201,7 @@ public class Notification extends EventTarget {
    * The renotify read-only property of the Notification interface specifies whether the user should be notified after a new notification replaces an old one, as specified in the renotify option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/renotify">Notification.renotify - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-renotify">The definition of 'renotify' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-renotify">renotify - Notifications API</a>
    */
   @JsProperty(
       name = "renotify"
@@ -212,7 +212,7 @@ public class Notification extends EventTarget {
    * The requireInteraction read-only property of the Notification interface returns a Boolean indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction">Notification.requireInteraction - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-requireinteraction">The definition of 'requireInteraction' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-requireinteraction">requireInteraction - Notifications API</a>
    */
   @JsProperty(
       name = "requireInteraction"
@@ -223,7 +223,7 @@ public class Notification extends EventTarget {
    * The silent read-only property of the Notification interface specifies whether the notification should be silent, i.e., no sounds or vibrations should be issued, regardless of the device settings. This is specified in the silent option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/silent">Notification.silent - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-silent">The definition of 'silent' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-silent">silent - Notifications API</a>
    */
   @JsProperty(
       name = "silent"
@@ -245,7 +245,7 @@ public class Notification extends EventTarget {
    * The timestamp read-only property of the Notification interface returns a DOMTimeStamp, as specified in the timestamp option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp">Notification.timestamp - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-timestamp">The definition of 'timestamp' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-timestamp">timestamp - Notifications API</a>
    */
   @JsProperty(
       name = "timestamp"
@@ -256,7 +256,7 @@ public class Notification extends EventTarget {
    * The title read-only property of the Notification interface indicates the title of the notification, as specified in the title parameter of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/title">Notification.title - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-title">The definition of 'title' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-title">title - Notifications API</a>
    */
   @JsProperty(
       name = "title"
@@ -268,7 +268,7 @@ public class Notification extends EventTarget {
    * The vibrate read-only property of the Notification interface specifies a a vibration pattern for the device's vibration hardware to emit when the notification fires. This is specified in the vibrate option of the Notification() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/vibrate">Notification.vibrate - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-vibrate">The definition of 'vibrate' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-vibrate">vibrate - Notifications API</a>
    */
   @JsProperty(
       name = "vibrate"

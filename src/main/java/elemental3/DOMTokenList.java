@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList">DOMTokenList - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-domtokenlist">The definition of 'DOMTokenList' in the 'DOM' specification.</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-domtokenlist">DOMTokenList - DOM</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,7 +28,7 @@ public class DOMTokenList {
    * The value property of the DOMTokenList interface is a stringifier that returns the value of the list as a DOMString, or clears and sets the list to the given value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/value">DOMTokenList.value - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-value">The definition of 'value' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-value">value - DOM</a>
    */
   @Nonnull
   public String value;
@@ -40,7 +40,7 @@ public class DOMTokenList {
    * The length read-only property of the DOMTokenList interface is an integer representing the number of objects stored in the object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/length">DOMTokenList.length - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-length">The definition of 'length' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-length">length - DOM</a>
    */
   @JsProperty(
       name = "length"
@@ -51,7 +51,7 @@ public class DOMTokenList {
    * The add() method of the DOMTokenList interface adds the given token to the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/add">DOMTokenList.add - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-add">The definition of 'add()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-add">add() - DOM</a>
    */
   public native void add(@Nonnull String... tokens);
 
@@ -59,7 +59,7 @@ public class DOMTokenList {
    * The contains() method of the DOMTokenList interface returns a Boolean &mdash; true if the underlying list contains the given token, otherwise false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains">DOMTokenList.contains - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-contains">The definition of 'contains()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-contains">contains() - DOM</a>
    */
   public native boolean contains(@Nonnull String token);
 
@@ -67,7 +67,7 @@ public class DOMTokenList {
    * The remove() method of the DOMTokenList interface removes the specified tokens from the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove">DOMTokenList.remove - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-remove">The definition of 'remove()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-remove">remove() - DOM</a>
    */
   public native void remove(@Nonnull String... tokens);
 
@@ -75,7 +75,7 @@ public class DOMTokenList {
    * The replace() method of the DOMTokenList interface replaces an existing token with a new token. If the first token doesn't exist, replace() returns false immediately, without adding the new token to the token list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/replace">DOMTokenList.replace - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-replace">The definition of 'replace()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-replace">replace() - DOM</a>
    */
   public native boolean replace(@Nonnull String token, @Nonnull String newToken);
 
@@ -91,7 +91,7 @@ public class DOMTokenList {
    * The toggle() method of the DOMTokenList interface removes a given token from the list and returns false. If token doesn't exist it's added and the function returns true.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle">DOMTokenList.toggle - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-toggle">The definition of 'toggle()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-toggle">toggle() - DOM</a>
    */
   public native boolean toggle(@Nonnull String token, boolean force);
 
@@ -99,7 +99,7 @@ public class DOMTokenList {
    * The toggle() method of the DOMTokenList interface removes a given token from the list and returns false. If token doesn't exist it's added and the function returns true.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle">DOMTokenList.toggle - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-toggle">The definition of 'toggle()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-toggle">toggle() - DOM</a>
    */
   public native boolean toggle(@Nonnull String token);
 
@@ -107,7 +107,7 @@ public class DOMTokenList {
    * The item() method of the DOMTokenList interface returns an item in the list by its index.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/item">DOMTokenList.item - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-item">The definition of 'item()' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-item">item() - DOM</a>
    */
   @Nullable
   public native String item(int index);
@@ -116,7 +116,7 @@ public class DOMTokenList {
    * The keys() method of the DOMTokenList interface returns an iterator allowing to go through all keys contained in this object. The keys are of type unsigned integer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/keys">DOMTokenList.keys - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'keys() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">keys() (as iterable&lt;Node&gt;) - DOM</a>
    */
   @Nonnull
   public native JsIterator<Double> keys();
@@ -125,7 +125,7 @@ public class DOMTokenList {
    * The values() method of the DOMTokenList interface returns an iterator allowing developers to go through all values contained in the DOMTokenList. The individual values are DOMString objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/values">DOMTokenList.values - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'values() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">values() (as iterable&lt;Node&gt;) - DOM</a>
    */
   @Nonnull
   public native JsIterator<String> values();
@@ -134,7 +134,7 @@ public class DOMTokenList {
    * The DOMTokenList.entries() method returns an iterator allowing you to go through all key/value pairs contained in this object. The values are DOMString objects, each representing a single token.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/entries">DOMTokenList.entries - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'entries() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">entries() (as iterable&lt;Node&gt;) - DOM</a>
    */
   @Nonnull
   public native JsIterator<Entry> entries();
@@ -143,7 +143,7 @@ public class DOMTokenList {
    * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">forEach() (as iterable&lt;Node&gt;) - DOM</a>
    */
   public native void forEach(@Nonnull ForEachCallback callback);
 
@@ -151,7 +151,7 @@ public class DOMTokenList {
    * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">forEach() (as iterable&lt;Node&gt;) - DOM</a>
    */
   public native void forEach(@Nonnull ForEachCallback2 callback);
 
@@ -159,7 +159,7 @@ public class DOMTokenList {
    * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">forEach() (as iterable&lt;Node&gt;) - DOM</a>
    */
   public native void forEach(@Nonnull ForEachCallback3 callback);
 

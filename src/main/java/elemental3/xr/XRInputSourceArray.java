@@ -16,7 +16,7 @@ import jsinterop.base.JsArrayLike;
  * The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray">XRInputSourceArray - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray-interface">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray-interface">XRInputSourceArray - WebXR Device API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -48,7 +48,7 @@ public class XRInputSourceArray {
    * The keys() method in the XRInputSourceArray interface returns a JavaScript iterator which can then be used to iterate over the keys used to reference each item in the array of input sources.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys">XRInputSourceArray.keys - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
   @Nonnull
   public native JsIterator<Double> keys();
@@ -57,7 +57,7 @@ public class XRInputSourceArray {
    * The XRInputSourceArray method  values() returns a JavaScript iterator that can walk over the list of XRInputSource objects contained in the array, from first to last.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values">XRInputSourceArray.values - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
   @Nonnull
   public native JsIterator<XRInputSource> values();
@@ -66,7 +66,7 @@ public class XRInputSourceArray {
    * The XRInputSourceArray interface's entries() method returns a JavaScript iterator which can then be used to iterate over the key/value pairs in the input source array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries">XRInputSourceArray.entries - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
   @Nonnull
   public native JsIterator<Entry> entries();
@@ -75,7 +75,7 @@ public class XRInputSourceArray {
    * The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach">XRInputSourceArray.forEach - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
   public native void forEach(@Nonnull ForEachCallback callback);
 
@@ -83,7 +83,7 @@ public class XRInputSourceArray {
    * The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach">XRInputSourceArray.forEach - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
   public native void forEach(@Nonnull ForEachCallback2 callback);
 
@@ -91,7 +91,7 @@ public class XRInputSourceArray {
    * The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach">XRInputSourceArray.forEach - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification.</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
   public native void forEach(@Nonnull ForEachCallback3 callback);
 

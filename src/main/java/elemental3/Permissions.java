@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The Permissions interface of the Permissions API provides the core Permission API functionality, such as methods for querying and revoking permissions
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions">Permissions - MDN</a>
+ * @see <a href="https://w3c.github.io/permissions/#permissions-interface">Permissions - Permissions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

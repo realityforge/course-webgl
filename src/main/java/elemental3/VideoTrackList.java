@@ -11,10 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsArrayLike;
 
 /**
- * The VideoTrackList interface is used to represent a list of the video tracks contained within a video element, with each track represented by a separate VideoTrack object in the list.
+ * The VideoTrackList interface is used to represent a list of the video tracks contained within a &lt;video&gt; element, with each track represented by a separate VideoTrack object in the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList">VideoTrackList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#videotracklist">The definition of 'VideoTrackList' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#videotracklist">VideoTrackList - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,7 +27,7 @@ public class VideoTrackList extends EventTarget {
    * The VideoTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new video track has been added to the media element whose video tracks the VideoTrackList represents.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onaddtrack">VideoTrackList.onaddtrack - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">The definition of 'VideoTrackList: onaddtrack' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">VideoTrackList: onaddtrack - HTML Living Standard</a>
    */
   @Nullable
   public TrackEventHandler onaddtrack;
@@ -36,7 +36,7 @@ public class VideoTrackList extends EventTarget {
    * The VideoTrackList property onchange is an event handler which is called when the change event occurs, indicating that a VideoTrack in the VideoTrackList has been made active.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onchange">VideoTrackList.onchange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">The definition of 'VideoTrackList: onchange' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">VideoTrackList: onchange - HTML Living Standard</a>
    */
   @Nullable
   public EventHandler onchange;
@@ -45,7 +45,7 @@ public class VideoTrackList extends EventTarget {
    * The VideoTrackList onremovetrack event handler is called when the removetrack event occurs, indicating that a video track has been removed from the media element, and therefore also from the VideoTrackList.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onremovetrack">VideoTrackList.onremovetrack - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">The definition of 'VideoTrackList: onremovetrack' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">VideoTrackList: onremovetrack - HTML Living Standard</a>
    */
   @Nullable
   public TrackEventHandler onremovetrack;
@@ -57,7 +57,7 @@ public class VideoTrackList extends EventTarget {
    * The read-only VideoTrackList property length returns the number of entries in the VideoTrackList, each of which is a VideoTrack representing one video track in the media element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/length">VideoTrackList.length - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-length">The definition of 'VideoTrackList: length' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-length">VideoTrackList: length - HTML Living Standard</a>
    */
   @JsProperty(
       name = "length"
@@ -68,7 +68,7 @@ public class VideoTrackList extends EventTarget {
    * The read-only VideoTrackList property selectedIndex returns the index of the currently selected track, if any, or -1 otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/selectedIndex">VideoTrackList.selectedIndex - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-selectedindex">The definition of 'VideoTrackList: selectedIndex' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-selectedindex">VideoTrackList: selectedIndex - HTML Living Standard</a>
    */
   @JsProperty(
       name = "selectedIndex"
@@ -79,7 +79,7 @@ public class VideoTrackList extends EventTarget {
    * The VideoTrackList method getTrackById() returns the first VideoTrack object from the track list whose id matches the specified string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/getTrackById">VideoTrackList.getTrackById - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-gettrackbyid">The definition of 'VideoTrackList.getTrackById()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-gettrackbyid">VideoTrackList.getTrackById() - HTML Living Standard</a>
    */
   @Nullable
   public native VideoTrack getTrackById(@Nonnull String id);

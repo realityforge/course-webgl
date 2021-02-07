@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The OES_standard_derivatives extension is part of the WebGL API and adds the GLSL derivative functions dFdx, dFdy, and fwidth.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_standard_derivatives">OES_standard_derivatives - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/">The definition of 'OES_standard_derivatives' in the 'OES_standard_derivatives' specification.</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/">OES_standard_derivatives - OES_standard_derivatives</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

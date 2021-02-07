@@ -16,8 +16,8 @@ import jsinterop.annotations.JsType;
  * The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration">ServiceWorkerRegistration - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkerregistration">The definition of 'ServiceWorkerRegistration' in the 'Service Workers' specification.</a>
- * @see <a href="https://w3c.github.io/push-api/#dom-serviceworkerregistration-pushmanager">The definition of 'PushManager' in the 'Push API' specification.</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkerregistration">ServiceWorkerRegistration - Service Workers</a>
+ * @see <a href="https://w3c.github.io/push-api/#dom-serviceworkerregistration-pushmanager">PushManager - Push API</a>
  * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
  * @see <a href="https://wicg.github.io/background-sync/spec/">Web Background Synchronization</a>
  */
@@ -32,7 +32,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The onupdatefound property of the ServiceWorkerRegistration interface is an EventListener property called whenever an event of type statechange is fired; it is fired any time the ServiceWorkerRegistration.installing property acquires a new service worker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">ServiceWorkerRegistration.onupdatefound - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-onupdatefound">The definition of 'ServiceWorkerRegistration.onupdatefound' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-onupdatefound">ServiceWorkerRegistration.onupdatefound - Service Workers</a>
    */
   @Nullable
   public EventHandler onupdatefound;
@@ -55,7 +55,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The installing property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installing. This property is initially set to null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/installing">ServiceWorkerRegistration.installing - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-installing">The definition of 'ServiceWorkerRegistration.installing' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-installing">ServiceWorkerRegistration.installing - Service Workers</a>
    */
   @JsProperty(
       name = "installing"
@@ -67,7 +67,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The navigationPreload read-only property of the ServiceWorkerRegistration interface returns the NavigationPreloadManager associated with the current service worker registration.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/navigationPreload">ServiceWorkerRegistration.navigationPreload - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#service-worker-registration-navigationpreload">The definition of 'navigationPreload' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#service-worker-registration-navigationpreload">navigationPreload - Service Workers</a>
    */
   @JsProperty(
       name = "navigationPreload"
@@ -79,7 +79,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The pushManager property of the ServiceWorkerRegistration interface returns a reference to the PushManager interface for managing push subscriptions; this includes support for subscribing, getting an active subscription, and accessing push permission status.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/pushManager">ServiceWorkerRegistration.pushManager - MDN</a>
-   * @see <a href="https://w3c.github.io/push-api/#pushmanager-interface">The definition of 'PushManager' in the 'Push API' specification.</a>
+   * @see <a href="https://w3c.github.io/push-api/#pushmanager-interface">PushManager - Push API</a>
    */
   @JsProperty(
       name = "pushManager"
@@ -91,7 +91,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The scope read-only property of the ServiceWorkerRegistration interface returns a unique identifier for a service worker registration. The service worker must be on the same origin as the document that registers the ServiceWorker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/scope">ServiceWorkerRegistration.scope - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-scope">The definition of 'ServiceWorkerRegistration.scope' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-scope">ServiceWorkerRegistration.scope - Service Workers</a>
    */
   @JsProperty(
       name = "scope"
@@ -133,7 +133,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The unregister() method of the ServiceWorkerRegistration interface unregisters the service worker registration and returns a Promise. The promise will resolve to false if no registration was found, otherwise it resolves to true irrespective of whether unregistration happened or not (it may not unregister if someone else just called ServiceWorkerContainer.register() with the same scope.) The service worker will finish any ongoing operations before it is unregistered.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/unregister">ServiceWorkerRegistration.unregister - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/navigator-service-worker-unregister">The definition of 'ServiceWorkerRegistration.unregister()' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/navigator-service-worker-unregister">ServiceWorkerRegistration.unregister() - Service Workers</a>
    */
   @Nonnull
   public native Promise<Boolean> unregister();
@@ -142,7 +142,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The update() method of the ServiceWorkerRegistration interface attempts to update the service worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte identical to the current worker, it installs the new worker. The fetch of the worker bypasses any browser caches if the previous fetch occurred over 24 hours ago.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/update">ServiceWorkerRegistration.update - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#service-worker-registration-update">The definition of 'ServiceWorkerRegistration.update()' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#service-worker-registration-update">ServiceWorkerRegistration.update() - Service Workers</a>
    */
   @Nonnull
   public native Promise<Void> update();
@@ -151,7 +151,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The getNotifications() method of the ServiceWorkerRegistration interface returns a list of the notifications in the order that they were created from the current origin via the current service worker registration. Origins can have many active but differently-scoped service worker registrations. Notifications created by one service worker on the same origin will not be available to other active services workers on that same origin.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">ServiceWorkerRegistration.getNotifications - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications">The definition of 'ServiceWorkerRegistration.getNotifications()' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications">ServiceWorkerRegistration.getNotifications() - Notifications API</a>
    */
   @Nonnull
   public native Promise<JsArray<Notification>> getNotifications(
@@ -161,7 +161,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The getNotifications() method of the ServiceWorkerRegistration interface returns a list of the notifications in the order that they were created from the current origin via the current service worker registration. Origins can have many active but differently-scoped service worker registrations. Notifications created by one service worker on the same origin will not be available to other active services workers on that same origin.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">ServiceWorkerRegistration.getNotifications - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications">The definition of 'ServiceWorkerRegistration.getNotifications()' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications">ServiceWorkerRegistration.getNotifications() - Notifications API</a>
    */
   @Nonnull
   public native Promise<JsArray<Notification>> getNotifications();
@@ -170,7 +170,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The showNotification() method of the ServiceWorkerRegistration interface creates a notification on an active service worker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification">ServiceWorkerRegistration.showNotification - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification">The definition of 'showNotification()' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification">showNotification() - Notifications API</a>
    */
   @Nonnull
   public native Promise<Void> showNotification(@Nonnull String title,
@@ -180,7 +180,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * The showNotification() method of the ServiceWorkerRegistration interface creates a notification on an active service worker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification">ServiceWorkerRegistration.showNotification - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification">The definition of 'showNotification()' in the 'Notifications API' specification.</a>
+   * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification">showNotification() - Notifications API</a>
    */
   @Nonnull
   public native Promise<Void> showNotification(@Nonnull String title);

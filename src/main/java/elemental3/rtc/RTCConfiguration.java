@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration">RTCConfiguration - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration">The definition of 'RTCConfiguration' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration">RTCConfiguration - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,7 +33,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">The definition of 'RTCConfiguration.bundlePolicy' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">RTCConfiguration.bundlePolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "bundlePolicy"
@@ -45,7 +45,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">The definition of 'RTCConfiguration.bundlePolicy' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">RTCConfiguration.bundlePolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setBundlePolicy(@RTCBundlePolicy @Nonnull String bundlePolicy);
@@ -54,7 +54,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">The definition of 'RTCConfiguration.bundlePolicy' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">RTCConfiguration.bundlePolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -67,7 +67,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">The definition of 'RTCConfiguration.certificates' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">RTCConfiguration.certificates - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "certificates"
@@ -78,7 +78,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">The definition of 'RTCConfiguration.certificates' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">RTCConfiguration.certificates - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setCertificates(@Nonnull JsArray<RTCCertificate> certificates);
@@ -87,7 +87,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">The definition of 'RTCConfiguration.certificates' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">RTCConfiguration.certificates - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -100,7 +100,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">The definition of 'RTCConfiguration.certificates' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">RTCConfiguration.certificates - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   default void setCertificates(@Nonnull final RTCCertificate... certificates) {
@@ -111,7 +111,7 @@ public interface RTCConfiguration {
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">The definition of 'RTCConfiguration.certificates' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">RTCConfiguration.certificates - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -139,7 +139,7 @@ public interface RTCConfiguration {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">The definition of 'RTCConfiguration.iceServers' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "iceServers"
@@ -150,7 +150,7 @@ public interface RTCConfiguration {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">The definition of 'RTCConfiguration.iceServers' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setIceServers(@Nonnull JsArray<RTCIceServer> iceServers);
@@ -159,7 +159,7 @@ public interface RTCConfiguration {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">The definition of 'RTCConfiguration.iceServers' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -172,7 +172,7 @@ public interface RTCConfiguration {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">The definition of 'RTCConfiguration.iceServers' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   default void setIceServers(@Nonnull final RTCIceServer... iceServers) {
@@ -183,7 +183,7 @@ public interface RTCConfiguration {
    *
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">The definition of 'RTCConfiguration.iceServers' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull
@@ -196,7 +196,7 @@ public interface RTCConfiguration {
    * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">The definition of 'RTCCandidate.iceTransportPolicy' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">RTCCandidate.iceTransportPolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty(
       name = "iceTransportPolicy"
@@ -208,7 +208,7 @@ public interface RTCConfiguration {
    * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">The definition of 'RTCCandidate.iceTransportPolicy' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">RTCCandidate.iceTransportPolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
   void setIceTransportPolicy(@RTCIceTransportPolicy @Nonnull String iceTransportPolicy);
@@ -217,7 +217,7 @@ public interface RTCConfiguration {
    * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">The definition of 'RTCCandidate.iceTransportPolicy' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">RTCCandidate.iceTransportPolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsOverlay
   @Nonnull

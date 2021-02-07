@@ -9,6 +9,7 @@ import jsinterop.annotations.JsType;
  * A DOMPoint object represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint">DOMPoint - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMPoint">DOMPoint - Geometry Interfaces Module Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,7 +22,7 @@ public class DOMPoint extends DOMPointReadOnly {
    * The DOMPoint interface's w property holds the point's perspective value, w, for a point in space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/w">DOMPoint.w - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-w">The definition of 'w' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-w">w - Geometry Interfaces Module Level 1</a>
    */
   public double w;
 
@@ -29,7 +30,7 @@ public class DOMPoint extends DOMPointReadOnly {
    * The DOMPoint interface's x property holds the horizontal coordinate, x, for a point in space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/x">DOMPoint.x - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-x">The definition of 'x' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-x">x - Geometry Interfaces Module Level 1</a>
    */
   public double x;
 
@@ -37,7 +38,7 @@ public class DOMPoint extends DOMPointReadOnly {
    * The DOMPoint interface's y property holds the vertical coordinate, y, for a point in space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/y">DOMPoint.y - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-y">The definition of 'y' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-y">y - Geometry Interfaces Module Level 1</a>
    */
   public double y;
 
@@ -45,7 +46,7 @@ public class DOMPoint extends DOMPointReadOnly {
    * The DOMPoint interface's z property specifies the depth coordinate of a point in space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/z">DOMPoint.z - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-z">The definition of 'z' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-z">z - Geometry Interfaces Module Level 1</a>
    */
   public double z;
 

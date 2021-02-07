@@ -14,7 +14,7 @@ import jsinterop.base.Js;
  * The BroadcastChannel interface represents a named channel that any browsing context of a given origin can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a message event fired at all BroadcastChannel objects listening to the channel.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel">BroadcastChannel - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#broadcastchannel">The definition of 'BroadcastChannel' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#broadcastchannel">BroadcastChannel - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,7 +27,7 @@ public class BroadcastChannel extends EventTarget {
    * The BroadcastChannel.onmessage event handler is a property that specifies the function to execute when a message event, of type MessageEvent, is received by this BroadcastChannel. Such an event is sent by the browser with a message broadcasted to the channel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessage">BroadcastChannel.onmessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-broadcastchannel-onmessage">The definition of 'BroadcastChannel.onmessage' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-broadcastchannel-onmessage">BroadcastChannel.onmessage - HTML Living Standard</a>
    */
   @Nullable
   public MessageEventHandler onmessage;
@@ -36,7 +36,7 @@ public class BroadcastChannel extends EventTarget {
    * The onmessageerror event handler of the BroadcastChannel interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the BroadcastChannel instance &mdash; that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessageerror">BroadcastChannel.onmessageerror - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-broadcastchannel-onmessageerror">The definition of 'onmessageerror' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-broadcastchannel-onmessageerror">onmessageerror - HTML Living Standard</a>
    */
   @Nullable
   public MessageEventHandler onmessageerror;
@@ -45,7 +45,7 @@ public class BroadcastChannel extends EventTarget {
    * The BroadcastChannel() constructor creates a new BroadcastChannel and connects it to the underlying channel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel">BroadcastChannel.BroadcastChannel - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel">The definition of 'BroadcastChannel()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel">BroadcastChannel() - HTML Living Standard</a>
    */
   public BroadcastChannel(@Nonnull final String name) {
   }
@@ -54,7 +54,7 @@ public class BroadcastChannel extends EventTarget {
    * The read-only BroadcastChannel.name property returns a DOMString, which uniquely identifies the given channel with its name. This name is passed to the BroadcastChannel() constructor at creation time and is therefore read-only.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/name">BroadcastChannel.name - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-name">The definition of 'BroadcastChannel.name' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-name">BroadcastChannel.name - HTML Living Standard</a>
    */
   @JsProperty(
       name = "name"
@@ -66,7 +66,7 @@ public class BroadcastChannel extends EventTarget {
    * The BroadcastChannel.close() terminates the connection to the underlying channel, allowing the object to be garbage collected. This is a necessary step to perform as there is no other way for a browser to know that this channel is not needed anymore.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/close">BroadcastChannel.close - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-close">The definition of 'BroadcastChannel.close()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-close">BroadcastChannel.close() - HTML Living Standard</a>
    */
   public native void close();
 
@@ -74,7 +74,7 @@ public class BroadcastChannel extends EventTarget {
    * The BroadcastChannel.postMessage() sends a message, which can be of any kind of Object, to each listener in any browsing context with the same origin. The message is transmitted as a message event targeted at each BroadcastChannel bound to the channel.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage">BroadcastChannel.postMessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-postmessage">The definition of 'BroadcastChannel.postmessage()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-postmessage">BroadcastChannel.postmessage() - HTML Living Standard</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message);
 

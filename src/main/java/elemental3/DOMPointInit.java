@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The DOMPointInit dictionary is used to provide the values of the coordinates and perspective when creating and JSONifying a DOMPoint or DOMPointReadOnly object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit">DOMPointInit - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointreadonly-frompoint">DOMPointReadOnly.fromPoint() - Geometry Interfaces Module Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +32,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's w property is used to specify the w perspective value of a point in space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/w">DOMPointInit.w - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-w">The definition of 'w' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-w">w - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "w"
@@ -42,7 +43,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's w property is used to specify the w perspective value of a point in space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/w">DOMPointInit.w - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-w">The definition of 'w' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-w">w - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty
   void setW(double w);
@@ -51,7 +52,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's w property is used to specify the w perspective value of a point in space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/w">DOMPointInit.w - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-w">The definition of 'w' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-w">w - Geometry Interfaces Module Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -64,7 +65,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's x property is used to specify the x component of a point in 2D or 3D space when either creating or serializing a DOMPoint or DOMPointReadOnly.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/x">DOMPointInit.x - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-x">The definition of 'x' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-x">x - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "x"
@@ -75,7 +76,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's x property is used to specify the x component of a point in 2D or 3D space when either creating or serializing a DOMPoint or DOMPointReadOnly.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/x">DOMPointInit.x - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-x">The definition of 'x' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-x">x - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty
   void setX(double x);
@@ -84,7 +85,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's x property is used to specify the x component of a point in 2D or 3D space when either creating or serializing a DOMPoint or DOMPointReadOnly.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/x">DOMPointInit.x - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-x">The definition of 'x' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-x">x - Geometry Interfaces Module Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -97,7 +98,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's y property is used to specify the y-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/y">DOMPointInit.y - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-y">The definition of 'y' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-y">y - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "y"
@@ -108,7 +109,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's y property is used to specify the y-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/y">DOMPointInit.y - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-y">The definition of 'y' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-y">y - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty
   void setY(double y);
@@ -117,7 +118,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's y property is used to specify the y-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/y">DOMPointInit.y - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-y">The definition of 'y' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-y">y - Geometry Interfaces Module Level 1</a>
    */
   @JsOverlay
   @Nonnull
@@ -130,7 +131,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's z property is used to specify the z-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/z">DOMPointInit.z - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-z">The definition of 'z' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-z">z - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty(
       name = "z"
@@ -141,7 +142,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's z property is used to specify the z-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/z">DOMPointInit.z - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-z">The definition of 'z' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-z">z - Geometry Interfaces Module Level 1</a>
    */
   @JsProperty
   void setZ(double z);
@@ -150,7 +151,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary's z property is used to specify the z-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/z">DOMPointInit.z - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-z">The definition of 'z' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointinit-z">z - Geometry Interfaces Module Level 1</a>
    */
   @JsOverlay
   @Nonnull

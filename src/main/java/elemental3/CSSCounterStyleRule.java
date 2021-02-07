@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The CSSCounterStyleRule interface represents an @counter-style at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSCounterStyleRule">CSSCounterStyleRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-counter-styles-3/#the-csscounterstylerule-interface">The definition of 'CSSCounterStyleRule' in the 'CSS Counter Styles Level 3' specification.</a>
+ * @see <a href="https://drafts.csswg.org/css-counter-styles-3/#the-csscounterstylerule-interface">CSSCounterStyleRule - CSS Counter Styles Level 3</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

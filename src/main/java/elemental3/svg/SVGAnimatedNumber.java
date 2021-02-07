@@ -6,7 +6,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGAnimatedNumber interface is used for attributes of basic type Number which can be animated.
+ * The SVGAnimatedNumber interface is used for attributes of basic type &lt;Number&gt; which can be animated.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumber">SVGAnimatedNumber - MDN</a>
  */

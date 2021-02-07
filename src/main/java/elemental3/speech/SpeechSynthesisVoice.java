@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SpeechSynthesisVoice interface of the Web Speech API represents a voice that the system supports. Every SpeechSynthesisVoice has its own relative speech service including information about language, name and URI.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice">SpeechSynthesisVoice - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisvoice">The definition of 'SpeechSynthesisVoice' in the 'Web Speech API' specification.</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisvoice">SpeechSynthesisVoice - Web Speech API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -36,7 +36,7 @@ public class SpeechSynthesisVoice {
    * The lang read-only property of the SpeechSynthesisVoice interface returns a BCP 47 language tag indicating the language of the voice.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/lang">SpeechSynthesisVoice.lang - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-lang">The definition of 'lang' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-lang">lang - Web Speech API</a>
    */
   @JsProperty(
       name = "lang"
@@ -48,7 +48,7 @@ public class SpeechSynthesisVoice {
    * The localService read-only property of the SpeechSynthesisVoice interface returns a Boolean indicating whether the voice is supplied by a local speech synthesizer service (true), or a remote speech synthesizer service (false.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/localService">SpeechSynthesisVoice.localService - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-localservice">The definition of 'localService' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-localservice">localService - Web Speech API</a>
    */
   @JsProperty(
       name = "localService"
@@ -59,7 +59,7 @@ public class SpeechSynthesisVoice {
    * The name read-only property of the SpeechSynthesisVoice interface returns a human-readable name that represents the voice.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/name">SpeechSynthesisVoice.name - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-name">The definition of 'name' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-name">name - Web Speech API</a>
    */
   @JsProperty(
       name = "name"
@@ -71,7 +71,7 @@ public class SpeechSynthesisVoice {
    * The voiceURI read-only property of the SpeechSynthesisVoice interface returns the type of URI and location of the speech synthesis service for this voice.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI">SpeechSynthesisVoice.voiceURI - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-voiceuri">The definition of 'voiceURI' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-voiceuri">voiceURI - Web Speech API</a>
    */
   @JsProperty(
       name = "voiceURI"

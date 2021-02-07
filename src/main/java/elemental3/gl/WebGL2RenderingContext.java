@@ -17,10 +17,10 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML canvas element.
+ * The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML &lt;canvas&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2RenderingContext - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7">The definition of 'WebGL2RenderingContext' in the 'WebGL 2.0' specification.</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7">WebGL2RenderingContext - WebGL 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -1713,7 +1713,7 @@ public class WebGL2RenderingContext {
    * The read-only WebGLRenderingContext.drawingBufferHeight property represents the actual height of the current drawing buffer. It should match the height attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested height.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferHeight">WebGLRenderingContext.drawingBufferHeight - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferHeight">The definition of 'WebGLRenderingContext.drawingBufferHeight' in the 'WebGL 1.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferHeight">WebGLRenderingContext.drawingBufferHeight - WebGL 1.0</a>
    */
   @JsProperty(
       name = "drawingBufferHeight"
@@ -1724,7 +1724,7 @@ public class WebGL2RenderingContext {
    * The read-only WebGLRenderingContext.drawingBufferWidth property represents the actual width of the current drawing buffer. It should match the width attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested width.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferWidth">WebGLRenderingContext.drawingBufferWidth - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferWidth">The definition of 'WebGLRenderingContext.drawingBufferWidth' in the 'WebGL 1.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferWidth">WebGLRenderingContext.drawingBufferWidth - WebGL 1.0</a>
    */
   @JsProperty(
       name = "drawingBufferWidth"
@@ -1735,8 +1735,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture">WebGLRenderingContext.activeTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'activeTexture' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glActiveTexture.xml">The definition of 'glActiveTexture' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">activeTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glActiveTexture.xml">glActiveTexture - OpenGL ES 2.0</a>
    */
   public native void activeTexture(int texture);
 
@@ -1744,8 +1744,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader">WebGLRenderingContext.attachShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'attachShader' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glAttachShader.xml">The definition of 'glAttachShader' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">attachShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glAttachShader.xml">glAttachShader - OpenGL ES 2.0</a>
    */
   public native void attachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
 
@@ -1753,8 +1753,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation">WebGLRenderingContext.bindAttribLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'bindAttribLocation' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindAttribLocation.xml">The definition of 'glBindAttribLocation' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">bindAttribLocation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindAttribLocation.xml">glBindAttribLocation - OpenGL ES 2.0</a>
    */
   public native void bindAttribLocation(@Nonnull WebGLProgram program, int index,
       @Nonnull String name);
@@ -1763,10 +1763,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer">WebGLRenderingContext.bindBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bindBuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindBuffer.xml">The definition of 'glBindBuffer' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">The definition of 'bindBuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBuffer.xhtml">The definition of 'glBindBuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bindBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindBuffer.xml">glBindBuffer - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindBuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBuffer.xhtml">glBindBuffer - OpenGL ES 3.0</a>
    */
   public native void bindBuffer(@BufferTargetType int target, @Nullable WebGLBuffer buffer);
 
@@ -1774,10 +1774,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bindFramebuffer() method of the WebGL API binds a given WebGLFramebuffer to a target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">WebGLRenderingContext.bindFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'bindFramebuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindFramebuffer.xml">The definition of 'glBindFramebuffer' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">The definition of 'bindFrameBuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindFramebuffer.xhtml">The definition of 'glBindFramebuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">bindFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindFramebuffer.xml">glBindFramebuffer - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindFrameBuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindFramebuffer.xhtml">glBindFramebuffer - OpenGL ES 3.0</a>
    */
   public native void bindFramebuffer(@FramebufferTargetType int target,
       @Nullable WebGLFramebuffer framebuffer);
@@ -1786,8 +1786,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer">WebGLRenderingContext.bindRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'bindRenderbuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml">The definition of 'glBindRenderbuffer' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">bindRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml">glBindRenderbuffer - OpenGL ES 2.0</a>
    */
   public native void bindRenderbuffer(@RenderbufferTargetType int target,
       @Nullable WebGLRenderbuffer renderbuffer);
@@ -1796,10 +1796,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bindTexture() method of the WebGL API binds a given WebGLTexture to a target (binding point).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture">WebGLRenderingContext.bindTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'bindTexture' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindTexture.xml">The definition of 'glBindTexture' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">The definition of 'bindTexture' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTexture.xhtml">The definition of 'glBindTexture' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">bindTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindTexture.xml">glBindTexture - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindTexture - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTexture.xhtml">glBindTexture - OpenGL ES 3.0</a>
    */
   public native void bindTexture(@TextureTargetType int target, @Nullable WebGLTexture texture);
 
@@ -1807,8 +1807,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor">WebGLRenderingContext.blendColor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendColor' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendColor.xml">The definition of 'glBlendColor' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendColor - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendColor.xml">glBlendColor - OpenGL ES 2.0</a>
    */
   public native void blendColor(float red, float green, float blue, float alpha);
 
@@ -1816,9 +1816,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.blendEquation() method of the WebGL API is used to set both the RGB blend equation and alpha blend equation to a single equation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquation">WebGLRenderingContext.blendEquation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendEquation' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquation.xml">The definition of 'glBlendEquation' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquation.xml">The definition of 'glBlendEquation' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendEquation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquation.xml">glBlendEquation - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquation.xml">glBlendEquation - OpenGL ES 3.0</a>
    */
   public native void blendEquation(int mode);
 
@@ -1826,9 +1826,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.blendEquationSeparate() method of the WebGL API is used to set the RGB blend equation and alpha blend equation separately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquationSeparate">WebGLRenderingContext.blendEquationSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendEquationSeparate' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquationSeparate.xml">The definition of 'glBlendEquationSeparate' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquationSeparate.xhtml">The definition of 'glBlendEquationSeparate' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendEquationSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquationSeparate.xml">glBlendEquationSeparate - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquationSeparate.xhtml">glBlendEquationSeparate - OpenGL ES 3.0</a>
    */
   public native void blendEquationSeparate(int modeRGB, int modeAlpha);
 
@@ -1836,8 +1836,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.blendFunc() method of the WebGL API defines which function is used for blending pixel arithmetic.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFunc">WebGLRenderingContext.blendFunc - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendFunc' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">The definition of 'glBlendFunc' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">glBlendFunc - OpenGL ES 2.0</a>
    */
   public native void blendFunc(@BlendFactor int sfactor, @BlendFactor int dfactor);
 
@@ -1845,8 +1845,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.blendFuncSeparate() method of the WebGL API defines which function is used for blending pixel arithmetic for RGB and alpha components separately.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFuncSeparate">WebGLRenderingContext.blendFuncSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'blendFunc' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">The definition of 'glBlendFunc' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">glBlendFunc - OpenGL ES 2.0</a>
    */
   public native void blendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
 
@@ -1854,10 +1854,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.checkFramebufferStatus() method of the WebGL API returns the completeness status of the WebGLFramebuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus">WebGLRenderingContext.checkFramebufferStatus - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'checkFramebufferStatus' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCheckFramebufferStatus.xml">The definition of 'glCheckFramebufferStatus' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'checkFramebufferStatus' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCheckFramebufferStatus.xhtml">The definition of 'glCheckFramebufferStatus' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">checkFramebufferStatus - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCheckFramebufferStatus.xml">glCheckFramebufferStatus - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">checkFramebufferStatus - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCheckFramebufferStatus.xhtml">glCheckFramebufferStatus - OpenGL ES 3.0</a>
    */
   public native int checkFramebufferStatus(int target);
 
@@ -1865,8 +1865,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.clear() method of the WebGL API clears buffers to preset values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear">WebGLRenderingContext.clear - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'clear' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClear.xml">The definition of 'glClear' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">clear - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClear.xml">glClear - OpenGL ES 2.0</a>
    */
   public native void clear(int mask);
 
@@ -1874,8 +1874,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor">WebGLRenderingContext.clearColor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'clearColor' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearColor.xml">The definition of 'glClearColor' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearColor - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearColor.xml">glClearColor - OpenGL ES 2.0</a>
    */
   public native void clearColor(float red, float green, float blue, float alpha);
 
@@ -1883,8 +1883,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.clearDepth() method of the WebGL API specifies the clear value for the depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearDepth">WebGLRenderingContext.clearDepth - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'clearDepth' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearDepthf.xml">The definition of 'glClearDepthf' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearDepth - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearDepthf.xml">glClearDepthf - OpenGL ES 2.0</a>
    */
   public native void clearDepth(float depth);
 
@@ -1892,8 +1892,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.clearStencil() method of the WebGL API specifies the clear value for the stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearStencil">WebGLRenderingContext.clearStencil - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'clearStencil' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearStencil.xml">The definition of 'glClearStencil' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearStencil - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearStencil.xml">glClearStencil - OpenGL ES 2.0</a>
    */
   public native void clearStencil(int s);
 
@@ -1901,8 +1901,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.colorMask() method of the WebGL API sets which color components to enable or to disable when drawing or rendering to a WebGLFramebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/colorMask">WebGLRenderingContext.colorMask - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'colorMask' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glColorMask.xml">The definition of 'glColorMask' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">colorMask - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glColorMask.xml">glColorMask - OpenGL ES 2.0</a>
    */
   public native void colorMask(boolean red, boolean green, boolean blue, boolean alpha);
 
@@ -1910,8 +1910,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compileShader">WebGLRenderingContext.compileShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'compileShader' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompileShader.xml">The definition of 'glCompileShader' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">compileShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompileShader.xml">glCompileShader - OpenGL ES 2.0</a>
    */
   public native void compileShader(@Nonnull WebGLShader shader);
 
@@ -1919,8 +1919,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D">WebGLRenderingContext.copyTexImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'copyTexImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexImage2D.xml">The definition of 'glCopyTexImage2D' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">copyTexImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexImage2D.xml">glCopyTexImage2D - OpenGL ES 2.0</a>
    */
   public native void copyTexImage2D(@Texture2DSurfaceTargetType int target, int level,
       int internalformat, int x, int y, int width, int height, int border);
@@ -1929,8 +1929,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.copyTexSubImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into an existing 2D texture sub-image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D">WebGLRenderingContext.copyTexSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'copyTexSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexSubImage2D.xml">The definition of 'glCopyTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">copyTexSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexSubImage2D.xml">glCopyTexSubImage2D - OpenGL ES 2.0</a>
    */
   public native void copyTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
       int xoffset, int yoffset, int x, int y, int width, int height);
@@ -1939,8 +1939,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createBuffer">WebGLRenderingContext.createBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'createBuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">The definition of 'glGenBuffers' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">createBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">glGenBuffers - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLBuffer createBuffer();
@@ -1949,8 +1949,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.createFramebuffer() method of the WebGL API creates and initializes a WebGLFramebuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createFramebuffer">WebGLRenderingContext.createFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'createFramebuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">The definition of 'glGenFramebuffers' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">createFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">glGenFramebuffers - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLFramebuffer createFramebuffer();
@@ -1959,8 +1959,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram">WebGLRenderingContext.createProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'createProgram' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">The definition of 'glCreateProgram' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">glCreateProgram - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLProgram createProgram();
@@ -1969,8 +1969,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.createRenderbuffer() method of the WebGL API creates and initializes a WebGLRenderbuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer">WebGLRenderingContext.createRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'createRenderbuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">The definition of 'glGenRenderbuffers' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">createRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">glGenRenderbuffers - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLRenderbuffer createRenderbuffer();
@@ -1979,8 +1979,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader">WebGLRenderingContext.createShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'createShader' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">The definition of 'glCreateShader' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">glCreateShader - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLShader createShader(@ShaderType int type);
@@ -1989,8 +1989,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture">WebGLRenderingContext.createTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'createTexture' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">The definition of 'glGenTextures' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">createTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">glGenTextures - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLTexture createTexture();
@@ -1999,8 +1999,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.cullFace() method of the WebGL API specifies whether or not front- and/or back-facing polygons can be culled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/cullFace">WebGLRenderingContext.cullFace - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'cullFace' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCullFace.xml">The definition of 'glCullFace' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">cullFace - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCullFace.xml">glCullFace - OpenGL ES 2.0</a>
    */
   public native void cullFace(int mode);
 
@@ -2008,8 +2008,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.deleteBuffer() method of the WebGL API deletes a given WebGLBuffer. This method has no effect if the buffer has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteBuffer">WebGLRenderingContext.deleteBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'deleteBuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteBuffers.xml">The definition of 'glDeleteBuffers' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">deleteBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteBuffers.xml">glDeleteBuffers - OpenGL ES 2.0</a>
    */
   public native void deleteBuffer(@Nullable WebGLBuffer buffer);
 
@@ -2017,8 +2017,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.deleteFramebuffer() method of the WebGL API deletes a given WebGLFramebuffer object. This method has no effect if the frame buffer has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteFramebuffer">WebGLRenderingContext.deleteFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'deleteFramebuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteFramebuffers.xml">The definition of 'glDeleteFramebuffers' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">deleteFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteFramebuffers.xml">glDeleteFramebuffers - OpenGL ES 2.0</a>
    */
   public native void deleteFramebuffer(@Nullable WebGLFramebuffer framebuffer);
 
@@ -2026,8 +2026,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram">WebGLRenderingContext.deleteProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'deleteProgram' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteProgram.xml">The definition of 'glDeleteProgram' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">deleteProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteProgram.xml">glDeleteProgram - OpenGL ES 2.0</a>
    */
   public native void deleteProgram(@Nullable WebGLProgram program);
 
@@ -2035,8 +2035,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.deleteRenderbuffer() method of the WebGL API deletes a given WebGLRenderbuffer object. This method has no effect if the render buffer has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteRenderbuffer">WebGLRenderingContext.deleteRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'deleteRenderbuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteRenderbuffers.xml">The definition of 'glDeleteRenderbuffers' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">deleteRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteRenderbuffers.xml">glDeleteRenderbuffers - OpenGL ES 2.0</a>
    */
   public native void deleteRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
 
@@ -2044,8 +2044,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.deleteShader() method of the WebGL API marks a given WebGLShader object for deletion. It will then be deleted whenever the shader is no longer in use. This method has no effect if the shader has already been deleted, and the WebGLShader is automatically marked for deletion when it is destroyed by the garbage collector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteShader">WebGLRenderingContext.deleteShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'deleteShader' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteShader.xml">The definition of 'glDeleteShader' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">deleteShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteShader.xml">glDeleteShader - OpenGL ES 2.0</a>
    */
   public native void deleteShader(@Nullable WebGLShader shader);
 
@@ -2053,8 +2053,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture">WebGLRenderingContext.deleteTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'deleteTexture' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteTextures.xml">The definition of 'glDeleteTextures' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">deleteTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteTextures.xml">glDeleteTextures - OpenGL ES 2.0</a>
    */
   public native void deleteTexture(@Nullable WebGLTexture texture);
 
@@ -2062,8 +2062,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.depthFunc() method of the WebGL API specifies a function that compares incoming pixel depth to the current depth buffer value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthFunc">WebGLRenderingContext.depthFunc - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'depthFunc' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthFunc.xml">The definition of 'glDepthFunc' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthFunc.xml">glDepthFunc - OpenGL ES 2.0</a>
    */
   public native void depthFunc(int func);
 
@@ -2071,8 +2071,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.depthMask() method of the WebGL API sets whether writing into the depth buffer is enabled or disabled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthMask">WebGLRenderingContext.depthMask - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'depthMask' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthMask.xml">The definition of 'glDepthMask' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthMask - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthMask.xml">glDepthMask - OpenGL ES 2.0</a>
    */
   public native void depthMask(boolean flag);
 
@@ -2080,8 +2080,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.depthRange() method of the WebGL API specifies the depth range mapping from normalized device coordinates to window or viewport coordinates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthRange">WebGLRenderingContext.depthRange - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'depthRange' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthRangef.xml">The definition of 'glDepthRangef' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthRange - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthRangef.xml">glDepthRangef - OpenGL ES 2.0</a>
    */
   public native void depthRange(float zNear, float zFar);
 
@@ -2089,8 +2089,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached WebGLShader from a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/detachShader">WebGLRenderingContext.detachShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'detachShader' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDetachShader.xml">The definition of 'glDetachShader' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">detachShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDetachShader.xml">glDetachShader - OpenGL ES 2.0</a>
    */
   public native void detachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
 
@@ -2098,9 +2098,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.disable() method of the WebGL API disables specific WebGL capabilities for this context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable">WebGLRenderingContext.disable - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'disable' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDisable.xml">The definition of 'glDisable' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">The definition of 'glDisable' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">disable - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDisable.xml">glDisable - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">glDisable - OpenGL ES 3.0</a>
    */
   public native void disable(@Capability int cap);
 
@@ -2108,8 +2108,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray">WebGLRenderingContext.disableVertexAttribArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'disableVertexAttribArray' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">The definition of 'glDisableVertexAttribArray' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">disableVertexAttribArray - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">glDisableVertexAttribArray - OpenGL ES 2.0</a>
    */
   public native void disableVertexAttribArray(int index);
 
@@ -2117,8 +2117,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.drawArrays() method of the WebGL API renders primitives from array data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">WebGLRenderingContext.drawArrays - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'drawArrays' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawArrays.xml">The definition of 'glDrawArrays' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">drawArrays - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawArrays.xml">glDrawArrays - OpenGL ES 2.0</a>
    */
   public native void drawArrays(@DrawPrimitiveType int mode, int first, int count);
 
@@ -2126,8 +2126,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">WebGLRenderingContext.drawElements - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'drawElements' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawElements.xml">The definition of 'glDrawElements' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">drawElements - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawElements.xml">glDrawElements - OpenGL ES 2.0</a>
    */
   public native void drawElements(@DrawPrimitiveType int mode, int count,
       @DrawElementsDataType int type, int offset);
@@ -2136,9 +2136,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable">WebGLRenderingContext.enable - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'enable' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnable.xml">The definition of 'glEnable' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">The definition of 'glEnable' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">enable - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnable.xml">glEnable - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">glEnable - OpenGL ES 3.0</a>
    */
   public native void enable(@Capability int cap);
 
@@ -2146,8 +2146,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray">WebGLRenderingContext.enableVertexAttribArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'enableVertexAttribArray' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">The definition of 'glEnableVertexAttribArray' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">enableVertexAttribArray - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">glEnableVertexAttribArray - OpenGL ES 2.0</a>
    */
   public native void enableVertexAttribArray(int index);
 
@@ -2155,8 +2155,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'finish' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">The definition of 'glFinish' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">finish - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">glFinish - OpenGL ES 2.0</a>
    */
   public native void finish();
 
@@ -2164,8 +2164,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.flush() method of the WebGL API empties different buffer commands, causing all commands to be executed as quickly as possible.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush">WebGLRenderingContext.flush - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'flush' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFlush.xml">The definition of 'glFlush' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">flush - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFlush.xml">glFlush - OpenGL ES 2.0</a>
    */
   public native void flush();
 
@@ -2173,9 +2173,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.framebufferRenderbuffer() method of the WebGL API attaches a WebGLRenderbuffer object to a WebGLFramebuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer">WebGLRenderingContext.framebufferRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'framebufferRenderbuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferRenderbuffer.xml">The definition of 'glFramebufferRenderbuffer' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferRenderbuffer.xhtml">The definition of 'glFramebufferRenderbuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">framebufferRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferRenderbuffer.xml">glFramebufferRenderbuffer - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferRenderbuffer.xhtml">glFramebufferRenderbuffer - OpenGL ES 3.0</a>
    */
   public native void framebufferRenderbuffer(@FramebufferTargetType int target,
       @FramebufferAttachment int attachment, int renderbuffertarget,
@@ -2185,9 +2185,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D">WebGLRenderingContext.framebufferTexture2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'framebufferTexture2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml">The definition of 'glFramebufferTexture2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml">The definition of 'glFramebufferTexture2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">framebufferTexture2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml">glFramebufferTexture2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml">glFramebufferTexture2D - OpenGL ES 3.0</a>
    */
   public native void framebufferTexture2D(@FramebufferTargetType int target,
       @FramebufferAttachment int attachment, @Texture2DSurfaceTargetType int textarget,
@@ -2197,8 +2197,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace">WebGLRenderingContext.frontFace - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'frontFace' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFrontFace.xml">The definition of 'glFrontFace' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">frontFace - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFrontFace.xml">glFrontFace - OpenGL ES 2.0</a>
    */
   public native void frontFace(@Winding int mode);
 
@@ -2206,9 +2206,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.generateMipmap() method of the WebGL API generates a set of mipmaps for a WebGLTexture object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap">WebGLRenderingContext.generateMipmap - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'generateMipmap' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenerateMipmap.xml">The definition of 'glGenerateMipmap' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenerateMipmap.xhtml">The definition of 'glGenerateMipmap' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">generateMipmap - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenerateMipmap.xml">glGenerateMipmap - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenerateMipmap.xhtml">glGenerateMipmap - OpenGL ES 3.0</a>
    */
   public native void generateMipmap(@TextureTargetType int target);
 
@@ -2216,8 +2216,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getActiveAttrib() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a vertex attribute. It is generally used when querying unknown attributes either for debugging or generic library creation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveAttrib">WebGLRenderingContext.getActiveAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getActiveAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">The definition of 'glGetActiveAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">glGetActiveAttrib - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLActiveInfo getActiveAttrib(@Nonnull WebGLProgram program, int index);
@@ -2226,8 +2226,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform">WebGLRenderingContext.getActiveUniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getActiveUniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">The definition of 'glGetActiveUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveUniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">glGetActiveUniform - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLActiveInfo getActiveUniform(@Nonnull WebGLProgram program, int index);
@@ -2236,8 +2236,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders">WebGLRenderingContext.getAttachedShaders - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getAttachedShaders' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">The definition of 'glGetAttachedShaders' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getAttachedShaders - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">glGetAttachedShaders - OpenGL ES 2.0</a>
    */
   @Nullable
   public native JsArray<WebGLShader> getAttachedShaders(@Nonnull WebGLProgram program);
@@ -2246,8 +2246,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getAttribLocation() method of the WebGL API returns the location of an attribute variable in a given WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttribLocation">WebGLRenderingContext.getAttribLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getAttribLocation' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttribLocation.xml">The definition of 'glGetAttribLocation' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getAttribLocation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttribLocation.xml">glGetAttribLocation - OpenGL ES 2.0</a>
    */
   public native int getAttribLocation(@Nonnull WebGLProgram program, @Nonnull String name);
 
@@ -2255,10 +2255,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getBufferParameter() method of the WebGL API returns information about the buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter">WebGLRenderingContext.getBufferParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'getBufferParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetBufferParameteriv.xml">The definition of 'glGetBufferParameteriv' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">The definition of 'getBufferParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">The definition of 'glGetBufferParameter' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">getBufferParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetBufferParameteriv.xml">glGetBufferParameteriv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">glGetBufferParameter - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getBufferParameter(@BufferTargetType int target, int pname);
@@ -2267,7 +2267,7 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getContextAttributes() method returns a WebGLContextAttributes object that contains the actual context parameters. Might return null, if the context is lost.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes">WebGLRenderingContext.getContextAttributes - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">The definition of 'WebGLRenderingContext.getContextAttributes' in the 'WebGL 1.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">WebGLRenderingContext.getContextAttributes - WebGL 1.0</a>
    */
   @Nullable
   public native WebGLContextAttributes getContextAttributes();
@@ -2276,8 +2276,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getError() method of the WebGL API returns error information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getError">WebGLRenderingContext.getError - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'getError' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetError.xml">The definition of 'glGetError' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getError - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetError.xml">glGetError - OpenGL ES 2.0</a>
    */
   @WebGLContextError
   @Nonnull
@@ -2287,7 +2287,7 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getExtension() method enables a WebGL extension.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension">WebGLRenderingContext.getExtension - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">The definition of 'WebGLRenderingContext.getExtension' in the 'WebGL 1.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getExtension - WebGL 1.0</a>
    */
   @Nullable
   public native Object getExtension(@Nonnull String name);
@@ -2296,10 +2296,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getFramebufferAttachmentParameter() method of the WebGL API returns information about a framebuffer's attachment.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter">WebGLRenderingContext.getFramebufferAttachmentParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'getFramebufferAttachmentParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetFramebufferAttachmentParameteriv.xml">The definition of 'glGetFramebufferAttachmentParameteriv' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'getFramebufferAttachmentParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml">The definition of 'glGetFramebufferAttachmentParameteriv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">getFramebufferAttachmentParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetFramebufferAttachmentParameteriv.xml">glGetFramebufferAttachmentParameteriv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">getFramebufferAttachmentParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml">glGetFramebufferAttachmentParameteriv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getFramebufferAttachmentParameter(int target, int attachment, int pname);
@@ -2308,9 +2308,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getParameter() method of the WebGL API returns a value for the passed parameter name.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter">WebGLRenderingContext.getParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'getParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">The definition of 'getParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml">The definition of 'glGet' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">getParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml">glGet - OpenGL ES 2.0</a>
    */
   @Nullable
   public native Any getParameter(int pname);
@@ -2319,8 +2319,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog">WebGLRenderingContext.getProgramInfoLog - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getProgramInfoLog' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">The definition of 'glGetProgramInfoLog' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramInfoLog - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">glGetProgramInfoLog - OpenGL ES 2.0</a>
    */
   @Nullable
   public native String getProgramInfoLog(@Nonnull WebGLProgram program);
@@ -2329,9 +2329,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramParameter">WebGLRenderingContext.getProgramParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getProgramParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramiv.xml">The definition of 'glGetProgramiv' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">The definition of 'getProgramParameter' in the 'WebGL 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramiv.xml">glGetProgramiv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">getProgramParameter - WebGL 2.0</a>
    */
   @Nullable
   public native Any getProgramParameter(@Nonnull WebGLProgram program, int pname);
@@ -2340,10 +2340,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getRenderbufferParameter() method of the WebGL API returns information about the renderbuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getRenderbufferParameter">WebGLRenderingContext.getRenderbufferParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'getRenderbufferParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetRenderbufferParameteriv.xml">The definition of 'glGetRenderbufferParameteriv' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">The definition of 'getRenderbufferParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">The definition of 'glGetRenderbufferParameteriv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">getRenderbufferParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetRenderbufferParameteriv.xml">glGetRenderbufferParameteriv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">glGetRenderbufferParameteriv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getRenderbufferParameter(int target, int pname);
@@ -2352,8 +2352,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderInfoLog">WebGLRenderingContext.getShaderInfoLog - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderInfoLog' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">The definition of 'glGetShaderInfoLog' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderInfoLog - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">glGetShaderInfoLog - OpenGL ES 2.0</a>
    */
   @Nullable
   public native String getShaderInfoLog(@Nonnull WebGLShader shader);
@@ -2362,8 +2362,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderParameter">WebGLRenderingContext.getShaderParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">The definition of 'glGetShaderiv' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">glGetShaderiv - OpenGL ES 2.0</a>
    */
   @Nullable
   public native Any getShaderParameter(@Nonnull WebGLShader shader, int pname);
@@ -2372,8 +2372,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getShaderPrecisionFormat() method of the WebGL API returns a new WebGLShaderPrecisionFormat object describing the range and precision for the specified shader numeric format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderPrecisionFormat">WebGLRenderingContext.getShaderPrecisionFormat - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderPrecisionFormat' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">The definition of 'glGetShaderPrecisionFormat' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderPrecisionFormat - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">glGetShaderPrecisionFormat - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(int shadertype,
@@ -2383,8 +2383,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource">WebGLRenderingContext.getShaderSource - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'getShaderSource' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml">The definition of 'glGetShaderSource' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderSource - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml">glGetShaderSource - OpenGL ES 2.0</a>
    */
   @GLSL
   @Nullable
@@ -2394,7 +2394,7 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions">WebGLRenderingContext.getSupportedExtensions - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">The definition of 'WebGLRenderingContext.getSupportedExtensions' in the 'WebGL 1.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getSupportedExtensions - WebGL 1.0</a>
    */
   @Nullable
   public native JsArray<String> getSupportedExtensions();
@@ -2403,10 +2403,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getTexParameter() method of the WebGL API returns information about the given texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getTexParameter">WebGLRenderingContext.getTexParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'getTexParameter' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetTexParameter.xml">The definition of 'glGetTexParameter' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'getTexParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml">The definition of 'glGetTexParameter' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">getTexParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetTexParameter.xml">glGetTexParameter - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">getTexParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml">glGetTexParameter - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getTexParameter(@TextureTargetType int target,
@@ -2416,10 +2416,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniform">WebGLRenderingContext.getUniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getUniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniform.xml">The definition of 'glGetUniform' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">The definition of 'getUniform' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml">The definition of 'glGetUniform' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniform.xml">glGetUniform - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getUniform - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml">glGetUniform - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getUniform(@Nonnull WebGLProgram program,
@@ -2429,8 +2429,8 @@ public class WebGL2RenderingContext {
    * Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation">WebGLRenderingContext.getUniformLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getUniformLocation' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">The definition of 'glGetUniformLocation' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniformLocation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">glGetUniformLocation - OpenGL ES 2.0</a>
    */
   @Nullable
   public native WebGLUniformLocation getUniformLocation(@Nonnull WebGLProgram program,
@@ -2440,10 +2440,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getVertexAttrib() method of the WebGL API returns information about a vertex attribute at a given position.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttrib">WebGLRenderingContext.getVertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getVertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml">The definition of 'glGetVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">The definition of 'getVertexAttrib' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">The definition of 'glGetVertexAttrib' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml">glGetVertexAttrib - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getVertexAttrib - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">glGetVertexAttrib - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getVertexAttrib(int index, int pname);
@@ -2452,8 +2452,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.getVertexAttribOffset() method of the WebGL API returns the address of a specified vertex attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttribOffset">WebGLRenderingContext.getVertexAttribOffset - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'getVertexAttribOffset' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml">The definition of 'glGetVertexAttribPointerv' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttribOffset - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml">glGetVertexAttribPointerv - OpenGL ES 2.0</a>
    */
   public native int getVertexAttribOffset(int index, int pname);
 
@@ -2461,8 +2461,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.hint() method of the WebGL API specifies hints for certain behaviors. The interpretation of these hints depend on the implementation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/hint">WebGLRenderingContext.hint - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'hint' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glHint.xml">The definition of 'glHint' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">hint - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glHint.xml">glHint - OpenGL ES 2.0</a>
    */
   public native void hint(int target, int mode);
 
@@ -2470,8 +2470,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isBuffer() method of the WebGL API returns true if the passed WebGLBuffer is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isBuffer">WebGLRenderingContext.isBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'isBuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsBuffer.xml">The definition of 'glIsBuffer' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">isBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsBuffer.xml">glIsBuffer - OpenGL ES 2.0</a>
    */
   public native boolean isBuffer(@Nullable WebGLBuffer buffer);
 
@@ -2479,7 +2479,7 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isContextLost() method returns a Boolean indicating whether or not the WebGL context has been lost and must be re-established before rendering can resume.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost">WebGLRenderingContext.isContextLost - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13">The definition of 'WebGLRenderingContext.isContextLost' in the 'WebGL 1.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13">WebGLRenderingContext.isContextLost - WebGL 1.0</a>
    */
   public native boolean isContextLost();
 
@@ -2487,10 +2487,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isEnabled() method of the WebGL API tests whether a specific WebGL capability is enabled or not for this context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isEnabled">WebGLRenderingContext.isEnabled - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'isEnabled' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsEnabled.xml">The definition of 'glIsEnabled' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">The definition of 'isEnabled' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsEnabled.xhtml">The definition of 'glIsEnabled' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">isEnabled - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsEnabled.xml">glIsEnabled - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">isEnabled - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsEnabled.xhtml">glIsEnabled - OpenGL ES 3.0</a>
    */
   public native boolean isEnabled(@Capability int cap);
 
@@ -2498,8 +2498,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isFramebuffer() method of the WebGL API returns true if the passed WebGLFramebuffer is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isFramebuffer">WebGLRenderingContext.isFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">The definition of 'isFramebuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsFramebuffer.xml">The definition of 'glIsFramebuffer' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">isFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsFramebuffer.xml">glIsFramebuffer - OpenGL ES 2.0</a>
    */
   public native boolean isFramebuffer(@Nullable WebGLFramebuffer framebuffer);
 
@@ -2507,8 +2507,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isProgram">WebGLRenderingContext.isProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'isProgram' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml">The definition of 'glIsProgram' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml">glIsProgram - OpenGL ES 2.0</a>
    */
   public native boolean isProgram(@Nullable WebGLProgram program);
 
@@ -2516,8 +2516,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isRenderbuffer() method of the WebGL API returns true if the passed WebGLRenderbuffer is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isRenderbuffer">WebGLRenderingContext.isRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'isRenderbuffer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsRenderbuffer.xml">The definition of 'glIsRenderbuffer' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">isRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsRenderbuffer.xml">glIsRenderbuffer - OpenGL ES 2.0</a>
    */
   public native boolean isRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
 
@@ -2525,8 +2525,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isShader() method of the WebGL API returns true if the passed WebGLShader is valid, false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isShader">WebGLRenderingContext.isShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'isShader' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml">The definition of 'glIsShader' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml">glIsShader - OpenGL ES 2.0</a>
    */
   public native boolean isShader(@Nullable WebGLShader shader);
 
@@ -2534,8 +2534,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.isTexture() method of the WebGL API returns true if the passed WebGLTexture is valid and false otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isTexture">WebGLRenderingContext.isTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'isTexture' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml">The definition of 'glIsTexture' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">isTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml">glIsTexture - OpenGL ES 2.0</a>
    */
   public native boolean isTexture(@Nullable WebGLTexture texture);
 
@@ -2543,8 +2543,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.lineWidth() method of the WebGL API sets the line width of rasterized lines.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth">WebGLRenderingContext.lineWidth - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'lineWidth' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLineWidth.xml">The definition of 'glLineWidth' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">lineWidth - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLineWidth.xml">glLineWidth - OpenGL ES 2.0</a>
    */
   public native void lineWidth(float width);
 
@@ -2552,8 +2552,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext interface's linkProgram() method links a given WebGLProgram, completing the process of preparing the GPU code for the program's fragment and vertex shaders.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/linkProgram">WebGLRenderingContext.linkProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'linkProgram' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLinkProgram.xml">The definition of 'glLinkProgram' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">linkProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLinkProgram.xml">glLinkProgram - OpenGL ES 2.0</a>
    */
   public native void linkProgram(@Nonnull WebGLProgram program);
 
@@ -2561,11 +2561,11 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.pixelStorei() method of the WebGL API specifies the pixel storage modes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei">WebGLRenderingContext.pixelStorei - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'pixelStorei' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#PIXEL_STORAGE_PARAMETERS">The definition of 'Pixel Storage Parameters' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml">The definition of 'glPixelStorei' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">The definition of 'pixelStorei' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glPixelStorei.xhtml">The definition of 'glPixelStorei' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">pixelStorei - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#PIXEL_STORAGE_PARAMETERS">Pixel Storage Parameters - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml">glPixelStorei - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">pixelStorei - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glPixelStorei.xhtml">glPixelStorei - OpenGL ES 3.0</a>
    */
   public native void pixelStorei(@PixelStorageParameter int pname, int param);
 
@@ -2573,8 +2573,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.polygonOffset() method of the WebGL API specifies the scale factors and units to calculate depth values.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset">WebGLRenderingContext.polygonOffset - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'polygonOffset' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPolygonOffset.xml">The definition of 'glPolygonOffset' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">polygonOffset - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPolygonOffset.xml">glPolygonOffset - OpenGL ES 2.0</a>
    */
   public native void polygonOffset(float factor, float units);
 
@@ -2582,10 +2582,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.renderbufferStorage() method of the WebGL API creates and initializes a renderbuffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/renderbufferStorage">WebGLRenderingContext.renderbufferStorage - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">The definition of 'renderbufferStorage' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glRenderbufferStorage.xml">The definition of 'glRenderbufferStorage' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">The definition of 'getRenderbufferParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorage.xhtml">The definition of 'glRenderbufferStorage' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">renderbufferStorage - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glRenderbufferStorage.xml">glRenderbufferStorage - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorage.xhtml">glRenderbufferStorage - OpenGL ES 3.0</a>
    */
   public native void renderbufferStorage(int target, int internalformat, int width, int height);
 
@@ -2593,8 +2593,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.sampleCoverage() method of the WebGL API specifies multi-sample coverage parameters for anti-aliasing effects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/sampleCoverage">WebGLRenderingContext.sampleCoverage - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'sampleCoverage' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glSampleCoverage.xml">The definition of 'glSampleCoverage' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">sampleCoverage - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glSampleCoverage.xml">glSampleCoverage - OpenGL ES 2.0</a>
    */
   public native void sampleCoverage(float value, boolean invert);
 
@@ -2602,8 +2602,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.scissor() method of the WebGL API sets a scissor box, which limits the drawing to a specified rectangle.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/scissor">WebGLRenderingContext.scissor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">The definition of 'scissor' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glScissor.xml">The definition of 'glScissor' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">scissor - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glScissor.xml">glScissor - OpenGL ES 2.0</a>
    */
   public native void scissor(int x, int y, int width, int height);
 
@@ -2611,8 +2611,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource">WebGLRenderingContext.shaderSource - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'shaderSource' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glShaderSource.xml">The definition of 'glShaderSource' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">shaderSource - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glShaderSource.xml">glShaderSource - OpenGL ES 2.0</a>
    */
   public native void shaderSource(@Nonnull WebGLShader shader, @GLSL @Nonnull String source);
 
@@ -2620,8 +2620,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.stencilFunc() method of the WebGL API sets the front and back function and reference value for stencil testing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFunc">WebGLRenderingContext.stencilFunc - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilFunc' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFunc.xml">The definition of 'glStencilFunc' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFunc.xml">glStencilFunc - OpenGL ES 2.0</a>
    */
   public native void stencilFunc(int func, int ref, int mask);
 
@@ -2629,8 +2629,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.stencilFuncSeparate() method of the WebGL API sets the front and/or back function and reference value for stencil testing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate">WebGLRenderingContext.stencilFuncSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilFuncSeparate' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFuncSeparate.xml">The definition of 'glStencilFuncSeparate' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilFuncSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFuncSeparate.xml">glStencilFuncSeparate - OpenGL ES 2.0</a>
    */
   public native void stencilFuncSeparate(int face, int func, int ref, int mask);
 
@@ -2638,8 +2638,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.stencilMask() method of the WebGL API controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMask">WebGLRenderingContext.stencilMask - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilMask' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMask.xml">The definition of 'glStencilMask' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilMask - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMask.xml">glStencilMask - OpenGL ES 2.0</a>
    */
   public native void stencilMask(int mask);
 
@@ -2647,8 +2647,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.stencilMaskSeparate() method of the WebGL API controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate">WebGLRenderingContext.stencilMaskSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilMaskSeparate' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMaskSeparate.xml">The definition of 'glStencilMaskSeparate' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilMaskSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMaskSeparate.xml">glStencilMaskSeparate - OpenGL ES 2.0</a>
    */
   public native void stencilMaskSeparate(int face, int mask);
 
@@ -2656,8 +2656,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.stencilOp() method of the WebGL API sets both the front and back-facing stencil test actions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOp">WebGLRenderingContext.stencilOp - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilOp' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOp.xml">The definition of 'glStencilOp' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilOp - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOp.xml">glStencilOp - OpenGL ES 2.0</a>
    */
   public native void stencilOp(int fail, int zfail, int zpass);
 
@@ -2665,8 +2665,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.stencilOpSeparate() method of the WebGL API sets the front and/or back-facing stencil test actions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOpSeparate">WebGLRenderingContext.stencilOpSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">The definition of 'stencilOpSeparate' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOpSeparate.xml">The definition of 'glStencilOpSeparate' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilOpSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOpSeparate.xml">glStencilOpSeparate - OpenGL ES 2.0</a>
    */
   public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
 
@@ -2674,10 +2674,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texParameter[fi]' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">The definition of 'glTexParameter' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texParameter[fi]' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">The definition of 'glTexParameter' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texParameter[fi] - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">glTexParameter - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texParameter[fi] - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">glTexParameter - OpenGL ES 3.0</a>
    */
   public native void texParameterf(@TextureTargetType int target, @TextureParameter int pname,
       float param);
@@ -2686,10 +2686,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texParameter[fi]' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">The definition of 'glTexParameter' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texParameter[fi]' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">The definition of 'glTexParameter' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texParameter[fi] - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">glTexParameter - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texParameter[fi] - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">glTexParameter - OpenGL ES 3.0</a>
    */
   public native void texParameteri(@TextureTargetType int target, @TextureParameter int pname,
       int param);
@@ -2698,8 +2698,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1f(@Nullable WebGLUniformLocation location, float x);
 
@@ -2707,8 +2707,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1i(@Nullable WebGLUniformLocation location, int x);
 
@@ -2716,8 +2716,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2f(@Nullable WebGLUniformLocation location, float x, float y);
 
@@ -2725,8 +2725,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2i(@Nullable WebGLUniformLocation location, int x, int y);
 
@@ -2734,8 +2734,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3f(@Nullable WebGLUniformLocation location, float x, float y, float z);
 
@@ -2743,8 +2743,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3i(@Nullable WebGLUniformLocation location, int x, int y, int z);
 
@@ -2752,8 +2752,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4f(@Nullable WebGLUniformLocation location, float x, float y, float z,
       float w);
@@ -2762,8 +2762,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4i(@Nullable WebGLUniformLocation location, int x, int y, int z, int w);
 
@@ -2771,8 +2771,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram">WebGLRenderingContext.useProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'useProgram' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUseProgram.xml">The definition of 'glUseProgram' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">useProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUseProgram.xml">glUseProgram - OpenGL ES 2.0</a>
    */
   public native void useProgram(@Nullable WebGLProgram program);
 
@@ -2780,8 +2780,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/validateProgram">WebGLRenderingContext.validateProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">The definition of 'validateProgram' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glValidateProgram.xml">The definition of 'glValidateProgram' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">validateProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glValidateProgram.xml">glValidateProgram - OpenGL ES 2.0</a>
    */
   public native void validateProgram(@Nonnull WebGLProgram program);
 
@@ -2789,8 +2789,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib1f(int index, float x);
 
@@ -2798,8 +2798,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib1fv(int index, @Nonnull Float32List values);
 
@@ -2807,8 +2807,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib1fv(int index, @Nonnull Float32Array values);
 
@@ -2816,8 +2816,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib1fv(int index, @Nonnull JsArray<Double> values);
 
@@ -2825,8 +2825,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib1fv(int index, @Nonnull double[] values);
 
@@ -2834,8 +2834,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib2f(int index, float x, float y);
 
@@ -2843,8 +2843,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib2fv(int index, @Nonnull Float32List values);
 
@@ -2852,8 +2852,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib2fv(int index, @Nonnull Float32Array values);
 
@@ -2861,8 +2861,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib2fv(int index, @Nonnull JsArray<Double> values);
 
@@ -2870,8 +2870,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib2fv(int index, @Nonnull double[] values);
 
@@ -2879,8 +2879,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib3f(int index, float x, float y, float z);
 
@@ -2888,8 +2888,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib3fv(int index, @Nonnull Float32List values);
 
@@ -2897,8 +2897,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib3fv(int index, @Nonnull Float32Array values);
 
@@ -2906,8 +2906,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib3fv(int index, @Nonnull JsArray<Double> values);
 
@@ -2915,8 +2915,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib3fv(int index, @Nonnull double[] values);
 
@@ -2924,8 +2924,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib4f(int index, float x, float y, float z, float w);
 
@@ -2933,8 +2933,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib4fv(int index, @Nonnull Float32List values);
 
@@ -2942,8 +2942,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib4fv(int index, @Nonnull Float32Array values);
 
@@ -2951,8 +2951,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib4fv(int index, @Nonnull JsArray<Double> values);
 
@@ -2960,8 +2960,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttrib4fv(int index, @Nonnull double[] values);
 
@@ -2969,8 +2969,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttribPointer' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml">The definition of 'glVertexAttribPointer' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttribPointer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml">glVertexAttribPointer - OpenGL ES 2.0</a>
    */
   public native void vertexAttribPointer(int index, @VertexDimensions int size,
       @AttributeDataType int type, boolean normalized, int stride, int offset);
@@ -2979,8 +2979,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport">WebGLRenderingContext.viewport - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">The definition of 'viewport' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glViewport.xml">The definition of 'glViewport' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">viewport - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glViewport.xml">glViewport - OpenGL ES 2.0</a>
    */
   public native void viewport(int x, int y, int width, int height);
 
@@ -2991,9 +2991,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">glBufferData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">glBufferData - OpenGL ES 3.0</a>
    */
   public native void bufferData(@BufferTargetType int target, int size, @UsageType int usage);
 
@@ -3001,9 +3001,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">glBufferData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">glBufferData - OpenGL ES 3.0</a>
    */
   public native void bufferData(@BufferTargetType int target, @Nullable BufferSource srcData,
       @UsageType int usage);
@@ -3012,9 +3012,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">glBufferData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">glBufferData - OpenGL ES 3.0</a>
    */
   public native void bufferData(@BufferTargetType int target, @Nonnull ArrayBufferView srcData,
       @UsageType int usage, int srcOffset, int length);
@@ -3023,9 +3023,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">The definition of 'glBufferData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">The definition of 'glBufferData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml">glBufferData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml">glBufferData - OpenGL ES 3.0</a>
    */
   public native void bufferData(@BufferTargetType int target, @Nonnull ArrayBufferView srcData,
       @UsageType int usage, int srcOffset);
@@ -3034,9 +3034,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferSubData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">glBufferSubData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">glBufferSubData - OpenGL ES 3.0</a>
    */
   public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
       @Nonnull BufferSource srcData);
@@ -3045,9 +3045,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferSubData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">glBufferSubData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">glBufferSubData - OpenGL ES 3.0</a>
    */
   public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
       @Nonnull ArrayBufferView srcData, int srcOffset, int length);
@@ -3056,9 +3056,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">The definition of 'bufferSubData' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">The definition of 'glBufferSubData' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bufferSubData - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml">glBufferSubData - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml">glBufferSubData - OpenGL ES 3.0</a>
    */
   public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
       @Nonnull ArrayBufferView srcData, int srcOffset);
@@ -3081,9 +3081,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">compressedTexSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">glCompressedTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">glCompressedTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
       int xoffset, int yoffset, int width, int height, int format, int imageSize, int offset);
@@ -3092,9 +3092,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">compressedTexSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">glCompressedTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">glCompressedTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
       int xoffset, int yoffset, int width, int height, int format, @Nonnull ArrayBufferView srcData,
@@ -3104,9 +3104,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">compressedTexSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">glCompressedTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">glCompressedTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
       int xoffset, int yoffset, int width, int height, int format, @Nonnull ArrayBufferView srcData,
@@ -3116,9 +3116,9 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">The definition of 'compressedTexSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D">compressedTexSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml">glCompressedTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml">glCompressedTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
       int xoffset, int yoffset, int width, int height, int format,
@@ -3128,8 +3128,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">readPixels - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">glReadPixels - OpenGL ES 2.0</a>
    */
   public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
       @TexelDataType int type, @Nullable ArrayBufferView dstData);
@@ -3138,8 +3138,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">readPixels - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">glReadPixels - OpenGL ES 2.0</a>
    */
   public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
       @TexelDataType int type, int offset);
@@ -3148,8 +3148,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels">WebGLRenderingContext.readPixels - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">The definition of 'readPixels' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">The definition of 'glReadPixels' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12">readPixels - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glReadPixels.xml">glReadPixels - OpenGL ES 2.0</a>
    */
   public native void readPixels(int x, int y, int width, int height, @PixelFormat int format,
       @TexelDataType int type, @Nonnull ArrayBufferView dstData, int dstOffset);
@@ -3158,10 +3158,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">glTexImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">glTexImage2D - OpenGL ES 3.0</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
       @TextureInternalFormat int internalformat, int width, int height, int border,
@@ -3171,10 +3171,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">glTexImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">glTexImage2D - OpenGL ES 3.0</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
       @TextureInternalFormat int internalformat, @TextureFormat int format, @TexelDataType int type,
@@ -3184,10 +3184,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">glTexImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">glTexImage2D - OpenGL ES 3.0</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
       @TextureInternalFormat int internalformat, int width, int height, int border,
@@ -3197,10 +3197,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">glTexImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">glTexImage2D - OpenGL ES 3.0</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
       @TextureInternalFormat int internalformat, int width, int height, int border,
@@ -3210,10 +3210,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">The definition of 'texImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">The definition of 'glTexImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">The definition of 'glTexImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml">glTexImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml">glTexImage2D - OpenGL ES 3.0</a>
    */
   public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
       @TextureInternalFormat int internalformat, int width, int height, int border,
@@ -3224,10 +3224,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">texSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">glTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
       int yoffset, int width, int height, int format, @TexelDataType int type,
@@ -3237,10 +3237,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">texSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">glTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
       int yoffset, int format, @TexelDataType int type, @Nonnull TexImageSource source);
@@ -3249,10 +3249,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">texSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">glTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
       int yoffset, int width, int height, int format, @TexelDataType int type, int pboOffset);
@@ -3261,10 +3261,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">texSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">glTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
       int yoffset, int width, int height, int format, @TexelDataType int type,
@@ -3274,10 +3274,10 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">The definition of 'texSubImage2D' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#TEXSUBIMAGE2D">texSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexSubImage2D.xml">glTexSubImage2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage2D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
       int yoffset, int width, int height, int format, @TexelDataType int type,
@@ -3287,8 +3287,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
@@ -3297,8 +3297,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
@@ -3307,8 +3307,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -3317,8 +3317,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -3327,8 +3327,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
@@ -3337,8 +3337,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
@@ -3347,8 +3347,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -3357,8 +3357,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -3367,8 +3367,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
@@ -3376,8 +3376,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
@@ -3386,8 +3386,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -3396,8 +3396,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -3405,8 +3405,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
@@ -3415,8 +3415,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
@@ -3425,8 +3425,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -3435,8 +3435,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -3445,8 +3445,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
@@ -3455,8 +3455,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
@@ -3465,8 +3465,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -3475,8 +3475,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -3485,8 +3485,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
@@ -3494,8 +3494,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
@@ -3503,8 +3503,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -3513,8 +3513,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -3522,8 +3522,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
@@ -3532,8 +3532,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
@@ -3542,8 +3542,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -3552,8 +3552,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -3562,8 +3562,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
@@ -3572,8 +3572,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
@@ -3582,8 +3582,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -3592,8 +3592,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -3602,8 +3602,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
@@ -3611,8 +3611,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
@@ -3621,8 +3621,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -3631,8 +3631,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -3640,8 +3640,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
@@ -3650,8 +3650,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
@@ -3660,8 +3660,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -3670,8 +3670,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -3680,8 +3680,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
@@ -3690,8 +3690,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
@@ -3700,8 +3700,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -3710,8 +3710,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -3720,8 +3720,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
@@ -3729,8 +3729,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
@@ -3738,8 +3738,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -3748,8 +3748,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -3757,8 +3757,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
@@ -3767,8 +3767,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
@@ -3777,8 +3777,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -3787,8 +3787,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -3797,8 +3797,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
@@ -3807,8 +3807,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
@@ -3817,8 +3817,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -3827,8 +3827,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -3837,8 +3837,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
@@ -3846,8 +3846,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
@@ -3856,8 +3856,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -3866,8 +3866,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -3875,8 +3875,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
@@ -3885,8 +3885,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
@@ -3895,8 +3895,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -3905,8 +3905,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -3915,8 +3915,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
@@ -3925,8 +3925,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
@@ -3935,8 +3935,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -3945,8 +3945,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -3955,8 +3955,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
@@ -3964,8 +3964,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
@@ -3973,8 +3973,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -3983,8 +3983,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -3992,8 +3992,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
@@ -4002,8 +4002,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset, int srcLength);
@@ -4012,8 +4012,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -4022,8 +4022,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -4032,8 +4032,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset);
@@ -4042,8 +4042,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32Array data,
       int srcOffset);
@@ -4052,8 +4052,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -4062,8 +4062,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -4072,8 +4072,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data);
 
@@ -4081,8 +4081,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull Float32Array data);
@@ -4091,8 +4091,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -4101,8 +4101,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -4110,8 +4110,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset, int srcLength);
@@ -4120,8 +4120,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset, int srcLength);
@@ -4130,8 +4130,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -4140,8 +4140,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -4150,8 +4150,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data,
       int srcOffset);
@@ -4160,8 +4160,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data,
       int srcOffset);
@@ -4170,8 +4170,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -4180,8 +4180,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -4190,8 +4190,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List data);
 
@@ -4199,8 +4199,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32Array data);
 
@@ -4208,8 +4208,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -4218,8 +4218,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -4227,8 +4227,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -4237,8 +4237,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -4247,8 +4247,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -4257,8 +4257,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -4267,8 +4267,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -4277,8 +4277,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -4287,8 +4287,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -4297,8 +4297,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -4307,8 +4307,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -4317,8 +4317,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -4327,8 +4327,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -4337,8 +4337,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -4347,8 +4347,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -4357,8 +4357,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -4367,8 +4367,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -4377,8 +4377,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -4387,8 +4387,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -4397,8 +4397,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -4407,8 +4407,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -4417,8 +4417,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -4427,8 +4427,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -4437,8 +4437,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -4447,8 +4447,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -4457,8 +4457,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -4467,8 +4467,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -4477,8 +4477,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -4487,8 +4487,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -4497,8 +4497,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -4507,8 +4507,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -4517,8 +4517,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -4527,8 +4527,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -4537,8 +4537,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -4547,8 +4547,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -4557,8 +4557,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -4567,8 +4567,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -4577,8 +4577,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -4587,8 +4587,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query. The target parameter indicates which kind of query to begin.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/beginQuery">WebGL2RenderingContext.beginQuery - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'beginQuery' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginQuery.xhtml">The definition of 'glBeginQuery' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">beginQuery - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginQuery.xhtml">glBeginQuery - OpenGL ES 3.0</a>
    */
   public native void beginQuery(int target, @Nonnull WebGLQuery query);
 
@@ -4596,8 +4596,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.beginTransformFeedback() method of the WebGL 2 API starts a transform feedback operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/beginTransformFeedback">WebGL2RenderingContext.beginTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'beginTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginTransformFeedback.xhtml">The definition of 'glBeginTransformFeedback' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">beginTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginTransformFeedback.xhtml">glBeginTransformFeedback - OpenGL ES 3.0</a>
    */
   public native void beginTransformFeedback(int primitiveMode);
 
@@ -4605,8 +4605,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.bindBufferBase() method of the WebGL 2 API binds a given WebGLBuffer to a given binding point (target) at a given index.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferBase">WebGL2RenderingContext.bindBufferBase - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'bindBufferBase' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBufferBase.xhtml">The definition of 'glBindBufferBase' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">bindBufferBase - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBufferBase.xhtml">glBindBufferBase - OpenGL ES 3.0</a>
    */
   public native void bindBufferBase(int target, int index, @Nullable WebGLBuffer buffer);
 
@@ -4614,8 +4614,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.bindBufferRange() method of the WebGL 2 API binds a range of a given WebGLBuffer to a given binding point (target) at a given index.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferRange">WebGL2RenderingContext.bindBufferRange - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'bindBufferRange' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBufferRange.xhtml">The definition of 'glBindBufferRange' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">bindBufferRange - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBufferRange.xhtml">glBindBufferRange - OpenGL ES 3.0</a>
    */
   public native void bindBufferRange(int target, int index, @Nullable WebGLBuffer buffer,
       int offset, int size);
@@ -4624,8 +4624,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.bindSampler() method of the WebGL 2 API binds a passed WebGLSampler object to the texture unit at the passed index.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindSampler">WebGL2RenderingContext.bindSampler - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">The definition of 'bindSampler' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindSampler.xhtml">The definition of 'glBindSampler' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">bindSampler - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindSampler.xhtml">glBindSampler - OpenGL ES 3.0</a>
    */
   public native void bindSampler(int unit, @Nullable WebGLSampler sampler);
 
@@ -4633,8 +4633,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.bindTransformFeedback() method of the WebGL 2 API binds a passed WebGLTransformFeedback object to the current GL state.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindTransformFeedback">WebGL2RenderingContext.bindTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'bindTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTransformFeedback.xhtml">The definition of 'glBindTransformFeedback' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">bindTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTransformFeedback.xhtml">glBindTransformFeedback - OpenGL ES 3.0</a>
    */
   public native void bindTransformFeedback(int target, @Nullable WebGLTransformFeedback tf);
 
@@ -4642,8 +4642,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.bindVertexArray() method of the WebGL 2 API binds a passed WebGLVertexArrayObject object to the buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindVertexArray">WebGL2RenderingContext.bindVertexArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">The definition of 'bindVertexArray' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindVertexArray.xhtml">The definition of 'glBindVertexArray' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">bindVertexArray - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindVertexArray.xhtml">glBindVertexArray - OpenGL ES 3.0</a>
    */
   public native void bindVertexArray(@Nullable WebGLVertexArrayObject array);
 
@@ -4651,8 +4651,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.blitFramebuffer() method of the WebGL 2 API transfers a block of pixels from the read framebuffer to the draw framebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/blitFramebuffer">WebGL2RenderingContext.blitFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'blitFramebuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlitFramebuffer.xhtml">The definition of 'glBlitFramebuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">blitFramebuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlitFramebuffer.xhtml">glBlitFramebuffer - OpenGL ES 3.0</a>
    */
   public native void blitFramebuffer(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0,
       int dstY0, int dstX1, int dstY1, int mask, int filter);
@@ -4723,8 +4723,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.clientWaitSync() method of the WebGL 2 API blocks and waits for a WebGLSync object to become signaled or a given timeout to be passed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/clientWaitSync">WebGL2RenderingContext.clientWaitSync - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">The definition of 'clientWaitSync' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glClientWaitSync.xhtml">The definition of 'glClientWaitSync' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">clientWaitSync - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glClientWaitSync.xhtml">glClientWaitSync - OpenGL ES 3.0</a>
    */
   public native int clientWaitSync(@Nonnull WebGLSync sync, int flags, int timeout);
 
@@ -4747,8 +4747,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'compressedTexSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">The definition of 'glCompressedTexSubImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">compressedTexSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">glCompressedTexSubImage3D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
       int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
@@ -4758,8 +4758,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'compressedTexSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">The definition of 'glCompressedTexSubImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">compressedTexSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">glCompressedTexSubImage3D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
       int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
@@ -4769,8 +4769,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'compressedTexSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">The definition of 'glCompressedTexSubImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">compressedTexSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">glCompressedTexSubImage3D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
       int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
@@ -4780,8 +4780,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'compressedTexSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">The definition of 'glCompressedTexSubImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">compressedTexSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage3D.xhtml">glCompressedTexSubImage3D - OpenGL ES 3.0</a>
    */
   public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
       int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
@@ -4791,8 +4791,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.copyBufferSubData() method of the WebGL 2 API copies part of the data of a buffer to another buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/copyBufferSubData">WebGL2RenderingContext.copyBufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">The definition of 'copyBufferSubData' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCopyBufferSubData.xhtml">The definition of 'glCopyBufferSubData' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">copyBufferSubData - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCopyBufferSubData.xhtml">glCopyBufferSubData - OpenGL ES 3.0</a>
    */
   public native void copyBufferSubData(int readTarget, int writeTarget, int readOffset,
       int writeOffset, int size);
@@ -4801,8 +4801,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.copyTexSubImage3D() method of the WebGL API copies pixels from the current WebGLFramebuffer into an existing 3D texture sub-image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/copyTexSubImage3D">WebGL2RenderingContext.copyTexSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'copyTexSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCopyTexSubImage3D.xhtml">The definition of 'glCopyTexSubImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">copyTexSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCopyTexSubImage3D.xhtml">glCopyTexSubImage3D - OpenGL ES 3.0</a>
    */
   public native void copyTexSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
       int yoffset, int zoffset, int x, int y, int width, int height);
@@ -4811,8 +4811,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.createQuery() method of the WebGL 2 API creates and initializes WebGLQuery objects, which provide ways to asynchronously query for information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createQuery">WebGL2RenderingContext.createQuery - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'createQuery' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenQueries.xhtml">The definition of 'glGenQueries' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">createQuery - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenQueries.xhtml">glGenQueries - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLQuery createQuery();
@@ -4821,8 +4821,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.createSampler() method of the WebGL 2 API creates and initializes WebGLSampler objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createSampler">WebGL2RenderingContext.createSampler - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">The definition of 'createSampler' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenSamplers.xhtml">The definition of 'glGenSamplers' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">createSampler - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenSamplers.xhtml">glGenSamplers - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLSampler createSampler();
@@ -4831,8 +4831,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.createTransformFeedback() method of the WebGL 2 API creates and initializes WebGLTransformFeedback objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createTransformFeedback">WebGL2RenderingContext.createTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'createTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenTransformFeedbacks.xhtml">The definition of 'glGenTransformFeedbacks' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">createTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenTransformFeedbacks.xhtml">glGenTransformFeedbacks - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLTransformFeedback createTransformFeedback();
@@ -4841,8 +4841,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.createVertexArray() method of the WebGL 2 API creates and initializes a WebGLVertexArrayObject object that represents a vertex array object (VAO) pointing to vertex array data and which provides names for different sets of vertex data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createVertexArray">WebGL2RenderingContext.createVertexArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">The definition of 'createVertexArray' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenVertexArrays.xhtml">The definition of 'glGenVertexArrays' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">createVertexArray - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenVertexArrays.xhtml">glGenVertexArrays - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLVertexArrayObject createVertexArray();
@@ -4851,8 +4851,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.deleteQuery() method of the WebGL 2 API deletes a given WebGLQuery object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteQuery">WebGL2RenderingContext.deleteQuery - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'deleteQuery' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteQueries.xhtml">The definition of 'glDeleteQueries' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">deleteQuery - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteQueries.xhtml">glDeleteQueries - OpenGL ES 3.0</a>
    */
   public native void deleteQuery(@Nullable WebGLQuery query);
 
@@ -4860,8 +4860,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.deleteSampler() method of the WebGL 2 API deletes a given WebGLSampler object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteSampler">WebGL2RenderingContext.deleteSampler - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">The definition of 'deleteSampler' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteSamplers.xhtml">The definition of 'glDeleteSamplers' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">deleteSampler - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteSamplers.xhtml">glDeleteSamplers - OpenGL ES 3.0</a>
    */
   public native void deleteSampler(@Nullable WebGLSampler sampler);
 
@@ -4869,8 +4869,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.deleteSync() method of the WebGL 2 API deletes a given WebGLSync object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteSync">WebGL2RenderingContext.deleteSync - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">The definition of 'deleteSync' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteSync.xhtml">The definition of 'glDeleteSync' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">deleteSync - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteSync.xhtml">glDeleteSync - OpenGL ES 3.0</a>
    */
   public native void deleteSync(@Nullable WebGLSync sync);
 
@@ -4878,8 +4878,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.deleteTransformFeedback() method of the WebGL 2 API deletes a given WebGLTransformFeedback object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteTransformFeedback">WebGL2RenderingContext.deleteTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'deleteTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteTransformFeedbacks.xhtml">The definition of 'glDeleteTransformFeedbacks' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">deleteTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteTransformFeedbacks.xhtml">glDeleteTransformFeedbacks - OpenGL ES 3.0</a>
    */
   public native void deleteTransformFeedback(@Nullable WebGLTransformFeedback tf);
 
@@ -4887,8 +4887,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.deleteVertexArray() method of the WebGL 2 API deletes a given WebGLVertexArrayObject object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteVertexArray">WebGL2RenderingContext.deleteVertexArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">The definition of 'deleteVertexArray' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteVertexArrays.xhtml">The definition of 'glDeleteVertexArrays' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">deleteVertexArray - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteVertexArrays.xhtml">glDeleteVertexArrays - OpenGL ES 3.0</a>
    */
   public native void deleteVertexArray(@Nullable WebGLVertexArrayObject vertexArray);
 
@@ -4896,8 +4896,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.drawArraysInstanced() method of the WebGL 2 API renders primitives from array data like the gl.drawArrays() method. In addition, it can execute multiple instances of the range of elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">WebGL2RenderingContext.drawArraysInstanced - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">The definition of 'drawArraysInstanced' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawArraysInstanced.xhtml">The definition of 'glDrawArraysInstanced' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">drawArraysInstanced - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawArraysInstanced.xhtml">glDrawArraysInstanced - OpenGL ES 3.0</a>
    */
   public native void drawArraysInstanced(@DrawPrimitiveType int mode, int first, int count,
       int instanceCount);
@@ -4906,8 +4906,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.drawBuffers() method of the WebGL 2 API defines draw buffers to which fragment colors are written into. The draw buffer settings are part of the state of the currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawBuffers">WebGL2RenderingContext.drawBuffers - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.11">The definition of 'drawBuffers' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">The definition of 'glDrawBuffers' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.11">drawBuffers - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">glDrawBuffers - OpenGL ES 3.0</a>
    */
   public native void drawBuffers(@Nonnull JsArray<Double> buffers);
 
@@ -4915,8 +4915,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.drawBuffers() method of the WebGL 2 API defines draw buffers to which fragment colors are written into. The draw buffer settings are part of the state of the currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawBuffers">WebGL2RenderingContext.drawBuffers - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.11">The definition of 'drawBuffers' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">The definition of 'glDrawBuffers' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.11">drawBuffers - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">glDrawBuffers - OpenGL ES 3.0</a>
    */
   public native void drawBuffers(@Nonnull double[] buffers);
 
@@ -4924,8 +4924,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.drawElementsInstanced() method of the WebGL 2 API renders primitives from array data like the gl.drawElements() method. In addition, it can execute multiple instances of a set of elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced">WebGL2RenderingContext.drawElementsInstanced - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">The definition of 'drawElementsInstanced' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawElementsInstanced.xhtml">The definition of 'glDrawElementsInstanced' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">drawElementsInstanced - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawElementsInstanced.xhtml">glDrawElementsInstanced - OpenGL ES 3.0</a>
    */
   public native void drawElementsInstanced(@DrawPrimitiveType int mode, int count,
       @DrawElementsDataType int type, int offset, int instanceCount);
@@ -4934,8 +4934,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.drawRangeElements() method of the WebGL API renders primitives from array data in a given range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawRangeElements">WebGL2RenderingContext.drawRangeElements - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">The definition of 'drawRangeElements' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawRangeElements.xhtml">The definition of 'glDrawRangeElements' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">drawRangeElements - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawRangeElements.xhtml">glDrawRangeElements - OpenGL ES 3.0</a>
    */
   public native void drawRangeElements(@DrawPrimitiveType int mode, int start, int end, int count,
       @DrawElementsDataType int type, int offset);
@@ -4944,8 +4944,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.endQuery() method of the WebGL 2 API marks the end of a given query target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/endQuery">WebGL2RenderingContext.endQuery - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'endQuery' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginQuery.xhtml">The definition of 'glEndQuery' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">endQuery - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginQuery.xhtml">glEndQuery - OpenGL ES 3.0</a>
    */
   public native void endQuery(int target);
 
@@ -4953,8 +4953,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.endTransformFeedback() method of the WebGL 2 API ends a transform feedback operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/endTransformFeedback">WebGL2RenderingContext.endTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'endTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginTransformFeedback.xhtml">The definition of 'glEndTransformFeedback' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">endTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginTransformFeedback.xhtml">glEndTransformFeedback - OpenGL ES 3.0</a>
    */
   public native void endTransformFeedback();
 
@@ -4962,8 +4962,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.fenceSync() method of the WebGL 2 API creates a new WebGLSync object and inserts it into the GL command stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/fenceSync">WebGL2RenderingContext.fenceSync - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">The definition of 'fenceSync' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFenceSync.xhtml">The definition of 'glFenceSync' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">fenceSync - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFenceSync.xhtml">glFenceSync - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLSync fenceSync(int condition, int flags);
@@ -4972,8 +4972,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.framebufferTextureLayer() method of the WebGL 2 API attaches a single layer of a texture to a framebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/framebufferTextureLayer">WebGL2RenderingContext.framebufferTextureLayer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'framebufferTextureLayer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTextureLayer.xhtml">The definition of 'glFramebufferTextureLayer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">framebufferTextureLayer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTextureLayer.xhtml">glFramebufferTextureLayer - OpenGL ES 3.0</a>
    */
   public native void framebufferTextureLayer(int target, int attachment,
       @Nullable WebGLTexture texture, int level, int layer);
@@ -4982,8 +4982,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getActiveUniformBlockName() method of the WebGL 2 API retrieves the name of the active uniform block at a given index within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniformBlockName">WebGL2RenderingContext.getActiveUniformBlockName - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getActiveUniformBlockName' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformBlockName.xhtml">The definition of 'glGetActiveUniformBlockName' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getActiveUniformBlockName - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformBlockName.xhtml">glGetActiveUniformBlockName - OpenGL ES 3.0</a>
    */
   @Nullable
   public native String getActiveUniformBlockName(@Nonnull WebGLProgram program,
@@ -4993,8 +4993,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getActiveUniformBlockParameter() method of the WebGL 2 API retrieves information about an active uniform block within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter">WebGL2RenderingContext.getActiveUniformBlockParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getActiveUniformBlockParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformBlockiv.xhtml">The definition of 'glGetActiveUniformBlockiv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getActiveUniformBlockParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformBlockiv.xhtml">glGetActiveUniformBlockiv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getActiveUniformBlockParameter(@Nonnull WebGLProgram program,
@@ -5004,8 +5004,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getActiveUniforms() method of the WebGL 2 API retrieves information about active uniforms within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniforms">WebGL2RenderingContext.getActiveUniforms - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getActiveUniforms' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformsiv.xhtml">The definition of 'glGetActiveUniformsiv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getActiveUniforms - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformsiv.xhtml">glGetActiveUniformsiv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getActiveUniforms(@Nonnull WebGLProgram program,
@@ -5015,8 +5015,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getActiveUniforms() method of the WebGL 2 API retrieves information about active uniforms within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniforms">WebGL2RenderingContext.getActiveUniforms - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getActiveUniforms' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformsiv.xhtml">The definition of 'glGetActiveUniformsiv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getActiveUniforms - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetActiveUniformsiv.xhtml">glGetActiveUniformsiv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getActiveUniforms(@Nonnull WebGLProgram program,
@@ -5026,7 +5026,7 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">The definition of 'getBufferSubData' in the 'WebGL 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferSubData - WebGL 2.0</a>
    */
   public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull ArrayBufferView dstBuffer, int dstOffset, int length);
@@ -5035,7 +5035,7 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">The definition of 'getBufferSubData' in the 'WebGL 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferSubData - WebGL 2.0</a>
    */
   public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull ArrayBufferView dstBuffer, int dstOffset);
@@ -5044,7 +5044,7 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">The definition of 'getBufferSubData' in the 'WebGL 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferSubData - WebGL 2.0</a>
    */
   public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull ArrayBufferView dstBuffer);
@@ -5053,8 +5053,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getFragDataLocation() method of the WebGL 2 API returns the binding of color numbers to user-defined varying out variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getFragDataLocation">WebGL2RenderingContext.getFragDataLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">The definition of 'getFragDataLocation' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFragDataLocation.xhtml">The definition of 'glGetFragDataLocation' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">getFragDataLocation - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFragDataLocation.xhtml">glGetFragDataLocation - OpenGL ES 3.0</a>
    */
   public native int getFragDataLocation(@Nonnull WebGLProgram program, @Nonnull String name);
 
@@ -5062,8 +5062,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getIndexedParameter() method of the WebGL 2 API returns indexed information about a given target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getIndexedParameter">WebGL2RenderingContext.getIndexedParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">The definition of 'getIndexedParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGet.xhtml">The definition of 'glGet' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">getIndexedParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGet.xhtml">glGet - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getIndexedParameter(int target, int index);
@@ -5072,8 +5072,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getInternalformatParameter() method of the WebGL 2 API returns information about implementation-dependent support for internal formats.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getInternalformatParameter">WebGL2RenderingContext.getInternalformatParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">The definition of 'getInternalFormatParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetInternalformativ.xhtml">The definition of 'glGetInternalformativ' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getInternalFormatParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetInternalformativ.xhtml">glGetInternalformativ - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getInternalformatParameter(int target, int internalformat, int pname);
@@ -5082,8 +5082,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getQuery() method of the WebGL 2 API returns the currently active WebGLQuery for the target, or null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getQuery">WebGL2RenderingContext.getQuery - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'getQuery' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetQueryiv.xhtml">The definition of 'glGetQueryiv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">getQuery - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetQueryiv.xhtml">glGetQueryiv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLQuery getQuery(int target, int pname);
@@ -5092,8 +5092,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getQueryParameter() method of the WebGL 2 API returns parameter information of a WebGLQuery object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getQueryParameter">WebGL2RenderingContext.getQueryParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'getQueryParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetQueryObjectuiv.xhtml">The definition of 'glGetQueryObjectuiv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">getQueryParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetQueryObjectuiv.xhtml">glGetQueryObjectuiv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getQueryParameter(@Nonnull WebGLQuery query, int pname);
@@ -5102,8 +5102,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getSamplerParameter() method of the WebGL 2 API returns parameter information of a WebGLSampler object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getSamplerParameter">WebGL2RenderingContext.getSamplerParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">The definition of 'getSamplerParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetSamplerParameter.xhtml">The definition of 'glGetSamplerParameter' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">getSamplerParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetSamplerParameter.xhtml">glGetSamplerParameter - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getSamplerParameter(@Nonnull WebGLSampler sampler, int pname);
@@ -5112,8 +5112,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getSyncParameter() method of the WebGL 2 API returns parameter information of a WebGLSync object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getSyncParameter">WebGL2RenderingContext.getSyncParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">The definition of 'getSyncParameter' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetSynciv.xhtml">The definition of 'glGetSynciv' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">getSyncParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetSynciv.xhtml">glGetSynciv - OpenGL ES 3.0</a>
    */
   @Nullable
   public native Any getSyncParameter(@Nonnull WebGLSync sync, int pname);
@@ -5122,8 +5122,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getTransformFeedbackVarying() method of the WebGL 2 API returns information about varying variables from WebGLTransformFeedback buffers.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getTransformFeedbackVarying">WebGL2RenderingContext.getTransformFeedbackVarying - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'getTransformFeedbackVarying' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTransformFeedbackVarying.xhtml">The definition of 'glGetTransformFeedbackVarying' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">getTransformFeedbackVarying - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTransformFeedbackVarying.xhtml">glGetTransformFeedbackVarying - OpenGL ES 3.0</a>
    */
   @Nullable
   public native WebGLActiveInfo getTransformFeedbackVarying(@Nonnull WebGLProgram program,
@@ -5133,8 +5133,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getUniformBlockIndex() method of the WebGL 2 API retrieves the index of a uniform block within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getUniformBlockIndex">WebGL2RenderingContext.getUniformBlockIndex - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getUniformBlockIndex' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformBlockIndex.xhtml">The definition of 'glGetUniformBlockIndex' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getUniformBlockIndex - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformBlockIndex.xhtml">glGetUniformBlockIndex - OpenGL ES 3.0</a>
    */
   public native int getUniformBlockIndex(@Nonnull WebGLProgram program,
       @Nonnull String uniformBlockName);
@@ -5143,8 +5143,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getUniformIndices() method of the WebGL 2 API retrieves the indices of a number of uniforms within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getUniformIndices">WebGL2RenderingContext.getUniformIndices - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getUniformIndices' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformIndices.xhtml">The definition of 'glGetUniformIndices' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getUniformIndices - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformIndices.xhtml">glGetUniformIndices - OpenGL ES 3.0</a>
    */
   @Nullable
   public native JsArray<Double> getUniformIndices(@Nonnull WebGLProgram program,
@@ -5154,8 +5154,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.getUniformIndices() method of the WebGL 2 API retrieves the indices of a number of uniforms within a WebGLProgram.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getUniformIndices">WebGL2RenderingContext.getUniformIndices - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'getUniformIndices' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformIndices.xhtml">The definition of 'glGetUniformIndices' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getUniformIndices - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformIndices.xhtml">glGetUniformIndices - OpenGL ES 3.0</a>
    */
   @Nullable
   public native JsArray<Double> getUniformIndices(@Nonnull WebGLProgram program,
@@ -5165,8 +5165,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.invalidateFramebuffer() method of the WebGL 2 API invalidates the contents of attachments in a framebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/invalidateFramebuffer">WebGL2RenderingContext.invalidateFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'invalidateFramebuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateFramebuffer.xhtml">The definition of 'glInvalidateFramebuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">invalidateFramebuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateFramebuffer.xhtml">glInvalidateFramebuffer - OpenGL ES 3.0</a>
    */
   public native void invalidateFramebuffer(int target, @Nonnull JsArray<Double> attachments);
 
@@ -5174,8 +5174,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.invalidateFramebuffer() method of the WebGL 2 API invalidates the contents of attachments in a framebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/invalidateFramebuffer">WebGL2RenderingContext.invalidateFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'invalidateFramebuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateFramebuffer.xhtml">The definition of 'glInvalidateFramebuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">invalidateFramebuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateFramebuffer.xhtml">glInvalidateFramebuffer - OpenGL ES 3.0</a>
    */
   public native void invalidateFramebuffer(int target, @Nonnull double[] attachments);
 
@@ -5183,8 +5183,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.invalidateSubFramebuffer() method of the WebGL 2 API invalidates portions of the contents of attachments in a framebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/invalidateSubFramebuffer">WebGL2RenderingContext.invalidateSubFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'invalidateSubFramebuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateSubFramebuffer.xhtml">The definition of 'glInvalidateSubFramebuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">invalidateSubFramebuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateSubFramebuffer.xhtml">glInvalidateSubFramebuffer - OpenGL ES 3.0</a>
    */
   public native void invalidateSubFramebuffer(int target, @Nonnull JsArray<Double> attachments,
       int x, int y, int width, int height);
@@ -5193,8 +5193,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.invalidateSubFramebuffer() method of the WebGL 2 API invalidates portions of the contents of attachments in a framebuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/invalidateSubFramebuffer">WebGL2RenderingContext.invalidateSubFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'invalidateSubFramebuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateSubFramebuffer.xhtml">The definition of 'glInvalidateSubFramebuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">invalidateSubFramebuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateSubFramebuffer.xhtml">glInvalidateSubFramebuffer - OpenGL ES 3.0</a>
    */
   public native void invalidateSubFramebuffer(int target, @Nonnull double[] attachments, int x,
       int y, int width, int height);
@@ -5203,8 +5203,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.isQuery() method of the WebGL 2 API returns true if the passed object is a valid WebGLQuery object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isQuery">WebGL2RenderingContext.isQuery - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">The definition of 'isQuery' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsQuery.xhtml">The definition of 'glIsQuery' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12">isQuery - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsQuery.xhtml">glIsQuery - OpenGL ES 3.0</a>
    */
   public native boolean isQuery(@Nullable WebGLQuery query);
 
@@ -5212,8 +5212,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.isSampler() method of the WebGL 2 API returns true if the passed object is a valid WebGLSampler object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isSampler">WebGL2RenderingContext.isSampler - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">The definition of 'isSampler' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsSampler.xhtml">The definition of 'glIsSampler' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13">isSampler - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsSampler.xhtml">glIsSampler - OpenGL ES 3.0</a>
    */
   public native boolean isSampler(@Nullable WebGLSampler sampler);
 
@@ -5221,8 +5221,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.isSync() method of the WebGL 2 API returns true if the passed object is a valid WebGLSync object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isSync">WebGL2RenderingContext.isSync - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">The definition of 'isSync' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsSync.xhtml">The definition of 'glIsSync' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">isSync - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsSync.xhtml">glIsSync - OpenGL ES 3.0</a>
    */
   public native boolean isSync(@Nullable WebGLSync sync);
 
@@ -5230,8 +5230,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.isTransformFeedback() method of the WebGL 2 API returns true if the passed object is a valid WebGLTransformFeedback object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isTransformFeedback">WebGL2RenderingContext.isTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'isTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsTransformFeedback.xhtml">The definition of 'glIsTransformFeedback' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">isTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsTransformFeedback.xhtml">glIsTransformFeedback - OpenGL ES 3.0</a>
    */
   public native boolean isTransformFeedback(@Nullable WebGLTransformFeedback tf);
 
@@ -5239,8 +5239,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.isVertexArray() method of the WebGL API returns true if the passed object is a valid WebGLVertexArrayObject object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isVertexArray">WebGL2RenderingContext.isVertexArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">The definition of 'isVertexArray' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsVertexArray.xhtml">The definition of 'glIsVertexArray' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17">isVertexArray - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsVertexArray.xhtml">glIsVertexArray - OpenGL ES 3.0</a>
    */
   public native boolean isVertexArray(@Nullable WebGLVertexArrayObject vertexArray);
 
@@ -5248,8 +5248,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.pauseTransformFeedback() method of the WebGL 2 API pauses a transform feedback operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/pauseTransformFeedback">WebGL2RenderingContext.pauseTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'pauseTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glPauseTransformFeedback.xhtml">The definition of 'glPauseTransformFeedback' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">pauseTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glPauseTransformFeedback.xhtml">glPauseTransformFeedback - OpenGL ES 3.0</a>
    */
   public native void pauseTransformFeedback();
 
@@ -5257,8 +5257,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.readBuffer() method of the WebGL 2 API selects a color buffer as the source for pixels for subsequent calls to copyTexImage2D, copyTexSubImage2D, copyTexSubImage3D or readPixels.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/readBuffer">WebGL2RenderingContext.readBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">The definition of 'readBuffer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glReadBuffer.xhtml">The definition of 'glReadBuffer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">readBuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glReadBuffer.xhtml">glReadBuffer - OpenGL ES 3.0</a>
    */
   public native void readBuffer(int src);
 
@@ -5266,8 +5266,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.renderbufferStorageMultisample() method of the WebGL 2 API returns creates and initializes a renderbuffer object's data store and allows specifying a number of samples to be used.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/renderbufferStorageMultisample">WebGL2RenderingContext.renderbufferStorageMultisample - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">The definition of 'glRenderbufferStorageMultisample' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorageMultisample.xhtml">The definition of 'glRenderbufferStorageMultisample' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">glRenderbufferStorageMultisample - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorageMultisample.xhtml">glRenderbufferStorageMultisample - OpenGL ES 3.0</a>
    */
   public native void renderbufferStorageMultisample(int target, int samples, int internalformat,
       int width, int height);
@@ -5276,8 +5276,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.resumeTransformFeedback() method of the WebGL 2 API resumes a transform feedback operation.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/resumeTransformFeedback">WebGL2RenderingContext.resumeTransformFeedback - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'resumeTransformFeedback' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glResumeTransformFeedback.xhtml">The definition of 'glResumeTransformFeedback' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">resumeTransformFeedback - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glResumeTransformFeedback.xhtml">glResumeTransformFeedback - OpenGL ES 3.0</a>
    */
   public native void resumeTransformFeedback();
 
@@ -5289,8 +5289,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">The definition of 'glTexImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">glTexImage3D - OpenGL ES 3.0</a>
    */
   public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
       int width, int height, int depth, int border, int format, int type, int pboOffset);
@@ -5299,8 +5299,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">The definition of 'glTexImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">glTexImage3D - OpenGL ES 3.0</a>
    */
   public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
       int width, int height, int depth, int border, int format, int type,
@@ -5310,8 +5310,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">The definition of 'glTexImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">glTexImage3D - OpenGL ES 3.0</a>
    */
   public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
       int width, int height, int depth, int border, int format, int type,
@@ -5321,8 +5321,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">The definition of 'glTexImage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage3D.xhtml">glTexImage3D - OpenGL ES 3.0</a>
    */
   public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
       int width, int height, int depth, int border, int format, int type,
@@ -5332,8 +5332,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.texStorage2D() method of the WebGL API specifies all levels of two-dimensional texture storage.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage2D">WebGL2RenderingContext.texStorage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texStorage2D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexStorage2D.xhtml">The definition of 'glTexStorage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texStorage2D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexStorage2D.xhtml">glTexStorage2D - OpenGL ES 3.0</a>
    */
   public native void texStorage2D(@Texture2DTargetType int target, int levels, int internalformat,
       int width, int height);
@@ -5342,8 +5342,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.texStorage3D() method of the WebGL API specifies all levels of a three-dimensional texture or two-dimensional array texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage3D">WebGL2RenderingContext.texStorage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texStorage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexStorage3D.xhtml">The definition of 'glTexStorage3D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texStorage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexStorage3D.xhtml">glTexStorage3D - OpenGL ES 3.0</a>
    */
   public native void texStorage3D(@Texture3DTargetType int target, int levels, int internalformat,
       int width, int height, int depth);
@@ -5352,8 +5352,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
       int yoffset, int zoffset, int width, int height, int depth, int format, int type,
@@ -5363,8 +5363,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
       int yoffset, int zoffset, int width, int height, int depth, int format, int type,
@@ -5374,8 +5374,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
       int yoffset, int zoffset, int width, int height, int depth, int format, int type,
@@ -5385,8 +5385,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">The definition of 'texSubImage3D' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texSubImage3D - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml">glTexSubImage2D - OpenGL ES 3.0</a>
    */
   public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
       int yoffset, int zoffset, int width, int height, int depth, int format, int type,
@@ -5396,8 +5396,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.transformFeedbackVaryings() method of the WebGL 2 API specifies values to record in WebGLTransformFeedback buffers.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/transformFeedbackVaryings">WebGL2RenderingContext.transformFeedbackVaryings - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'transformFeedbackVaryings' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTransformFeedbackVaryings.xhtml">The definition of 'glTransformFeedbackVaryings' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">transformFeedbackVaryings - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTransformFeedbackVaryings.xhtml">glTransformFeedbackVaryings - OpenGL ES 3.0</a>
    */
   public native void transformFeedbackVaryings(@Nonnull WebGLProgram program,
       @Nonnull JsArray<String> varyings, int bufferMode);
@@ -5406,8 +5406,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.transformFeedbackVaryings() method of the WebGL 2 API specifies values to record in WebGLTransformFeedback buffers.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/transformFeedbackVaryings">WebGL2RenderingContext.transformFeedbackVaryings - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">The definition of 'transformFeedbackVaryings' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTransformFeedbackVaryings.xhtml">The definition of 'glTransformFeedbackVaryings' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15">transformFeedbackVaryings - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTransformFeedbackVaryings.xhtml">glTransformFeedbackVaryings - OpenGL ES 3.0</a>
    */
   public native void transformFeedbackVaryings(@Nonnull WebGLProgram program,
       @Nonnull String[] varyings, int bufferMode);
@@ -5416,8 +5416,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1ui(@Nullable WebGLUniformLocation location, int v0);
 
@@ -5425,8 +5425,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
@@ -5435,8 +5435,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
@@ -5445,8 +5445,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -5455,8 +5455,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -5465,8 +5465,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
@@ -5475,8 +5475,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
@@ -5485,8 +5485,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -5495,8 +5495,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -5505,8 +5505,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
@@ -5514,8 +5514,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
@@ -5524,8 +5524,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -5534,8 +5534,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -5543,8 +5543,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2ui(@Nullable WebGLUniformLocation location, int v0, int v1);
 
@@ -5552,8 +5552,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
@@ -5562,8 +5562,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
@@ -5572,8 +5572,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -5582,8 +5582,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -5592,8 +5592,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
@@ -5602,8 +5602,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
@@ -5612,8 +5612,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -5622,8 +5622,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -5632,8 +5632,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
@@ -5641,8 +5641,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
@@ -5651,8 +5651,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -5661,8 +5661,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -5670,8 +5670,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3ui(@Nullable WebGLUniformLocation location, int v0, int v1, int v2);
 
@@ -5679,8 +5679,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
@@ -5689,8 +5689,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
@@ -5699,8 +5699,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -5709,8 +5709,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -5719,8 +5719,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
@@ -5729,8 +5729,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
@@ -5739,8 +5739,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -5749,8 +5749,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -5759,8 +5759,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
@@ -5768,8 +5768,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
@@ -5778,8 +5778,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -5788,8 +5788,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -5797,8 +5797,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4ui(@Nullable WebGLUniformLocation location, int v0, int v1, int v2,
       int v3);
@@ -5807,8 +5807,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset, int srcLength);
@@ -5817,8 +5817,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset, int srcLength);
@@ -5827,8 +5827,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -5837,8 +5837,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset, int srcLength);
@@ -5847,8 +5847,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data,
       int srcOffset);
@@ -5857,8 +5857,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32Array data,
       int srcOffset);
@@ -5867,8 +5867,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -5877,8 +5877,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data,
       int srcOffset);
@@ -5887,8 +5887,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull Uint32List data);
 
@@ -5896,8 +5896,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull Uint32Array data);
@@ -5906,8 +5906,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> data);
@@ -5916,8 +5916,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniform' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
@@ -5925,8 +5925,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.uniformBlockBinding() method of the WebGL 2 API assigns binding points for active uniform blocks.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniformBlockBinding">WebGL2RenderingContext.uniformBlockBinding - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">The definition of 'uniformBlockBinding' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glUniformBlockBinding.xhtml">The definition of 'glUniformBlockBinding' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">uniformBlockBinding - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glUniformBlockBinding.xhtml">glUniformBlockBinding - OpenGL ES 3.0</a>
    */
   public native void uniformBlockBinding(@Nonnull WebGLProgram program, int uniformBlockIndex,
       int uniformBlockBinding);
@@ -5935,8 +5935,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -5945,8 +5945,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -5955,8 +5955,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -5965,8 +5965,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -5975,8 +5975,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -5985,8 +5985,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -5995,8 +5995,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -6005,8 +6005,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -6015,8 +6015,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -6025,8 +6025,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -6035,8 +6035,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -6045,8 +6045,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -6055,8 +6055,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -6065,8 +6065,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -6075,8 +6075,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -6085,8 +6085,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -6095,8 +6095,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -6105,8 +6105,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -6115,8 +6115,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -6125,8 +6125,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -6135,8 +6135,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -6145,8 +6145,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -6155,8 +6155,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -6165,8 +6165,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -6175,8 +6175,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -6185,8 +6185,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -6195,8 +6195,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -6205,8 +6205,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -6215,8 +6215,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -6225,8 +6225,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -6235,8 +6235,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -6245,8 +6245,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -6255,8 +6255,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -6265,8 +6265,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -6275,8 +6275,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -6285,8 +6285,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -6295,8 +6295,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -6305,8 +6305,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -6315,8 +6315,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -6325,8 +6325,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -6335,8 +6335,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -6345,8 +6345,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -6355,8 +6355,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -6365,8 +6365,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -6375,8 +6375,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -6385,8 +6385,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -6395,8 +6395,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -6405,8 +6405,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -6415,8 +6415,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -6425,8 +6425,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -6435,8 +6435,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -6445,8 +6445,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -6455,8 +6455,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -6465,8 +6465,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -6475,8 +6475,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -6485,8 +6485,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -6495,8 +6495,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -6505,8 +6505,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -6515,8 +6515,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -6525,8 +6525,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -6535,8 +6535,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset, int srcLength);
@@ -6545,8 +6545,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset, int srcLength);
@@ -6555,8 +6555,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset, int srcLength);
@@ -6565,8 +6565,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset, int srcLength);
@@ -6575,8 +6575,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data, int srcOffset);
@@ -6585,8 +6585,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data, int srcOffset);
@@ -6595,8 +6595,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data, int srcOffset);
@@ -6605,8 +6605,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data, int srcOffset);
@@ -6615,8 +6615,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List data);
@@ -6625,8 +6625,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32Array data);
@@ -6635,8 +6635,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> data);
@@ -6645,8 +6645,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix">WebGLRenderingContext.uniformMatrix - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'uniformMatrix' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">The definition of 'glUniform' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
   public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
@@ -6655,8 +6655,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.vertexAttribDivisor() method of the WebGL 2 API modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with gl.drawArraysInstanced() and gl.drawElementsInstanced().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribDivisor">WebGL2RenderingContext.vertexAttribDivisor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">The definition of 'vertexAttribDivisor' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glVertexAttribDivisor.xhtml">The definition of 'glVertexAttribDivisor' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9">vertexAttribDivisor - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glVertexAttribDivisor.xhtml">glVertexAttribDivisor - OpenGL ES 3.0</a>
    */
   public native void vertexAttribDivisor(int index, int divisor);
 
@@ -6664,8 +6664,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4i(int index, int x, int y, int z, int w);
 
@@ -6673,8 +6673,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4iv(int index, @Nonnull Int32List values);
 
@@ -6682,8 +6682,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4iv(int index, @Nonnull Int32Array values);
 
@@ -6691,8 +6691,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4iv(int index, @Nonnull JsArray<Double> values);
 
@@ -6700,8 +6700,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4iv(int index, @Nonnull double[] values);
 
@@ -6709,8 +6709,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4ui(int index, int x, int y, int z, int w);
 
@@ -6718,8 +6718,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4uiv(int index, @Nonnull Uint32List values);
 
@@ -6727,8 +6727,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4uiv(int index, @Nonnull Uint32Array values);
 
@@ -6736,8 +6736,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4uiv(int index, @Nonnull JsArray<Double> values);
 
@@ -6745,8 +6745,8 @@ public class WebGL2RenderingContext {
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">The definition of 'vertexAttrib' in the 'WebGL 1.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">The definition of 'glVertexAttrib' in the 'OpenGL ES 2.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
   public native void vertexAttribI4uiv(int index, @Nonnull double[] values);
 
@@ -6754,8 +6754,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.vertexAttribIPointer() method of the WebGL 2 API specifies integer data formats and locations of vertex attributes in a vertex attributes array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribIPointer">WebGL2RenderingContext.vertexAttribIPointer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">The definition of 'vertexAttribIPointer' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glVertexAttribPointer.xhtml">The definition of 'glVertexAttribPointer' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">vertexAttribIPointer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glVertexAttribPointer.xhtml">glVertexAttribPointer - OpenGL ES 3.0</a>
    */
   public native void vertexAttribIPointer(int index, @VertexDimensions int size,
       @AttributeIntegerDataType int type, int stride, int offset);
@@ -6764,8 +6764,8 @@ public class WebGL2RenderingContext {
    * The WebGL2RenderingContext.waitSync() method of the WebGL 2 API returns immediately, but waits on the GL server until the given WebGLSync object is signaled.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/waitSync">WebGL2RenderingContext.waitSync - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">The definition of 'waitSync' in the 'WebGL 2.0' specification.</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glWaitSync.xhtml">The definition of 'glWaitSync' in the 'OpenGL ES 3.0' specification.</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14">waitSync - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glWaitSync.xhtml">glWaitSync - OpenGL ES 3.0</a>
    */
   public native void waitSync(@Nonnull WebGLSync sync, int flags, int timeout);
 }

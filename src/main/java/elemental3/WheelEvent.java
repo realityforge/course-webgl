@@ -11,8 +11,8 @@ import jsinterop.annotations.JsType;
  * The WheelEvent interface represents events that occur due to the user moving a mouse wheel or similar input device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent">WheelEvent - MDN</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-wheelevent">The definition of 'The WheelEvent interface' in the 'UI Events' specification.</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-wheelevent">The definition of 'WheelEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-wheelevent">The WheelEvent interface - UI Events</a>
+ * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-wheelevent">WheelEvent - Document Object Model (DOM) Level 3 Events Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +34,7 @@ public class WheelEvent extends MouseEvent {
    * The WheelEvent() constructor returns a newly created WheelEvent object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent">WheelEvent.WheelEvent - MDN</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-WheelEvent">The definition of 'WheelEvent()' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-WheelEvent">WheelEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   public WheelEvent(@Nonnull final String type, @Nonnull final WheelEventInit eventInitDict) {
     super( null );
@@ -44,7 +44,7 @@ public class WheelEvent extends MouseEvent {
    * The WheelEvent() constructor returns a newly created WheelEvent object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent">WheelEvent.WheelEvent - MDN</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-WheelEvent">The definition of 'WheelEvent()' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-WheelEvent">WheelEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   public WheelEvent(@Nonnull final String type) {
     super( null );
@@ -54,7 +54,7 @@ public class WheelEvent extends MouseEvent {
    * The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of the delta values scroll amount. Permitted values are:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode">WheelEvent.deltaMode - MDN</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaMode">The definition of 'WheelEvent.deltaMode' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaMode">WheelEvent.deltaMode - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   @JsProperty(
       name = "deltaMode"
@@ -66,7 +66,7 @@ public class WheelEvent extends MouseEvent {
    * The WheelEvent.deltaX read-only property is a double representing the horizontal scroll amount in the WheelEvent.deltaMode unit.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX">WheelEvent.deltaX - MDN</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaX">The definition of 'WheelEvent.deltaX' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaX">WheelEvent.deltaX - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   @JsProperty(
       name = "deltaX"
@@ -77,7 +77,7 @@ public class WheelEvent extends MouseEvent {
    * The WheelEvent.deltaY read-only property is a double representing the vertical scroll amount in the WheelEvent.deltaMode unit.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY">WheelEvent.deltaY - MDN</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaY">The definition of 'WheelEvent.deltaY' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaY">WheelEvent.deltaY - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   @JsProperty(
       name = "deltaY"
@@ -88,7 +88,7 @@ public class WheelEvent extends MouseEvent {
    * The WheelEvent.deltaZ read-only property is a double representing the scroll amount along the z-axis, in the WheelEvent.deltaMode unit.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ">WheelEvent.deltaZ - MDN</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaZ">The definition of 'WheelEvent.deltaZ' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaZ">WheelEvent.deltaZ - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   @JsProperty(
       name = "deltaZ"

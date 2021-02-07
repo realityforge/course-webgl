@@ -10,6 +10,8 @@ import jsinterop.annotations.JsType;
  * A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter">NodeFilter - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-nodefilter">NodeFilter - DOM</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">The definition of 'ScrollToOptions' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">ScrollToOptions - CSS Object Model (CSSOM) View Module</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/left">ScrollToOptions.left - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">The definition of 'left' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">left - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty(
       name = "left"
@@ -43,7 +43,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/left">ScrollToOptions.left - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">The definition of 'left' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">left - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty
   void setLeft(double left);
@@ -52,7 +52,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/left">ScrollToOptions.left - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">The definition of 'left' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">left - CSS Object Model (CSSOM) View Module</a>
    */
   @JsOverlay
   @Nonnull
@@ -65,7 +65,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top">ScrollToOptions.top - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">The definition of 'top' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">top - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty(
       name = "top"
@@ -76,7 +76,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top">ScrollToOptions.top - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">The definition of 'top' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">top - CSS Object Model (CSSOM) View Module</a>
    */
   @JsProperty
   void setTop(double top);
@@ -85,7 +85,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * A double.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top">ScrollToOptions.top - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">The definition of 'top' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">top - CSS Object Model (CSSOM) View Module</a>
    */
   @JsOverlay
   @Nonnull

@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * The DOMPointReadOnly interface specifies the coordinate and perspective fields used by DOMPoint to define a 2D or 3D point in a coordinate system.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly">DOMPointReadOnly - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMPoint">DOMPoint - Geometry Interfaces Module Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

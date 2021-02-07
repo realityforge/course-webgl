@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGLength interface correspond to the length basic data type.
+ * The SVGLength interface correspond to the &lt;length&gt; basic data type.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength">SVGLength - MDN</a>
  */

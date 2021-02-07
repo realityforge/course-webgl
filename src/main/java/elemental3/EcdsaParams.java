@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The EcdsaParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify() when using the ECDSA algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcdsaParams">EcdsaParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdsaParams">The definition of 'SubtleCrypto.EcdsaParams' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdsaParams">SubtleCrypto.EcdsaParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

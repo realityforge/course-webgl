@@ -52,7 +52,7 @@ public final class Global {
    * The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/caches">Window.caches - MDN</a>
-   * @see <a href="https://w3c.github.io/ServiceWorker/#self-caches">The definition of 'caches' in the 'Service Workers' specification.</a>
+   * @see <a href="https://w3c.github.io/ServiceWorker/#self-caches">caches - Service Workers</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/">Service Workers</a>
    */
   @Nonnull
@@ -73,7 +73,7 @@ public final class Global {
    * The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">WindowOrWorkerGlobalScope.crossOriginIsolated - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-crossoriginisolated">The definition of 'crossOriginIsolated' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-crossoriginisolated">crossOriginIsolated - HTML Living Standard</a>
    */
   public static boolean crossOriginIsolated() {
     return globalThis().crossOriginIsolated();
@@ -83,7 +83,7 @@ public final class Global {
    * The read-only Window.crypto property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crypto">Window.crypto - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-GlobalCrypto">The definition of 'Window.crypto' in the 'Web Cryptography API' specification.</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-GlobalCrypto">Window.crypto - Web Cryptography API</a>
    */
   @Nonnull
   public static Crypto crypto() {
@@ -104,7 +104,7 @@ public final class Global {
    * The devicePixelRatio of Window interface returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-devicepixelratio">The definition of 'Window.devicePixelRatio' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-devicepixelratio">Window.devicePixelRatio - CSS Object Model (CSSOM) View Module</a>
    */
   public static double devicePixelRatio() {
     return globalThis().devicePixelRatio();
@@ -114,8 +114,8 @@ public final class Global {
    * window.document returns a reference to the document contained in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/document">Window.document - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-2">The definition of 'Window.document' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-document-0">The definition of 'Window.document' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-2">Window.document - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-document-0">Window.document - HTML5</a>
    */
   @Nonnull
   public static Document document() {
@@ -126,7 +126,7 @@ public final class Global {
    * The read-only Window property event returns the Event which is currently being handled by the site's code. Outside the context of an event handler, the value is always undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/event">Window.event - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-window-event">The definition of 'Window.event' in the 'DOM' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-window-event">Window.event - DOM</a>
    */
   @Nullable
   public static Any event() {
@@ -142,7 +142,7 @@ public final class Global {
    * The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement">Window.frameElement - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frameelement">The definition of 'Window.frameElement' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frameelement">Window.frameElement - HTML Living Standard</a>
    */
   @Nullable
   public static Element frameElement() {
@@ -153,8 +153,8 @@ public final class Global {
    * Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">Window.frames - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frames">The definition of 'Window.frames' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-frames">The definition of 'Window.frames' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frames">Window.frames - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-frames">Window.frames - HTML5</a>
    */
   @Nonnull
   public static Window frames() {
@@ -165,8 +165,8 @@ public final class Global {
    * The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history">Window.history - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#the-history-interface">The definition of 'The History interface' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-history-interface">The definition of 'The History interface' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#the-history-interface">The History interface - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-history-interface">The History interface - HTML5</a>
    */
   @Nonnull
   public static History history() {
@@ -177,8 +177,8 @@ public final class Global {
    * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/indexedDB">Window.indexedDB - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-windoworworkerglobalscope-indexeddb">The definition of 'indexedDB' in the 'Indexed Database API Draft' specification.</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb">The definition of 'indexedDB' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-windoworworkerglobalscope-indexeddb">indexedDB - Indexed Database API Draft</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb">indexedDB - Indexed Database API 2.0</a>
    */
   @Nonnull
   public static IDBFactory indexedDB() {
@@ -217,8 +217,8 @@ public final class Global {
    * Returns the number of frames (either frame or iframe elements) in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/length">Window.length - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-length">The definition of 'Window.length' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-length">The definition of 'Window.length' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-length">Window.length - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-length">Window.length - HTML5</a>
    */
   public static int length() {
     return globalThis().length();
@@ -228,7 +228,7 @@ public final class Global {
    * The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Window.localStorage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage">The definition of 'localStorage' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage">localStorage - HTML Living Standard</a>
    */
   @Nonnull
   public static Storage localStorage() {
@@ -239,8 +239,8 @@ public final class Global {
    * The Window.location read-only property returns a Location object with information about the current location of the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location">Window.location - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-location-interface">The definition of 'Window.location' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-location-interface">The definition of 'Window.location' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-location-interface">Window.location - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-location-interface">Window.location - HTML5</a>
    */
   @Nonnull
   public static Location location() {
@@ -251,8 +251,8 @@ public final class Global {
    * Returns the locationbar object, whose visibility can be checked.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar">Window.locationbar - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-locationbar">The definition of 'Window.locationbar' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-locationbar">The definition of 'Window.locationbar' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-locationbar">Window.locationbar - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-locationbar">Window.locationbar - HTML5</a>
    */
   @Nonnull
   public static BarProp locationbar() {
@@ -263,8 +263,8 @@ public final class Global {
    * The Window.menubar property returns the menubar object, whose visibility can be checked.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar">Window.menubar - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-menubar">The definition of 'Window.menubar' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-menubar">The definition of 'Window.menubar' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-menubar">Window.menubar - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-menubar">Window.menubar - HTML5</a>
    */
   @Nonnull
   public static BarProp menubar() {
@@ -275,8 +275,8 @@ public final class Global {
    * The Window.name property gets/sets the name of the window's browsing context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name">Window.name - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-name">The definition of 'Window.name' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-name">The definition of 'Window.name' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-name">Window.name - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-name">Window.name - HTML5</a>
    */
   @Nonnull
   public static String name() {
@@ -287,7 +287,7 @@ public final class Global {
    * The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator">Window.navigator - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator">The definition of 'Window: navigator' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator">Window: navigator - HTML Living Standard</a>
    */
   @Nonnull
   public static Navigator navigator() {
@@ -358,7 +358,7 @@ public final class Global {
    * The onauxclick property of the GlobalEventHandlers mixin is an EventHandler for processing auxclick events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
-   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">The definition of 'onauxclick' in the 'UI Events' specification.</a>
+   * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">onauxclick - UI Events</a>
    */
   @Nullable
   public static EventHandler onauxclick() {
@@ -389,7 +389,7 @@ public final class Global {
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onblur">Window.onblur - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">The definition of 'onblur' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">onblur - HTML Living Standard</a>
    */
   @Nullable
   public static FocusEventHandler onblur() {
@@ -400,7 +400,7 @@ public final class Global {
    * The oncancel property of the GlobalEventHandlers mixin is an EventHandler for processing cancel events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">The definition of 'oncancel' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">oncancel - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler oncancel() {
@@ -451,7 +451,7 @@ public final class Global {
    * The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">The definition of 'onclose' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">onclose - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onclose() {
@@ -467,7 +467,7 @@ public final class Global {
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oncontextmenu">Window.oncontextmenu - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">The definition of 'oncontextmenu' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">oncontextmenu - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler oncontextmenu() {
@@ -488,7 +488,7 @@ public final class Global {
    * The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondblclick">Window.ondblclick - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">The definition of 'ondblclick' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">ondblclick - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler ondblclick() {
@@ -531,8 +531,8 @@ public final class Global {
    * A global event handler for the drag event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag">GlobalEventHandlers.ondrag - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">The definition of 'ondrag' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">The definition of 'ondrag' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">ondrag - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">ondrag - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondrag() {
@@ -543,8 +543,8 @@ public final class Global {
    * A global event handler for the dragend event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend">GlobalEventHandlers.ondragend - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">The definition of 'ondragend' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">The definition of 'ondragend' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">ondragend - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">ondragend - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondragend() {
@@ -555,8 +555,8 @@ public final class Global {
    * A global event handler for the dragenter event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter">GlobalEventHandlers.ondragenter - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">The definition of 'ondragenter' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">The definition of 'ondragenter' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">ondragenter - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">ondragenter - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondragenter() {
@@ -567,8 +567,8 @@ public final class Global {
    * A global event handler for the dragleave event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave">GlobalEventHandlers.ondragleave - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">The definition of 'ondragleave' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">The definition of 'ondragleave' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">ondragleave - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">ondragleave - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondragleave() {
@@ -579,8 +579,8 @@ public final class Global {
    * A global event handler for the dragover event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover">GlobalEventHandlers.ondragover - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">The definition of 'ondragover' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">The definition of 'ondragover' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">ondragover - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">ondragover - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondragover() {
@@ -591,8 +591,8 @@ public final class Global {
    * A global event handler for the dragstart event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart">GlobalEventHandlers.ondragstart - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">The definition of 'ondragstart' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">The definition of 'ondragstart' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">ondragstart - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">ondragstart - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondragstart() {
@@ -603,8 +603,8 @@ public final class Global {
    * A global event handler for the drop event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrop">GlobalEventHandlers.ondrop - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">The definition of 'ondrop' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">The definition of 'ondrop' in the 'HTML 5.1' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">ondrop - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">ondrop - HTML 5.1</a>
    */
   @Nullable
   public static EventHandler ondrop() {
@@ -645,7 +645,7 @@ public final class Global {
    * The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">The definition of 'onerror' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">onerror - HTML Living Standard</a>
    */
   @Nullable
   public static OnErrorEventHandler onerror() {
@@ -656,7 +656,7 @@ public final class Global {
    * The onfocus property of the GlobalEventHandlers mixin is an EventHandler that processes focus events on the given element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onfocus">Window.onfocus - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">The definition of 'onfocus' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">onfocus - HTML Living Standard</a>
    */
   @Nullable
   public static FocusEventHandler onfocus() {
@@ -667,7 +667,7 @@ public final class Global {
    * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">The definition of 'onformdata' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">onformdata - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onformdata() {
@@ -678,7 +678,7 @@ public final class Global {
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">The definition of 'ongotpointercapture' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">ongotpointercapture - Pointer Events &ndash; Level 2</a>
    */
   @Nullable
   public static EventHandler ongotpointercapture() {
@@ -689,9 +689,9 @@ public final class Global {
    * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onhashchange">Window.onhashchange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onhashchange">The definition of 'onhashchange' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onhashchange">onhashchange - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">GlobalEventHandlers - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">GlobalEventHandlers - HTML5</a>
    */
   @Nullable
   public static HashChangeEventHandler onhashchange() {
@@ -702,7 +702,7 @@ public final class Global {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oninput">Window.oninput - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">onkeydown - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler oninput() {
@@ -723,7 +723,7 @@ public final class Global {
    * The onkeydown property of the GlobalEventHandlers mixin is an EventHandler that processes keydown events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeydown">Window.onkeydown - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">The definition of 'onkeydown' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">onkeydown - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onkeydown() {
@@ -734,7 +734,7 @@ public final class Global {
    * The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeypress">Window.onkeypress - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">The definition of 'onkeypress' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">onkeypress - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onkeypress() {
@@ -745,7 +745,7 @@ public final class Global {
    * The onkeyup property of the GlobalEventHandlers mixin is an EventHandler that processes keyup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeyup">Window.onkeyup - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">The definition of 'onkeyup' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">onkeyup - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onkeyup() {
@@ -756,7 +756,7 @@ public final class Global {
    * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onlanguagechange">Window.onlanguagechange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">The definition of 'WindowEventHandler.onlanguagechange' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">WindowEventHandler.onlanguagechange - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onlanguagechange() {
@@ -767,7 +767,7 @@ public final class Global {
    * The onload property of the GlobalEventHandlers mixin is an EventHandler that processes load events on a Window, XMLHttpRequest, img element, etc.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onload">Window.onload - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">The definition of 'onload' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">onload - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onload() {
@@ -798,7 +798,7 @@ public final class Global {
    * The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">The definition of 'onloadstart' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">onloadstart - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onloadstart() {
@@ -809,7 +809,7 @@ public final class Global {
    * The onlostpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes lostpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">The definition of 'onlostpointercapture' in the 'Pointer Events &ndash; Level 2' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">onlostpointercapture - Pointer Events &ndash; Level 2</a>
    */
   @Nullable
   public static EventHandler onlostpointercapture() {
@@ -820,7 +820,7 @@ public final class Global {
    * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">The definition of 'onmessage' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">onmessage - HTML Living Standard</a>
    */
   @Nullable
   public static MessageEventHandler onmessage() {
@@ -831,7 +831,7 @@ public final class Global {
    * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">The definition of 'onmessageerror' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">onmessageerror - HTML Living Standard</a>
    */
   @Nullable
   public static MessageEventHandler onmessageerror() {
@@ -872,7 +872,7 @@ public final class Global {
    * The onmousemove property of the GlobalEventHandlers mixin is an EventHandler that processes mousemove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousemove">Window.onmousemove - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">The definition of 'onmousemove' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">onmousemove - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onmousemove() {
@@ -893,7 +893,7 @@ public final class Global {
    * The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseover">Window.onmouseover - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">The definition of 'onmouseover' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">onmouseover - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onmouseover() {
@@ -969,8 +969,8 @@ public final class Global {
    * The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">GlobalEventHandlers.onpointercancel - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">The definition of 'onpointercancel' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">The definition of 'onpointercancel' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">onpointercancel - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">onpointercancel - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointercancel() {
@@ -981,8 +981,8 @@ public final class Global {
    * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">GlobalEventHandlers.onpointerdown - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">The definition of 'onpointerdown' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">The definition of 'onpointerdown' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">onpointerdown - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">onpointerdown - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointerdown() {
@@ -993,8 +993,8 @@ public final class Global {
    * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter">GlobalEventHandlers.onpointerenter - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">The definition of 'onpointerenter' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">The definition of 'onpointerenter' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">onpointerenter - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">onpointerenter - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointerenter() {
@@ -1005,8 +1005,8 @@ public final class Global {
    * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave">GlobalEventHandlers.onpointerleave - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">The definition of 'onpointerleave' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">The definition of 'onpointerleave' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">onpointerleave - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">onpointerleave - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointerleave() {
@@ -1017,8 +1017,8 @@ public final class Global {
    * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">GlobalEventHandlers.onpointermove - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">The definition of 'onpointermove' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">The definition of 'onpointermove' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">onpointermove - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">onpointermove - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointermove() {
@@ -1029,8 +1029,8 @@ public final class Global {
    * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">GlobalEventHandlers.onpointerout - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">The definition of 'onpointerout' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">The definition of 'onpointerout' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">onpointerout - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">onpointerout - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointerout() {
@@ -1041,8 +1041,8 @@ public final class Global {
    * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover">GlobalEventHandlers.onpointerover - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">The definition of 'onpointerover' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">The definition of 'onpointerover' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">onpointerover - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">onpointerover - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointerover() {
@@ -1053,8 +1053,8 @@ public final class Global {
    * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup">GlobalEventHandlers.onpointerup - MDN</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">The definition of 'onpointerup' in the 'Pointer Events &ndash; Level 2' specification.</a>
-   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">The definition of 'onpointerup' in the 'Pointer Events' specification.</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">onpointerup - Pointer Events &ndash; Level 2</a>
+   * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">onpointerup - Pointer Events</a>
    */
   @Nullable
   public static EventHandler onpointerup() {
@@ -1065,7 +1065,7 @@ public final class Global {
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onpopstate">Window.onpopstate - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">The definition of 'onpopstate' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">onpopstate - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onpopstate() {
@@ -1086,7 +1086,7 @@ public final class Global {
    * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled">Window.onrejectionhandled - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">The definition of 'onrejectionhandled' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">onrejectionhandled - HTML Living Standard</a>
    */
   @Nullable
   public static PromiseRejectionEventHandler onrejectionhandled() {
@@ -1117,8 +1117,8 @@ public final class Global {
    * The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onscroll">Window.onscroll - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">The definition of 'onscroll' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">The definition of 'onscroll' in the 'Document Object Model (DOM) Level 3 Events Specification' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">onscroll - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">onscroll - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   @Nullable
   public static EventHandler onscroll() {
@@ -1154,7 +1154,7 @@ public final class Global {
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">The definition of 'GlobalEventHandlers.onselectionchange' in the 'Selection API' specification.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">GlobalEventHandlers.onselectionchange - Selection API</a>
    */
   @Nullable
   public static EventHandler onselectionchange() {
@@ -1165,7 +1165,7 @@ public final class Global {
    * The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">The definition of 'GlobalEventHandlers.onselectstart' in the 'Selection API' specification.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">GlobalEventHandlers.onselectstart - Selection API</a>
    */
   @Nullable
   public static EventHandler onselectstart() {
@@ -1186,7 +1186,7 @@ public final class Global {
    * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onstorage">Window.onstorage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">The definition of 'onstorage' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">onstorage - HTML Living Standard</a>
    */
   @Nullable
   public static StorageEventHandler onstorage() {
@@ -1197,7 +1197,7 @@ public final class Global {
    * The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onsubmit">Window.onsubmit - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">The definition of 'onsubmit' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">onsubmit - HTML Living Standard</a>
    */
   @Nullable
   public static EventHandler onsubmit() {
@@ -1297,7 +1297,7 @@ public final class Global {
    * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunhandledrejection">Window.onunhandledrejection - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">The definition of 'onunhandledrejection' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">onunhandledrejection - HTML Living Standard</a>
    */
   @Nullable
   public static PromiseRejectionEventHandler onunhandledrejection() {
@@ -1308,9 +1308,9 @@ public final class Global {
    * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunload">Window.onunload - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onunload">The definition of 'onunload' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">The definition of 'GlobalEventHandlers' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">The definition of 'GlobalEventHandlers' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onunload">onunload - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">GlobalEventHandlers - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">GlobalEventHandlers - HTML5</a>
    */
   @Nullable
   public static EventHandler onunload() {
@@ -1361,7 +1361,7 @@ public final class Global {
    * The Window interface's opener property returns a reference to the window that opened the window, either with open(), or by navigating a link with a target attribute.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener">Window.opener - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-opener">The definition of 'window.opener' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-opener">window.opener - HTML Living Standard</a>
    */
   @Nullable
   public static Any opener() {
@@ -1376,7 +1376,7 @@ public final class Global {
    * The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin">WindowOrWorkerGlobalScope.origin - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-origin">The definition of 'WindowOrWorkerGlobalScope.origin' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-origin">WindowOrWorkerGlobalScope.origin - HTML Living Standard</a>
    */
   @Nonnull
   public static String origin() {
@@ -1427,7 +1427,7 @@ public final class Global {
    * The Window.parent property is a reference to the parent of the current window or subframe.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/parent">Window.parent - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-parent">The definition of 'window.parent' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-parent">window.parent - HTML Living Standard</a>
    */
   @Nullable
   public static Window parent() {
@@ -1438,7 +1438,7 @@ public final class Global {
    * The Window interface's performance property returns a Performance object, which can be used to gather performance information about the current document. It serves as the point of exposure for the Performance Timeline API, the High Resolution Time API, the Navigation Timing API, the User Timing API, and the Resource Timing API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/performance">Window.performance - MDN</a>
-   * @see <a href="https://www.w3.org/TR/hr-time-1/#performance">The definition of 'window.performance' in the 'High Resolution Time' specification.</a>
+   * @see <a href="https://www.w3.org/TR/hr-time-1/#performance">window.performance - High Resolution Time</a>
    */
   @Nonnull
   public static Performance performance() {
@@ -1449,8 +1449,8 @@ public final class Global {
    * Returns the personalbar object, whose visibility can be toggled in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/personalbar">Window.personalbar - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-personalbar">The definition of 'Window.personalbar' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-personalbar">The definition of 'Window.personalbar' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-personalbar">Window.personalbar - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-personalbar">Window.personalbar - HTML5</a>
    */
   @Nonnull
   public static BarProp personalbar() {
@@ -1461,7 +1461,7 @@ public final class Global {
    * The Window property screen returns a reference to the screen object associated with the window. The screen object, implementing the Screen interface, is a special object for inspecting properties of the screen on which the current window is being rendered.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screen">Window.screen - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screen">The definition of 'window.screen' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screen">window.screen - CSS Object Model (CSSOM) View Module</a>
    */
   @Nonnull
   public static Screen screen() {
@@ -1472,7 +1472,7 @@ public final class Global {
    * The Window.screenLeft read-only property returns the horizontal distance, in CSS pixels, from the left border of the user's browser viewport to the left side of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenLeft">Window.screenLeft - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screenx">The definition of 'Window.screenLeft' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screenx">Window.screenLeft - CSS Object Model (CSSOM) View Module</a>
    */
   public static int screenLeft() {
     return globalThis().screenLeft();
@@ -1482,7 +1482,7 @@ public final class Global {
    * The Window.screenTop read-only property returns the vertical distance, in CSS pixels, from the top border of the user's browser viewport to the top side of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenTop">Window.screenTop - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screeny">The definition of 'Window.screenTop' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screeny">Window.screenTop - CSS Object Model (CSSOM) View Module</a>
    */
   public static int screenTop() {
     return globalThis().screenTop();
@@ -1492,7 +1492,7 @@ public final class Global {
    * The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser viewport to the left side of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenX">Window.screenX - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screenx">The definition of 'Window.screenX' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screenx">Window.screenX - CSS Object Model (CSSOM) View Module</a>
    */
   public static int screenX() {
     return globalThis().screenX();
@@ -1502,7 +1502,7 @@ public final class Global {
    * The Window.screenY read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenY">Window.screenY - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screeny">The definition of 'Window.screenY' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-screeny">Window.screenY - CSS Object Model (CSSOM) View Module</a>
    */
   public static int screenY() {
     return globalThis().screenY();
@@ -1530,8 +1530,8 @@ public final class Global {
    * The Window.scrollbars property returns the scrollbars object, whose visibility can be checked.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars">Window.scrollbars - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-scrollbars">The definition of 'Window.scrollbars' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-scrollbars">The definition of 'Window.scrollbars' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-scrollbars">Window.scrollbars - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-scrollbars">Window.scrollbars - HTML5</a>
    */
   @Nonnull
   public static BarProp scrollbars() {
@@ -1552,7 +1552,7 @@ public final class Global {
    * The read-only sessionStorage property accesses a session Storage object for the current origin. sessionStorage is similar to localStorage; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Window.sessionStorage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage">The definition of 'sessionStorage' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage">sessionStorage - HTML Living Standard</a>
    */
   @Nonnull
   public static Storage sessionStorage() {
@@ -1563,7 +1563,7 @@ public final class Global {
    * The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/speechSynthesis">Window.speechSynthesis - MDN</a>
-   * @see <a href="https://wicg.github.io/speech-api/#tts-section">The definition of 'SpeechSynthesis' in the 'Web Speech API' specification.</a>
+   * @see <a href="https://wicg.github.io/speech-api/#tts-section">SpeechSynthesis - Web Speech API</a>
    */
   @Nonnull
   public static SpeechSynthesis speechSynthesis() {
@@ -1584,8 +1584,8 @@ public final class Global {
    * The Window.statusbar property returns the statusbar object, whose visibility can be toggled in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar">Window.statusbar - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-statusbar">The definition of 'Window.statusbar' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-statusbar">The definition of 'Window.statusbar' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-statusbar">Window.statusbar - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-statusbar">Window.statusbar - HTML5</a>
    */
   @Nonnull
   public static BarProp statusbar() {
@@ -1596,8 +1596,8 @@ public final class Global {
    * The Window.toolbar property returns the toolbar object, whose visibility can be toggled in the window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar">Window.toolbar - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-toolbar">The definition of 'Window.toolbar' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-toolbar">The definition of 'Window.toolbar' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-window-toolbar">Window.toolbar - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window-toolbar">Window.toolbar - HTML5</a>
    */
   @Nonnull
   public static BarProp toolbar() {
@@ -1608,8 +1608,8 @@ public final class Global {
    * Returns a reference to the topmost window in the window hierarchy.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/top">Window.top - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-top">The definition of 'window.top' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-top">The definition of 'window.top' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-top">window.top - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-top">window.top - HTML5</a>
    */
   @Nullable
   public static Window top() {
@@ -1620,7 +1620,7 @@ public final class Global {
    * The visualViewport read-only property of the Window interface returns a VisualViewport object representing the visual viewport for a given window.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/visualViewport">Window.visualViewport - MDN</a>
-   * @see <a href="https://wicg.github.io/visual-viewport/#dom-window-visualviewport">The definition of 'visualViewport' in the 'Visual Viewport API' specification.</a>
+   * @see <a href="https://wicg.github.io/visual-viewport/#dom-window-visualviewport">visualViewport - Visual Viewport API</a>
    */
   @Nonnull
   public static VisualViewport visualViewport() {
@@ -1631,9 +1631,9 @@ public final class Global {
    * The window property of a Window object points to the window object itself.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/window">Window.window - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window">The definition of 'Window.window' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/browsers.html#dom-window">The definition of 'Window.window' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window">The definition of 'Window.window' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-window">Window.window - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/browsers.html#dom-window">Window.window - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-window">Window.window - HTML5</a>
    */
   @Nonnull
   public static Window window() {
@@ -1747,7 +1747,7 @@ public final class Global {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">postMessage() - HTML Living Standard</a>
    */
   public static void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer) {
@@ -1758,7 +1758,7 @@ public final class Global {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">postMessage() - HTML Living Standard</a>
    */
   public static void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull Transferable[] transfer) {
@@ -1769,7 +1769,7 @@ public final class Global {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">postMessage() - HTML Living Standard</a>
    */
   public static void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin) {
@@ -1780,7 +1780,7 @@ public final class Global {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">postMessage() - HTML Living Standard</a>
    */
   public static void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull WindowPostMessageOptions options) {
@@ -1791,7 +1791,7 @@ public final class Global {
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">The definition of 'postMessage()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">postMessage() - HTML Living Standard</a>
    */
   public static void postMessage(@DoNotAutobox @Nullable Object message) {
     globalThis().postMessage(message);
@@ -1849,8 +1849,8 @@ public final class Global {
    * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">Window.getComputedStyle - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">The definition of 'getComputedStyle()' in the 'CSS Object Model (CSSOM)' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">The definition of 'getComputedStyle()' in the 'Document Object Model (DOM) Level 2 Style Specification' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">getComputedStyle() - CSS Object Model (CSSOM)</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">getComputedStyle() - Document Object Model (DOM) Level 2 Style Specification</a>
    */
   @Nonnull
   public static CSSStyleDeclaration getComputedStyle(@Nonnull Element elt,
@@ -1862,8 +1862,8 @@ public final class Global {
    * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">Window.getComputedStyle - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">The definition of 'getComputedStyle()' in the 'CSS Object Model (CSSOM)' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">The definition of 'getComputedStyle()' in the 'Document Object Model (DOM) Level 2 Style Specification' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">getComputedStyle() - CSS Object Model (CSSOM)</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">getComputedStyle() - Document Object Model (DOM) Level 2 Style Specification</a>
    */
   @Nonnull
   public static CSSStyleDeclaration getComputedStyle(@Nonnull Element elt) {
@@ -1874,7 +1874,7 @@ public final class Global {
    * The Window interface's matchMedia() method returns a new MediaQueryList object that can then be used to determine if the document matches the media query string, as well as to monitor the document to detect when it matches (or stops matching) that media query.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia">Window.matchMedia - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-matchmedia">The definition of 'Window.matchMedia()' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-matchmedia">Window.matchMedia() - CSS Object Model (CSSOM) View Module</a>
    */
   @Nonnull
   public static MediaQueryList matchMedia(@Nonnull String query) {
@@ -1903,7 +1903,7 @@ public final class Global {
    * The Window.resizeBy() method resizes the current window by a specified amount.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy">Window.resizeBy - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-resizeby">The definition of 'window.resizeBy()' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-resizeby">window.resizeBy() - CSS Object Model (CSSOM) View Module</a>
    */
   public static void resizeBy(int x, int y) {
     globalThis().resizeBy(x, y);
@@ -1976,7 +1976,7 @@ public final class Global {
    * Window.scrollTo() scrolls to a particular set of coordinates in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">window.scroll() - CSS Object Model (CSSOM) View Module</a>
    */
   public static void scrollTo(@Nonnull ScrollToOptions options) {
     globalThis().scrollTo(options);
@@ -1986,7 +1986,7 @@ public final class Global {
    * Window.scrollTo() scrolls to a particular set of coordinates in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">window.scroll() - CSS Object Model (CSSOM) View Module</a>
    */
   public static void scrollTo() {
     globalThis().scrollTo();
@@ -1996,7 +1996,7 @@ public final class Global {
    * Window.scrollTo() scrolls to a particular set of coordinates in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">The definition of 'window.scroll()' in the 'CSS Object Model (CSSOM) View Module' specification.</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">window.scroll() - CSS Object Model (CSSOM) View Module</a>
    */
   public static void scrollTo(double x, double y) {
     globalThis().scrollTo(x, y);
@@ -2006,7 +2006,7 @@ public final class Global {
    * The Window.getSelection() method returns a Selection object representing the range of text selected by the user or the current position of the caret.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection">Window.getSelection - MDN</a>
-   * @see <a href="https://w3c.github.io/selection-api/#extensions-to-window-interface">The definition of 'Window.getSelection()' in the 'Selection API' specification.</a>
+   * @see <a href="https://w3c.github.io/selection-api/#extensions-to-window-interface">Window.getSelection() - Selection API</a>
    */
   @Nullable
   public static Selection getSelection() {
@@ -2035,9 +2035,9 @@ public final class Global {
    * The WindowOrWorkerGlobalScope.atob() function decodes a string of data which has been encoded using Base64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/atob">Window.atob - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-atob">The definition of 'WindowOrWorkerGlobalScope.atob()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-atob">The definition of 'WindowBase64.atob()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-atob">The definition of 'WindowBase64.atob()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-atob">WindowOrWorkerGlobalScope.atob() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-atob">WindowBase64.atob() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-atob">WindowBase64.atob() - HTML5</a>
    */
   @Nonnull
   public static String atob(@Nonnull String data) {
@@ -2048,9 +2048,9 @@ public final class Global {
    * The WindowOrWorkerGlobalScope.btoa() method creates a Base64-encoded ASCII string from a binary string (i.e., a String object in which each character in the string is treated as a byte of binary data).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/btoa">Window.btoa - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-btoa">The definition of 'WindowOrWorkerGlobalScope.btoa()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-btoa">The definition of 'WindowBase64.btoa()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-btoa">The definition of 'WindowBase64.btoa()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-btoa">WindowOrWorkerGlobalScope.btoa() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-btoa">WindowBase64.btoa() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-btoa">WindowBase64.btoa() - HTML5</a>
    */
   @Nonnull
   public static String btoa(@Nonnull String data) {
@@ -2097,7 +2097,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image,
@@ -2109,7 +2109,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image,
@@ -2121,7 +2121,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image,
@@ -2133,7 +2133,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image,
@@ -2145,7 +2145,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image,
@@ -2157,7 +2157,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image,
@@ -2169,7 +2169,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image,
@@ -2181,7 +2181,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image,
@@ -2193,7 +2193,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image,
@@ -2205,7 +2205,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image,
@@ -2217,7 +2217,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image,
@@ -2229,7 +2229,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image) {
@@ -2240,7 +2240,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image) {
@@ -2251,7 +2251,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image) {
@@ -2262,7 +2262,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image) {
@@ -2273,7 +2273,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image) {
@@ -2284,7 +2284,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image) {
@@ -2295,7 +2295,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image) {
@@ -2306,7 +2306,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image) {
@@ -2317,7 +2317,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image) {
@@ -2328,7 +2328,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image) {
@@ -2339,7 +2339,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image) {
@@ -2350,7 +2350,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image, int sx,
@@ -2362,7 +2362,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image, int sx,
@@ -2374,7 +2374,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image, int sx,
@@ -2386,7 +2386,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image, int sx,
@@ -2398,7 +2398,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image, int sx,
@@ -2410,7 +2410,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image, int sx,
@@ -2422,7 +2422,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image, int sx,
@@ -2434,7 +2434,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image, int sx, int sy,
@@ -2446,7 +2446,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image, int sx,
@@ -2458,7 +2458,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image, int sx, int sy, int sw,
@@ -2470,7 +2470,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image, int sx, int sy,
@@ -2482,7 +2482,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image, int sx,
@@ -2494,7 +2494,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull CanvasImageSource image, int sx,
@@ -2506,7 +2506,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLOrSVGImageElement image, int sx,
@@ -2518,7 +2518,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLImageElement image, int sx,
@@ -2530,7 +2530,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull SVGImageElement image, int sx,
@@ -2542,7 +2542,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLVideoElement image, int sx,
@@ -2554,7 +2554,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull HTMLCanvasElement image, int sx,
@@ -2566,7 +2566,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmap image, int sx, int sy,
@@ -2578,7 +2578,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull OffscreenCanvas image, int sx,
@@ -2590,7 +2590,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull Blob image, int sx, int sy, int sw,
@@ -2602,7 +2602,7 @@ public final class Global {
    * The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">The definition of 'createImageBitmap' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
   @Nonnull
   public static Promise<ImageBitmap> createImageBitmap(@Nonnull ImageData image, int sx, int sy,
@@ -2614,7 +2614,7 @@ public final class Global {
    * The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask">WindowOrWorkerGlobalScope.queueMicrotask - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">The definition of 'self.queueMicrotask()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">self.queueMicrotask() - HTML Living Standard</a>
    */
   public static void queueMicrotask(@Nonnull VoidFunction callback) {
     globalThis().queueMicrotask(callback);
@@ -2624,8 +2624,8 @@ public final class Global {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowOrWorkerGlobalScope.setInterval() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowTimers.setInterval() - HTML Living Standard</a>
    */
   public static int setInterval(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments) {
@@ -2636,8 +2636,8 @@ public final class Global {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowOrWorkerGlobalScope.setInterval() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowTimers.setInterval() - HTML Living Standard</a>
    */
   public static int setInterval(@Nonnull String handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments) {
@@ -2648,8 +2648,8 @@ public final class Global {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowOrWorkerGlobalScope.setInterval() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowTimers.setInterval() - HTML Living Standard</a>
    */
   public static int setInterval(@Nonnull Function handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments) {
@@ -2660,8 +2660,8 @@ public final class Global {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowOrWorkerGlobalScope.setInterval() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowTimers.setInterval() - HTML Living Standard</a>
    */
   public static int setInterval(@Nonnull TimerHandler handler, int timeout) {
     return globalThis().setInterval(handler, timeout);
@@ -2671,8 +2671,8 @@ public final class Global {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowOrWorkerGlobalScope.setInterval() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowTimers.setInterval() - HTML Living Standard</a>
    */
   public static int setInterval(@Nonnull String handler, int timeout) {
     return globalThis().setInterval(handler, timeout);
@@ -2682,8 +2682,8 @@ public final class Global {
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval">Window.setInterval - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowOrWorkerGlobalScope.setInterval() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval">WindowTimers.setInterval() - HTML Living Standard</a>
    */
   public static int setInterval(@Nonnull Function handler, int timeout) {
     return globalThis().setInterval(handler, timeout);
@@ -2693,8 +2693,8 @@ public final class Global {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowOrWorkerGlobalScope.setTimeout() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowTimers.setTimeout() - HTML Living Standard</a>
    */
   public static int setTimeout(@Nonnull TimerHandler handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments) {
@@ -2705,8 +2705,8 @@ public final class Global {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowOrWorkerGlobalScope.setTimeout() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowTimers.setTimeout() - HTML Living Standard</a>
    */
   public static int setTimeout(@Nonnull String handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments) {
@@ -2717,8 +2717,8 @@ public final class Global {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowOrWorkerGlobalScope.setTimeout() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowTimers.setTimeout() - HTML Living Standard</a>
    */
   public static int setTimeout(@Nonnull Function handler, int timeout,
       @DoNotAutobox @Nullable Object... arguments) {
@@ -2729,8 +2729,8 @@ public final class Global {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowOrWorkerGlobalScope.setTimeout() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowTimers.setTimeout() - HTML Living Standard</a>
    */
   public static int setTimeout(@Nonnull TimerHandler handler, int timeout) {
     return globalThis().setTimeout(handler, timeout);
@@ -2740,8 +2740,8 @@ public final class Global {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowOrWorkerGlobalScope.setTimeout() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowTimers.setTimeout() - HTML Living Standard</a>
    */
   public static int setTimeout(@Nonnull String handler, int timeout) {
     return globalThis().setTimeout(handler, timeout);
@@ -2751,8 +2751,8 @@ public final class Global {
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout">Window.setTimeout - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">The definition of 'WindowTimers.setTimeout()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowOrWorkerGlobalScope.setTimeout() - HTML Living Standard</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout">WindowTimers.setTimeout() - HTML Living Standard</a>
    */
   public static int setTimeout(@Nonnull Function handler, int timeout) {
     return globalThis().setTimeout(handler, timeout);
@@ -2762,8 +2762,8 @@ public final class Global {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in the 'Fetch' specification.</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">fetch() - Fetch</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
@@ -2775,8 +2775,8 @@ public final class Global {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in the 'Fetch' specification.</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">fetch() - Fetch</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
@@ -2788,8 +2788,8 @@ public final class Global {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in the 'Fetch' specification.</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">fetch() - Fetch</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
@@ -2801,8 +2801,8 @@ public final class Global {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in the 'Fetch' specification.</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">fetch() - Fetch</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
@@ -2814,8 +2814,8 @@ public final class Global {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in the 'Fetch' specification.</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">fetch() - Fetch</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
@@ -2827,8 +2827,8 @@ public final class Global {
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">Window.fetch - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">The definition of 'fetch()' in the 'Fetch' specification.</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">The definition of 'fetch()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#fetch-method">fetch() - Fetch</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
   @Nonnull
@@ -2840,7 +2840,7 @@ public final class Global {
    * The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame">Window.cancelAnimationFrame - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#animationframeprovider-cancelanimationframe">The definition of 'cancelAnimationFrame()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#animationframeprovider-cancelanimationframe">cancelAnimationFrame() - HTML Living Standard</a>
    */
   public static void cancelAnimationFrame(int handle) {
     globalThis().cancelAnimationFrame(handle);
@@ -3939,9 +3939,9 @@ public final class Global {
    * The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">The definition of 'EventTarget.addEventListener()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener">The definition of 'EventTarget.addEventListener()' in the 'DOM4' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">The definition of 'EventTarget.addEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">EventTarget.addEventListener() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener">EventTarget.addEventListener() - DOM4</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">EventTarget.addEventListener() - Document Object Model (DOM) Level 2 Events Specification</a>
    */
   public static void addEventListener(@Nonnull String type, @Nullable EventListener callback,
       @Nonnull AddEventListenerOptions options) {
@@ -3952,9 +3952,9 @@ public final class Global {
    * The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">The definition of 'EventTarget.addEventListener()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener">The definition of 'EventTarget.addEventListener()' in the 'DOM4' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">The definition of 'EventTarget.addEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">EventTarget.addEventListener() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener">EventTarget.addEventListener() - DOM4</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">EventTarget.addEventListener() - Document Object Model (DOM) Level 2 Events Specification</a>
    */
   public static void addEventListener(@Nonnull String type, @Nullable EventListener callback,
       boolean options) {
@@ -3965,9 +3965,9 @@ public final class Global {
    * The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">The definition of 'EventTarget.addEventListener()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener">The definition of 'EventTarget.addEventListener()' in the 'DOM4' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">The definition of 'EventTarget.addEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">EventTarget.addEventListener() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener">EventTarget.addEventListener() - DOM4</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">EventTarget.addEventListener() - Document Object Model (DOM) Level 2 Events Specification</a>
    */
   public static void addEventListener(@Nonnull String type, @Nullable EventListener callback) {
     globalThis().addEventListener(type, callback);
@@ -3986,9 +3986,9 @@ public final class Global {
    * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener">The definition of 'EventTarget.removeEventListener()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener">The definition of 'EventTarget.removeEventListener()' in the 'DOM4' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener">The definition of 'EventTarget.removeEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener">EventTarget.removeEventListener() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener">EventTarget.removeEventListener() - DOM4</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener">EventTarget.removeEventListener() - Document Object Model (DOM) Level 2 Events Specification</a>
    */
   public static void removeEventListener(@Nonnull String type, @Nullable EventListener callback,
       @Nonnull EventListenerOptions options) {
@@ -3999,9 +3999,9 @@ public final class Global {
    * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener">The definition of 'EventTarget.removeEventListener()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener">The definition of 'EventTarget.removeEventListener()' in the 'DOM4' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener">The definition of 'EventTarget.removeEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener">EventTarget.removeEventListener() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener">EventTarget.removeEventListener() - DOM4</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener">EventTarget.removeEventListener() - Document Object Model (DOM) Level 2 Events Specification</a>
    */
   public static void removeEventListener(@Nonnull String type, @Nullable EventListener callback,
       boolean options) {
@@ -4012,9 +4012,9 @@ public final class Global {
    * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener">The definition of 'EventTarget.removeEventListener()' in the 'DOM' specification.</a>
-   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener">The definition of 'EventTarget.removeEventListener()' in the 'DOM4' specification.</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener">The definition of 'EventTarget.removeEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification.</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener">EventTarget.removeEventListener() - DOM</a>
+   * @see <a href="https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener">EventTarget.removeEventListener() - DOM4</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener">EventTarget.removeEventListener() - Document Object Model (DOM) Level 2 Events Specification</a>
    */
   public static void removeEventListener(@Nonnull String type, @Nullable EventListener callback) {
     globalThis().removeEventListener(type, callback);

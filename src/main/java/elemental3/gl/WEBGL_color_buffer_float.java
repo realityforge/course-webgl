@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_color_buffer_float extension is part of the WebGL API and adds the ability to render to 32-bit floating-point color buffers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_color_buffer_float">WEBGL_color_buffer_float - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_color_buffer_float/">The definition of 'WEBGL_color_buffer_float' in the 'WEBGL_color_buffer_float' specification.</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_color_buffer_float/">WEBGL_color_buffer_float - WEBGL_color_buffer_float</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

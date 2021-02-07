@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtcpParameters dictionary provides parameters of an RTCP connection. It's used as the value of the rtcp property of the parameters of an RTCRtpSender or RTCRtpReceiver.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtcpParameters">RTCRtcpParameters - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtcpparameters">The definition of 'RTCRtcpParameters' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtcpparameters">RTCRtcpParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

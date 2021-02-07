@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions">AudioContextOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions">The definition of 'AudioContextOptions' in the 'Web Audio API' specification.</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions">AudioContextOptions - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsProperty(
       name = "latencyHint"
@@ -43,7 +43,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsProperty
   void setLatencyHint(@Nonnull AudioContextLatencyCategoryOrDoubleUnion latencyHint);
@@ -52,7 +52,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsOverlay
   default void setLatencyHint(@Nonnull final String latencyHint) {
@@ -63,7 +63,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsOverlay
   @Nonnull
@@ -76,7 +76,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsOverlay
   default void setLatencyHint(final double latencyHint) {
@@ -87,7 +87,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsOverlay
   @Nonnull
@@ -100,7 +100,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named sampleRate, which indicates the sample rate to use for the new context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/sampleRate">AudioContextOptions.sampleRate - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate">The definition of 'AudioContextOptions.sampleRate' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate">AudioContextOptions.sampleRate - Web Audio API</a>
    */
   @JsProperty(
       name = "sampleRate"
@@ -111,7 +111,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named sampleRate, which indicates the sample rate to use for the new context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/sampleRate">AudioContextOptions.sampleRate - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate">The definition of 'AudioContextOptions.sampleRate' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate">AudioContextOptions.sampleRate - Web Audio API</a>
    */
   @JsProperty
   void setSampleRate(float sampleRate);
@@ -120,7 +120,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named sampleRate, which indicates the sample rate to use for the new context.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/sampleRate">AudioContextOptions.sampleRate - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate">The definition of 'AudioContextOptions.sampleRate' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate">AudioContextOptions.sampleRate - Web Audio API</a>
    */
   @JsOverlay
   @Nonnull

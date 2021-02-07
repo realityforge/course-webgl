@@ -9,6 +9,7 @@ import jsinterop.annotations.JsType;
  * A DOMRect describes the size and position of a rectangle.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect">DOMRect - MDN</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">DOMRect - Geometry Interfaces Module Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

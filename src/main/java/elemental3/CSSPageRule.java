@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * CSSPageRule is an interface representing a single CSS @page rule. It implements the CSSRule interface with a type value of 6 (CSSRule.PAGE_RULE).
+ * CSSPageRule represents a single CSS @page rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule">CSSPageRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-csspagerule-interface">The definition of 'CSSPageRule' in the 'CSS Object Model (CSSOM)' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSPageRule">The definition of 'CSSPageRule' in the 'Document Object Model (DOM) Level 2 Style Specification' specification.</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-csspagerule-interface">CSSPageRule - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSPageRule">CSSPageRule - Document Object Model (DOM) Level 2 Style Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

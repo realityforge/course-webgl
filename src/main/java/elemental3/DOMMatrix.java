@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The DOMMatrix interface represents 4&times;4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the DOMMatrixReadOnly interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix">DOMMatrix - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix">The definition of 'DOMMatrix' in the 'Geometry Interfaces Module Level 1' specification.</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix">DOMMatrix - Geometry Interfaces Module Level 1</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -69,7 +69,7 @@ public class DOMMatrix extends DOMMatrixReadOnly {
    * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrix' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">DOMMatrix - Geometry Interfaces Module Level 1</a>
    */
   public DOMMatrix(@Nonnull final String init) {
   }
@@ -78,7 +78,7 @@ public class DOMMatrix extends DOMMatrixReadOnly {
    * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrix' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">DOMMatrix - Geometry Interfaces Module Level 1</a>
    */
   public DOMMatrix(@Nonnull final JsArray<Double> init) {
   }
@@ -87,7 +87,7 @@ public class DOMMatrix extends DOMMatrixReadOnly {
    * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrix' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">DOMMatrix - Geometry Interfaces Module Level 1</a>
    */
   public DOMMatrix(@Nonnull final double[] init) {
   }
@@ -96,7 +96,7 @@ public class DOMMatrix extends DOMMatrixReadOnly {
    * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrix' in the 'Geometry Interfaces Module Level 1' specification.</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">DOMMatrix - Geometry Interfaces Module Level 1</a>
    */
   public DOMMatrix() {
   }

@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CryptoKey interface of the Web Crypto API represents a cryptographic key obtained from one of the SubtleCrypto methods generateKey(), deriveKey(), importKey(), or unwrapKey().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey">CryptoKey - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKey">The definition of 'CryptoKey' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKey">CryptoKey - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -10,6 +10,7 @@ import jsinterop.annotations.JsType;
  * A WebAssembly.Instance object is a stateful, executable instance of a WebAssembly.Module. Instance objects contain all the Exported WebAssembly functions that allow calling into WebAssembly code from JavaScript.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance">WebAssembly.Instance - MDN</a>
+ * @see <a href="https://webassembly.github.io/spec/js-api/#instances">Instance - WebAssembly JavaScript Interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

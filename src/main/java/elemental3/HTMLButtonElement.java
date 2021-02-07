@@ -8,15 +8,15 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating button elements.
+ * The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;button&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlbuttonelement">The definition of 'HTMLButtonElement' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#htmlbuttonelement">The definition of 'HTMLButtonElement' in the 'HTML 5.2' specification.</a>
- * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#htmlbuttonelement-htmlbuttonelement">The definition of 'HTMLButtonElement' in the 'HTML 5.1' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-button-element">The definition of 'HTMLButtonElement' in the 'HTML5' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-34812697">The definition of 'HTMLButtonElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-34812697">The definition of 'HTMLButtonElement' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlbuttonelement">HTMLButtonElement - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#htmlbuttonelement">HTMLButtonElement - HTML 5.2</a>
+ * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#htmlbuttonelement-htmlbuttonelement">HTMLButtonElement - HTML 5.1</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-button-element">HTMLButtonElement - HTML5</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-34812697">HTMLButtonElement - Document Object Model (DOM) Level 2 HTML Specification</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-34812697">HTMLButtonElement - Document Object Model (DOM) Level 1 Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -71,7 +71,7 @@ public class HTMLButtonElement extends HTMLElement {
    * The HTMLButtonElement.labels read-only property returns a NodeList of the label elements associated with the button element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/labels">HTMLButtonElement.labels - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">labels - HTML Living Standard</a>
    */
   @JsProperty(
       name = "labels"

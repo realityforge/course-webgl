@@ -7,12 +7,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The CSSMediaRule interface represents a single CSS @media rule. It implements the CSSConditionRule interface, and therefore the CSSGroupingRule and the CSSRule interface with a type value of 4 (CSSRule.MEDIA_RULE).
+ * The CSSMediaRule interface represents a single CSS @media rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMediaRule">CSSMediaRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface">The definition of 'CSSMediaRule' in the 'CSS Conditional Rules Module Level 3' specification.</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssmediarule-interface">The definition of 'CSSMediaRule' in the 'CSS Object Model (CSSOM)' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule">The definition of 'CSSMediaRule' in the 'Document Object Model (DOM) Level 2 Style Specification' specification.</a>
+ * @see <a href="https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface">CSSMediaRule - CSS Conditional Rules Module Level 3</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssmediarule-interface">CSSMediaRule - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule">CSSMediaRule - Document Object Model (DOM) Level 2 Style Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

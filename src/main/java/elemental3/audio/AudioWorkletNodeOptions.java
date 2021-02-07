@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNodeOptions">AudioWorkletNodeOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audioworkletnodeoptions">The definition of 'AudioWorkletNodeOptions' in the 'Web Audio API' specification.</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audioworkletnodeoptions">AudioWorkletNodeOptions - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

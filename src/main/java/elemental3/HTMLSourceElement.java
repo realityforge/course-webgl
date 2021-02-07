@@ -6,10 +6,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLSourceElement interface provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating source elements.
+ * The HTMLSourceElement interface provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating &lt;source&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement">HTMLSourceElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlsourceelement">The definition of 'HTMLSourceElement' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlsourceelement">HTMLSourceElement - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

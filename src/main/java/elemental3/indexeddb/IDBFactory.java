@@ -10,11 +10,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our To-do Notifications app (view example live.)
+ * The IDBFactory interface of the IndexedDB API lets applications asynchronously access the indexed databases. The object that implements the interface is window.indexedDB. You open &mdash; that is, create and access &mdash; and delete a database with this object, and not directly with IDBFactory.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory">IDBFactory - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbfactory">The definition of 'IDBFactory' in the 'Indexed Database API 2.0' specification.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#factory-interface">The definition of 'IDBFactory' in the 'Indexed Database API Draft' specification.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#factory-interface">IDBFactory - Indexed Database API 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,8 +45,8 @@ public class IDBFactory {
    * The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately, and performs the deletion operation asynchronously.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase">IDBFactory.deleteDatabase - MDN</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-deletedatabase">The definition of 'deleteDatabase()' in the 'Indexed Database API Draft' specification.</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-deletedatabase">The definition of 'deleteDatabase()' in the 'Indexed Database API 2.0' specification.</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-deletedatabase">deleteDatabase() - Indexed Database API Draft</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-deletedatabase">deleteDatabase() - Indexed Database API 2.0</a>
    */
   @Nonnull
   public native IDBOpenDBRequest deleteDatabase(@Nonnull String name);
@@ -56,8 +55,8 @@ public class IDBFactory {
    * If an error occurs while the database connection is being opened, then an error event is fired on the request object returned from this method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open">IDBFactory.open - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open">The definition of 'open()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-open">The definition of 'open()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBOpenDBRequest open(@Nonnull String name, int version);
@@ -66,8 +65,8 @@ public class IDBFactory {
    * If an error occurs while the database connection is being opened, then an error event is fired on the request object returned from this method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open">IDBFactory.open - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open">The definition of 'open()' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-open">The definition of 'open()' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API Draft</a>
    */
   @Nonnull
   public native IDBOpenDBRequest open(@Nonnull String name);

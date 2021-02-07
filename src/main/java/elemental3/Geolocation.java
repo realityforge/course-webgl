@@ -59,7 +59,7 @@ public class Geolocation {
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">Geolocation.watchPosition - MDN</a>
-   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">The definition of 'watchPosition()' in the 'Geolocation API' specification.</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">watchPosition() - Geolocation API</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback,
       @Nonnull PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
@@ -68,7 +68,7 @@ public class Geolocation {
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">Geolocation.watchPosition - MDN</a>
-   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">The definition of 'watchPosition()' in the 'Geolocation API' specification.</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">watchPosition() - Geolocation API</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback,
       @Nonnull PositionErrorCallback errorCallback);
@@ -77,7 +77,7 @@ public class Geolocation {
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition">Geolocation.watchPosition - MDN</a>
-   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">The definition of 'watchPosition()' in the 'Geolocation API' specification.</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">watchPosition() - Geolocation API</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback);
 }

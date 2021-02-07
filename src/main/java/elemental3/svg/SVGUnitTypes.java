@@ -9,8 +9,8 @@ import jsinterop.annotations.JsType;
  * The SVGUnitTypes interface defines a commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUnitTypes">SVGUnitTypes - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGUnitTypes">The definition of 'SVGUnitTypes' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGUnitTypes">The definition of 'SVGUnitTypes' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGUnitTypes">SVGUnitTypes - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGUnitTypes">SVGUnitTypes - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The AudioBuffer interface represents a short audio asset residing in memory, created from an audio file using the AudioContext.decodeAudioData() method, or from raw data using AudioContext.createBuffer(). Once put into an AudioBuffer, the audio can then be played by being passed into an AudioBufferSourceNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer">AudioBuffer - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#audiobuffer">The definition of 'AudioBuffer' in the 'Web Audio API' specification.</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#audiobuffer">AudioBuffer - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -24,7 +24,7 @@ public class AudioBuffer {
    * The AudioBuffer constructor of the Web Audio API creates a new AudioBuffer object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/AudioBuffer">AudioBuffer.AudioBuffer - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioBuffer">The definition of 'AudioBuffer' in the 'Web Audio API' specification.</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioBuffer">AudioBuffer - Web Audio API</a>
    */
   public AudioBuffer(@Nonnull final AudioBufferOptions options) {
   }

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCRtpSendParameters dictionary is used to specify the parameters for an RTCRtpSender when calling its setParameters() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSendParameters">RTCRtpSendParameters - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsendparameters">The definition of 'RTCRtpSendParameters' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification.</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsendparameters">RTCRtpSendParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

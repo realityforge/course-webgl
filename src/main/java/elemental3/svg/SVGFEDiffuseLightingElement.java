@@ -7,11 +7,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGFEDiffuseLightingElement interface corresponds to the feDiffuseLighting element.
+ * The SVGFEDiffuseLightingElement interface corresponds to the &lt;feDiffuseLighting&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement">SVGFEDiffuseLightingElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDiffuseLightingElement">The definition of 'SVGFEDiffuseLightingElement' in the 'Filter Effects Module Level 1' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEDiffuseLightingElement">The definition of 'SVGFEDiffuseLightingElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDiffuseLightingElement">SVGFEDiffuseLightingElement - Filter Effects Module Level 1</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEDiffuseLightingElement">SVGFEDiffuseLightingElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

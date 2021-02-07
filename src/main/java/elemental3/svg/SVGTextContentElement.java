@@ -14,8 +14,8 @@ import jsinterop.annotations.JsType;
  * The SVGTextContentElement interface is implemented by elements that support rendering child text content. It is inherited by various text-related interfaces, such as SVGTextElement, SVGTSpanElement, SVGTRefElement, SVGAltGlyphElement and SVGTextPathElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement">SVGTextContentElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">The definition of 'SVGTextContentElement' in the 'Scalable Vector Graphics (SVG) 2' specification.</a>
- * @see <a href="https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTextContentElement">The definition of 'SVGTextContentElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification.</a>
+ * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">SVGTextContentElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTextContentElement">SVGTextContentElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

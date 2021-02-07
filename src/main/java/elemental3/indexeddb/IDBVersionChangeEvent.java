@@ -12,8 +12,8 @@ import jsinterop.annotations.JsType;
  * The IDBVersionChangeEvent interface of the IndexedDB API indicates that the version of the database has changed, as the result of an IDBOpenDBRequest.onupgradeneeded event handler function.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbversionchangeevent">The definition of 'IDBVersionChangeEvent' in the 'Indexed Database API 2.0' specification.</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#idbversionchangeevent">The definition of 'IDBVersionChangeEvent' in the 'Indexed Database API Draft' specification.</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbversionchangeevent">IDBVersionChangeEvent - Indexed Database API 2.0</a>
+ * @see <a href="https://www.w3.org/TR/IndexedDB/#idbversionchangeevent">IDBVersionChangeEvent - Indexed Database API 2.0</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -35,8 +35,8 @@ public class IDBVersionChangeEvent extends Event {
    * A 64-bit integer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion">IDBVersionChangeEvent.newVersion - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbversionchangeevent-newversion">The definition of 'newVersion' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbversionchangeevent-newversion">The definition of 'newVersion' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbversionchangeevent-newversion">newVersion - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbversionchangeevent-newversion">newVersion - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "newVersion"
@@ -48,8 +48,8 @@ public class IDBVersionChangeEvent extends Event {
    * The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/oldVersion">IDBVersionChangeEvent.oldVersion - MDN</a>
-   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbversionchangeevent-oldversion">The definition of 'oldVersion' in the 'Indexed Database API 2.0' specification.</a>
-   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbversionchangeevent-oldversion">The definition of 'oldVersion' in the 'Indexed Database API Draft' specification.</a>
+   * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbversionchangeevent-oldversion">oldVersion - Indexed Database API 2.0</a>
+   * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbversionchangeevent-oldversion">oldVersion - Indexed Database API Draft</a>
    */
   @JsProperty(
       name = "oldVersion"

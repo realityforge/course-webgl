@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">OffscreenCanvas - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#the-offscreencanvas-interface">The definition of 'OffscreenCanvas' in the 'HTML Living Standard' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#the-offscreencanvas-interface">OffscreenCanvas - HTML Living Standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,7 +26,7 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, Tran
    * The height property returns and sets the height of an OffscreenCanvas object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/height">OffscreenCanvas.height - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-height">The definition of 'OffscreenCanvas.height' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-height">OffscreenCanvas.height - HTML Living Standard</a>
    */
   public int height;
 
@@ -34,7 +34,7 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, Tran
    * The width property returns and sets the width of an OffscreenCanvas object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/width">OffscreenCanvas.width - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-width">The definition of 'OffscreenCanvas.width' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-width">OffscreenCanvas.width - HTML Living Standard</a>
    */
   public int width;
 
@@ -42,7 +42,7 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, Tran
    * The OffscreenCanvas() constructor returns a newly instantiated OffscreenCanvas object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas">OffscreenCanvas.OffscreenCanvas - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas">The definition of 'OffscreenCanvas()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas">OffscreenCanvas() - HTML Living Standard</a>
    */
   public OffscreenCanvas(final int width, final int height) {
   }
@@ -67,7 +67,7 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, Tran
    * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext">OffscreenCanvas.getContext - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-getcontext">The definition of 'OffscreenCanvas.getContext()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-getcontext">OffscreenCanvas.getContext() - HTML Living Standard</a>
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
@@ -78,7 +78,7 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, Tran
    * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext">OffscreenCanvas.getContext - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-getcontext">The definition of 'OffscreenCanvas.getContext()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-getcontext">OffscreenCanvas.getContext() - HTML Living Standard</a>
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
@@ -88,7 +88,7 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, Tran
    * The OffscreenCanvas.transferToImageBitmap() method creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap">OffscreenCanvas.transferToImageBitmap - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-transfertoimagebitmap">The definition of 'OffscreenCanvas.transferToImageBitmap()' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-transfertoimagebitmap">OffscreenCanvas.transferToImageBitmap() - HTML Living Standard</a>
    */
   @Nonnull
   public native ImageBitmap transferToImageBitmap();

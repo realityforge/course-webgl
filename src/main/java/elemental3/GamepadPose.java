@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">GamepadPose - MDN</a>
- * @see <a href="https://w3c.github.io/gamepad/extensions.html#gamepadpose-interface">The definition of 'GamepadPose' in the 'Gamepad Extensions' specification.</a>
+ * @see <a href="https://w3c.github.io/gamepad/extensions.html#gamepadpose-interface">GamepadPose - Gamepad Extensions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,7 +27,7 @@ public class GamepadPose {
    * The angularAcceleration read-only property of the GamepadPose interface returns an array representing the angular acceleration vector of the Gamepad, in meters per second per second.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/angularAcceleration">GamepadPose.angularAcceleration - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-angularacceleration">The definition of 'angularAcceleration' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-angularacceleration">angularAcceleration - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "angularAcceleration"
@@ -39,7 +39,7 @@ public class GamepadPose {
    * The angularVelocity read-only property of the GamepadPose interface returns an array representing the angular velocity vector of the Gamepad, in radians per second.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/angularVelocity">GamepadPose.angularVelocity - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-angularvelocity">The definition of 'angularVelocity' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-angularvelocity">angularVelocity - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "angularVelocity"
@@ -51,7 +51,7 @@ public class GamepadPose {
    * The hasOrientation read-only property of the GamepadPose interface returns a Boolean stating whether the Gamepad can track and return orientation information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/hasOrientation">GamepadPose.hasOrientation - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasorientation">The definition of 'hasOrientation' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasorientation">hasOrientation - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "hasOrientation"
@@ -62,7 +62,7 @@ public class GamepadPose {
    * The hasPosition read-only property of the GamepadPose interface returns a Boolean stating whether the Gamepad can track and return position information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/hasPosition">GamepadPose.hasPosition - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasposition">The definition of 'hasPosition' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasposition">hasPosition - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "hasPosition"
@@ -73,7 +73,7 @@ public class GamepadPose {
    * The linearAcceleration read-only property of the GamepadPose interface returns an array representing the linear acceleration vector of the Gamepad, in meters per second per second.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/linearAcceleration">GamepadPose.linearAcceleration - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-linearacceleration">The definition of 'linearAcceleration' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-linearacceleration">linearAcceleration - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "linearAcceleration"
@@ -85,7 +85,7 @@ public class GamepadPose {
    * The linearVelocity read-only property of the GamepadPose interface returns an array representing the linear velocity vector of the Gamepad, in meters per second.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/linearVelocity">GamepadPose.linearVelocity - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-linearvelocity">The definition of 'linearVelocity' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-linearvelocity">linearVelocity - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "linearVelocity"
@@ -97,7 +97,7 @@ public class GamepadPose {
    * The orientation read-only property of the GamepadPose interface returns the orientation of the Gamepad, as a quarternion value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/orientation">GamepadPose.orientation - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-orientation">The definition of 'orientation' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-orientation">orientation - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "orientation"
@@ -109,7 +109,7 @@ public class GamepadPose {
    * The position read-only property of the GamepadPose interface returns the position of the Gamepad as a 3D vector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/position">GamepadPose.position - MDN</a>
-   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-position">The definition of 'position' in the 'Gamepad Extensions' specification.</a>
+   * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-position">position - Gamepad Extensions</a>
    */
   @JsProperty(
       name = "position"

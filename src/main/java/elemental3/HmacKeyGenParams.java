@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The HmacKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating a key for the HMAC algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacKeyGenParams">The definition of 'SubtleCrypto.HmacKeyGenParams' in the 'Web Cryptography API' specification.</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacKeyGenParams">SubtleCrypto.HmacKeyGenParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

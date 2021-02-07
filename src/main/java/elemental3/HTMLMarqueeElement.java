@@ -7,13 +7,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLMarqueeElement interface provides methods to manipulate marquee elements.
+ * The HTMLMarqueeElement interface provides methods to manipulate &lt;marquee&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMarqueeElement">HTMLMarqueeElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in the 'HTML 5.2' specification.</a>
- * @see <a href="https://www.w3.org/TR/html51/obsolete.html#htmlmarqueeelement-htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in the 'HTML 5.1' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement">The definition of 'HTMLMarqueeElement' in the 'HTML5' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement">HTMLMarqueeElement - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement">HTMLMarqueeElement - HTML 5.2</a>
+ * @see <a href="https://www.w3.org/TR/html51/obsolete.html#htmlmarqueeelement-htmlmarqueeelement">HTMLMarqueeElement - HTML 5.1</a>
+ * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement">HTMLMarqueeElement - HTML5</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

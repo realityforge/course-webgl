@@ -16,7 +16,7 @@ import jsinterop.base.Any;
  * The Response interface of the Fetch API represents the response to a request.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response - MDN</a>
- * @see <a href="https://fetch.spec.whatwg.org/#response-class">The definition of 'Response' in the 'Fetch' specification.</a>
+ * @see <a href="https://fetch.spec.whatwg.org/#response-class">Response - Fetch</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +29,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nullable final BodyInit body, @Nonnull final ResponseInit init) {
   }
@@ -38,7 +38,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final ReadableStream body, @Nonnull final ResponseInit init) {
   }
@@ -47,7 +47,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final XMLHttpRequestBodyInit body, @Nonnull final ResponseInit init) {
   }
@@ -56,7 +56,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final Blob body, @Nonnull final ResponseInit init) {
   }
@@ -65,7 +65,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final BufferSource body, @Nonnull final ResponseInit init) {
   }
@@ -74,7 +74,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final FormData body, @Nonnull final ResponseInit init) {
   }
@@ -83,7 +83,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final URLSearchParams body, @Nonnull final ResponseInit init) {
   }
@@ -92,7 +92,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final String body, @Nonnull final ResponseInit init) {
   }
@@ -101,7 +101,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nullable final BodyInit body) {
   }
@@ -110,7 +110,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final ReadableStream body) {
   }
@@ -119,7 +119,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final XMLHttpRequestBodyInit body) {
   }
@@ -128,7 +128,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final Blob body) {
   }
@@ -137,7 +137,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final BufferSource body) {
   }
@@ -146,7 +146,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final FormData body) {
   }
@@ -155,7 +155,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final URLSearchParams body) {
   }
@@ -164,7 +164,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response(@Nonnull final String body) {
   }
@@ -173,7 +173,7 @@ public class Response {
    * The Response() constructor creates a new Response object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">The definition of 'Response()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response">Response() - Fetch</a>
    */
   public Response() {
   }
@@ -182,7 +182,7 @@ public class Response {
    * The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/body">Body.body - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-body">The definition of 'body' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-body">body - Fetch</a>
    */
   @JsProperty(
       name = "body"
@@ -194,7 +194,7 @@ public class Response {
    * The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/bodyUsed">Response.bodyUsed - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-bodyused">The definition of 'bodyUsed' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-bodyused">bodyUsed - Fetch</a>
    */
   @JsProperty(
       name = "bodyUsed"
@@ -205,7 +205,7 @@ public class Response {
    * The headers read-only property of the Response interface contains the Headers object associated with the response.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/headers">Response.headers - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-headers">The definition of 'headers' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-headers">headers - Fetch</a>
    */
   @JsProperty(
       name = "headers"
@@ -217,7 +217,7 @@ public class Response {
    * The ok read-only property of the Response interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/ok">Response.ok - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-ok">The definition of 'ok' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-ok">ok - Fetch</a>
    */
   @JsProperty(
       name = "ok"
@@ -228,7 +228,7 @@ public class Response {
    * The read-only redirected property of the Response interface indicates whether or not the response is the result of a request you made which was redirected.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected">Response.redirected - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirected">The definition of 'redirected' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirected">redirected - Fetch</a>
    */
   @JsProperty(
       name = "redirected"
@@ -239,7 +239,7 @@ public class Response {
    * The status read-only property of the Response interface contains the status code of the response (e.g., 200 for a success).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/status">Response.status - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-status">The definition of 'status' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-status">status - Fetch</a>
    */
   @JsProperty(
       name = "status"
@@ -250,7 +250,7 @@ public class Response {
    * The statusText read-only property of the Response interface contains the status message corresponding to the status code (e.g., OK for 200).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/statusText">Response.statusText - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-statustext">The definition of 'statusText' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-statustext">statusText - Fetch</a>
    */
   @JsProperty(
       name = "statusText"
@@ -262,7 +262,7 @@ public class Response {
    * The type read-only property of the Response interface contains the type of the response. It can be one of the following:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/type">Response.type - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-type">The definition of 'type' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-type">type - Fetch</a>
    */
   @JsProperty(
       name = "type"
@@ -275,7 +275,7 @@ public class Response {
    * The url read-only property of the Response interface contains the URL of the response. The value of the url property will be the final URL obtained after any redirects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/url">Response.url - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-url">The definition of 'url' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-url">url - Fetch</a>
    */
   @JsProperty(
       name = "url"
@@ -287,7 +287,7 @@ public class Response {
    * The error() method of the Response interface returns a new Response object associated with a network error.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/error">Response.error - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-error">The definition of 'error()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-error">error() - Fetch</a>
    */
   @Nonnull
   public static native Response error();
@@ -296,7 +296,7 @@ public class Response {
    * The redirect() method of the Response interface returns a Response resulting in a redirect to the specified URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect">Response.redirect - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirect">The definition of 'redirect()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirect">redirect() - Fetch</a>
    */
   @Nonnull
   public static native Response redirect(@Nonnull String url, int status);
@@ -305,7 +305,7 @@ public class Response {
    * The redirect() method of the Response interface returns a Response resulting in a redirect to the specified URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect">Response.redirect - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirect">The definition of 'redirect()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirect">redirect() - Fetch</a>
    */
   @Nonnull
   public static native Response redirect(@Nonnull String url);
@@ -314,7 +314,7 @@ public class Response {
    * The clone() method of the Response interface creates a clone of a response object, identical in every way, but stored in a different variable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/clone">Response.clone - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-clone">The definition of 'clone()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-response-clone">clone() - Fetch</a>
    */
   @JsMethod(
       name = "clone"
@@ -326,7 +326,7 @@ public class Response {
    * The arrayBuffer() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with an ArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/arrayBuffer">Response.arrayBuffer - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-arraybuffer">The definition of 'arrayBuffer()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-arraybuffer">arrayBuffer() - Fetch</a>
    */
   @Nonnull
   public native Promise<ArrayBuffer> arrayBuffer();
@@ -335,7 +335,7 @@ public class Response {
    * The blob() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a Blob.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/blob">Response.blob - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-blob">The definition of 'blob()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-blob">blob() - Fetch</a>
    */
   @Nonnull
   public native Promise<Blob> blob();
@@ -344,7 +344,7 @@ public class Response {
    * The formData() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a FormData object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/formData">Body.formData - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-formdata">The definition of 'formData()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-formdata">formData() - Fetch</a>
    */
   @Nonnull
   public native Promise<FormData> formData();
@@ -353,7 +353,7 @@ public class Response {
    * The json() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/json">Response.json - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-json">The definition of 'Body.json()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-json">Body.json() - Fetch</a>
    */
   @Nonnull
   public native Promise<Any> json();
@@ -362,7 +362,7 @@ public class Response {
    * The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/text">Response.text - MDN</a>
-   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-text">The definition of 'text()' in the 'Fetch' specification.</a>
+   * @see <a href="https://fetch.spec.whatwg.org/#dom-body-text">text() - Fetch</a>
    */
   @Nonnull
   public native Promise<String> text();

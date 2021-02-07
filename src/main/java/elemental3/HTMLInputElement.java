@@ -10,13 +10,13 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of input elements.
+ * The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of &lt;input&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlinputelement">The definition of 'HTMLInputElement' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-input-element">The definition of 'HTMLInputElement' in the 'HTML5' specification.</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6043025">The definition of 'HTMLInputElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification.</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-6043025">The definition of 'HTMLInputElement' in the 'Document Object Model (DOM) Level 1 Specification' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#htmlinputelement">HTMLInputElement - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/forms.html#the-input-element">HTMLInputElement - HTML5</a>
+ * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6043025">HTMLInputElement - Document Object Model (DOM) Level 2 HTML Specification</a>
+ * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-6043025">HTMLInputElement - Document Object Model (DOM) Level 1 Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -87,7 +87,7 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.multiple property indicates if an input can have more than one value. Firefox currently only supports multiple for input type=&quot;file&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/multiple">HTMLInputElement.multiple - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#attr-input-multiple">The definition of 'multiple' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#attr-input-multiple">multiple - HTML Living Standard</a>
    */
   public boolean multiple;
 
@@ -151,8 +151,8 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.labels read-only property returns a NodeList of the label elements associated with the input element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/labels">HTMLInputElement.labels - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">The definition of 'labels' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels">labels - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-lfe-labels">labels - HTML5</a>
    */
   @JsProperty(
       name = "labels"
@@ -191,7 +191,7 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.select() method selects all the text in a textarea element or in an input element that includes a text field.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-select">The definition of 'select' in the 'HTML Living Standard' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-select">select - HTML Living Standard</a>
    */
   public native void select();
 
@@ -201,8 +201,8 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext">HTMLInputElement.setSelectionRange() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext">HTMLInputElement.setSelectionRange() - HTML5</a>
    */
   public native void setRangeText(@Nonnull String replacement);
 
@@ -210,8 +210,8 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext">HTMLInputElement.setSelectionRange() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext">HTMLInputElement.setSelectionRange() - HTML5</a>
    */
   public native void setRangeText(@Nonnull String replacement, int start, int end,
       @SelectionMode @Nonnull String selectionMode);
@@ -220,8 +220,8 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText">HTMLInputElement.setRangeText - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext">HTMLInputElement.setSelectionRange() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext">HTMLInputElement.setSelectionRange() - HTML5</a>
    */
   public native void setRangeText(@Nonnull String replacement, int start, int end);
 
@@ -229,9 +229,9 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/forms.html#dom-textarea/input-setselectionrange">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML5</a>
    */
   public native void setSelectionRange(int start, int end, @Nonnull String direction);
 
@@ -239,9 +239,9 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/forms.html#dom-textarea/input-setselectionrange">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange">The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML5</a>
    */
   public native void setSelectionRange(int start, int end);
 
@@ -249,9 +249,9 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown">HTMLInputElement.stepDown - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepdown">The definition of 'stepDown()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepdown">The definition of 'stepDown()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepdown">The definition of 'stepDown()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepdown">stepDown() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepdown">stepDown() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepdown">stepDown() - HTML5</a>
    */
   public native void stepDown(int n);
 
@@ -259,9 +259,9 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown">HTMLInputElement.stepDown - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepdown">The definition of 'stepDown()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepdown">The definition of 'stepDown()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepdown">The definition of 'stepDown()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepdown">stepDown() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepdown">stepDown() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepdown">stepDown() - HTML5</a>
    */
   public native void stepDown();
 
@@ -269,9 +269,9 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.stepUp() method increments the value of a numeric type of  input element by the value of the step attribute, or the default step value if the step attribute is not explicitly set. The method, when invoked, increments the value by (step * n), where n defaults to 1 if not specified, and step defaults to the default value for step if not specified.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp">HTMLInputElement.stepUp - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup">The definition of 'stepUp()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepup">The definition of 'stepUp()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepup">The definition of 'stepUp()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup">stepUp() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepup">stepUp() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepup">stepUp() - HTML5</a>
    */
   public native void stepUp(int n);
 
@@ -279,9 +279,9 @@ public class HTMLInputElement extends HTMLElement {
    * The HTMLInputElement.stepUp() method increments the value of a numeric type of  input element by the value of the step attribute, or the default step value if the step attribute is not explicitly set. The method, when invoked, increments the value by (step * n), where n defaults to 1 if not specified, and step defaults to the default value for step if not specified.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp">HTMLInputElement.stepUp - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup">The definition of 'stepUp()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepup">The definition of 'stepUp()' in the 'HTML 5.1' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepup">The definition of 'stepUp()' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup">stepUp() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepup">stepUp() - HTML 5.1</a>
+   * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepup">stepUp() - HTML5</a>
    */
   public native void stepUp();
 

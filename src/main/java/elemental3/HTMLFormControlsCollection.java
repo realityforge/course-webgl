@@ -8,11 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLFormControlsCollection interface represents a collection of HTML form control elements.
+ * The HTMLFormControlsCollection interface represents a collection of HTML form control elements. 
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection">HTMLFormControlsCollection - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection">The definition of 'HTMLFormControlsCollection' in the 'HTML Living Standard' specification.</a>
- * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">The definition of 'HTMLFormControlsCollection' in the 'HTML5' specification.</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML Living Standard</a>
+ * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML5</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -36,8 +36,8 @@ public class HTMLFormControlsCollection {
    * The HTMLFormControlsCollection.namedItem() method returns the RadioNodeList or the Element in the collection whose name or id match the specified name, or null if no node matches.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem">HTMLFormControlsCollection.namedItem - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-htmlformcontrolscollection-nameditem">The definition of 'HTMLFormControlsCollection.namedItem()' in the 'HTML Living Standard' specification.</a>
-   * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">The definition of 'HTMLFormControlsCollection' in the 'HTML5' specification.</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-htmlformcontrolscollection-nameditem">HTMLFormControlsCollection.namedItem() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML5</a>
    */
   @Nullable
   public native RadioNodeListOrElementUnion namedItem(@Nonnull String name);
