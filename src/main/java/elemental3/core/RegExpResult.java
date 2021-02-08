@@ -44,7 +44,7 @@ public class RegExpResult {
   public native int length();
 
   @JsOverlay
-  @Nonnull
+  @Nullable
   public final String getAt(final int index) {
     return Js.<JsArrayLike<String>>cast( this ).getAt( index );
   }
