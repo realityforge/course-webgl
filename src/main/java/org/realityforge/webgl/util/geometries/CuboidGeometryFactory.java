@@ -1,10 +1,10 @@
 package org.realityforge.webgl.util.geometries;
 
-import elemental3.core.Float32Array;
-import elemental3.core.JsArray;
-import elemental3.core.Uint16Array;
-import elemental3.gl.DrawPrimitiveType;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.core.Float32Array;
+import akasha.core.Uint16Array;
+import akasha.gl.DrawMode;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.lang.JsArray;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
@@ -43,7 +43,7 @@ public final class CuboidGeometryFactory
 
   @Nonnull
   public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
-                                 @DrawPrimitiveType final int mode,
+                                 @DrawMode final int mode,
                                  final double width,
                                  final double height,
                                  final double depth,
@@ -56,7 +56,7 @@ public final class CuboidGeometryFactory
 
   @Nonnull
   public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
-                                 @DrawPrimitiveType final int mode,
+                                 @DrawMode final int mode,
                                  final double width,
                                  final double height,
                                  final double depth,
@@ -78,7 +78,7 @@ public final class CuboidGeometryFactory
   }
 
   private CuboidGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
-                                 @DrawPrimitiveType final int mode,
+                                 @DrawMode final int mode,
                                  final double width,
                                  final double height,
                                  final double depth,

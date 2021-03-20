@@ -1,8 +1,8 @@
 package org.realityforge.webgl.util;
 
-import elemental3.core.ArrayBufferView;
-import elemental3.gl.UsageType;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.core.ArrayBufferView;
+import akasha.gl.UsageType;
+import akasha.gl.WebGL2RenderingContext;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 

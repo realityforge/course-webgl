@@ -1,8 +1,9 @@
 package org.realityforge.webgl.util;
 
-import elemental3.gl.DrawPrimitiveType;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLVertexArrayObject;
+import akasha.gl.DrawElementsDataType;
+import akasha.gl.DrawMode;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLVertexArrayObject;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -10,7 +11,7 @@ import javax.annotation.Nullable;
 public final class Geometry2
   extends Resource<WebGLVertexArrayObject>
 {
-  @DrawPrimitiveType
+  @DrawElementsDataType
   private final int _mode;
   private final int _offset;
   private final int _count;
@@ -27,7 +28,7 @@ public final class Geometry2
   }
 
   public Geometry2( @Nonnull final WebGL2RenderingContext gl,
-                    @DrawPrimitiveType final int mode,
+                    @DrawMode final int mode,
                     final int offset,
                     final int count,
                     @Nullable final IndexBuffer indexBuffer,
@@ -37,7 +38,7 @@ public final class Geometry2
   }
 
   public Geometry2( @Nonnull final WebGL2RenderingContext gl,
-                    @DrawPrimitiveType final int mode,
+                    @DrawMode final int mode,
                     final int offset,
                     final int count,
                     final int maxInstances,
@@ -45,7 +46,7 @@ public final class Geometry2
                     @Nonnull final Attribute... attributes )
   {
     super( gl, true );
-    DrawPrimitiveType.Validator.assertValid( mode );
+    DrawMode.Util.assertValid( mode );
     assert offset >= 0 : "Offset must not be negative";
     assert count > 0 : "Count must be greater than 0";
     assert maxInstances >= 0 : "Max instance count must not be negative";

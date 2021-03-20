@@ -1,11 +1,11 @@
 package org.realityforge.webgl.hello_triangle;
 
+import akasha.HTMLCanvasElement;
+import akasha.core.Float32Array;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.HTMLCanvasElement;
-import elemental3.core.Float32Array;
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.Attribute;

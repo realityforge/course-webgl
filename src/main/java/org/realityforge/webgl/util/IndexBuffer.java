@@ -1,9 +1,9 @@
 package org.realityforge.webgl.util;
 
-import elemental3.core.ArrayBufferView;
-import elemental3.gl.DrawElementsDataType;
-import elemental3.gl.UsageType;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.core.ArrayBufferView;
+import akasha.gl.DrawElementsDataType;
+import akasha.gl.UsageType;
+import akasha.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 
 public final class IndexBuffer
@@ -25,8 +25,7 @@ public final class IndexBuffer
                       @DrawElementsDataType final int type )
   {
     super( gl, data, usage, WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER );
-    DrawElementsDataType.Validator.assertValid( type );
-    _type = type;
+    _type = DrawElementsDataType.Util.requireValid( type );
   }
 
   @DrawElementsDataType

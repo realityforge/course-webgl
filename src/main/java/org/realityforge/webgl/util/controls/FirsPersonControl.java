@@ -1,8 +1,8 @@
 package org.realityforge.webgl.util.controls;
 
-import elemental3.EventTarget;
-import elemental3.KeyboardEvent;
-import elemental3.KeyboardEventListener;
+import akasha.EventTarget;
+import akasha.KeyboardEvent;
+import akasha.KeyboardEventListener;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;

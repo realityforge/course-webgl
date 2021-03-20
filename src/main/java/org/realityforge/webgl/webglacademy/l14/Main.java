@@ -1,15 +1,15 @@
 package org.realityforge.webgl.webglacademy.l14;
 
+import akasha.Document;
+import akasha.Global;
+import akasha.HTMLCanvasElement;
+import akasha.HTMLElement;
+import akasha.HTMLVideoElement;
+import akasha.core.Float32Array;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLTexture;
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Document;
-import elemental3.Global;
-import elemental3.HTMLCanvasElement;
-import elemental3.HTMLElement;
-import elemental3.HTMLVideoElement;
-import elemental3.core.Float32Array;
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.AppState;

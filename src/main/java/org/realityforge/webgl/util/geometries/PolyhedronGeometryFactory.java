@@ -1,10 +1,10 @@
 package org.realityforge.webgl.util.geometries;
 
-import elemental3.core.Float32Array;
-import elemental3.core.JsArray;
-import elemental3.core.Uint16Array;
-import elemental3.gl.DrawPrimitiveType;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.core.Float32Array;
+import akasha.core.Uint16Array;
+import akasha.gl.DrawMode;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.lang.JsArray;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -55,7 +55,7 @@ public final class PolyhedronGeometryFactory
 
   @Nonnull
   public static Geometry createIsocahedron( @Nonnull final WebGL2RenderingContext gl,
-                                            @DrawPrimitiveType final int mode,
+                                            @DrawMode final int mode,
                                             final double radius,
                                             final int detail,
                                             @MagicConstant( flags = { NORMALS, UVS } ) final int options )
@@ -80,7 +80,7 @@ public final class PolyhedronGeometryFactory
 
   @Nonnull
   public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
-                                 @DrawPrimitiveType final int mode,
+                                 @DrawMode final int mode,
                                  @Nonnull double[] vertices,
                                  @Nonnull int[] indices,
                                  final double radius,
@@ -91,7 +91,7 @@ public final class PolyhedronGeometryFactory
 
   @Nonnull
   public static Geometry create( @Nonnull final WebGL2RenderingContext gl,
-                                 @DrawPrimitiveType final int mode,
+                                 @DrawMode final int mode,
                                  @Nonnull double[] vertices,
                                  @Nonnull int[] indices,
                                  final double radius,
@@ -102,7 +102,7 @@ public final class PolyhedronGeometryFactory
   }
 
   private PolyhedronGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
-                                     @DrawPrimitiveType final int mode,
+                                     @DrawMode final int mode,
                                      @Nonnull double[] positions,
                                      @Nonnull int[] indices,
                                      final double radius,

@@ -1,14 +1,14 @@
 package org.realityforge.webgl.webglacademy.l10;
 
+import akasha.Global;
+import akasha.HTMLCanvasElement;
+import akasha.core.ArrayBufferView;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLFramebuffer;
+import akasha.gl.WebGLRenderbuffer;
+import akasha.gl.WebGLTexture;
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Global;
-import elemental3.HTMLCanvasElement;
-import elemental3.core.ArrayBufferView;
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLFramebuffer;
-import elemental3.gl.WebGLRenderbuffer;
-import elemental3.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;

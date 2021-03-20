@@ -1,13 +1,15 @@
 package org.realityforge.webgl.util;
 
-import elemental3.core.Float32Array;
-import elemental3.core.Int16Array;
-import elemental3.core.Int8Array;
-import elemental3.core.Uint16Array;
-import elemental3.core.Uint8Array;
-import elemental3.gl.AttributeDataType;
-import elemental3.gl.VertexDimensions;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.core.Float32Array;
+import akasha.core.Int16Array;
+import akasha.core.Int8Array;
+import akasha.core.Uint16Array;
+import akasha.core.Uint8Array;
+import akasha.gl.AttributeComponentDataType;
+import akasha.gl.AttributeComponentIntegerDataType;
+import akasha.gl.AttributeDataType;
+import akasha.gl.VertexDimensions;
+import akasha.gl.WebGL2RenderingContext;
 
 /**
  * The Accessor class describes how a buffers memory is structured and should be accessed.
@@ -18,7 +20,7 @@ public final class Accessor
 {
   @VertexDimensions
   private final int _componentCount;
-  @AttributeDataType
+  @AttributeComponentDataType
   private final int _componentType;
   private final boolean _normalize;
   private final int _stride;
@@ -29,13 +31,13 @@ public final class Accessor
     this( componentCount, WebGL2RenderingContext.FLOAT );
   }
 
-  public Accessor( @VertexDimensions final int componentCount, @AttributeDataType final int componentType )
+  public Accessor( @VertexDimensions final int componentCount, @AttributeComponentDataType final int componentType )
   {
     this( componentCount, componentType, 0, 0 );
   }
 
   public Accessor( @VertexDimensions final int componentCount,
-                   @AttributeDataType final int componentType,
+                   @AttributeComponentDataType final int componentType,
                    final int stride,
                    final int offset )
   {
@@ -43,7 +45,7 @@ public final class Accessor
   }
 
   public Accessor( @VertexDimensions final int componentCount,
-                   @AttributeDataType final int componentType,
+                   @AttributeComponentDataType final int componentType,
                    final boolean normalize,
                    final int stride,
                    final int offset )
@@ -52,11 +54,9 @@ public final class Accessor
     assert stride >= 0 && stride <= 255;
     assert offset >= 0;
     // Normalize should only be set to true for integer data types
-    assert !normalize || ( WebGL2RenderingContext.FLOAT != componentType &&
-                           WebGL2RenderingContext.HALF_FLOAT != componentType );
-    AttributeDataType.Validator.assertValid( componentType );
+    assert !normalize || AttributeComponentIntegerDataType.Util.isValid( componentType );
     _componentCount = componentCount;
-    _componentType = componentType;
+    _componentType = AttributeDataType.Util.requireValid( componentType );
     _normalize = normalize;
     _stride = stride;
     _offset = offset;

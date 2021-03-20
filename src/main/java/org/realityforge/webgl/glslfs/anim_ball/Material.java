@@ -1,9 +1,9 @@
 package org.realityforge.webgl.glslfs.anim_ball;
 
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLUniformLocation;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
+import akasha.gl.WebGLUniformLocation;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.GL;
 

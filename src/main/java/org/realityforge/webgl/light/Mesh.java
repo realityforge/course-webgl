@@ -1,10 +1,10 @@
 package org.realityforge.webgl.light;
 
-import elemental3.core.Float32Array;
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLTexture;
+import akasha.core.Float32Array;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
+import akasha.gl.WebGLTexture;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;

@@ -1,11 +1,11 @@
 package org.realityforge.webgl.rectangle;
 
+import akasha.HTMLCanvasElement;
+import akasha.core.Float32Array;
+import akasha.core.Uint16Array;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.HTMLCanvasElement;
-import elemental3.core.Float32Array;
-import elemental3.core.Uint16Array;
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.Accessor;

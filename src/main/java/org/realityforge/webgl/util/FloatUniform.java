@@ -1,7 +1,7 @@
 package org.realityforge.webgl.util;
 
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
 import javax.annotation.Nonnull;
 
 public final class FloatUniform

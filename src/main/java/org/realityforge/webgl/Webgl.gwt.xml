@@ -1,8 +1,7 @@
 <module>
   <inherits name='com.google.gwt.core.Core'/>
   <inherits name='org.realityforge.braincheck.BrainCheckDev'/>
-  <inherits name='elemental3.core.Core'/>
-  <inherits name='elemental3.Elemental3'/>
+  <inherits name='akasha.Akasha'/>
   <inherits name='org.realityforge.vecmath.VecmathDev'/>
 
   <source path='util'/>

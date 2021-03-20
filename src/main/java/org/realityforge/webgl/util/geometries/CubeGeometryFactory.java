@@ -1,9 +1,9 @@
 package org.realityforge.webgl.util.geometries;
 
-import elemental3.core.Float32Array;
-import elemental3.core.JsArray;
-import elemental3.gl.DrawPrimitiveType;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.core.Float32Array;
+import akasha.gl.DrawMode;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.lang.JsArray;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
@@ -56,7 +56,7 @@ public final class CubeGeometryFactory
   }
 
   private CubeGeometryFactory( @Nonnull final WebGL2RenderingContext gl,
-                               @DrawPrimitiveType final int mode,
+                               @DrawMode final int mode,
                                final double length,
                                @MagicConstant( flags = { NORMALS, UVS, COLORS } ) final int options )
   {

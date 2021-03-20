@@ -1,8 +1,8 @@
 package org.realityforge.webgl.util;
 
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLTexture;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
+import akasha.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 

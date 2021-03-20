@@ -1,10 +1,10 @@
 package org.realityforge.webgl.webglacademy.l11;
 
-import elemental3.core.Float32Array;
-import elemental3.core.Uint16Array;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
-import elemental3.gl.WebGLTexture;
+import akasha.core.Float32Array;
+import akasha.core.Uint16Array;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
+import akasha.gl.WebGLTexture;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.Accessor;
 import org.realityforge.webgl.util.AppState;

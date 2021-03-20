@@ -1,15 +1,15 @@
 package org.realityforge.webgl.util;
 
-import elemental3.gl.DrawPrimitiveType;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLVertexArrayObject;
+import akasha.gl.DrawMode;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLVertexArrayObject;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class Geometry
 {
-  @DrawPrimitiveType
+  @DrawMode
   private final int _mode;
   private final int _offset;
   private final int _count;
@@ -25,7 +25,7 @@ public final class Geometry
     this( WebGL2RenderingContext.TRIANGLES, 0, count, null, attributes );
   }
 
-  public Geometry( @DrawPrimitiveType final int mode,
+  public Geometry( @DrawMode final int mode,
                    final int offset,
                    final int count,
                    @Nullable final IndexBuffer indexBuffer,

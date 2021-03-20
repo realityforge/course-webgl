@@ -1,12 +1,12 @@
 package org.realityforge.webgl.light;
 
+import akasha.Document;
+import akasha.Global;
+import akasha.HTMLCanvasElement;
+import akasha.core.Float32Array;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Document;
-import elemental3.Global;
-import elemental3.HTMLCanvasElement;
-import elemental3.core.Float32Array;
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.vecmath.Vector3f;

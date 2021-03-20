@@ -1,12 +1,12 @@
 package org.realityforge.webgl.util;
 
-import elemental3.Document;
-import elemental3.Element;
-import elemental3.Global;
-import elemental3.HTMLCanvasElement;
-import elemental3.HTMLElement;
-import elemental3.RenderContextType;
-import elemental3.gl.WebGL2RenderingContext;
+import akasha.Document;
+import akasha.Element;
+import akasha.Global;
+import akasha.HTMLCanvasElement;
+import akasha.HTMLElement;
+import akasha.RenderContextType;
+import akasha.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
 

@@ -1,8 +1,8 @@
 package org.realityforge.webgl.light;
 
-import elemental3.gl.GLSL;
-import elemental3.gl.WebGL2RenderingContext;
-import elemental3.gl.WebGLProgram;
+import akasha.gl.GLSL;
+import akasha.gl.WebGL2RenderingContext;
+import akasha.gl.WebGLProgram;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.GL;
