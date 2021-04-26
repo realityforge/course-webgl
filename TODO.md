@@ -67,6 +67,18 @@ fragUV = uv; }
   - See https://developer.mozilla.org/en-US/docs/Web/API/OVR_multiview2
   - See https://developer.oculus.com/documentation/oculus-browser/browser-multiview/#using-multiview-in-webgl-20
 
+## Apps to stretch skills
+
+* Port https://github.com/toji/webxr-particles
+
+* WebRTC + XR + Hand-tracking to create VR chat with a real feel of social presence. Each "area" would be hosted
+  independently and other users use webrtc so connect to that peer. The communication could include audio and/or
+  video as well as a data stream. Video would allow the immersion of desktop users into the world.
+- Hand Tracking: https://github.com/marlon360/webxr-handtracking
+- Hand Tracking: https://github.com/stewdio/handy.js
+- WebXR Layers Spec: https://github.com/immersive-web/layers
+- WebXR Layers Sample: https://cabanier.github.io/WebXRLayers-samples/index.html
+
 ## References
 
 * [gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline)
