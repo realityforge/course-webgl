@@ -16,7 +16,7 @@ define 'course-webgl' do
                :grim_annotations,
                :jsinterop_base,
                :jsinterop_annotations,
-               :braincheck,
+               :braincheck_core,
                :gwt_user
 
   gwt_config = {}

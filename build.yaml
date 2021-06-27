@@ -22,4 +22,4 @@ artifacts:
 
   jsinterop_base: com.google.jsinterop:base:jar:1.0.0
 
-  braincheck: org.realityforge.braincheck:braincheck:jar:1.29.0
+  braincheck_core: org.realityforge.braincheck:braincheck-core:jar:1.31.0
