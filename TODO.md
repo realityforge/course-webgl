@@ -11,8 +11,6 @@ Adopt UBOs as described in https://www.youtube.com/watch?v=bdIZ2ZloXEA
   all of the materials we have used and places like
   https://github.com/jmarshall23/IcedTech/blob/Doom-3-Vanilla-Compatible/code/renderer/RenderProgs_GLSL.cpp
 
-* Vertex shaders should be in files named `X.vert` while fragment shaders are in files named `X.frag`
-
 * Incorporate
     - https://github.com/stackgl/gl-vao
     - https://github.com/stackgl/gl-buffer
