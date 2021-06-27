@@ -1,10 +1,10 @@
 package org.realityforge.webgl.webglacademy.l14;
 
 import akasha.Document;
-import akasha.Global;
 import akasha.HTMLCanvasElement;
 import akasha.HTMLElement;
 import akasha.HTMLVideoElement;
+import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
@@ -77,7 +77,7 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
     final AppState appState = AppState.create( CanvasUtil.getWebGL2RenderingContext( canvas ) );
 
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     _video = (HTMLVideoElement) document.createElement( "video" );
     _video.src = "assets/video.ogv";
     _video.loop = true;
@@ -136,7 +136,7 @@ public final class Main
       _mesh.sendToGpu( gl );
     } );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   public void pushVideoFrameToTexture( @Nonnull final WebGL2RenderingContext gl )
@@ -158,7 +158,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _texture )
     {
       return;

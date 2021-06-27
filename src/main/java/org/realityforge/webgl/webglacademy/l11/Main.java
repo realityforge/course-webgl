@@ -1,8 +1,8 @@
 package org.realityforge.webgl.webglacademy.l11;
 
-import akasha.Global;
 import akasha.HTMLCanvasElement;
 import akasha.Response;
+import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.core.Uint32Array;
 import akasha.gl.GLSL;
@@ -111,7 +111,7 @@ public final class Main
 
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 40 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
-    Global
+    WindowGlobal
       .fetch( "assets/dragon.json" )
       .then( Response::json )
       .thenAccept( data -> appState.in( () -> {
@@ -153,12 +153,12 @@ public final class Main
 
     appState.in( () -> _backgroundMesh = new BackgroundMesh( appState.gl() ) );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _mesh ||
          !_mesh.areTexturesLoaded() ||
          null == _backgroundMesh ||

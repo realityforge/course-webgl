@@ -1,8 +1,8 @@
 package org.realityforge.webgl.light;
 
 import akasha.Document;
-import akasha.Global;
 import akasha.HTMLCanvasElement;
+import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
@@ -185,7 +185,7 @@ public final class Main
                                 LIGHT_VERTEX_SHADER_SOURCE,
                                 LIGHT_FRAGMENT_SHADER_SOURCE );
 
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     _control = new FirsPersonControl( _camera, document );
 
     CanvasUtil.renderLoop( canvas, gl, this::renderFrame );

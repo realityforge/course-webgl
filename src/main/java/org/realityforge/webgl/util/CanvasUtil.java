@@ -2,10 +2,10 @@ package org.realityforge.webgl.util;
 
 import akasha.Document;
 import akasha.Element;
-import akasha.Global;
 import akasha.HTMLCanvasElement;
 import akasha.HTMLElement;
 import akasha.RenderContextType;
+import akasha.WindowGlobal;
 import akasha.gl.WebGL2RenderingContext;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
@@ -19,7 +19,7 @@ public final class CanvasUtil
   @Nonnull
   public static HTMLCanvasElement createCanvas()
   {
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
     final HTMLElement body = document.body;
     assert null != body;
@@ -37,7 +37,7 @@ public final class CanvasUtil
                                  @Nonnull final WebGL2RenderingContext gl,
                                  @Nonnull final RenderFunction renderFunction )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl, renderFunction ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, gl, renderFunction ) );
     CanvasUtil.resize( gl, canvas );
     renderFunction.renderFrame( gl );
   }
@@ -46,14 +46,14 @@ public final class CanvasUtil
                                    @Nonnull final WebGL2RenderingContext gl,
                                    @Nonnull final RenderFunction renderFunction )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, gl, renderFunction ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, gl, renderFunction ) );
     CanvasUtil.resize( gl, canvas );
     renderFunction.renderFrame( gl );
   }
 
   public static void resize( @Nonnull final WebGL2RenderingContext gl, @Nonnull final HTMLCanvasElement canvas )
   {
-    final Element element = Global.document().documentElement();
+    final Element element = WindowGlobal.document().documentElement();
     assert null != element;
 
     final int displayWidth = element.clientWidth();

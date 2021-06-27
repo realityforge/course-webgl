@@ -1,7 +1,7 @@
 package org.realityforge.webgl.glslfs.burning_ball;
 
-import akasha.Global;
 import akasha.HTMLCanvasElement;
+import akasha.WindowGlobal;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
 import akasha.gl.WebGLTexture;
@@ -304,12 +304,12 @@ public final class Main
       GL.loadTexture( gl, "img/explosion.png" ).thenAccept( texture -> _texture = texture );
     } );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _mesh || null == _texture )
     {
       return;

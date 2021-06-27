@@ -1,10 +1,10 @@
 package org.realityforge.webgl.image_processing;
 
 import akasha.Document;
-import akasha.Global;
 import akasha.HTMLButtonElement;
 import akasha.HTMLCanvasElement;
 import akasha.HTMLElement;
+import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
@@ -35,7 +35,7 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     final HTMLElement body = document.body;
     assert null != body;
     final HTMLButtonElement button1 = (HTMLButtonElement) document.createElement( "button" );

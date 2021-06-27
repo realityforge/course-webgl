@@ -1,7 +1,7 @@
 package org.realityforge.webgl.glslfs.box_sphere;
 
-import akasha.Global;
 import akasha.HTMLCanvasElement;
+import akasha.WindowGlobal;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
 import com.google.gwt.core.client.EntryPoint;
@@ -76,12 +76,12 @@ public final class Main
       _mesh.sendToGpu( gl );
     } );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
 

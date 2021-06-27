@@ -1,10 +1,10 @@
 package org.realityforge.webgl.webglacademy.l8;
 
 import akasha.Document;
-import akasha.Global;
 import akasha.HTMLCanvasElement;
 import akasha.HTMLElement;
 import akasha.HTMLVideoElement;
+import akasha.WindowGlobal;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
 import akasha.gl.WebGLTexture;
@@ -74,7 +74,7 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     _video = (HTMLVideoElement) document.createElement( "video" );
     _video.src = "assets/video.ogv";
     _video.loop = true;
@@ -129,7 +129,7 @@ public final class Main
       gl.bindTexture( WebGL2RenderingContext.TEXTURE_2D, null );
     } );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void refreshTexture( @Nonnull final WebGL2RenderingContext gl )
@@ -147,7 +147,7 @@ public final class Main
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     appState.in( () -> {
       final WebGL2RenderingContext gl = appState.gl();
       CanvasUtil.resize( gl, canvas );

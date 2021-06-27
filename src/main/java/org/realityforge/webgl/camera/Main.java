@@ -1,8 +1,8 @@
 package org.realityforge.webgl.camera;
 
 import akasha.Document;
-import akasha.Global;
 import akasha.HTMLCanvasElement;
+import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
@@ -107,7 +107,7 @@ public final class Main
     _geometry.getAttribute( 1 ).setLocation( GL.getAttribLocation( gl, program, "color" ) );
     _geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
 
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     _control = new FirsPersonControl( _camera, document );
 
     CanvasUtil.renderLoop( canvas, gl, this::renderFrame );

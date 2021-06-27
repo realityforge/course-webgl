@@ -1,8 +1,8 @@
 package org.realityforge.webgl.glslfs.anim_ball;
 
-import akasha.Global;
 import akasha.HTMLCanvasElement;
 import akasha.Response;
+import akasha.WindowGlobal;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
 import com.google.gwt.core.client.EntryPoint;
@@ -89,7 +89,7 @@ public final class Main
 
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 0.1, 10.0 );
 
-    Global
+    WindowGlobal
       .fetch( "materials/noise.shader" )
       .then( Response::text )
       .thenAccept( shaderPrefix -> appState.in( () -> {
@@ -107,12 +107,12 @@ public final class Main
         _mesh.sendToGpu( gl );
       } ) );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _mesh )
     {
       return;

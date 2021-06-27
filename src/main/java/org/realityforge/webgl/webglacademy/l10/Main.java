@@ -1,7 +1,7 @@
 package org.realityforge.webgl.webglacademy.l10;
 
-import akasha.Global;
 import akasha.HTMLCanvasElement;
+import akasha.WindowGlobal;
 import akasha.core.ArrayBufferView;
 import akasha.gl.GLSL;
 import akasha.gl.WebGL2RenderingContext;
@@ -143,12 +143,12 @@ public final class Main
       gl.bindFramebuffer( WebGL2RenderingContext.DRAW_FRAMEBUFFER, null );
     } );
 
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
   }
 
   private void renderFrame( @Nonnull final HTMLCanvasElement canvas, @Nonnull final AppState appState )
   {
-    Global.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
+    WindowGlobal.requestAnimationFrame( t -> renderFrame( canvas, appState ) );
     if ( null == _texture )
     {
       return;
