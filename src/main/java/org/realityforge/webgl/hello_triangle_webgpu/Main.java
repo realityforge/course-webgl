@@ -32,6 +32,9 @@ import javax.annotation.Nonnull;
 import jsinterop.base.Js;
 import org.realityforge.webgl.util.CanvasUtil;
 
+/**
+ * A simple port of https://github.com/austinEng/webgpu-samples/blob/main/src/sample/helloTriangle/main.ts
+ */
 @SuppressWarnings( "UnstableApiUsage" )
 public final class Main
   implements EntryPoint
