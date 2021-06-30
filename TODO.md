@@ -1,8 +1,6 @@
 
 ## Actions
 
-* Test WebGPU!
-
 * Translate colours in shaders using perception derived model - https://bottosson.github.io/posts/oklab/
 
 * Asset loaders so that shaders and images can be loaded asynchronously and not included inline.
