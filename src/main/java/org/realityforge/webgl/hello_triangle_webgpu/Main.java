@@ -44,7 +44,6 @@ public final class Main
   public void onModuleLoad()
   {
     WindowGlobal.navigator().gpu().requestAdapter().then( GPUAdapter::requestDevice ).thenAccept( this::onStart );
-
   }
 
   private void onStart( @Nonnull final GPUDevice device )
