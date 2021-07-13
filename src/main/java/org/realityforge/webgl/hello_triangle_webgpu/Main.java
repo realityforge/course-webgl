@@ -55,6 +55,7 @@ public final class Main
 
     final RenderingContext context = canvas.getContext( RenderContextType.gpupresent );
     assert null != context;
+    // Unchecked cast required as Chrome canary has not updated the name of the underlying type
     _gl = Js.uncheckedCast( context );
     _gl.configure( GPUPresentationConfiguration.create( _device, GPUTextureFormat.bgra8unorm ) );
 
