@@ -5,13 +5,14 @@ import akasha.RenderContextType;
 import akasha.RenderingContext;
 import akasha.WindowGlobal;
 import akasha.gpu.GPUAdapter;
-import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUColorDict;
 import akasha.gpu.GPUColorTargetState;
 import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUDevice;
 import akasha.gpu.GPUFragmentState;
+import akasha.gpu.GPUPresentationConfiguration;
+import akasha.gpu.GPUPresentationContext;
 import akasha.gpu.GPUPrimitiveState;
 import akasha.gpu.GPUPrimitiveTopology;
 import akasha.gpu.GPURenderPassColorAttachment;
@@ -21,8 +22,6 @@ import akasha.gpu.GPURenderPipeline;
 import akasha.gpu.GPURenderPipelineDescriptor;
 import akasha.gpu.GPUShaderModuleDescriptor;
 import akasha.gpu.GPUStoreOp;
-import akasha.gpu.GPUSwapChain;
-import akasha.gpu.GPUSwapChainDescriptor;
 import akasha.gpu.GPUTextureFormat;
 import akasha.gpu.GPUTextureView;
 import akasha.gpu.GPUVertexState;
@@ -41,7 +40,7 @@ public final class Main
 {
   private GPUDevice _device;
   private GPURenderPipeline _pipeline;
-  private GPUSwapChain _swapChain;
+  private GPUPresentationContext _gl;
 
   @Override
   public void onModuleLoad()
@@ -56,8 +55,8 @@ public final class Main
 
     final RenderingContext context = canvas.getContext( RenderContextType.gpupresent );
     assert null != context;
-    final GPUCanvasContext gl = Js.uncheckedCast( context );
-    _swapChain = gl.configureSwapChain( GPUSwapChainDescriptor.create( _device, GPUTextureFormat.bgra8unorm ) );
+    _gl = Js.uncheckedCast( context );
+    _gl.configure( GPUPresentationConfiguration.create( _device, GPUTextureFormat.bgra8unorm ) );
 
     @WGSL
     final String vertexShader =
@@ -99,7 +98,7 @@ public final class Main
   {
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
     final GPUCommandEncoder commandEncoder = _device.createCommandEncoder();
-    final GPUTextureView textureView = _swapChain.getCurrentTexture().createView();
+    final GPUTextureView textureView = _gl.getCurrentTexture().createView();
 
     final GPURenderPassColorAttachment attachment =
       GPURenderPassColorAttachment.create( GPUColorDict.create( 1, 0, 0, 0 ),
