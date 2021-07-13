@@ -82,7 +82,7 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( "main",
                                _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
-                               new GPUColorTargetState[]{GPUColorTargetState.create( GPUTextureFormat.bgra8unorm )} );
+                               new GPUColorTargetState[]{ GPUColorTargetState.create( GPUTextureFormat.bgra8unorm ) } );
 
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
                                                 .create( vertexState )
