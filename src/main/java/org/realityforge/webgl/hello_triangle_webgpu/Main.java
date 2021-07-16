@@ -2,17 +2,16 @@ package org.realityforge.webgl.hello_triangle_webgpu;
 
 import akasha.HTMLCanvasElement;
 import akasha.RenderContextType;
-import akasha.RenderingContext;
 import akasha.WindowGlobal;
 import akasha.gpu.GPUAdapter;
+import akasha.gpu.GPUCanvasConfiguration;
+import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUColorDict;
 import akasha.gpu.GPUColorTargetState;
 import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUDevice;
 import akasha.gpu.GPUFragmentState;
-import akasha.gpu.GPUPresentationConfiguration;
-import akasha.gpu.GPUPresentationContext;
 import akasha.gpu.GPUPrimitiveState;
 import akasha.gpu.GPUPrimitiveTopology;
 import akasha.gpu.GPURenderPassColorAttachment;
@@ -27,8 +26,8 @@ import akasha.gpu.GPUTextureView;
 import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
+import java.util.Objects;
 import javax.annotation.Nonnull;
-import jsinterop.base.Js;
 import org.realityforge.webgl.util.CanvasUtil;
 
 /**
@@ -40,7 +39,7 @@ public final class Main
 {
   private GPUDevice _device;
   private GPURenderPipeline _pipeline;
-  private GPUPresentationContext _gl;
+  private GPUCanvasContext _gl;
 
   @Override
   public void onModuleLoad()
@@ -53,11 +52,8 @@ public final class Main
     _device = device;
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
 
-    final RenderingContext context = canvas.getContext( RenderContextType.gpupresent );
-    assert null != context;
-    // Unchecked cast required as Chrome canary has not updated the name of the underlying type
-    _gl = Js.uncheckedCast( context );
-    _gl.configure( GPUPresentationConfiguration.create( _device, GPUTextureFormat.bgra8unorm ) );
+    _gl = (GPUCanvasContext) Objects.requireNonNull( canvas.getContext( RenderContextType.webgpu ) );
+    _gl.configure( GPUCanvasConfiguration.create( _device, GPUTextureFormat.bgra8unorm ) );
 
     @WGSL
     final String vertexShader =
