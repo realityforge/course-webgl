@@ -68,8 +68,8 @@ public final class Main
       "  return vec4<f32>(pos[VertexIndex], 0.0, 1.0);\n" +
       "}";
     final GPUVertexState.Builder vertexState =
-      GPUVertexState.create( "main",
-                             _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ) );
+      GPUVertexState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
+                             "main" );
     @WGSL
     final String fragmentShader =
       "[[stage(fragment)]]\n" +
@@ -77,8 +77,8 @@ public final class Main
       "  return vec4<f32>(1.0, 0.0, 0.0, 1.0);\n" +
       "}";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( "main",
-                               _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
+                               "main",
                                new GPUColorTargetState[]{ GPUColorTargetState.create( GPUTextureFormat.bgra8unorm ) } );
 
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
@@ -98,9 +98,9 @@ public final class Main
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
 
     final GPURenderPassColorAttachment attachment =
-      GPURenderPassColorAttachment.create( GPUColorDict.create( 1, 0, 0, 0 ),
-                                           GPUStoreOp.store,
-                                           textureView );
+      GPURenderPassColorAttachment.create( textureView,
+                                           GPUColorDict.create( 0, 0, 0, 1 ),
+                                           GPUStoreOp.store );
 
     final GPURenderPassEncoder passEncoder =
       commandEncoder.beginRenderPass( GPURenderPassDescriptor.create( new GPURenderPassColorAttachment[]{ attachment } ) );
