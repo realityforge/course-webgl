@@ -1,0 +1,5 @@
+<module>
+  <inherits name='org.realityforge.webgl.Webgl'/>
+
+  <source path='util'/>
+</module>

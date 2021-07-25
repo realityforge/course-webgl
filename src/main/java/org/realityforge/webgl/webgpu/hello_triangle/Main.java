@@ -1,7 +1,6 @@
 package org.realityforge.webgl.webgpu.hello_triangle;
 
 import akasha.HTMLCanvasElement;
-import akasha.RenderContextType;
 import akasha.WindowGlobal;
 import akasha.gpu.GPUAdapter;
 import akasha.gpu.GPUCanvasConfiguration;
@@ -11,7 +10,6 @@ import akasha.gpu.GPUColorTargetState;
 import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUDevice;
-import akasha.gpu.GPUExtent3DDict;
 import akasha.gpu.GPUFragmentState;
 import akasha.gpu.GPUPrimitiveState;
 import akasha.gpu.GPUPrimitiveTopology;
@@ -26,9 +24,9 @@ import akasha.gpu.GPUTextureView;
 import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
-import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webgl.util.CanvasUtil;
+import org.realityforge.webgl.webgpu.util.WebGpuKit;
 
 /**
  * A simple port of https://github.com/austinEng/webgpu-samples/blob/main/src/sample/helloTriangle/main.ts
@@ -56,18 +54,15 @@ public final class Main
     _device = device;
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
 
-    _gl = (GPUCanvasContext) Objects.requireNonNull( canvas.getContext( RenderContextType.webgpu ) );
+    _gl = WebGpuKit.getGpuCanvasContext( canvas );
 
     // Use the preferred format of adapter instead of hardcoding to a specific format ala bgra8unorm.
     final String textureFormat = _gl.getPreferredFormat( _adapter );
 
-    //Ensure the configured size takes into account the device pixel ratio.
-    final double devicePixelRatio = WindowGlobal.devicePixelRatio();
-    final GPUExtent3DDict extent3D = GPUExtent3DDict
-      .create( (int) ( canvas.clientWidth() * devicePixelRatio ) )
-      .height( (int) ( canvas.clientHeight() * devicePixelRatio ) );
-
-    _gl.configure( GPUCanvasConfiguration.create( _device, textureFormat ).size( extent3D ) );
+    _gl.configure( GPUCanvasConfiguration
+                     .create( _device, textureFormat )
+                     //Ensure the configured size takes into account the device pixel ratio.
+                     .size( WebGpuKit.calcGpuExtent3D( canvas ) ) );
 
     @WGSL
     final String vertexShader =

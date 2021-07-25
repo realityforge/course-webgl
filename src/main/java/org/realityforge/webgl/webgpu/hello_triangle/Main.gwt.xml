@@ -1,5 +1,5 @@
 <module rename-to='example'>
-  <inherits name='org.realityforge.webgl.Webgl'/>
+  <inherits name='org.realityforge.webgl.webgpu.Webgpu'/>
 
   <entry-point class='org.realityforge.webgl.webgpu.hello_triangle.Main'/>
 
