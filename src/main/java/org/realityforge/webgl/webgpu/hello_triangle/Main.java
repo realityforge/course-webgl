@@ -11,6 +11,7 @@ import akasha.gpu.GPUColorTargetState;
 import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUDevice;
+import akasha.gpu.GPUExtent3DDict;
 import akasha.gpu.GPUFragmentState;
 import akasha.gpu.GPUPrimitiveState;
 import akasha.gpu.GPUPrimitiveTopology;
@@ -21,7 +22,6 @@ import akasha.gpu.GPURenderPipeline;
 import akasha.gpu.GPURenderPipelineDescriptor;
 import akasha.gpu.GPUShaderModuleDescriptor;
 import akasha.gpu.GPUStoreOp;
-import akasha.gpu.GPUTextureFormat;
 import akasha.gpu.GPUTextureView;
 import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
@@ -40,11 +40,15 @@ public final class Main
   private GPUDevice _device;
   private GPURenderPipeline _pipeline;
   private GPUCanvasContext _gl;
+  private GPUAdapter _adapter;
 
   @Override
   public void onModuleLoad()
   {
-    WindowGlobal.navigator().gpu().requestAdapter().then( GPUAdapter::requestDevice ).thenAccept( this::onStart );
+    WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
+      _adapter = adapter;
+      return adapter.requestDevice();
+    } ).thenAccept( this::onStart );
   }
 
   private void onStart( @Nonnull final GPUDevice device )
@@ -53,7 +57,17 @@ public final class Main
     final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
 
     _gl = (GPUCanvasContext) Objects.requireNonNull( canvas.getContext( RenderContextType.webgpu ) );
-    _gl.configure( GPUCanvasConfiguration.create( _device, GPUTextureFormat.bgra8unorm ) );
+
+    // Use the preferred format of adapter instead of hardcoding to a specific format ala bgra8unorm.
+    final String textureFormat = _gl.getPreferredFormat( _adapter );
+
+    //Ensure the configured size takes into account the device pixel ratio.
+    final double devicePixelRatio = WindowGlobal.devicePixelRatio();
+    final GPUExtent3DDict extent3D = GPUExtent3DDict
+      .create( (int) ( canvas.clientWidth() * devicePixelRatio ) )
+      .height( (int) ( canvas.clientHeight() * devicePixelRatio ) );
+
+    _gl.configure( GPUCanvasConfiguration.create( _device, textureFormat ).size( extent3D ) );
 
     @WGSL
     final String vertexShader =
@@ -79,7 +93,7 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( GPUTextureFormat.bgra8unorm ) } );
+                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
 
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
                                                 .create( vertexState )
