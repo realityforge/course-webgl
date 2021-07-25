@@ -1,4 +1,4 @@
-package org.realityforge.webgl.hello_triangle_webgpu;
+package org.realityforge.webgl.webgpu.hello_triangle;
 
 import akasha.HTMLCanvasElement;
 import akasha.RenderContextType;
