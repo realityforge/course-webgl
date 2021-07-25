@@ -10,6 +10,11 @@
       "url": "https://github.com/subhasishdash/webglinternals.git",
       "branch": "master",
       "revision": "5e60781c90c57627ddb088069be9856ef1b19c54"
+    },
+    "vendor/webgpu-samples": {
+      "url": "https://github.com/austinEng/webgpu-samples.git",
+      "branch": "main",
+      "revision": "c2a7f8f3954333080396754082b8eb235d98043e"
     }
   }
 }
