@@ -20,6 +20,7 @@ import akasha.gpu.GPURenderPipeline;
 import akasha.gpu.GPURenderPipelineDescriptor;
 import akasha.gpu.GPUShaderModuleDescriptor;
 import akasha.gpu.GPUStoreOp;
+import akasha.gpu.GPUTextureFormat;
 import akasha.gpu.GPUTextureView;
 import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
@@ -57,6 +58,7 @@ public final class Main
     _gl = WebGpuKit.getGpuCanvasContext( canvas );
 
     // Use the preferred format of adapter instead of hardcoding to a specific format ala bgra8unorm.
+    @GPUTextureFormat
     final String textureFormat = _gl.getPreferredFormat( _adapter );
 
     _gl.configure( GPUCanvasConfiguration
