@@ -9,7 +9,7 @@ import jsinterop.base.Js;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.util.Camera;
 
-public final class FirsPersonControl
+public final class FirstPersonControl
 {
   public static final int KEY_UP = 38;
   public static final int KEY_DOWN = 40;
@@ -32,7 +32,7 @@ public final class FirsPersonControl
   private boolean _yawLeftPressed;
   private boolean _yawRightPressed;
 
-  public FirsPersonControl( @Nonnull final Camera camera, @Nonnull final EventTarget target )
+  public FirstPersonControl( @Nonnull final Camera camera, @Nonnull final EventTarget target )
   {
     _camera = Objects.requireNonNull( camera );
     _target = Objects.requireNonNull( target );

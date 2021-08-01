@@ -15,7 +15,7 @@ import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.GL;
 import org.realityforge.webgl.util.Geometry2;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.util.controls.FirsPersonControl;
+import org.realityforge.webgl.util.controls.FirstPersonControl;
 import org.realityforge.webgl.util.geometries.CubeGeometryFactory;
 
 public final class Main
@@ -85,7 +85,7 @@ public final class Main
   private Geometry2 _geometry;
   private double _angle;
   private boolean _sentToGpu;
-  private FirsPersonControl _control;
+  private FirstPersonControl _control;
 
   @Override
   public void onModuleLoad()
@@ -108,7 +108,7 @@ public final class Main
     _geometry.getAttribute( 2 ).setLocation( GL.getAttribLocation( gl, program, "textureCoordinate" ) );
 
     final Document document = WindowGlobal.document();
-    _control = new FirsPersonControl( _camera, document );
+    _control = new FirstPersonControl( _camera, document );
 
     CanvasUtil.renderLoop( canvas, gl, this::renderFrame );
   }
