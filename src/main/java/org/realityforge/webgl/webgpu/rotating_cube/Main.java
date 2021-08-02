@@ -177,8 +177,8 @@ public final class Main
         .buffers( GPUVertexBufferLayout.create( cubeVertexSize, new GPUVertexAttribute[]{
           // position
           GPUVertexAttribute.create( GPUVertexFormat.float32x4, cubePositionOffset, 0 ),
-          GPUVertexAttribute.create( GPUVertexFormat.float32x2, cubeUVOffset, 1 ),
-          } ) );
+          GPUVertexAttribute.create( GPUVertexFormat.float32x2, cubeUVOffset, 1 )
+        } ) );
 
     @WGSL
     final String fragmentShader =
