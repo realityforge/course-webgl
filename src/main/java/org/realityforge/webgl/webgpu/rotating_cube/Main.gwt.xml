@@ -1,0 +1,7 @@
+<module rename-to='example'>
+  <inherits name='org.realityforge.webgl.webgpu.Webgpu'/>
+
+  <entry-point class='org.realityforge.webgl.webgpu.rotating_cube.Main'/>
+
+  <source path=''/>
+</module>
