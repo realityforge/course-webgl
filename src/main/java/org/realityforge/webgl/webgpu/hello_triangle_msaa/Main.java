@@ -31,7 +31,6 @@ import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
-import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
 
 /**
@@ -59,7 +58,7 @@ public final class Main
   private void onStart( @Nonnull final GPUDevice device )
   {
     _device = device;
-    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
+    final HTMLCanvasElement canvas = WebGpuKit.createCanvas();
 
     _gl = WebGpuKit.getGpuCanvasContext( canvas );
 

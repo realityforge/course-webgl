@@ -1,6 +1,8 @@
 package org.realityforge.webgl.webgpu.util;
 
+import akasha.Document;
 import akasha.HTMLCanvasElement;
+import akasha.HTMLElement;
 import akasha.RenderContextType;
 import akasha.WindowGlobal;
 import akasha.gpu.GPUCanvasContext;
@@ -13,6 +15,17 @@ public final class WebGpuKit
 {
   private WebGpuKit()
   {
+  }
+
+  @Nonnull
+  public static HTMLCanvasElement createCanvas()
+  {
+    final Document document = WindowGlobal.document();
+    final HTMLCanvasElement canvas = (HTMLCanvasElement) document.createElement( "canvas" );
+    final HTMLElement body = document.body;
+    assert null != body;
+    body.appendChild( canvas );
+    return canvas;
   }
 
   @Nonnull

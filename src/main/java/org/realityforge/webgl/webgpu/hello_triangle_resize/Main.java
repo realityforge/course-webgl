@@ -36,7 +36,6 @@ import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.intellij.lang.annotations.Language;
-import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
 
 /**
@@ -72,7 +71,7 @@ public final class Main
   private void onStart( @Nonnull final GPUDevice device )
   {
     _device = device;
-    _canvas = CanvasUtil.createCanvas();
+    _canvas = WebGpuKit.createCanvas();
 
     @Language( "CSS" )
     final String css =

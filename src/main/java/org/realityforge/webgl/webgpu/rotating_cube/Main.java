@@ -125,7 +125,7 @@ public final class Main
   private void onStart( @Nonnull final GPUDevice device )
   {
     _device = device;
-    final HTMLCanvasElement canvas = CanvasUtil.createCanvas();
+    final HTMLCanvasElement canvas = WebGpuKit.createCanvas();
     canvas.width = WindowGlobal.innerWidth();
     canvas.height = WindowGlobal.innerHeight();
 
