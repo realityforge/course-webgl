@@ -295,54 +295,58 @@ public final class Main
 
   private static void multiply( @Nonnull final Matrix4d target, @Nonnull final Matrix4d a, @Nonnull Matrix4d b )
   {
-    final double a11 = a.m00;
-    final double a12 = a.m01;
-    final double a13 = a.m02;
-    final double a14 = a.m03;
-    final double a21 = a.m10;
-    final double a22 = a.m11;
-    final double a23 = a.m12;
-    final double a24 = a.m13;
-    final double a31 = a.m20;
-    final double a32 = a.m21;
-    final double a33 = a.m22;
-    final double a34 = a.m23;
-    final double a41 = a.m30;
-    final double a42 = a.m31;
-    final double a43 = a.m32;
-    final double a44 = a.m33;
+    final double a00 = a.m00;
+    final double a01 = a.m01;
+    final double a02 = a.m02;
+    final double a03 = a.m03;
+    final double a10 = a.m10;
+    final double a11 = a.m11;
+    final double a12 = a.m12;
+    final double a13 = a.m13;
+    final double a20 = a.m20;
+    final double a21 = a.m21;
+    final double a22 = a.m22;
+    final double a23 = a.m23;
+    final double a30 = a.m30;
+    final double a31 = a.m31;
+    final double a32 = a.m32;
+    final double a33 = a.m33;
 
-    final double b11 = b.m00;
-    final double b12 = b.m01;
-    final double b13 = b.m02;
-    final double b14 = b.m03;
-    final double b21 = b.m10;
-    final double b22 = b.m11;
-    final double b23 = b.m12;
-    final double b24 = b.m13;
-    final double b31 = b.m20;
-    final double b32 = b.m21;
-    final double b33 = b.m22;
-    final double b34 = b.m23;
+    final double b00 = b.m00;
+    final double b01 = b.m01;
+    final double b02 = b.m02;
+    final double b03 = b.m03;
+    final double b10 = b.m10;
+    final double b11 = b.m11;
+    final double b12 = b.m12;
+    final double b13 = b.m13;
+    final double b20 = b.m20;
+    final double b21 = b.m21;
+    final double b22 = b.m22;
+    final double b23 = b.m23;
+    final double b30 = b.m30;
+    final double b31 = b.m31;
+    final double b32 = b.m32;
+    final double b33 = b.m33;
 
-    target.m00 = a11 * b11 + a12 * b21 + a13 * b31;
-    target.m01 = a11 * b12 + a12 * b22 + a13 * b32;
-    target.m02 = a11 * b13 + a12 * b23 + a13 * b33;
-    target.m03 = a11 * b14 + a12 * b24 + a13 * b34 + a14;
+    target.m00 = a00 * b00 + a01 * b10 + a02 * b20 + a03 * b30;
+    target.m01 = a00 * b01 + a01 * b11 + a02 * b21 + a03 * b31;
+    target.m02 = a00 * b02 + a01 * b12 + a02 * b22 + a03 * b32;
+    target.m03 = a00 * b03 + a01 * b13 + a02 * b23 + a03 * b33;
 
-    target.m10 = a21 * b11 + a22 * b21 + a23 * b31;
-    target.m11 = a21 * b12 + a22 * b22 + a23 * b32;
-    target.m12 = a21 * b13 + a22 * b23 + a23 * b33;
-    target.m13 = a21 * b14 + a22 * b24 + a23 * b34 + a24;
+    target.m10 = a10 * b00 + a11 * b10 + a12 * b20 + a13 * b30;
+    target.m11 = a10 * b01 + a11 * b11 + a12 * b21 + a13 * b31;
+    target.m12 = a10 * b02 + a11 * b12 + a12 * b22 + a13 * b32;
+    target.m13 = a10 * b03 + a11 * b13 + a12 * b23 + a13 * b33;
 
-    target.m20 = a31 * b11 + a32 * b21 + a33 * b31;
-    target.m21 = a31 * b12 + a32 * b22 + a33 * b32;
-    target.m22 = a31 * b13 + a32 * b23 + a33 * b33;
-    target.m23 = a31 * b14 + a32 * b24 + a33 * b34 + a34;
+    target.m20 = a20 * b00 + a21 * b10 + a22 * b20 + a23 * b30;
+    target.m21 = a20 * b01 + a21 * b11 + a22 * b21 + a23 * b31;
+    target.m22 = a20 * b02 + a21 * b12 + a22 * b22 + a23 * b32;
+    target.m23 = a20 * b03 + a21 * b13 + a22 * b23 + a23 * b33;
 
-    target.m30 = a41 * b11 + a42 * b21 + a43 * b31;
-    target.m31 = a41 * b12 + a42 * b22 + a43 * b32;
-    target.m32 = a41 * b13 + a42 * b23 + a43 * b33;
-    target.m33 = a41 * b14 + a42 * b24 + a43 * b34 + a44;
+    target.m30 = a30 * b00 + a31 * b10 + a32 * b20 + a33 * b30;
+    target.m31 = a30 * b01 + a31 * b11 + a32 * b21 + a33 * b31;
+    target.m32 = a30 * b02 + a31 * b12 + a32 * b22 + a33 * b32;
+    target.m33 = a30 * b03 + a31 * b13 + a32 * b23 + a33 * b33;
   }
 }
