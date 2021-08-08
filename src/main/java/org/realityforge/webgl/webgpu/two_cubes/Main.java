@@ -49,7 +49,6 @@ import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.webgpu.util.MatrixKit;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
 
 /**
@@ -301,10 +300,10 @@ public final class Main
 
     final Matrix4d modelViewProjectionMatrix1 = new Matrix4d();
     final Matrix4d modelViewProjectionMatrix2 = new Matrix4d();
-    MatrixKit.multiply( modelViewProjectionMatrix1, modelMatrix1, viewMatrix );
-    MatrixKit.multiply( modelViewProjectionMatrix1, modelViewProjectionMatrix1, _projectionMatrix );
-    MatrixKit.multiply( modelViewProjectionMatrix2, modelMatrix2, viewMatrix );
-    MatrixKit.multiply( modelViewProjectionMatrix2, modelViewProjectionMatrix2, _projectionMatrix );
+    Matrix4d.multiply( modelViewProjectionMatrix1, modelMatrix1, viewMatrix );
+    Matrix4d.multiply( modelViewProjectionMatrix1, modelViewProjectionMatrix1, _projectionMatrix );
+    Matrix4d.multiply( modelViewProjectionMatrix2, modelMatrix2, viewMatrix );
+    Matrix4d.multiply( modelViewProjectionMatrix2, modelViewProjectionMatrix2, _projectionMatrix );
 
     final Float32Array transformationMatrix1 = new Float32Array( modelViewProjectionMatrix1.toArray() );
     final Float32Array transformationMatrix2 = new Float32Array( modelViewProjectionMatrix2.toArray() );

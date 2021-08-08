@@ -56,7 +56,6 @@ import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
-import org.realityforge.webgl.webgpu.util.MatrixKit;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
 
 @SuppressWarnings( "UnstableApiUsage" )
@@ -312,7 +311,7 @@ public final class Main
     //mat4.rotate( viewMatrix, viewMatrix, 1, vec3.fromValues(Math.sin(now), Math.cos(now), 0) );
 
     final Matrix4d modelViewProjectionMatrix = new Matrix4d();
-    MatrixKit.multiply( modelViewProjectionMatrix, viewMatrix, _projectionMatrix );
+    Matrix4d.multiply( modelViewProjectionMatrix, viewMatrix, _projectionMatrix );
 
     return new Float32Array( modelViewProjectionMatrix.toArray() );
   }
