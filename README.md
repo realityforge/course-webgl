@@ -7,3 +7,5 @@ The first course is the [The Extensive WebGL Series ! - Part1 : Low Level Graphi
 The second course is the [WebGL internals](https://www.udemy.com/course/webgl-internals/). The `vendor/webglinternals` directory contains the course materials provided by the teacher.
 
 The third course is the [Learn GLSL Shaders from Scratch](https://www.udemy.com/course/learn-glsl-shaders-from-scratch/). The `vendor/GLSLfromScratch` directory contains the course materials provided by the teacher.
+
+It also includes experiments with WebGPU that are a result of copying and reimplementing examples from the [webgpu-samples](https://github.com/austinEng/webgpu-samples.git) repository.
