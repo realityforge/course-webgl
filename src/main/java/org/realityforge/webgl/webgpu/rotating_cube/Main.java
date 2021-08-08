@@ -55,11 +55,14 @@ import org.realityforge.webgl.webgpu.util.WebGpuKit;
 public final class Main
   implements EntryPoint
 {
-  // Byte size of one cube vertex.
+  /// Byte size of one cube vertex.
   private static final int CUBE_VERTEX_SIZE = Float.BYTES * ( 4 /* position */ + 4 /* color */ + 2 /* uv */ );
+  /// Byte offset of cube vertex position attribute.
   private static final int CUBE_POSITION_OFFSET = 0;
-  private static final int CUBE_COLOR_OFFSET = 4 * 4; // Byte offset of cube vertex color attribute.
-  private static final int CUBE_UV_OFFSET = 4 * 8;
+  /// Byte offset of cube vertex color attribute.
+  private static final int CUBE_COLOR_OFFSET = CUBE_POSITION_OFFSET + Float.BYTES * 4;
+  /// Byte offset of cube vertex uv attribute.
+  private static final int CUBE_UV_OFFSET = CUBE_COLOR_OFFSET + Float.BYTES * 4;
   private static final int CUBE_VERTEX_COUNT = 36;
   private static final Float32Array CUBE_VERTEX_ARRAY = new Float32Array( new double[]{
     // float4 position, float4 color, float2 uv,
