@@ -56,12 +56,12 @@ public final class Main
   implements EntryPoint
 {
   // Byte size of one cube vertex.
-  private static final int cubeVertexSize = Float.BYTES * ( 4 /* position */ + 4 /* color */ + 2 /* uv */ );
-  private static final int cubePositionOffset = 0;
-  private static final int cubeColorOffset = 4 * 4; // Byte offset of cube vertex color attribute.
-  private static final int cubeUVOffset = 4 * 8;
-  private static final int cubeVertexCount = 36;
-  private static final Float32Array cubeVertexArray = new Float32Array( new double[]{
+  private static final int CUBE_VERTEX_SIZE = Float.BYTES * ( 4 /* position */ + 4 /* color */ + 2 /* uv */ );
+  private static final int CUBE_POSITION_OFFSET = 0;
+  private static final int CUBE_COLOR_OFFSET = 4 * 4; // Byte offset of cube vertex color attribute.
+  private static final int CUBE_UV_OFFSET = 4 * 8;
+  private static final int CUBE_VERTEX_COUNT = 36;
+  private static final Float32Array CUBE_VERTEX_ARRAY = new Float32Array( new double[]{
     // float4 position, float4 color, float2 uv,
     1, -1, 1, 1, 1, 0, 1, 1, 1, 1,
     -1, -1, 1, 1, 0, 0, 1, 1, 0, 1,
@@ -145,9 +145,9 @@ public final class Main
 
     // Create a vertex buffer from the cube data.
     _verticesBuffer = device.createBuffer( GPUBufferDescriptor
-                                             .create( cubeVertexArray.byteLength(), GPUBufferUsage.VERTEX )
+                                             .create( CUBE_VERTEX_ARRAY.byteLength(), GPUBufferUsage.VERTEX )
                                              .mappedAtCreation( true ) );
-    new Float32Array( _verticesBuffer.getMappedRange() ).set( cubeVertexArray );
+    new Float32Array( _verticesBuffer.getMappedRange() ).set( CUBE_VERTEX_ARRAY );
     _verticesBuffer.unmap();
 
     @WGSL
@@ -176,10 +176,10 @@ public final class Main
       GPUVertexState
         .create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
                  "main" )
-        .buffers( GPUVertexBufferLayout.create( cubeVertexSize, new GPUVertexAttribute[]{
+        .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE, new GPUVertexAttribute[]{
           // position
-          GPUVertexAttribute.create( GPUVertexFormat.float32x4, cubePositionOffset, 0 ),
-          GPUVertexAttribute.create( GPUVertexFormat.float32x2, cubeUVOffset, 1 )
+          GPUVertexAttribute.create( GPUVertexFormat.float32x4, CUBE_POSITION_OFFSET, 0 ),
+          GPUVertexAttribute.create( GPUVertexFormat.float32x2, CUBE_UV_OFFSET, 1 )
         } ) );
 
     @WGSL
@@ -289,7 +289,7 @@ public final class Main
     passEncoder.setPipeline( _pipeline );
     passEncoder.setBindGroup( 0, _uniformBindGroup );
     passEncoder.setVertexBuffer( 0, _verticesBuffer );
-    passEncoder.draw( cubeVertexCount, 1, 0, 0 );
+    passEncoder.draw( CUBE_VERTEX_COUNT, 1, 0, 0 );
     passEncoder.endPass();
 
     _device.queue().submit( new GPUCommandBuffer[]{ commandEncoder.finish() } );
