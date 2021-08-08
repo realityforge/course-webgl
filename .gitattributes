@@ -7,7 +7,7 @@
 *.json text
 *.md text
 *.png binary
-*.rake text
+*.shader text
 *.xml text
 *.yaml text
 .gitattributes text
