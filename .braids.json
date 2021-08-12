@@ -4,7 +4,7 @@
     "vendor/GLSLfromScratch": {
       "url": "https://github.com/NikLever/GLSLfromScratch.git",
       "branch": "master",
-      "revision": "68be1e19b1550adf67b570b8f0845ee44cdcf65f"
+      "revision": "7afbfbbb56427a6814661c426700481c9bafabc2"
     },
     "vendor/webglinternals": {
       "url": "https://github.com/subhasishdash/webglinternals.git",
