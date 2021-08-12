@@ -62,7 +62,7 @@ public final class Main
 {
   private static final int cubeVertexSize = 4 * 10; // Byte size of one cube vertex.
   private static final int cubePositionOffset = 0;
-  private static final int cubeColorOffset = 4 * 4; // Byte offset of cube vertex color attribute.
+  // Byte offset of cube vertex color attribute.
   private static final int cubeUVOffset = 4 * 8;
   private static final int cubeVertexCount = 36;
   private static final Float32Array cubeVertexArray = new Float32Array( new double[]{
@@ -108,8 +108,8 @@ public final class Main
     1, 1, -1, 1, 1, 1, 0, 1, 1, 0,
     1, -1, -1, 1, 1, 0, 0, 1, 1, 1,
     -1, 1, -1, 1, 0, 1, 0, 1, 0, 0,
-    } );// 4x4 matrix
-  private static final int MATRIX_SIZE = Float.BYTES * 16;// uniformBindGroup offset must be 256-byte aligned
+    } );
+  // uniformBindGroup offset must be 256-byte aligned
   private static final int UNIFORM_BUFFER_OFFSET = 256;
   private GPUDevice _device;
   private GPURenderPipeline _pipeline;
@@ -225,7 +225,7 @@ public final class Main
                                                          GPUTextureFormat.depth24plus,
                                                          GPUTextureUsage.RENDER_ATTACHMENT ) );
 
-    final int uniformBufferSize = UNIFORM_BUFFER_OFFSET + MATRIX_SIZE;
+    final int uniformBufferSize = UNIFORM_BUFFER_OFFSET + Matrix4d.FLOAT_BYTES;
     _uniformBuffer =
       device.createBuffer( GPUBufferDescriptor.create( uniformBufferSize,
                                                        GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
@@ -239,7 +239,7 @@ public final class Main
                                                                  GPUBufferBinding
                                                                    .create( _uniformBuffer )
                                                                    .offset( 0 )
-                                                                   .size( MATRIX_SIZE ) )
+                                                                   .size( Matrix4d.FLOAT_BYTES ) )
                                      } );
     _uniformBindGroup1 = device.createBindGroup( bindGroup1Descriptor );
 
@@ -251,7 +251,7 @@ public final class Main
                                                                  GPUBufferBinding
                                                                    .create( _uniformBuffer )
                                                                    .offset( UNIFORM_BUFFER_OFFSET )
-                                                                   .size( MATRIX_SIZE ) )
+                                                                   .size( Matrix4d.FLOAT_BYTES ) )
                                      } );
     _uniformBindGroup2 = device.createBindGroup( bindGroup2Descriptor );
 

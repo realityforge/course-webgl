@@ -46,6 +46,7 @@ import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector4d;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
@@ -59,9 +60,9 @@ public final class Main
   /// Byte offset of cube vertex position attribute.
   private static final int CUBE_POSITION_OFFSET = 0;
   /// Byte offset of cube vertex color attribute.
-  private static final int CUBE_COLOR_OFFSET = CUBE_POSITION_OFFSET + Float.BYTES * 4;
+  private static final int CUBE_COLOR_OFFSET = CUBE_POSITION_OFFSET + Vector4d.FLOAT_BYTES;
   /// Byte offset of cube vertex uv attribute.
-  private static final int CUBE_UV_OFFSET = CUBE_COLOR_OFFSET + Float.BYTES * 4;
+  private static final int CUBE_UV_OFFSET = CUBE_COLOR_OFFSET + Vector4d.FLOAT_BYTES;
   private static final int CUBE_VERTEX_COUNT = 36;
   private static final Float32Array CUBE_VERTEX_ARRAY = new Float32Array( new double[]{
     // float4 position, float4 color, float2 uv,
@@ -106,9 +107,7 @@ public final class Main
     1, 1, -1, 1, 1, 1, 0, 1, 1, 0,
     1, -1, -1, 1, 1, 0, 0, 1, 1, 1,
     -1, 1, -1, 1, 0, 1, 0, 1, 0, 0,
-    } );// 4x4 matrix
-  private static final int MATRIX4x4_FLOAT_COUNT = 4 * 4;
-  private static final int MATRIX_SIZE = Float.BYTES * MATRIX4x4_FLOAT_COUNT;
+    } );
   private static final int X_COUNT = 4;
   private static final int Y_COUNT = 4;
   private static final int NUM_INSTANCES = X_COUNT * Y_COUNT;
@@ -227,7 +226,7 @@ public final class Main
                                                          GPUTextureFormat.depth24plus,
                                                          GPUTextureUsage.RENDER_ATTACHMENT ) );
 
-    final int uniformBufferSize = NUM_INSTANCES * MATRIX_SIZE;
+    final int uniformBufferSize = NUM_INSTANCES * Matrix4d.FLOAT_BYTES;
     _uniformBuffer =
       device.createBuffer( GPUBufferDescriptor.create( uniformBufferSize,
                                                        GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
@@ -262,7 +261,7 @@ public final class Main
       }
     }
 
-    final Float32Array mvpMatricesData = new Float32Array( MATRIX4x4_FLOAT_COUNT * NUM_INSTANCES );
+    final Float32Array mvpMatricesData = new Float32Array( Matrix4d.COMPONENTS * NUM_INSTANCES );
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
@@ -291,7 +290,7 @@ public final class Main
     //viewMatrix.rotateX( System.currentTimeMillis() / 1000.0 );
     //viewMatrix.rotateY( System.currentTimeMillis() / 1000.0 );
 
-    final Float32Array mvpMatricesData = new Float32Array( MATRIX4x4_FLOAT_COUNT * NUM_INSTANCES );
+    final Float32Array mvpMatricesData = new Float32Array( Matrix4d.COMPONENTS * NUM_INSTANCES );
 
     int m = 0;
     int byteOffset = 0;
@@ -307,7 +306,7 @@ public final class Main
 
         mvpMatricesData.set( tmpMatrix.toArray(), byteOffset );
         m++;
-        byteOffset += MATRIX4x4_FLOAT_COUNT;
+        byteOffset += Matrix4d.COMPONENTS;
       }
     }
 

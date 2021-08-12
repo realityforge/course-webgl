@@ -54,6 +54,7 @@ import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector4d;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
@@ -67,9 +68,9 @@ public final class Main
   /// Byte offset of cube vertex position attribute.
   private static final int CUBE_POSITION_OFFSET = 0;
   /// Byte offset of cube vertex color attribute.
-  private static final int CUBE_COLOR_OFFSET = CUBE_POSITION_OFFSET + Float.BYTES * 4;
+  private static final int CUBE_COLOR_OFFSET = CUBE_POSITION_OFFSET + Vector4d.FLOAT_BYTES;
   /// Byte offset of cube vertex uv attribute.
-  private static final int CUBE_UV_OFFSET = CUBE_COLOR_OFFSET + Float.BYTES * 4;
+  private static final int CUBE_UV_OFFSET = CUBE_COLOR_OFFSET + Vector4d.FLOAT_BYTES;
   private static final int CUBE_VERTEX_COUNT = 36;
   private static final Float32Array CUBE_VERTEX_ARRAY = new Float32Array( new double[]{
     // float4 position, float4 color, float2 uv,
@@ -235,7 +236,7 @@ public final class Main
                                                          GPUTextureFormat.depth24plus,
                                                          GPUTextureUsage.RENDER_ATTACHMENT ) );
 
-    final int uniformBufferSize = Float.BYTES * 16; // 4x4 matrix
+    final int uniformBufferSize = Matrix4d.FLOAT_BYTES;
     _uniformBuffer =
       device.createBuffer( GPUBufferDescriptor.create( uniformBufferSize,
                                                        GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
