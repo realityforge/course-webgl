@@ -4,7 +4,7 @@ import blurWGSL from './blur.wgsl';
 import fullscreenTexturedQuadWGSL from '../../shaders/fullscreenTexturedQuad.wgsl';
 
 // Contants from the blur.wgsl shader.
-const tileDim = 256;
+const tileDim = 128;
 const batch = [4, 4];
 
 const init: SampleInit = async ({ canvasRef, gui }) => {
@@ -12,7 +12,7 @@ const init: SampleInit = async ({ canvasRef, gui }) => {
   const device = await adapter.requestDevice();
 
   if (canvasRef.current === null) return;
-  const context = canvasRef.current.getContext('gpupresent');
+  const context = canvasRef.current.getContext('webgpu');
 
   const devicePixelRatio = window.devicePixelRatio || 1;
   const presentationSize = [

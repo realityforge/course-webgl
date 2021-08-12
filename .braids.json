@@ -14,7 +14,7 @@
     "vendor/webgpu-samples": {
       "url": "https://github.com/austinEng/webgpu-samples.git",
       "branch": "main",
-      "revision": "c2a7f8f3954333080396754082b8eb235d98043e"
+      "revision": "a808d651ea910da3760b8a4cfa44a742afbb9d84"
     }
   }
 }
