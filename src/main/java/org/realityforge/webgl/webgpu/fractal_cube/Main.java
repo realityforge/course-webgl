@@ -257,7 +257,7 @@ public final class Main
     _cubeTexture = _device.createTexture( GPUTextureDescriptor
                                             .create( _presentationSize,
                                                      textureFormat,
-                                                     GPUTextureUsage.SHADER_READ | GPUTextureUsage.COPY_DST ) );
+                                                     GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST ) );
 
     final GPUSampler sampler =
       _device.createSampler( GPUSamplerDescriptor

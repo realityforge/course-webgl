@@ -251,7 +251,7 @@ public final class Main
                                         // TODO: Do we know this ahead of time? Should we not also source this
                                         //   somehow from imageBitmap?
                                         GPUTextureFormat.rgba8unorm,
-                                        GPUTextureUsage.SHADER_READ |
+                                        GPUTextureUsage.TEXTURE_BINDING |
                                         GPUTextureUsage.COPY_DST |
                                         GPUTextureUsage.RENDER_ATTACHMENT
                                ) );
