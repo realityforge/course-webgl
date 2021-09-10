@@ -1,0 +1,7 @@
+<module rename-to='example'>
+  <inherits name='org.realityforge.webgl.webgpu.Webgpu'/>
+
+  <entry-point class='org.realityforge.webgl.webgpu.video_uploading.Main'/>
+
+  <source path=''/>
+</module>
