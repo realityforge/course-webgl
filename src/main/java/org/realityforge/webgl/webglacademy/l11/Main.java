@@ -119,7 +119,7 @@ public final class Main
         //Vertices are laid out as:
         // - 3 floats for position vertex,
         // - 3 floats for vertex normal,
-        // -  floats for uv coordinates
+        // - 2 floats for uv coordinates
         final int stride = 4 * ( 3 + 3 + 2 );
         final Float32Array vertices = new Float32Array( asset.getVertices() );
         final WebGL2RenderingContext gl = appState.gl();
