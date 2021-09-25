@@ -33,7 +33,7 @@ public final class WebGpuKit
   {
     final double devicePixelRatio = WindowGlobal.devicePixelRatio();
     return GPUExtent3DDict
-      .create( (int) ( canvas.clientWidth() * devicePixelRatio ) )
+      .width( (int) ( canvas.clientWidth() * devicePixelRatio ) )
       .height( (int) ( canvas.clientHeight() * devicePixelRatio ) );
   }
 

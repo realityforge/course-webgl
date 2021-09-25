@@ -135,8 +135,7 @@ public final class Main
       "}\n";
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
-                 "main" )
+        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
         .buffers( GPUVertexBufferLayout.create( VERTEX_SIZE, new GPUVertexAttribute[]{
           // position
           GPUVertexAttribute.create( GPUVertexFormat.float32x3, POSITION_OFFSET, 0 ),
@@ -154,13 +153,12 @@ public final class Main
       "  return textureSampleLevel(myTexture, mySampler, fragUV);\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
-                               "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ), "main",
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .create( vertexState )
+                                      .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
                                                     .create()
@@ -179,8 +177,7 @@ public final class Main
                                            GPUStoreOp.store );
 
     _renderPassDescriptor =
-      GPURenderPassDescriptor
-        .create( new GPURenderPassColorAttachment[]{ attachment } );
+      GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{ attachment } );
 
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
   }
@@ -190,7 +187,7 @@ public final class Main
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
 
     final GPUExternalTexture externalTexture =
-      _device.importExternalTexture( GPUExternalTextureDescriptor.create( _video ) );
+      _device.importExternalTexture( GPUExternalTextureDescriptor.source( _video ) );
 
     final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
       GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),

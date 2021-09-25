@@ -183,8 +183,7 @@ public final class Main
       "}\n";
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
-                 "main" )
+        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
         .buffers( GPUVertexBufferLayout.create( cubeVertexSize, new GPUVertexAttribute[]{
           // position
           GPUVertexAttribute.create( GPUVertexFormat.float32x4, cubePositionOffset, 0 ),
@@ -199,13 +198,13 @@ public final class Main
       "  return fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .create( vertexState )
+                                      .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
                                                     .create()
@@ -216,7 +215,8 @@ public final class Main
                                                     .cullMode( GPUCullMode.back ) )
                                       // Enable depth testing so that the fragment closest to the camera
                                       // is rendered in front.
-                                      .depthStencil( GPUDepthStencilState.create( GPUTextureFormat.depth24plus )
+                                      .depthStencil( GPUDepthStencilState
+                                                       .format( GPUTextureFormat.depth24plus )
                                                        .depthCompare( GPUCompareFunction.less )
                                                        .depthWriteEnabled( true ) ) );
 
@@ -237,7 +237,7 @@ public final class Main
                                        // The first matrix in uniform buffer
                                        GPUBindGroupEntry.create( 0,
                                                                  GPUBufferBinding
-                                                                   .create( _uniformBuffer )
+                                                                   .buffer( _uniformBuffer )
                                                                    .offset( 0 )
                                                                    .size( Matrix4d.FLOAT_BYTES ) )
                                      } );
@@ -249,7 +249,7 @@ public final class Main
                                      new GPUBindGroupEntry[]{
                                        GPUBindGroupEntry.create( 0,
                                                                  GPUBufferBinding
-                                                                   .create( _uniformBuffer )
+                                                                   .buffer( _uniformBuffer )
                                                                    .offset( UNIFORM_BUFFER_OFFSET )
                                                                    .size( Matrix4d.FLOAT_BYTES ) )
                                      } );
@@ -264,7 +264,7 @@ public final class Main
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
-        .create( new GPURenderPassColorAttachment[]{ attachment } )
+        .colorAttachments( new GPURenderPassColorAttachment[]{ attachment } )
         .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
                                                                              1.0F,
                                                                              GPUStoreOp.store,

@@ -78,7 +78,7 @@ public final class Main
     _device = device;
     final HTMLCanvasElement canvas = WebGpuKit.createCanvas();
 
-    canvas.style().setProperty(  "width", "100%"  );
+    canvas.style().setProperty( "width", "100%" );
 
     _gl = WebGpuKit.getGpuCanvasContext( canvas );
 
@@ -108,7 +108,7 @@ public final class Main
       "fn frag_main() -> [[location(0)]] vec4<f32> {\n" +
       "  return vec4<f32>(1.0, 1.0, 1.0, 1.0);\n" +
       "}\n";
-    final GPUShaderModule shaderModule = _device.createShaderModule( GPUShaderModuleDescriptor.create( shader ) );
+    final GPUShaderModule shaderModule = _device.createShaderModule( GPUShaderModuleDescriptor.code( shader ) );
 
     // instanced particles buffer
     final GPUVertexBufferLayout instancedParticlesBuffer =
@@ -141,11 +141,11 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( shaderModule,
                                "frag_main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     _renderPipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .create( vertexState )
+                                      .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
                                                     .create()
@@ -239,10 +239,11 @@ public final class Main
       "  particlesB.particles[index].pos = vPos;\n" +
       "  particlesB.particles[index].vel = vVel;\n" +
       "}\n";
+    final GPUProgrammableStage vertexData =
+      GPUProgrammableStage.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( computerShader ) ),
+                                   "main" );
     _computePipeline =
-      _device.createComputePipeline( GPUComputePipelineDescriptor.create( GPUProgrammableStage.create( _device.createShaderModule(
-                                                                                                         GPUShaderModuleDescriptor.create( computerShader ) ),
-                                                                                                       "main" ) ) );
+      _device.createComputePipeline( GPUComputePipelineDescriptor.compute( vertexData ) );
     final Float32Array vertexBufferData =
       new Float32Array( new double[]{ -0.01, -0.02, 0.01,
                                       -0.02, 0.0, 0.02 } );
@@ -292,15 +293,15 @@ public final class Main
       _particleBindGroups[ i ] = device.createBindGroup(
         GPUBindGroupDescriptor.create( _computePipeline.getBindGroupLayout( 0 ),
                                        new GPUBindGroupEntry[]{
-                                         GPUBindGroupEntry.create( 0, GPUBufferBinding.create( _simParamBuffer ) ),
+                                         GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _simParamBuffer ) ),
                                          GPUBindGroupEntry.create( 1,
                                                                    GPUBufferBinding
-                                                                     .create( _particleBuffers[ i ] )
+                                                                     .buffer( _particleBuffers[ i ] )
                                                                      .offset( 0 )
                                                                      .size( initialParticleData.byteLength() ) ),
                                          GPUBindGroupEntry.create( 2,
                                                                    GPUBufferBinding
-                                                                     .create( _particleBuffers[ ( i + 1 ) % 2 ] )
+                                                                     .buffer( _particleBuffers[ ( i + 1 ) % 2 ] )
                                                                      .offset( 0 )
                                                                      .size( initialParticleData.byteLength() ) )
                                        } ) );
@@ -330,7 +331,9 @@ public final class Main
     }
     {
       final GPURenderPassEncoder passEncoder =
-        commandEncoder.beginRenderPass( GPURenderPassDescriptor.create( new GPURenderPassColorAttachment[]{ attachment } ) );
+        commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{
+          attachment
+        } ) );
       passEncoder.setPipeline( _renderPipeline );
       passEncoder.setVertexBuffer( 0, _particleBuffers[ ( _simFrame + 1 ) % 2 ] );
       passEncoder.setVertexBuffer( 1, _spriteVertexBuffer );
@@ -358,12 +361,12 @@ public final class Main
 
   public static class SimulationParameters
   {
-    public double deltaT =0.04;
-    public double rule1Distance =0.1;
-    public double rule2Distance =0.025;
-    public double rule3Distance =0.025;
-    public double rule1Scale =0.02;
-    public double rule2Scale =0.05;
-    public double rule3Scale =0.005;
+    public double deltaT = 0.04;
+    public double rule1Distance = 0.1;
+    public double rule2Distance = 0.025;
+    public double rule3Distance = 0.025;
+    public double rule1Scale = 0.02;
+    public double rule2Scale = 0.05;
+    public double rule3Scale = 0.005;
   }
 }

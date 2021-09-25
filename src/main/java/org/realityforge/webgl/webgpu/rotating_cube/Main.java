@@ -177,7 +177,7 @@ public final class Main
       "}\n";
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
+        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ),
                  "main" )
         .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE, new GPUVertexAttribute[]{
           // position
@@ -193,13 +193,13 @@ public final class Main
       "  return fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .create( vertexState )
+                                      .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
                                                     .create()
@@ -210,7 +210,8 @@ public final class Main
                                                     .cullMode( GPUCullMode.back ) )
                                       // Enable depth testing so that the fragment closest to the camera
                                       // is rendered in front.
-                                      .depthStencil( GPUDepthStencilState.create( GPUTextureFormat.depth24plus )
+                                      .depthStencil( GPUDepthStencilState
+                                                       .format( GPUTextureFormat.depth24plus )
                                                        .depthCompare( GPUCompareFunction.less )
                                                        .depthWriteEnabled( true ) ) );
 
@@ -229,7 +230,7 @@ public final class Main
                                      new GPUBindGroupEntry[]
                                        {
                                          GPUBindGroupEntry.create( 0,
-                                                                   GPUBufferBinding.create( _uniformBuffer ) )
+                                                                   GPUBufferBinding.buffer( _uniformBuffer ) )
                                        } );
     _uniformBindGroup = device.createBindGroup( bindGroupDescriptor );
 
@@ -242,7 +243,7 @@ public final class Main
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
-        .create( new GPURenderPassColorAttachment[]{ attachment } )
+        .colorAttachments( new GPURenderPassColorAttachment[]{ attachment } )
         .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
                                                                              1.0F,
                                                                              GPUStoreOp.store,

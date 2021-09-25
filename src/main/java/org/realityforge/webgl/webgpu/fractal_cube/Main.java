@@ -195,8 +195,7 @@ public final class Main
       "}\n";
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
-                 "main" )
+        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
         .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE, new GPUVertexAttribute[]{
           // position
           GPUVertexAttribute.create( GPUVertexFormat.float32x4, CUBE_POSITION_OFFSET, 0 ),
@@ -221,13 +220,13 @@ public final class Main
       "  return (1.0 - f) * texColor + f * fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .create( vertexState )
+                                      .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
                                                     .create()
@@ -238,7 +237,8 @@ public final class Main
                                                     .cullMode( GPUCullMode.back ) )
                                       // Enable depth testing so that the fragment closest to the camera
                                       // is rendered in front.
-                                      .depthStencil( GPUDepthStencilState.create( GPUTextureFormat.depth24plus )
+                                      .depthStencil( GPUDepthStencilState
+                                                       .format( GPUTextureFormat.depth24plus )
                                                        .depthCompare( GPUCompareFunction.less )
                                                        .depthWriteEnabled( true ) ) );
 
@@ -268,7 +268,7 @@ public final class Main
     final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
       GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
                                      new GPUBindGroupEntry[]{
-                                       GPUBindGroupEntry.create( 0, GPUBufferBinding.create( _uniformBuffer ) ),
+                                       GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _uniformBuffer ) ),
                                        GPUBindGroupEntry.create( 1, sampler ),
                                        GPUBindGroupEntry.create( 2, _cubeTexture.createView() )
                                      } );
@@ -283,7 +283,7 @@ public final class Main
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
-        .create( new GPURenderPassColorAttachment[]{ attachment } )
+        .colorAttachments( new GPURenderPassColorAttachment[]{ attachment } )
         .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
                                                                              1.0F,
                                                                              GPUStoreOp.store,
@@ -331,8 +331,8 @@ public final class Main
     passEncoder.endPass();
 
     // Copy the rendering results from the swapchain into |cubeTexture|.
-    commandEncoder.copyTextureToTexture( GPUImageCopyTexture.create( currentTexture ),
-                                         GPUImageCopyTexture.create( _cubeTexture ),
+    commandEncoder.copyTextureToTexture( GPUImageCopyTexture.texture( currentTexture ),
+                                         GPUImageCopyTexture.texture( _cubeTexture ),
                                          _presentationSize );
 
     _device.queue().submit( new GPUCommandBuffer[]{ commandEncoder.finish() } );

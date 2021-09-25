@@ -86,7 +86,7 @@ public final class Main
       "  return vec4<f32>(pos[VertexIndex], 0.0, 1.0);\n" +
       "}";
     final GPUVertexState.Builder vertexState =
-      GPUVertexState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
+      GPUVertexState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ),
                              "main" );
     @WGSL
     final String fragmentShader =
@@ -95,13 +95,13 @@ public final class Main
       "  return vec4<f32>(1.0, 0.0, 0.0, 1.0);\n" +
       "}";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     final int sampleCount = 4;
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                                .create( vertexState )
+                                                .vertex( vertexState )
                                                 .fragment( fragmentState )
                                                 .primitive( GPUPrimitiveState
                                                               .create()
@@ -128,7 +128,9 @@ public final class Main
         .resolveTarget( textureView );
 
     final GPURenderPassEncoder passEncoder =
-      commandEncoder.beginRenderPass( GPURenderPassDescriptor.create( new GPURenderPassColorAttachment[]{ attachment } ) );
+      commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{
+        attachment
+      } ) );
     passEncoder.setPipeline( _pipeline );
     passEncoder.draw( 3, 1, 0, 0 );
     passEncoder.endPass();

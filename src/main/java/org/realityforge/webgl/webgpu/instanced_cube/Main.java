@@ -183,8 +183,7 @@ public final class Main
       "}";
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.create( vertexShader ) ),
-                 "main" )
+        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
         .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE, new GPUVertexAttribute[]{
           // position
           GPUVertexAttribute.create( GPUVertexFormat.float32x4, CUBE_POSITION_OFFSET, 0 ),
@@ -200,13 +199,12 @@ public final class Main
       "  return fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.create( fragmentShader ) ),
-                               "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.create( textureFormat ) } );
+      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ), "main",
+                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .create( vertexState )
+                                      .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
                                                     .create()
@@ -217,7 +215,8 @@ public final class Main
                                                     .cullMode( GPUCullMode.back ) )
                                       // Enable depth testing so that the fragment closest to the camera
                                       // is rendered in front.
-                                      .depthStencil( GPUDepthStencilState.create( GPUTextureFormat.depth24plus )
+                                      .depthStencil( GPUDepthStencilState
+                                                       .format( GPUTextureFormat.depth24plus )
                                                        .depthCompare( GPUCompareFunction.less )
                                                        .depthWriteEnabled( true ) ) );
 
@@ -233,11 +232,9 @@ public final class Main
 
     final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
       GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
-                                     new GPUBindGroupEntry[]
-                                       {
-                                         GPUBindGroupEntry.create( 0,
-                                                                   GPUBufferBinding.create( _uniformBuffer ) )
-                                       } );
+                                     new GPUBindGroupEntry[]{
+                                       GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _uniformBuffer ) )
+                                     } );
     _uniformBindGroup = device.createBindGroup( bindGroupDescriptor );
 
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
@@ -261,11 +258,9 @@ public final class Main
       }
     }
 
-    final Float32Array mvpMatricesData = new Float32Array( Matrix4d.COMPONENTS * NUM_INSTANCES );
-
     _renderPassDescriptor =
       GPURenderPassDescriptor
-        .create( new GPURenderPassColorAttachment[]{ attachment } )
+        .colorAttachments( new GPURenderPassColorAttachment[]{ attachment } )
         .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
                                                                              1.0F,
                                                                              GPUStoreOp.store,
