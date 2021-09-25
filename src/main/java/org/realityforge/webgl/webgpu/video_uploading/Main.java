@@ -43,7 +43,6 @@ import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
-import jsinterop.base.Js;
 import org.realityforge.vecmath.Vector3d;
 import org.realityforge.webgl.webgpu.util.WebGpuKit;
 
