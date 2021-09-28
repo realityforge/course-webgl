@@ -135,12 +135,14 @@ public final class Main
     final GPUVertexState.Builder vertexState =
       GPUVertexState
         .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
-        .buffers( GPUVertexBufferLayout.create( VERTEX_SIZE, new GPUVertexAttribute[]{
-          // position
-          GPUVertexAttribute.create( GPUVertexFormat.float32x3, POSITION_OFFSET, 0 ),
-          // uv
-          GPUVertexAttribute.create( GPUVertexFormat.float32x2, UV_OFFSET, 1 )
-        } ) );
+        .buffers( GPUVertexBufferLayout.create( VERTEX_SIZE,  // position
+                                                GPUVertexAttribute.create( GPUVertexFormat.float32x3,
+                                                                           POSITION_OFFSET,
+                                                                           0 ),
+                                                // uv
+                                                GPUVertexAttribute.create( GPUVertexFormat.float32x2,
+                                                                           UV_OFFSET,
+                                                                           1 ) ) );
 
     @WGSL
     final String fragmentShader =
@@ -153,7 +155,7 @@ public final class Main
       "}\n";
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ), "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
+                               GPUColorTargetState.format( textureFormat ) );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
@@ -176,7 +178,7 @@ public final class Main
                                            GPUStoreOp.store );
 
     _renderPassDescriptor =
-      GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{ attachment } );
+      GPURenderPassDescriptor.colorAttachments( attachment );
 
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
   }
@@ -190,10 +192,8 @@ public final class Main
 
     final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
       GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
-                                     new GPUBindGroupEntry[]{
-                                       GPUBindGroupEntry.create( 0, _sampler ),
-                                       GPUBindGroupEntry.create( 1, externalTexture )
-                                     } );
+                                     GPUBindGroupEntry.create( 0, _sampler ),
+                                     GPUBindGroupEntry.create( 1, externalTexture ) );
     _uniformBindGroup = _device.createBindGroup( bindGroupDescriptor );
 
     _renderPassDescriptor.colorAttachments().getAt( 0 ).setView( _gl.getCurrentTexture().createView() );

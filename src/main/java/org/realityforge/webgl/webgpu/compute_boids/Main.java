@@ -114,25 +114,21 @@ public final class Main
     final GPUVertexBufferLayout instancedParticlesBuffer =
       GPUVertexBufferLayout
         .create( Float.BYTES * 4,
-                 new GPUVertexAttribute[]{
-                   // instance position
-                   GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                              0,
-                                              0 ),
-                   // instance velocity
-                   GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                              2 * Float.BYTES,
-                                              1 )
-                 } )
+                 // instance position
+                 GPUVertexAttribute.create( GPUVertexFormat.float32x2,
+                                            0,
+                                            0 ),
+                 // instance velocity
+                 GPUVertexAttribute.create( GPUVertexFormat.float32x2,
+                                            2 * Float.BYTES,
+                                            1 ) )
         .stepMode( GPUVertexStepMode.instance );
     // vertex buffer
     final GPUVertexBufferLayout vertexBuffer =
       GPUVertexBufferLayout
         .create( Float.BYTES * 2,
-                 new GPUVertexAttribute[]{
-                   // vertex positions
-                   GPUVertexAttribute.create( GPUVertexFormat.float32x2, 0, 2 )
-                 } )
+                 // vertex positions
+                 GPUVertexAttribute.create( GPUVertexFormat.float32x2, 0, 2 ) )
         .stepMode( GPUVertexStepMode.vertex );
     final GPUVertexState.Builder vertexState =
       GPUVertexState.create( shaderModule,
@@ -141,7 +137,7 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( shaderModule,
                                "frag_main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
+                               GPUColorTargetState.format( textureFormat ) );
 
     _renderPipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
@@ -292,19 +288,17 @@ public final class Main
     {
       _particleBindGroups[ i ] = device.createBindGroup(
         GPUBindGroupDescriptor.create( _computePipeline.getBindGroupLayout( 0 ),
-                                       new GPUBindGroupEntry[]{
-                                         GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _simParamBuffer ) ),
-                                         GPUBindGroupEntry.create( 1,
-                                                                   GPUBufferBinding
-                                                                     .buffer( _particleBuffers[ i ] )
-                                                                     .offset( 0 )
-                                                                     .size( initialParticleData.byteLength() ) ),
-                                         GPUBindGroupEntry.create( 2,
-                                                                   GPUBufferBinding
-                                                                     .buffer( _particleBuffers[ ( i + 1 ) % 2 ] )
-                                                                     .offset( 0 )
-                                                                     .size( initialParticleData.byteLength() ) )
-                                       } ) );
+                                       GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _simParamBuffer ) ),
+                                       GPUBindGroupEntry.create( 1,
+                                                                 GPUBufferBinding
+                                                                   .buffer( _particleBuffers[ i ] )
+                                                                   .offset( 0 )
+                                                                   .size( initialParticleData.byteLength() ) ),
+                                       GPUBindGroupEntry.create( 2,
+                                                                 GPUBufferBinding
+                                                                   .buffer( _particleBuffers[ ( i + 1 ) % 2 ] )
+                                                                   .offset( 0 )
+                                                                   .size( initialParticleData.byteLength() ) ) ) );
     }
 
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
@@ -331,9 +325,7 @@ public final class Main
     }
     {
       final GPURenderPassEncoder passEncoder =
-        commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{
-          attachment
-        } ) );
+        commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( attachment ) );
       passEncoder.setPipeline( _renderPipeline );
       passEncoder.setVertexBuffer( 0, _particleBuffers[ ( _simFrame + 1 ) % 2 ] );
       passEncoder.setVertexBuffer( 1, _spriteVertexBuffer );

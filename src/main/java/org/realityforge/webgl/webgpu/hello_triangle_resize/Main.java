@@ -135,7 +135,7 @@ public final class Main
       "}";
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ), "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.format( _textureFormat ) } );
+                               GPUColorTargetState.format( _textureFormat ) );
 
     _sampleCount = 4;
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
@@ -197,9 +197,7 @@ public final class Main
         .resolveTarget( textureView );
 
     final GPURenderPassEncoder passEncoder =
-      commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{
-        attachment
-      } ) );
+      commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( attachment ) );
     passEncoder.setPipeline( _pipeline );
     passEncoder.draw( 3, 1, 0, 0 );
     passEncoder.endPass();

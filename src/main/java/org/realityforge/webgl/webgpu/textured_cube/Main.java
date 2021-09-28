@@ -192,11 +192,13 @@ public final class Main
     final GPUVertexState.Builder vertexState =
       GPUVertexState
         .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
-        .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE, new GPUVertexAttribute[]{
-          // position
-          GPUVertexAttribute.create( GPUVertexFormat.float32x4, CUBE_POSITION_OFFSET, 0 ),
-          GPUVertexAttribute.create( GPUVertexFormat.float32x2, CUBE_UV_OFFSET, 1 )
-        } ) );
+        .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE,  // position
+                                                GPUVertexAttribute.create( GPUVertexFormat.float32x4,
+                                                                           CUBE_POSITION_OFFSET,
+                                                                           0 ),
+                                                GPUVertexAttribute.create( GPUVertexFormat.float32x2,
+                                                                           CUBE_UV_OFFSET,
+                                                                           1 ) ) );
 
     @WGSL
     final String fragmentShader =
@@ -211,7 +213,7 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
+                               GPUColorTargetState.format( textureFormat ) );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
@@ -270,11 +272,9 @@ public final class Main
 
     final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
       GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
-                                     new GPUBindGroupEntry[]{
-                                       GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _uniformBuffer ) ),
-                                       GPUBindGroupEntry.create( 1, sampler ),
-                                       GPUBindGroupEntry.create( 2, cubeTexture.createView() )
-                                     } );
+                                     GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _uniformBuffer ) ),
+                                     GPUBindGroupEntry.create( 1, sampler ),
+                                     GPUBindGroupEntry.create( 2, cubeTexture.createView() ) );
     _uniformBindGroup = device.createBindGroup( bindGroupDescriptor );
 
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
@@ -286,7 +286,7 @@ public final class Main
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
-        .colorAttachments( new GPURenderPassColorAttachment[]{ attachment } )
+        .colorAttachments( attachment )
         .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
                                                                              1.0F,
                                                                              GPUStoreOp.store,

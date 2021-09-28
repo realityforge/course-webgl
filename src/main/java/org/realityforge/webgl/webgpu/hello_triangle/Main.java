@@ -89,7 +89,7 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
                                "main",
-                               new GPUColorTargetState[]{ GPUColorTargetState.format( textureFormat ) } );
+                               GPUColorTargetState.format( textureFormat ) );
 
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
                                                 .vertex( vertexState )
@@ -113,9 +113,7 @@ public final class Main
                                            GPUStoreOp.store );
 
     final GPURenderPassEncoder passEncoder =
-      commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( new GPURenderPassColorAttachment[]{
-        attachment
-      } ) );
+      commandEncoder.beginRenderPass( GPURenderPassDescriptor.colorAttachments( attachment ) );
     passEncoder.setPipeline( _pipeline );
     passEncoder.draw( 3, 1, 0, 0 );
     passEncoder.endPass();
