@@ -16,7 +16,6 @@ import akasha.gpu.GPUCanvasConfiguration;
 import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUColorDict;
 import akasha.gpu.GPUColorTargetState;
-import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUComputePassEncoder;
 import akasha.gpu.GPUComputePipeline;
@@ -335,7 +334,7 @@ public final class Main
       passEncoder.endPass();
     }
 
-    _device.queue().submit( new GPUCommandBuffer[]{ commandEncoder.finish() } );
+    _device.queue().submit( commandEncoder.finish() );
   }
 
   private void uploadSimParameters()

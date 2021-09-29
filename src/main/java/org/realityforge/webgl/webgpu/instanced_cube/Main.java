@@ -15,7 +15,6 @@ import akasha.gpu.GPUCanvasConfiguration;
 import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUColorDict;
 import akasha.gpu.GPUColorTargetState;
-import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUCompareFunction;
 import akasha.gpu.GPUCullMode;
@@ -322,6 +321,6 @@ public final class Main
     passEncoder.draw( CUBE_VERTEX_COUNT, NUM_INSTANCES, 0, 0 );
     passEncoder.endPass();
 
-    _device.queue().submit( new GPUCommandBuffer[]{ commandEncoder.finish() } );
+    _device.queue().submit( commandEncoder.finish() );
   }
 }

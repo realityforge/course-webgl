@@ -7,7 +7,6 @@ import akasha.gpu.GPUCanvasConfiguration;
 import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUColorDict;
 import akasha.gpu.GPUColorTargetState;
-import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUDevice;
 import akasha.gpu.GPUExtent3DDict;
@@ -133,6 +132,6 @@ public final class Main
     passEncoder.draw( 3, 1, 0, 0 );
     passEncoder.endPass();
 
-    _device.queue().submit( new GPUCommandBuffer[]{ commandEncoder.finish() } );
+    _device.queue().submit( commandEncoder.finish() );
   }
 }

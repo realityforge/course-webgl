@@ -18,7 +18,6 @@ import akasha.gpu.GPUCanvasConfiguration;
 import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUColorDict;
 import akasha.gpu.GPUColorTargetState;
-import akasha.gpu.GPUCommandBuffer;
 import akasha.gpu.GPUCommandEncoder;
 import akasha.gpu.GPUCompareFunction;
 import akasha.gpu.GPUCullMode;
@@ -335,6 +334,6 @@ public final class Main
                                          GPUImageCopyTexture.texture( _cubeTexture ),
                                          _presentationSize );
 
-    _device.queue().submit( new GPUCommandBuffer[]{ commandEncoder.finish() } );
+    _device.queue().submit( commandEncoder.finish() );
   }
 }
