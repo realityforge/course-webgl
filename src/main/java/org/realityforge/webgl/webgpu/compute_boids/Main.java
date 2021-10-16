@@ -75,9 +75,7 @@ public final class Main
   private void onStart( @Nonnull final GPUDevice device )
   {
     _device = device;
-    final HTMLCanvasElement canvas = WebGpuKit.createCanvas();
-
-    canvas.style().setProperty( "width", "100%" );
+    final HTMLCanvasElement canvas = WebGpuKit.createFullWindowCanvas();
 
     _gl = WebGpuKit.getGpuCanvasContext( canvas );
 

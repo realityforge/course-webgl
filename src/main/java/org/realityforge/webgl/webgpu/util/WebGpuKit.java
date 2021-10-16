@@ -29,6 +29,15 @@ public final class WebGpuKit
   }
 
   @Nonnull
+  public static HTMLCanvasElement createFullWindowCanvas()
+  {
+    final HTMLCanvasElement canvas = createCanvas();
+    canvas.width = WindowGlobal.innerWidth();
+    canvas.height = WindowGlobal.innerHeight();
+    return canvas;
+  }
+
+  @Nonnull
   public static GPUExtent3DDict calcGpuExtent3D( @Nonnull final HTMLCanvasElement canvas )
   {
     final double devicePixelRatio = WindowGlobal.devicePixelRatio();
