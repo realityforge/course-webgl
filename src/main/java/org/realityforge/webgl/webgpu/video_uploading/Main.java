@@ -69,7 +69,6 @@ public final class Main
   private GPURenderPipeline _pipeline;
   private GPUCanvasContext _gl;
   private GPUAdapter _adapter;
-  private GPUBindGroup _uniformBindGroup;
   private GPUBuffer _verticesBuffer;
   private GPURenderPassDescriptor.Builder _renderPassDescriptor;
   private HTMLVideoElement _video;
@@ -191,7 +190,7 @@ public final class Main
       GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
                                      GPUBindGroupEntry.create( 0, _sampler ),
                                      GPUBindGroupEntry.create( 1, externalTexture ) );
-    _uniformBindGroup = _device.createBindGroup( bindGroupDescriptor );
+    final GPUBindGroup uniformBindGroup = _device.createBindGroup( bindGroupDescriptor );
 
     _renderPassDescriptor.colorAttachments().getAt( 0 ).setView( _gl.getCurrentTexture().createView() );
 
@@ -199,7 +198,7 @@ public final class Main
     final GPURenderPassEncoder passEncoder = commandEncoder.beginRenderPass( _renderPassDescriptor );
 
     passEncoder.setPipeline( _pipeline );
-    passEncoder.setBindGroup( 0, _uniformBindGroup );
+    passEncoder.setBindGroup( 0, uniformBindGroup );
     passEncoder.setVertexBuffer( 0, _verticesBuffer );
     passEncoder.draw( VERTEX_COUNT, 1, 0, 0 );
     passEncoder.endPass();
