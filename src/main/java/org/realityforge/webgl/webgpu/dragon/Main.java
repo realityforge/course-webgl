@@ -107,7 +107,7 @@ public final class Main
 
     final double[] indices = _asset.getIndices();
     _indexBuffer = device.createBuffer( GPUBufferDescriptor
-                                          .create( _asset.getIndexByteCount(), GPUBufferUsage.INDEX )
+                                          .create( _asset.indexByteCount(), GPUBufferUsage.INDEX )
                                           .mappedAtCreation( true ) );
     new Uint32Array( _indexBuffer.getMappedRange() ).set( indices );
     _indexBuffer.unmap();
@@ -249,7 +249,7 @@ public final class Main
     passEncoder.setBindGroup( 0, _uniformBindGroup );
     passEncoder.setVertexBuffer( 0, _verticesBuffer );
     passEncoder.setIndexBuffer( _indexBuffer, _asset.indexFormat() );
-    passEncoder.drawIndexed( _asset.getIndices().length );
+    passEncoder.drawIndexed( _asset.indexCount() );
     passEncoder.endPass();
 
     _device.queue().submit( commandEncoder.finish() );

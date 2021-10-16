@@ -76,8 +76,14 @@ public class Asset
   }
 
   @JsOverlay
-  public final int getIndexByteCount()
+  public final int indexCount()
   {
-    return indices.length * Uint32Array.BYTES_PER_ELEMENT;
+    return indices.length;
+  }
+
+  @JsOverlay
+  public final int indexByteCount()
+  {
+    return indexCount() * Uint32Array.BYTES_PER_ELEMENT;
   }
 }
