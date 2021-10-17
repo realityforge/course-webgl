@@ -46,6 +46,7 @@ import akasha.gpu.WGSL;
 import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
 import org.realityforge.vecmath.Matrix4d;
+import org.realityforge.vecmath.Vector3d;
 import org.realityforge.vecmath.Vector3f;
 import org.realityforge.webgl.util.CanvasUtil;
 import org.realityforge.webgl.util.MathUtil;
@@ -216,12 +217,18 @@ public final class Main
   @Nonnull
   private Float32Array getTransformationMatrix()
   {
+    final Vector3d eyePosition = new Vector3d( 0, 20, -20 );
+    final Vector3d upVector = new Vector3d( 0, 1, 0 );
+    final Vector3d origin = new Vector3d( 0, 0, 0 );
+
+    final Matrix4d m = new Matrix4d();
+
+    final double rad = Math.PI * ( System.currentTimeMillis() / 5000.0 );
+    m.rotateY( rad );
+    eyePosition.mul( m );
+
     final Matrix4d viewMatrix = new Matrix4d();
-    viewMatrix.setIdentity();
-    viewMatrix.translate( 0, 0, -10 );
-    viewMatrix.rotateX( System.currentTimeMillis() / 1000.0 );
-    viewMatrix.rotateY( System.currentTimeMillis() / 1000.0 );
-    //mat4.rotate( viewMatrix, viewMatrix, 1, vec3.fromValues(Math.sin(now), Math.cos(now), 0) );
+    viewMatrix.lookAt( eyePosition, origin, upVector );
 
     final Matrix4d modelViewProjectionMatrix = new Matrix4d();
     Matrix4d.multiply( modelViewProjectionMatrix, viewMatrix, _projectionMatrix );
