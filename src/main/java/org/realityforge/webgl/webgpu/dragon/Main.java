@@ -31,6 +31,7 @@ import akasha.gpu.GPURenderPassDescriptor;
 import akasha.gpu.GPURenderPassEncoder;
 import akasha.gpu.GPURenderPipeline;
 import akasha.gpu.GPURenderPipelineDescriptor;
+import akasha.gpu.GPUShaderModule;
 import akasha.gpu.GPUStoreOp;
 import akasha.gpu.GPUTexture;
 import akasha.gpu.GPUTextureDescriptor;
@@ -124,17 +125,24 @@ public final class Main
       "};\n" +
       "\n" +
       "[[stage(vertex)]]\n" +
-      "fn main([[location(0)]] position : vec4<f32>,\n" +
+      "fn vertex_main([[location(0)]] position : vec4<f32>,\n" +
       "        [[location(1)]] uv : vec2<f32>) -> VertexOutput {\n" +
       "  var output : VertexOutput;\n" +
       "  output.Position = uniforms.modelViewProjectionMatrix * position;\n" +
       "  output.fragUV = uv;\n" +
       "  output.fragPosition = 0.5 * (position + vec4<f32>(1.0, 1.0, 1.0, 1.0));\n" +
       "  return output;\n" +
+      "}\n" +
+      "[[stage(fragment)]]\n" +
+      "fn fragment_main([[location(0)]] fragUV: vec2<f32>,\n" +
+      "        [[location(1)]] fragPosition: vec4<f32>) -> [[location(0)]] vec4<f32> {\n" +
+      "  return fragPosition;\n" +
       "}\n";
+
+    final GPUShaderModule shaderModule = WebGpuKit.createShaderModule( _device, vertexShader );
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( WebGpuKit.createShaderModule( _device, vertexShader ), "main" )
+        .create( shaderModule, "vertex_main" )
         .buffers( GPUVertexBufferLayout.create( _asset.vertexSize(),
                                                 // position
                                                 GPUVertexAttribute.create( GPUVertexFormat.float32x3,
@@ -148,13 +156,13 @@ public final class Main
     @WGSL
     final String fragmentShader =
       "[[stage(fragment)]]\n" +
-      "fn main([[location(0)]] fragUV: vec2<f32>,\n" +
+      "fn fragment_main([[location(0)]] fragUV: vec2<f32>,\n" +
       "        [[location(1)]] fragPosition: vec4<f32>) -> [[location(0)]] vec4<f32> {\n" +
       "  return fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( WebGpuKit.createShaderModule( _device, fragmentShader ),
-                               "main",
+      GPUFragmentState.create( shaderModule,
+                               "fragment_main",
                                GPUColorTargetState.format( textureFormat ) );
 
     _pipeline =
