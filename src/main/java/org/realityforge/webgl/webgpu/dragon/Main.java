@@ -153,13 +153,6 @@ public final class Main
                                                                            Vector3f.BYTES * 2,
                                                                            1 ) ) );
 
-    @WGSL
-    final String fragmentShader =
-      "[[stage(fragment)]]\n" +
-      "fn fragment_main([[location(0)]] fragUV: vec2<f32>,\n" +
-      "        [[location(1)]] fragPosition: vec4<f32>) -> [[location(0)]] vec4<f32> {\n" +
-      "  return fragPosition;\n" +
-      "}\n";
     final GPUFragmentState fragmentState =
       GPUFragmentState.create( shaderModule,
                                "fragment_main",
