@@ -98,11 +98,10 @@ public final class Main
                      //Ensure the configured size takes into account the device pixel ratio.
                      .size( presentationSize ) );
 
-    final double[] vertices = _asset.getVertices();
     _verticesBuffer = device.createBuffer( GPUBufferDescriptor
                                              .create( _asset.vertexByteCount(), GPUBufferUsage.VERTEX )
                                              .mappedAtCreation( true ) );
-    new Float32Array( _verticesBuffer.getMappedRange() ).set( vertices );
+    new Float32Array( _verticesBuffer.getMappedRange() ).set( _asset.getVertices() );
     _verticesBuffer.unmap();
 
     final double[] indices = _asset.getIndices();
