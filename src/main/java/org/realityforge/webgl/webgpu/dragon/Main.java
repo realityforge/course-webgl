@@ -31,7 +31,6 @@ import akasha.gpu.GPURenderPassDescriptor;
 import akasha.gpu.GPURenderPassEncoder;
 import akasha.gpu.GPURenderPipeline;
 import akasha.gpu.GPURenderPipelineDescriptor;
-import akasha.gpu.GPUShaderModuleDescriptor;
 import akasha.gpu.GPUStoreOp;
 import akasha.gpu.GPUTexture;
 import akasha.gpu.GPUTextureDescriptor;
@@ -135,7 +134,7 @@ public final class Main
       "}\n";
     final GPUVertexState.Builder vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
+        .create( WebGpuKit.createShaderModule( _device, vertexShader ), "main" )
         .buffers( GPUVertexBufferLayout.create( _asset.vertexSize(),
                                                 // position
                                                 GPUVertexAttribute.create( GPUVertexFormat.float32x3,
@@ -154,7 +153,7 @@ public final class Main
       "  return fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
+      GPUFragmentState.create( WebGpuKit.createShaderModule( _device, fragmentShader ),
                                "main",
                                GPUColorTargetState.format( textureFormat ) );
 
