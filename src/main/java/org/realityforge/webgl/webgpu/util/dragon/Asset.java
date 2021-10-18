@@ -2,6 +2,7 @@ package org.realityforge.webgl.webgpu.util.dragon;
 
 import akasha.Response;
 import akasha.WindowGlobal;
+import akasha.core.Float32Array;
 import akasha.core.Uint32Array;
 import akasha.gpu.GPUIndexFormat;
 import akasha.promise.Promise;
@@ -53,6 +54,12 @@ public class Asset
   public final int vertexCount()
   {
     return vertices.length / components();
+  }
+
+  @JsOverlay
+  public final int vertexByteCount()
+  {
+    return vertices.length * Float32Array.BYTES_PER_ELEMENT;
   }
 
   @JsOverlay

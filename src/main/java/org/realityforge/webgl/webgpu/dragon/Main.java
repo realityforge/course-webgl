@@ -100,8 +100,7 @@ public final class Main
 
     final double[] vertices = _asset.getVertices();
     _verticesBuffer = device.createBuffer( GPUBufferDescriptor
-                                             .create( vertices.length * Float32Array.BYTES_PER_ELEMENT,
-                                                      GPUBufferUsage.VERTEX )
+                                             .create( _asset.vertexByteCount(), GPUBufferUsage.VERTEX )
                                              .mappedAtCreation( true ) );
     new Float32Array( _verticesBuffer.getMappedRange() ).set( vertices );
     _verticesBuffer.unmap();
