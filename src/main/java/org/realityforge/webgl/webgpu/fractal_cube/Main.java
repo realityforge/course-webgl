@@ -3,7 +3,6 @@ package org.realityforge.webgl.webgpu.fractal_cube;
 import akasha.HTMLCanvasElement;
 import akasha.HTMLImageElement;
 import akasha.Image;
-import akasha.ImageBitmap;
 import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.gpu.GPUAdapter;
@@ -123,7 +122,6 @@ public final class Main
   private GPURenderPassDescriptor.Builder _renderPassDescriptor;
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private GPUBuffer _uniformBuffer;
-  private ImageBitmap _imageBitmap;
   private GPUTexture _cubeTexture;
   private GPUExtent3DDict _presentationSize;
 
@@ -132,13 +130,14 @@ public final class Main
   {
     final HTMLImageElement image = new Image();
     image.src = "assets/Di-3d.png";
-    image.decode().then( i -> WindowGlobal.createImageBitmap( image ) ).thenAccept( imageBitmap -> {
-      _imageBitmap = imageBitmap;
-      WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
-        _adapter = adapter;
-        return adapter.requestDevice();
-      } ).thenAccept( this::onStart );
-    } );
+    image
+      .decode()
+      .then( i -> WindowGlobal.createImageBitmap( image ) )
+      .thenAccept( imageBitmap ->
+                     WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
+                       _adapter = adapter;
+                       return adapter.requestDevice();
+                     } ).thenAccept( this::onStart ) );
   }
 
   private void onStart( @Nonnull final GPUDevice device )
