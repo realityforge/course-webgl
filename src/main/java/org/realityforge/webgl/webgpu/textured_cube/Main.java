@@ -1,9 +1,8 @@
 package org.realityforge.webgl.webgpu.textured_cube;
 
 import akasha.HTMLCanvasElement;
-import akasha.HTMLImageElement;
-import akasha.Image;
 import akasha.ImageBitmap;
+import akasha.Response;
 import akasha.WindowGlobal;
 import akasha.core.Float32Array;
 import akasha.gpu.GPUAdapter;
@@ -129,15 +128,17 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    final HTMLImageElement image = new Image();
-    image.src = "assets/Di-3d.png";
-    image.decode().then( i -> WindowGlobal.createImageBitmap( image ) ).thenAccept( imageBitmap -> {
-      _imageBitmap = imageBitmap;
-      WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
-        _adapter = adapter;
-        return adapter.requestDevice();
-      } ).thenAccept( this::onStart );
-    } );
+    WindowGlobal
+      .fetch( "assets/Di-3d.png" )
+      .then( Response::blob )
+      .then( WindowGlobal::createImageBitmap )
+      .thenAccept( imageBitmap -> {
+        _imageBitmap = imageBitmap;
+        WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
+          _adapter = adapter;
+          return adapter.requestDevice();
+        } ).thenAccept( this::onStart );
+      } );
   }
 
   private void onStart( @Nonnull final GPUDevice device )
