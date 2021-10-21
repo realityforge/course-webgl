@@ -84,7 +84,8 @@ public final class Main
     final String textureFormat = _gl.getPreferredFormat( _adapter );
 
     _gl.configure( GPUCanvasConfiguration
-                     .create( _device, textureFormat )
+                     .device( _device )
+                     .format( textureFormat )
                      //Ensure the configured size takes into account the device pixel ratio.
                      .size( WebGpuKit.calcGpuExtent3D( canvas ) ) );
 
@@ -110,38 +111,40 @@ public final class Main
     // instanced particles buffer
     final GPUVertexBufferLayout instancedParticlesBuffer =
       GPUVertexBufferLayout
-        .create( Float.BYTES * 4,
-                 // instance position
-                 GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                            0,
-                                            0 ),
-                 // instance velocity
-                 GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                            2 * Float.BYTES,
-                                            1 ) )
+        .arrayStride( Float.BYTES * 4 )
+        .attributes(
+          // instance position
+          GPUVertexAttribute.format( GPUVertexFormat.float32x2 ).offset( 0 ).shaderLocation( 0 ),
+          // instance velocity
+          GPUVertexAttribute.format( GPUVertexFormat.float32x2 ).offset( 2 * Float.BYTES ).shaderLocation( 1 )
+        )
         .stepMode( GPUVertexStepMode.instance );
     // vertex buffer
     final GPUVertexBufferLayout vertexBuffer =
       GPUVertexBufferLayout
-        .create( Float.BYTES * 2,
-                 // vertex positions
-                 GPUVertexAttribute.create( GPUVertexFormat.float32x2, 0, 2 ) )
+        .arrayStride( Float.BYTES * 2 )
+        .attributes(
+          // vertex positions
+          GPUVertexAttribute.format( GPUVertexFormat.float32x2 ).offset( 0 ).shaderLocation( 2 )
+        )
         .stepMode( GPUVertexStepMode.vertex );
-    final GPUVertexState.Builder vertexState =
-      GPUVertexState.create( shaderModule,
-                             "vert_main" )
+    final GPUVertexState vertexState =
+      GPUVertexState
+        .module( shaderModule )
+        .entryPoint( "vert_main" )
         .buffers( new JsArray<GPUVertexBufferLayout>().concat( instancedParticlesBuffer, vertexBuffer ) );
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( shaderModule,
-                               "frag_main",
-                               GPUColorTargetState.format( textureFormat ) );
+      GPUFragmentState
+        .module( shaderModule )
+        .entryPoint( "frag_main" )
+        .targets( GPUColorTargetState.format( textureFormat ) );
 
     _renderPipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
                                       .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
-                                                    .create()
+                                                    .of()
                                                     .topology( GPUPrimitiveTopology.triangle_list ) ) );
 
     @WGSL
@@ -233,8 +236,9 @@ public final class Main
       "  particlesB.particles[index].vel = vVel;\n" +
       "}\n";
     final GPUProgrammableStage vertexData =
-      GPUProgrammableStage.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( computerShader ) ),
-                                   "main" );
+      GPUProgrammableStage
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( computerShader ) ) )
+        .entryPoint( "main" );
     _computePipeline =
       _device.createComputePipeline( GPUComputePipelineDescriptor.compute( vertexData ) );
     final Float32Array vertexBufferData =
@@ -243,14 +247,16 @@ public final class Main
 
     _spriteVertexBuffer =
       _device.createBuffer( GPUBufferDescriptor
-                              .create( vertexBufferData.byteLength(), GPUBufferUsage.VERTEX )
+                              .size( vertexBufferData.byteLength() )
+                              .usage( GPUBufferUsage.VERTEX )
                               .mappedAtCreation( true ) );
     new Float32Array( _spriteVertexBuffer.getMappedRange() ).set( vertexBufferData );
     _spriteVertexBuffer.unmap();
 
     _simParamBuffer =
-      device.createBuffer( GPUBufferDescriptor.create( 7 * Float32Array.BYTES_PER_ELEMENT,
-                                                       GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
+      device.createBuffer( GPUBufferDescriptor
+                             .size( 7 * Float32Array.BYTES_PER_ELEMENT )
+                             .usage( GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
 
     // Update the bugger that contains the simulation parameters
     uploadSimParameters();
@@ -272,8 +278,8 @@ public final class Main
     {
       final GPUBuffer buffer =
         device.createBuffer( GPUBufferDescriptor
-                               .create( initialParticleData.byteLength(),
-                                        GPUBufferUsage.VERTEX | GPUBufferUsage.STORAGE )
+                               .size( initialParticleData.byteLength() )
+                               .usage( GPUBufferUsage.VERTEX | GPUBufferUsage.STORAGE )
                                .mappedAtCreation( true ) );
       new Float32Array( buffer.getMappedRange() ).set( initialParticleData );
       buffer.unmap();
@@ -284,18 +290,23 @@ public final class Main
     for ( int i = 0; i < 2; i++ )
     {
       _particleBindGroups[ i ] = device.createBindGroup(
-        GPUBindGroupDescriptor.create( _computePipeline.getBindGroupLayout( 0 ),
-                                       GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _simParamBuffer ) ),
-                                       GPUBindGroupEntry.create( 1,
-                                                                 GPUBufferBinding
-                                                                   .buffer( _particleBuffers[ i ] )
-                                                                   .offset( 0 )
-                                                                   .size( initialParticleData.byteLength() ) ),
-                                       GPUBindGroupEntry.create( 2,
-                                                                 GPUBufferBinding
-                                                                   .buffer( _particleBuffers[ ( i + 1 ) % 2 ] )
-                                                                   .offset( 0 )
-                                                                   .size( initialParticleData.byteLength() ) ) ) );
+        GPUBindGroupDescriptor
+          .layout( _computePipeline.getBindGroupLayout( 0 ) )
+          .entries( GPUBindGroupEntry
+                      .binding( 0 )
+                      .resource( GPUBufferBinding.buffer( _simParamBuffer ) ),
+                    GPUBindGroupEntry
+                      .binding( 1 )
+                      .resource( GPUBufferBinding
+                                   .buffer( _particleBuffers[ i ] )
+                                   .offset( 0 )
+                                   .size( initialParticleData.byteLength() ) ),
+                    GPUBindGroupEntry
+                      .binding( 2 )
+                      .resource( GPUBufferBinding
+                                   .buffer( _particleBuffers[ ( i + 1 ) % 2 ] )
+                                   .offset( 0 )
+                                   .size( initialParticleData.byteLength() ) ) ) );
     }
 
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
@@ -310,9 +321,10 @@ public final class Main
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
 
     final GPURenderPassColorAttachment attachment =
-      GPURenderPassColorAttachment.create( textureView,
-                                           GPUColorDict.create( 0, 0, 0, 1 ),
-                                           GPUStoreOp.store );
+      GPURenderPassColorAttachment
+        .view( textureView )
+        .loadValue( GPUColorDict.r( 0 ).g( 0 ).b( 0 ).a( 1 ) )
+        .storeOp( GPUStoreOp.store );
     {
       final GPUComputePassEncoder passEncoder = commandEncoder.beginComputePass();
       passEncoder.setPipeline( _computePipeline );

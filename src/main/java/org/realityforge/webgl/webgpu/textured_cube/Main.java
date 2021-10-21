@@ -120,7 +120,7 @@ public final class Main
   private GPUAdapter _adapter;
   private GPUBindGroup _uniformBindGroup;
   private GPUBuffer _verticesBuffer;
-  private GPURenderPassDescriptor.Builder _renderPassDescriptor;
+  private GPURenderPassDescriptor _renderPassDescriptor;
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private GPUBuffer _uniformBuffer;
   private ImageBitmap _imageBitmap;
@@ -154,13 +154,15 @@ public final class Main
 
     final GPUExtent3DDict presentationSize = WebGpuKit.calcGpuExtent3D( canvas );
     _gl.configure( GPUCanvasConfiguration
-                     .create( _device, textureFormat )
+                     .device( _device )
+                     .format( textureFormat )
                      //Ensure the configured size takes into account the device pixel ratio.
                      .size( presentationSize ) );
 
     // Create a vertex buffer from the cube data.
     _verticesBuffer = device.createBuffer( GPUBufferDescriptor
-                                             .create( CUBE_VERTEX_ARRAY.byteLength(), GPUBufferUsage.VERTEX )
+                                             .size( CUBE_VERTEX_ARRAY.byteLength() )
+                                             .usage( GPUBufferUsage.VERTEX )
                                              .mappedAtCreation( true ) );
     new Float32Array( _verticesBuffer.getMappedRange() ).set( CUBE_VERTEX_ARRAY );
     _verticesBuffer.unmap();
@@ -187,16 +189,23 @@ public final class Main
       "  output.fragPosition = 0.5 * (position + vec4<f32>(1.0, 1.0, 1.0, 1.0));\n" +
       "  return output;\n" +
       "}\n";
-    final GPUVertexState.Builder vertexState =
+    final GPUVertexState vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
-        .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE,  // position
-                                                GPUVertexAttribute.create( GPUVertexFormat.float32x4,
-                                                                           CUBE_POSITION_OFFSET,
-                                                                           0 ),
-                                                GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                                                           CUBE_UV_OFFSET,
-                                                                           1 ) ) );
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ) )
+        .entryPoint( "main" )
+        .buffers( GPUVertexBufferLayout
+                    .arrayStride( CUBE_VERTEX_SIZE )
+                    .attributes(
+                      GPUVertexAttribute
+                        .format( GPUVertexFormat.float32x4 )
+                        .offset( CUBE_POSITION_OFFSET )
+                        .shaderLocation( 0 ),
+                      GPUVertexAttribute
+                        .format( GPUVertexFormat.float32x2 )
+                        .offset( CUBE_UV_OFFSET )
+                        .shaderLocation( 1 )
+                    )
+        );
 
     @WGSL
     final String fragmentShader =
@@ -209,16 +218,17 @@ public final class Main
       "  return textureSample(myTexture, mySampler, fragUV) * fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
-                               "main",
-                               GPUColorTargetState.format( textureFormat ) );
+      GPUFragmentState
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ) )
+        .entryPoint( "main" )
+        .targets( GPUColorTargetState.format( textureFormat ) );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
                                       .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
-                                                    .create()
+                                                    .of()
                                                     .topology( GPUPrimitiveTopology.triangle_list )
                                                     // Backface culling since the cube is solid piece of geometry.
                                                     // Faces pointing away from the camera will be occluded by faces
@@ -232,28 +242,30 @@ public final class Main
                                                        .depthWriteEnabled( true ) ) );
 
     final GPUTexture depthTexture =
-      device.createTexture( GPUTextureDescriptor.create( presentationSize,
-                                                         GPUTextureFormat.depth24plus,
-                                                         GPUTextureUsage.RENDER_ATTACHMENT ) );
+      device.createTexture( GPUTextureDescriptor
+                              .size( presentationSize )
+                              .format( GPUTextureFormat.depth24plus )
+                              .usage( GPUTextureUsage.RENDER_ATTACHMENT ) );
 
     final int uniformBufferSize = Matrix4d.FLOAT_BYTES;
     _uniformBuffer =
-      device.createBuffer( GPUBufferDescriptor.create( uniformBufferSize,
-                                                       GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
+      device.createBuffer( GPUBufferDescriptor
+                             .size( uniformBufferSize )
+                             .usage( GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
 
     // Upload image into a GPUTexture.
     final GPUTexture cubeTexture =
       _device.createTexture( GPUTextureDescriptor
-                               .create( GPUExtent3DDict
-                                          .width( _imageBitmap.width() )
-                                          .height( _imageBitmap.height() )
-                                          .depthOrArrayLayers( 1 ),
-                                        // TODO: Do we know this ahead of time? Should we not also source this
-                                        //   somehow from imageBitmap?
-                                        GPUTextureFormat.rgba8unorm,
-                                        GPUTextureUsage.TEXTURE_BINDING |
-                                        GPUTextureUsage.COPY_DST |
-                                        GPUTextureUsage.RENDER_ATTACHMENT
+                               .size( GPUExtent3DDict
+                                        .width( _imageBitmap.width() )
+                                        .height( _imageBitmap.height() )
+                                        .depthOrArrayLayers( 1 ) )
+                               // TODO: Do we know this ahead of time? Should we not also source this
+                               //   somehow from imageBitmap?
+                               .format( GPUTextureFormat.rgba8unorm )
+                               .usage( GPUTextureUsage.TEXTURE_BINDING |
+                                       GPUTextureUsage.COPY_DST |
+                                       GPUTextureUsage.RENDER_ATTACHMENT
                                ) );
 
     _device.queue().copyExternalImageToTexture( GPUImageCopyExternalImage.source( _imageBitmap ),
@@ -264,32 +276,36 @@ public final class Main
 
     final GPUSampler sampler =
       _device.createSampler( GPUSamplerDescriptor
-                               .create()
+                               .of()
                                .magFilter( GPUFilterMode.linear )
                                .minFilter( GPUFilterMode.linear ) );
 
-    final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
-      GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
-                                     GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _uniformBuffer ) ),
-                                     GPUBindGroupEntry.create( 1, sampler ),
-                                     GPUBindGroupEntry.create( 2, cubeTexture.createView() ) );
+    final GPUBindGroupDescriptor bindGroupDescriptor =
+      GPUBindGroupDescriptor.layout( _pipeline.getBindGroupLayout( 0 ) )
+        .entries(
+          GPUBindGroupEntry.binding( 0 ).resource( GPUBufferBinding.buffer( _uniformBuffer ) ),
+          GPUBindGroupEntry.binding( 1 ).resource( sampler ),
+          GPUBindGroupEntry.binding( 2 ).resource( cubeTexture.createView() )
+        );
     _uniformBindGroup = device.createBindGroup( bindGroupDescriptor );
 
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
 
     final GPURenderPassColorAttachment attachment =
-      GPURenderPassColorAttachment.create( textureView,
-                                           GPUColorDict.create( 0.5, 0.5, 0.5, 1 ),
-                                           GPUStoreOp.store );
+      GPURenderPassColorAttachment
+        .view( textureView )
+        .loadValue( GPUColorDict.r( 0.5 ).g( 0.5 ).b( 0.5 ).a( 1 ) )
+        .storeOp( GPUStoreOp.store );
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
         .colorAttachments( attachment )
-        .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
-                                                                             1.0F,
-                                                                             GPUStoreOp.store,
-                                                                             0,
-                                                                             GPUStoreOp.store ) );
+        .depthStencilAttachment( GPURenderPassDepthStencilAttachment
+                                   .view( depthTexture.createView() )
+                                   .depthLoadValue( 1 )
+                                   .depthStoreOp( GPUStoreOp.store )
+                                   .stencilLoadValue( 0 )
+                                   .stencilStoreOp( GPUStoreOp.store ) );
 
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 72 ),
                                       CanvasUtil.getAspect( canvas ),

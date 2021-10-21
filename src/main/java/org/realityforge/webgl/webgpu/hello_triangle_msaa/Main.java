@@ -69,7 +69,8 @@ public final class Main
     final GPUExtent3DDict presentationSize = WebGpuKit.calcGpuExtent3D( canvas );
 
     _gl.configure( GPUCanvasConfiguration
-                     .create( _device, textureFormat )
+                     .device( _device )
+                     .format( textureFormat )
                      .size( presentationSize ) );
 
     @WGSL
@@ -84,9 +85,10 @@ public final class Main
       "\n" +
       "  return vec4<f32>(pos[VertexIndex], 0.0, 1.0);\n" +
       "}";
-    final GPUVertexState.Builder vertexState =
-      GPUVertexState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ),
-                             "main" );
+    final GPUVertexState vertexState =
+      GPUVertexState
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ) )
+        .entryPoint( "main" );
     @WGSL
     final String fragmentShader =
       "[[stage(fragment)]]\n" +
@@ -94,21 +96,24 @@ public final class Main
       "  return vec4<f32>(1.0, 0.0, 0.0, 1.0);\n" +
       "}";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
-                               "main",
-                               GPUColorTargetState.format( textureFormat ) );
+      GPUFragmentState
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ) )
+        .entryPoint( "main" )
+        .targets( GPUColorTargetState.format( textureFormat ) );
 
     final int sampleCount = 4;
     _pipeline = _device.createRenderPipeline( GPURenderPipelineDescriptor
                                                 .vertex( vertexState )
                                                 .fragment( fragmentState )
                                                 .primitive( GPUPrimitiveState
-                                                              .create()
+                                                              .of()
                                                               .topology( GPUPrimitiveTopology.triangle_list ) )
-                                                .multisample( GPUMultisampleState.create().count( sampleCount ) ) );
+                                                .multisample( GPUMultisampleState.of().count( sampleCount ) ) );
     final GPUTexture texture =
       device.createTexture( GPUTextureDescriptor
-                              .create( presentationSize, textureFormat, GPUTextureUsage.RENDER_ATTACHMENT )
+                              .size( presentationSize )
+                              .format( textureFormat )
+                              .usage( GPUTextureUsage.RENDER_ATTACHMENT )
                               .sampleCount( sampleCount ) );
     _view = texture.createView();
 
@@ -123,7 +128,9 @@ public final class Main
 
     final GPURenderPassColorAttachment attachment =
       GPURenderPassColorAttachment
-        .create( _view, GPUColorDict.create( 0, 0, 0, 1 ), GPUStoreOp.store )
+        .view( _view )
+        .loadValue( GPUColorDict.r( 0 ).g( 0 ).b( 0 ).a( 1 ) )
+        .storeOp( GPUStoreOp.store )
         .resolveTarget( textureView );
 
     final GPURenderPassEncoder passEncoder =

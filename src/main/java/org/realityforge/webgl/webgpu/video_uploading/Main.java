@@ -70,7 +70,7 @@ public final class Main
   private GPUCanvasContext _gl;
   private GPUAdapter _adapter;
   private GPUBuffer _verticesBuffer;
-  private GPURenderPassDescriptor.Builder _renderPassDescriptor;
+  private GPURenderPassDescriptor _renderPassDescriptor;
   private HTMLVideoElement _video;
   private GPUSampler _sampler;
 
@@ -101,13 +101,15 @@ public final class Main
 
     final GPUExtent3DDict presentationSize = WebGpuKit.calcGpuExtent3D( canvas );
     _gl.configure( GPUCanvasConfiguration
-                     .create( _device, textureFormat )
+                     .device( _device )
+                     .format( textureFormat )
                      //Ensure the configured size takes into account the device pixel ratio.
                      .size( presentationSize ) );
 
     // Create a vertex buffer from the cube data.
     _verticesBuffer = device.createBuffer( GPUBufferDescriptor
-                                             .create( RECT_VERTS.byteLength(), GPUBufferUsage.VERTEX )
+                                             .size( RECT_VERTS.byteLength() )
+                                             .usage( GPUBufferUsage.VERTEX )
                                              .mappedAtCreation( true ) );
     new Float32Array( _verticesBuffer.getMappedRange() ).set( RECT_VERTS );
     _verticesBuffer.unmap();
@@ -128,17 +130,21 @@ public final class Main
       "fn main(input : VertexInput) -> VertexOutput {\n" +
       "  return VertexOutput(vec4<f32>(input.position, 1.0), input.uv);\n" +
       "}\n";
-    final GPUVertexState.Builder vertexState =
+    final GPUVertexState vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
-        .buffers( GPUVertexBufferLayout.create( VERTEX_SIZE,  // position
-                                                GPUVertexAttribute.create( GPUVertexFormat.float32x3,
-                                                                           POSITION_OFFSET,
-                                                                           0 ),
-                                                // uv
-                                                GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                                                           UV_OFFSET,
-                                                                           1 ) ) );
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ) )
+        .entryPoint( "main" )
+        .buffers( GPUVertexBufferLayout.arrayStride( VERTEX_SIZE )
+                    .attributes(   // position
+                                   GPUVertexAttribute
+                                     .format( GPUVertexFormat.float32x3 )
+                                     .offset( POSITION_OFFSET )
+                                     .shaderLocation( 0 ),
+                                   // uv
+                                   GPUVertexAttribute
+                                     .format( GPUVertexFormat.float32x2 )
+                                     .offset( UV_OFFSET )
+                                     .shaderLocation( 1 ) ) );
 
     @WGSL
     final String fragmentShader =
@@ -150,28 +156,31 @@ public final class Main
       "  return textureSampleLevel(myTexture, mySampler, fragUV);\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ), "main",
-                               GPUColorTargetState.format( textureFormat ) );
+      GPUFragmentState
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ) )
+        .entryPoint( "main" )
+        .targets( GPUColorTargetState.format( textureFormat ) );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
                                       .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
-                                                    .create()
+                                                    .of()
                                                     .topology( GPUPrimitiveTopology.triangle_list ) ) );
 
     _sampler = device.createSampler( GPUSamplerDescriptor
-                                       .create()
+                                       .of()
                                        .minFilter( GPUFilterMode.linear )
                                        .magFilter( GPUFilterMode.linear ) );
 
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
 
     final GPURenderPassColorAttachment attachment =
-      GPURenderPassColorAttachment.create( textureView,
-                                           GPUColorDict.create( 0, 0, 0, 1 ),
-                                           GPUStoreOp.store );
+      GPURenderPassColorAttachment
+        .view( textureView )
+        .loadValue( GPUColorDict.r( 0 ).g( 0 ).b( 0 ).a( 1 ) )
+        .storeOp( GPUStoreOp.store );
 
     _renderPassDescriptor =
       GPURenderPassDescriptor.colorAttachments( attachment );
@@ -186,10 +195,11 @@ public final class Main
     final GPUExternalTexture externalTexture =
       _device.importExternalTexture( GPUExternalTextureDescriptor.source( _video ) );
 
-    final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
-      GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
-                                     GPUBindGroupEntry.create( 0, _sampler ),
-                                     GPUBindGroupEntry.create( 1, externalTexture ) );
+    final GPUBindGroupDescriptor bindGroupDescriptor =
+      GPUBindGroupDescriptor
+        .layout( _pipeline.getBindGroupLayout( 0 ) )
+        .entries( GPUBindGroupEntry.binding( 0 ).resource( _sampler ),
+                  GPUBindGroupEntry.binding( 1 ).resource( externalTexture ) );
     final GPUBindGroup uniformBindGroup = _device.createBindGroup( bindGroupDescriptor );
 
     _renderPassDescriptor.colorAttachments().getAt( 0 ).setView( _gl.getCurrentTexture().createView() );

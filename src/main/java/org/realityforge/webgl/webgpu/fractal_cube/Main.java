@@ -117,7 +117,7 @@ public final class Main
   private GPUAdapter _adapter;
   private GPUBindGroup _uniformBindGroup;
   private GPUBuffer _verticesBuffer;
-  private GPURenderPassDescriptor.Builder _renderPassDescriptor;
+  private GPURenderPassDescriptor _renderPassDescriptor;
   private final Matrix4d _projectionMatrix = new Matrix4d();
   private GPUBuffer _uniformBuffer;
   private GPUTexture _cubeTexture;
@@ -145,7 +145,8 @@ public final class Main
 
     _presentationSize = WebGpuKit.calcGpuExtent3D( canvas );
     _gl.configure( GPUCanvasConfiguration
-                     .create( _device, textureFormat )
+                     .device( _device )
+                     .format( textureFormat )
                      // Specify we want both RENDER_ATTACHMENT and COPY_SRC since we
                      // will copy out of the swapchain texture.
                      .usage( GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.COPY_SRC )
@@ -154,7 +155,8 @@ public final class Main
 
     // Create a vertex buffer from the cube data.
     _verticesBuffer = device.createBuffer( GPUBufferDescriptor
-                                             .create( CUBE_VERTEX_ARRAY.byteLength(), GPUBufferUsage.VERTEX )
+                                             .size( CUBE_VERTEX_ARRAY.byteLength() )
+                                             .usage( GPUBufferUsage.VERTEX )
                                              .mappedAtCreation( true ) );
     new Float32Array( _verticesBuffer.getMappedRange() ).set( CUBE_VERTEX_ARRAY );
     _verticesBuffer.unmap();
@@ -181,16 +183,21 @@ public final class Main
       "  output.fragPosition = 0.5 * (position + vec4<f32>(1.0, 1.0, 1.0, 1.0));\n" +
       "  return output;\n" +
       "}\n";
-    final GPUVertexState.Builder vertexState =
+    final GPUVertexState vertexState =
       GPUVertexState
-        .create( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ), "main" )
-        .buffers( GPUVertexBufferLayout.create( CUBE_VERTEX_SIZE,  // position
-                                                GPUVertexAttribute.create( GPUVertexFormat.float32x4,
-                                                                           CUBE_POSITION_OFFSET,
-                                                                           0 ),
-                                                GPUVertexAttribute.create( GPUVertexFormat.float32x2,
-                                                                           CUBE_UV_OFFSET,
-                                                                           1 ) ) );
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ) )
+        .entryPoint( "main" )
+        .buffers( GPUVertexBufferLayout
+                    .arrayStride( CUBE_VERTEX_SIZE )
+                    .attributes(   // position
+                                   GPUVertexAttribute
+                                     .format( GPUVertexFormat.float32x4 )
+                                     .offset( CUBE_POSITION_OFFSET )
+                                     .shaderLocation( 0 ),
+                                   GPUVertexAttribute
+                                     .format( GPUVertexFormat.float32x2 )
+                                     .offset( CUBE_UV_OFFSET )
+                                     .shaderLocation( 1 ) ) );
 
     @WGSL
     final String fragmentShader =
@@ -210,16 +217,17 @@ public final class Main
       "  return (1.0 - f) * texColor + f * fragPosition;\n" +
       "}\n";
     final GPUFragmentState fragmentState =
-      GPUFragmentState.create( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ),
-                               "main",
-                               GPUColorTargetState.format( textureFormat ) );
+      GPUFragmentState
+        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ) )
+        .entryPoint( "main" )
+        .targets( GPUColorTargetState.format( textureFormat ) );
 
     _pipeline =
       _device.createRenderPipeline( GPURenderPipelineDescriptor
                                       .vertex( vertexState )
                                       .fragment( fragmentState )
                                       .primitive( GPUPrimitiveState
-                                                    .create()
+                                                    .of()
                                                     .topology( GPUPrimitiveTopology.triangle_list )
                                                     // Backface culling since the cube is solid piece of geometry.
                                                     // Faces pointing away from the camera will be occluded by faces
@@ -233,50 +241,55 @@ public final class Main
                                                        .depthWriteEnabled( true ) ) );
 
     final GPUTexture depthTexture =
-      device.createTexture( GPUTextureDescriptor.create( _presentationSize,
-                                                         GPUTextureFormat.depth24plus,
-                                                         GPUTextureUsage.RENDER_ATTACHMENT ) );
+      device.createTexture( GPUTextureDescriptor
+                              .size( _presentationSize )
+                              .format( GPUTextureFormat.depth24plus )
+                              .usage( GPUTextureUsage.RENDER_ATTACHMENT ) );
 
     final int uniformBufferSize = Matrix4d.FLOAT_BYTES;
     _uniformBuffer =
-      device.createBuffer( GPUBufferDescriptor.create( uniformBufferSize,
-                                                       GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
+      device.createBuffer( GPUBufferDescriptor
+                             .size( uniformBufferSize )
+                             .usage( GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
 
     // We will copy the frame's rendering results into this texture and
     // sample it on the next frame.
     _cubeTexture = _device.createTexture( GPUTextureDescriptor
-                                            .create( _presentationSize,
-                                                     textureFormat,
-                                                     GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST ) );
+                                            .size( _presentationSize )
+                                            .format( textureFormat )
+                                            .usage( GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST ) );
 
     final GPUSampler sampler =
       _device.createSampler( GPUSamplerDescriptor
-                               .create()
+                               .of()
                                .magFilter( GPUFilterMode.linear )
                                .minFilter( GPUFilterMode.linear ) );
 
-    final GPUBindGroupDescriptor.Builder bindGroupDescriptor =
-      GPUBindGroupDescriptor.create( _pipeline.getBindGroupLayout( 0 ),
-                                     GPUBindGroupEntry.create( 0, GPUBufferBinding.buffer( _uniformBuffer ) ),
-                                     GPUBindGroupEntry.create( 1, sampler ),
-                                     GPUBindGroupEntry.create( 2, _cubeTexture.createView() ) );
+    final GPUBindGroupDescriptor bindGroupDescriptor =
+      GPUBindGroupDescriptor
+        .layout( _pipeline.getBindGroupLayout( 0 ) )
+        .entries( GPUBindGroupEntry.binding( 0 ).resource( GPUBufferBinding.buffer( _uniformBuffer ) ),
+                  GPUBindGroupEntry.binding( 1 ).resource( sampler ),
+                  GPUBindGroupEntry.binding( 2 ).resource( _cubeTexture.createView() ) );
     _uniformBindGroup = device.createBindGroup( bindGroupDescriptor );
 
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
 
     final GPURenderPassColorAttachment attachment =
-      GPURenderPassColorAttachment.create( textureView,
-                                           GPUColorDict.create( 0.5, 0.5, 0.5, 1 ),
-                                           GPUStoreOp.store );
+      GPURenderPassColorAttachment
+        .view( textureView )
+        .loadValue( GPUColorDict.r( 0.5 ).g( 0.5 ).b( 0.5 ).a( 1 ) )
+        .storeOp( GPUStoreOp.store );
 
     _renderPassDescriptor =
       GPURenderPassDescriptor
         .colorAttachments( attachment )
-        .depthStencilAttachment( GPURenderPassDepthStencilAttachment.create( depthTexture.createView(),
-                                                                             1.0F,
-                                                                             GPUStoreOp.store,
-                                                                             0,
-                                                                             GPUStoreOp.store ) );
+        .depthStencilAttachment( GPURenderPassDepthStencilAttachment
+                                   .view( depthTexture.createView() )
+                                   .depthLoadValue( 1 )
+                                   .depthStoreOp( GPUStoreOp.store )
+                                   .stencilLoadValue( 0 )
+                                   .stencilStoreOp( GPUStoreOp.store ) );
 
     _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 72 ),
                                       CanvasUtil.getAspect( canvas ),
