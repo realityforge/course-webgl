@@ -179,7 +179,8 @@ public final class Main
           GPUVertexAttribute
             .format( GPUVertexFormat.float32x3 )
             .offset( Float32Array.BYTES_PER_ELEMENT * 3 )
-            .shaderLocation( 1 ) );
+            .shaderLocation( 1 )
+        );
 
     final GPUPrimitiveState primitiveState =
       GPUPrimitiveState.of().topology( GPUPrimitiveTopology.triangle_list ).cullMode( GPUCullMode.back );
