@@ -437,8 +437,6 @@ public final class Main
 
     Matrix4d.multiply( _lightViewProjectionMatrix, _lightViewMatrix, _lightProjectionMatrix );
 
-    final Matrix4d modelMatrix = new Matrix4d();
-    modelMatrix.setTranslation( 0, -45, 0 );
 
     // The lights aren't moving, so write them into buffers now.
     {
@@ -462,6 +460,8 @@ public final class Main
                       lightData.byteLength() );
     }
     {
+      final Matrix4d modelMatrix = new Matrix4d();
+      modelMatrix.setTranslation( 0, 0, 0 );
       final Float32Array modelData = new Float32Array( modelMatrix.toArray() );
       _device
         .queue()
