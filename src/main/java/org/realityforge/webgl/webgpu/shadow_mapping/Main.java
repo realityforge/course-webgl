@@ -176,7 +176,7 @@ public final class Main
           // normal
           GPUVertexAttribute
             .format( GPUVertexFormat.float32x3 )
-            .offset( Float32Array.BYTES_PER_ELEMENT * 3 )
+            .offset( Vector3f.BYTES )
             .shaderLocation( 1 )
         );
 
