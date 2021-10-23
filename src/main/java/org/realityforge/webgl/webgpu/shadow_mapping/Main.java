@@ -500,7 +500,11 @@ public final class Main
                                    .stencilLoadValue( 0 )
                                    .stencilStoreOp( GPUStoreOp.store ) );
 
+    scheduleRender();
+  }
 
+  private void scheduleRender()
+  {
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
   }
 
@@ -528,7 +532,7 @@ public final class Main
 
   private void renderFrame()
   {
-    WindowGlobal.requestAnimationFrame( t -> renderFrame() );
+    scheduleRender();
 
     uploadTransformMatrix();
 
