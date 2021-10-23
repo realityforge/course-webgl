@@ -398,27 +398,33 @@ public final class Main
                              .usage( GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
 
     _sceneBindGroupForShadow =
-      device.createBindGroup(
-        GPUBindGroupDescriptor
-          .layout( uniformBufferBindGroupLayout )
-          .entries(
-            GPUBindGroupEntry.binding( 0 ).resource( GPUBufferBinding.buffer( _sceneUniformBuffer ) ) ) );
+      device.createBindGroup( GPUBindGroupDescriptor
+                                .layout( uniformBufferBindGroupLayout )
+                                .entries( GPUBindGroupEntry
+                                            .binding( 0 )
+                                            .resource( GPUBufferBinding.buffer( _sceneUniformBuffer ) ) ) );
 
     _sceneBindGroupForRender =
-      device.createBindGroup(
-        GPUBindGroupDescriptor
-          .layout( bglForRender )
-          .entries( GPUBindGroupEntry.binding( 0 ).resource( GPUBufferBinding.buffer( _sceneUniformBuffer ) ),
-                    GPUBindGroupEntry.binding( 1 ).resource( shadowDepthTextureView ),
-                    GPUBindGroupEntry.binding( 2 ).resource( device.createSampler( GPUSamplerDescriptor
-                                                                                     .of()
-                                                                                     .compare( GPUCompareFunction.less ) ) ) ) );
+      device.createBindGroup( GPUBindGroupDescriptor
+                                .layout( bglForRender )
+                                .entries( GPUBindGroupEntry
+                                            .binding( 0 )
+                                            .resource( GPUBufferBinding.buffer( _sceneUniformBuffer ) ),
+                                          GPUBindGroupEntry.binding( 1 ).resource( shadowDepthTextureView ),
+                                          GPUBindGroupEntry
+                                            .binding( 2 )
+                                            .resource( device.createSampler( GPUSamplerDescriptor
+                                                                               .of()
+                                                                               .compare( GPUCompareFunction.less ) ) )
+                                )
+      );
 
-    _modelBindGroup = device.createBindGroup(
-      GPUBindGroupDescriptor
-        .layout( uniformBufferBindGroupLayout )
-        .entries( GPUBindGroupEntry.binding( 0 )
-                    .resource( GPUBufferBinding.buffer( modelUniformBuffer ) ) ) );
+    _modelBindGroup =
+      device.createBindGroup( GPUBindGroupDescriptor
+                                .layout( uniformBufferBindGroupLayout )
+                                .entries( GPUBindGroupEntry
+                                            .binding( 0 )
+                                            .resource( GPUBufferBinding.buffer( modelUniformBuffer ) ) ) );
 
     final Vector3d upVector = new Vector3d( 0, 1, 0 );
     final Vector3d origin = new Vector3d( 0, 0, 0 );
