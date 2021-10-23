@@ -550,7 +550,7 @@ public final class Main
       shadowPassEncoder.setBindGroup( 0, _sceneBindGroupForShadow );
       shadowPassEncoder.setBindGroup( 1, _modelBindGroup );
       shadowPassEncoder.setVertexBuffer( 0, _verticesBuffer );
-      shadowPassEncoder.setIndexBuffer( _indexBuffer, GPUIndexFormat.uint16 );
+      shadowPassEncoder.setIndexBuffer( _indexBuffer,  _asset.indexFormat() );
       shadowPassEncoder.drawIndexed( _asset.getIndices().length );
       shadowPassEncoder.endPass();
     }
