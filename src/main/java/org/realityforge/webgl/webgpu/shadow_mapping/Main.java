@@ -385,19 +385,17 @@ public final class Main
                               .usage( GPUTextureUsage.RENDER_ATTACHMENT ) );
 
     // 4x4 matrix
-    final int modelUniformBufferSize = Matrix4d.FLOAT_BYTES;
     GPUBuffer modelUniformBuffer =
       device.createBuffer( GPUBufferDescriptor
-                             .size( modelUniformBufferSize )
+                             .size( Matrix4d.FLOAT_BYTES )
                              .usage( GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
 
     // Two 4x4 viewProj matrices,
     // one for the camera and one for the light.
     // Then a vec3 for the light position.
-    final int sceneUniformBufferSize = Matrix4d.FLOAT_BYTES + Matrix4d.FLOAT_BYTES + Vector3f.BYTES;
     _sceneUniformBuffer =
       device.createBuffer( GPUBufferDescriptor
-                             .size( sceneUniformBufferSize )
+                             .size( Matrix4d.FLOAT_BYTES + Matrix4d.FLOAT_BYTES + Vector3f.BYTES )
                              .usage( GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST ) );
 
     _sceneBindGroupForShadow =
