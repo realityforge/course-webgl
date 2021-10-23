@@ -250,17 +250,20 @@ public final class Main
         GPUBindGroupLayoutDescriptor.entries( GPUBindGroupLayoutEntry
                                                 .binding( 0 )
                                                 .visibility( GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT )
-                                                .buffer( GPUBufferBindingLayout.of()
+                                                .buffer( GPUBufferBindingLayout
+                                                           .of()
                                                            .type( GPUBufferBindingType.uniform ) ),
                                               GPUBindGroupLayoutEntry
                                                 .binding( 1 )
                                                 .visibility( GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT )
-                                                .texture( GPUTextureBindingLayout.of()
+                                                .texture( GPUTextureBindingLayout
+                                                            .of()
                                                             .sampleType( GPUTextureSampleType.depth ) ),
                                               GPUBindGroupLayoutEntry
                                                 .binding( 2 )
                                                 .visibility( GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT )
-                                                .sampler( GPUSamplerBindingLayout.of()
+                                                .sampler( GPUSamplerBindingLayout
+                                                            .of()
                                                             .type( GPUSamplerBindingType.comparison ) ) ) );
 
     @WGSL
