@@ -429,7 +429,7 @@ public final class Main
     final Vector3d upVector = new Vector3d( 0, 1, 0 );
     final Vector3d origin = new Vector3d( 0, 0, 0 );
 
-    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 1, 2000 );
+    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 45 ), CanvasUtil.getAspect( canvas ), 1, 100 );
 
     final Vector3d lightPosition = new Vector3d( 50, 100, -100 );
     _lightViewMatrix.lookAt( lightPosition, origin, upVector );
