@@ -500,10 +500,6 @@ public final class Main
                                    .stencilLoadValue( 0 )
                                    .stencilStoreOp( GPUStoreOp.store ) );
 
-    _projectionMatrix.setPerspective( MathUtil.degreesToRadians( 72 ),
-                                      CanvasUtil.getAspect( canvas ),
-                                      1,
-                                      100 );
 
     WindowGlobal.requestAnimationFrame( t -> renderFrame() );
   }
