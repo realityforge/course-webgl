@@ -136,8 +136,6 @@ public final class Main
                      .size( presentationSize ) );
 
     // Create a vertex buffer
-    final int vertexComponentCount = /* position */ 3 + /* normal */ 3;
-    final int targetVertexSize = vertexComponentCount * Float32Array.BYTES_PER_ELEMENT;
     _verticesBuffer =
       device.createBuffer( GPUBufferDescriptor
                              .size( _asset.vertexByteCount() )
@@ -171,7 +169,7 @@ public final class Main
     // and the color rendering pipeline.
     final GPUVertexBufferLayout vertexBuffers =
       GPUVertexBufferLayout
-        .arrayStride( targetVertexSize )
+        .arrayStride( _asset.vertexSize() )
         .attributes(
           // position
           GPUVertexAttribute.format( GPUVertexFormat.float32x3 ).offset( 0 ).shaderLocation( 0 ),
