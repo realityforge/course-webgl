@@ -103,7 +103,6 @@ public final class Main
   {
     Asset.loadStanfordDragon().thenAccept( data -> {
       _asset = data;
-
       WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
         _adapter = adapter;
         return adapter.requestDevice();
