@@ -195,7 +195,7 @@ public final class Main
     final GPUBindGroupDescriptor bindGroupDescriptor =
       GPUBindGroupDescriptor
         .layout( _pipeline.getBindGroupLayout( 0 ) )
-        .entries( GPUBindGroupEntry.binding( 0).resource(  GPUBufferBinding.buffer( _uniformBuffer ) ) );
+        .entries( GPUBindGroupEntry.binding( 0 ).resource( GPUBufferBinding.buffer( _uniformBuffer ) ) );
     _uniformBindGroup = device.createBindGroup( bindGroupDescriptor );
 
     final GPUTextureView textureView = _gl.getCurrentTexture().createView();
