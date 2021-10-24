@@ -284,7 +284,7 @@ public final class Main
       "};\n" +
       "\n" +
       "[[stage(vertex)]]\n" +
-      "fn main([[location(0)]] position : vec3<f32>,\n" +
+      "fn vertex_main([[location(0)]] position : vec3<f32>,\n" +
       "        [[location(1)]] normal : vec3<f32>) -> VertexOutput {\n" +
       "  var output : VertexOutput;\n" +
       "\n" +
@@ -306,7 +306,7 @@ public final class Main
     final GPUVertexState vertexState =
       GPUVertexState
         .module( WebGpuKit.createShaderModule( device, vertexShader ) )
-        .entryPoint( "main" )
+        .entryPoint( "vertex_main" )
         .buffers( vertexBuffers );
 
     @WGSL
@@ -331,7 +331,7 @@ public final class Main
       "let ambientFactor : f32 = 0.2;\n" +
       "\n" +
       "[[stage(fragment)]]\n" +
-      "fn main(input : FragmentInput) -> [[location(0)]] vec4<f32> {\n" +
+      "fn fragment_main(input : FragmentInput) -> [[location(0)]] vec4<f32> {\n" +
       "  // Percentage-closer filtering. Sample texels in the region\n" +
       "  // to smooth the result.\n" +
       "  var visibility : f32 = 0.0;\n" +
@@ -356,7 +356,7 @@ public final class Main
     final GPUFragmentState fragmentState =
       GPUFragmentState
         .module( WebGpuKit.createShaderModule( device, fragmentShader ) )
-        .entryPoint( "main" )
+        .entryPoint( "fragment_main" )
         .targets( GPUColorTargetState.format( textureFormat ) );
 
     final GPUPipelineLayout pipelineLayout =
