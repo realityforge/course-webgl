@@ -191,7 +191,7 @@ public final class Main
                                                              .of()
                                                              .type( GPUBufferBindingType.uniform ) ) ) );
     @WGSL
-    final String vertexShadowShader =
+    final String shadowShader =
       "[[block]] struct Scene {\n" +
       "  lightViewProjMatrix : mat4x4<f32>;\n" +
       "  cameraViewProjMatrix : mat4x4<f32>;\n" +
@@ -206,41 +206,35 @@ public final class Main
       "[[group(1), binding(0)]] var<uniform> model : Model;\n" +
       "\n" +
       "[[stage(vertex)]]\n" +
-      "fn main([[location(0)]] position : vec3<f32>)\n" +
+      "fn vertex_main([[location(0)]] position : vec3<f32>)\n" +
       "     -> [[builtin(position)]] vec4<f32> {\n" +
       "  return scene.lightViewProjMatrix * model.modelMatrix * vec4<f32>(position, 1.0);\n" +
-      "}";
-
-    final GPUVertexState vertexShadowState =
-      GPUVertexState
-        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShadowShader ) ) )
-        .entryPoint( "main" )
-        .buffers( vertexBuffers );
-
-    @WGSL
-    final String fragmentShadowShader =
+      "}\n" +
       "[[stage(fragment)]]\n" +
-      "fn main() {\n" +
+      "fn fragment_main() {\n" +
       "}\n";
-    // The fragment shader should be omitted and we can use a vertex-only pipeline, but it's not yet implemented.
-    final GPUFragmentState fragmentShadowState =
-      GPUFragmentState
-        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShadowShader ) ) )
-        .entryPoint( "main" )
-        .targets();
-
+    final GPUShaderModule shadowShaderModule = WebGpuKit.createShaderModule( device, shadowShader );
+    final GPUPipelineLayout shadowPipelineLayout =
+      device.createPipelineLayout( GPUPipelineLayoutDescriptor.bindGroupLayouts( uniformBufferBindGroupLayout,
+                                                                                 uniformBufferBindGroupLayout ) );
     _shadowPipeline =
-      _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .vertex( vertexShadowState )
-                                      .fragment( fragmentShadowState )
-                                      .primitive( primitiveState )
-                                      .layout( device.createPipelineLayout( GPUPipelineLayoutDescriptor.bindGroupLayouts(
-                                        uniformBufferBindGroupLayout,
-                                        uniformBufferBindGroupLayout ) ) )
-                                      .depthStencil( GPUDepthStencilState
-                                                       .format( GPUTextureFormat.depth32float )
-                                                       .depthCompare( GPUCompareFunction.less )
-                                                       .depthWriteEnabled( true ) ) );
+      device.createRenderPipeline( GPURenderPipelineDescriptor
+                                     .vertex( GPUVertexState
+                                                .module( shadowShaderModule )
+                                                .entryPoint( "vertex_main" )
+                                                .buffers( vertexBuffers ) )
+                                     // The fragment shader should be omitted and we can use a vertex-only
+                                     // pipeline, but it's not yet implemented.
+                                     .fragment( GPUFragmentState
+                                                  .module( shadowShaderModule )
+                                                  .entryPoint( "fragment_main" )
+                                                  .targets() )
+                                     .primitive( primitiveState )
+                                     .layout( shadowPipelineLayout )
+                                     .depthStencil( GPUDepthStencilState
+                                                      .format( GPUTextureFormat.depth32float )
+                                                      .depthCompare( GPUCompareFunction.less )
+                                                      .depthWriteEnabled( true ) ) );
 
     // Create a bind group layout which holds the scene uniforms and
     // the texture+sampler for depth. We create it manually because the WebGPU
