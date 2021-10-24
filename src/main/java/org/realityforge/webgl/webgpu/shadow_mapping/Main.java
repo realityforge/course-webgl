@@ -305,7 +305,7 @@ public final class Main
       "}\n";
     final GPUVertexState vertexState =
       GPUVertexState
-        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( vertexShader ) ) )
+        .module( WebGpuKit.createShaderModule( device, vertexShader ) )
         .entryPoint( "main" )
         .buffers( vertexBuffers );
 
@@ -355,7 +355,7 @@ public final class Main
       "}";
     final GPUFragmentState fragmentState =
       GPUFragmentState
-        .module( _device.createShaderModule( GPUShaderModuleDescriptor.code( fragmentShader ) ) )
+        .module( WebGpuKit.createShaderModule( device, fragmentShader ) )
         .entryPoint( "main" )
         .targets( GPUColorTargetState.format( textureFormat ) );
 
