@@ -432,7 +432,6 @@ public final class Main
 
     Matrix4d.multiply( _lightViewProjectionMatrix, _lightViewMatrix, _lightProjectionMatrix );
 
-
     // The lights aren't moving, so write them into buffers now.
     {
       final Float32Array lightMatrixData = new Float32Array( _lightViewProjectionMatrix.toArray() );
@@ -542,7 +541,7 @@ public final class Main
       shadowPassEncoder.setBindGroup( 0, _sceneBindGroupForShadow );
       shadowPassEncoder.setBindGroup( 1, _modelBindGroup );
       shadowPassEncoder.setVertexBuffer( 0, _verticesBuffer );
-      shadowPassEncoder.setIndexBuffer( _indexBuffer,  _asset.indexFormat() );
+      shadowPassEncoder.setIndexBuffer( _indexBuffer, _asset.indexFormat() );
       shadowPassEncoder.drawIndexed( _asset.getIndices().length );
       shadowPassEncoder.endPass();
     }
