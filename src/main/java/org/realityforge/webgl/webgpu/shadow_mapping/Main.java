@@ -338,8 +338,8 @@ public final class Main
       "  for (var y : i32 = -1 ; y <= 1 ; y = y + 1) {\n" +
       "      for (var x : i32 = -1 ; x <= 1 ; x = x + 1) {\n" +
       "        let offset : vec2<f32> = vec2<f32>(\n" +
-      "          f32(x) * " + new JsNumber( 1.0F / SHADOW_DEPTH_TEXTURE_SIZE ) + ",\n" +
-      "          f32(y) * " + new JsNumber( 1.0F / SHADOW_DEPTH_TEXTURE_SIZE ) + ");\n" +
+      "          f32(x) * " + new JsNumber( 1F / SHADOW_DEPTH_TEXTURE_SIZE ) + ",\n" +
+      "          f32(y) * " + new JsNumber( 1F / SHADOW_DEPTH_TEXTURE_SIZE ) + ");\n" +
       "\n" +
       "          visibility = visibility + textureSampleCompare(\n" +
       "          shadowMap, shadowSampler,\n" +
