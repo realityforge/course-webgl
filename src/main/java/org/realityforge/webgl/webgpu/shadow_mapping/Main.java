@@ -113,7 +113,7 @@ public final class Main
   {
     _device = device;
 
-    _device.onuncapturederror = event -> {
+    device.onuncapturederror = event -> {
       Console.log( event );
       Js.debugger();
     };
@@ -128,7 +128,7 @@ public final class Main
 
     final GPUExtent3DDict presentationSize = WebGpuKit.calcGpuExtent3D( canvas );
     _gl.configure( GPUCanvasConfiguration
-                     .device( _device )
+                     .device( device )
                      .format( textureFormat )
                      //Ensure the configured size takes into account the device pixel ratio.
                      .size( presentationSize ) );
@@ -362,15 +362,15 @@ public final class Main
       device.createPipelineLayout( GPUPipelineLayoutDescriptor
                                      .bindGroupLayouts( bglForRender, uniformBufferBindGroupLayout ) );
     _pipeline =
-      _device.createRenderPipeline( GPURenderPipelineDescriptor
-                                      .vertex( vertexState )
-                                      .fragment( fragmentState )
-                                      .primitive( primitiveState )
-                                      .layout( pipelineLayout )
-                                      .depthStencil( GPUDepthStencilState
-                                                       .format( GPUTextureFormat.depth24plus_stencil8 )
-                                                       .depthCompare( GPUCompareFunction.less )
-                                                       .depthWriteEnabled( true ) ) );
+      device.createRenderPipeline( GPURenderPipelineDescriptor
+                                     .vertex( vertexState )
+                                     .fragment( fragmentState )
+                                     .primitive( primitiveState )
+                                     .layout( pipelineLayout )
+                                     .depthStencil( GPUDepthStencilState
+                                                      .format( GPUTextureFormat.depth24plus_stencil8 )
+                                                      .depthCompare( GPUCompareFunction.less )
+                                                      .depthWriteEnabled( true ) ) );
     final GPUTexture depthTexture =
       device.createTexture( GPUTextureDescriptor
                               .size( presentationSize )
@@ -434,7 +434,7 @@ public final class Main
     // The lights aren't moving, so write them into buffers now.
     {
       final Float32Array lightMatrixData = new Float32Array( _lightViewProjectionMatrix.toArray() );
-      _device
+      device
         .queue()
         .writeBuffer( _sceneUniformBuffer,
                       0,
@@ -444,7 +444,7 @@ public final class Main
       uploadTransformMatrix();
 
       final Float32Array lightData = new Float32Array( lightPosition.toArray() );
-      _device
+      device
         .queue()
         .writeBuffer( _sceneUniformBuffer,
                       Matrix4d.FLOAT_BYTES + Matrix4d.FLOAT_BYTES,
@@ -456,7 +456,7 @@ public final class Main
       final Matrix4d modelMatrix = new Matrix4d();
       modelMatrix.setTranslation( 0, 0, 0 );
       final Float32Array modelData = new Float32Array( modelMatrix.toArray() );
-      _device
+      device
         .queue()
         .writeBuffer( modelUniformBuffer,
                       0,
