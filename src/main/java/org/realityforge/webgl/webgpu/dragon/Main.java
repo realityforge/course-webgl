@@ -148,7 +148,7 @@ public final class Main
         .module( shaderModule )
         .entryPoint( "vertex_main" )
         .buffers( GPUVertexBufferLayout
-                    .arrayStride( _asset.vertexSize() )
+                    .arrayStride( _asset.vertexStride() )
                     .attributes(
                       // position
                       GPUVertexAttribute.format( GPUVertexFormat.float32x3 ).offset( 0 ).shaderLocation( 0 ),

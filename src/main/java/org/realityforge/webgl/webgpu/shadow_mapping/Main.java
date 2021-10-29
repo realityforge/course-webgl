@@ -166,7 +166,7 @@ public final class Main
     // and the color rendering pipeline.
     final GPUVertexBufferLayout vertexBuffers =
       GPUVertexBufferLayout
-        .arrayStride( _asset.vertexSize() )
+        .arrayStride( _asset.vertexStride() )
         .attributes(
           // position
           GPUVertexAttribute.format( GPUVertexFormat.float32x3 ).offset( 0 ).shaderLocation( 0 ),

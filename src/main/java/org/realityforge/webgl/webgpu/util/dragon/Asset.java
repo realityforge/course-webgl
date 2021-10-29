@@ -45,7 +45,7 @@ public class Asset
   }
 
   @JsOverlay
-  public final int vertexSize()
+  public final int vertexStride()
   {
     return Float.BYTES * components();
   }
