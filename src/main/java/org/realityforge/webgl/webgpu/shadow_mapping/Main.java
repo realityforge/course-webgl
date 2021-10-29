@@ -469,7 +469,7 @@ public final class Main
     final GPURenderPassColorAttachment attachment =
       GPURenderPassColorAttachment
         .view( textureView )
-        .loadValue( GPUColorDict.r( 0.5 ).g( 0.5 ).b( 0.5 ).a( 1 ) )
+        .loadValue( GPUColorDict.r( 0 ).g( 0 ).b( 0 ).a( 1 ) )
         .storeOp( GPUStoreOp.store );
 
     _renderPassDescriptor =
