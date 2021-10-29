@@ -58,6 +58,7 @@ import akasha.gpu.GPUVertexBufferLayout;
 import akasha.gpu.GPUVertexFormat;
 import akasha.gpu.GPUVertexState;
 import akasha.gpu.WGSL;
+import akasha.lang.JsArray;
 import com.google.gwt.core.client.EntryPoint;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
@@ -101,12 +102,91 @@ public final class Main
   public void onModuleLoad()
   {
     Asset.loadStanfordDragon().thenAccept( data -> {
+      patchDragonData( data );
       _asset = data;
       WindowGlobal.navigator().gpu().requestAdapter().then( adapter -> {
         _adapter = adapter;
         return adapter.requestDevice();
       } ).thenAccept( this::onStart );
     } );
+  }
+
+  @SuppressWarnings( "ConstantConditions" )
+  private void patchDragonData( @Nonnull final Asset data )
+  {
+    // This is so very ugly and breaks java type rules ... but it is an attempt to emulate
+    // the behaviour of the original example ...
+    //
+    // but it does not seem to work as the extra triangles are not rendered ...
+
+    double minX = 0;
+    double maxX = 0;
+    double minY = 0;
+    double maxY = 0;
+    double minZ = 0;
+    double maxZ = 0;
+
+    final int components = data.components();
+    for ( int i = 0; i < data.getVertices().length; i += components )
+    {
+      minX = Math.min( minX, data.getVertices()[ i ] );
+      maxX = Math.max( maxX, data.getVertices()[ i ] );
+      minY = Math.min( minY, data.getVertices()[ i + 1 ] );
+      maxY = Math.max( maxY, data.getVertices()[ i + 1 ] );
+      minZ = Math.min( minZ, data.getVertices()[ i + 2 ] );
+      maxZ = Math.max( maxZ, data.getVertices()[ i + 2 ] );
+    }
+
+    final double xSpan = maxX - minX;
+    final double ySpan = maxY - minY;
+    final double zSpan = maxZ - minZ;
+
+    final double xHalfSpan = xSpan / 2;
+    final double yHalfSpan = ySpan / 2;
+    final double zHalfSpan = zSpan / 2;
+
+    final double xCenter = maxX - xHalfSpan;
+    final double yCenter = maxY - yHalfSpan;
+    final double zCenter = maxZ - zHalfSpan;
+
+    // The next block of code adds indices and vertex attributes for an additional ground plane
+    final JsArray<Double> vertices = Js.cast( data.getVertices() );
+    final JsArray<Double> indexes = Js.cast( data.getIndices() );
+
+    final double length = vertices.length;
+    indexes.push( length, length + 2, length + 1,
+                  length, length + 1, length + 3 );
+
+    final double groundMinX = xCenter - xHalfSpan * 3;
+    final double groundMaxX = xCenter + xHalfSpan * 3;
+    final double groundY = minY;
+    final double groundMinZ = zCenter - zHalfSpan * 3;
+    final double groundMaxZ = zCenter + zHalfSpan * 3;
+
+    // - 3 floats for position vertex,
+    // - 3 floats for vertex normal,
+    // - 2 floats for uv coordinates
+    vertices.push(
+      //vertex 1
+      groundMinX, groundY, groundMinZ,
+      0D, 1D, 0D,
+      0D, 0D,
+
+      //vertex 2
+      groundMaxX, groundY, groundMaxZ,
+      0D, 1D, 0D,
+      1D, 1D,
+
+      //vertex 3
+      groundMinX, groundY, groundMaxZ,
+      0D, 1D, 0D,
+      0D, 1D,
+
+      //vertex 4
+      groundMaxX, groundY, groundMinZ,
+      0D, 1D, 0D,
+      1D, 0D
+    );
   }
 
   private void onStart( @Nonnull final GPUDevice device )
