@@ -142,12 +142,11 @@ public final class Main
     new Float32Array( _verticesBuffer.getMappedRange() ).set( _asset.getVertices() );
     _verticesBuffer.unmap();
 
-    final double[] indices = _asset.getIndices();
     _indexBuffer = device.createBuffer( GPUBufferDescriptor
                                           .size( _asset.indexByteCount() )
                                           .usage( GPUBufferUsage.INDEX )
                                           .mappedAtCreation( true ) );
-    new Uint32Array( _indexBuffer.getMappedRange() ).set( indices );
+    new Uint32Array( _indexBuffer.getMappedRange() ).set( _asset.getIndices() );
     _indexBuffer.unmap();
 
     // Create the depth texture for rendering/sampling the shadow map.
