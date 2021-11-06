@@ -617,7 +617,7 @@ public final class Main
       shadowPassEncoder.setBindGroup( 1, _modelBindGroup );
       shadowPassEncoder.setVertexBuffer( 0, _verticesBuffer );
       shadowPassEncoder.setIndexBuffer( _indexBuffer, _asset.indexFormat() );
-      shadowPassEncoder.drawIndexed( _asset.getIndices().length );
+      shadowPassEncoder.drawIndexed( _asset.indexCount() );
       shadowPassEncoder.endPass();
     }
 
