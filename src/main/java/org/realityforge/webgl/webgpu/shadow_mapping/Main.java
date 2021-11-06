@@ -150,7 +150,7 @@ public final class Main
     final JsArray<Double> vertices = Js.cast( data.getVertices() );
     final JsArray<Double> indexes = Js.cast( data.getIndices() );
 
-    final double length = vertices.length;
+    final double length = data.vertexCount();
     indexes.push( length, length + 2, length + 1,
                   length, length + 1, length + 3 );
 
