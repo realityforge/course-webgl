@@ -138,15 +138,12 @@ public final class Main
     }
 
     final double xSpan = maxX - minX;
-    final double ySpan = maxY - minY;
     final double zSpan = maxZ - minZ;
 
     final double xHalfSpan = xSpan / 2;
-    final double yHalfSpan = ySpan / 2;
     final double zHalfSpan = zSpan / 2;
 
     final double xCenter = maxX - xHalfSpan;
-    final double yCenter = maxY - yHalfSpan;
     final double zCenter = maxZ - zHalfSpan;
 
     // The next block of code adds indices and vertex attributes for an additional ground plane
