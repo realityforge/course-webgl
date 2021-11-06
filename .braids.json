@@ -11,6 +11,11 @@
       "branch": "master",
       "revision": "5e60781c90c57627ddb088069be9856ef1b19c54"
     },
+    "vendor/webgpu-gltf": {
+      "url": "http://github.com/Twinklebear/webgpu-gltf.git",
+      "branch": "main",
+      "revision": "617d9262ce9e567828518ca3b96d84badcac7fc7"
+    },
     "vendor/webgpu-samples": {
       "url": "https://github.com/austinEng/webgpu-samples.git",
       "branch": "main",
