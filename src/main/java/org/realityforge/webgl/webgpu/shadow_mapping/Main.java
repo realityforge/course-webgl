@@ -154,11 +154,11 @@ public final class Main
     indexes.push( length, length + 2, length + 1,
                   length, length + 1, length + 3 );
 
-    final double groundMinX = xCenter - xHalfSpan * 3;
-    final double groundMaxX = xCenter + xHalfSpan * 3;
+    final double groundMinX = xCenter - xHalfSpan * 2;
+    final double groundMaxX = xCenter + xHalfSpan * 2;
     final double groundY = minY;
-    final double groundMinZ = zCenter - zHalfSpan * 3;
-    final double groundMaxZ = zCenter + zHalfSpan * 3;
+    final double groundMinZ = zCenter - zHalfSpan * 2;
+    final double groundMaxZ = zCenter + zHalfSpan * 2;
 
     // - 3 floats for position vertex,
     // - 3 floats for vertex normal,
