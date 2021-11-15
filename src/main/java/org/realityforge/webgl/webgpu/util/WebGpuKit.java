@@ -6,6 +6,7 @@ import akasha.HTMLCanvasElement;
 import akasha.HTMLElement;
 import akasha.RenderContextType;
 import akasha.WindowGlobal;
+import akasha.core.JsMath;
 import akasha.gpu.GPUCanvasContext;
 import akasha.gpu.GPUCompilationMessage;
 import akasha.gpu.GPUCompilationMessageType;
@@ -50,8 +51,8 @@ public final class WebGpuKit
   {
     final double devicePixelRatio = WindowGlobal.devicePixelRatio();
     return GPUExtent3DDict
-      .width( (int) ( canvas.clientWidth() * devicePixelRatio ) )
-      .height( (int) ( canvas.clientHeight() * devicePixelRatio ) );
+      .width( JsMath.floor( canvas.clientWidth() * devicePixelRatio ) )
+      .height( JsMath.floor( canvas.clientHeight() * devicePixelRatio ) );
   }
 
   @Nonnull
