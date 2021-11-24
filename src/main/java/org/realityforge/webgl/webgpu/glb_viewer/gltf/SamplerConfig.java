@@ -12,7 +12,7 @@ import jsinterop.base.Js;
  * @see <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#reference-sampler">Sampler</a>
  */
 @JsType( isNative = true, name = "Object", namespace = JsPackage.GLOBAL )
-public final class GltfSampler
+public final class SamplerConfig
   extends GltfElement
 {
   /**
