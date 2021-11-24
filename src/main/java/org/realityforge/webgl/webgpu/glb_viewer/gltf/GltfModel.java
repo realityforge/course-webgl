@@ -15,4 +15,8 @@ public class GltfModel
   @JsProperty
   @Nullable
   public native GltfImage[] getImages();
+
+  @JsProperty
+  @Nullable
+  public native GltfSampler[] getSamplers();
 }
