@@ -1,3 +1,21 @@
+# WebGPU
+
+webgpu-gltf viewier!!!!!!!!
+  - Take inspiration from WebGL2 variant at https://github.com/KhronosGroup/glTF-Sample-Viewer
+  - Use sample gltf (embedded/loose/binary) asset examples from https://github.com/KhronosGroup/glTF-Sample-Models
+  - Start sample box https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Box
+
+Examples in order:
+* animometer
+* imageBlur
+* shadowMapping
+  - shadow mapping still looks bad????
+* reversedZ
+* deferredRendering
+
+https://github.com/toji/webgpu-clustered-shading
+Port https://github.com/toji/web-texture-tool
+
 https://github.com/jack1232/WebGPU-Step-By-Step
 
 ## Actions
