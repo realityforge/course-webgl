@@ -10,12 +10,12 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
   intValues = {
-    GltfSamplerWrapMode.REPEAT,
-    GltfSamplerWrapMode.CLAMP_TO_EDGE,
-    GltfSamplerWrapMode.MIRRORED_REPEAT
+    WrapMode.REPEAT,
+    WrapMode.CLAMP_TO_EDGE,
+    WrapMode.MIRRORED_REPEAT
   }
 )
-public @interface GltfSamplerWrapMode
+public @interface WrapMode
 {
   int REPEAT = WebGL2RenderingContext.REPEAT;
   int CLAMP_TO_EDGE = WebGL2RenderingContext.CLAMP_TO_EDGE;
@@ -27,7 +27,7 @@ public @interface GltfSamplerWrapMode
     {
     }
 
-    @GltfSamplerWrapMode
+    @WrapMode
     public static int requireValid( final int value )
     {
       assertValid( value );
@@ -37,23 +37,23 @@ public @interface GltfSamplerWrapMode
     public static void assertValid( final int value )
     {
       assert isValid( value ) :
-        "@GltfSamplerWrapMode annotated value must be one of [GltfSamplerWrapMode.REPEAT, GltfSamplerWrapMode.CLAMP_TO_EDGE, GltfSamplerWrapMode.MIRRORED_REPEAT] but is " +
+        "@WrapMode annotated value must be one of [WrapMode.REPEAT, WrapMode.CLAMP_TO_EDGE, WrapMode.MIRRORED_REPEAT] but is " +
         value;
     }
 
     public static boolean isValid( final int value )
     {
-      return GltfSamplerWrapMode.REPEAT == value ||
-             GltfSamplerWrapMode.CLAMP_TO_EDGE == value ||
-             GltfSamplerWrapMode.MIRRORED_REPEAT == value;
+      return WrapMode.REPEAT == value ||
+             WrapMode.CLAMP_TO_EDGE == value ||
+             WrapMode.MIRRORED_REPEAT == value;
     }
 
     @Nonnull
     public static String describe( final int value )
     {
-      return GltfSamplerWrapMode.REPEAT == value ? "REPEAT" :
-             GltfSamplerWrapMode.CLAMP_TO_EDGE == value ? "CLAMP_TO_EDGE" :
-             GltfSamplerWrapMode.MIRRORED_REPEAT == value ? "MIRRORED_REPEAT" :
+      return WrapMode.REPEAT == value ? "REPEAT" :
+             WrapMode.CLAMP_TO_EDGE == value ? "CLAMP_TO_EDGE" :
+             WrapMode.MIRRORED_REPEAT == value ? "MIRRORED_REPEAT" :
              "Unknown value " + value;
     }
   }

@@ -8,11 +8,11 @@ import org.intellij.lang.annotations.MagicConstant;
 @Documented
 @MagicConstant(
   intValues = {
-    GltfSamplerMagnificationFilter.NEAREST,
-    GltfSamplerMagnificationFilter.LINEAR
+    MagFilter.NEAREST,
+    MagFilter.LINEAR
   }
 )
-public @interface GltfSamplerMagnificationFilter
+public @interface MagFilter
 {
   int NEAREST = WebGL2RenderingContext.NEAREST;
   int LINEAR = WebGL2RenderingContext.LINEAR;
@@ -23,7 +23,7 @@ public @interface GltfSamplerMagnificationFilter
     {
     }
 
-    @GltfSamplerMagnificationFilter
+    @MagFilter
     public static int requireValid( final int value )
     {
       assertValid( value );
@@ -33,20 +33,20 @@ public @interface GltfSamplerMagnificationFilter
     public static void assertValid( final int value )
     {
       assert isValid( value ) :
-        "@GltfMagFilterType annotated value must be one of [GltfMagFilterType.NEAREST, GltfMagFilterType.LINEAR] but is " +
+        "@MagFilter annotated value must be one of [MagFilter.NEAREST, MagFilter.LINEAR] but is " +
         value;
     }
 
     public static boolean isValid( final int value )
     {
-      return GltfSamplerMagnificationFilter.NEAREST == value || GltfSamplerMagnificationFilter.LINEAR == value;
+      return MagFilter.NEAREST == value || MagFilter.LINEAR == value;
     }
 
     @Nonnull
     public static String describe( final int value )
     {
-      return GltfSamplerMagnificationFilter.NEAREST == value ? "NEAREST" :
-             GltfSamplerMagnificationFilter.LINEAR == value ? "LINEAR" :
+      return MagFilter.NEAREST == value ? "NEAREST" :
+             MagFilter.LINEAR == value ? "LINEAR" :
              "Unknown value " + value;
     }
   }

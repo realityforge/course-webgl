@@ -22,13 +22,13 @@ public final class GltfSampler
    * @see <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#_sampler_magfilter">sampler.magFilter</a>
    */
   @JsOverlay
-  @GltfSamplerMagnificationFilter
+  @MagFilter
   public int getMagFilter()
   {
     assert isMagFilterPresent();
-    @GltfSamplerMagnificationFilter
+    @MagFilter
     final int value = _getMagFilter();
-    GltfSamplerMagnificationFilter.Util.assertValid( value );
+    MagFilter.Util.assertValid( value );
     return value;
   }
 
@@ -48,13 +48,13 @@ public final class GltfSampler
    * @see <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#_sampler_minfilter">sampler.minFilter</a>
    */
   @JsOverlay
-  @GltfSamplerMinificationFilter
+  @MinFilter
   public int getMinFilter()
   {
     assert isMinFilterPresent();
-    @GltfSamplerMinificationFilter
+    @MinFilter
     final int value = _getMinFilter();
-    GltfSamplerMinificationFilter.Util.assertValid( value );
+    MinFilter.Util.assertValid( value );
     return value;
   }
 
@@ -74,13 +74,13 @@ public final class GltfSampler
    * @see <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#_sampler_wraps">sampler.wrapS</a>
    */
   @JsOverlay
-  @GltfSamplerWrapMode
+  @WrapMode
   public int getWrapS()
   {
     assert isWrapSPresent();
-    @GltfSamplerWrapMode
+    @WrapMode
     final int value = _getWrapS();
-    GltfSamplerWrapMode.Util.assertValid( value );
+    WrapMode.Util.assertValid( value );
     return value;
   }
 
@@ -100,13 +100,13 @@ public final class GltfSampler
    * @see <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#_sampler_wrapt">sampler.wrapT</a>
    */
   @JsOverlay
-  @GltfSamplerWrapMode
+  @WrapMode
   public int getWrapT()
   {
     assert isWrapTPresent();
-    @GltfSamplerWrapMode
+    @WrapMode
     final int value = _getWrapT();
-    GltfSamplerWrapMode.Util.assertValid( value );
+    WrapMode.Util.assertValid( value );
     return value;
   }
 
